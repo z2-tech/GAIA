@@ -158,6 +158,74 @@ Cada tarefa em `docs/tasks/` e `TODO/gaia.md` possui assignee mapeado ao desenvo
 
 Assignees atuais: @Matheus Rodrigues, @léo bola, @fernandocampana. Novos devs devem ser adicionados ao `TODO/gaia.md` ao receberem tasks.
 
+## Dicas para Desenvolvedores
+
+### Enriquecendo a knowledgebase
+
+A cada feature implementada, documente o que descobriu:
+
+```bash
+# 1. Novas relações entre sistemas
+#    → docs/vault/systems/ ou docs/vault/flows/
+
+# 2. Novos conceitos de domínio (ex: EIQ, STIR)
+#    → docs/vault/concepts/Sustainability-Metrics.md
+
+# 3. Planilhas de referência mapeadas para código
+#    → docs/references/domain/ + docs/vault/
+
+# 4. Sincronize o CodeGraph
+./.opencode/bin/codegraph-global-sync.sh
+```
+
+### Gerando tasks com contexto
+
+```
+Dev Backend:
+  /feature-plan "módulo biodiversidade"
+  → agente lê docs/tasks/api/, planilha BAT, codegraph do gaia-api
+  → gera spec com modelos, endpoints, checklist
+
+Dev Frontend:
+  /feature-implement
+  → agente lê spec do back + cross-stack.md + codegraph do gaia-web
+  → implementa contra OpenAPI schema (auto-gen via @hey-api/openapi-ts)
+
+Ambos:
+  /feature-validate
+  → valida contrato, schema coverage, testes
+```
+
+### Ponte Back ↔ Front via codebase
+
+| Perspectiva | Ferramenta | Comando |
+|-------------|-----------|---------|
+| "Como o endpoint X está implementado?" | CodeGraph shadow | `codegraph_context(projectPath="/tmp/opencode/shadow-codegraph-gaia", task="...")` |
+| "Essa mudança no model quebra o frontend?" | CodeGraph impact | `codegraph_impact(symbol="ModelName")` no shadow |
+| "O contrato OpenAPI está atualizado?" | drf-spectacular | `python manage.py spectacular --validate --fail-on-warn` |
+| "O SDK do frontend está sincronizado?" | openapi-ts | `bunx @hey-api/openapi-ts` |
+| "Qual o significado de domínio desse campo?" | Vault | `docs/vault/` + sustainability-specialist |
+
+### Exemplo de sessão
+
+```bash
+# Backend dev: "Preciso criar o módulo BAT"
+1. /feature-plan "biodiversity assessment tool"
+   → gera docs/tasks/api/active/be-05-modulo-biodiversidade.md
+2. sustainability-specialist lê planilha BAT
+   → extrai questões, thresholds, scoring
+3. senior-backend → model-agent + service-agent + migration-agent
+   → models, cálculos, seeds
+4. python test_runner.py && /feature-validate
+
+# Frontend dev: "Vou construir a tela do BAT"
+1. Ler spec do back + planilha BAT no vault
+2. codegraph_context no shadow → ver endpoints novos
+3. bunx @hey-api/openapi-ts → SDK atualizado
+4. senior-nextjs implementa → formulário + dashboard
+5. bun lint && /feature-validate
+```
+
 ## Harness-Agnóstico
 
 GAIA funciona com **OpenCode, Claude Code, Cursor e GitHub Copilot** sem configuração adicional:
