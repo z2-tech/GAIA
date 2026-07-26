@@ -13,8 +13,8 @@ Orchestration: [[Orchestrator-GAIA]]
 
 ## Concepts
 
-[[Domain-Glossary]] — LCA, RothC, regenerative, CFP terminology
-[[Sustainability-Metrics]] — CO2e, GWP, carbon sequestration
+[[Domain-Glossary]] — LCA, RothC, regenerative, CFP, EIQ, STIR, BAT terminology
+[[Sustainability-Metrics]] — CO2e, GWP, carbon sequestration, biodiversity, pesticide impact, tillage intensity
 
 ## Flows
 

@@ -22,9 +22,10 @@ Domain authority for sustainability metrics (LCA, RothC, regenerative agricultur
 
 ## Critical Rules
 
-1. LCA follows ISO 14040/14044 methodology. Emission factors from reference tables (LcaFertilizer, LcaFuelType, LcaSeed, LcaDefensive).
-2. RothC uses monthly climate data from Open-Meteo. Fallback to climatological means for future dates.
-3. Regenerative indicators are DB-driven (dynamic), not hardcoded. Weights determine score.
+1. Reference spreadsheets are source of truth. Read via `.agents/skills/xlsx/SKILL.md` before coding.
+2. LCA follows ISO 14040/14044 methodology. Emission factors from reference tables.
+3. RothC uses monthly climate data from Open-Meteo. Fallback to climatological means.
 4. Domain language: CO2e, GWP, sequestro de carbono, manejo regenerativo, análise de ciclo de vida.
 
-Vault: `docs/vault/concepts/`
+Vault: `docs/vault/concepts/Sustainability-Metrics.md`, `docs/vault/concepts/Domain-Glossary.md`
+References: `docs/references/domain/` — BAT, EIQ, STIR spreadsheets

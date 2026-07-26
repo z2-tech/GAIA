@@ -47,6 +47,7 @@ software-architecture      ← code-quality audit
   ├── ui-ux-pro-max/
   ├── business-product-strategist/
   ├── shadcn-ui-components/    ← shadcn/ui component rules
+  ├── xlsx/                    ← Spreadsheet read/map (openpyxl)
   └── docx-converter/
 ```
 
