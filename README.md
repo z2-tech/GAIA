@@ -4,6 +4,8 @@ Repositório de **orquestração** do ecossistema GAIA — plataforma de métric
 
 Centraliza agentes de IA, knowledge vault, especificações de tarefas, contratos cross-stack e scripts operacionais. **Não contém código de produção** — a implementação vive nos repositórios filhos.
 
+> **Arquitetura de agentes inspirada em** [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai_agents) — quebra modular do backend em sub-agents por camada, adaptada ao [HackSoftware Django Styleguide](https://github.com/HackSoftware/Django-Styleguide) (Views → Services → Selectors → Models).
+
 ## Ecossistema
 
 | Repositório | Stack | Branch |
@@ -145,6 +147,16 @@ GAIA/
 8. **Branching** — `develop → homolog → master`, rebase apenas em branches locais
 9. **Vault mantido** — atualizar `docs/vault/` ao descobrir novas relações
 10. **CodeGraph reindex** — após mudanças no vault, rodar `.opencode/bin/codegraph-global-sync.sh`
+
+## Assignees
+
+Cada tarefa em `docs/tasks/` e `TODO/gaia.md` possui assignee mapeado ao desenvolvedor responsável. Padrão:
+
+```markdown
+> **Prioridade:** Alta | **Assignee:** @dev_name | **Status:** Pendente
+```
+
+Assignees atuais: @Matheus Rodrigues, @léo bola, @fernandocampana. Novos devs devem ser adicionados ao `TODO/gaia.md` ao receberem tasks.
 
 ## Harness-Agnóstico
 

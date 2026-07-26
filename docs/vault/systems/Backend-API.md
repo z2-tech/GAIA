@@ -19,6 +19,8 @@ REST API for sustainability metrics: LCA, RothC carbon modeling, regenerative ag
 
 ## Agent Hierarchy
 
+`senior-backend` orchestrates 7 layer-specific sub-agents following [HackSoftware Django Styleguide](https://github.com/HackSoftware/Django-Styleguide) layers:
+
 ```
 senior-backend (orchestrator)
   ├── model-agent       ← schema, soft-delete
@@ -29,6 +31,8 @@ senior-backend (orchestrator)
   ├── test-agent        ← tests per app
   └── lint-agent        ← pre-commit, ruff
 ```
+
+Pattern inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai_agents) granular agent decomposition.
 
 ## Links
 

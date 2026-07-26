@@ -18,7 +18,7 @@ Centralizes 11 AI agents (5 domain + 7 sub-agents), SDD commands, lifecycle hook
 
 ## Features
 
-- **Agent hierarchy**: `senior-backend` → 7 layer sub-agents
+- **Agent hierarchy**: `senior-backend` → 7 layer sub-agents — inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai_agents), adapted for [HackSoftware Django Styleguide](https://github.com/HackSoftware/Django-Styleguide)
 - **Harness-agnostic**: `.opencode/agents/` → `.claude/` + `.cursor/` + `.github/`
 - **SDD pipeline**: `/feature-plan`, `/feature-implement`, `/feature-validate`
 - **Lifecycle hooks**: SessionStart, PreToolUse, PostToolUse, TaskCompleted
