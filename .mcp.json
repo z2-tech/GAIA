@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "postgres-readonly": {
+      "type": "stdio",
+      "command": "bash",
+      "args": [
+        "./.opencode/bin/postgres-mcp-readonly.sh"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+gaia-api/
+gaia-web/
+*.docx
+*.pdf
+*.xlsx
+*.xlsm
+*.html
+*:Zone.Identifier

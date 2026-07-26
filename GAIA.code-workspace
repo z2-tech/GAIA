@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "GAIA (orchestrator)",
+      "path": "."
+    },
+    {
+      "name": "gaia-api",
+      "path": "gaia-api"
+    },
+    {
+      "name": "gaia-web",
+      "path": "gaia-web"
+    }
+  ],
+  "settings": {
+    "git.autoRepositoryDetection": true,
+    "git.repositoryScanMaxDepth": 2,
+    "git.detectSubmodules": false,
+    "git.openRepositoryInParentFolders": "always"
+  }
+}

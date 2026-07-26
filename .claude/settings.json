@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "command": "echo \"[$(date +%H:%M)] GAIA · $(git branch --show-current)\""
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "command": "if echo \"$TOOL_INPUT\" | grep -Eq '(DROP TABLE|DROP DATABASE|rm -rf /|git push.*(-f|--force).*main)'; then echo 'BLOCK'; echo '⚠️ Destructive command blocked.'; fi"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "if echo \"$TOOL_INPUT_FILE\" | grep -q '\\.py$'; then ruff check --fix \"$TOOL_INPUT_FILE\" 2>/dev/null; elif echo \"$TOOL_INPUT_FILE\" | grep -qE '\\.(tsx|ts)$'; then bun eslint --fix \"$TOOL_INPUT_FILE\" 2>/dev/null; fi"
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "matcher": "",
+        "command": "echo '📋 QA gate: run tests + lint before PR'"
+      }
+    ]
+  }
+}

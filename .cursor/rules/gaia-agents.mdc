@@ -1,0 +1,33 @@
+---
+description: GAIA Sustainability Metrics Platform — agent routing, knowledge sources, critical conventions
+alwaysApply: true
+---
+
+# GAIA
+
+Sustainability metrics platform. Three repos: `gaia-api` (Django), `gaia-web` (Next.js), `GAIA` (orchestration).
+
+## Agent Routing
+
+All agents in `.opencode/agents/`.
+
+| Task | Agent stub |
+|------|-----------|
+| Domain (LCA, RothC, regenerative) | `.opencode/agents/sustainability-specialist.md` |
+| Backend | `.opencode/agents/senior-backend.md` |
+| Frontend | `.opencode/agents/senior-nextjs.md` |
+| Cross-stack | `.opencode/agents/cross-stack.md` |
+| Architecture | `.opencode/agents/software-architecture.md` |
+
+## Knowledge
+
+- Vault: `docs/vault/00-INDEX.md`
+- References: `docs/references/README.md`
+- Skills: `.agents/skills/`
+
+## Critical Rules
+
+1. CodeGraph first — `codegraph_context` before grep/glob
+2. Contract-first — OpenAPI schema before frontend
+3. PT (UX/domain), EN (code)
+4. NEVER commit without authorization

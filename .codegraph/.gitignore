@@ -1,0 +1,10 @@
+# CodeGraph runtime files
+# commit codegraph.db for instant agent context on clone
+*.db-wal
+*.db-shm
+cache/
+*.log
+daemon.pid
+daemon.sock
+.dirty
+!codegraph.db
