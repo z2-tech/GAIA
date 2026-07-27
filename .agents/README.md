@@ -1,67 +1,72 @@
 # GAIA — Harness-Agnostic Agent Architecture
 
-`.opencode/agents/` is the single source of truth for all 11 agents.
+**`.opencode/agents/`** is the single source of truth. All harnesses point to it.
 
 ```
-.opencode/agents/         ← 11 thin stubs
+.opencode/agents/              ← 12 agents (single source of truth)
      ↑ load from
-.claude/agents/           ← 11 wrappers
-.cursor/rules/            ← 1 rule → .opencode/agents/
-.github/copilot-instructions.md
+.claude/agents/                ← 12 wrappers → .opencode/agents/
+.cursor/rules/                 ← 1 rule → .opencode/agents/
+.github/copilot-instructions.md ← project instructions
      ↓ point to
-docs/agents/              ← canonical full definitions
+docs/agents/                   ← canonical full definitions
 ```
 
 ## Supported Harnesses
 
-| Harness | Mechanism |
-|---------|-----------|
-| OpenCode | `.opencode/agents/` |
-| Claude Code | `.claude/agents/` → `.opencode/agents/` |
-| Cursor | `.cursor/rules/gaia-agents.mdc` |
-| GitHub Copilot | `.github/copilot-instructions.md` |
+| Harness | Mechanism | Location |
+|---------|-----------|----------|
+| OpenCode | Agents + commands + MCP | `.opencode/agents/*.md` (12 agents), `.opencode/commands/*.md` (5 commands) |
+| Claude Code | Custom agents + CLAUDE.md | `.claude/agents/*.md` (12 wrappers) → `.opencode/agents/` |
+| Cursor | Project rules | `.cursor/rules/gaia-agents.mdc` |
+| GitHub Copilot | Instructions | `.github/copilot-instructions.md` |
 
 ## Agent Hierarchy
 
 ```
-senior-backend (orchestrator)
-  ├── model-agent       ← schema, soft-delete
-  ├── service-agent     ← business logic, LCA/RothC
-  ├── selector-agent    ← read-only queries
-  ├── serializer-agent  ← schema_fields, validation
-  ├── migration-agent   ← safe migrations, seeds
-  ├── test-agent        ← tests per app
-  └── lint-agent        ← pre-commit, ruff
+senior-backend (orchestrator — delegates to sub-agents in parallel)
+  ├── model-agent        ← schema, soft-delete
+  ├── service-agent      ← business logic, LCA/RothC
+  ├── selector-agent     ← read-only queries
+  ├── serializer-agent   ← schema_fields, validation, OpenAPI
+  ├── migration-agent    ← safe migrations, seeds
+  ├── test-agent         ← tests per app
+  └── lint-agent         ← code style, pre-commit
 
-sustainability-specialist  ← LCA, RothC, regenerative domain
-senior-nextjs              ← Next.js frontend
-cross-stack                ← API↔Next.js contracts (OpenAPI)
-software-architecture      ← code-quality audit
+sustainability-specialist  ← domain authority (LCA, RothC, regenerative)
+senior-nextjs             ← Next.js frontend code owner
+cross-stack               ← API↔Next.js contracts (OpenAPI → SDK)
+software-architecture     ← architecture audit, code quality
 ```
 
 ## Skills
 
-```
-.agents/skills/
-  ├── codegraph/
-  ├── ui-ux-pro-max/
-  ├── business-product-strategist/
-  ├── shadcn-ui-components/    ← shadcn/ui component rules
-  ├── xlsx/                    ← Spreadsheet read/map (openpyxl)
-  └── docx-converter/
-```
+**Project-level** (`.agents/skills/`):
+| Skill | Purpose |
+|-------|---------|
+| codegraph | Semantic code search over indexed graph |
+| ui-ux-pro-max | UI/UX design & implementation guide |
+| business-product-strategist | Product/UX heuristic evaluation |
+| xlsx | Spreadsheet reading (openpyxl) |
+| pdf | PDF analysis (pdfplumber + poppler) |
+| docx-converter | MD → DOCX conversion |
 
-## SDD Commands
+**User-level** (`~/.agents/skills/`): caveman, council, find-skills, pdf
+**Packages** (`~/.cache/opencode/packages/`): ponytail suite
 
-```
-/feature-plan       ← spec → task list
-/feature-implement  ← tasks → code
-/feature-validate   ← tests + lint + schema
-```
+## MCP Servers
 
-## Lifecycle Hooks (`.claude/settings.json`)
+| Server | Tool | Status |
+|--------|------|--------|
+| codegraph | `codegraph_*` (context, search, trace, etc.) | Global shadow at `/tmp/opencode/shadow-codegraph-all` |
+| postgres | `postgres_query` | Read-only DB via `./.opencode/bin/postgres-mcp-readonly.sh` |
 
-- SessionStart → inject branch
-- PreToolUse → block destructive commands
-- PostToolUse → auto-format .py (ruff) + .tsx (eslint)
-- TaskCompleted → QA gate reminder
+## Commands (`.opencode/commands/`)
+
+| Command | Purpose |
+|---------|---------|
+| `/feature-plan` | Generate task spec from domain requirements |
+| `/feature-implement` | Execute task spec via agent dispatch |
+| `/feature-validate` | Run tests + schema + lint gates |
+| `/codegraph-sync` | Trigger global index sync |
+| `/vault-search` | Search knowledge vault |

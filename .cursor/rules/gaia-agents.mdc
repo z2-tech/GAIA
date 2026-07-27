@@ -9,21 +9,35 @@ Sustainability metrics platform. Three repos: `gaia-api` (Django), `gaia-web` (N
 
 ## Agent Routing
 
-All agents in `.opencode/agents/`.
+All agents in `.opencode/agents/` (single source of truth). Canonical definitions in `docs/agents/`.
 
-| Task | Agent stub |
-|------|-----------|
-| Domain (LCA, RothC, regenerative) | `.opencode/agents/sustainability-specialist.md` |
-| Backend | `.opencode/agents/senior-backend.md` |
-| Frontend | `.opencode/agents/senior-nextjs.md` |
-| Cross-stack | `.opencode/agents/cross-stack.md` |
-| Architecture | `.opencode/agents/software-architecture.md` |
+### Orchestrators (top-level)
+
+| Agent | Role |
+|-------|------|
+| `senior-backend` | Backend orchestrator — delegates to sub-agents in parallel |
+| `sustainability-specialist` | Domain authority — LCA, RothC, regenerative metrics |
+| `senior-nextjs` | Next.js frontend — shadcn/ui, TanStack Query |
+| `cross-stack` | API↔Next.js contracts (OpenAPI → @hey-api/openapi-ts) |
+| `software-architecture` | Architecture audit, code quality scoring |
+
+### Backend sub-agents (dispatched by senior-backend)
+
+| Sub-Agent | Layer | When |
+|-----------|-------|------|
+| `model-agent` | Models | Schema, soft-delete |
+| `service-agent` | Services | Business logic, LCA/RothC |
+| `selector-agent` | Selectors | Read-only queries |
+| `serializer-agent` | Serializers | Schema fields, validation, OpenAPI |
+| `migration-agent` | Migrations | Safe migrations, seeds |
+| `test-agent` | Tests | Tests per app |
+| `lint-agent` | Lint | pre-commit, ruff |
 
 ## Knowledge
 
 - Vault: `docs/vault/00-INDEX.md`
 - References: `docs/references/README.md`
-- Skills: `.agents/skills/`
+- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx, pdf, docx-converter)
 
 ## Critical Rules
 
@@ -31,3 +45,4 @@ All agents in `.opencode/agents/`.
 2. Contract-first — OpenAPI schema before frontend
 3. PT (UX/domain), EN (code)
 4. NEVER commit without authorization
+5. Views never query, services never return QuerySets
