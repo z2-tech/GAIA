@@ -39,3 +39,7 @@ Pattern inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai
 - Repo: `gaia-api/` (branch: develop)
 - OpenAPI schema → frontend codegen: `@hey-api/openapi-ts`
 - Agent architecture: `.agents/README.md`
+
+## Completeness & auto-status (2026-Q3)
+
+Cadeia: module completers (`farms/services.py::_MODULE_COMPLETERS`) → média por fazenda (`get_farm_completeness`) → média por projeto (`get_project_completeness`) → auto `status=completed` (`ProjectService.maybe_auto_complete`, BE-10). 8 hooks de mutation em routhc/regenerative services + lca views (sem signals). Detalhes: [[../flows/Completion-Flow|Completion-Flow]] · Gaps: BE-16 · Comparação futura: BE-12/FE-08.

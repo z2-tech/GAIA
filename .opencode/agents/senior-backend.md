@@ -60,6 +60,8 @@ After all sub-agents return and you've wired the pieces:
 3. If tests fail, diagnose and fix (you may call sub-agents again for fixes)
 4. Report summary to user: files changed, tests passed, decisions made
 
+**Full suite no fim:** quando a verificação final da entrega exige suite completa com DB limpo, despachar `test-agent` (ou rodar) com o comando full-suite oficial — fonte: `.opencode/agents/test-agent.md`. Distinção: durante implementação usar verificação rápida com `--keepdb` (DB preservado); no fim da entrega, full suite clean (comando docker destrutivo `down -v` + `prune` + `up --build` + `test_runner.py`).
+
 ### When NOT to delegate
 
 Act directly (without sub-agents) ONLY for:
@@ -100,4 +102,13 @@ Act directly (without sub-agents) ONLY for:
 python test_runner.py --settings=test_settings --keepdb
 python manage.py spectacular --validate --fail-on-warn
 pre-commit run --all-files
+
+# Full suite clean (verificação final de entrega, destrutivo: down -v + prune + up --build)
+# Padrão oficial documentado em .opencode/agents/test-agent.md
+source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml down -v && sleep 2 && docker system prune -a -f && sleep 2 && docker compose -f docker-compose.db.yml up --build -d && sleep 2 && python test_runner.py
 ```
+
+## Domain notes (2026-Q3)
+
+- **Completeness chain**: module completers (`farms/services.py::_MODULE_COMPLETERS`) → farm avg → project avg (`get_project_completeness`) → auto-status `ProjectService.maybe_auto_complete` (BE-10/BE-11 done). Mutation hooks live in routhc/regenerative services + lca views. Gaps tracked in `docs/tasks/api/active/be-16-gaps-completude-projetos.md`.
+- **Compare (BE-12, future)**: copy mechanism from `~/ATYHA/atyha-api/project/services/compare_services.py` (build pattern, `_METRICS`, min-max radar, verdict) — sustainability metrics, not financial. Spec: `docs/tasks/api/active/be-12-comparacao.md`, frontend `docs/tasks/web/active/fe-08-comparacao.md`.

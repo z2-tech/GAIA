@@ -18,7 +18,7 @@ Orchestration: [[Orchestrator-GAIA]]
 
 ## Flows
 
-[[Data-Flow-Overview]] · [[LCA-Workflow]] · [[Carbon-Modeling]]
+[[Data-Flow-Overview]] · [[LCA-Workflow]] · [[Carbon-Modeling]] · [[Completion-Flow]]
 
 ## Agent Architecture
 
