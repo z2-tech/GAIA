@@ -18,6 +18,7 @@ Writes tests for gaia-api using factory-boy + Django TestCase.
 2. Run: `python test_runner.py --settings=test_settings --keepdb`
 3. Test DB on port 5433 (`docker compose -f docker-compose.db.yml up -d` before testing).
 4. Custom test runner syncs PostgreSQL sequences to prevent ID collisions.
+5. Test names describe behavior; no orchestrator artifacts — no ticket labels (BE-xx:), no skill names (ponytail), no agent names in names/docstrings/comments.
 
 Key files: `test_runner.py`, `test_settings.py`, `docker-compose.db.yml`
 

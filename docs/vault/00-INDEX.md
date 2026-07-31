@@ -13,12 +13,11 @@ Orchestration: [[Orchestrator-GAIA]]
 
 ## Concepts
 
-[[Domain-Glossary]] — LCA, RothC, regenerative, CFP, EIQ, STIR, BAT terminology
 [[Sustainability-Metrics]] — CO2e, GWP, carbon sequestration, biodiversity, pesticide impact, tillage intensity
 
 ## Flows
 
-[[Data-Flow-Overview]] · [[LCA-Workflow]] · [[Carbon-Modeling]] · [[Completion-Flow]]
+[[Completion-Flow]]
 
 ## Agent Architecture
 

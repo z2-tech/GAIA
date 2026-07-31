@@ -6,11 +6,11 @@
 
 ## Escopo
 
-`gaia-api/projects/services.py` — `ProjectService.maybe_auto_complete()` + 3 pontos de integração. NÃO usar signals (check explícito pós-mutation, padrão HackSoftware).
+`gaia-api/projects/services.py` — `ProjectService.auto_complete_project()` + 3 pontos de integração. NÃO usar signals (check explícito pós-mutation, padrão HackSoftware).
 
 ## Implementação
 
-### 1. `ProjectService.maybe_auto_complete(*, project: Project) -> None` em `projects/services.py`
+### 1. `ProjectService.auto_complete_project(*, project: Project) -> None` em `projects/services.py`
 
 - Guard 1: `project.status != ProjectStatus.IN_PROGRESS.value` → return
 - Guard 2: `project.farms.count() == 0` → return
@@ -18,7 +18,7 @@
 
 ### 2. Integrar em 3 pontos de mutation
 
-- [ ] **Ponto 1**: `routhc/services.py::RouthcService.calcular()` — pós-create do `RothcCalculation` (dentro ou após o `transaction.atomic()`, linha ~239), obter `project` da farm e chamar `maybe_auto_complete`
+- [ ] **Ponto 1**: `routhc/services.py::RouthcService.calcular()` — pós-create do `RothcCalculation` (dentro ou após o `transaction.atomic()`, linha ~239), obter `project` da farm e chamar `auto_complete_project`
 - [ ] **Ponto 2**: `regenerative/services.py` — pós-save em `create_assessment()` (linha 51) e `update_assessment()` (linha 111)
 - [ ] **Ponto 3**: views LCA pós-`transaction.atomic()` (buscar no `lca/views.py` os pontos de mutation e chamar via service, nunca view→model direto)
 
@@ -28,7 +28,7 @@
 
 ## Checklist
 
-- [ ] `maybe_auto_complete` com os 2 guards + save com `update_fields`
+- [ ] `auto_complete_project` com os 2 guards + save com `update_fields`
 - [ ] Projeto 100% e com farms → `completed`
 - [ ] Projeto <100% → permanece `in_progress`
 - [ ] Projeto `cancelled` → bloqueado (guard 1)

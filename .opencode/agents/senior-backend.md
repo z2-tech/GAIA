@@ -92,6 +92,7 @@ Act directly (without sub-agents) ONLY for:
 2. Soft-delete (`canceled_at`), never `DELETE`. Selectors are read-only.
 3. API snake_case output. OpenAPI schema via drf-spectacular — every 2xx has explicit schema.
 4. Contract-first — OpenAPI schema before frontend. Frontend generates SDK via `@hey-api/openapi-ts`.
+5. Lean code: no redundant comments; no orchestrator artifacts in code — no ticket/gap labels (G11.x, BE-xx), no skill names (ponytail), no agent names, no opencode references. Decisions live in tickets (`docs/tasks/`) and vault. Code must be self-explanatory; comments only for non-obvious domain invariants.
 
 ---
 
@@ -110,5 +111,5 @@ source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml d
 
 ## Domain notes (2026-Q3)
 
-- **Completeness chain**: module completers (`farms/services.py::_MODULE_COMPLETERS`) → farm avg → project avg (`get_project_completeness`) → auto-status `ProjectService.maybe_auto_complete` (BE-10/BE-11 done). Mutation hooks live in routhc/regenerative services + lca views. Gaps tracked in `docs/tasks/api/active/be-16-gaps-completude-projetos.md`.
+- **Completeness chain**: module completers (`farms/services.py::_MODULE_COMPLETERS`) → farm avg → project avg (`get_project_completeness`) → auto-status `ProjectService.auto_complete_project` (BE-10/BE-11 done). Mutation hooks live in routhc/regenerative services + lca views. Gaps tracked in `docs/tasks/api/active/be-16-gaps-completude-projetos.md`.
 - **Compare (BE-12, future)**: copy mechanism from `~/ATYHA/atyha-api/project/services/compare_services.py` (build pattern, `_METRICS`, min-max radar, verdict) — sustainability metrics, not financial. Spec: `docs/tasks/api/active/be-12-comparacao.md`, frontend `docs/tasks/web/active/fe-08-comparacao.md`.

@@ -42,4 +42,21 @@ Pattern inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai
 
 ## Completeness & auto-status (2026-Q3)
 
-Cadeia: module completers (`farms/services.py::_MODULE_COMPLETERS`) → média por fazenda (`get_farm_completeness`) → média por projeto (`get_project_completeness`) → auto `status=completed` (`ProjectService.maybe_auto_complete`, BE-10). 8 hooks de mutation em routhc/regenerative services + lca views (sem signals). Detalhes: [[../flows/Completion-Flow|Completion-Flow]] · Gaps: BE-16 · Comparação futura: BE-12/FE-08.
+Cadeia: module completers (`farms/services.py::_MODULE_COMPLETERS`) → média por fazenda (`get_farm_completeness`) → média por projeto (`get_project_completeness`) → auto `status=completed` (`ProjectService.auto_complete_project`, BE-10). 8 hooks de mutation em routhc/regenerative services + lca views (sem signals). Detalhes: [[../flows/Completion-Flow|Completion-Flow]] · Gaps: BE-16 · Comparação futura: BE-12/FE-08.
+
+## Testes (full suite)
+
+Ambiente: container PostgreSQL de teste `gaia_postgres_test` na porta **5433** via `docker-compose.db.yml` (diretório `gaia-api/`).
+
+```bash
+# Full suite clean (verificação final de entrega — destrutivo: down -v + prune + up --build)
+# Padrão oficial documentado em .opencode/agents/test-agent.md
+source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml down -v && sleep 2 && docker system prune -a -f && sleep 2 && docker compose -f docker-compose.db.yml up --build -d && sleep 2 && python test_runner.py
+
+# Modo iteração (dev) — preserva DB entre rodadas
+source venv/bin/activate && docker compose -f docker-compose.db.yml up -d && python test_runner.py --settings=test_settings --keepdb
+```
+
+- `test_runner.py` lista os apps da suíte explicitamente (inclui `routhc.tests`) — novo app de testes precisa ser registrado lá
+- Fallback 5432 (`POSTGRES_PORT_TEST=5432` + `atyha_postgres_test`) é workaround NÃO-oficial
+- Pré-requisitos lint/schema: `pre-commit run --all-files` · `python manage.py spectacular --validate --fail-on-warn`

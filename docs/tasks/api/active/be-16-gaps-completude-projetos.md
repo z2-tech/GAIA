@@ -9,16 +9,13 @@ Gaps levantados na execução de BE-10/BE-11, ainda em aberto. Nenhum bloqueia a
 ### 1. D1 — completed + nova farm → volta a `in_progress`?
 
 - **Prioridade:** Média
-- Decisão de PO pendente: hoje `maybe_auto_complete` (projects/services.py) marca o projeto `completed` em 100% e ele nunca reabre ao adicionar nova farm.
-- Se confirmado: +3 linhas em `add_farm_to_project` reabrindo status (`in_progress`) + 1 teste.
-- Documentado no código via comment `# BE-16 D1` em `projects/services.py:92`.
+- ✅ **FECHADO (2026-Q3)**: decisão PO = SIM. Implementado em `add_farm_to_project` (projects/services.py) — farm adicionada a projeto `completed` reabre status para `in_progress`. Teste: `test_add_farm_reopens_completed_project`.
 
 ### 2. Testes de integração hooks rothc + lca
 
 - **Prioridade:** Alta (garantir regressão do BE-10)
+- 🔄 **MOVIDO para BE-17** — sessão fresh, assignee @fernandocampana. Spec completa e estado do working tree no ticket.
 - Só o ponto regenerative foi testado (`TestProjectAutoCompleteViaRegenerative`).
-- RothC: `RouthcService.calcular()` depende de OpenMeteo (API externa) — mockar serviço externo ou usar mock patcher para testar pós-create sem rede.
-- Hooks LCA (5 views: culture/soil/inputs/fuel/calculate) sem teste de integração — cobrir via APITestCase/DRF test client.
 
 ### 3. G11.2 — indicadores regenerativos por escopo
 
@@ -34,11 +31,10 @@ Gaps levantados na execução de BE-10/BE-11, ainda em aberto. Nenhum bloqueia a
 ### 5. Verificação ambiente
 
 - **Prioridade:** Alta (pré-requisito para rodar testes)
-- Test DB GAIA (5433) não estava rodando; usou `atyha_postgres_test` (5432).
-- Rodar oficial: subir container GAIA via `docker-compose.db.yml`.
+- ✅ **FECHADO (2026-Q3)**: container `gaia_postgres_test` (5433) operacional via `docker-compose.db.yml`; full suite = 139 testes verdes. Instrução de geração de ambiente documentada no vault (`systems/Backend-API.md` → Testes) e no `test-agent.md` (comando oficial full suite).
 
 ## Critério de conclusão
 
-- [ ] D1 resolvido ou fechado com decisão de PO registrada
-- [ ] Testes de integração rothc/lca verdes
-- [ ] Verificação ambiente documentada no vault
+- [x] D1 resolvido (PO: volta a in_progress) — implementado + testado
+- [x] Testes de integração rothc/lca verdes (BE-17 — 139 testes OK)
+- [x] Verificação ambiente documentada no vault (Backend-API.md → Testes)
