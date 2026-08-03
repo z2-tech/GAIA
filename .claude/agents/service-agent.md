@@ -1,6 +1,6 @@
 ---
 name: service-agent
-description: GAIA agent — see .opencode/agents/service-agent.md
+description: Django service layer, business logic, atomic transactions, LCA/RothC calculations. Use when editing services.py or discussing business logic.
 tools: Read, Grep, Glob, Bash, codegraph_*
 ---
 

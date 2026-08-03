@@ -1,6 +1,6 @@
 ---
 name: lint-agent
-description: GAIA agent — see .opencode/agents/lint-agent.md
+description: Django linting, pre-commit, ruff, Black, isort, flake8. Use for code style enforcement.
 tools: Read, Grep, Glob, Bash, codegraph_*
 ---
 

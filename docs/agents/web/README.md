@@ -33,7 +33,16 @@ para cá. Ao codar no `gaia-web`, carregue o doc relevante **antes** de escrever
 
 ## Agent
 
-Entry point de código frontend: `.opencode/agents/senior-nextjs.md`.
+Entry point de código frontend: `.opencode/agents/senior-nextjs.md` (orchestrator).
+Despacha para sub-agents por área, cada um lê o doc canônico correspondente:
+
+| Sub-agent | Doc fonte |
+|-----------|-----------|
+| `form-agent` | `forms.md` · `form-template.md` |
+| `table-agent` | `table.md` |
+| `api-layer-agent` | `api-layer.md` |
+| `design-agent` | `design-system.md` · `principles.md` |
+| `i18n-key-validator` | `localization.md` |
 
 ## Roadmap de padronização (gates)
 

@@ -6,7 +6,7 @@ Three repos: `gaia-api` (Django), `gaia-web` (Next.js), `GAIA` (orchestration).
 
 All agents in `.opencode/agents/`. Full routing: `AGENTS.md`.
 
-### Backend sub-agents (Django layers)
+### Backend sub-agents (Django layers) — orchestrator: `senior-backend`
 
 | Sub-Agent | File pattern | Use |
 |-----------|-------------|-----|
@@ -18,13 +18,23 @@ All agents in `.opencode/agents/`. Full routing: `AGENTS.md`.
 | `test-agent` | `tests/**` | Tests per app |
 | `lint-agent` | — | Code style |
 
+### Frontend sub-agents (Next.js layers) — orchestrator: `senior-nextjs`
+
+| Sub-Agent | File pattern | Use |
+|-----------|-------------|-----|
+| `form-agent` | `**/schemas/*.ts`, `**/hooks/use-*.ts`, `src/components/form/` | RHF + Zod + next-intl forms |
+| `table-agent` | `src/components/table/`, feature tables | TanStack Table |
+| `api-layer-agent` | `src/services/**`, `src/client/**` | TanStack Query service layer |
+| `design-agent` | `src/components/ui/`, `src/components/` | shadcn/ui + Tailwind UI/UX |
+| `i18n-key-validator` | `messages/*.json` | Diff-scoped locale key check |
+
 ### Domain agents
 
 | Agent | Use |
 |-------|-----|
 | `sustainability-specialist` | LCA, RothC, regenerative domain |
-| `senior-backend` | Backend orchestrator (routes to sub-agents) |
-| `senior-nextjs` | Next.js frontend |
+| `senior-backend` | Backend orchestrator (routes to Django sub-agents) |
+| `senior-nextjs` | Frontend orchestrator (routes to Next.js sub-agents) |
 | `cross-stack` | API↔Next.js contracts (OpenAPI) |
 | `software-architecture` | Architecture audit |
 
