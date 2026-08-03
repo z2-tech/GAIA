@@ -85,6 +85,7 @@ Repository knowledge?
 9. **No rebase on shared branches**: never rebase `develop`, `homolog`, `main` or another published branch.
 10. **No cross-product business logic**: external repos may inspire structure, never GAIA formulas or contracts.
 11. **Self-documenting code**: tickets and agent names stay out of production comments and symbols.
+12. **Agent-owned reindex**: after changing source in `gaia-api/` or `gaia-web/`, the agent must run `.opencode/bin/codegraph-global-sync.sh` before its final response. Never delegate this step to the developer; skip it for Markdown-only changes.
 
 ## Key Conventions
 
@@ -102,7 +103,9 @@ Repository knowledge?
 |---|---|
 | CodeGraph API | Per-repo index at `<GAIA_ROOT>/gaia-api` |
 | CodeGraph Web | Per-repo index at `<GAIA_ROOT>/gaia-web` |
-| CodeGraph shadow | Cross-repo source graph at `/tmp/opencode/shadow-codegraph-gaia` |
+| CodeGraph root snapshot | Versioned cross-repo graph at `<GAIA_ROOT>/.codegraph/codegraph.db` |
+| CodeGraph live shadow | Cross-repo working graph at `/tmp/opencode/shadow-codegraph-gaia` |
+| CodeGraph MCP | Harness-agnostic launcher at `.opencode/bin/codegraph-mcp.sh` |
 | Vault search | `/vault-search <term>` or text search under `docs/vault/` |
 | DB read-only MCP | `.opencode/bin/postgres-mcp-readonly.sh` |
 | Structural validation | `python3 .opencode/bin/validate-structure.py` |

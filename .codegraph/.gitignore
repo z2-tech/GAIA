@@ -1,0 +1,22 @@
+# CodeGraph runtime files
+# Commit codegraph.db as the initial cross-repo snapshot.
+
+# Runtime-only (machine-local)
+*.db-wal
+*.db-shm
+
+# Cache
+cache/
+
+# Logs
+*.log
+
+# Daemon runtime
+daemon.pid
+daemon.sock
+
+# Hook markers
+.dirty
+
+# Allow the indexed DB to be versioned
+!codegraph.db

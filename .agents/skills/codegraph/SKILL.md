@@ -30,11 +30,15 @@ Use esta skill para explorar o codigo com foco em velocidade e baixo custo de co
 - Prefira CodeGraph antes de `rg`/`ReadFile` para perguntas estruturais.
 - Nao reconstrua manualmente fluxos que `codegraph_trace` resolve em uma chamada.
 - Se houver aviso de arquivo desatualizado no resultado, leia somente os arquivos citados no aviso.
-- Se `.codegraph/` nao existir, orientar a rodar:
+- No GAIA, nunca execute `codegraph init` ou `codegraph sync` no root: os
+  children sao ignorados pelo Git e seriam removidos do snapshot conjunto.
+- Se o indice ou shadow nao existir, execute diretamente:
 
 ```bash
-codegraph init -i
+./.opencode/bin/codegraph-global-sync.sh
 ```
+- Depois de alterar codigo em `gaia-api/` ou `gaia-web/`, o agent executa esse
+  sync antes da resposta final; nao delegue a tarefa ao developer.
 
 ## Padrao de resposta
 

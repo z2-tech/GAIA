@@ -1,11 +1,9 @@
 ---
-description: Refresh GAIA's cross-repo CodeGraph shadow and report its status.
+description: Refresh every GAIA CodeGraph index and publish the versioned cross-repo snapshot.
 ---
 
-Execute `./.opencode/bin/codegraph-global-sync.sh` to sync the shadow global CodeGraph index, then verify status.
+Execute `./.opencode/bin/codegraph-global-sync.sh` from any directory. It resolves the GAIA root, refreshes both child indexes, updates the live cross-repo shadow, and publishes `.codegraph/codegraph.db`.
 
-On first run or if shadow workspace missing, the script will init a new `.codegraph/` index. On subsequent runs, it syncs incrementally.
+On first run it initializes missing indexes. Subsequent runs are incremental; use `--force` only for a full rebuild.
 
-After sync, run: `codegraph status "/tmp/opencode/shadow-codegraph-gaia"` to confirm files/nodes/edges are up to date.
-
-If `Pending Changes: Added: N` persists with 0 nodes after sync, treat as noise from SQLite WAL/SHM in `.codegraph/` — index is current.
+After sync, run `./.opencode/bin/codegraph-global-sync.sh --status` to verify the root snapshot, shadow, API, and Web indexes.

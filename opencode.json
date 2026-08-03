@@ -5,6 +5,11 @@
   "shell": "/bin/zsh",
   "instructions": ["AGENTS.md"],
   "mcp": {
+    "codegraph": {
+      "type": "local",
+      "command": ["bash", ".opencode/bin/codegraph-mcp.sh"],
+      "enabled": true
+    },
     "postgres": {
       "type": "local",
       "command": ["bash", ".opencode/bin/postgres-mcp-readonly.sh"],
@@ -18,7 +23,7 @@
       "template": "{file:.opencode/commands/vault-search.md}"
     },
     "codegraph-sync": {
-      "description": "Sync CodeGraph shadow global index",
+      "description": "Sync all GAIA CodeGraph indexes and publish the root snapshot",
       "model": "opencode-go/deepseek-v4-flash",
       "template": "{file:.opencode/commands/codegraph-sync.md}"
     },

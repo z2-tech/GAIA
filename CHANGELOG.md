@@ -10,6 +10,8 @@ Histórico de tarefas e status do ecossistema.
   integração cross-stack e sincronização do CodeGraph.
 - Índices locais de API/Web e shadow conjunto validados sem alterações rastreadas
   nos repositórios filhos.
+- Snapshot CodeGraph cross-repo adicionado ao root e publicado pelo sync comum;
+  agents e harnesses agora assumem a reindexação ao encerrar trabalho em código.
 - Planos de execução concluídos removidos; nenhuma regra de negócio do ATYHA foi
   transportada para o GAIA.
 

@@ -10,7 +10,7 @@ tags: [system]
 |-------|-----------|
 | Repo | GAIA (this repo) |
 | Branch | main |
-| CodeGraph | Per-repo source indexes + local shadow; Markdown uses text search |
+| CodeGraph | Versioned cross-repo snapshot + live shadow + per-repo indexes |
 
 ## Responsibility
 
@@ -22,7 +22,7 @@ Centralizes 12 AI agents, SDD commands, lifecycle hooks, cross-stack handoff and
 - **Harness-agnostic**: `.opencode/agents/` → `.claude/` + `.cursor/` + `.github/`
 - **SDD pipeline**: `/feature-plan`, `/feature-implement`, `/feature-validate`
 - **Lifecycle hooks**: SessionStart, PreToolUse, PostToolUse, TaskCompleted
-- **CodeGraph**: per-repo indexes + shadow source graph
+- **CodeGraph**: `.codegraph/codegraph.db` versioned from the live cross-repo shadow; per-repo indexes remain authoritative for deep implementation
 
 ## Links
 

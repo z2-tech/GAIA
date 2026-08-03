@@ -55,7 +55,7 @@ software-architecture     ← architecture audit, code quality
 
 | Server | Tool | Status |
 |--------|------|--------|
-| codegraph | `codegraph_*` (context, search, trace, etc.) | GAIA shadow at `/tmp/opencode/shadow-codegraph-gaia` |
+| codegraph | `codegraph_*` (context, search, trace, etc.) | Live shadow via `./.opencode/bin/codegraph-mcp.sh` |
 | postgres | `postgres_query` | Read-only DB via `./.opencode/bin/postgres-mcp-readonly.sh` |
 
 ## Commands (`.opencode/commands/`)
@@ -65,5 +65,9 @@ software-architecture     ← architecture audit, code quality
 | `/feature-plan` | Generate task spec from domain requirements |
 | `/feature-implement` | Execute task spec via agent dispatch |
 | `/feature-validate` | Run tests + schema + lint gates |
-| `/codegraph-sync` | Trigger global index sync |
+| `/codegraph-sync` | Refresh child/shadow indexes and publish the root snapshot |
 | `/vault-search` | Search knowledge vault |
+
+After changing source in `gaia-api/` or `gaia-web/`, agents run
+`./.opencode/bin/codegraph-global-sync.sh` before their final response. The
+developer is not responsible for reindexing.

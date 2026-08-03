@@ -18,6 +18,7 @@ All agents in `.opencode/agents/`. See `AGENTS.md` for routing.
 2. Contract-first — OpenAPI schema before frontend (auto-gen via @hey-api/openapi-ts)
 3. PT (UX/domain), EN (code)
 4. NEVER commit without authorization
+5. After API/Web source changes, run `.opencode/bin/codegraph-global-sync.sh` before the final response; the agent owns reindexing, not the developer
 
 ## Test Commands
 

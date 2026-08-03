@@ -1,5 +1,12 @@
 {
   "mcpServers": {
+    "codegraph": {
+      "type": "stdio",
+      "command": "bash",
+      "args": [
+        "./.opencode/bin/codegraph-mcp.sh"
+      ]
+    },
     "postgres-readonly": {
       "type": "stdio",
       "command": "bash",

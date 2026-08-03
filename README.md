@@ -19,11 +19,7 @@ cd GAIA
 git clone <gaia-api-remote> gaia-api
 git clone <gaia-web-remote> gaia-web
 
-# Índices locais de código
-codegraph init -i gaia-api
-codegraph init -i gaia-web
-
-# Shadow para análise cross-repo
+# Inicializa children, shadow cross-repo e snapshot versionado
 ./.opencode/bin/codegraph-global-sync.sh
 
 code GAIA.code-workspace
@@ -89,6 +85,7 @@ GAIA/
 ├── .agents/skills/             skills mantidas pelo projeto
 ├── .claude/agents/             wrappers
 ├── .cursor/rules/
+├── .codegraph/                 snapshot cross-repo versionado
 ├── docs/
 │   ├── tasks/                  specs por stack
 │   ├── workflow/               branching, cross-stack e CodeGraph
@@ -115,6 +112,7 @@ GAIA/
 ```bash
 # Orquestrador
 python3 .opencode/bin/validate-structure.py
+bash -n .opencode/bin/*.sh
 
 # API
 cd gaia-api
@@ -133,10 +131,13 @@ bun run build
 
 CodeGraph indexa estrutura de código, não o conteúdo semântico do Markdown.
 
+- `.codegraph/codegraph.db` é o snapshot versionado conjunto de API + Web.
 - Use os índices per-repo para implementação profunda.
-- Use `/tmp/opencode/shadow-codegraph-gaia` para relações entre API e Web.
+- O MCP usa `/tmp/opencode/shadow-codegraph-gaia` como grafo vivo cross-repo.
 - Use `/vault-search`, Read ou Grep para vault, tasks e workflow.
-- O root não versiona um banco CodeGraph vazio.
+- Agents executam `.opencode/bin/codegraph-global-sync.sh` após mudar código;
+  o developer não precisa manter os índices manualmente.
+- Nunca rode `codegraph sync .` no root; o script publica o snapshot correto.
 
 Procedimento: [`docs/workflow/CODE_GRAPH_SYNC.md`](docs/workflow/CODE_GRAPH_SYNC.md).
 
@@ -147,3 +148,4 @@ Procedimento: [`docs/workflow/CODE_GRAPH_SYNC.md`](docs/workflow/CODE_GRAPH_SYNC
 - Nenhuma credencial em Git.
 - Nenhuma regra de negócio importada de outro produto.
 - Código e testes prevalecem sobre documentação desatualizada.
+- Reindexação após mudanças de código é responsabilidade do agent.
