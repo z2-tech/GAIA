@@ -1,6 +1,10 @@
 # FE-16 — Hook Claude biome-fix + guard de import `@/client`
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Média | **Assignee:** — | **Status:** ✅ Concluído
+>
+> Já implementado no `gaia-web` branch `develop`. `.claude/hooks/biome-fix.sh` existe;
+> `biome.jsonc` tem `noRestrictedImports` com boundaries app/features/services (guard
+> de `@/client`). Registro.
 
 ## Contexto
 

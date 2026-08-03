@@ -1,6 +1,10 @@
 # FE-13 — Adotar Biome como lint+format primário (Gate 3)
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Alta | **Assignee:** — | **Status:** ✅ Concluído
+>
+> Já implementado no `gaia-web` branch `develop` (commit `f048389` — adopt Biome +
+> Vitest + husky). Card mantido como registro. Checklist abaixo é referência do que
+> foi entregue.
 
 ## Contexto
 

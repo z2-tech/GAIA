@@ -1,6 +1,9 @@
 # FE-15 — husky + lint-staged + commitlint
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Alta | **Assignee:** — | **Status:** ✅ Concluído
+>
+> Já implementado no `gaia-web` branch `develop` (commit `f048389`). `.husky/pre-commit`,
+> `.husky/commit-msg`, `commitlint.config.mjs`, `lint-staged` presentes. Registro.
 
 ## Contexto
 

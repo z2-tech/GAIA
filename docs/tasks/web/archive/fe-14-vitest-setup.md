@@ -1,6 +1,9 @@
 # FE-14 — Vitest + Testing Library (jsdom) + smoke test
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Alta | **Assignee:** — | **Status:** ✅ Concluído
+>
+> Já implementado no `gaia-web` branch `develop` (commit `f048389`). `vitest` +
+> scripts `test`/`test:ci` presentes. Card mantido como registro.
 
 ## Contexto
 

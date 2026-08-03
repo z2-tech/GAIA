@@ -26,9 +26,9 @@
 | FE-04 | Fix: falsa impressão de login (flash do shell) | — | ⬜ Pendente |
 | FE-11 | Bug: rules-of-hooks em `regenerative.query.ts` (useQuery condicional) | — | ⬜ Pendente |
 | FE-12 | Bug: form BAT (biodiversidade) não persiste — sem schema/mutation | — | ⬜ Pendente |
-| FE-13 | Gate 3: adotar Biome como lint+format primário | — | ⬜ Pendente |
-| FE-14 | Gate 3: Vitest + Testing Library + smoke test | — | ⬜ Pendente |
-| FE-15 | Gate 3: husky + lint-staged + commitlint | — | ⬜ Pendente |
+| FE-13 | Gate 3: adotar Biome como lint+format primário | — | ✅ Concluído (develop `f048389`) |
+| FE-14 | Gate 3: Vitest + Testing Library + smoke test | — | ✅ Concluído (develop `f048389`) |
+| FE-15 | Gate 3: husky + lint-staged + commitlint | — | ✅ Concluído (develop `f048389`) |
 | FE-17 | EN: rotas + params dinâmicos (sub-épico FE-10) | — | ⬜ Pendente |
 | FE-18 | EN: pastas de feature + arquivos (sub-épico FE-10) | — | ⬜ Pendente |
 | FE-19 | EN: identifiers hooks/types/consts (sub-épico FE-10) | — | ⬜ Pendente |
@@ -46,7 +46,7 @@
 |----|--------|----------|--------|
 | FE-03 | Melhorias visuais (empty states, skeletons) | — | ⬜ Pendente |
 | FE-10 | 🗂️ Épico PT→EN (principle 8) — ver sub-cards FE-17/18/19/20/21 | — | ⬜ Pendente |
-| FE-16 | Gate 3: hook biome-fix + guard `no-restricted-imports @/client` (dep FE-13) | — | ⬜ Pendente |
+| FE-16 | Gate 3: hook biome-fix + guard `no-restricted-imports @/client` | — | ✅ Concluído (develop) |
 | FE-21 | EN: toast copy sob `<domain>.toast` (sub-épico FE-10, dep FE-20) | — | ⬜ Pendente |
 | FE-22 | Boundary: rotear chamadas SDK via services (remover leaks `@/client`) | — | ⬜ Pendente |
 | FE-23 | Boundary: remover cross-feature + shared→feature imports | — | ⬜ Pendente |
