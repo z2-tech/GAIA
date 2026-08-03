@@ -7,6 +7,29 @@ allowed-tools: Bash(npx shadcn@latest *), Bash(pnpm dlx shadcn@latest *), Bash(b
 
 # shadcn/ui
 
+> ## GAIA override (gaia-web) — ler PRIMEIRO
+>
+> Em `gaia-web/`, as convencoes GAIA **vencem** qualquer regra generica deste doc.
+> Fonte canonica: `docs/agents/web/design-system.md` + `docs/agents/web/forms.md`.
+> Espelha `design-agent` (UI) e `form-agent` (forms).
+>
+> - **Config**: shadcn/ui **New York** + Tailwind **v4** + CSS vars. Runner = `bunx --bun shadcn@latest`.
+> - **Reusar antes de adicionar**: checar `src/components/` (wrappers GAIA:
+>   `ContentTemplate`, `CardLista`, `CardTitleIcon`, `FormDialog`, `EmptyPage`,
+>   `Badge*`) antes de `shadcn add`.
+> - **Forms — NAO usar `FieldGroup`/`Field`/`Controller` cru.** GAIA tem wrappers
+>   proprios em `src/components/form/` (`FormInput`, `FormSelect`, `FormNumberInput`,
+>   `FormDatePicker`, `FormCombobox`, `FormCheckbox`, `FormTextarea`, `FormDropzone`),
+>   todos `{ control, name, label }`, com RHF + Zod factory + next-intl. Ver `form-agent`.
+> - **Radius/typography/cores** seguem `design-system.md` (cards `rounded-2xl`, botoes
+>   `rounded-full`, texto semantico `text-foreground`/`text-muted-foreground`), nao os
+>   defaults do registry.
+> - **Nunca** importar `src/client/` em page/feature; UI so consome via `services/`.
+> - Verificar: `cd gaia-web && bun lint && bun run build`.
+>
+> As secoes abaixo sao a referencia generica do shadcn — validas onde nao conflitam
+> com o override acima.
+
 A framework for building ui, components and design systems. Components are added as source code to the user's project via the CLI.
 
 > **IMPORTANT:** Run all CLI commands using the project's package runner: `npx shadcn@latest`, `pnpm dlx shadcn@latest`, or `bunx --bun shadcn@latest` — based on the project's `packageManager`. Examples below use `npx shadcn@latest` but substitute the correct runner for the project.

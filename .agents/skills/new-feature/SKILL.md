@@ -7,7 +7,12 @@ description: Scaffold a new farm-level feature module end-to-end in gaia-web fol
 
 Scaffold a new GaiaMetrics farm-level feature module end-to-end. Canonical
 patterns: `docs/agents/web/` (GAIA) — read `project-structure.md`, `forms.md`,
-`naming-conventions.md`, `architecture.md` before scaffolding.
+`naming-conventions.md`, `architecture.md`, `design-system.md` before scaffolding.
+
+Mirrors the frontend sub-agents (dispatch via `senior-nextjs` when doing real work):
+`api-layer-agent` (Step 3 services), `form-agent` (Step 4 schema/hook/form),
+`design-agent` (page/dialog UI), `i18n-key-validator` (Step 1 locale check).
+Rules below are the scaffold shortcut — the agents own the full spec.
 
 ## Inputs to gather before starting
 
