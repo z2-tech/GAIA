@@ -17,6 +17,7 @@ para cá. Ao codar no `gaia-web`, carregue o doc relevante **antes** de escrever
 | 2 | [`architecture.md`](architecture.md) | Camadas, domínio DTO→model→mapper, regra idioma, platform |
 | 3 | [`project-structure.md`](project-structure.md) | Onde cada arquivo/pasta vai |
 | 4 | [`naming-conventions.md`](naming-conventions.md) | Nomes: arquivos, hooks, constantes, schemas |
+| 5 | [`code-standards.md`](code-standards.md) | Como escrever cada linha: TS, React, erro, comentários, commits |
 
 ## Padrões por área
 
@@ -40,5 +41,5 @@ Entry point de código frontend: `.opencode/agents/senior-nextjs.md`.
 |------|--------|---------|
 | 2 — Princípios + Fundação | 🟢 aprovado | `principles.md` + `architecture.md` (+ error model em `api-layer.md`) |
 | 3 — Libs & tooling | 🟢 aprovado | [`libs-tooling.md`](libs-tooling.md) — Biome, Vitest, husky, commitlint, `.claude/hooks` |
-| 4 — Padrões de código | ⬜ | `code-standards.md` (no-enum, safePromise, erro-valor, ref-as-prop) |
+| 4 — Padrões de código | 🟢 aprovado | [`code-standards.md`](code-standards.md) — TS, React, erro, comentários, commits, mapa enforcement |
 | 8 — IA-first | 🟢 parcial | agents (`i18n-key-validator`) + skills (`new-feature`) movidos p/ GAIA; hooks no gaia-web |
