@@ -54,11 +54,13 @@ shared (components, lib, hooks)  →  services  →  features  →  app
 
 Each feature lives at `src/features/<domain>/` and is **flat** — no nested features.
 
+Folder names are **English** (see [`naming-conventions.md`](naming-conventions.md)):
+
 ```
 src/features/<domain>/
-├── modulo/
+├── module/
 │   ├── components/    # Feature-scoped UI
-│   ├── hooks/         # use-<domain>-modulo.ts — form state, mutations, submit logic
+│   ├── hooks/         # use-<domain>-module.ts — form state, mutations, submit logic
 │   ├── lib/           # Pure helpers (no React)
 │   ├── schemas/       # Zod schema factories + mappers
 │   └── types/         # Explicit TS types (if complex)
@@ -67,29 +69,34 @@ src/features/<domain>/
 └── <domain>-page.tsx  # or index.tsx
 ```
 
-Real examples:
+Target examples (English):
 
-- `src/features/carbono-remocao/modulo/` — hooks, schemas, lib, components
-- `src/features/regenerativo/modulo/` — same pattern
-- `src/features/fazenda/` — layout, header, tab menu types
+- `src/features/carbon-removal/module/` — hooks, schemas, lib, components
+- `src/features/regenerative/module/` — same pattern
+- `src/features/farm/` — layout, header, tab menu types
+
+> **Migration pending.** The code today still uses Portuguese folders/routes
+> (`carbono-remocao`, `fazenda`, `modulo/`, `[projetoId]`). Renaming to English is
+> tracked as a migration task; new code follows the English rule from the start.
 
 ## Navigation layer (`src/app/`)
 
 Next.js App Router. Route groups in parentheses share layouts without URL segments.
+Route segments are **English** (target below; current code still Portuguese).
 
 ```
 src/app/
 ├── (auth)/login/        # Public auth route
 └── (private)/           # All authenticated routes — layout handles session guard
     ├── (dashboard)/     # Home dashboard
-    ├── perfil/          # User profile
-    ├── usuarios/        # Admin: user management
-    └── projetos/[projetoId]/fazenda/[fazendaId]/
-        ├── generalData/
-        ├── carbono-remocao/     # index page + modulo/ subpage
-        ├── carbono-emissao/
-        ├── regenerativo/
-        └── biodiversidade/
+    ├── profile/         # User profile
+    ├── users/           # Admin: user management
+    └── projects/[projectId]/farm/[farmId]/
+        ├── general-data/
+        ├── carbon-removal/      # index page + module/ subpage
+        ├── carbon-emission/
+        ├── regenerative/
+        └── biodiversity/
 ```
 
 Routes are thin shells: `useParams`, `useTranslations`, one feature component import.
@@ -123,6 +130,6 @@ Config in `openapi-ts.config.ts`. **Never hand-edit `src/client/`** — the PreT
 ## Conventions
 
 - **No barrel files.** Import the specific file (`import { Foo } from "@/features/foo/components/foo.tsx"`), not an `index.ts` re-export.
-- **Features stay flat.** Subdivide internally with subfolders (`modulo/`, `dashboard/`), not with nested feature directories.
+- **Features stay flat.** Subdivide internally with subfolders (`module/`, `dashboard/`), not with nested feature directories.
 - **Compose at the app layer.** When two features need to interact, the route in `src/app/` orchestrates them.
 - **Shared code lives at `src/components/`, `src/lib/`, `src/hooks/`.** If something inside a feature is needed by another feature, move it up before adding the second consumer.

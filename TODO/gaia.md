@@ -36,6 +36,7 @@
 | ID | Tarefa | Assignee | Status |
 |----|--------|----------|--------|
 | FE-03 | Melhorias visuais (empty states, skeletons) | — | ⬜ Pendente |
+| FE-10 | Migrar features/rotas/params PT→EN (fazenda→farm, carbono-remocao→carbon-removal, [projetoId]→[projectId], modulo→module) — muda URLs + imports | — | ⬜ Pendente |
 | SHARED-04 | Design das telas de comparação | — | ⬜ Pendente |
 
 ## 🟢 Baixa Prioridade (Backlog)

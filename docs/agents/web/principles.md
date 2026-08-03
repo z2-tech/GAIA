@@ -47,10 +47,11 @@ escolha entra em conflito, o princípio de número menor vence.
    RQ, usar `safePromise` → `[value, null] | [null, Error]`. `try/catch` cru só
    para `finally` ou recuperação compartilhada.
 
-8. **Um idioma por camada.** PT para domínio/UX (rotas, copy, i18n, nomes de
-   negócio visíveis). EN para código (identificadores, tipos, funções, camada de
-   service). Nada de `fazenda` misturado com `farms` no mesmo nível — a fronteira
-   é a camada, não o arquivo.
+8. **Inglês em tudo estrutural.** Todo identificador é inglês — arquivo, pasta,
+   feature, segmento de rota, componente, hook, tipo, variável, constante, chave
+   i18n. Português aparece **só** nos valores renderizados de `messages/pt.json`
+   (locale pt-BR). Rota e URL também em inglês. Nada de `fazenda` misturado com
+   `farms`.
 
 ## Fora deste doc (mas imutável)
 

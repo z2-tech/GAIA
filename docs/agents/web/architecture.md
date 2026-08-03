@@ -53,46 +53,50 @@ biodiversidade) mora dentro de `.tsx`/hooks. A camada de domínio corrige isso.
 
 **Regras:**
 
-- Mapper e schema vivem em `features/<domínio>/<sub>/schemas/` e `.../lib/` — **sem
+- Mapper e schema vivem em `features/<domain>/<sub>/schemas/` e `.../lib/` — **sem
   `import` de React**. É onde o teste do domínio ataca ([princípio 4](principles.md)).
 - Componente recebe modelo de UI, nunca DTO. Se um `.tsx` referencia um tipo de
   `client/`, é bug de camada.
 - Cálculo de sustentabilidade (fórmula LCA/RothC/regen) é domínio puro. Entra com
   teste ao portar — nunca colado do hook antigo.
 
-> Já existe embrião disso em `features/*/modulo/schemas/` (mappers
+> Já existe embrião disso em `features/*/module/schemas/` (mappers
 > `detailToFormValues`, `valuesToCreateBody`). Consolidar, não reinventar.
 
-## Regra de idioma por camada
+## Regra de idioma: inglês em tudo estrutural
 
-[Princípio 8](principles.md). A fronteira PT/EN é a **camada**, não o arquivo:
+[Princípio 8](principles.md). **Todo identificador é inglês** — arquivo, pasta,
+feature, segmento de rota, componente, hook, tipo, variável, constante, chave i18n.
+Português aparece **só** no texto renderizado: os *valores* de `messages/pt.json`.
 
 | Onde | Idioma | Exemplo |
 |------|--------|---------|
-| Rotas de domínio (`app/`) | PT | `carbono-remocao/`, `regenerativo/` |
-| Copy, i18n, labels | PT | `messages/pt.json` |
-| Nomes de negócio visíveis | PT | "Fazenda", "Talhão" |
-| `services/`, tipos, funções, vars | EN | `farms/`, `useGetFarm`, `FarmFormValues` |
-| Camada de domínio (mapper, schema) | EN | `valuesToCreateBody` |
+| Features, pastas, arquivos | **EN** | `features/farm/`, `carbon-removal/`, `roth-c-module.ts` |
+| Rotas (`app/`) e URL | **EN** | `/projects/[projectId]/farm/[farmId]/carbon-removal` |
+| `services/`, tipos, funções, vars, hooks | **EN** | `services/farms/`, `useGetFarm`, `FarmFormValues` |
+| Domínio (mapper, schema) | **EN** | `valuesToCreateBody`, `createRothCModuleSchema` |
+| Chaves i18n | **EN** | `rothC.toast.calculateSuccess` |
+| **Valores** de i18n / copy renderizada | **PT** (locale) | `messages/pt.json`: "Fazenda", "Talhão" |
 
-**Anti-padrão atual:** `features/fazenda/` (PT) chamando `services/farms/` (EN) é
-correto — a fronteira caiu na camada. O que **não** pode: `farm` e `fazenda` como
-variáveis no mesmo escopo. Ao portar, normalizar identificadores de código pra EN.
+**Anti-padrão:** feature/rota em PT (`features/fazenda/`, `carbono-remocao/`,
+`[projetoId]`, `modulo/`). O código atual está assim e **viola** esta regra — exige
+migração para EN (features, rotas, params, `modulo/`→`module/`). Rastreado como
+tarefa de migração; ver `libs-tooling.md` (débito) e o TODO.
 
 ## Forma de módulo de feature
 
-Feature em `src/features/<domínio>/`, **flat** (sem feature aninhada). Só as
-subpastas que a feature usa:
+Feature em `src/features/<domain>/`, **flat** (sem feature aninhada), nome em
+inglês. Só as subpastas que a feature usa:
 
 ```
-features/<domínio>/
-├── <sub>/                  (ex: modulo/, dashboard/)
+features/<domain>/
+├── <sub>/                  (ex: module/, dashboard/)
 │   ├── components/         UI da feature
-│   ├── hooks/              use-<domínio>-<sub>.ts — estado, mutations, submit
+│   ├── hooks/              use-<domain>-<sub>.ts — estado, mutations, submit
 │   ├── lib/                helpers puros (sem React)
 │   ├── schemas/            Zod factory + mappers (camada domínio)
 │   └── types/              tipos de UI explícitos
-└── <domínio>-page.tsx
+└── <domain>-page.tsx
 ```
 
 Detalhe e exemplos reais: [`project-structure.md`](project-structure.md) e
