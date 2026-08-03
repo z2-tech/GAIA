@@ -23,8 +23,6 @@
 
 | ID | Tarefa | Assignee | Status |
 |----|--------|----------|--------|
-| FE-01 | Fluxo de reset de senha | @fernandocampana | ⬜ Pendente |
-| FE-02 | Definir permissão do usuário após cadastro | @fernandocampana | ⬜ Pendente |
 | FE-04 | Fix: falsa impressão de login (flash do shell) | — | ⬜ Pendente |
 
 ## 🔴 Alta Prioridade — Cross-Stack
@@ -38,9 +36,6 @@
 | ID | Tarefa | Assignee | Status |
 |----|--------|----------|--------|
 | FE-03 | Melhorias visuais (empty states, skeletons) | — | ⬜ Pendente |
-| FE-05 | Renomear LCA → ACV (PT) / LCA (EN) | — | ⬜ Pendente |
-| FE-06 | KML não obrigatório + suporte Shapefile | — | ⚠️ Parcial |
-| FE-07 | Fix: cultura como ENUM no resultado RothC | — | ⬜ Pendente |
 | SHARED-04 | Design das telas de comparação | — | ⬜ Pendente |
 
 ## 🟢 Baixa Prioridade (Backlog)
@@ -52,5 +47,6 @@
 | BE-14 | Formatação do número "Aporte de biomassa anual" | — | ⬜ Pendente |
 | BE-15 | Permissão de visualização de projetos entre usuários | — | ⬜ Pendente |
 | FE-08 | Tela de comparação (depende de BE-12) | — | ⬜ Pendente |
+| FE-09 | Upload de Shapefile solto (.shx/.dbf sem .zip) — edge do FE-06 | — | ⬜ Backlog |
 | SHARED-02 | Integrar IA para comparação de módulos | @léo bola, @fernandocampana | ⬜ Pendente |
 | SHARED-03 | Integração Cool Farm Tool (fora do MVP) | — | ⬜ Pendente |
