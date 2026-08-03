@@ -1,6 +1,11 @@
 # FE-07 — Fix: cultura aparecendo como ENUM no resultado do Carbono Remoção
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** Pendente
+> **Prioridade:** Média | **Assignee:** — | **Status:** ✅ Concluído
+>
+> Entregue no `gaia-web` branch `develop`: resultado RothC
+> (`carbono-remocao/calculo/components/calculo-page-content.tsx:117`) usa
+> `enumLabel("cultura", cultura)` via `useEnumLabel`; bloco `cultura` (SOYBEAN→Soja
+> etc.) em `messages/pt.json` + `en.json`.
 
 ## Problema
 
@@ -13,7 +18,7 @@ No dashboard de resultado do RothC, o nome da cultura aparece como valor bruto d
 
 ## Checklist
 
-- [ ] Identificar onde o valor é exibido (resultado, dashboard, tabela)
-- [ ] Criar mapa de ENUM → label i18n
-- [ ] Se for backend: atualizar serializer para usar `display` field
-- [ ] Testar com PT e EN
+- [x] Identificar onde o valor é exibido (resultado, dashboard, tabela)
+- [x] Criar mapa de ENUM → label i18n (`useEnumLabel` + bloco `cultura`)
+- [x] Solução frontend (não precisou tocar serializer)
+- [x] Testar com PT e EN

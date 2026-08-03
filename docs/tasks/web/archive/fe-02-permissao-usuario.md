@@ -1,7 +1,11 @@
 # FE-02 — Definir permissão do usuário após cadastro
 
-> **Prioridade:** Alta | **Assignee:** @fernandocampana | **Status:** Pendente
+> **Prioridade:** Alta | **Assignee:** @fernandocampana | **Status:** ✅ Concluído
 > **API:** `auth/authz/users/{user_id}/roles/` já implementado
+>
+> Entregue no `gaia-web` branch `develop`: `gerenciar-permissoes-cell.tsx`,
+> `services/auth/authz.query.ts` (`useUserRoles` query+mutation), coluna de roles
+> em `lista-usuarios-columns.tsx`, i18n.
 
 ## Escopo
 
@@ -16,7 +20,7 @@ Após criar um novo usuário, permitir que o admin defina suas roles na tela de 
 
 ## Checklist
 
-- [ ] Hook `useUserRoles` (query + mutation)
-- [ ] Componente de seleção de roles (multi-select chips)
-- [ ] Atualizar tabela de usuários
-- [ ] i18n
+- [x] Hook `useUserRoles` (query + mutation)
+- [x] Componente de seleção de roles (multi-select chips)
+- [x] Atualizar tabela de usuários
+- [x] i18n
