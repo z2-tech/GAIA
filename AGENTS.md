@@ -34,7 +34,8 @@ API work?
        └── lint-agent.md
 
 Web or Next.js work?
-  └── .opencode/agents/senior-nextjs.md
+  ├── .opencode/agents/senior-nextjs.md
+  └── docs/agents/web/  (playbook: principles, architecture, standards)
 
 Cross-stack contract?
   ├── .opencode/agents/cross-stack.md

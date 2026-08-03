@@ -17,4 +17,6 @@ Code owner for `gaia-web/` on branch `develop`.
 3. **Component system**: shadcn/ui (New York style) + Tailwind v4 + CSS vars. Reuse before creating new.
 4. **State**: TanStack Query for server state, Jotai for client state, react-hook-form + zod for forms.
 
-Key refs: `gaia-web/docs/design-system.md`, `gaia-web/docs/api-layer.md`, `gaia-web/docs/forms.md`
+Padrões canônicos: `docs/agents/web/` (GAIA). Ler primeiro `principles.md` +
+`architecture.md`; índice em `docs/agents/web/README.md`. Refs frequentes:
+`api-layer.md`, `forms.md`, `design-system.md`, `naming-conventions.md`.

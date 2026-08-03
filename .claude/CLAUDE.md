@@ -39,6 +39,7 @@ All agents in `.opencode/agents/`. Full routing: `AGENTS.md`.
 ## Knowledge
 
 - Vault: `docs/vault/00-INDEX.md`
+- Frontend playbook: `docs/agents/web/README.md` (principles, architecture, standards)
 - References: `docs/references/README.md`
 - Skills: `.agents/skills/`
 - SDD commands: `/feature-plan`, `/feature-implement`, `/feature-validate`
