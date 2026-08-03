@@ -1,7 +1,7 @@
 ---
 tags: [standards, architecture]
 scope: gaia-web
-status: draft
+status: approved
 ---
 
 # Arquitetura — gaia-web

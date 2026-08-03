@@ -1,7 +1,7 @@
 ---
 tags: [standards, principles]
 scope: gaia-web
-status: draft
+status: approved
 ---
 
 # Princípios — gaia-web
