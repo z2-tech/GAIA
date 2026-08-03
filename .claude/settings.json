@@ -3,13 +3,23 @@
     "SessionStart": [
       {
         "matcher": "",
-        "command": "echo \"[$(date +%H:%M)] GAIA · $(git branch --show-current)\""
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date +%H:%M)] GAIA · $(git branch --show-current)\""
+          }
+        ]
       }
     ],
-    "TaskCompleted": [
+    "Stop": [
       {
         "matcher": "",
-        "command": "echo '📋 QA gate: run tests + lint before PR'"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '📋 QA gate: run tests + lint before PR'"
+          }
+        ]
       }
     ]
   }
