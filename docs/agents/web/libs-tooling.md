@@ -1,7 +1,7 @@
 ---
 tags: [standards, tooling]
 scope: gaia-web
-status: draft
+status: approved
 ---
 
 # Libs & Tooling — gaia-web

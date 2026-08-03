@@ -39,6 +39,6 @@ Entry point de código frontend: `.opencode/agents/senior-nextjs.md`.
 | Gate | Estado | Entrega |
 |------|--------|---------|
 | 2 — Princípios + Fundação | 🟢 aprovado | `principles.md` + `architecture.md` (+ error model em `api-layer.md`) |
-| 3 — Libs & tooling | 🟢 landed | [`libs-tooling.md`](libs-tooling.md) — Biome, Vitest, husky, commitlint, `.claude/hooks` |
+| 3 — Libs & tooling | 🟢 aprovado | [`libs-tooling.md`](libs-tooling.md) — Biome, Vitest, husky, commitlint, `.claude/hooks` |
 | 4 — Padrões de código | ⬜ | `code-standards.md` (no-enum, safePromise, erro-valor, ref-as-prop) |
 | 8 — IA-first | 🟢 parcial | agents (`i18n-key-validator`) + skills (`new-feature`) movidos p/ GAIA; hooks no gaia-web |
