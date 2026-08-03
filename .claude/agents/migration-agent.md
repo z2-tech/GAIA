@@ -1,6 +1,6 @@
 ---
 name: migration-agent
-description: GAIA agent — see .opencode/agents/migration-agent.md
+description: Django migrations, SeparateDatabaseAndState, seed data. Use when editing migrations.
 tools: Read, Grep, Glob, Bash, codegraph_*
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: test-agent
-description: GAIA agent — see .opencode/agents/test-agent.md
+description: Django tests, factory-boy, test_runner. Use when writing tests.
 tools: Read, Grep, Glob, Bash, codegraph_*
 ---
 

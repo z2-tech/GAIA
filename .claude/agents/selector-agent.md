@@ -1,6 +1,6 @@
 ---
 name: selector-agent
-description: GAIA agent — see .opencode/agents/selector-agent.md
+description: Django selectors, read-only queries, computed derivatives. Use when editing selectors.py or discussing query patterns.
 tools: Read, Grep, Glob, Bash, codegraph_*
 ---
 

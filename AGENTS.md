@@ -22,9 +22,9 @@
 Domain or sustainability methodology?
   └── .opencode/agents/sustainability-specialist.md
 
-API work?
-  ├── .opencode/agents/senior-backend.md
-  └── Django layer agents:
+API work?  (Backend — Django)
+  ├── .opencode/agents/senior-backend.md   (orchestrator)
+  └── Django layer sub-agents:
        ├── model-agent.md
        ├── service-agent.md
        ├── selector-agent.md
@@ -33,8 +33,15 @@ API work?
        ├── test-agent.md
        └── lint-agent.md
 
-Web or Next.js work?
-  └── .opencode/agents/senior-nextjs.md
+Web or Next.js work?  (Frontend — Next.js)
+  ├── .opencode/agents/senior-nextjs.md    (orchestrator)
+  ├── Next.js layer sub-agents:
+  │    ├── form-agent.md        (RHF + Zod forms)
+  │    ├── table-agent.md       (TanStack Table)
+  │    ├── api-layer-agent.md   (TanStack Query service layer)
+  │    ├── design-agent.md      (shadcn/ui + Tailwind UI/UX)
+  │    └── i18n-key-validator.md (locale key check)
+  └── docs/agents/web/  (playbook: principles, architecture, standards)
 
 Cross-stack contract?
   ├── .opencode/agents/cross-stack.md
@@ -52,21 +59,31 @@ Repository knowledge?
 ## Agent Tree
 
 ```
-.opencode/agents/                 12 canonical agents
-├── senior-backend.md
-├── senior-nextjs.md
-├── sustainability-specialist.md
-├── cross-stack.md
-├── software-architecture.md
-├── model-agent.md
-├── service-agent.md
-├── selector-agent.md
-├── serializer-agent.md
-├── migration-agent.md
-├── test-agent.md
-└── lint-agent.md
+.opencode/agents/                 17 canonical agents
+├── shared/
+│   ├── sustainability-specialist.md
+│   ├── cross-stack.md
+│   └── software-architecture.md
+├── backend/  (Django)
+│   ├── senior-backend.md         (orchestrator)
+│   ├── model-agent.md
+│   ├── service-agent.md
+│   ├── selector-agent.md
+│   ├── serializer-agent.md
+│   ├── migration-agent.md
+│   ├── test-agent.md
+│   └── lint-agent.md
+└── frontend/  (Next.js)
+    ├── senior-nextjs.md          (orchestrator)
+    ├── form-agent.md
+    ├── table-agent.md
+    ├── api-layer-agent.md
+    ├── design-agent.md
+    └── i18n-key-validator.md
 
-.claude/agents/                   12 wrappers to .opencode/agents/
+(files live flat in .opencode/agents/; grouping above is logical, by domain)
+
+.claude/agents/                   17 wrappers to .opencode/agents/
 .cursor/rules/gaia-agents.mdc     Cursor project routing
 .github/copilot-instructions.md   Copilot project routing
 .agents/skills/                   Project skills

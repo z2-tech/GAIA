@@ -1,6 +1,6 @@
 ---
 name: serializer-agent
-description: GAIA agent — see .opencode/agents/serializer-agent.md
+description: DRF serializers, drf-spectacular schema, validation. Use when editing serializers or discussing API contracts.
 tools: Read, Grep, Glob, Bash, codegraph_*
 ---
 
