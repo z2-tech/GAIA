@@ -36,7 +36,7 @@ Module completers (_MODULE_COMPLETERS, farms/services.py)
 ## Contrato
 
 - API retorna `status` traduzido (PT/EN via `ProjectStatus.get_label`); frontend já renderiza badge "Concluído" + barra de progresso (sem mudança de contrato).
-- Gaps: [[../tasks/api/active/be-16-gaps-completude-projetos|BE-16]] (indicadores por escopo, transport LCA).
+- Histórico: [`BE-16`](../../tasks/api/archive/be-16-gaps-completude-projetos.md).
 
 ## Relações
 

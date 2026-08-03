@@ -6,9 +6,11 @@ model: opencode-go/deepseek-v4-pro
 
 Validate implementation against spec:
 
-1. API: `python manage.py spectacular --validate --fail-on-warn`
-2. API: `python test_runner.py --settings=test_settings`
-3. Web: `flutter test` + `flutter analyze`
-4. Cross-stack: verify contracts in `docs/agents/shared/cross-stack.md`
-5. Check `TODO/atyha.md` status matches implementation state
-6. Output: pass/fail per check + remaining gaps
+1. Structure: `python3 .opencode/bin/validate-structure.py`
+2. API: `python manage.py spectacular --validate --fail-on-warn`
+3. API: `python test_runner.py --settings=test_settings --keepdb`
+4. Web: `bun lint` + `bun run build`
+5. If the API schema changed: regenerate with `bunx @hey-api/openapi-ts` in `gaia-web/`
+6. Cross-stack: execute `docs/workflow/CROSS_STACK_PR.md`
+7. Check `TODO/gaia.md` matches the implementation state
+8. Output: pass/fail per check + remaining gaps

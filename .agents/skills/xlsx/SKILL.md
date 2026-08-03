@@ -1,3 +1,8 @@
+---
+name: xlsx
+description: Read and map GAIA XLSX, XLSM, CSV, and TSV reference models. Use for sustainability formulas, scoring tables, seed data, and sheet-to-code mapping.
+---
+
 # xlsx Spreadsheet Skill
 
 Read, analyze, and map Excel spreadsheets (.xlsx, .xlsm, .csv, .tsv) that serve as domain reference material for sustainability metrics.

@@ -58,5 +58,4 @@ source venv/bin/activate && docker compose -f docker-compose.db.yml up -d && pyt
 ```
 
 - `test_runner.py` lista os apps da suíte explicitamente (inclui `routhc.tests`) — novo app de testes precisa ser registrado lá
-- Fallback 5432 (`POSTGRES_PORT_TEST=5432` + `atyha_postgres_test`) é workaround NÃO-oficial
 - Pré-requisitos lint/schema: `pre-commit run --all-files` · `python manage.py spectacular --validate --fail-on-warn`

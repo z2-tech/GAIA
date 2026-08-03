@@ -1,6 +1,6 @@
 # BE-16 — Gaps restantes: completude de projetos (pós BE-10/BE-11)
 
-> **Prioridade:** Média | **Assignee:** @fernandocampana | **Status:** Pendente
+> **Prioridade:** Média | **Assignee:** @fernandocampana | **Status:** Concluído
 
 Gaps levantados na execução de BE-10/BE-11, ainda em aberto. Nenhum bloqueia a entrega atual — verificar com PO antes de implementar.
 

@@ -1,3 +1,8 @@
+---
+description: Search GAIA vault notes and report matching domain or system knowledge.
+argument-hint: "[term]"
+---
+
 Search vault notes by term.
 Process:
 1. Read `docs/vault/00-INDEX.md` for direct matches.

@@ -13,8 +13,8 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ORCHESTRATOR_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-# Load environment if .env exists
-ENV_FILE="${ORCHESTRATOR_ROOT}/atyha-api/.env"
+# Load machine-local MCP credentials.
+ENV_FILE="${ORCHESTRATOR_ROOT}/.env.mcp.local"
 if [ -f "$ENV_FILE" ]; then
   set -a
   source "$ENV_FILE"
@@ -29,7 +29,7 @@ DB_USERNAME="${POSTGRES_USER:-}"
 DB_PASSWORD="${POSTGRES_PASSWORD:-}"
 
 if [ -z "$DB_NAME" ] || [ -z "$DB_USERNAME" ]; then
-  echo "Error: POSTGRES_HOST, POSTGRES_DB, POSTGRES_USER, and POSTGRES_PASSWORD must be set in .env" >&2
+  echo "Error: POSTGRES_DB and POSTGRES_USER must be set in .env.mcp.local" >&2
   exit 1
 fi
 

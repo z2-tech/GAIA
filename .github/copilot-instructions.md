@@ -10,7 +10,7 @@ All agents in `.opencode/agents/`. See `AGENTS.md` for routing.
 
 - Vault: `docs/vault/00-INDEX.md`
 - References: `docs/references/README.md`
-- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx, pdf, docx-converter)
+- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx)
 
 ## Critical Conventions
 

@@ -10,8 +10,6 @@ permission:
 
 Writes tests for gaia-api using factory-boy + Django TestCase.
 
-**Canonical:** `docs/agents/api/skills/test-agent.md`
-
 ## Critical rules
 
 1. Use `factory-boy` factories (UserFactory, FarmFactory, ProjectFactory).
@@ -48,5 +46,3 @@ O que cada parte faz:
 ```bash
 source venv/bin/activate && docker compose -f docker-compose.db.yml up -d && python test_runner.py --settings=test_settings --keepdb
 ```
-
-**Fallback 5432 (workaround NÃO-oficial):** se o container GAIA (porta 5433) não estiver rodando, pode-se usar `POSTGRES_PORT_TEST=5432` com o container `atyha_postgres_test` — é workaround, não o padrão oficial.

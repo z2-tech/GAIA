@@ -10,8 +10,6 @@ permission:
 
 Runs linting for gaia-api code style.
 
-**Canonical:** `docs/agents/api/skills/lint-agent.md`
-
 ## Critical rules
 
 1. `pre-commit run --all-files` — Black, isort, flake8, trailing-whitespace.

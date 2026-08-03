@@ -1,6 +1,7 @@
 # GAIA — Task Tracker
 
-> Atualizado: 2026-07-25
+> Atualizado: 2026-08-03
+> Tarefas concluídas: [`archive.md`](archive.md)
 
 ## 🔴 Alta Prioridade — Backend
 
@@ -53,9 +54,3 @@
 | FE-08 | Tela de comparação (depende de BE-12) | — | ⬜ Pendente |
 | SHARED-02 | Integrar IA para comparação de módulos | @léo bola, @fernandocampana | ⬜ Pendente |
 | SHARED-03 | Integração Cool Farm Tool (fora do MVP) | — | ⬜ Pendente |
-
-## ✅ Concluído
-
-| ID | Tarefa | Assignee | Data |
-|----|--------|----------|------|
-| GAIA-000 | Setup do monorepo: orquestrador, agentes, CodeGraph | @fernandocampana | 2026-07-25 |

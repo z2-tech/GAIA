@@ -10,8 +10,6 @@ permission:
 
 Designs read-only queries for gaia-api.
 
-**Canonical:** `docs/agents/api/skills/selector-agent.md`
-
 ## Critical rules
 
 1. Selectors never mutate. Return values, never QuerySets.

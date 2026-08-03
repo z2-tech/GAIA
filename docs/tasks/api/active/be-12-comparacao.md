@@ -8,19 +8,12 @@
 
 Endpoint de comparação que recebe uma lista de entidades (fazendas ou projetos) e retorna métricas normalizadas lado a lado + radar + verdict. Nada existe em `gaia-api` — implementar do zero.
 
-## Fonte do mecanismo (referência obrigatória)
+## Fonte do mecanismo
 
-O mecanismo de comparação é ~80% agnóstico de domínio. Copiar o build pattern de:
-
-```
-~/ATYHA/atyha-api/project/services/compare_services.py   (475 linhas)
-```
-
-Reaproveitar deste arquivo (adaptando tipos/nomes): dispatch por scope, `_METRICS` declarativas `(key, label, group, unit, better)`, `_build_metrics` + `_best_worst`, `_build_radar` (normalização min-max), `_build_verdict`, serializers aninhados p/ OpenAPI.
-
-**CORTAR do ATYHA (NÃO copiar):** `_policy_coherence_reason` (substituir por skip-missing: métricas ausentes = null, não bloqueia), `calculation_status`/`stale`/`scenario`/`policy`, parâmetro `year`, camada `PortfolioSelectors`.
-
-**Reescrever só a coleta (~100 linhas):** leitura dos dados GAIA por entidade.
+O contrato, as métricas, a normalização e o veredito devem ser derivados das
+decisões GAIA registradas neste documento e validados com o PO. Implementações
+de outros produtos podem orientar organização de código, mas não são fonte de
+semântica, fórmula ou contrato.
 
 ## Estrutura de arquivos
 
@@ -91,7 +84,7 @@ Eixos radar: `carbono` (lca_footprint, lca_remocao), `solo` (rothc_*), `biodiver
 1. **Coleta**: para cada id, agregar métricas do scope (farms → farm; projects → média das farms ou `get_project_completeness`; `module` opcional filtra subconjunto). Ver R2 (RothC múltiplas calculations) e R1 (agregação LCA).
 2. **Normalização radar**: min-max por métrica entre as entidades comparadas (respeita ordens de magnitude heterogêneas — R4). `better=low` → invertido. **Eixo sem nenhuma métrica computada = null, não 0** (null convention GAIA — R5). Média de eixos None: tratar explícito (ignorar eixos null no denominador).
 3. **Verdict**: média dos scores normalizados do radar por entidade; `winner` = maior média (GAIA não tem métrica-mestra tipo VPL do ATYHA). Empate → primeiro por id; sem métricas computadas → `winner_id: null`.
-4. **Permissões**: listar apenas entidades do usuário autenticado (equivalente ao `list_for_user` do ATYHA) — R6.
+4. **Permissões**: listar apenas entidades permitidas ao usuário autenticado, conforme os selectors e regras RBAC do GAIA — R6.
 
 ## Nuances / decisões pendentes (resolver com PO ANTES de codar)
 
@@ -105,7 +98,7 @@ Eixos radar: `carbono` (lca_footprint, lca_remocao), `solo` (rothc_*), `biodiver
 ## Checklist
 
 - [ ] Decisões PO D1–D4 resolvidas e registradas neste arquivo
-- [ ] `CompareService` (coleta + metrics + radar + verdict) seguindo o build pattern do ATYHA
+- [ ] `CompareService` (coleta + metrics + radar + verdict) definido pelos requisitos GAIA
 - [ ] Serializers aninhados com schema explícito (drf-spectacular, `@extend_schema`)
 - [ ] View `POST /api/v1/compare/` — validação: scope válido, ids existentes, ids do usuário
 - [ ] Testes: 2 entidades → radar/verdict corretos; métrica ausente → null e skip; perm miss; `better=low` invertido; empate

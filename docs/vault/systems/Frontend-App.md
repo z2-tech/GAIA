@@ -25,7 +25,7 @@ app/ → features/ → services/ → client/ (generated)
 
 ## Agent
 
-`senior-nextjs` — canonical definition: `docs/agents/web/senior-nextjs.md`
+`senior-nextjs` — `.opencode/agents/senior-nextjs.md`
 
 ## Links
 

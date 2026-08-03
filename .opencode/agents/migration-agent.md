@@ -10,8 +10,6 @@ permission:
 
 Creates safe, reversible Django migrations for gaia-api.
 
-**Canonical:** `docs/agents/api/skills/migration-agent.md`
-
 ## Critical rules
 
 1. `SeparateDatabaseAndState` + `RunPython` with reverse function — always.

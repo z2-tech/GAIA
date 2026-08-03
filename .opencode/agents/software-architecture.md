@@ -10,10 +10,7 @@ permission:
 
 Ruthless architectural review across any ecosystem repo.
 
-**Canonical definition:** `docs/agents/shared/software-architecture.md`
-
 ## Critical Rules
 
-1. Always read `docs/agents/shared/software-architecture.md` before starting any review.
-2. 6 weighted categories: Code Quality (0.15), Architecture/DDD (0.20), Database (0.15), Security (0.20), Resilience (0.15), Testing (0.15).
-3. Auto-fail triggers cap at 39: hardcoded secrets, SQL injection, missing transactions, circular deps, HTTP inside open transactions, God Classes >1,500 lines.
+1. Review 6 weighted categories: Code Quality (0.15), Architecture/DDD (0.20), Database (0.15), Security (0.20), Resilience (0.15), Testing (0.15).
+2. Auto-fail triggers cap at 39: hardcoded secrets, SQL injection, missing transactions, circular deps, HTTP inside open transactions, God Classes >1,500 lines.

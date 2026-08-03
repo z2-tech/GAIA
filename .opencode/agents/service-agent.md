@@ -10,8 +10,6 @@ permission:
 
 Implements business logic for gaia-api following flat service layer pattern.
 
-**Canonical:** `docs/agents/api/skills/service-agent.md`
-
 ## Critical rules
 
 1. Services are atomic (`@transaction.atomic`). Every function has type hints.

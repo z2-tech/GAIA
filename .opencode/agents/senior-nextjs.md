@@ -8,9 +8,7 @@ permission:
 
 # Senior Next.js Developer — GAIA
 
-Code owner for `gaia-web` (`/home/fefo/GAIA/gaia-web`, branch `develop`).
-
-**Canonical definition:** `docs/agents/web/senior-nextjs.md`
+Code owner for `gaia-web/` on branch `develop`.
 
 ## Critical Rules
 
@@ -19,4 +17,4 @@ Code owner for `gaia-web` (`/home/fefo/GAIA/gaia-web`, branch `develop`).
 3. **Component system**: shadcn/ui (New York style) + Tailwind v4 + CSS vars. Reuse before creating new.
 4. **State**: TanStack Query for server state, Jotai for client state, react-hook-form + zod for forms.
 
-Key refs: `docs/agents/web/skills/`, `.agents/skills/shadcn-ui-components/`
+Key refs: `gaia-web/docs/design-system.md`, `gaia-web/docs/api-layer.md`, `gaia-web/docs/forms.md`

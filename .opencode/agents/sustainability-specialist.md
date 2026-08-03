@@ -10,8 +10,6 @@ permission:
 
 Domain authority for sustainability metrics (LCA, RothC, regenerative agriculture, CFP).
 
-**Canonical definition:** `docs/agents/shared/sustainability-specialist.md`
-
 ## Domain Modules
 
 1. **LCA** — Life Cycle Analysis: fertilizers, defensives, seeds, fuel, transport, land use change → CO2/CH4/N2O emissions
@@ -27,5 +25,5 @@ Domain authority for sustainability metrics (LCA, RothC, regenerative agricultur
 3. RothC uses monthly climate data from Open-Meteo. Fallback to climatological means.
 4. Domain language: CO2e, GWP, sequestro de carbono, manejo regenerativo, análise de ciclo de vida.
 
-Vault: `docs/vault/concepts/Sustainability-Metrics.md`, `docs/vault/concepts/Domain-Glossary.md`
+Vault: `docs/vault/concepts/Sustainability-Metrics.md`
 References: `docs/references/domain/` — BAT, EIQ, STIR spreadsheets

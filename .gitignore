@@ -1,6 +1,13 @@
 gaia-api/
 gaia-web/
 *.docx
+
+# Local credentials
+.env
+.env.*
+!.env.example
+!.env.mcp.local.example
+
 # Scraped artifacts and OS junk — never commit
 *.html
 *:Zone.Identifier

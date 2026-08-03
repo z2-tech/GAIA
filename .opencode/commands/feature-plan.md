@@ -4,11 +4,12 @@ argument-hint: "[feature description or spec path]"
 model: opencode-go/deepseek-v4-pro
 ---
 
-From the feature request or spec, produce a structured task list following ATYHA conventions:
+From the feature request or spec, produce a structured task list following GAIA conventions:
 
 1. Read `docs/tasks/` for existing task patterns
-2. Create `docs/tasks/{api,web}/be-{slug}.md` or `fe-{slug}.md` using the established format
-3. Register the task in `TODO/atyha.md` with ID and status
-4. Output: task file path + TODO entry
+2. Create API specs in `docs/tasks/api/active/be-{slug}.md`, Web specs in `docs/tasks/web/active/fe-{slug}.md`, or shared specs in `docs/tasks/shared/shared-{slug}.md`
+3. Register the task in `TODO/gaia.md` with ID, assignee and status
+4. For cross-stack work, create linked BE/FE tasks and follow `docs/workflow/CROSS_STACK_PR.md`
+5. Output: task file path + TODO entry
 
 Task format: scope, endpoints (if API), checklist, contract checklist, links to related tasks.

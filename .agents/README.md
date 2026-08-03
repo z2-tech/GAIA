@@ -8,8 +8,6 @@
 .claude/agents/                ← 12 wrappers → .opencode/agents/
 .cursor/rules/                 ← 1 rule → .opencode/agents/
 .github/copilot-instructions.md ← project instructions
-     ↓ point to
-docs/agents/                   ← canonical full definitions
 ```
 
 ## Supported Harnesses
@@ -48,17 +46,16 @@ software-architecture     ← architecture audit, code quality
 | ui-ux-pro-max | UI/UX design & implementation guide |
 | business-product-strategist | Product/UX heuristic evaluation |
 | xlsx | Spreadsheet reading (openpyxl) |
-| pdf | PDF analysis (pdfplumber + poppler) |
-| docx-converter | MD → DOCX conversion |
 
-**User-level** (`~/.agents/skills/`): caveman, council, find-skills, pdf
+**User-level** (`~/.agents/skills/`): caveman, council, find-skills
+**Global Claude-compatible** (`~/.claude/skills/`): pdf
 **Packages** (`~/.cache/opencode/packages/`): ponytail suite
 
 ## MCP Servers
 
 | Server | Tool | Status |
 |--------|------|--------|
-| codegraph | `codegraph_*` (context, search, trace, etc.) | Global shadow at `/tmp/opencode/shadow-codegraph-all` |
+| codegraph | `codegraph_*` (context, search, trace, etc.) | GAIA shadow at `/tmp/opencode/shadow-codegraph-gaia` |
 | postgres | `postgres_query` | Read-only DB via `./.opencode/bin/postgres-mcp-readonly.sh` |
 
 ## Commands (`.opencode/commands/`)

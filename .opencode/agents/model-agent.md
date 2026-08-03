@@ -10,8 +10,6 @@ permission:
 
 Designs Django models for gaia-api following HackSoftware Styleguide.
 
-**Canonical:** `docs/agents/api/skills/model-agent.md`
-
 ## Critical rules
 
 1. Soft-delete: `canceled_at` + `canceled_by` (BaseModel inheritance). Never `DELETE`.

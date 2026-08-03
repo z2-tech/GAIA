@@ -2,6 +2,17 @@
 
 Histórico de tarefas e status do ecossistema.
 
+## 2026-08-03 — Hardening estrutural do orquestrador
+
+- **SHARED-05 concluído**: corrigidos segurança/MCP, comandos SDD, routing de
+  agents, workflow cross-stack, tracker, CodeGraph, skills e hooks.
+- Adicionado gate estrutural executável e documentação canônica de branching,
+  integração cross-stack e sincronização do CodeGraph.
+- Índices locais de API/Web e shadow conjunto validados sem alterações rastreadas
+  nos repositórios filhos.
+- Planos de execução concluídos removidos; nenhuma regra de negócio do ATYHA foi
+  transportada para o GAIA.
+
 ## 2026-07-25 — Setup do monorepo
 
 - **GAIA-000**: Criado monorepo GAIA com orquestrador central

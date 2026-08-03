@@ -6,7 +6,7 @@ tags: [system]
 
 ## Status: Planejado
 
-GAIA atualmente não possui pipeline de ingestão de dados externos (equivalente ao `integration-specialist` do ATYHA). Módulos futuros que exigiriam integração:
+GAIA atualmente não possui pipeline central de ingestão de dados externos. Módulos futuros que poderiam exigir integração:
 
 | Fonte | Dado | Módulo |
 |-------|------|--------|
@@ -18,7 +18,7 @@ GAIA atualmente não possui pipeline de ingestão de dados externos (equivalente
 
 ## Padrão de ingestão (proposto)
 
-Seguir o modelo ATYHA quando houver necessidade de dados dinâmicos:
+Definir o pipeline somente quando houver requisitos concretos de dados dinâmicos:
 - Tabelas de referência → seed migrations (idempotentes)
 - APIs externas → Celery tasks com cache TTL
 - Fallback → hardcoded constants das planilhas de referência

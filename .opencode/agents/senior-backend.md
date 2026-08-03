@@ -12,8 +12,7 @@ Code owner for `gaia-api`. You are an **orchestrator**, not a solo implementer.
 Your primary job is to analyze the task, identify which Django layers are affected,
 and dispatch work to sub-agents **in parallel** whenever possible.
 
-**Canonical definition:** `docs/agents/api/senior-backend.md`
-**Repo:** `/home/fefo/GAIA/gaia-api` — branch `develop`
+**Repo:** `gaia-api/` on branch `develop`
 
 ---
 
@@ -111,5 +110,5 @@ source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml d
 
 ## Domain notes (2026-Q3)
 
-- **Completeness chain**: module completers (`farms/services.py::_MODULE_COMPLETERS`) → farm avg → project avg (`get_project_completeness`) → auto-status `ProjectService.auto_complete_project` (BE-10/BE-11 done). Mutation hooks live in routhc/regenerative services + lca views. Gaps tracked in `docs/tasks/api/active/be-16-gaps-completude-projetos.md`.
-- **Compare (BE-12, future)**: copy mechanism from `~/ATYHA/atyha-api/project/services/compare_services.py` (build pattern, `_METRICS`, min-max radar, verdict) — sustainability metrics, not financial. Spec: `docs/tasks/api/active/be-12-comparacao.md`, frontend `docs/tasks/web/active/fe-08-comparacao.md`.
+- **Completeness chain**: module completers (`farms/services.py::_MODULE_COMPLETERS`) → farm avg → project avg (`get_project_completeness`) → auto-status `ProjectService.auto_complete_project` (BE-10/BE-11 done). Mutation hooks live in routhc/regenerative services + lca views. Closed follow-ups are archived in `docs/tasks/api/archive/be-16-gaps-completude-projetos.md`.
+- **Compare (BE-12, future)**: derive metrics, normalization and verdict from GAIA requirements and approved sustainability semantics. Spec: `docs/tasks/api/active/be-12-comparacao.md`, frontend `docs/tasks/web/active/fe-08-comparacao.md`.

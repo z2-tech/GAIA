@@ -9,7 +9,7 @@ Sustainability metrics platform. Three repos: `gaia-api` (Django), `gaia-web` (N
 
 ## Agent Routing
 
-All agents in `.opencode/agents/` (single source of truth). Canonical definitions in `docs/agents/`.
+All agents in `.opencode/agents/` (single source of truth).
 
 ### Orchestrators (top-level)
 
@@ -37,7 +37,7 @@ All agents in `.opencode/agents/` (single source of truth). Canonical definition
 
 - Vault: `docs/vault/00-INDEX.md`
 - References: `docs/references/README.md`
-- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx, pdf, docx-converter)
+- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx)
 
 ## Critical Rules
 

@@ -10,8 +10,6 @@ permission:
 
 Implements DRF serializers with drf-spectacular OpenAPI 3.x schema generation.
 
-**Canonical:** `docs/agents/api/skills/serializer-agent.md`
-
 ## Critical rules
 
 1. Every 2xx response has explicit schema via `@extend_schema`. Validate: `python manage.py spectacular --validate --fail-on-warn`.
