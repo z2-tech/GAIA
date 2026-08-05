@@ -1,6 +1,6 @@
 # FE-11 — Fix rules-of-hooks em regenerative.query.ts
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Alta | **Assignee:** — | **Status:** ✅ Concluído
 
 ## Problema
 
@@ -20,11 +20,11 @@ hooks muda entre renders, quebra em runtime. Além disso o branch faz `queryFn`
 
 ## Checklist
 
-- [ ] Remover o `useQuery` dentro do `if`
-- [ ] Único `useQuery` spreading o `*Options` factory
-- [ ] 404 → `null`/vazio via `queryFn` com `throwOnError: false` (padrão do doc)
-- [ ] Confirmar consumidores continuam funcionando (dashboard/resultado regenerativo)
-- [ ] `bunx tsc --noEmit` limpo
+- [x] Remover o `useQuery` dentro do `if`
+- [x] Único `useQuery` com `queryKey` do `*Options` factory
+- [x] 404 → `null`/vazio via `queryFn` com `throwOnError: false` (padrão do doc)
+- [x] Confirmar consumidores continuam funcionando (dashboard/resultado regenerativo)
+- [x] `bunx tsc --noEmit` limpo
 
 ## Refs
 
