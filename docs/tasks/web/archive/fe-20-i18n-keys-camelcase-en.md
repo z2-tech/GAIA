@@ -1,6 +1,6 @@
 # FE-20 — i18n keys → camelCase English
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Alta | **Assignee:** — | **Status:** ✅ Concluído
 >
 > Sub-card do épico **FE-10**. Alto blast radius (todos features/services).
 
@@ -22,13 +22,23 @@ camelCase inglês (identificador), manter só os **valores** em PT/EN.
 
 ## Checklist
 
-- [ ] Namespaces top-level → camelCase EN
-- [ ] Chaves nested → camelCase EN
-- [ ] Chaves PT → EN
-- [ ] `enums.*` snake_case preservadas
-- [ ] Todos `t("...")` atualizados
-- [ ] Paridade pt/en mantida (script de check)
-- [ ] `bun run build` limpo
+- [x] Namespaces top-level → camelCase EN
+- [x] Chaves nested → camelCase EN
+- [x] Chaves PT → EN
+- [x] `enums.*` snake_case preservadas
+- [x] Todos `t("...")` atualizados
+- [x] Paridade pt/en mantida (script de check)
+- [x] `bun run build` limpo
+
+> **Notas de execução (`feat/fe-20-i18n-keys-camelcase-en` em gaia-web):**
+> - Top NS: `passwordReset`, `carbonRemoval`, `carbonEmissions`.
+> - `enums` groups → camelCase EN (`crop`, `dpmRpm`, …); leaf API codes untouched.
+> - API-mirrored leaves kept/aligned: regenerative sections/flags/options, role/relationship options.
+> - PT section dupes deleted; `SECTION_ORDER` → API codes; months → EN abbr.
+> - Scripts: `migrate-i18n-to-camelcase-en.mjs`, `check-i18n-parity.mjs`, mapping JSON;
+>   old PT migrator hard-disabled.
+> - Parity 811/811 ✅. `tsc --noEmit` ✅. `bun lint` ✅ (warnings only). `bun run build` ✅.
+> - Long EN slug keys camelCased mechanically (no shorten pass).
 
 ## Refs
 
