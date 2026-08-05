@@ -1,6 +1,12 @@
 # FE-12 — Rebuild do form BAT (biodiversidade) para arquitetura padrão
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Alta | **Assignee:** — | **Status:** ✅ Concluído (2026-08-05)
+>
+> **Nota:** Refactor 100% frontend concluído. Persistência real (item 5 do checklist)
+> **adiada** — não existe endpoint BAT no `gaia-api` (nenhum app de biodiversidade,
+> zero rotas no SDK). Mapper `valuesToCreateBody` pronto; `onSubmit` mantém toast-stub
+> com `TODO(FE-12)`. Backend rastreado em **BE-05** (`api/active/be-05-modulo-biodiversidade.md`) —
+> ao entregar, trocar o stub pela mutation real via `services/biodiversity/`.
 
 ## Problema
 
@@ -24,12 +30,13 @@ componente monolítico fora do padrão de `forms.md`:
 
 ## Checklist
 
-- [ ] `schemas/bat-modulo.ts` com factory + mappers
-- [ ] `hooks/use-bat-modulo.ts` com `useForm` + `zodResolver`
-- [ ] Labels → i18n (`messages/pt.json` + `en.json`)
-- [ ] Componente split FormProvider + `useFormContext`
-- [ ] Service mutation real (persiste)
-- [ ] `bunx tsc --noEmit` + `bun lint` limpos
+- [x] `schemas/bat-modulo.ts` com factory + mappers
+- [x] `hooks/use-bat-modulo.ts` com `useForm` + `zodResolver`
+- [x] Labels → i18n (chrome + sr-only `answer-to-question`; 43 perguntas mantidas como
+  const tipada por decisão de produto)
+- [x] Componente split FormProvider + `useFormContext` (`BatSectionCard`)
+- [ ] ~~Service mutation real (persiste)~~ **Adiado — bloqueado por BE-05** (sem endpoint)
+- [x] `bunx tsc --noEmit` + `bun lint` limpos
 
 ## Refs
 
