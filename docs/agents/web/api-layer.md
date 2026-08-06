@@ -47,7 +47,7 @@ Conventions:
 - **Type inputs from `types.gen`** — use the generated `*Data["path"]` / `*Data["query"]` shapes. Don't redeclare request types by hand.
 - **Add `enabled: !!arg`** so guarded calls don't fire with undefined inputs.
 - **Use `select`** for derived shapes over the same endpoint — one cache entry, multiple consumer shapes.
-- **Use the generated `*QueryKey()`** helpers for invalidation. Never construct queryKeys by hand.
+- **Use the generated `*QueryKey()`** helpers for invalidation, and call them **from inside `src/services/`**. Never construct queryKeys by hand, and never import a `*QueryKey` factory into `src/features/` or `src/app/` — expose it as a `useInvalidate*` hook in the service file instead.
 
 ## Mutations
 
@@ -68,33 +68,63 @@ export function usePostRouthCCalculate() {
 }
 ```
 
-Complex mutation (invalidation + toast owned by the feature hook):
+Complex mutation (toast owned by the feature hook, invalidation owned by a service hook):
 
 ```ts
-// service file — no toast, no invalidation
+// src/services/regenerative/regenerative.mutation.ts — no toast, no invalidation
 export function useCreateRegenerativeAssessment() {
   return useMutation({ ...createRegenerativeAssessmentMutation() })
 }
 
-// feature hook — owns onSuccess/onError and invalidation
-const { mutateAsync } = useCreateRegenerativeAssessment()
-const queryClient = useQueryClient()
+// src/services/regenerative/regenerative.query.ts — the queryKey factories stay here
+export function useInvalidateRegenerativeAssessment() {
+  const queryClient = useQueryClient()
 
-await mutateAsync(
-  { body: payload },
-  {
-    onSuccess: async () => {
+  return async ({ projectId, farmId, assessmentId }: {
+    projectId: number
+    farmId: number
+    assessmentId?: number
+  }) => {
+    await queryClient.invalidateQueries({
+      queryKey: getRegenerativeAssessmentByFarmQueryKey({
+        query: { project_id: projectId, farm_id: farmId },
+      }),
+    })
+    if (assessmentId != null) {
       await queryClient.invalidateQueries({
-        queryKey: getRegenerativeAssessmentByFarmQueryKey({ query: { project_id, farm_id } }),
+        queryKey: getRegenerativeAssessmentDetailQueryKey({ path: { assessment_id: assessmentId } }),
       })
-      toast.success(t("saveSuccess"))
-    },
-    onError: (error) => toast.error(handleApiError(error, t("saveError"))),
-  },
-)
+    }
+  }
+}
+
+// feature hook — owns toast/errors, calls the invalidator; no @/client import
+const { mutateAsync } = useCreateRegenerativeAssessment()
+const invalidateRegenerativeAssessment = useInvalidateRegenerativeAssessment()
+
+const created = await mutateAsync({ body: payload })
+await invalidateRegenerativeAssessment({ projectId, farmId, assessmentId: created.id })
+toast.success(t("saveSuccess"))
 ```
 
 Use **simple** when one mutation → one toast with no extra invalidation. Use **complex** when there are multiple invalidations or the feature hook needs to coordinate side effects.
+
+## Static guard (biome)
+
+`biome.jsonc` enforces the boundary with `style/noRestrictedImports` on `src/features/**`
+and `src/app/**`:
+
+```jsonc
+{
+  "group": ["@/client/@tanstack/*", "@/client/@tanstack/**", "@/client/sdk.gen"],
+  "message": "Only src/services/ may call the generated SDK. Wrap it in a service hook."
+}
+```
+
+`@/client`, `@/client/types.gen` and `@/client/client` are deliberately **not** banned:
+Biome's `noRestrictedImports` cannot distinguish `import type` from a value import, and
+those paths carry the DTO types features legitimately need. So the rule is: type-only
+imports from the generated client are fine anywhere; **calls** live only in `src/services/`.
 
 ## Error handling
 

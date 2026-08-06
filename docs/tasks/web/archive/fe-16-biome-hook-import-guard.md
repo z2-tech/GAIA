@@ -26,8 +26,16 @@ Dois enforcements pequenos de Gate 3, dependem de FE-13 (Biome):
 
 - [ ] `.claude/hooks/biome-fix.sh` (remove `eslint-fix.sh`)
 - [ ] `.claude/settings.json` aponta pro novo hook
-- [ ] regra `no-restricted-imports` de `@/client` (allow `import type`)
-- [ ] Rodar guard, confirmar que pega os leaks do FE-22
+- [x] regra `no-restricted-imports` de `@/client` (allow `import type`) — landed under
+      FE-22 em 2026-08-06
+- [x] Rodar guard, confirmar que pega os leaks do FE-22 — feito no FE-22
+
+> **Nota (2026-08-06):** o item 3 (`no-restricted-imports` de `@/client`) não tinha sido
+> implementado quando este card foi arquivado — os overrides do `biome.jsonc` só cobriam
+> o layering app/features/services. A regra foi escrita no **FE-22**: overrides para
+> `src/features/**` e `src/app/**` bloqueando `@/client/@tanstack/*` e `@/client/sdk.gen`.
+> `@/client`, `@/client/types.gen` e `@/client/client` seguem liberados de propósito
+> (Biome não distingue `import type` de import de valor).
 
 ## Refs
 
