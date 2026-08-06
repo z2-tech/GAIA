@@ -1,6 +1,6 @@
 # FE-21 — Reestruturar copy de mutation sob `<domain>.toast`
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Média | **Assignee:** — | **Status:** ✅ Concluído
 >
 > Sub-card do épico **FE-10**. Depende de FE-20 (chaves já EN/camelCase).
 
@@ -20,11 +20,11 @@ Ex: `src/services/farms/farms.mutation.ts:14` → `useTranslations("farm")` +
 
 ## Checklist
 
-- [ ] Mover copy de toast p/ `<domain>.toast.*` em `messages/{pt,en}.json`
-- [ ] Rescopar `useTranslations` nos `*.mutation.ts`
-- [ ] Atualizar `t("...")` correspondentes
-- [ ] Paridade pt/en mantida
-- [ ] `bun run build` limpo
+- [x] Mover copy de toast p/ `<domain>.toast.*` em `messages/{pt,en}.json`
+- [x] Rescopar `useTranslations` nos `*.mutation.ts`
+- [x] Atualizar `t("...")` correspondentes
+- [x] Paridade pt/en mantida
+- [x] `bun run build` limpo
 
 ## Refs
 
