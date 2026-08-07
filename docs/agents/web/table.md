@@ -1,4 +1,4 @@
-# Tabelas (`@/components/table`)
+# Tabelas (`src/components/table`)
 
 Este guia documenta o ecossistema de tabela do projeto (baseado em TanStack Table), como configurar colunas/filtros e como aplicar o mesmo padrão já usado nas features atuais.
 
@@ -16,21 +16,37 @@ Com isso, cada feature precisa focar só em:
 
 1. preparar os dados (`rows`);
 2. definir as colunas (`ColumnDef[]`);
-3. criar a instância do `useReactTable`;
+3. criar a instância do `useReactTable` **no container da feature** (não na page de `app/`);
 4. conectar os filtros e ações de UI.
 
 ---
 
-## Exports públicos
+## Imports diretos (sem barrel)
 
-Em `@/components/table` (`src/components/table/index.tsx`):
+Não há `src/components/table/index.tsx`. Importe sempre o arquivo concreto:
 
-- `DataTableDefault`
-- `DataTablePagination`
-- `ColumnsSelect`
-- `DataTableFacetedFilter`
-- `HeaderSort`
-- tudo de `filters/*`
+```tsx
+import { ColumnsSelect } from "@/components/table/columns-select";
+import { DataTableDefault } from "@/components/table/data-table";
+import { DataTableFacetedFilter } from "@/components/table/data-table-faceted-filter";
+import { DataTablePagination } from "@/components/table/data-table-pagination";
+import { HeaderSort } from "@/components/table/header-components/header-sort";
+import { textIncludesFilterFn } from "@/components/table/filters/text-filter/text-filter-fn";
+import { TextFilterInput } from "@/components/table/filters/text-filter/text-filter-input";
+import { useTextFilter } from "@/components/table/filters/text-filter/use-text-filter";
+import { numericFilterFn } from "@/components/table/filters/numeric-filter/numeric-filter-fn";
+import { NumericFilterInput } from "@/components/table/filters/numeric-filter/numeric-filter-input";
+import { useNumericFilter } from "@/components/table/filters/numeric-filter/use-numeric-filter";
+import { dateRangeFilterFn } from "@/components/table/filters/date-range-filter/date-range-filter-fn";
+import { DateRangeFilterInput } from "@/components/table/filters/date-range-filter/date-range-filter-input";
+import { useDateRangeFilter } from "@/components/table/filters/date-range-filter/use-date-range-filter";
+import { multiSelectFilterFn } from "@/components/table/filters/multi-select-filter/multi-select-filter-fn";
+import { MultiSelectFilterInput } from "@/components/table/filters/multi-select-filter/multi-select-filter-input";
+import { useMultiSelectFilter } from "@/components/table/filters/multi-select-filter/use-multi-select-filter";
+import { booleanTriFilterFn } from "@/components/table/filters/boolean-tri-filter/boolean-tri-filter-fn";
+import { BooleanTriFilterInput } from "@/components/table/filters/boolean-tri-filter/boolean-tri-filter-input";
+import { useBooleanTriFilter } from "@/components/table/filters/boolean-tri-filter/use-boolean-tri-filter";
+```
 
 ---
 

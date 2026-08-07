@@ -1,6 +1,6 @@
 # FE-25 — Mappers de domínio para DTO bleed
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** ⬜ Pendente
+> **Prioridade:** Média | **Assignee:** — | **Status:** ✅ Implementado
 
 ## Problema
 
@@ -22,11 +22,11 @@ exportado pelo schema (`novo-projeto`, `novo-usuario`, `nova-fazenda`, `login`).
 
 ## Checklist
 
-- [ ] UI model + mapper para listagens/cards que hoje recebem DTO
-- [ ] `valuesTo*Body` em `novo-projeto`, `novo-usuario`, `nova-fazenda`, schemas de login
-- [ ] Hooks usam mapper (sem `body:{...}` inline)
-- [ ] `import type` onde só o tipo é usado
-- [ ] `bunx tsc --noEmit` limpo
+- [x] UI model + mapper para listagens/cards que hoje recebem DTO
+- [x] `valuesTo*Body` em `novo-projeto`, `novo-usuario`, `nova-fazenda`, schemas de login
+- [x] Hooks usam mapper (sem `body:{...}` inline)
+- [x] `import type` onde só o tipo é usado
+- [x] `bunx tsc --noEmit` limpo
 
 ## Refs
 
