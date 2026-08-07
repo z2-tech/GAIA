@@ -67,7 +67,6 @@ Ao zerar as violações de cada regra, promover para `error` em `biome.jsonc`:
 
 | Regra | Nota |
 |-------|------|
-| `noRestrictedImports` (card-fazenda) | `card-fazenda.tsx` puxa `@/features/projeto`. Passar dado por prop, remover a exceção. |
 | `useExhaustiveDependencies`, `useHookAtTopLevel` | deps de hooks/RQ |
 | `noExplicitAny`, `noNonNullAssertion` | escapes de tipo |
 | `noBarrelFile` | eliminar `index.ts` re-export |

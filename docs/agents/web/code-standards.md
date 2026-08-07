@@ -82,8 +82,9 @@ Default: **zero comentário**. Nomes e tipos carregam o significado. Convenção
 - **Import direto**, sem barrel ([§1](#1-typescript)).
 - **Fluxo unidirecional** `shared → services → features → app`
   ([architecture](architecture.md)). `Biome:error (noRestrictedImports)`.
-- **Tipos DTO de `@/client` livres** em qualquer camada; **chamadas do SDK só via
-  `services/`** (convenção + hook `block-generated` barra edição de `src/client/`).
+- **Tipos DTO de `@/client`**: `import type` OK em domínio/services (`.ts`);
+  componente `.tsx` consome UI model, não DTO (`architecture.md`).
+  **Chamadas do SDK** só via `services/` (Biome + hook `block-generated`).
 
 ## 6. Naming (recap)
 

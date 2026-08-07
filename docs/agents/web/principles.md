@@ -26,8 +26,10 @@ escolha entra em conflito, o princípio de número menor vence.
 
 3. **Código gerado é read-only.** `src/client/` (hey-api/openapi-ts) nunca é
    editado à mão — regenera com `bunx @hey-api/openapi-ts`. Um hook bloqueia a
-   edição. Features/páginas nunca importam `src/client/` direto: só via
-   `services/`.
+   edição; Biome ignora a pasta. **Chamadas do SDK** (`sdk.gen`,
+   `@tanstack/react-query.gen`) só em `services/`. **`import type` de DTO**
+   (`types.gen`) é livre — mas componente `.tsx` consome UI model, não DTO
+   (mapper na camada de domínio; ver `architecture.md`).
 
 4. **Lógica de negócio nunca dentro de componente.** Regra de domínio (carbono,
    LCA, RothC, regenerativo, biodiversidade) vive em camada de domínio testável

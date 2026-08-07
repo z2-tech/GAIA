@@ -42,7 +42,8 @@ src/client/    ← Auto-generated. Never touch.
 ```
 
 Pages import from `features/`. Features import from `services/`. Services import from `client/`.  
-**Never import from `src/client/` directly in a page or feature component.**
+**Never call the SDK from a page or feature** — wrap in `services/`. `import type` of
+DTOs is for domain mappers (`.ts`); `.tsx` consumes UI models.
 
 ### Unidirectional dependency flow
 
@@ -106,7 +107,7 @@ Routes are thin shells: `useParams`, `useTranslations`, one feature component im
 One folder per backend domain. Reads in `<domain>.query.ts`, writes in `<domain>.mutation.ts`. Current domains:
 
 ```
-auth · farms · lca · profile · projects · regenerative · routh-c · uploads · users
+auth · farms · lca · profile · projects · regenerative · roth-c · uploads · users
 ```
 
 Adding a new query for an existing domain → add to the existing `*.query.ts`. New domain → create `src/services/<domain>/`.

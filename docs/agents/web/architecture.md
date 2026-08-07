@@ -55,8 +55,8 @@ biodiversidade) mora dentro de `.tsx`/hooks. A camada de domínio corrige isso.
 
 - Mapper e schema vivem em `features/<domain>/<sub>/schemas/` e `.../lib/` — **sem
   `import` de React**. É onde o teste do domínio ataca ([princípio 4](principles.md)).
-- Componente recebe modelo de UI, nunca DTO. Se um `.tsx` referencia um tipo de
-  `client/`, é bug de camada.
+- Componente `.tsx` recebe modelo de UI, nunca DTO. `import type` de `client/` em
+  schema/mapper/`*.ts` de domínio é OK; em `.tsx` é bug de camada.
 - Cálculo de sustentabilidade (fórmula LCA/RothC/regen) é domínio puro. Entra com
   teste ao portar — nunca colado do hook antigo.
 
@@ -79,9 +79,8 @@ Português aparece **só** no texto renderizado: os *valores* de `messages/pt.js
 | **Valores** de i18n / copy renderizada | **PT** (locale) | `messages/pt.json`: "Fazenda", "Talhão" |
 
 **Anti-padrão:** feature/rota em PT (`features/fazenda/`, `carbono-remocao/`,
-`[projetoId]`, `modulo/`). O código atual está assim e **viola** esta regra — exige
-migração para EN (features, rotas, params, `modulo/`→`module/`). Rastreado como
-tarefa de migração; ver `libs-tooling.md` (débito) e o TODO.
+`[projetoId]`, `modulo/`). Pastas/rotas já migradas para EN; identificadores
+restantes em PT são débito pontual — código novo só em inglês.
 
 ## Forma de módulo de feature
 
@@ -116,7 +115,7 @@ O fluxo unidirecional vira lint (Biome `noRestrictedImports`), espelhando o le-k
 - `features/**` não importa de `app/`.
 - shared (`components/`, `lib/`, `hooks/`, `utils/`, ...) não importa de `features/`
   nem `app/`.
-- Nada importa `client/` fora de `services/` (hook `block-generated` cobre a edição;
-  o lint cobre o import).
+- Nada **chama** o SDK (`sdk.gen`, `@tanstack/*`) fora de `services/` (Biome
+  `noRestrictedImports` + hook `block-generated`). Tipos DTO: ver regra acima.
 
 Especificação do tooling: Gate 3 (`libs-tooling.md`).
