@@ -101,7 +101,7 @@ Repository knowledge?
 8. **Branching**: follow `docs/workflow/BRANCHING.md`; application work starts from `develop`.
 9. **No rebase on shared branches**: never rebase `develop`, `homolog`, `main` or another published branch.
 10. **No cross-product business logic**: external repos may inspire structure, never GAIA formulas or contracts.
-11. **Self-documenting code**: tickets and agent names stay out of production comments and symbols.
+11. **Self-documenting code**: zero comments by default — names and types carry the meaning. A comment only earns its place for a WHY the code cannot carry (complex algorithm, deliberate deviation, hidden invariant), max 1–2 lines, in EN. Tickets and agent names stay out of production comments and symbols. Web detail: `docs/agents/web/code-standards.md` §4.
 12. **Agent-owned reindex**: after changing source in `gaia-api/` or `gaia-web/`, the agent must run `.opencode/bin/codegraph-global-sync.sh` before its final response. Never delegate this step to the developer; skip it for Markdown-only changes.
 
 ## Key Conventions

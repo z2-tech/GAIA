@@ -35,7 +35,12 @@ Dispatched by `senior-nextjs`.
    from `src/lib/errorHandlers.ts`; fallback `toast.error(handleApiError(...))`.
 9. **Multi-step** → validate current step with `form.trigger([...])` before advancing;
    persist to `sessionStorage` with 300ms debounce, SSR-safe hydrate on mount.
-10. Lean code: no redundant comments, no ticket/agent-name artifacts.
+10. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
+    can't carry — genuinely complex algorithm, deliberate deviation from the pattern
+    (state the reason), hidden invariant. Max 1–2 lines, in English. Never: JSDoc
+    restating the name, step-by-step narration, commented-out code, ticket/agent-name
+    artifacts. Schemas and mappers are self-describing — they get no comments. Full
+    rule: `docs/agents/web/code-standards.md` §4.
 
 ## RHF gotchas (external-validated)
 

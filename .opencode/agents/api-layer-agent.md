@@ -41,7 +41,13 @@ the OpenAPI schema and generated SDK are the source of truth.
    maps field errors onto RHF `setError` (incl. nested array paths).
 10. Auth/locale/401-refresh are handled globally in `src/lib/api/hey-api.ts` — hooks
     never pass tokens, set `Accept-Language`, or implement retry.
-11. Lean code: no redundant comments, no ticket/agent-name artifacts.
+11. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
+    can't carry — genuinely complex algorithm, deliberate deviation from the pattern
+    (state the reason), hidden invariant. Max 1–2 lines, in English. Never: JSDoc
+    restating the hook name or echoing the endpoint URL (the SDK is the source of
+    truth), step-by-step narration, commented-out code, ticket/agent-name artifacts.
+    `src/client/**` is generated — never clean or edit it. Full rule:
+    `docs/agents/web/code-standards.md` §4.
 
 ## New-domain checklist
 

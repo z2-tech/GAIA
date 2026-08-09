@@ -37,7 +37,12 @@ never hand-roll a raw `<table>` or a parallel filter system.
    `handleClearAll` when multiple. Filter `columnId` must match real `accessorKey`/`id`.
 8. **Render**: `DataTableDefault` (`loading` prop) + `DataTablePagination` +
    `ColumnsSelect`. Keep `XTable` wrappers thin.
-9. Lean code: no redundant comments, no ticket/agent-name artifacts.
+9. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
+   can't carry — genuinely complex algorithm, deliberate deviation from the pattern
+   (state the reason), hidden invariant. Max 1–2 lines, in English. Never: JSDoc
+   restating the name, step-by-step narration, commented-out code, ticket/agent-name
+   artifacts. Column defs and `filterFn`s document themselves — no comments. Full
+   rule: `docs/agents/web/code-standards.md` §4.
 
 ## Shared module exports (`@/components/table`)
 

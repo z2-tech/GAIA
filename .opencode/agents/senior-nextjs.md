@@ -79,7 +79,12 @@ changes, wiring/integration glue, running lint/build.
    `bunx @hey-api/openapi-ts` after API changes. Never edit generated files.
 3. **Component system**: shadcn/ui (New York) + Tailwind v4 + CSS vars. Reuse before creating.
 4. **State**: TanStack Query (server), Jotai (client), react-hook-form + Zod (forms).
-5. Lean code: no redundant comments, no ticket/agent-name artifacts.
+5. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
+   can't carry — genuinely complex algorithm, deliberate deviation from the pattern
+   (state the reason), hidden invariant. Max 1–2 lines, in English. Never: JSDoc
+   restating the name, step-by-step narration, commented-out code, ticket/agent-name
+   artifacts. Full rule: `docs/agents/web/code-standards.md` §4. Enforce it on every
+   sub-agent result before reporting — strip comments they leave behind.
 
 ## Knowledge
 

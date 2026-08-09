@@ -46,6 +46,7 @@ All agents in `.opencode/agents/`. Full routing: `AGENTS.md`.
 4. NEVER commit without authorization
 5. Views never query, services never return QuerySets
 6. After API/Web source changes, run `.opencode/bin/codegraph-global-sync.sh` before the final response; the agent owns reindexing, not the developer
+7. Zero comments by default — only a WHY the code can't carry (complex algorithm, deliberate deviation, hidden invariant), 1–2 lines, EN. Detail: `docs/agents/web/code-standards.md` §4
 
 ## Knowledge
 

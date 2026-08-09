@@ -67,15 +67,49 @@ enforçam (Gate 3) mais as que são só convenção (comentários, PR). Fundado 
 
 ## 4. Comentários
 
-Default: **zero comentário**. Nomes e tipos carregam o significado. Convenção
-(revisão). Origem: feedback direto do Gustavo.
+Default: **zero comentário** ([princípio 1](principles.md)). Nomes e tipos carregam
+o significado; o código diz o QUE. Comentário só existe para um **PORQUÊ que o
+código não consegue carregar**. Convenção (revisão). Origem: feedback direto do
+Gustavo.
 
-- Só **1 linha curta** para um **WHY não-óbvio**: constraint oculta, invariante
-  sutil, workaround de bug específico.
-- **Nunca**: restatement do óbvio; narrativa/parágrafo; "era X antes" / "movido de Y"
-  (git cobre); justificativa de escolha inline (vai no corpo do PR).
-- Antes de comentar, pergunte: "um leitor competente ficaria confuso sem isto?"
-  Não → corta. Sim → a menor frase que resolve.
+**Regra de ouro**: apague o comentário e releia o código. Ainda dá para entender?
+Então o comentário estava morto. Escreva o mínimo de comentários possível.
+
+### Permitido (raro — 1 a 2 linhas)
+
+| Caso | Exemplo |
+|------|---------|
+| **Algoritmo genuinamente complexo** — matemática ou domínio que não se lê do código | dígito verificador de CPF/CNPJ, RothC, projeção geo, parser binário |
+| **Desvio consciente do padrão** — está fora da convenção *por um motivo* | workaround de bug de lib (cite lib + sintoma), ordem de execução obrigatória, otimização medida |
+| **Invariante/constraint oculto** que quebra em silêncio se violado | "backend exige os dois campos na mesma request" |
+
+Nesses casos comente o **motivo**, não a mecânica.
+
+### Proibido
+
+- JSDoc que repete o nome — `/** Valida CPF */` sobre `isValidCPF`.
+- Comentário de seção/passo em código óbvio — `// monta payload`, `// retorna`.
+- Narrativa, parágrafo, tutorial, exemplo de uso que o teste já cobre.
+- Histórico: "era X antes", "movido de Y", nome de ticket ou de agente — git cobre.
+- Justificativa de escolha de design → **corpo do PR** ([§7](#7-commits--prs)).
+- Prosa redeclarando o tipo — o tipo já é a documentação.
+- **Código comentado** → deletar.
+- `TODO`/`FIXME` sem issue vinculada.
+
+### Forma
+
+- Comentário sobrevivente é em **inglês** — é código ([princípio 8](principles.md)).
+- Uma linha `//` imediatamente acima do trecho que explica.
+- `JSDoc` só em API pública compartilhada (`components/`, `lib/`) cujo consumidor
+  não vê a implementação — e só a parte não-óbvia dela.
+
+### Fora do escopo desta regra
+
+- `src/client/**` é **gerado** (`@hey-api/openapi-ts`) — não editar, não limpar.
+- `src/components/ui/**` é vendorizado do shadcn — manter como veio para não
+  poluir o diff de upgrade.
+- Diretivas de ferramenta não são comentários: `"use client"`, `biome-ignore`,
+  `eslint-disable`. Onde a ferramenta aceitar motivo, escreva o motivo.
 
 ## 5. Imports & fronteiras
 
@@ -117,6 +151,7 @@ Fonte completa: [`naming-conventions.md`](naming-conventions.md). Essencial:
 | no-enum, kebab-case, boundaries, hooks-top-level | `Biome:error` |
 | no-barrel, no-assertion, no-any, no-forwardRef, no-nested-component | `Biome:warn` (débito → promover) |
 | conventional commit, header ≤88 | `commitlint` |
-| erro-é-valor, `safePromise`, `handleApiError`, `"use client"`, comentários, PR, UI states | **convenção** (revisão) |
+| zero-comentário-default ([§4](#4-comentários)) | **convenção** (revisão — reprova PR) |
+| erro-é-valor, `safePromise`, `handleApiError`, `"use client"`, PR, UI states | **convenção** (revisão) |
 
 Promoção dos `warn → error`: checklist em [`libs-tooling.md`](libs-tooling.md).

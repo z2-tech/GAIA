@@ -42,7 +42,13 @@ before creating**. Every rule below has a component or class already in the code
 9. **Radius**: cards/containers `rounded-2xl`, buttons `rounded-full`, images
    `rounded-xl`, badges/avatars `rounded-full`.
 10. **`"use client"`** required in any feature/service file using hooks.
-11. Lean code: no redundant comments, no ticket/agent-name artifacts.
+11. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
+    can't carry — genuinely complex algorithm, deliberate deviation from the pattern
+    (state the reason), hidden invariant. Max 1–2 lines, in English. Never: JSDoc
+    restating the name, step-by-step narration, commented-out code, ticket/agent-name
+    artifacts. JSX needs no `{/* section */}` markers — the component names are the
+    structure. `src/components/ui/**` is vendored shadcn: leave its comments as they
+    came. Full rule: `docs/agents/web/code-standards.md` §4.
 
 ## Forbidden (from design-system.md)
 
