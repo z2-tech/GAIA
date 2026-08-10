@@ -18,6 +18,20 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 | **STIR** (Manejo do Solo) | 📋 Planejado | Soil Tillage Intensity Rating — calculadora de intensidade de preparo do solo. Biblioteca de implementos (PT-BR). Planilha: `STIR_calculadora_metric_v4.xlsx` |
 | **CFP** (Cool Farm Platform) | ⚠️ Parcial | Integração com Cool Farm Tool — payload-only, API externa pendente. |
 
+## Contrato do MVP
+
+- Avaliações de sustentabilidade pertencem a `ProjectFarm`; talhões cadastrais não
+  são uma unidade de assessment no contrato atual.
+- O Web lista múltiplos assessments por ID. Registros cancelados ficam ocultos,
+  drafts podem ser retomados e resultados concluídos preservam sua versão.
+- LCA usa fatores de referência server-owned e versionados; atividade, alocação e
+  valores de processo do formulário são snapshot do assessment. Transporte é o
+  quinto passo obrigatório e ausência nunca equivale a zero.
+- RothC recebe parâmetros compartilhados e dois cenários, `bau` e `project`, na
+  mesma janela mensal. Clima e versões metodológicas são compartilhados.
+- BAT faz parte do MVP somente no contrato já representado pelo formulário. EIQ,
+  STIR e contratos de dashboard ainda não representados ficam fora.
+
 ## EIQ — Environmental Impact Quotient
 
 Ferramenta de suporte à decisão desenvolvida pelo NY State Integrated Pest Management Program. Avalia o impacto ambiental de pesticidas considerando:

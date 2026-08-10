@@ -77,6 +77,32 @@ validar ciência → features aprovadas → schema final. Zero código Web.
   `PROJECT_FACTOR=0.8` no `scenario-comparison-model.ts` é placeholder visual,
   não regra backend. **MVP:** BAT entra? EIQ/STIR não.
 
+#### D0 fechado — frontend atual como contrato de produto
+
+- **Tenant/RBAC:** `Project` é a raiz do tenant e `ProjectFarm` é o limite de
+  recurso. Role global define capacidade; os vínculos existentes (`Project.admin`,
+  `Farm.responsab` e autoria) definem escopo. Staff/superuser mantém acesso global.
+  Não criar organização nem membership por farm/projeto sem UX correspondente.
+- **Assessment:** vinculado a `ProjectFarm`, sem FK de talhão. Permitir múltiplos,
+  listar não cancelados por recência e operar detail/result por ID. `latest` é o
+  não cancelado mais recente; draft pode ser retomado, concluído é resultado
+  versionado e cancelamento é soft-delete. Clone fica fora do MVP: não há ação ou
+  contrato correspondente no Web.
+- **LCA:** fatores de referência e GWP são server-owned e versionados. Atividade,
+  alocação e valores de processo já presentes no formulário são inputs do
+  assessment e ficam snapshotados; não há override de FE customizado. Evidências
+  seguem somente os campos já expostos pelo formulário.
+- **Transporte:** obrigatório, como o quinto passo atual. `distance_km` ausente não
+  conclui o assessment; zero só existe quando enviado explicitamente, nunca como
+  fallback e nunca como `898`.
+- **RothC:** um assessment recebe `project_id`, `farm_id`, nome, janela mensal,
+  parâmetros compartilhados e dois cenários completos (`bau` e `project`) conforme
+  `RothCModuleMockFormValues`. O mesmo clima server-owned atende ambos. O fator
+  visual `0.8` não entra no backend.
+- **Biodiversidade:** BAT entra no MVP no limite do mapper existente
+  (`project_id`, `farm_id`, answers e notes), com pesos apenas da referência
+  versionada. EIQ/STIR e dashboard sem contrato permanecem fora.
+
 ### P1 — Base segura
 
 - Migrations isoladas: índice `authx`; auditoria/ID `cfp`. Revisar, não misturar.
