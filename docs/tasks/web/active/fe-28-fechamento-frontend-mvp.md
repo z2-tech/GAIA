@@ -1,9 +1,8 @@
-# FE-28 — Reconciliar SDK e wiring completo após deploy do backend
+# FE-28 — Fechamento do frontend do MVP
 
 > **Prioridade:** Alta | **Assignee:** Macarini | **Status:** Pronto para execução
 > **Plane:** [GAIA-33](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues/2ca33d40-dfd2-4abf-bf8e-ca0c8eb22367)
-> **API:** [BE-18](../../api/active/be-18-fechamento-backend-mvp.md) — ✅ Concluído
-> **Plane:** GAIA-YY (substituir após criação)
+> **API:** [BE-18](../../api/active/be-18-fechamento-backend-mvp.md) — ✅ Concluído (`fix/backend-mvp-hardening`, 362 testes)
 
 ## Contexto
 
@@ -11,13 +10,15 @@ Nenhuma mudança Web integra a primeira rodada backend. O patch provisório foi
 validado e descartado em 2026-08-09; `gaia-web/develop` ficou limpo em
 `4394416`.
 
-O backend (`gaia-api/fix/backend-mvp-hardening`) contém as entregas do BE-18:
+O backend (`gaia-api/fix/backend-mvp-hardening`) contém as entregas do BE-18
+e o hardening pós-auditoria (2026-08-10):
 
-- RothC dual-scenario (`POST/GET /api/v2/routhc/assessments/`)
-- Biodiversity BAT (`POST/GET /api/v1/biodiversity/assessments/`, `questions/`, `dashboard/`)
+- RothC dual-scenario (`POST/GET /api/v2/routhc/assessments/`, `POST .../{id}/cancel/`)
+- Biodiversity BAT (`POST/GET /api/v1/biodiversity/assessments/`, `questions/`, `dashboard/`, `cancel/`)
 - LCA multi-step com scoping, soft-delete, progress e cálculo (`/api/v1/lca/culture/`, `soil/`, `inputs/`, `fuel/`, `transport/`, `{id}/calculate/`)
 - AuthX/AuthZ sem queries de role no construtor do serializer
 - Farms/Projects/Regenerative com scoping de usuário
+- Cancel em todos os módulos (LCA, RothC, BAT, Regenerative) com downgrade de projeto `COMPLETED → IN_PROGRESS`
 
 O frontend atual tem:
 
@@ -26,6 +27,7 @@ O frontend atual tem:
 - **Serviço LCA** chamando endpoints multi-step (já alinhado com backend)
 - **Serviço RothC** chamando V1/V2 antigos (single-scenario), sem o novo endpoint de assessment
 - **Serviço Biodiversity** inexistente — `src/services/biodiversity/` não foi criado
+- **Cancel inexistente** em qualquer módulo — frontend nunca cancela assessments
 
 ## Execução
 
@@ -36,11 +38,13 @@ O frontend atual tem:
 - [ ] Gerar schema API final com `spectacular --validate --fail-on-warn`.
 - [ ] Executar `OPENAPI_SCHEMA_URL=<schema-final> bunx @hey-api/openapi-ts`.
 - [ ] Nunca editar `src/client/` manualmente.
-- [ ] Revisar diff gerado: novos operation IDs (`v2CreateRouthcAssessment`, `listBiodiversityQuestions`, `createBiodiversityAssessment`, etc.).
+- [ ] Revisar diff gerado: novos operation IDs (`v2CreateRouthcAssessment`, `cancelRouthcCalculation`, `listBiodiversityQuestions`, `createBiodiversityAssessment`, etc.).
 
 ### Fase 2 — Wiring: RothC (carbon-removal)
 
-- [ ] Criar `src/services/roth-c/roth-c.mutation.ts` com `useCreateRothcAssessment` chamando `v2CreateRouthcAssessmentMutation()`.
+- [ ] Criar `src/services/roth-c/roth-c.mutation.ts`:
+  - `useCreateRothcAssessment` → `v2CreateRouthcAssessmentMutation()`
+  - `useCancelRothcCalculation` → `cancelRouthcCalculationMutation()`
 - [ ] Atualizar `src/services/roth-c/roth-c.query.ts` com `useGetRothcAssessmentDetail` chamando `v2GetRouthcAssessmentDetailOptions()`.
 - [ ] No `use-roth-c-module-mock.ts`: trocar toast-stub finalize por `createRothcAssessment` com o `RothCModuleMockFormValues` serializado para o payload do backend.
 - [ ] No `use-mock-calculation-page.ts`: trocar query V1/V2 antigas por `useGetRothcAssessmentDetail` que retorna `RouthcAssessmentDetail` com `bau` + `project` + `delta_*`.
@@ -64,19 +68,28 @@ O frontend atual tem:
 
 ### Fase 4 — Wiring: LCA (carbon-emission)
 
-- [ ] Confirmar que os operarion IDs do LCA no SDK novo batem com os existentes em `src/services/lca/`.
+- [ ] Confirmar que os operation IDs do LCA no SDK novo batem com os existentes em `src/services/lca/`.
 - [ ] Verificar `LcaModuleFormValues` contra tipos gerados — ajustar casts se necessário.
 - [ ] Verificar fluxo de cálculo: `calculateProject` retorna `LcaCalculationResponse` compatível com `lca-result.tsx`.
+- [ ] Tratar 404 no GET `/calculate/` após cancel da cultura — exibir estado "recalcular" em vez de erro genérico.
 
 ### Fase 5 — Wiring: Regenerative (já funcional)
 
 - [ ] Confirmar que endpoints regenerative existentes continuam compatíveis com SDK novo.
+- [ ] Verificar que `cancel_assessment` (soft-delete) está wireado no frontend.
 
-### Fase 6 — Verificação final
+### Fase 6 — Cancel cross-module
+
+- [ ] Botão/action de cancel em cada módulo (RothC, LCA, BAT, Regenerative).
+- [ ] Após qualquer mutate de cancel, invalidar cache de `useProjectDetail` — project status pode mudar de `COMPLETED → IN_PROGRESS` dinamicamente.
+- [ ] Confirmar que listas excluem itens cancelados automaticamente (já é server-side).
+
+### Fase 7 — Verificação final
 
 - [ ] Rodar `bun lint`, `bun run typecheck` e `bun run build`.
-- [ ] Validar fluxo completo: criar farm → LCA assessment → RothC assessment → BAT assessment → resultados.
+- [ ] Validar fluxo completo: criar farm → assessments em todos os módulos → resultados → cancelar → verificar downgrade.
 - [ ] Validar auth: login, reset password, permissões.
+- [ ] Validar cancel: cancelar em cada módulo, verificar que listas excluem cancelados, verificar project.status pós-cancel.
 - [ ] Nenhum mock residual: `PROJECT_FACTOR`, toast-stubs, dados hardcoded.
 - [ ] CodeGraph sync.
 
@@ -87,6 +100,8 @@ O frontend atual tem:
 - [ ] Todos os módulos consomem endpoints reais (sem mocks/stubs).
 - [ ] RothC dual-scenario funcional com BAU + Project reais.
 - [ ] BAT funcional com score e classificação.
+- [ ] Cancel funcional em todos os módulos (LCA, RothC, BAT, Regenerative).
+- [ ] Project.status atualiza dinamicamente após cancel (COMPLETED → IN_PROGRESS).
 - [ ] Lint, typecheck, build verdes.
 - [ ] Nenhuma alteração visual ou regra de domínio não intencional.
 
