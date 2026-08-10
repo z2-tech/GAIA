@@ -345,6 +345,74 @@ coordenadas fora do bounding box australiano são rejeitadas.
 
 ---
 
+## LCA — EXIOBASE 3.9.6 (2022) + Land Use Extensions (2015)
+
+**Arquivos externos** (grandes demais para git, ~1 GB total):
+
+| Arquivo | Tamanho | SHA-256 |
+|---------|---------|---------|
+| `IOT_2022_pxp.zip` | 450 MB | `66b8f83aa4ba01022e86b3ecb580193d7d6fba0bd59faa10fd87c67d0c1d7e58` |
+| `IOT_2022_ixi.zip` | 482 MB | `0a14c05e7c45ec9a98e855820eea3754e190e098b8f232a01b1697bee56b0825` |
+| `EXIOBASE_3rx_aggLandUseExtensions_2015_pxp.mat` | 63 MB | `99ce1edbaf5c259eb905cc49fbbb10365ddd9c6e2005c830ce2f953814918c92` |
+
+- **EXIOBASE** é o banco de dados global ambientalmente estendido de
+  insumo-produto multi-regional (MRIO). Referência para fatores *cradle-to-gate*.
+- **v3.9.6 (2022)**: 214 países, 200 setores, formato MARIO (txt).
+- **Extensões ambientais**:
+  - `air_emissions`: 419 stressors — CO₂, CH₄, N₂O, NH₃, NOx, PM, metais (kg)
+  - `water`: consumo de água verde/azul por cultura (Mm³)
+  - `nutrients`: N e P para agricultura — solo e água (kg)
+  - `material`: extração de materiais por setor (kg)
+  - `employment`: mão de obra por nível de qualificação (M.EUR)
+  - `factor_inputs`: impostos, subsídios, capital, terra (M.EUR)
+- **Land use extensions (2015)**: 7 categorias de uso da terra por setor.
+- **Brasil incluso** nos 214 países.
+- **Formato**: pxp (product-by-product) e ixi (industry-by-industry).
+- **Uso GAIA**: fatores de emissão *cradle-to-gate* para todos os insumos
+  agrícolas — fertilizantes, defensivos, combustíveis, máquinas — por país e
+  setor. Fecha a lacuna que GHG Protocol não cobre.
+- **Integração**: extrair fatores setoriais BR para o motor LCA via script
+  Python/scipy; armazenar como seed data. Arquivos fonte mantidos fora do repo.
+
+## LCA — PestLCI Consensus (Embrapa 2021)
+
+`lca/pesticides/Barizon-Modelo-PestLCI-2021.pdf`
+
+- **Título**: *Modelo PestLCI: parametrização para os cenários brasileiros de
+  produção agrícola*. Embrapa Meio Ambiente, Documentos nº 132, set/2021.
+- **Autores**: Robson Barizon, Marília Matsuura et al.
+- **O que é**: modelo de Inventário de Ciclo de Vida (ICV) para pesticidas. Estima
+  frações de emissão para ar, água superficial, água subterrânea, solo e planta.
+- **27 moléculas brasileiras**: 12 inseticidas, 12 fungicidas, 3 herbicidas.
+  Selecionadas por ≥70% da área tratada em 6 culturas (soja, cana, milho,
+  algodão, café, laranja).
+- **35 mesorregiões** com solos (IBGE/SisSolos) e clima (WorldClim) parametrizados.
+- **Plataforma**: https://pestlciweb.man.dtu.dk/ (DTU, cadastro gratuito).
+- **Comparação**: PestLCI é o único modelo ICV que fornece frações variáveis por
+  molécula × clima × solo. Ecoinvent usa 100% solo; Agri-footprint usa 90/9/1 fixo.
+- **Uso GAIA**: fatores de emissão de defensivos por compartimento para o motor
+  LCA. Complementar ao EIQ (indicador de risco) — PestLCI fornece os kg de
+  emissão que alimentam USEtox/ReCiPe como AICV.
+- **Estratégia**: lookup table pré-computada para as 27 moléculas × 35 regiões ×
+  6 culturas. Interpolar para fazendas fora das mesorregiões.
+- **Licença**: documento © Embrapa 2021; modelo acessível via DTU.
+
+## LCA — PestLCI + USEtox methodology (Yin et al. 2023)
+
+`lca/pesticides/toxics-11-00360.pdf`
+
+- **Título**: *Mitigating Ecotoxicity Risks of Pesticides on Ornamental Plants
+  Based on Life Cycle Assessment*. Toxics 11, 360 (MDPI), CC BY 4.0.
+- **DOI**: 10.3390/toxics11040360
+- Metodologia completa OLCA-Pest: PestLCI Consensus (ICV) → USEtox v2.12 (AICV).
+- 195 ingredientes ativos, 4 compartimentos: ar, campo, solo natural, água doce.
+- Cita explicitamente Barizon 2021 (Embrapa) como referência para adaptação
+  tropical brasileira.
+- **Uso GAIA**: backbone metodológico para o pipeline de toxicidade de pesticidas
+  no módulo LCA. Fórmula: `IS = Σ(m_aplicada × f_compartimento × CF_toxicidade)`.
+
+---
+
 ## Escopo e bloqueadores
 
 | Trilha | Status |
@@ -355,7 +423,9 @@ coordenadas fora do bounding box australiano são rejeitadas.
 | RothC semiárido (Giongo 2020) | Referência disponível; implementação futura |
 | LCA — energia (combustíveis + grid BR) | **Desbloqueado** — GHG Protocol v2.0 cobre Scope 1/2/3 de energia |
 | LCA — GWP characterization | **Desbloqueado** — IPCC AR6 confirmado (N₂O=273) |
-| LCA — insumos agrícolas (fertilizantes, calcário) | **Bloqueado** — GHG Protocol não cobre; precisa IPCC Vol. 4 ou ecoinvent |
+| LCA — fatores *cradle-to-gate* (insumos) | **Desbloqueado** — EXIOBASE 3.9.6 cobre todos os setores/países |
+| LCA — fatores de emissão de defensivos | **Desbloqueado** — PestLCI Consensus (Embrapa 2021) + metodologia OLCA-Pest |
+| LCA — toxicidade aquática (AICV) | Metodologia PestLCI+USEtox disponível; módulo futuro |
 | LCA — eutrofização | Referência TRACI 2.2 disponível; módulo futuro |
 | LCA — Circularity/Agribalyse | Bloqueado por EULA proprietária |
 | FAO datasets | HWSD v2.0 + GSOCmap devem ser baixados antes de P3 |
