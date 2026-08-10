@@ -39,5 +39,5 @@ After reading a spreadsheet:
 | Spreadsheet | Module | Location |
 |-------------|--------|----------|
 | Biodiversity Assessment Tool | BAT | `docs/references/domain/Biodiversity Assessment Tool Prototype_Final.xlsx` |
-| EIQ values (1636 actives) | EIQ | `docs/references/domain/EIQ_Final.xlsx` |
+| EIQ values (631 populated names) | EIQ | `docs/references/domain/EIQ_Final.xlsx` |
 | STIR calculator (PT-BR) | STIR | `docs/references/domain/STIR_calculadora_metric_v4.xlsx` |

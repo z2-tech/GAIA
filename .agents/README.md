@@ -3,9 +3,9 @@
 **`.opencode/agents/`** is the single source of truth. All harnesses point to it.
 
 ```
-.opencode/agents/              ← 12 agents (single source of truth)
+.opencode/agents/              ← 17 agents (single source of truth)
      ↑ load from
-.claude/agents/                ← 12 wrappers → .opencode/agents/
+.claude/agents/                ← 17 wrappers → .opencode/agents/
 .cursor/rules/                 ← 1 rule → .opencode/agents/
 .github/copilot-instructions.md ← project instructions
 ```
@@ -14,8 +14,8 @@
 
 | Harness | Mechanism | Location |
 |---------|-----------|----------|
-| OpenCode | Agents + commands + MCP | `.opencode/agents/*.md` (12 agents), `.opencode/commands/*.md` (5 commands) |
-| Claude Code | Custom agents + CLAUDE.md | `.claude/agents/*.md` (12 wrappers) → `.opencode/agents/` |
+| OpenCode | Agents + commands + MCP | `.opencode/agents/*.md` (17 agents), `.opencode/commands/*.md` (5 commands) |
+| Claude Code | Custom agents + CLAUDE.md | `.claude/agents/*.md` (17 wrappers) → `.opencode/agents/` |
 | Cursor | Project rules | `.cursor/rules/gaia-agents.mdc` |
 | GitHub Copilot | Instructions | `.github/copilot-instructions.md` |
 
@@ -33,6 +33,11 @@ senior-backend (orchestrator — delegates to sub-agents in parallel)
 
 sustainability-specialist  ← domain authority (LCA, RothC, regenerative)
 senior-nextjs             ← Next.js frontend code owner
+  ├── form-agent
+  ├── table-agent
+  ├── api-layer-agent
+  ├── design-agent
+  └── i18n-key-validator
 cross-stack               ← API↔Next.js contracts (OpenAPI → SDK)
 software-architecture     ← architecture audit, code quality
 ```

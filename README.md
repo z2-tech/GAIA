@@ -49,7 +49,7 @@ Comandos SDD:
 
 ## Agents
 
-`.opencode/agents/` é a única fonte de comportamento dos 12 agents.
+`.opencode/agents/` é a única fonte de comportamento dos 17 agents.
 
 | Necessidade | Agent |
 |-------------|-------|
@@ -79,7 +79,7 @@ GAIA/
 │   ├── gaia.md                 fila ativa
 │   └── archive.md              tarefas encerradas
 ├── .opencode/
-│   ├── agents/                 12 agents canônicos
+│   ├── agents/                 17 agents canônicos
 │   ├── commands/               comandos SDD, vault e CodeGraph
 │   └── bin/                    validator, sync e MCP read-only
 ├── .agents/skills/             skills mantidas pelo projeto

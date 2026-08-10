@@ -110,5 +110,5 @@ source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml d
 
 ## Domain notes (2026-Q3)
 
-- **Completeness chain**: module completers (`farms/services.py::_MODULE_COMPLETERS`) → farm avg → project avg (`get_project_completeness`) → auto-status `ProjectService.auto_complete_project` (BE-10/BE-11 done). Mutation hooks live in routhc/regenerative services + lca views. Closed follow-ups are archived in `docs/tasks/api/archive/be-16-gaps-completude-projetos.md`.
+- **Completeness status**: module completers and percentage calculations exist. `ProjectService.auto_complete_project` and its mutation hooks are absent from current `develop`; archived BE-16/BE-17 describe an unmerged target. Follow BE-18 and reimplement selectively; never port the old branch wholesale.
 - **Compare (BE-12, future)**: derive metrics, normalization and verdict from GAIA requirements and approved sustainability semantics. Spec: `docs/tasks/api/active/be-12-comparacao.md`, frontend `docs/tasks/web/active/fe-08-comparacao.md`.

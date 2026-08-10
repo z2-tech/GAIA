@@ -4,7 +4,9 @@ tags: [flow]
 
 # Completion-Flow
 
-Cadeia de completude e auto-conclusão de projetos (BE-10/BE-11, 2026-Q3).
+Cadeia de completude e proposta de auto-conclusão de projetos (2026-Q3).
+
+> **Status:** cálculos de completude existem. `auto_complete_project` e os hooks abaixo não estão em `develop`; são alvo histórico não integrado. BE-18 governa eventual reimplementação seletiva.
 
 ## Cadeia de cálculo
 
@@ -12,20 +14,20 @@ Cadeia de completude e auto-conclusão de projetos (BE-10/BE-11, 2026-Q3).
 Module completers (_MODULE_COMPLETERS, farms/services.py)
   ├── regenerativo: (4 campos estáticos NOT NULL + respostas) / (4 + indicadores ativos globais)
   ├── carbono/RothC: binário — cálculo existe → 100% (intencional, cálculo único)
-  └── lca: média das completudes dos assessments (5 steps obrigatórios, transport opcional)
+  └── lca: média das completudes (ratio atual exclui transporte; política ainda em D0)
         → FarmService.get_farm_completeness (média dos módulos do projeto)
               → ProjectService.get_project_completeness (média das farms)
-                    → ProjectService.auto_complete_project (100% → status=completed)
+                    → [alvo não integrado] auto_complete_project (100% → completed)
 ```
 
-## Auto-complete (BE-10)
+## Auto-complete (alvo não integrado)
 
-- `auto_complete_project(project)` em `projects/services.py` — guards: status deve ser `in_progress`; `farm_count > 0`; marca `completed` com `save(update_fields=["status"])`.
-- **8 hooks de mutation** (sem signals — padrão HackSoftware, check explícito pós-mutation):
+- A branch histórica propôs `auto_complete_project(project)` com guards de status e farms.
+- Também propôs 8 hooks explícitos, sem signals:
   1. `RouthcService.calcular()` (routhc/services.py)
   2. `RegenerativeService.create_assessment()` / `update_assessment()` (regenerative/services.py)
   3. Views LCA: culture, soil, inputs, fuel, calculate (lca/views.py via `_auto_complete_project`)
-- `transport` LCA NÃO dispara (etapa opcional, não afeta ratio).
+- A obrigatoriedade de transporte LCA permanece decisão D0 de BE-18; não assumir etapa opcional nem ausência = zero.
 
 ## Completude dos módulos (BE-11)
 
@@ -36,7 +38,7 @@ Module completers (_MODULE_COMPLETERS, farms/services.py)
 ## Contrato
 
 - API retorna `status` traduzido (PT/EN via `ProjectStatus.get_label`); frontend já renderiza badge "Concluído" + barra de progresso (sem mudança de contrato).
-- Histórico: [`BE-16`](../../tasks/api/archive/be-16-gaps-completude-projetos.md).
+- Histórico não integrado: [`BE-16`](../../tasks/api/archive/be-16-gaps-completude-projetos.md).
 
 ## Relações
 

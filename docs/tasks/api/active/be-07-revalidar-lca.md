@@ -1,19 +1,20 @@
-# BE-07 — Revalidar LCA baseado nos fixes solicitados e planilha EIQ
+# BE-07 — Reespecificar e revalidar LCA
 
-> **Prioridade:** Alta | **Assignee:** @Matheus Rodrigues | **Status:** Pendente
+> **Prioridade:** Alta | **Assignee:** @Matheus Rodrigues | **Status:** Bloqueado por BE-18 D0
 
 ## Escopo
 
-Revisar e corrigir o módulo LCA existente conforme feedback recebido e a planilha `EIQ_Final.xlsx`.
+Revisar o módulo LCA somente após obter metodologia e fatores de emissão rastreáveis. `EIQ_Final.xlsx` mede risco de pesticidas e não valida GHG, GWP ou fatores LCA.
 
-## Planilha de referência
+## Fontes
 
-`docs/references/domain/EIQ_Final.xlsx` — 1636 ingredientes ativos com valores EIQ
+- Fonte científica LCA: ausente; adquirir na fase D0 de BE-18.
+- `EIQ_Final.xlsx`: 631 nomes preenchidos; fonte exclusiva do futuro módulo EIQ.
 
 ## Ações
 
-- [ ] Verificar se os cálculos em `lca/calculos/` batem com a metodologia ISO 14040/14044
-- [ ] Comparar fatores de emissão atuais com valores EIQ da planilha
+- [ ] Definir metodologia, fronteiras, unidade funcional, GWP e versões de fatores
+- [ ] Verificar `lca/calculos/` contra fontes LCA/IPCC/Ecoinvent aprovadas
 - [ ] Ajustar `LcaFertilizer`, `LcaFuelType`, `LcaSeed`, `LcaDefensive` conforme necessário
 - [ ] Validar unidades (kg CO2e, GWP100)
 - [ ] Rodar `lca/tests/` após ajustes

@@ -14,7 +14,7 @@ tags: [system]
 
 ## Responsibility
 
-Centralizes 12 AI agents, SDD commands, lifecycle hooks, cross-stack handoff and the knowledge vault. Does **not** contain production application code.
+Centralizes 17 AI agents, SDD commands, lifecycle hooks, cross-stack handoff and the knowledge vault. Does **not** contain production application code.
 
 ## Features
 

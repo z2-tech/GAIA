@@ -42,7 +42,7 @@ Pattern inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai
 
 ## Completeness & auto-status (2026-Q3)
 
-Cadeia: module completers (`farms/services.py::_MODULE_COMPLETERS`) → média por fazenda (`get_farm_completeness`) → média por projeto (`get_project_completeness`) → auto `status=completed` (`ProjectService.auto_complete_project`, BE-10). 8 hooks de mutation em routhc/regenerative services + lca views (sem signals). Detalhes: [[../flows/Completion-Flow|Completion-Flow]] · Gaps: BE-16 · Comparação futura: BE-12/FE-08.
+Os cálculos de completude existem, mas `ProjectService.auto_complete_project` e os 8 hooks descritos em documentos antigos **não estão em `develop`**. O fluxo permanece desenho histórico/alvo; reimplementar seletivamente via BE-18, sem portar a branch antiga inteira. Detalhes: [[../flows/Completion-Flow|Completion-Flow]].
 
 ## Testes (full suite)
 
@@ -57,5 +57,5 @@ source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml d
 source venv/bin/activate && docker compose -f docker-compose.db.yml up -d && python test_runner.py --settings=test_settings --keepdb
 ```
 
-- `test_runner.py` lista os apps da suíte explicitamente (inclui `routhc.tests`) — novo app de testes precisa ser registrado lá
+- Em `fix/backend-mvp-hardening`, `test_runner.py` usa discovery padrão do Django; novos testes não exigem lista manual. Baseline: 171 testes.
 - Pré-requisitos lint/schema: `pre-commit run --all-files` · `python manage.py spectacular --validate --fail-on-warn`
