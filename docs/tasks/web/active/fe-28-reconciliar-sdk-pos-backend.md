@@ -1,6 +1,7 @@
 # FE-28 — Reconciliar SDK e wiring completo após deploy do backend
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** Pronto para execução
+> **Prioridade:** Alta | **Assignee:** Macarini | **Status:** Pronto para execução
+> **Plane:** [GAIA-33](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues/2ca33d40-dfd2-4abf-bf8e-ca0c8eb22367)
 > **API:** [BE-18](../../api/active/be-18-fechamento-backend-mvp.md) — ✅ Concluído
 > **Plane:** GAIA-YY (substituir após criação)
 

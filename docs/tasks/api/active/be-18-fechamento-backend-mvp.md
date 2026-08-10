@@ -1,6 +1,7 @@
 # BE-18 — Fechamento técnico do backend do MVP
 
 > **Prioridade:** Alta | **Status:** ✅ Concluído (2026-08-10)
+> **Plane:** [GAIA-32](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues/30d5c0b6-4e9e-4ed0-aa73-2a2106f6bb28)
 > **Branch:** `fix/backend-mvp-hardening` → `develop`
 > **Web pós-API:** [FE-28](../../web/active/fe-28-reconciliar-sdk-pos-backend.md)
 > **Plane:** GAIA-XX (substituir após criação)
