@@ -14,6 +14,16 @@
       "type": "local",
       "command": ["bash", ".opencode/bin/postgres-mcp-readonly.sh"],
       "enabled": true
+    },
+    "plane": {
+      "type": "local",
+      "command": ["npx", "-y", "@makeplane/plane-mcp-server"],
+      "env": {
+        "PLANE_API_KEY": "plane_api_aab5c9c37ac7406abcb4109ea9280851",
+        "PLANE_WORKSPACE_SLUG": "gaia",
+        "PLANE_API_HOST_URL": "https://plane.z2t.dev"
+      },
+      "enabled": true
     }
   },
   "command": {
