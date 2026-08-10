@@ -39,11 +39,13 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 - Schema sem warnings sob `test_settings`; tornar schema default sem dependência DB.
 - Web limpo em `develop@4394416`; patch SDK intermediário descartado. Só FE-28
   regenera após API final.
+- Referências: [inventário de planilhas](../../../references/domain/README.md).
+  RothC permite mapear fórmulas, mas não validar ciência; fonte LCA segue ausente.
 
 ### D0 — Decisões bloqueantes
 
-- **Fonte:** obter specs/planilhas LCA+RothC; registrar fórmula/fator, versão,
-  unidade, geografia, método, origem. ISO não fornece FE; EIQ não valida LCA.
+- **Fonte:** registrar fórmula/fator, versão, unidade, geografia, método e origem.
+  RothC interno não tem inputs/vetor; obter fonte LCA. ISO não fornece FE; EIQ não valida LCA.
 - **RBAC:** definir tenant e vínculo user↔project/farm; Membership hoje é global.
 - **Assessment:** farm/plot, multiplicidade, latest, clone, cancelamento. Destrava
   BE-01/02/03/04/06/15.
@@ -83,7 +85,8 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 **RothC**
 
-- Fonte oficial → vetor dourado ≥12 meses: DPM/RPM/BIO/HUM, balanço, timing, tolerância.
+- Mapear o template interno agora; mudança científica exige proveniência e vetor
+  dourado ≥12 meses: DPM/RPM/BIO/HUM, balanço, timing e tolerância.
 - `produtividade/HI` inclui colheita: definir resíduo retornado, base seca, mês/ano.
 - Inicialização deve conservar SOC ou usar spin-up; hoje 0+0+2%+82%+IOM não fecha.
 - Definir estoque inicial/final/médio, intervalo, `tC/ha/year`, CO2/CO2e/sinal;
