@@ -40,30 +40,42 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 - Web limpo em `develop@4394416`; patch SDK intermediário descartado. Só FE-28
   regenera após API final.
 - Referências: [inventário de domínio](../../../references/domain/README.md).
-  Guia oficial RothC-26.3 + código Fortran canônico Apache 2.0 com golden vectors
-  de 70 anos versionados. Validação Python × Fortran desbloqueada.
-  Modelo de domínio LCA (openLCA) disponível; fatores de emissão ainda ausentes.
+  RothC: guia oficial + Fortran Apache 2.0 com golden vectors 70 anos + DOI Zenodo.
+  LCA: GHG Protocol v2.0 (energia/grid BR), EXIOBASE 3.9.6 (cradle-to-gate),
+  PestLCI Embrapa (defensivos), IPCC AR6 (GWP). Fatores rastreáveis disponíveis.
 
 ### D0 — Decisões bloqueantes
 
-- **Fonte:** RothC resolvido — guia oficial + Fortran canônico (GitHub v2.1.1 +
-  Zenodo DOI v1.0.0) com vetores dourados de 70 anos.
-  LCA energia: GHG Protocol v2.0 (mar/2024) cobre combustíveis, grid BR e
-  transporte. Faltam fatores para fertilizantes, calcário e defensivos.
+- **Fonte:** resolvido para todas as categorias:
+  - Energia: GHG Protocol v2.0 (diesel, gasolina, biodiesel, grid BR 2016–2023)
+  - Cradle-to-gate insumos: EXIOBASE 3.9.6 (200 setores × 214 países, ~1 GB externo)
+  - Defensivos: PestLCI Consensus Embrapa 2021 (27 moléculas BR, 35 mesorregiões)
+  - GWP: IPCC AR6 (N₂O=273, CH₄ fóssil=29.8)
+  Tarefa: versionar seed data no modelo, auditar fatores atuais contra fontes.
 - **RBAC:** definir tenant e vínculo user↔project/farm; Membership hoje é global.
 - **Assessment:** farm/plot, multiplicidade, latest, clone, cancelamento. Destrava
-  BE-01/02/03/04/06/15.
-- **LCA data:** FE/alocação server-owned versionada ou custom evidenciada? Definir
-  ranges/normalização/conservação. Migration `0016` morreu com `LcaCulture` em `0021`.
+  BE-01/02/03/04/06/15. Web espera project_id + farm_id por cálculo; backend deve
+  tratar assessment como vinculado a farm, com result versionável.
+- **LCA data:** FE/alocação server-owned versionada ou custom evidenciada? Migration
+  `0016` morreu com `LcaCulture` em `0021`. Web espera: cultura, produtos (com
+  alocação), solo, fertilizantes, corretivos (ureia, calcítico, dolomítico),
+  defensivos, sementes, combustíveis, energia, transporte. Backend provê fatores
+  versionados; frontend envia inputs e exibe resultados. Não ditar estrutura de
+  formulário — o contrato é o serializer.
 - **Transporte:** obrigatório, opcional explícito ou fora da fronteira? Ausente
   ≠ 0; nunca 898.
 - **RothC:** resíduo/HI/FC/matéria seca/raízes, FYM/composto/fertilizante/pousio,
-  timing, estoque e ganho anual.
+  timing, estoque e ganho anual. Web já distingue modo (biomass vs productivity_crop),
+  tipo de cultura (perennial/annual), dados mensais (DPM/RPM, cobertura, biomassa)
+  e composto. Modelo backend só precisa suportar o que o serializer expõe;
+  complexidade de sub-steps fica no frontend.
 - **Clima:** coordenada, normal, cobertura mínima, futuro; cenários usam mesmo clima.
 - **BAU/projeto:** mesmos SOC/pools/profundidade/área/data/horizonte/clima/versões;
-  definir delta/sinal/unidade. Contexto atual: `gaia-web/src/features/carbon-removal/module-mock/hooks/use-roth-c-module-mock.ts`
-  descarta cenários; `gaia-web/src/features/carbon-removal/calculation-mock/lib/scenario-comparison-model.ts`
-  usa `PROJECT_FACTOR=0.8`; nenhum é regra backend. **MVP:** BAT entra? EIQ/STIR não.
+  definir delta/sinal/unidade. Web já modela como 3 MainSteps (parâmetros → BAU →
+  projeto) com sub-steps mode/crop/monthly/compost por cenário. Backend: assessment
+  entity com dois scenarios (bau/project) que compartilham parâmetros de solo/clima.
+  `PROJECT_FACTOR=0.8` no `scenario-comparison-model.ts` é placeholder visual,
+  não regra backend. **MVP:** BAT entra? EIQ/STIR não.
 
 ### P1 — Base segura
 
@@ -82,6 +94,8 @@ validar ciência → features aprovadas → schema final. Zero código Web.
   (`LcaProjectCulture` não herda `BaseModel`).
 - Serializer explícito para todo 2xx. Corrigir: LCA detail=`unknown`; result sem
   `total`; `soil_amendments` vs `soil_amndments`; authz responses só descritivas.
+  Schema deve casar com o que `LcaModuleFormValues` e `RothCModuleMockFormValues`
+  já esperam no frontend — não inventar campos novos nem renomear os vigentes.
 - Esvaziar `lca/views.py`: ORM/read → selectors; write/transação/payload → services.
   Service não devolve QuerySet de leitura.
 
@@ -104,26 +118,18 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 **LCA**
 
-- **Parcialmente desbloqueado**: GHG Protocol Cross-Sector Tools v2.0 (mar/2024)
-  versionado em `docs/references/domain/lca/ghg-protocol/`. Cobre:
-  - Combustíveis líquidos (diesel=74.1 tCO₂/TJ, gasolina, biodiesel, LPG)
-  - Eletricidade grid Brasil 2016–2023 via MCTI/SIRENE
-  - Transporte e frete rodoviário/ferroviário/marítimo/aéreo
-  - Conversões de unidades energéticas
-- GWP IPCC AR6 confirmado: N₂O=273, CH₄ fóssil=29.8 (openLCA AR6 method package
-  em `lca/ipcc/`).
+- **Parcialmente desbloqueado**: GHG Protocol v2.0 cobre energia/grid BR.
+  EXIOBASE 3.9.6 cobre fatores cradle-to-gate para todos os setores (fertilizantes,
+  calcário, defensivos, sementes, combustíveis) — arquivos externos, seed data
+  a extrair. PestLCI Embrapa cobre frações de emissão de defensivos por
+  compartimento. GWP IPCC AR6 confirmado (N₂O=273).
 - TRACI 2.2 (US EPA, domínio público) disponível para eutrofização futura.
-- Bloqueado: fatores de emissão para fertilizantes, calcário, ureia e defensivos
-  — GHG Protocol é somente energia (IPCC Vol. 2). Precisa IPCC Vol. 4 ou ecoinvent.
 - Circularity/Agribalyse bloqueado por EULA proprietária.
-- LCA Commons 2025 (USDA/NREL) é referência secundária, não fonte primária.
-- Auditar: K=`988/501 kgCO2e/kg K2O`; combustível aceita L/M3/KG mas usa kg/L;
-  composto recebe fração nutriente apesar de FE/kg produto.
-- Validar FSOM/FCR/LUC: `1/15`, `1/10`, `FATOR_TOTAL=.5`, vegetação natural como
-  fóssil, resíduo persistido ignorado.
-- Validar alocação caller-supplied/negativos/rendimento/cascata/conservação e frete
-  `0.1047/0.000029 kgCO2e/tkm`.
-- Só após fonte: constraints de área, colheita, rendimento e demais invariantes.
+- **Tarefa imediata**: auditar fatores atuais (K=988/501, FSOM 1/15, FCR 1/10,
+  FATOR_TOTAL=0.5, frete 0.1047/0.000029, vegetação natural como fóssil) contra
+  fontes e popular tabelas de referência versionadas. Remover duplicação de
+  unidades (L/M3/KG para combustível). Validar alocação e cascata. Só depois:
+  constraints de área, colheita, rendimento.
 
 ### P4 — Features aprovadas
 
