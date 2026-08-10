@@ -39,13 +39,16 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 - Schema sem warnings sob `test_settings`; tornar schema default sem dependência DB.
 - Web limpo em `develop@4394416`; patch SDK intermediário descartado. Só FE-28
   regenera após API final.
-- Referências: [inventário de planilhas](../../../references/domain/README.md).
-  RothC permite mapear fórmulas, mas não validar ciência; fonte LCA segue ausente.
+- Referências: [inventário de domínio](../../../references/domain/README.md).
+  Guia oficial RothC-26.3 + código Fortran canônico Apache 2.0 com golden vectors
+  de 70 anos versionados. Validação Python × Fortran desbloqueada.
+  Modelo de domínio LCA (openLCA) disponível; fatores de emissão ainda ausentes.
 
 ### D0 — Decisões bloqueantes
 
-- **Fonte:** registrar fórmula/fator, versão, unidade, geografia, método e origem.
-  RothC interno não tem inputs/vetor; obter fonte LCA. ISO não fornece FE; EIQ não valida LCA.
+- **Fonte:** RothC resolvido — guia oficial + Fortran canônico com vetores dourados.
+  LCA: obter fatores de emissão e tabelas de referência.
+  ISO não fornece FE; EIQ não valida LCA.
 - **RBAC:** definir tenant e vínculo user↔project/farm; Membership hoje é global.
 - **Assessment:** farm/plot, multiplicidade, latest, clone, cancelamento. Destrava
   BE-01/02/03/04/06/15.
@@ -85,8 +88,12 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 **RothC**
 
-- Mapear o template interno agora; mudança científica exige proveniência e vetor
-  dourado ≥12 meses: DPM/RPM/BIO/HUM, balanço, timing e tolerância.
+- **Desbloqueado**: código Fortran canônico (`RothC.for` + `Shell.for`) e golden
+  vectors de 70 anos (`year_results.out`, `month_results.out`) versionados em
+  `docs/references/domain/rothc/`.
+- Validar GAIA × Fortran usando os 70 snapshots anuais como teste de conformidade.
+- Diferenças conhecidas: sem spin-up, IOM recalculado, evapotranspiração via
+  Penman-Monteith em vez de bandeja, SMD simplificado, termo `0.02×fym` espúrio.
 - `produtividade/HI` inclui colheita: definir resíduo retornado, base seca, mês/ano.
 - Inicialização deve conservar SOC ou usar spin-up; hoje 0+0+2%+82%+IOM não fecha.
 - Definir estoque inicial/final/médio, intervalo, `tC/ha/year`, CO2/CO2e/sinal;
@@ -96,7 +103,11 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 **LCA**
 
-- Livro dimensional + vetores dourados por etapa/fator/unidade.
+- Modelo de domínio: openLCA (MPL 2.0) versionado em `docs/references/domain/olca/`
+  como referência de arquitetura — Flows, Processes, Characterization Factors,
+  ILCD/EcoSpold/JSON-LD.
+- Bloqueado: livro dimensional + vetores dourados por etapa/fator/unidade ainda
+  ausentes. Nenhuma fonte de fatores de emissão versionada.
 - Auditar: K=`988/501 kgCO2e/kg K2O`; combustível aceita L/M3/KG mas usa kg/L;
   composto recebe fração nutriente apesar de FE/kg produto.
 - Validar FSOM/FCR/LUC: `1/15`, `1/10`, `FATOR_TOTAL=.5`, vegetação natural como

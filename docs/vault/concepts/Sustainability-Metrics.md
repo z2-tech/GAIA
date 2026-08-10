@@ -11,7 +11,7 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 | Módulo | Status | Descrição |
 |--------|--------|-----------|
 | **LCA** (Carbono Emissão) | ⚠️ Engine não validada | Cálculo executável; metodologia, fatores versionados e vetores científicos ainda ausentes. |
-| **RothC** (Carbono Remoção) | ⚠️ Engine não validada | Simulação executável e template interno disponível; proveniência, entradas e vetores oficiais ainda pendentes. |
+| **RothC** (Carbono Remoção) | ⚠️ Engine não validada | Implementação Python executável; guia oficial RothC-26.3 e código Fortran canônico (Apache 2.0) com golden vectors de 70 anos disponíveis. Validação cruzada desbloqueada. |
 | **Regenerativo** | ✅ Implementado | Avaliação de agricultura regenerativa — indicadores ponderados, dashboard de scores. |
 | **BAT** (Biodiversidade) | ⚠️ Parcial | Biodiversity Assessment Tool — questionário de biodiversidade (43 questões). UI parcial no gaia-web. Planilha de referência: `Biodiversity Assessment Tool Prototype_Final.xlsx` |
 | **EIQ** (Impacto Ambiental) | 📋 Planejado | Environmental Impact Quotient — avaliação de risco de pesticidas. 631 nomes preenchidos na planilha `EIQ_Final.xlsx`. |
@@ -51,8 +51,10 @@ Sistema de pontuação com thresholds para classificação (baixa/média/alta bi
 
 ## Referências
 
-- Inventário em `docs/references/domain/README.md`: BAT, EIQ, STIR e template RothC.
-- Fonte científica LCA: ausente; blocker D0 de BE-18.
-- Fonte científica RothC: template interno disponível, mas sem proveniência ou vetor preenchido; blocker parcial de P3.
+- Inventário em `docs/references/domain/README.md`: BAT, EIQ, STIR, template RothC,
+  guia oficial RothC-26.3 (Coleman & Jenkinson 2014), código Fortran canônico
+  v2.1.1 (Apache 2.0) com golden vectors, openLCA, FullCAM, FAO Soils Portal.
+- Fonte científica LCA: modelo de domínio (openLCA) disponível; fatores de emissão e vetores ainda ausentes.
+- Fonte científica RothC: guia oficial + código canônico Fortran com vetores dourados de 70 anos disponíveis. Validação Python × Fortran desbloqueada.
 - Código e testes atuais descrevem comportamento executável, não autoridade científica.
 - PDFs de reunião são contexto de produto e contêm decisões ainda não aprovadas.
