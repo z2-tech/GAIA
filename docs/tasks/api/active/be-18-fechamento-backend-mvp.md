@@ -46,9 +46,10 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 ### D0 — Decisões bloqueantes
 
-- **Fonte:** RothC resolvido — guia oficial + Fortran canônico com vetores dourados.
-  LCA: obter fatores de emissão e tabelas de referência.
-  ISO não fornece FE; EIQ não valida LCA.
+- **Fonte:** RothC resolvido — guia oficial + Fortran canônico (GitHub v2.1.1 +
+  Zenodo DOI v1.0.0) com vetores dourados de 70 anos.
+  LCA energia: GHG Protocol v2.0 (mar/2024) cobre combustíveis, grid BR e
+  transporte. Faltam fatores para fertilizantes, calcário e defensivos.
 - **RBAC:** definir tenant e vínculo user↔project/farm; Membership hoje é global.
 - **Assessment:** farm/plot, multiplicidade, latest, clone, cancelamento. Destrava
   BE-01/02/03/04/06/15.
@@ -103,11 +104,19 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 **LCA**
 
-- Modelo de domínio: openLCA (MPL 2.0) versionado em `docs/references/domain/olca/`
-  como referência de arquitetura — Flows, Processes, Characterization Factors,
-  ILCD/EcoSpold/JSON-LD.
-- Bloqueado: livro dimensional + vetores dourados por etapa/fator/unidade ainda
-  ausentes. Nenhuma fonte de fatores de emissão versionada.
+- **Parcialmente desbloqueado**: GHG Protocol Cross-Sector Tools v2.0 (mar/2024)
+  versionado em `docs/references/domain/lca/ghg-protocol/`. Cobre:
+  - Combustíveis líquidos (diesel=74.1 tCO₂/TJ, gasolina, biodiesel, LPG)
+  - Eletricidade grid Brasil 2016–2023 via MCTI/SIRENE
+  - Transporte e frete rodoviário/ferroviário/marítimo/aéreo
+  - Conversões de unidades energéticas
+- GWP IPCC AR6 confirmado: N₂O=273, CH₄ fóssil=29.8 (openLCA AR6 method package
+  em `lca/ipcc/`).
+- TRACI 2.2 (US EPA, domínio público) disponível para eutrofização futura.
+- Bloqueado: fatores de emissão para fertilizantes, calcário, ureia e defensivos
+  — GHG Protocol é somente energia (IPCC Vol. 2). Precisa IPCC Vol. 4 ou ecoinvent.
+- Circularity/Agribalyse bloqueado por EULA proprietária.
+- LCA Commons 2025 (USDA/NREL) é referência secundária, não fonte primária.
 - Auditar: K=`988/501 kgCO2e/kg K2O`; combustível aceita L/M3/KG mas usa kg/L;
   composto recebe fração nutriente apesar de FE/kg produto.
 - Validar FSOM/FCR/LUC: `1/15`, `1/10`, `FATOR_TOTAL=.5`, vegetação natural como

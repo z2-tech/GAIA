@@ -10,7 +10,7 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 
 | Módulo | Status | Descrição |
 |--------|--------|-----------|
-| **LCA** (Carbono Emissão) | ⚠️ Engine não validada | Cálculo executável; metodologia, fatores versionados e vetores científicos ainda ausentes. |
+| **LCA** (Carbono Emissão) | ⚠️ Engine não validada | Motor executável; GHG Protocol v2.0 cobre combustíveis e grid BR. Fatores de emissão para fertilizantes/calcário/defensivos ainda ausentes. GWP IPCC AR6 confirmado (N₂O=273). |
 | **RothC** (Carbono Remoção) | ⚠️ Engine não validada | Implementação Python executável; guia oficial RothC-26.3 e código Fortran canônico (Apache 2.0) com golden vectors de 70 anos disponíveis. Validação cruzada desbloqueada. |
 | **Regenerativo** | ✅ Implementado | Avaliação de agricultura regenerativa — indicadores ponderados, dashboard de scores. |
 | **BAT** (Biodiversidade) | ⚠️ Parcial | Biodiversity Assessment Tool — questionário de biodiversidade (43 questões). UI parcial no gaia-web. Planilha de referência: `Biodiversity Assessment Tool Prototype_Final.xlsx` |

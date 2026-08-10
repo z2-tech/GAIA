@@ -256,14 +256,106 @@ coordenadas fora do bounding box australiano são rejeitadas.
 
 ---
 
+## LCA — GHG Protocol Emission Factors (Cross-Sector Tools v2.0)
+
+`lca/ghg-protocol/Emission_Factors_for_Cross_Sector_Tools_V2.0_0.xlsx`
+
+- **Fonte**: GHG Protocol (WRI + WBCSD), mar/2024. Livre para referência com atribuição.
+- **Cobertura**: apenas **energia** (IPCC 2006 GLs Vol. 2). CO₂, CH₄, N₂O por gás.
+- **Combustíveis**: diesel/gasolina/biodiesel/LPG por energia, massa, volume e gás.
+- **Eletricidade Brasil**: grid nacional 2016–2023 via MCTI/SIRENE (CO₂ only).
+  Destaques: 2021=0.1264 tCO₂/MWh (crise hídrica), 2023=0.0385 tCO₂/MWh.
+- **Transporte**: rodoviário, ferroviário, aéreo, marítimo, máquinas agrícolas.
+  Frete por peso-distância (UK + US).
+- **Conversões**: energia, volume, massa, distância + prefixos SI.
+- **NÃO contém**: fertilizantes, pesticidas, calcário, ureia, solo, mudança de uso
+  da terra. Cobre Scope 1/2/3 de combustão + eletricidade, não insumos agrícolas.
+- **Uso GAIA**: importar diesel/biocombustíveis e grid BR para o motor LCA.
+  Fertilizantes e defensivos precisam de IPCC Vol. 4 ou ecoinvent.
+
+## LCA — IPCC AR6 LCIA Method (openLCA)
+
+`lca/ipcc/Documentation IPCC 2021 09.02.2022.pdf`
+
+- GreenDelta GmbH, fev/2022. Documenta o pacote openLCA LCIA Methods v2.1.3.
+- **Não contém fatores de emissão**. Contém fatores de caracterização (GWP).
+- 12 categorias de impacto climático: GWP 20/100/500, GTP 50/100, AGWP, AGTP, CGTP.
+- Black carbon do AR5 como fallback.
+- **Confirma**: GWP100 AR6 — N₂O=273, CH₄ fóssil=29.8, CH₄ biogênico=27.0.
+- Uso GAIA: referência para alinhar GWP aos valores AR6 mais recentes.
+
+## LCA — TRACI 2.2 (US EPA)
+
+`lca/traci/Documentation TRACI 2.2 23.09.2024.pdf`
+
+- GreenDelta GmbH, set/2024. Implementação openLCA do método TRACI 2.2 da US EPA.
+- **Método LCIA, não banco de fatores de emissão.**
+- Categorias: GWP, acidificação, eutrofização (água doce + marinha, espacialmente
+  resolvida com ponderação agrícola), ecotoxicidade, saúde humana, uso da terra.
+- Eutrofização: fatores de P → kg P eq e N → kg N eq por país + estado US.
+  Dataset: Henderson et al. 2021 (DOI: 10.1007/s11367-021-01956-4).
+- GWP vintage provável: AR2/AR3. GAIA deve manter IPCC AR6 para GWP.
+- **Uso GAIA**: eutrofização espacialmente resolvida para módulo futuro.
+  Domínio público (US government).
+
+## LCA — LCA Commons 2025 (US Federal)
+
+`lca/lca-commons/LCA Commons 2025 Database Notes.pdf`
+
+- GreenDelta GmbH, mai/2025. >10K datasets de USDA, NREL, NAL, US Forest Service.
+- Formato: `.zolca` (openLCA). Fonte original em `lcacommons.gov`.
+- Dados heterogêneos com erros conhecidos entre repositórios.
+- **Uso GAIA**: referência secundária para validação de inventário agrícola US.
+  Não é fonte primária; não substitui fatores próprios.
+
+## LCA — db_calc (openLCA batch)
+
+`lca/openlca/db_calc description and instructions.pdf`
+
+- Michael Srocka / GreenDelta, mai/2024. Script Python para calcular todos os
+  processos de um banco openLCA de uma vez.
+- Referência de padrão batch LCA. Não integrável diretamente.
+- Uso GAIA: inspiração para pipeline de cálculo massivo.
+
+## LCA — Circularity Food Package (EULA)
+
+`lca/circularity/EULA_Circularity_Food_Package.pdf`
+
+- GreenDelta GmbH. Licença dual: Agribalyse (Open Licence 2.0) + add-on
+  Circularity (proprietário GreenDelta).
+- **BLOQUEADOR**: proíbe uso comercial, redistribuição, modificação. Prazo 1 ano.
+- Dados ecoinvent embutidos exigem licença separada para uso fora da França.
+- **Ação**: GAIA não pode usar esses dados. Se necessário, contatar ADEME,
+  GreenDelta e ecoinvent para licença de redistribuição.
+
+---
+
+## RothC — Zenodo official release v1.0.0
+
+`rothc/zenodo/zenodo-10707407.html`
+
+- **DOI**: [10.5281/zenodo.10707407](https://doi.org/10.5281/zenodo.10707407)
+- **Autores**: Coleman, Prout, Milne — Rothamsted Research, fev/2024
+- **Licença**: Apache 2.0
+- **Código**: Fortran (RothC.for + Shell.for + RothC_input.dat + outputs)
+- **Destaque**: referencia Giongo et al. (2020) — modificação para regiões
+  semiáridas da Caatinga, Nordeste do Brasil. Relevância direta para GAIA.
+- Financiamento BBSRC UK (Growing Health, Resilient Farming Futures, AgZero+).
+- Citação canônica para qualquer publicação que use RothC na GAIA.
+
+---
+
 ## Escopo e bloqueadores
 
 | Trilha | Status |
 |--------|--------|
 | D0, P1, P2 do BE-18 | Prosseguir |
-| Mapeamento estático RothC | Prosseguir (fórmulas confirmadas pelo guia oficial) |
-| Validação RothC Python × Fortran | **Desbloqueado** — golden vectors de 70 anos disponíveis |
-| Correção RothC (spin-up, IOM, SMD, evap) | Bloqueado até validação terminar |
-| LCA — modelo de domínio | Referência openLCA disponível; sem fatores de emissão ainda |
-| LCA — validação científica | Bloqueado — sem fonte de fatores/emissão |
+| Mapeamento estático RothC | Prosseguir (guia oficial + Fortran canônico) |
+| Validação RothC Python × Fortran | **Desbloqueado** — golden vectors 70 anos + DOI oficial |
+| RothC semiárido (Giongo 2020) | Referência disponível; implementação futura |
+| LCA — energia (combustíveis + grid BR) | **Desbloqueado** — GHG Protocol v2.0 cobre Scope 1/2/3 de energia |
+| LCA — GWP characterization | **Desbloqueado** — IPCC AR6 confirmado (N₂O=273) |
+| LCA — insumos agrícolas (fertilizantes, calcário) | **Bloqueado** — GHG Protocol não cobre; precisa IPCC Vol. 4 ou ecoinvent |
+| LCA — eutrofização | Referência TRACI 2.2 disponível; módulo futuro |
+| LCA — Circularity/Agribalyse | Bloqueado por EULA proprietária |
 | FAO datasets | HWSD v2.0 + GSOCmap devem ser baixados antes de P3 |
