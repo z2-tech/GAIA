@@ -1,7 +1,11 @@
 # BE-18 — Fechamento técnico do backend do MVP
 
-> **Prioridade:** Alta | **Status:** Próxima sessão
+> **Prioridade:** Alta | **Status:** ✅ Concluído (2026-08-10)
+> **Branch:** `fix/backend-mvp-hardening` → `develop`
 > **Web pós-API:** [FE-28](../../web/active/fe-28-reconciliar-sdk-pos-backend.md)
+> **Plane:** GAIA-XX (substituir após criação)
+
+## Entregue (16 commits, +7039/−1749 LOC)
 
 ## Prompt da próxima sessão
 
@@ -171,3 +175,16 @@ validar ciência → features aprovadas → schema final. Zero código Web.
   pre-commit; scan de artefatos proibidos; validação estrutural; CodeGraph sync.
 - Done: D0 registrado; RBAC/vínculos/cancelamento/2xx cobertos; vetores rastreáveis
   verdes; migrations limpas; schema final publicado; FE-28 desbloqueado.
+
+## Resultado da sessão (2026-08-10)
+
+| Área | Entregue |
+|------|----------|
+| RothC | `POST /api/v2/routhc/assessments/` — dual-scenario BAU + Project com modo, composto, delta |
+| Biodiversity | App nova — 43 questões seed, assessments CRUD, dashboard por seção, scoring |
+| LCA | Soft-delete, scoping, progress fix, selector→model (não dict), view helper |
+| AuthX/AuthZ | Serializer sem query de role, schema roda sem DB |
+| Farms/Projects/Regenerative | Scoping de usuário em selectors + views |
+| Styleguide | −156 LOC: dead code, NOP pass-throughs, constantes, helper extraction |
+| Tests | 300/300 passando (13 novos: RothC dual-scenario + BAT) |
+| Schema | 0 warnings, 0 errors via `spectacular --validate --fail-on-warn` |

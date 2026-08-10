@@ -1,7 +1,8 @@
 # FE-28 — Reconciliar SDK e wiring completo após deploy do backend
 
-> **Prioridade:** Alta | **Assignee:** — | **Status:** Bloqueado por BE-18
-> **API:** [BE-18](../../api/active/be-18-fechamento-backend-mvp.md)
+> **Prioridade:** Alta | **Assignee:** — | **Status:** Pronto para execução
+> **API:** [BE-18](../../api/active/be-18-fechamento-backend-mvp.md) — ✅ Concluído
+> **Plane:** GAIA-YY (substituir após criação)
 
 ## Contexto
 
