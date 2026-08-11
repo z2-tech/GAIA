@@ -1,41 +1,35 @@
 # BE-05 — Desenvolvimento do módulo Biodiversidade (BAT)
 
-> **Prioridade:** Alta | **Assignee:** @léo bola | **Status:** Pendente
+> **Prioridade:** Alta | **Assignee:** Fernando | **Status:** ✅ Concluído (BE-18, 2026-08-10)
+> **Plane:** [GAIA-5](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues)
 
 ## Escopo
 
 Implementar o Biodiversity Assessment Tool baseado na planilha de referência.
 
-> **Frontend aguardando (FE-12, ✅ concluído 2026-08-05):** o form BAT já está no padrão
-> `forms.md` com schema/hook/mappers prontos, mas o `onSubmit` é um toast-stub porque
-> este endpoint não existe. Ao entregar BE-05, o mapper `valuesToCreateBody`
-> (`web/src/features/biodiversidade/modulo/bat/schemas/bat-modulo.ts`) precisa alinhar
-> com o contrato final (`{ project_id, farm_id, answers: [{question_id, value}], notes }`)
-> e trocar o stub pela mutation real em `web/src/services/biodiversity/`.
+## Entregue (via BE-18)
 
-## Modelos
-
-- `BiodiversityAssessment`: project_farm FK, área (produção/pequena/grande), score
-- `BiodiversityQuestion`: número, texto (PT/EN), área, peso
-- `BiodiversityAnswer`: assessment FK, question FK, resposta (bool/text)
-
-## Planilha de referência
-
-`docs/references/domain/Biodiversity Assessment Tool Prototype_Final.xlsx`
-- Abas: Área de produção (29 questões), Pequena área não produtiva, Grande área não produtiva
-- Aba Pontuação: thresholds para classificação
-
-## Endpoints
-
-- `GET /api/v1/biodiversity/questions/` — listar questões por área
-- `POST /api/v1/biodiversity/assessments/` — criar assessment
-- `GET /api/v1/biodiversity/assessments/{id}/` — detalhe
-- `GET /api/v1/biodiversity/assessments/{id}/dashboard/` — score
+- **Models:** `BiodiversityQuestion` (43 questões seedadas), `BiodiversityAssessment` (BaseModel com soft-delete), `BiodiversityAnswer`
+- **Endpoints:**
+  - `GET /api/v1/biodiversity/questions/` — listar questões
+  - `POST /api/v1/biodiversity/assessments/` — criar assessment
+  - `GET /api/v1/biodiversity/assessments/` — listar por project/farm
+  - `GET /api/v1/biodiversity/assessments/{id}/` — detalhe
+  - `GET /api/v1/biodiversity/assessments/{id}/dashboard/` — score por seção
+  - `POST /api/v1/biodiversity/assessments/{id}/cancel/` — soft-delete
+- **Scoring:** pesos da planilha de referência, thresholds para classificação
+- **Auto-complete:** `ProjectService.auto_complete_project()` integrado
+- **Tests:** `biodiversity/tests/test_bat.py`
 
 ## Checklist
 
-- [ ] Models + migration (seed questions da planilha)
-- [ ] Selectors + services
-- [ ] Serializers + views + urls
-- [ ] Testes
-- [ ] Registrar módulo "biodiversidade" no `_MODULE_COMPLETERS`
+- [x] Models + migration (seed 43 questões)
+- [x] Selectors + services
+- [x] Serializers + views + urls
+- [x] Testes
+- [x] Auto-complete integrado
+
+## Nota FE-28
+
+Frontend (FE-12) já tem o form BAT refatorado no padrão `forms.md`. Falta criar
+`src/services/biodiversity/` e trocar o toast-stub pela mutation real — FE-28 Fase 3.

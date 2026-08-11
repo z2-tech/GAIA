@@ -1,30 +1,21 @@
 # BE-01 — Rotas de edição, exclusão e clone do LCA
 
-> **Prioridade:** Alta | **Assignee:** @Matheus Rodrigues | **Status:** Pendente
+> **Prioridade:** Alta | **Assignee:** Fernando | **Status:** Cancel implementado — edit/clone post-MVP
+> **Plane:** [GAIA-1](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues)
 
 ## Escopo
 
-Implementar endpoints REST para gerenciamento de assessments LCA já criados:
+- `POST /api/v1/lca/{id}/cancel/` — soft-delete ✅ (via `LcaService.cancel_culture`)
+- `PATCH /api/v1/lca/{id}/update/` — editar ⬜ post-MVP
+- `POST /api/v1/lca/{id}/clone/` — clonar ⬜ post-MVP
 
-- `PATCH /api/v1/lca/{project_culture_id}/update/` — editar cultura LCA
-- `DELETE /api/v1/lca/{project_culture_id}/delete/` — soft-delete LCA
-- `POST /api/v1/lca/{project_culture_id}/clone/` — clonar assessment LCA para nova cultura/ano
+## Entregue
 
-## Regras
+- Cancel implementado em `lca/views.py:755` → `LcaService.cancel_culture`
+- Soft-delete + downgrade `COMPLETED → IN_PROGRESS`
+- Testes cobrem cancel
 
-- Soft-delete via `canceled_at` (BaseModel)
-- Clone deve copiar: culture info, soil, inputs (fertilizers, defensives, seeds), fuel, transport
-- Clone NÃO copia o resultado calculado — novo cálculo necessário
-- Tenant scoping: apenas membros do projeto podem editar/deletar/clonar
+## Post-MVP
 
-## Checklist
-
-- [ ] Serializers com @extend_schema (drf-spectacular)
-- [ ] Services com @transaction.atomic
-- [ ] Testes: test_services, test_views
-- [ ] Atualizar `lca/urls.py`
-
-## Relacionado
-
-- `docs/references/domain/` — planilhas EIQ, LCA
-- `docs/vault/concepts/Sustainability-Metrics.md`
+- Edição e clone sem UX ou contrato de produto aprovado
+- Checklist original como backlog

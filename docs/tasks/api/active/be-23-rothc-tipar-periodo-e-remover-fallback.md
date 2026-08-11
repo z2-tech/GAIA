@@ -1,6 +1,6 @@
 # BE-23 — RothC: tipar periodo_inicio/fim e remover fallback silencioso projeto=BAU
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** Priorizado
+> **Prioridade:** Média | **Assignee:** Fernando | **Status:** ✅ Concluído (2026-08-11)
 > **Plane:** [GAIA-39](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues/b9e281ad-f31f-47bd-a758-4256ce638546)
 
 ## Problema 1 — `periodo_inicio` / `periodo_fim` sem tipo
@@ -29,14 +29,21 @@ está no backend, onde é mais difícil de detectar.
 ## O que fazer
 
 - Trocar os dois `DictField` por `PeriodoBoundSerializer(allow_null=True)`.
-- Remover o fallback. Assessment sem cenário projeto é estado inválido: a simulação
-  deveria ter falhado antes. Levantar erro de domínio na criação e, no GET, retornar erro
-  explícito em vez de mascarar.
+- Remover o fallback. Assessment sem os dois cenários completos é conflito de estado e
+  retorna `409`, nunca dados sintéticos.
+- Registros legados `productivity_crop` sem relações de culturas são incompletos, pois não
+  existe backfill cientificamente seguro.
 - Investigar por que o caminho existe. Se houver assessment legado com um único cenário,
   tratar via migração de dados ou flag explícita no payload — nunca por cópia silenciosa.
 
 ## Aceite
 
-- [ ] `periodo_inicio` e `periodo_fim` tipados no schema; SDK regenerado expõe `PeriodoBound`.
-- [ ] Assessment sem cenário projeto não retorna 200 com dados duplicados.
-- [ ] Teste cobrindo o caso.
+- [x] `periodo_inicio` e `periodo_fim` tipados no schema; SDK regenerado expõe `PeriodoBound`.
+- [x] Assessment incompleto não retorna 200 com dados duplicados; retorna 409.
+- [x] Teste cobrindo o caso.
+
+## Entregue
+
+- `RouthcAssessmentDetailSerializer` e `RouthcAssessmentPeriodDetailSerializer` usam `PeriodoBoundSerializer`
+- Fallback `projeto=BAU` removido; `_validate_assessment_integrity` retorna 409 em cenário incompleto
+- Testes em `TestAssessmentAccess` e `TestAssessmentPeriod` cobrem 404/409

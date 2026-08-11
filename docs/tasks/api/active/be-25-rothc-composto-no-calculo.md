@@ -1,6 +1,6 @@
-# BE-25 — RothC: definir se adubação orgânica entra no cálculo de carbono
+# BE-25 — RothC: incorporar carbono orgânico ao cálculo
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** Refinamento (decisão pendente)
+> **Prioridade:** Alta | **Assignee:** Fernando | **Status:** ✅ Concluído (2026-08-11)
 > **Plane:** [GAIA-41](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues/fac4bb32-3187-4229-a05f-c68b42b4c035)
 
 ## Contexto
@@ -23,19 +23,30 @@ com BAU sem composto e Projeto com composto, o delta de carbono ignora a princip
 alavanca do cenário de projeto. Como composto é entrada de carbono orgânico, isso pode ser
 um furo científico do modelo RothC.
 
-## Decisão necessária antes de implementar (`sustainability-specialist`)
+## Decisão fechada (`sustainability-specialist`)
 
-- **(a) Composto soma entrada de carbono** → definir fator de conversão kg/ha → kg C/ha
-  por tipo de material, somar em `calcular_entrada_c`
-  (`routhc/calculos/entrada_c.py`) e ajustar o split DPM/RPM, que hoje deriva só do
-  `plant_residue_ratio`.
-- **(b) Fora do escopo do modelo** → manter como métrica de relatório, registrar a decisão
-  e o porquê em `docs/vault`, e reavaliar se o step obrigatório do wizard deve continuar
-  obrigatório — hoje ele sugere uma influência que não existe.
+- O novo input é `carbono_organico_kg_c_ha`: kg de carbono orgânico por hectare, não massa
+  fresca/seca do material.
+- Modelar como FYM-equivalente: 49% DPM, 49% RPM e 2% HUM.
+- Adicionar depois da decomposição mensal; a entrada começa a decompor no mês seguinte.
+- Não passar pelo split vegetal nem por `calcular_entrada_c`.
+- `material` é metadado opcional, não fator de conversão.
+- Preservar `quantidade_kg_ha` legada como massa física nullable. Não converter nem
+  renomear valores existentes; quando houver somente massa legada, a taxa nova é `null`.
 
-## Aceite (se opção a)
+## Aceite
 
-- [ ] Entrada de C mensal inclui o composto do mês e do cenário correspondentes.
-- [ ] Teste: cenário com composto tem estoque de carbono maior que o mesmo cenário sem
-      composto.
-- [ ] Metodologia e fatores documentados em `docs/vault`.
+- [x] Entrada de C mensal inclui o composto do mês e do cenário correspondentes.
+- [x] Teste de conservação: 1.000 kg C/ha adicionam 0,49 DPM + 0,49 RPM + 0,02 HUM,
+      sem CO₂ adicional no mês da aplicação.
+- [x] Teste: decomposição da entrada começa no mês seguinte e somente o cenário alterado
+      muda.
+- [x] Metodologia e fatores documentados em `docs/vault`.
+
+## Entregue
+
+- `_build_compost_map` gera mapa `(ano, mes) → carbono_organico_ton_c_ha`
+- `_run_monthly_simulation` recebe `compost_by_month` e aplica FYM-equivalente (49/49/2%) após decomposição
+- `RothcCompostEntry` persistido com `carbono_organico_kg_c_ha`
+- Testes em `TestCompost`: conservação de massa, cenário isolado
+- Metodologia documentada em `docs/vault/concepts/Sustainability-Metrics.md`

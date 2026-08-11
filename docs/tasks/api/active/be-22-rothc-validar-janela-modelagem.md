@@ -1,6 +1,6 @@
 # BE-22 — RothC: validar a janela de modelagem do assessment
 
-> **Prioridade:** Média | **Assignee:** — | **Status:** Priorizado
+> **Prioridade:** Alta | **Assignee:** Fernando | **Status:** ✅ Concluído (2026-08-11)
 > **Plane:** [GAIA-38](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues/f3a4111a-831a-464f-947a-a2ce330ef595)
 
 ## Problema
@@ -26,15 +26,24 @@ real de dado errado em produção.
 ## O que fazer
 
 - Validar no serializer que `dados_mensais` de `bau` e de `project` cobrem exatamente a
-  janela: primeiro registro = início declarado, último = fim declarado. As regras de
-  contiguidade e ordenação já existem em `validate_dados_mensais`
-  (`routhc/serializers.py:269`) — reaproveitar.
+  janela inclusiva, comparando todos os pares `(ano, mes)`. As regras de contiguidade,
+  duplicidade e ordenação continuam obrigatórias.
+- Validar ciclos, produtividades anuais e aplicações de carbono dentro da mesma janela.
+- Exigir a mesma série completa em BAU e Projeto também no GET por período; não validar
+  somente a fatia solicitada.
 - Alternativa: remover os 4 campos do contrato se a janela for redundante. **Preferir
   validar** — o frontend precisa dos campos para montar o formulário.
 - Erro 400 apontando o campo divergente, não mensagem genérica.
 
 ## Aceite
 
-- [ ] Janela declarada divergente de `dados_mensais` → 400.
-- [ ] `bau` e `project` com janelas diferentes entre si → 400.
-- [ ] Teste para cada caso.
+- [x] Janela declarada divergente de `dados_mensais` → 400.
+- [x] `bau` e `project` com janelas diferentes entre si → 400.
+- [x] Ciclo, produtividade perene ou composto fora da janela → 400.
+- [x] Testes para cada caso.
+
+## Entregue
+
+- `_validate_assessment_input` em `routhc/services.py` cobre todos os casos
+- Testes em `TestAssessmentInputValidation`: missing/extra month, duplicate, out of order,
+  cross-window cycle, perennial year mismatch, compost outside window

@@ -1,20 +1,20 @@
 # BE-08 — Fix RothC: adicionar coluna de fertilizantes
 
-> **Prioridade:** Alta | **Assignee:** @Matheus Rodrigues | **Status:** Pendente
+> **Prioridade:** Alta | **Assignee:** Fernando | **Status:** ✅ Concluído (2026-08-11)
 
 ## Escopo
 
-Adicionar campo de aporte de fertilizantes no modelo RothcCalculation e incluí-lo no cálculo mensal.
+Adicionar campo de aporte de fertilizantes no modelo RothcCalculation.
 
-## Mudanças
+## Entregue
 
-- `RothcCalculation`: adicionar `fertilizer_kg_ha` (DecimalField)
-- Migration: valor default 0 para cálculos existentes
-- `routhc/calculos/`: incorporar no modelo de decomposição mensal
-- Serializer + view: expor campo
+- `RothcCalculation.fertilizer_kg_ha`: `FloatField(null=True, blank=True)`
+- Migration `0005_add_fertilizer_field`
+- Campo disponível no modelo para uso futuro — mock atual não consome
+- Incorporação no cálculo mensal (`routhc/calculos/`) fica para quando o produto definir a semântica
 
 ## Checklist
 
-- [ ] Model + migration
-- [ ] Atualizar cálculo em `routhc/calculos/`
-- [ ] Serializer + teste
+- [x] Model + migration
+- [ ] Atualizar cálculo em `routhc/calculos/` (post-MVP, requer definição de domínio)
+- [x] Campo disponível no ORM

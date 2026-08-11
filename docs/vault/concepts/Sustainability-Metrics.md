@@ -32,6 +32,24 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 - BAT faz parte do MVP somente no contrato já representado pelo formulário. EIQ,
   STIR e contratos de dashboard ainda não representados ficam fora.
 
+## RothC — regras de entrada do MVP
+
+- Coordenadas da fazenda são a única fonte para clima e radiação do assessment.
+- Produtividade é kg de matéria seca do produto colhido por hectare. O resíduo aéreo
+  retornado é `P × (1 − HI) / HI`, com retenção de 100%; raízes e rizodeposição ficam
+  fora do MVP.
+- Cultura anual fica ativa no intervalo inclusivo e injeta o resíduo no mês final. Ciclos
+  podem se sobrepor; cada cultura usa seu próprio HI e os resíduos são somados.
+- Cultura perene distribui o resíduo anual por 12. Anos parciais não são renormalizados.
+- Meses sem ciclo representam pousio com entrada vegetal zero; cobertura do solo continua
+  sendo informada mensalmente.
+- Culturas e índices de colheita são catálogo seedado. Resultados mensais se relacionam às
+  culturas por FKs, permitindo múltiplas culturas ativas sem JSON.
+- Carbono orgânico é informado diretamente em kg C/ha e modelado como FYM-equivalente:
+  49% DPM, 49% RPM e 2% HUM, adicionados após a decomposição do mês.
+- Massa física legada de composto não é convertida para carbono sem fator conhecido;
+  métricas dependentes dessa conversão permanecem `null`.
+
 ## EIQ — Environmental Impact Quotient
 
 Ferramenta de suporte à decisão desenvolvida pelo NY State Integrated Pest Management Program. Avalia o impacto ambiental de pesticidas considerando:

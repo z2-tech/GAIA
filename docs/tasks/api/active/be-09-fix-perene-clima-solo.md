@@ -1,19 +1,20 @@
 # BE-09 — Fix: incluir opção "Perene" em Clima e Solo (LCA)
 
-> **Prioridade:** Alta | **Assignee:** @léo bola | **Status:** Pendente
+> **Prioridade:** Alta | **Assignee:** Fernando | **Status:** ✅ Concluído (já existente no enum)
+> **Plane:** [GAIA-9](https://plane.z2t.dev/gaia/projects/fe4e534c-2855-4a42-af0a-1aca6bb7820c/issues)
 
 ## Escopo
 
 Adicionar a opção "Perene" nos campos de clima e tipo de solo do módulo LCA.
 
-## Mudanças
+## Verificação
 
-- `LcaProjectSoil`: adicionar "Perene" nas choices de clima e/ou soil_type
-- Verificar se afeta os cálculos em `lca/calculos/`
-- Atualizar serializer para aceitar novo valor
+`PERENNIAL_CROP` já existe em `lca/enum/land_use_type.py:7` e está
+disponível nas choices do `LcaProjectSoil` desde a migration `0012`.
+Nenhuma alteração necessária.
 
 ## Checklist
 
-- [ ] Model (choices/enum) + migration
-- [ ] Atualizar lca/calculos/ se necessário
-- [ ] Serializer + teste
+- [x] Enum `PERENNIAL_CROP` em `land_use_type.py`
+- [x] Disponível nas choices do model
+- [x] Serializer aceita o valor
