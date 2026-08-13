@@ -35,8 +35,10 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 ## RothC — regras de entrada do MVP
 
 - Coordenadas da fazenda são a única fonte para clima e radiação do assessment.
-- Produtividade é kg de matéria seca do produto colhido por hectare. O resíduo aéreo
-  retornado é `P × (1 − HI) / HI`, com retenção de 100%; raízes e rizodeposição ficam
+- Produtividade é a massa colhida por hectare na unidade natural da cultura (kg/ha).
+  Culturas de produto fresco (frutas, palma) têm `dry_matter_fraction` < 1 no catálogo;
+  a modelagem converte para matéria seca antes da fórmula de resíduo. O resíduo aéreo
+  retornado é `P_MS × (1 − HI) / HI`, com retenção de 100%; raízes e rizodeposição ficam
   fora do MVP.
 - Cultura anual fica ativa no intervalo inclusivo e injeta o resíduo no mês final. Ciclos
   podem se sobrepor; cada cultura usa seu próprio HI e os resíduos são somados.
@@ -49,6 +51,42 @@ GAIA's sustainability assessment framework currently tracks seven modules.
   49% DPM, 49% RPM e 2% HUM, adicionados após a decomposição do mês.
 - Massa física legada de composto não é convertida para carbono sem fator conhecido;
   métricas dependentes dessa conversão permanecem `null`.
+
+## RothC — catálogo de culturas
+
+- Cada cultura (`RothcCrop`) carrega `harvest_index` (fração colhida da biomassa aérea
+  seca), `crop_type` (`annual`/`perennial`) e `dry_matter_fraction` (fração de matéria
+  seca da produtividade informada, default 1.0).
+- Convenção de HI: `resíduo = P_MS × (1 − HI) / HI`. Exceções: cana 0.85 (deliberado e
+  conservador — assume palhada removida, não o HI econômico ~0.41); batata/mandioca
+  (HI opera sobre biomassa total, produto subterrâneo).
+- Fontes: IPCC 2019 Refinement Vol 4 Ch 11 Tab 11.1A (RAG → HI) para centeio, milheto e
+  forrageiras; IPCC 2006/Tab 11.2 e literatura agronômica para os demais. Frutíferas e
+  arbóreas sem default internacional (manga, abacate, citros, cacau, eucalipto, palma,
+  tabaco) usam propostas técnicas do sustainability-specialist — frações de biomassa
+  removida — pendentes de validação metodológica externa.
+- Correções aplicadas na expansão (v3): MAIZE 0.45→0.50, COFFEE 0.50→0.20, SOYBEAN
+  0.50→0.45, WHEAT 0.55→0.50, PULSES 0.30→0.40. Resultados históricos não são afetados:
+  `entrada_biomassa_kg_ha` é snapshot em `RothcMonthlyResult`; o catálogo só vale para
+  cálculos novos.
+- `dry_matter_fraction` das frutíferas (manga 0.17, abacate 0.25, citros 0.13, palma 0.10)
+  são propostas técnicas para produto fresco (~80–90% água); produtividade informada é
+  massa fresca colhida.
+- Endpoint de catálogo: `GET /api/v2/routhc/crops/` — fonte de verdade para o dropdown do
+  Web (substitui a lista hardcoded de i18n, que incluía `SOIL`, inexistente no backend).
+
+## RothC — decisões de produto registradas
+
+- Cana: manter HI 0.85 (conservador para crédito de carbono); não migrar para 0.70
+  (colheita crua) até decisão de posicionamento.
+- Pastagem: PASTURE HI 0.77 corresponde a corte/fenação (prod = MS colhida). Pastejo não
+  usa o código PASTURE: usa `monthly_input_mode = biomass` com entrada explícita de
+  resíduo + `dpm_rpm = IMPROVED_GRASSLAND`.
+- Agregados CROPS/PULSES/OILSEEDS permanecem como fallback; UI deve priorizar códigos
+  específicos.
+- Unidade de produtividade: diferenciação é sistêmica no backend via
+  `dry_matter_fraction`; o Web só precisa expor a unidade correta por cultura (t MS/ha
+  vs t produto fresco/ha), sem mudança de contrato.
 
 ## EIQ — Environmental Impact Quotient
 
