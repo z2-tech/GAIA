@@ -17,9 +17,8 @@
     },
     "plane": {
       "type": "local",
-      "command": ["npx", "-y", "@makeplane/plane-mcp-server"],
+      "command": ["bash", ".opencode/bin/plane-mcp.sh"],
       "env": {
-        "PLANE_API_KEY": "plane_api_effd3850b3db482d9e12a91645283b94",
         "PLANE_WORKSPACE_SLUG": "gaia",
         "PLANE_API_HOST_URL": "https://plane.z2t.dev"
       },
