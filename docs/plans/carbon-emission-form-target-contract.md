@@ -1,6 +1,6 @@
 # Formulário Carbono Emissão — reescrita na especificação alvo
 
-**Status:** Em execução — Fase 0 concluída, Fase 1 é a próxima
+**Status:** ✅ Concluído — Fases 0 a 6 entregues, aguardando commit
 **Criado:** 2026-08-14
 **Atualizado:** 2026-08-14
 **Repositório:** `gaia-web` (frontend apenas — `gaia-api` **não** é tocado)
@@ -13,27 +13,37 @@
 | Fase | Status | Entrega |
 |------|--------|---------|
 | 0 — Infra do contrato alvo | ✅ **Concluída** | `types/lca-api-contract.ts` criado |
-| 1 — Restyle (ModuleShell + stepper) | ⬜ **Próxima** | Autocontida, sem dependência de contrato |
-| 2 — Etapa 1: Cultura & Produto | ⬜ Pendente | FE-29 |
-| 3 — Etapa 2: Solo unificado | ⬜ Pendente | FE-30 |
-| 4 — Etapa 3: Correção de solo + insumos | ⬜ Pendente | FE-31 |
-| 5 — Etapas 4 e 5 | ⬜ Pendente | FE-32, FE-33 |
-| 6 — i18n + gates | ⬜ Pendente | Fecha a entrega |
+| 1 — Restyle (ModuleShell + stepper) | ✅ **Concluída** | Componentes genéricos em `src/components/module/` |
+| 2 — Etapa 1: Cultura & Produto | ✅ **Concluída** | FE-29 |
+| 3 — Etapa 2: Solo unificado | ✅ **Concluída** | FE-30 |
+| 4 — Etapa 3: Correção de solo + insumos | ✅ **Concluída** | FE-31 |
+| 5 — Etapas 4 e 5 | ✅ **Concluída** | FE-32, FE-33 (menos o fator de transporte) |
+| 6 — i18n + gates | ✅ **Concluída** | pt/en 168 chaves em paridade, 3 gates verdes |
 
 ### O que já está no disco
 
-**Nada foi commitado.** O trabalho está na working tree, branch `main`.
+Fase 0 está commitada (`5ffbc44`). **Fases 1–6 estão na working tree, não commitadas**,
+na branch `feat/carbon-emission-form-target-contract`.
 
-- `gaia-web/src/features/carbon-emission/module/types/lca-api-contract.ts` — **novo**,
-  os 5 payloads-alvo. Reaproveita os enums do SDK que continuam válidos (`ClimaEnum`,
+- `gaia-web/src/features/carbon-emission/module/types/lca-api-contract.ts` — os 5
+  payloads-alvo. Reaproveita os enums do SDK que continuam válidos (`ClimaEnum`,
   `LandUseTypeEnum`, `SoilMoistureEnum`, `SoilDrainageEnum`, `UnidadeEnum`,
   `ResidueManagementTypeEnum`, `LcaProjectSoilCreateSoilTextureEnum`) e define localmente
   só o que não existe: `LcaFertilizerQuantityUnit` e `LcaDefensiveQuantityUnit`.
   `cultura` virou `string` para aceitar a lista ampla do catálogo.
-- `docs/plans/README.md` e este arquivo.
+  Agora **tem consumidor**: os 5 builders retornam `Target*` e cada `use-lca-step-*.ts`
+  faz o cast na borda da mutation.
+- **Novos**: `src/components/module/{module-shell,module-stepper}.tsx`,
+  `carbon-emission/module/components/section-header.tsx`,
+  `carbon-emission/module/lib/{product-catalog,land-use-change}.ts`.
+- **Deletado**: `carbon-emission/module/components/lca-module-tabs.tsx`.
 
-⚠️ **O arquivo de contrato ainda não tem consumidor.** Os casts nos `use-lca-step-*.ts`
-entram junto com cada builder, nas Fases 2–5 — não na Fase 0.
+### Decisões do usuário tomadas durante a execução (2026-08-14)
+
+| # | Decisão | Efeito |
+|---|---------|--------|
+| D9 | Fator de transporte fica **totalmente fora do frontend** | FE-33 "fator 0,1470 refletido no fluxo" **não** implementado, de propósito. Reforça D8 e a pendência da seção 10 |
+| D10 | Evidência **opcional** em todos os blocos | Contraria o "anexo obrigatório" da FE-31; alinha com o `evidencia_file: string \| null` do contrato e não trava a navegação em dev |
 
 ### Baseline de verificação — leia antes de rodar os gates
 
@@ -47,12 +57,22 @@ relação com este trabalho. Medido com `git stash`: 353 arquivos sem o arquivo 
 warnings; 354 arquivos com ele → 86 warnings. **Não persiga esses warnings.** O critério
 é não aumentar o número.
 
+### Resultado dos gates (medido em 2026-08-14, pós-entrega)
+
+| Comando | Resultado |
+|---------|-----------|
+| `bunx tsc --noEmit` | exit 0 |
+| `bun lint` | 86 warnings + 1 info — **igual ao baseline**, zero novo |
+| `bun run build` | `✓ Compiled successfully in 4.6s` |
+| i18n | pt/en com 168 chaves, mesma ordem, zero chave faltando, **zero órfã nova** |
+
 ### Como retomar
 
-1. Ler as seções 1 a 4 deste documento (premissa, estado do backend, decisões, contrato).
-2. Rodar `.opencode/bin/codegraph-global-sync.sh` (convenção #1 do projeto).
-3. Começar pela **Fase 1** (seção 5) — ela é autocontida e não depende de contrato.
-4. Rotear via `senior-nextjs`, que faz o fan-out (seção 6).
+O trabalho está pronto para revisão e commit. Se for continuar:
+
+1. `git add -A && git commit` na branch `feat/carbon-emission-form-target-contract`.
+2. Remover a dívida da seção 9 conforme as cards BE forem entregues.
+3. Resolver as pendências da seção 10 com o time.
 
 ---
 
