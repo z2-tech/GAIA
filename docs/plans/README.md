@@ -20,3 +20,4 @@ que o git log sozinho não carrega. Marque o `Status` como `Concluído` em vez d
 | Plano | Status | Assunto |
 |-------|--------|---------|
 | [carbon-emission-form-target-contract.md](./carbon-emission-form-target-contract.md) | Em execução | Refatoração do formulário de Carbono Emissão (FE-29..FE-33) + restyle |
+| [plots-module-scoping.md](./plots-module-scoping.md) | Aprovado | Talhões como unidade central dos módulos (estrutura) |
