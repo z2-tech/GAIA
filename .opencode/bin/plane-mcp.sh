@@ -8,13 +8,13 @@
 # Usage:
 #   ./.opencode/bin/plane-mcp.sh
 # =============================================================================
-set -euo pipefail
+set -eo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ORCHESTRATOR_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-# Load machine-local credentials.
-ENV_FILE="${ORCHESTRATOR_ROOT}/.env"
+# Load machine-local MCP credentials (same pattern as postgres-mcp-readonly.sh).
+ENV_FILE="${ORCHESTRATOR_ROOT}/.env.mcp.local"
 if [ -f "$ENV_FILE" ]; then
   set -a
   source "$ENV_FILE"
@@ -22,7 +22,7 @@ if [ -f "$ENV_FILE" ]; then
 fi
 
 if [ -z "${PLANE_API_KEY:-}" ]; then
-  echo "Error: PLANE_API_KEY must be set in .env" >&2
+  echo "Error: PLANE_API_KEY must be set in .env.mcp.local" >&2
   exit 1
 fi
 

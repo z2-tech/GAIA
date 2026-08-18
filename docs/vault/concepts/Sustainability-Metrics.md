@@ -88,6 +88,35 @@ GAIA's sustainability assessment framework currently tracks seven modules.
   `dry_matter_fraction`; o Web só precisa expor a unidade correta por cultura (t MS/ha
   vs t produto fresco/ha), sem mudança de contrato.
 
+## LCA — catálogo de culturas (emissão direta)
+
+- `cultura` do LCA aceita os códigos do catálogo RothC (27 códigos), rota única de
+  referência para o select. `IPCC_PARAMS` em `lca/calculos/direta.py` é a fonte de
+  validação (sem dependência cross-app de banco).
+- Parâmetros `RAG`, `DRY`, `NAG`, `Cf`, `RS`, `NBG`, `FracRenew` por cultura. Fonte:
+  planilha `Em_Aplicacao_direta` + IPCC 2019 Refinement Vol 4 Ch 11 Tab 11.1a; conflitos
+  resolvidos planilha-first.
+- Culturas anuais (`supported=true`) computam FCR normalmente. Perenes/frutíferas/forrageiras
+  (COFFEE, PASTURE, PALMA, MANGO, EUCALYPTUS, AVOCADO, CITRUS, COCOA) têm `supported=false`
+  com parâmetros zerados — FCR=0 explícito, não erro.
+- Código fora da tabela é **erro explícito** (400), nunca zero silencioso.
+
+## LCA — estoque de carbono (mudança de uso do solo)
+
+- Bloco único "Mudança de uso do solo": `manejo_atual` + N entradas `manejo_anterior` +
+  `anos_desde_mudanca` (selects, sem carbono digitado). `csolo`/`cbm` são resolvidos
+  server-side pela tabela de referência `LcaCarbonStock` (clima × uso da terra → tC/ha).
+- Fonte da tabela (decisão 16/08): planilha Município (`docs/references/domain/LCA_Annual_Crops_Tool.xlsx`),
+  fatores de estoque de carbono no solo Novaes et al. 2017 + fitofisionomias MCTI 2020
+  para biomassa; `NATURAL_VEGETATION.cbm` é a média dos buckets fitofisionômicos.
+  Unidades tC/ha, valores validados célula a célula.
+- Janela de 20 anos ancorada no ano da colheita (regra IPCC): mudanças com
+  `anos_desde_mudanca > 20` ficam fora da janela e contribuem com zero na saída
+  amortizada. Amortização linear por posição (`indice × 0.005 − 0.0025`); `FATOR_TOTAL = 0.5`
+  hardcoded conforme planilha (D41 = SUM × 0.5) — pendente validação com PM.
+- Saída biogênica de manejo (delta de `csolo` × 44/12 × área) é computada sobre toda a
+  cadeia de pares, sem teto — alimenta FSOM na emissão direta.
+
 ## EIQ — Environmental Impact Quotient
 
 Ferramenta de suporte à decisão desenvolvida pelo NY State Integrated Pest Management Program. Avalia o impacto ambiental de pesticidas considerando:
