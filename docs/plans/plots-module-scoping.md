@@ -1,6 +1,6 @@
 # Talhões (plots) como unidade central dos módulos
 
-**Status:** ✅ Aprovado — em andamento (fases A–C e E concluídas; faltam D e F)
+**Status:** ✅ Aprovado — em andamento (fases A–E concluídas; falta F e destravar o build do LCA)
 **Criado:** 2026-08-18
 **Atualizado:** 2026-08-18
 **Repositório:** `gaia-web` (frontend apenas — `gaia-api` **não** é tocado nesta entrega)
@@ -15,18 +15,18 @@
 | A — Persistir talhões no create da fazenda | ✅ Concluída | `plots` no body do create |
 | B — Reestruturar tela da fazenda | ✅ Concluída | Dados gerais + listagem de talhões (menu removido) |
 | C — Tela do talhão (espelho da fazenda) | ✅ Concluída | Menu de módulos + mapa preview + páginas de módulo |
-| D — Criar/editar/excluir talhão depois | ⬜ Não iniciada | `PlotDrawer` sobre o KML atualizado |
+| D — Criar/editar/excluir talhão depois | ✅ Concluída | `PlotDrawer` (create/edit) + `PlotDeleteDialog` (excluir) |
 | E — Módulos do talhão (placeholder) | ✅ Concluída | Listagens herdadas da fazenda (reuso sem filtro) |
 | F — Completude por talhão no dashboard | ⬜ Não iniciada | Cards por talhão |
-| G — i18n + gates | 🟡 Parcial | Chaves A/B adicionadas; `bun run build` bloqueado (seção 9) |
+| G — i18n + gates | 🟡 Parcial | Chaves A/B/D adicionadas; `bun run build` bloqueado (seção 9) |
 
 ### Como retomar
 
-Fases A, B, C e E concluídas. Retomar de D (criar/editar/excluir talhão depois) e F
-(completude por talhão no dashboard). Antes de fechar G, destravar o build do LCA (seção
-9). Cada fase é autocontida e verificável (`bun lint` / `bun run build`).
+Fases A–E concluídas. Retomar de F (completude por talhão no dashboard). Antes de fechar
+G, destravar o build do LCA (seção 9). Cada fase é autocontida e verificável
+(`bun lint` / `bun run build`).
 
-### Desvios vs. plano (fases A–C)
+### Desvios vs. plano (fases A–E)
 
 - **Menu**: D1 confirmado. Em vez de manter um item "Dados gerais", o `FarmMenu` foi
   totalmente removido do `FarmLayout` (só o conteúdo). `farm-menu.tsx` / `menu.ts`
@@ -43,6 +43,18 @@ Fases A, B, C e E concluídas. Retomar de D (criar/editar/excluir talhão depois
 - **Service layer**: além dos hooks planejados, criados `useGetPlot` e
   `useInvalidatePlots`; `useGetPlotCompleteness` tipado via `select` (o SDK devolve
   `unknown`).
+- **Mapa compartilhado**: `MapView`/`MapViewClient`, `PlotsProvider`, `TalhoesLayer`,
+  `use-plots-map` e `plots-context` subiram de `features/project/...` para
+  `components/map/` (reuso no `PlotDrawer`). `KmlLayer` ganhou `style`/`pointStyle`
+  parametrizáveis; `FarmKmlMapClient` agora sobrepõe os talhões (`FarmPlotsLayer`, com
+  hover/click → rota do talhão) e o KML desenha só a fronteira não-talhão.
+- **Fase D concluída**: `PlotDrawer` (modos `create` e `edit`) desenha sobre o KML da
+  fazenda (mesmo `fetch(kml_url)` do `farm-kml-map`), com edição de geometria via geoman
+  (`editOnly`) e salvamento por `useCreatePlot`/`useUpdatePlot`; exclusão via
+  `PlotDeleteDialog` (`AlertDialog`) com retorno à fazenda. Botões editar/excluir na
+  página do talhão (`PlotDetails`), como planejado.
+- **Fazenda sem KML**: o `PlotDrawer` centraliza em `latitude`/`longitude` da fazenda
+  (`initialCenter`) quando não há `kml_url` — mapa vazio para desenho livre.
 
 ---
 
@@ -244,7 +256,7 @@ Sem `sustainability-specialist` (mudança de UX/estrutura, sem fórmula de domí
 - [x] Create da fazenda persiste os talhões desenhados (`plots` no payload)
 - [x] Tela da fazenda mostra dados gerais + listagem de talhões, sem módulos no menu
 - [x] Tela do talhão (espelho da fazenda) com dados gerais + Emissão/Remoção/Bio (menu + mapa preview + páginas placeholder)
-- [ ] "Novo talhão" desenha sobre o KML atualizado e salva; editar/excluir funcionam
+- [x] "Novo talhão" desenha sobre o KML atualizado e salva; editar/excluir funcionam
 - [ ] Dashboard da fazenda mostra completude por talhão
 - [x] `.opencode/bin/codegraph-global-sync.sh` rodado ao final
 
@@ -263,21 +275,22 @@ Sem `sustainability-specialist` (mudança de UX/estrutura, sem fórmula de domí
   regenerado (não commitado) contra um schema mais novo do `gaia-api/develop`, trazendo
   mudanças de LCA (`montante_colhido_kg` → `montante_colhido_t`, reestruturação de
   `mudanca_uso_solo`, `quantidade`/`unidade_quantidade` em fertilizantes/defensivos). O
-  frontend de `carbon-emission` ainda usa os campos antigos → **7 erros de typecheck
+  frontend de `carbon-emission` ainda usa os campos antigos → **erros de typecheck
   pré-existentes**, fora do escopo A/B. Precisa de task para migrar o front do LCA às
   novas types (ou reverter a regen do SDK).
-- **Editar/excluir + mapa preview do talhão**: os botões editar/excluir saíram da
-  listagem e voltam na fase D (dentro da página do talhão). O mapa preview do `geometry`
-  (fase C) ainda não foi feito.
 - **Backend (cards já criadas, Backlog)**: BE-41 (LCA), BE-42 (RothC), BE-43
   (Regenerativo), BE-44 (Biodiversidade) — `plot_id` como filtro + `plot_id` no item de
   listagem. Depois do merge: **regenerar o SDK** e wirar o filtro.
-- **Resolução de `kml_url`**: `kml_url` é **S3 key**, não URL pública. O `PlotDrawer`
-  precisa resolver a key para uma URL de download (presigned ou padrão existente de
-  `uploads`). Confirmar com `senior-nextjs` o mecanismo atual.
-- **Fazenda sem KML**: o usuário não é obrigado a desenhar KML no create. Se a fazenda
-  não tem `kml_url`, o "Novo talhão" desenha sobre mapa vazio (centralizado em
-  `latitude`/`longitude` da fazenda) — confirmar comportamento desejado.
 - **Clima automático (BE-40)**: o soil step pode omitir `clima` (backend resolve do
   município). Não faz parte desta entrega de estrutura; registrar quando o form de LCA
   for migrado para dentro do talhão.
+
+### Resolvidas nesta entrega
+
+- **Editar/excluir + mapa preview do talhão**: `PlotDrawer` (edit) + `PlotDeleteDialog`
+  na página do talhão (fase D); o mapa preview do `geometry` já existia desde a fase C
+  (`plot-geometry-map`).
+- **Resolução de `kml_url`**: o `PlotDrawer` usa o mesmo `fetch(kml_url)` direto que o
+  `farm-kml-map.client.tsx` já usava; sem resolução presigned nesta entrega.
+- **Fazenda sem KML**: o `PlotDrawer` desenha sobre mapa vazio centralizado em
+  `latitude`/`longitude` da fazenda (`initialCenter`).
