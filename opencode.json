@@ -18,10 +18,6 @@
     "plane": {
       "type": "local",
       "command": ["bash", ".opencode/bin/plane-mcp.sh"],
-      "env": {
-        "PLANE_WORKSPACE_SLUG": "gaia",
-        "PLANE_API_HOST_URL": "https://plane.z2t.dev"
-      },
       "enabled": true
     }
   },
