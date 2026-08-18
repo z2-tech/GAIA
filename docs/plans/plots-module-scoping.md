@@ -1,6 +1,6 @@
 # Talhões (plots) como unidade central dos módulos
 
-**Status:** ✅ Aprovado — em andamento (fases A–E concluídas; falta F e destravar o build do LCA)
+**Status:** ✅ Concluído (fases A–G; F removida por decisão de produto; build do LCA pendente — seção 9)
 **Criado:** 2026-08-18
 **Atualizado:** 2026-08-18
 **Repositório:** `gaia-web` (frontend apenas — `gaia-api` **não** é tocado nesta entrega)
@@ -17,16 +17,17 @@
 | C — Tela do talhão (espelho da fazenda) | ✅ Concluída | Menu de módulos + mapa preview + páginas de módulo |
 | D — Criar/editar/excluir talhão depois | ✅ Concluída | `PlotDrawer` (create/edit) + `PlotDeleteDialog` (excluir) |
 | E — Módulos do talhão (placeholder) | ✅ Concluída | Listagens herdadas da fazenda (reuso sem filtro) |
-| F — Completude por talhão no dashboard | ⬜ Não iniciada | Cards por talhão |
-| G — i18n + gates | 🟡 Parcial | Chaves A/B/D adicionadas; `bun run build` bloqueado (seção 9) |
+| F — Completude por talhão no dashboard | ➖ Removida | Rota `/dashboard` removida; a home da fazenda já lista talhões com completude |
+| G — i18n + gates | ✅ Concluída | Chave órfã `farm.dashboard` removida; paridade pt/en; `bun lint` verde |
 
 ### Como retomar
 
-Fases A–E concluídas. Retomar de F (completude por talhão no dashboard). Antes de fechar
-G, destravar o build do LCA (seção 9). Cada fase é autocontida e verificável
-(`bun lint` / `bun run build`).
+Fases A–G concluídas. A fase F foi removida por decisão de produto (manter só a home da
+fazenda, que já lista talhões com completude). Resta apenas destravar o build do LCA
+(seção 9): migração do front de `carbon-emission` ao novo schema do SDK, uma task
+separada desta entrega.
 
-### Desvios vs. plano (fases A–E)
+### Desvios vs. plano (fases A–G)
 
 - **Menu**: D1 confirmado. Em vez de manter um item "Dados gerais", o `FarmMenu` foi
   totalmente removido do `FarmLayout` (só o conteúdo). `farm-menu.tsx` / `menu.ts`
@@ -55,6 +56,11 @@ G, destravar o build do LCA (seção 9). Cada fase é autocontida e verificável
   página do talhão (`PlotDetails`), como planejado.
 - **Fazenda sem KML**: o `PlotDrawer` centraliza em `latitude`/`longitude` da fazenda
   (`initialCenter`) quando não há `kml_url` — mapa vazio para desenho livre.
+- **Fase F removida**: o dashboard da fazenda foi descartado (decisão de produto "sem nada
+  por agora"); a rota órfã `/dashboard` foi excluída e a chave `farm.dashboard` removida de
+  pt/en. A home da fazenda já lista os talhões com completude (`PlotList`).
+- **Fase G**: sem chaves novas — A/B/D já cobriram o léxico. Restou remover a chave órfã
+  `farm.dashboard` e validar a paridade pt/en.
 
 ---
 
@@ -252,12 +258,12 @@ Sem `sustainability-specialist` (mudança de UX/estrutura, sem fórmula de domí
 
 - [x] `bun lint` verde
 - [ ] `bun run build` verde (bloqueado por erros pré-existentes do LCA — seção 9)
-- [x] `i18n-key-validator` sem chave órfã (chaves A/B, paridade pt/en ok)
+- [x] `i18n-key-validator` sem chave órfã (paridade pt/en ok, `farm.dashboard` removida)
 - [x] Create da fazenda persiste os talhões desenhados (`plots` no payload)
 - [x] Tela da fazenda mostra dados gerais + listagem de talhões, sem módulos no menu
 - [x] Tela do talhão (espelho da fazenda) com dados gerais + Emissão/Remoção/Bio (menu + mapa preview + páginas placeholder)
 - [x] "Novo talhão" desenha sobre o KML atualizado e salva; editar/excluir funcionam
-- [ ] Dashboard da fazenda mostra completude por talhão
+- [x] Fase F cancelada por decisão de produto — rota `/dashboard` removida
 - [x] `.opencode/bin/codegraph-global-sync.sh` rodado ao final
 
 ---
