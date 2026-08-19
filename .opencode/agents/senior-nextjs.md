@@ -1,6 +1,7 @@
 ---
 description: Next.js + React frontend orchestrator for gaia-web. Analyzes tasks, identifies affected frontend layers, and dispatches to sub-agents (form, table, api-layer, design, i18n) in parallel. Translates OpenAPI contracts into shadcn/ui interfaces.
 mode: subagent
+model: opencode-go/deepseek-v4-pro
 permission:
   edit: allow
   bash: allow

@@ -25,6 +25,20 @@
 - OpenAPI and the generated TypeScript SDK own the executable cross-stack contract.
 - Code and tests in each child repository own implemented behavior.
 
+## Model Policy
+
+| Layer | Model |
+|---|---|
+| Primary (build/plan) | `opencode-go/deepseek-v4-pro` |
+| Subagent dispatch (leaf agents + built-ins) | `opencode/deepseek-v4-flash-free` |
+| Orchestrators (`senior-backend`, `senior-nextjs`) | `opencode-go/deepseek-v4-pro` |
+| Fallback | `opencode/big-pickle` |
+
+Models live in each agent's frontmatter (`.opencode/agents/*.md`) and, for
+built-ins (`general`, `explore`, `scout`), in `opencode.json` under `agent`.
+If flash-free is unavailable or keeps failing, switch the agent's `model:` to
+the fallback — never send dispatch work to the paid model by default.
+
 ## Routing
 
 ```

@@ -4,6 +4,17 @@
   "model": "opencode-go/deepseek-v4-pro",
   "shell": "/bin/zsh",
   "instructions": ["AGENTS.md"],
+  "agent": {
+    "general": {
+      "model": "opencode/deepseek-v4-flash-free"
+    },
+    "explore": {
+      "model": "opencode/deepseek-v4-flash-free"
+    },
+    "scout": {
+      "model": "opencode/deepseek-v4-flash-free"
+    }
+  },
   "mcp": {
     "codegraph": {
       "type": "local",

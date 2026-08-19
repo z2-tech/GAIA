@@ -1,6 +1,7 @@
 ---
 description: Architectural review and code-quality scoring (SOLID, DDD, security, resilience, testing). Use when auditing a repo or detecting architectural decay.
 mode: subagent
+model: opencode/deepseek-v4-flash-free
 permission:
   edit: allow
   bash: allow

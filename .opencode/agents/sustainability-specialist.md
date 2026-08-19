@@ -1,6 +1,7 @@
 ---
 description: Domain authority for GAIA's sustainability metrics: LCA, RothC carbon modeling, regenerative agriculture, CFP. Use for formula questions, methodology validation, and sustainability science.
 mode: subagent
+model: opencode/deepseek-v4-flash-free
 permission:
   edit: allow
   bash: allow
