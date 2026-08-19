@@ -1,6 +1,7 @@
 ---
 description: Django selectors, read-only queries, computed derivatives. Use when editing selectors.py or discussing query patterns.
 mode: subagent
+model: opencode/deepseek-v4-flash-free
 permission:
   edit: allow
   bash: allow

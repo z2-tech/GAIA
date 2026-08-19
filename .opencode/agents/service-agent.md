@@ -1,6 +1,7 @@
 ---
 description: Django service layer, business logic, atomic transactions, LCA/RothC calculations. Use when editing services.py or discussing business logic.
 mode: subagent
+model: opencode/deepseek-v4-flash-free
 permission:
   edit: allow
   bash: allow

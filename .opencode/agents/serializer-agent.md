@@ -1,6 +1,7 @@
 ---
 description: DRF serializers, drf-spectacular schema, validation. Use when editing serializers or discussing API contracts.
 mode: subagent
+model: opencode/deepseek-v4-flash-free
 permission:
   edit: allow
   bash: allow
