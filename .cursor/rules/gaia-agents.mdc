@@ -1,49 +1,15 @@
 ---
-description: GAIA Sustainability Metrics Platform — agent routing, knowledge sources, critical conventions
+description: GAIA Sustainability Metrics Platform — the full standard lives in AGENTS.md (auto-read by Cursor)
 alwaysApply: true
 ---
 
 # GAIA
 
-Sustainability metrics platform. Three repos: `gaia-api` (Django), `gaia-web` (Next.js), `GAIA` (orchestration).
+The full GAIA standard is in `AGENTS.md` (auto-read by Cursor). This rule is a
+thin pointer and intentionally does not duplicate it.
 
-## Agent Routing
-
-All agents in `.opencode/agents/` (single source of truth).
-
-### Orchestrators (top-level)
-
-| Agent | Role |
-|-------|------|
-| `senior-backend` | Backend orchestrator — delegates to sub-agents in parallel |
-| `sustainability-specialist` | Domain authority — LCA, RothC, regenerative metrics |
-| `senior-nextjs` | Next.js frontend — shadcn/ui, TanStack Query |
-| `cross-stack` | API↔Next.js contracts (OpenAPI → @hey-api/openapi-ts) |
-| `software-architecture` | Architecture audit, code quality scoring |
-
-### Backend sub-agents (dispatched by senior-backend)
-
-| Sub-Agent | Layer | When |
-|-----------|-------|------|
-| `model-agent` | Models | Schema, soft-delete |
-| `service-agent` | Services | Business logic, LCA/RothC |
-| `selector-agent` | Selectors | Read-only queries |
-| `serializer-agent` | Serializers | Schema fields, validation, OpenAPI |
-| `migration-agent` | Migrations | Safe migrations, seeds |
-| `test-agent` | Tests | Tests per app |
-| `lint-agent` | Lint | pre-commit, ruff |
-
-## Knowledge
-
-- Vault: `docs/vault/00-INDEX.md`
-- References: `docs/references/README.md`
-- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx)
-
-## Critical Rules
-
-1. CodeGraph first — `codegraph_context` before grep/glob
-2. Contract-first — OpenAPI schema before frontend
-3. PT (UX/domain), EN (code)
-4. NEVER commit without authorization
-5. Views never query, services never return QuerySets
-6. After API/Web source changes, run `.opencode/bin/codegraph-global-sync.sh` before the final response; the agent owns reindexing, not the developer
+- Agents: `.opencode/agents/` — single source of truth.
+- Skills: `.agents/skills/` — single source.
+- Commands: `.opencode/commands/`.
+- Domain glossary: `CONTEXT.md`; tracker: `docs/agents/issue-tracker.md`.
+- Critical: never commit without explicit authorization.

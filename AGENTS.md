@@ -1,5 +1,10 @@
 # GAIA Agent Graph
 
+> This file is the single, harness-agnostic standard. opencode, Claude Code,
+> Cursor and Copilot all auto-read it. Per-harness files (`.claude/CLAUDE.md`,
+> `.cursor/rules/gaia-agents.mdc`, `.github/copilot-instructions.md`) are thin
+> pointers here and must not duplicate these rules.
+
 ## Ecosystem
 
 | Repository | Technology | Responsibility |
@@ -11,8 +16,12 @@
 ## Authority
 
 - `.opencode/agents/` is the single source of agent behavior and invocation.
+- `.agents/skills/` is the single source of skills (all harnesses point here).
+- `.opencode/commands/` is the single source of slash commands.
+- `CONTEXT.md` owns the domain glossary (read by skills; GAIA has no `docs/adr/`).
 - `docs/vault/` owns GAIA domain knowledge and system decisions.
 - `docs/tasks/` owns scope and acceptance criteria.
+- `docs/agents/issue-tracker.md` owns the tracker config (Plane).
 - OpenAPI and the generated TypeScript SDK own the executable cross-stack contract.
 - Code and tests in each child repository own implemented behavior.
 
@@ -84,10 +93,54 @@ Repository knowledge?
 (files live flat in .opencode/agents/; grouping above is logical, by domain)
 
 .claude/agents/                   17 wrappers to .opencode/agents/
-.cursor/rules/gaia-agents.mdc     Cursor project routing
-.github/copilot-instructions.md   Copilot project routing
-.agents/skills/                   Project skills
+.cursor/rules/gaia-agents.mdc     Cursor pointer → this file
+.github/copilot-instructions.md   Copilot pointer → this file
+.agents/skills/                   44 skills (single source)
+.claude/skills/                   symlinks → .agents/skills/
+.opencode/commands/               13 slash commands (single source)
 ```
+
+## Development Lifecycle
+
+8 slash commands map the development lifecycle. Each activates the right skills.
+
+| What you're doing | Command | Key principle |
+|---|---|---|
+| Define what to build | `/spec` | Spec before code |
+| Plan how to build | `/plan` | Small, atomic tasks |
+| Build incrementally | `/build` | One slice at a time |
+| Prove it works | `/test` | Tests are proof |
+| Review before merge | `/review` | Improve code health |
+| Audit web performance | `/webperf` | Measure before optimizing |
+| Simplify the code | `/code-simplify` | Clarity over cleverness |
+| Ship to production | `/ship` | Faster is safer |
+
+Support commands: `/feature-plan`, `/feature-implement`, `/feature-validate`
+(docs/tasks SDD workflow), `/codegraph-sync`, `/vault-search`.
+
+`/gaia-feature-dev` (or `plane-develop-task` / `plane-fix-task`) is the umbrella
+entry point: it chains spec → plan → approval → build → test → review → ship,
+delegating each phase to its command/skill and routing implementation through the
+orchestrators. Once the plan is approved, `/build` runs each task test-driven and
+commits individually, pausing on failures.
+
+## Skills
+
+Skills live in `.agents/skills/` (single source). opencode reads this directory
+natively; Claude Code reads it via `.claude/skills/` symlinks; Cursor and Copilot
+follow the routing in this file. Every lifecycle skill reads `CONTEXT.md` for
+domain vocabulary and `docs/agents/issue-tracker.md` for the tracker.
+
+- **Define**: `to-spec`, `grilling`, `grill-me`, `wayfinder`, `domain-modeling`
+- **Plan**: `to-tickets`, `tdd` (seams)
+- **Build**: `implement`, `tdd`, `prototype`, `new-feature`
+- **Review**: `code-review`, `triage`, `i18n-key-validator`
+- **Simplify**: `improve-codebase-architecture`, `codebase-design`
+- **Debug**: `diagnosing-bugs`
+- **Ship**: `handoff`, `claude-handoff`
+- **GAIA workflow/tracker**: `gaia-feature-dev`, `plane-task`, `plane-doc`,
+  `plane-doc-to-tasks`, `plane-develop-task`, `plane-fix-task`
+- **GAIA domain**: `codegraph`, `xlsx`, `ui-ux-pro-max`, `business-product-strategist`
 
 ## Principles
 

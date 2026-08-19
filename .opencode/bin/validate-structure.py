@@ -149,7 +149,7 @@ def file_hash(path: Path) -> str:
 def check_duplicates(files: list[Path], issues: dict[str, list[str]]) -> None:
     by_hash: dict[str, list[str]] = defaultdict(list)
     for path in files:
-        if path.is_file():
+        if path.is_file() and not path.is_symlink():
             by_hash[file_hash(path)].append(relative(path))
     for paths in sorted(by_hash.values(), key=lambda values: values[0]):
         if len(paths) > 1:

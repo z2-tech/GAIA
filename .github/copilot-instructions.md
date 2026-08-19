@@ -1,27 +1,10 @@
-# GAIA — Sustainability Metrics Platform
+# GAIA
 
-Three repos: `gaia-api` (Django), `gaia-web` (Next.js), `GAIA` (orchestration).
+The full GAIA standard is in `AGENTS.md` (auto-read by Copilot). This file is a
+thin pointer and intentionally does not duplicate it.
 
-## Agents
-
-All agents in `.opencode/agents/`. See `AGENTS.md` for routing.
-
-## Knowledge
-
-- Vault: `docs/vault/00-INDEX.md`
-- References: `docs/references/README.md`
-- Skills: `.agents/skills/` (codegraph, ui-ux-pro-max, business-product-strategist, xlsx)
-
-## Critical Conventions
-
-1. CodeGraph first — `codegraph_context` before grep/glob
-2. Contract-first — OpenAPI schema before frontend (auto-gen via @hey-api/openapi-ts)
-3. PT (UX/domain), EN (code)
-4. NEVER commit without authorization
-5. After API/Web source changes, run `.opencode/bin/codegraph-global-sync.sh` before the final response; the agent owns reindexing, not the developer
-
-## Test Commands
-
-**gaia-api:** `python test_runner.py --settings=test_settings --keepdb`
-**gaia-web:** `bun lint` · `bun run build`
-**Lint:** `pre-commit run --all-files`
+- Agents: `.opencode/agents/` — single source of truth.
+- Skills: `.agents/skills/` — single source.
+- Commands: `.opencode/commands/`.
+- Domain glossary: `CONTEXT.md`; tracker: `docs/agents/issue-tracker.md`.
+- Critical: never commit without explicit authorization.

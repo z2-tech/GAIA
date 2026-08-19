@@ -1,6 +1,7 @@
 ---
 description: Search GAIA vault notes and report matching domain or system knowledge.
 argument-hint: "[term]"
+model: opencode-go/deepseek-v4-flash
 ---
 
 Search vault notes by term.
