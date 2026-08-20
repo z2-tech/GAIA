@@ -5,16 +5,16 @@
 
 ## Problema 1 — `periodo_inicio` / `periodo_fim` sem tipo
 
-- `RouthcAssessmentDetailSerializer` (`routhc/serializers.py:343-344`) declara os dois
+- `RothcAssessmentDetailSerializer` (`rothc/serializers.py:343-344`) declara os dois
   como `serializers.DictField()` cru.
 - O SDK gerado vira `{[key: string]: unknown}`, e o frontend não consegue consumir de
   forma tipada — `resolveYearPeriod()` espera `PeriodoBound`.
-- `RouthcCalculationDetailV2Serializer` (`routhc/serializers.py:241-242`) já faz certo,
+- `RothcCalculationDetailV2Serializer` (`rothc/serializers.py:241-242`) já faz certo,
   com `PeriodoBoundSerializer(allow_null=True)`. É só aplicar o mesmo.
 
 ## Problema 2 — fallback silencioso projeto = BAU
 
-Em `_build_assessment_detail` (`routhc/services.py`):
+Em `_build_assessment_detail` (`rothc/services.py`):
 
 ```python
 if bau_summary["total_oc_mensal"] and not project_summary["total_oc_mensal"]:
@@ -44,6 +44,6 @@ está no backend, onde é mais difícil de detectar.
 
 ## Entregue
 
-- `RouthcAssessmentDetailSerializer` e `RouthcAssessmentPeriodDetailSerializer` usam `PeriodoBoundSerializer`
+- `RothcAssessmentDetailSerializer` e `RothcAssessmentPeriodDetailSerializer` usam `PeriodoBoundSerializer`
 - Fallback `projeto=BAU` removido; `_validate_assessment_integrity` retorna 409 em cenário incompleto
 - Testes em `TestAssessmentAccess` e `TestAssessmentPeriod` cobrem 404/409

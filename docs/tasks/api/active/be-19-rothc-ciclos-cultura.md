@@ -22,9 +22,9 @@ Frontend envia, por cenário:
 
 Backend não tem esses campos:
 
-- `RouthcScenarioDataSerializer` (`routhc/serializers.py:255`) não declara `perennial`
+- `RothcScenarioDataSerializer` (`rothc/serializers.py:255`) não declara `perennial`
   nem `annual`. Só guarda `crop_type` como string.
-- `DadoMensalSerializer` (`routhc/serializers.py:34-42`) só aceita `produtividade` +
+- `DadoMensalSerializer` (`rothc/serializers.py:34-42`) só aceita `produtividade` +
   `cultura` **por linha mensal**.
 - O grid mensal do mock nunca preenche produtividade/cultura — `monthly-grid-step.tsx`
   escreve apenas `dpm_rpm`, `cobertura_solo` e `entrada_biomassa_kg_ha`.
@@ -54,7 +54,7 @@ Consequência: no modo `productivity_crop`, **toda** linha mensal falha em
 
 ## Aceite
 
-- [x] `POST /api/v2/routhc/assessments/` aceita cenário perene e cenário anual **sem**
+- [x] `POST /api/v2/rothc/assessments/` aceita cenário perene e cenário anual **sem**
       produtividade/cultura nas linhas mensais.
 - [x] Testes: perene; anual com 1 ciclo; anual com 3 ciclos no mesmo ano; ciclo cruzando o
       ano civil; ciclos sobrepostos; dois términos no mesmo mês; pousio; ciclo fora da
@@ -65,7 +65,7 @@ Consequência: no modo `productivity_crop`, **toda** linha mensal falha em
 ## Entregue
 
 - `AssessmentScenarioSerializer` com `PerennialConfigSerializer` e `AnnualCycleSerializer`
-- `_build_perennial_monthly` / `_build_annual_monthly` em `routhc/services.py`
+- `_build_perennial_monthly` / `_build_annual_monthly` em `rothc/services.py`
 - `_validate_assessment_input` cobre ciclos, janela, duplicidade
 - Testes em `test_assessment.py`: `TestPerennial`, `TestAnnual`
 
@@ -74,5 +74,5 @@ Consequência: no modo `productivity_crop`, **toda** linha mensal falha em
 `cropEnumValues` do frontend (`roth-c-module-mock.ts:20-31`) tem `"SOIL"`; o enum
 `Cultura` do backend tem `"SOYBEAN"`. Os outros 9 valores batem. `SOIL` é typo do
 frontend para soja — se passasse pelo ChoiceField, `INDICE_COLHEITA["SOIL"]` levanta
-`KeyError` (`routhc/calculos/entrada_c.py:32`). **Não adicionar SOIL no backend**; abrir
+`KeyError` (`rothc/calculos/entrada_c.py:32`). **Não adicionar SOIL no backend**; abrir
 correção no gaia-web.

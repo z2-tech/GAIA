@@ -34,7 +34,7 @@ morto e o Web consumia lista hardcoded via i18n (incluía `SOIL`, inexistente no
   (MS 0.10), MANGO 0.15 (MS 0.17), EUCALYPTUS 0.65, AVOCADO 0.15 (MS 0.25), CITRUS 0.20
   (MS 0.13), COCOA 0.10.
 - Conversão de matéria seca aplicada nos 3 caminhos (perene, anual, legado `calcular`).
-- `GET /api/v2/routhc/crops/` — catálogo com tipo e fração MS (schema drf-spectacular).
+- `GET /api/v2/rothc/crops/` — catálogo com tipo e fração MS (schema drf-spectacular).
 - Enum `Cultura` sincronizado (27 códigos + traduções pt/en).
 - Testes: 27 culturas com tipo/fração, conversão MS no perene, endpoint de catálogo,
   residuais recalculados com os HIs novos.
@@ -55,5 +55,5 @@ morto e o Web consumia lista hardcoded via i18n (incluía `SOIL`, inexistente no
 
 ## Pendente para o Web (ver `docs/tasks/web/active/fe-29-rothc-dropdown-culturas-tipo-unidade.md`, GAIAPROJEC-57)
 
-- Dropdown de cultura agrupado por tipo consumindo `GET /api/v2/routhc/crops/`.
+- Dropdown de cultura agrupado por tipo consumindo `GET /api/v2/rothc/crops/`.
 - Unidade de produtividade por cultura (t MS/ha vs t produto fresco/ha).

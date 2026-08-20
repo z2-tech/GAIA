@@ -74,7 +74,7 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 - `dry_matter_fraction` das frutíferas (manga 0.17, abacate 0.25, citros 0.13, palma 0.10)
   são propostas técnicas para produto fresco (~80–90% água); produtividade informada é
   massa fresca colhida.
-- Endpoint de catálogo: `GET /api/v2/routhc/crops/` — fonte de verdade para o dropdown do
+- Endpoint de catálogo: `GET /api/v2/rothc/crops/` — fonte de verdade para o dropdown do
   Web (substitui a lista hardcoded de i18n, que incluía `SOIL`, inexistente no backend).
 
 ## RothC — decisões de produto registradas

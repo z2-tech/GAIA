@@ -7,7 +7,7 @@
 ## Contexto
 
 O backend agora classifica as 27 culturas RothC em `annual`/`perennial` e expõe o
-catálogo em `GET /api/v2/routhc/crops/`:
+catálogo em `GET /api/v2/rothc/crops/`:
 
 ```json
 { "code": "MANGO", "name_pt": "Manga", "name_en": "Mango",
@@ -20,7 +20,7 @@ produtividade.
 
 ## Escopo
 
-1. Camada de serviço em `src/services/` consumindo `GET /api/v2/routhc/crops/`
+1. Camada de serviço em `src/services/` consumindo `GET /api/v2/rothc/crops/`
    (TanStack Query, cache curto — catálogo estático por deploy). Regenerar o SDK
    (`bunx @hey-api/openapi-ts`) antes.
 2. Dropdown de cultura (`crop-step.tsx` do `carbon-removal/module-mock`) com opções

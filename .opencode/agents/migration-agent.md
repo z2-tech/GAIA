@@ -17,4 +17,4 @@ Creates safe, reversible Django migrations for gaia-api.
 2. Idempotent seeds: check existence before insert. Reference tables (LCA fertilizers, fuels, seeds) must be seeded.
 3. Split destructive + additive into separate migrations.
 
-Key files: `lca/migrations/`, `routhc/migrations/`, `farms/migrations/`
+Key files: `lca/migrations/`, `rothc/migrations/`, `farms/migrations/`

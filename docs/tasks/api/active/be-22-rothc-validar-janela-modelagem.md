@@ -8,12 +8,12 @@
 Os quatro campos da janela de modelagem são validados entre si e depois ignorados.
 
 - `start_month_modeling`, `start_year_modeling`, `end_month_modeling`,
-  `end_year_modeling` passam por `RouthcAssessmentCreateSerializer.validate`
-  (`routhc/serializers.py:310-317`) — que só checa fim > início.
-- São repassados para `RouthcServiceV2.create_assessment` (`routhc/services.py:571-574`)
+  `end_year_modeling` passam por `RothcAssessmentCreateSerializer.validate`
+  (`rothc/serializers.py:310-317`) — que só checa fim > início.
+- São repassados para `RothcServiceV2.create_assessment` (`rothc/services.py:571-574`)
   e **nunca usados no corpo do método**.
 - O período efetivo do cálculo sai de `dados_mensais` (`all_periods`,
-  `routhc/services.py:605-609`).
+  `rothc/services.py:605-609`).
 
 Nada garante que as linhas mensais cobrem a janela declarada. Um cliente pode declarar
 2020-01 → 2025-12 e enviar 3 meses de dados: a API aceita e devolve um resultado que não
@@ -44,6 +44,6 @@ real de dado errado em produção.
 
 ## Entregue
 
-- `_validate_assessment_input` em `routhc/services.py` cobre todos os casos
+- `_validate_assessment_input` em `rothc/services.py` cobre todos os casos
 - Testes em `TestAssessmentInputValidation`: missing/extra month, duplicate, out of order,
   cross-window cycle, perennial year mismatch, compost outside window

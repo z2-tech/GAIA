@@ -11,7 +11,7 @@ do cenário.
 
 ## Problema
 
-- `RothcMonthlyResult` (`routhc/models.py:51-100`) não tem campo `cultura`.
+- `RothcMonthlyResult` (`rothc/models.py:51-100`) não tem campo `cultura`.
 - `_compute_scenario_summary` faz
   `culturas = sorted(set(r["plant_type"] for r in results if r.get("plant_type")))`
   (`routhc/services.py:754`).

@@ -11,12 +11,12 @@ O peso dado na UX sugere que o dado influencia o resultado.
 
 ## Problema
 
-- `RothcCompostEntry` é persistido (`routhc/services.py:675-693`) mas não entra na
+- `RothcCompostEntry` é persistido (`rothc/services.py:675-693`) mas não entra na
   simulação.
-- `_run_monthly_simulation` recebe apenas `dados_mensais` (`routhc/services.py:626-647`).
+- `_run_monthly_simulation` recebe apenas `dados_mensais` (`rothc/services.py:626-647`).
   Composto não chega lá.
 - O composto vira exclusivamente `taxa_adubacao_organica = compost_total / modeled_years`
-  em `_compute_scenario_summary` (`routhc/services.py:743-746`) — um número de relatório.
+  em `_compute_scenario_summary` (`rothc/services.py:743-746`) — um número de relatório.
 
 Consequência: a adubação orgânica não altera o estoque de carbono do solo. Num assessment
 com BAU sem composto e Projeto com composto, o delta de carbono ignora a principal
