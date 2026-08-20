@@ -31,7 +31,9 @@ before creating**. Every rule below has a component or class already in the code
    text — use `text-foreground`/`text-muted-foreground`/`text-destructive`.
 4. **Buttons**: default size is `lg` — **don't set `size` unless different**.
    `default`=primary/submit, `outline`=secondary, `destructive`=irreversible,
-   `link`=cancel/back in dialogs, `ghost`=nav icons. Loading via `loading` prop.
+   `link`=cancel/back in dialogs, `ghost`=**icon-only buttons only** (never with a
+   text label — a text button with no background reads as empty; use `outline`).
+   Loading via `loading` prop.
 5. **Badges**: status → `BadgeProjetoStatus`; progress → `BadgePorcentagem` (auto
    color). Never hardcode a status-badge color outside the `Badge*` components.
 6. **Semantic colors** (table): success=green, warning=yellow, info=blue, error=red;

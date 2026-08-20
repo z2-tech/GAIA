@@ -31,7 +31,9 @@ abaixo ja tem componente ou classe no codebase.
    `text-foreground`/`text-muted-foreground`/`text-destructive`.
 4. **Botoes**: size default = `lg` — **nao setar `size` salvo se diferente**.
    `default`=primario/submit, `outline`=secundario, `destructive`=irreversivel,
-   `link`=cancelar/voltar em dialog, `ghost`=icone de nav. Loading via prop `loading`.
+   `link`=cancelar/voltar em dialog, `ghost`=**apenas botao icon-only** (nunca com
+   label de texto — botao de texto sem fundo fica vazio; usar `outline`).
+   Loading via prop `loading`.
 5. **Badges**: status → `BadgeProjetoStatus`; progresso → `BadgePorcentagem` (cor auto).
    Nunca hardcode cor de status-badge fora dos componentes `Badge*`.
 6. **Cores semanticas**: success=green, warning=yellow, info=blue, error=red;
