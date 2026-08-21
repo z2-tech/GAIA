@@ -2,7 +2,7 @@
 
 > **Prioridade:** Média (Backlog) | **Assignee:** @fernandocampana | **Status:** Pendente
 
-> ⚠️ **Executar em sessão FUTURA.** Nada existe ainda em `gaia-api` para esta feature. Antes de codar, resolver as decisões PO (D1–D4) listadas no final. Este documento é auto-suficiente — não depende de contexto de sessões anteriores.
+> **Rebrief obrigatório (21/08/2026):** os [áudios de produto](../../../references/meetings/21-08-26-comparacao-permissoes-pousio/21-08-26-audios-whatsapp-transcricao-e-encaminhamentos.md) mudam a unidade de comparação para execuções concluídas do mesmo módulo, inclusive múltiplas execuções do mesmo talhão. O contrato de fazendas/projetos agregados, radar e veredito abaixo é uma proposta anterior e **não deve ser implementado** antes do rebrief de SHARED-04 e da revisão deste card.
 
 ## Escopo
 

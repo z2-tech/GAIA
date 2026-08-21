@@ -4,17 +4,6 @@
   "model": "opencode-go/deepseek-v4-pro",
   "shell": "/bin/zsh",
   "instructions": ["AGENTS.md"],
-  "agent": {
-    "general": {
-      "model": "opencode/deepseek-v4-flash-free"
-    },
-    "explore": {
-      "model": "opencode/deepseek-v4-flash-free"
-    },
-    "scout": {
-      "model": "opencode/deepseek-v4-flash-free"
-    }
-  },
   "mcp": {
     "codegraph": {
       "type": "local",
@@ -30,6 +19,33 @@
       "type": "local",
       "command": ["bash", ".opencode/bin/plane-mcp.sh"],
       "enabled": true
+    }
+  },
+  "command": {
+    "vault-search": {
+      "description": "Search GAIA knowledge vault by term",
+      "model": "opencode-go/deepseek-v4-flash",
+      "template": "{file:.opencode/commands/vault-search.md}"
+    },
+    "codegraph-sync": {
+      "description": "Sync all GAIA CodeGraph indexes and publish the root snapshot",
+      "model": "opencode-go/deepseek-v4-flash",
+      "template": "{file:.opencode/commands/codegraph-sync.md}"
+    },
+    "feature-plan": {
+      "description": "Create structured task list from feature request",
+      "model": "opencode-go/deepseek-v4-pro",
+      "template": "{file:.opencode/commands/feature-plan.md}"
+    },
+    "feature-implement": {
+      "description": "Implement tasks from a feature plan",
+      "model": "opencode-go/deepseek-v4-pro",
+      "template": "{file:.opencode/commands/feature-implement.md}"
+    },
+    "feature-validate": {
+      "description": "Validate implementation — tests + schema",
+      "model": "opencode-go/deepseek-v4-pro",
+      "template": "{file:.opencode/commands/feature-validate.md}"
     }
   }
 }

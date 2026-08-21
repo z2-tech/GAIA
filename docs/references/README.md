@@ -30,3 +30,8 @@ Documentação técnica e specs de domínio.
 - Código/testes: comportamento implementado, não validação metodológica independente.
 
 Para referências atualizadas, prefira o vault: `docs/vault/00-INDEX.md`.
+
+### Contexto recente de produto
+
+- [21/08/2026 — áudios sobre comparação, permissões e pousio](meetings/21-08-26-comparacao-permissoes-pousio/21-08-26-audios-whatsapp-transcricao-e-encaminhamentos.md)
+- [14/08/2026 — Carbono Emissão e próximas etapas](meetings/14-08-26-carbono-emissao-+-proximas-etapas/14-08-26-carbono-missao-resumo.md)

@@ -12,7 +12,7 @@ os módulos de assessment.
 
 - `ProjectService.auto_complete_project()` em `projects/services.py:85`
 - Integrado em **4 módulos**:
-  - RothC: `rothc/services.py:655` (calcular), `:688` (cancel), `:1101` (create_assessment)
+  - RothC: `routhc/services.py:655` (calcular), `:688` (cancel), `:1101` (create_assessment)
   - LCA: `lca/services.py:707` (calculate), `:1020` (cancel_culture), `lca/views.py:84-85`
   - Regenerative: `regenerative/services.py:117` (create), `:180` (cancel)
   - Biodiversity: `biodiversity/services.py:109` (cancel)

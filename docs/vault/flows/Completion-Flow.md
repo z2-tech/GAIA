@@ -24,7 +24,7 @@ Module completers (_MODULE_COMPLETERS, farms/services.py)
 
 - A branch histórica propôs `auto_complete_project(project)` com guards de status e farms.
 - Também propôs 8 hooks explícitos, sem signals:
-  1. `RothcService.calcular()` (rothc/services.py)
+  1. `RouthcService.calcular()` (routhc/services.py)
   2. `RegenerativeService.create_assessment()` / `update_assessment()` (regenerative/services.py)
   3. Views LCA: culture, soil, inputs, fuel, calculate (lca/views.py via `_auto_complete_project`)
 - A obrigatoriedade de transporte LCA permanece decisão D0 de BE-18; não assumir etapa opcional nem ausência = zero.

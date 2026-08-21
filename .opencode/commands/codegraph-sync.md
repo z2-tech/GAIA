@@ -1,6 +1,5 @@
 ---
 description: Refresh every GAIA CodeGraph index and publish the versioned cross-repo snapshot.
-model: opencode-go/deepseek-v4-flash
 ---
 
 Execute `./.opencode/bin/codegraph-global-sync.sh` from any directory. It resolves the GAIA root, refreshes both child indexes, updates the live cross-repo shadow, and publishes `.codegraph/codegraph.db`.

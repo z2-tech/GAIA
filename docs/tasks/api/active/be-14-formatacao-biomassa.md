@@ -8,7 +8,7 @@ Verificar e corrigir a formatação do campo `aporte_biomassa` no resultado do R
 
 ## Verificação
 
-- Service já aplica `round(x, 2)` no `aporte_biomassa` (`rothc/services.py`)
+- Service já aplica `round(x, 2)` no `aporte_biomassa` (`routhc/services.py`)
 - Serializer usa `serializers.FloatField()` — sem truncamento ou multiplicação indevida
 - Formatação correta: 2 casas decimais, sem alteração necessária
 

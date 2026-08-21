@@ -63,10 +63,8 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 - Fontes: IPCC 2019 Refinement Vol 4 Ch 11 Tab 11.1A (RAG → HI) para centeio, milheto e
   forrageiras; IPCC 2006/Tab 11.2 e literatura agronômica para os demais. Frutíferas e
   arbóreas sem default internacional (manga, abacate, citros, cacau, eucalipto, palma,
-  tabaco) usam propostas técnicas do sustainability-specialist. Cacau, manga, abacate,
-  citros e palma foram recalibrados em 20/08 (ver seção "RothC: deposição de resíduo e
-  harvest index") para representar resíduo anual real (serapilheira + poda), não fração
-  da biomassa total da árvore.
+  tabaco) usam propostas técnicas do sustainability-specialist — frações de biomassa
+  removida — pendentes de validação metodológica externa.
 - Correções aplicadas na expansão (v3): MAIZE 0.45→0.50, COFFEE 0.50→0.20, SOYBEAN
   0.50→0.45, WHEAT 0.55→0.50, PULSES 0.30→0.40. Resultados históricos não são afetados:
   `entrada_biomassa_kg_ha` é snapshot em `RothcMonthlyResult`; o catálogo só vale para
@@ -74,7 +72,7 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 - `dry_matter_fraction` das frutíferas (manga 0.17, abacate 0.25, citros 0.13, palma 0.10)
   são propostas técnicas para produto fresco (~80–90% água); produtividade informada é
   massa fresca colhida.
-- Endpoint de catálogo: `GET /api/v2/rothc/crops/` — fonte de verdade para o dropdown do
+- Endpoint de catálogo: `GET /api/v2/routhc/crops/` — fonte de verdade para o dropdown do
   Web (substitui a lista hardcoded de i18n, que incluía `SOIL`, inexistente no backend).
 
 ## RothC — decisões de produto registradas
@@ -89,105 +87,6 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 - Unidade de produtividade: diferenciação é sistêmica no backend via
   `dry_matter_fraction`; o Web só precisa expor a unidade correta por cultura (t MS/ha
   vs t produto fresco/ha), sem mudança de contrato.
-
-## RothC: deposição de resíduo e harvest index
-
-Decisão técnica registrada em 20/08 (card BE-59). Escopo: CACAU, MANGO, AVOCADO,
-CITRUS, PALMA. Fórmula vigente: `resíduo = P_MS × (1 − HI) / HI`, com `P_MS =
-produtividade × dry_matter_fraction` e retenção de 100% do resíduo no talhão.
-
-### Decisão 1 — regime de deposição por tipo de cultura (mantido)
-
-- **Anual**: resíduo integral injetado no mês final do ciclo (`fim_mes`). Manter.
-- **Perene**: resíduo anual distribuído uniformemente, `resíduo / 12` por mês. Manter.
-
-Justificativa:
-
-- Cultura anual deposita praticamente toda a biomassa aérea de uma vez na colheita
-  (palhada deixada no campo). O pulso único no mês final é a representação correta no
-  passo mensal do RothC; inverter (espalhar) subestimaria o pico de decomposição pós-
-  colheita e distorceria a dinâmica mensal de DPM/RPM. Ciclos sobrepostos já somam
-  resíduos no mesmo mês.
-- Perene (frutíferas, café, palma, pastagem) tem entrada contínua de resíduo via
-  serapilheira e poda ao longo do ano — especialmente perenes tropicais perenifólios
-  (citros, manga, abacate, cacau). Distribuir 1/12 mensal é a aproximação padrão em
-  modelagem de carbono (FullCAM e similares usam entrada anual uniforme) e evita picos
-  artificiais que acionariam decomposição excessiva de DPM em um único mês.
-- Exceção flagrada para revisão futura: **eucalipto** é perene de ciclo longo cujo
-  resíduo principal (bark, galhos, folhas) é depositado no corte raso, em pulso — o
-  regime `/12` atual não o representa bem; tratar como pico de fim de rotação quando o
-  modelo suportar colheita perene por ano.
-
-### Decisão 2 — fator de resíduo para perenes lenhosas (alterado)
-
-Problema: HI de frutíferas relaciona fruto à biomassa **total** da árvore, mas a
-fórmula trata `(1 − HI)/HI` como resíduo **anual**. O tronco e galhos acumulam por
-décadas e não retornam ao solo todo ano — com isso o resíduo anual ficava
-superestimado (fatores efetivos CACAU 9.0×, MANGO 5.7×, AVOCADO 5.7×, CITRUS 4.0×,
-PALMA 1.0× sobre o produto seco).
-
-Decisão: para os cinco perenes lenhosos do escopo, adotar **fator de resíduo anual**
-`F` (kg resíduo seco por kg de produto seco) calibrado em literatura de serapilheira +
-poda, mantendo a fórmula `resíduo = P_MS × F`. Sem mudança de schema: o fator é
-implementado via HI recalibrado, pois `HI = 1 / (1 + F)` reproduz `(1 − HI)/HI = F`.
-Para anuais, pastagem e demais perenes o HI agronômico original permanece operacional.
-
-Fatores finais (calibração conservadora — piso a meio da faixa de literatura, para não
-superestimar crédito de remoção):
-
-| Cultura | F (resíduo/produto seco) | Justificativa (serapilheira + poda, t MS/ha/ano) |
-|---------|--------------------------|--------------------------------------------------|
-| CACAU | 3.0 | Casca do fruto devolvida ao campo ≈ 1× o DM de amêndoas + serapilheira ~1.5× + poda ~0.5× |
-| MANGO | 2.0 | Serapilheira 3–4 + poda 0.5–1.5 ≈ 4–5 t vs fruto seco 1.7–2.6 t |
-| AVOCADO | 1.8 | Serapilheira 2–3 + poda 1–2 ≈ 3.5–5 t vs fruto seco 2–3 t |
-| CITRUS | 1.3 | Serapilheira 2–3 + poda 1–2 ≈ 3–5 t vs fruto seco 2.6–3.9 t |
-| PALMA | 0.15 | Cladódio é caule retido; só cladódios senescentes/liteira ~0.3–1 t vs cladódio seco 3–10 t |
-
-Efeito: reduz a entrada de carbono simulada para essas culturas (de ~2× a ~6×),
-tornando o sequestro estimado mais conservador e aderente à ciclagem real.
-
-### Decisão 3 — tabela final de HI
-
-Convenção agora dupla e documentada: anuais/pastagem → HI agronômico (IPCC);
-perenes lenhosas do escopo → HI calibrado = `1 / (1 + F)` (parâmetro operacional que
-produz o fator anual desejado; **não** deve ser lido como fração de biomassa total).
-
-| Código | Cultura | HI anterior | HI final | F efetivo | Fonte |
-|--------|---------|-------------|----------|-----------|-------|
-| COCOA | Cacau | 0.10 | **0.25** | 3.0 | Literatura de ciclagem de cacau: casca ≈ amêndoa em MS + serapilheira de plantio maduro |
-| MANGO | Manga | 0.15 | **0.33** | 2.0 | Serapilheira + poda em pomares de manga maduros |
-| AVOCADO | Abacate | 0.15 | **0.36** | 1.8 | Serapilheira + poda em pomares de abacate |
-| CITRUS | Citros | 0.20 | **0.43** | 1.3 | Serapilheira + poda em pomares cítricos maduros |
-| PALMA | Palma forrageira | 0.50 | **0.87** | 0.15 | Cladódio retido como caule; resíduo = cladódios senescentes |
-| PASTURE | Pastagem | 0.77 | 0.77 (inalterado) | 0.30 | Modelo de corte/fenação — prod é MS colhida, restolho 23% |
-| EUCALYPTUS | Eucalipto | 0.65 | 0.65 (inalterado) | 0.54 | Fora do escopo; revisar regime de deposição (pulso de rotação) |
-| COFFEE | Café | 0.20 | 0.20 (inalterado) | 4.0 | Fora do escopo; F 4.0 provavelmente alto — candidato a revisão futura |
-
-Anuais (MAIZE 0.50, SOYBEAN 0.45, WHEAT 0.50, RICE 0.50 etc.) mantêm HI agronômico de
-IPCC 2019 Refinement Vol 4 Ch 11 Tab 11.1A — inalterados pela decisão.
-
-Somente alterou-se o que tinha justificativa forte: os cinco perenes lenhosos cujo HI
-anterior representava fração da biomassa total (semântica incompatível com resíduo
-anual). Valores com modelo de colheita coerente (pastagem, anuais) ficaram intactos.
-
-### Regra de validação — fim ≥ início
-
-Já implementada e preservada: em `_validate_assessment_input` (routhc/services.py),
-todo ciclo anual é rejeitado com `fim deve ser posterior ou igual ao inicio` quando
-`_month_index(fim_ano, fim_mes) < _month_index(inicio_ano, inicio_mes)`, i.e.
-`fim_ano×12 + fim_mes ≥ inicio_ano×12 + inicio_mes` (ciclo de um único mês é válido).
-Coberto por `test_invalid_annual_ranges_and_duplicates_rejected`.
-
-### Fontes
-
-- IPCC 2019 Refinement, Vol 4, Ch 11, Tab 11.1A/11.2 (HI/RAG de anuais e forrageiras).
-- IPCC 2006 GL, Vol 4, Ch 11 (referência histórica de HI).
-- Literatura de ciclagem de nutrientes em pomares tropicais (faixas de serapilheira e
-  poda por cultura: cacau 2–3 t MS/ha/ano sem sombra; manga 3–4; abacate 2–3; citros
-  2–3; liteira de palma forrageira < 1). Faixas citadas são valores típicos de
-  literatura agronômica; a calibração adota o piso–meio por conservadorismo.
-- Regime de deposição perene (entrada anual uniforme no passo mensal): prática padrão
-  em RothC/FullCAM para entradas contínuas de liteira.
 
 ## LCA — catálogo de culturas (emissão direta)
 

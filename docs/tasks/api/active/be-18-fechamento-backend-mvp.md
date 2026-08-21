@@ -181,7 +181,7 @@ validar ciência → features aprovadas → schema final. Zero código Web.
 
 | Área | Entregue |
 |------|----------|
-| RothC | `POST /api/v2/rothc/assessments/` — dual-scenario BAU + Project com modo, composto, delta |
+| RothC | `POST /api/v2/routhc/assessments/` — dual-scenario BAU + Project com modo, composto, delta |
 | Biodiversity | App nova — 43 questões seed, assessments CRUD, dashboard por seção, scoring |
 | LCA | Soft-delete, scoping, progress fix, selector→model (não dict), view helper |
 | AuthX/AuthZ | Serializer sem query de role, schema roda sem DB |

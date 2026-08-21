@@ -15,7 +15,7 @@ validado e descartado em 2026-08-09; `gaia-web/develop` ficou limpo em
 O backend (`gaia-api/develop`) contém as entregas do BE-18 e o hardening
 pós-auditoria (2026-08-11):
 
-- RothC dual-scenario (`POST/GET /api/v2/rothc/assessments/`, `POST .../{id}/cancel/`)
+- RothC dual-scenario (`POST/GET /api/v2/routhc/assessments/`, `POST .../{id}/cancel/`)
 - Biodiversity BAT (`POST/GET /api/v1/biodiversity/assessments/`, `questions/`, `dashboard/`, `cancel/`)
 - LCA multi-step com scoping, soft-delete, progress e cálculo (`/api/v1/lca/culture/`, `soil/`, `inputs/`, `fuel/`, `transport/`, `{id}/calculate/`)
 - AuthX/AuthZ sem queries de role no construtor do serializer
@@ -29,7 +29,6 @@ O frontend atual tem:
 - **Toast-stub** no form BAT (`use-bat-module.ts` descarta `valuesToCreateBody()`)
 - **Serviço LCA** chamando endpoints multi-step (já alinhado com backend)
 - **Serviço RothC** com queries V1 (`useListRothC`, `usePostRothCCalculate`) e V2 single-scenario (`useGetRothC`, `useGetRothCByPeriod`) já wireadas e ativas no dashboard + module + calculation pages
-- **⚠️ Padronização `routhc` → `rothc`** (BE-18 + this session): backend endpoints movidos de `/api/v2/routhc/` para `/api/v2/rothc/`. Próxima regeneração do SDK (`bun run generate-types`) vai renomear todos os operation IDs e types de `Routhc*` → `Rothc*`. Hand-written import em `src/features/carbon-removal/dashboard/lib/carbon-removal-list-item-model.ts:1,11` precisa ser atualizada manualmente após regen.
 - **Serviço Biodiversity** inexistente — `src/services/biodiversity/` não foi criado
 - **Cancel inexistente** em qualquer módulo — frontend nunca cancela assessments
 
@@ -37,14 +36,14 @@ O frontend atual tem:
 
 | Endpoint | Operation ID | Web consumer |
 |----------|-------------|-------------|
-| `POST /api/v1/rothc/calcular/` | `calcular_rothc` | `usePostRothCCalculate` (`use-roth-c-module.ts`) |
-| `GET /api/v1/rothc/projects/{id}/farms/{id}/calculations/` | `list_rothc_calculations` | `useListRothC` (`carbon-removal-listing.tsx`) |
-| `GET /api/v2/rothc/calculations/{id}/` | `v2_get_rothc_calculation_detail` | `useGetRothC` (`use-calculation-page.ts`, `use-mock-calculation-page.ts`) |
-| `GET /api/v2/rothc/calculations/{id}/period/` | `v2_get_rothc_calculation_detail_by_period` | `useGetRothCByPeriod` (`use-calculation-page.ts`, `use-mock-calculation-page.ts`) |
-| `POST /api/v2/rothc/assessments/` | `v2_create_rothc_assessment` | Novo — wiring pendente |
-| `GET /api/v2/rothc/assessments/{id}/` | `v2_get_rothc_assessment_detail` | Novo — wiring pendente |
-| `GET /api/v2/rothc/assessments/{id}/period/` | `v2_get_rothc_assessment_detail_by_period` | Novo — wiring pendente |
-| `POST /api/v2/rothc/assessments/{id}/cancel/` | `v2_cancel_rothc_assessment` | Novo — wiring pendente |
+| `POST /api/v1/routhc/calcular/` | `calcular_routhc` | `usePostRothCCalculate` (`use-roth-c-module.ts`) |
+| `GET /api/v1/routhc/projects/{id}/farms/{id}/calculations/` | `list_routhc_calculations` | `useListRothC` (`carbon-removal-listing.tsx`) |
+| `GET /api/v2/routhc/calculations/{id}/` | `v2_get_routhc_calculation_detail` | `useGetRothC` (`use-calculation-page.ts`, `use-mock-calculation-page.ts`) |
+| `GET /api/v2/routhc/calculations/{id}/period/` | `v2_get_routhc_calculation_detail_by_period` | `useGetRothCByPeriod` (`use-calculation-page.ts`, `use-mock-calculation-page.ts`) |
+| `POST /api/v2/routhc/assessments/` | `v2_create_routhc_assessment` | Novo — wiring pendente |
+| `GET /api/v2/routhc/assessments/{id}/` | `v2_get_routhc_assessment_detail` | Novo — wiring pendente |
+| `GET /api/v2/routhc/assessments/{id}/period/` | `v2_get_routhc_assessment_detail_by_period` | Novo — wiring pendente |
+| `POST /api/v2/routhc/assessments/{id}/cancel/` | `v2_cancel_routhc_assessment` | Novo — wiring pendente |
 
 ## Execução
 
@@ -61,7 +60,7 @@ O frontend atual tem:
 
 #### Mapeamento campo-a-campo: mock → backend
 
-**Request (`POST /api/v2/rothc/assessments/` — `AssessmentCreateSerializer`):**
+**Request (`POST /api/v2/routhc/assessments/` — `AssessmentCreateSerializer`):**
 
 | Mock (`RothCModuleMockFormValues`) | Backend | Tipo |
 |------|---------|------|
@@ -105,7 +104,7 @@ O frontend atual tem:
 **⚠️ Serializar somente o branch ativo** (`perennial` ou `annual`), nunca ambos.
 Remover campos desconhecidos/inativos antes do POST — backend rejeita campos extras com 400.
 
-**Response (`GET /api/v2/rothc/assessments/{id}/` — `RothcAssessmentDetail`):**
+**Response (`GET /api/v2/routhc/assessments/{id}/` — `RouthcAssessmentDetail`):**
 
 | Campo | Tipo | Uso no mock |
 |-------|------|-------------|
@@ -184,7 +183,7 @@ Mesmo shape, mas `periodo_inicio`/`periodo_fim` refletem a fatia solicitada e de
 ### Fase 6 — Cancel cross-module
 
 - [ ] Botão/action de cancel em cada módulo (RothC, LCA, BAT, Regenerative).
-  - RothC assessment: `useCancelRothcAssessment` → `v2CancelRothcAssessmentMutation()` (operation `v2_cancel_rothc_assessment`)
+  - RothC assessment: `useCancelRothcAssessment` → `v2CancelRouthcAssessmentMutation()` (operation `v2_cancel_routhc_assessment`)
   - V1 calculation cancel já wireado via `cancelRouthcCalculationMutation` — manter.
 - [ ] Após qualquer mutate de cancel, invalidar cache de `useProjectDetail` — project status pode mudar de `COMPLETED → IN_PROGRESS` dinamicamente.
 - [ ] Confirmar que listas excluem itens cancelados automaticamente (já é server-side).
@@ -212,14 +211,14 @@ Mesmo shape, mas `periodo_inicio`/`periodo_fim` refletem a fatia solicitada e de
 
 ## Notas
 
-- A URL base da API (`/api/v1/rothc/`) mantém o nome `rothc` (backend legado).
+- A URL base da API (`/api/v1/routhc/`) mantém o nome `routhc` (backend legado).
   O frontend encapsula em `src/services/roth-c/` com nome de produto `carbon-removal`.
   Esse desacoplamento é intencional e não deve ser "corrigido".
 - `how_many_years_future` e `latitude` não fazem parte de `parametros_projeto` no
   assessment v2. O contrato v1 legado permanece separado.
 - `src/services/roth-c/roth-c.mutation.ts` e `roth-c.query.ts` já existem com hooks
   V1/V2 ativos — as fases 2 e 6 adicionam novos hooks, não recriam os arquivos.
-- O cancel do assessment BAU×Projeto usa `POST /api/v2/rothc/assessments/{id}/cancel/`
+- O cancel do assessment BAU×Projeto usa `POST /api/v2/routhc/assessments/{id}/cancel/`
   com operation `v2_cancel_routhc_assessment`, não `cancel_routhc_calculation`.
 - **Serialização do mock → backend**: ver tabela campo-a-campo na Fase 2. Atenção especial
   a `SOIL→SOYBEAN`, `quantidade_kg_ha→carbono_organico_kg_c_ha`, remover `latitude`/`how_many_years_future`,
@@ -232,7 +231,7 @@ Wirear quando o produto definir UX correspondente.
 | Task | O que faz | Endpoint |
 |------|-----------|----------|
 | BE-01 (LCA clone) | Clonar cultura LCA com sub-recursos | `POST .../{id}/clone/` |
-| BE-02 (RothC clone) | Clonar cálculo RothC | `POST /api/v1/rothc/calculations/{id}/clone/` |
+| BE-02 (RothC clone) | Clonar cálculo RothC | `POST /api/v1/routhc/calculations/{id}/clone/` |
 | BE-04 (Regenerative clone) | Clonar assessment regenerativo | `POST .../{id}/clone/` |
 | BE-06 (Módulos por talhão) | Assessments com FK de Plot | Model + migration pendente |
 | BE-12 (Comparação) | Radar chart cross-farm/project | `POST /api/v1/compare/` |

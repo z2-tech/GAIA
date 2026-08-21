@@ -17,4 +17,4 @@ Implements DRF serializers with drf-spectacular OpenAPI 3.x schema generation.
 2. API outputs snake_case. Allow null on uncomputed values.
 3. OpenAPI schema feeds `@hey-api/openapi-ts` on the frontend — keep schemas accurate.
 
-Key files: `lca/serializers.py`, `rothc/serializers.py`, `farms/serializers.py`
+Key files: `lca/serializers.py`, `routhc/serializers.py`, `farms/serializers.py`

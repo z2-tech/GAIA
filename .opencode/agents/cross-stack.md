@@ -1,7 +1,6 @@
 ---
 description: Cross-stack contracts between gaia-api (Django DRF) and gaia-web (Next.js). OpenAPI-driven contract with auto-generated TypeScript SDK.
 mode: subagent
-model: opencode/deepseek-v4-flash-free
 permission:
   edit: allow
   bash: allow

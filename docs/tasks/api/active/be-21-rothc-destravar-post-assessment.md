@@ -10,7 +10,7 @@ devolve 400 e impede qualquer submissão.
 
 ## Problema 1 — `material` do composto
 
-- `RothcCompostEntrySerializer` (`rothc/serializers.py:248-252`) exige
+- `RouthcCompostEntrySerializer` (`routhc/serializers.py:248-252`) exige
   `material = serializers.CharField(max_length=255)`, sem `required=False`.
 - O step de composto do mock (`compost-step.tsx`) coleta apenas `ano`, `mes` e
   `quantidade_kg_ha`. Não existe campo material na UI.
@@ -19,11 +19,11 @@ devolve 400 e impede qualquer submissão.
 
 ## Problema 2 — `how_many_years_future`
 
-- `ParametrosProjetoSerializer` (`rothc/serializers.py:13`) exige
+- `ParametrosProjetoSerializer` (`routhc/serializers.py:13`) exige
   `how_many_years_future = serializers.IntegerField(min_value=1)`.
-- `RothcServiceV2.create_assessment` nunca lê o campo — usa apenas `latitude`,
+- `RouthcServiceV2.create_assessment` nunca lê o campo — usa apenas `latitude`,
   `soc_tons_ha`, `clay_content_percent` e `depth_soil_layer_cm`
-  (`rothc/services.py:600-603`).
+  (`routhc/services.py:600-603`).
 - O mock não envia o campo. Obrigatório e morto no fluxo v2.
 
 ## Problema 3 — coordenadas divergentes
@@ -43,9 +43,9 @@ devolve 400 e impede qualquer submissão.
 
 ## Aceite
 
-- [x] `POST /api/v2/rothc/assessments/` passa sem `material`, `latitude` e
+- [x] `POST /api/v2/routhc/assessments/` passa sem `material`, `latitude` e
       `how_many_years_future`; campos desconhecidos são rejeitados.
-- [x] `POST /api/v1/rothc/calcular/` intacto — suíte existente verde.
+- [x] `POST /api/v1/routhc/calcular/` intacto — suíte existente verde.
 - [x] Schema regenerado sem warnings.
 
 ## Entregue

@@ -11,7 +11,7 @@ Adicionar campo de aporte de fertilizantes no modelo RothcCalculation.
 - `RothcCalculation.fertilizer_kg_ha`: `FloatField(null=True, blank=True)`
 - Migration `0005_add_fertilizer_field`
 - Campo disponível no modelo para uso futuro — mock atual não consome
-- Incorporação no cálculo mensal (`rothc/calculos/`) fica para quando o produto definir a semântica
+- Incorporação no cálculo mensal (`routhc/calculos/`) fica para quando o produto definir a semântica
 
 ## Checklist
 

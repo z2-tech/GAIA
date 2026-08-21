@@ -7,11 +7,11 @@
 
 A tela de resultado do mock (`src/features/carbon-removal/calculation-mock/`) tem seletor
 de ano. Hoje ela usa duas queries v2 single-scenario:
-`GET /api/v2/rothc/calculations/{id}/` para os bounds e `GET .../period/` para a fatia.
+`GET /api/v2/routhc/calculations/{id}/` para os bounds e `GET .../period/` para a fatia.
 
 ## Problema
 
-- `GET /api/v2/rothc/assessments/{id}/` devolve `bau` e `project` inteiros, sem
+- `GET /api/v2/routhc/assessments/{id}/` devolve `bau` e `project` inteiros, sem
   `available_years` e sem recorte por período.
 - Não existe equivalente dual de `calculations/{id}/period/` (`routhc/urls.py`).
 - Se o frontend migrar para o endpoint de assessment, perde o seletor de ano.
@@ -34,7 +34,7 @@ Manter o seletor completo de mês/ano e criar
 
 ## Entregue
 
-- `GET /api/v2/rothc/assessments/{id}/period/` em `rothc/urls.py` → `get_assessment_detail_by_period`
+- `GET /api/v2/routhc/assessments/{id}/period/` em `routhc/urls.py` → `get_assessment_detail_by_period`
 - `RouthcServiceV2.get_assessment_detail_by_period` com validação de bounds e recálculo de deltas
 - `_compute_scenario_summary` aceita `period` tuple opcional
 - Testes em `TestAssessmentPeriod`: recorte parcial, fora dos bounds, invertido

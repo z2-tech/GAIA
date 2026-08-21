@@ -3,7 +3,7 @@
 > **Prioridade:** Baixa (Backlog) | **Assignee:** @fernandocampana | **Status:** Pendente
 > **API:** [BE-12](../api/active/be-12-comparacao.md) — sessão FUTURA (backend primeiro)
 
-> ⚠️ **Previsão futura.** Este ticket foi revisado após a sessão que documentou o contrato do BE-12 (`docs/tasks/api/active/be-12-comparacao.md`). **Não implementar antes do BE-12.** O contrato abaixo é a fonte de verdade para o SDK (`bunx @hey-api/openapi-ts` após o schema do BE-12 existir).
+> **Rebrief obrigatório (21/08/2026):** os [áudios de produto](../../../references/meetings/21-08-26-comparacao-permissoes-pousio/21-08-26-audios-whatsapp-transcricao-e-encaminhamentos.md) pedem comparação de execuções concluídas do mesmo módulo por fazenda/talhão, e não o contrato agregado de 2–4 fazendas/projetos abaixo. **Não implementar antes de SHARED-04 e da revisão de BE-12.**
 
 ## Escopo
 
