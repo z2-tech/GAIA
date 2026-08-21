@@ -1,7 +1,6 @@
 ---
 description: Prove it works. Run the test-driven loop and the task's gate commands; tests are proof.
 argument-hint: "[task slug or scope]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Prove it works.

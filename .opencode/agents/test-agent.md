@@ -1,7 +1,7 @@
 ---
 description: Django tests, factory-boy, test_runner. Use when writing tests.
 mode: subagent
-model: opencode/deepseek-v4-flash-free
+model: opencode/big-pickle
 permission:
   edit: allow
   bash: allow

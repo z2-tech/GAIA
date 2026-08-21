@@ -1,7 +1,6 @@
 ---
 description: Define what to build. Turn a request into a reviewed spec (problem, solution, user stories, seams) and publish it. Spec before code.
 argument-hint: "[feature request or context]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Define what to build before any code.

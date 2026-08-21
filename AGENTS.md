@@ -89,6 +89,19 @@ Repository knowledge?
 .agents/skills/                   Project skills
 ```
 
+## Model Dispatch
+
+Plan -> build is orchestrated by the model the user picks for the session. Nothing hardcodes it.
+
+| Layer | Model | Rule |
+|---|---|---|
+| Session / plan / orchestrators (`senior-backend`, `senior-nextjs`) | user's pick | No `model:` in frontmatter — subagents inherit the invoking agent's model; commands follow the session model |
+| Worker sub-agents (Django/web layer agents) | `opencode/big-pickle` | Explicit free model in frontmatter |
+| Fallback | `.opencode/plugins/free-dispatch.js` | At startup, any agent or default whose model is absent from `opencode models` is re-pointed to the best free model still listed |
+
+Zen's free tier rotates without notice; the plugin keeps dispatch alive when a free model is retired.
+Update the ranked list in the plugin when the catalog changes.
+
 ## Principles
 
 1. **Minimal scope**: one PR, one feature.

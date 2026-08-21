@@ -1,7 +1,6 @@
 ---
 description: Audit gaia-web performance — measure before optimizing. Data-fetching, bundle, render, and asset metrics.
 argument-hint: "[route or scope]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Measure before you optimize.

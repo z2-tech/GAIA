@@ -1,7 +1,6 @@
 ---
 description: Build incrementally, one slice at a time, test-driven and routed through GAIA orchestrators. Approve the plan once, then it runs autonomously.
 argument-hint: "[task slug or plan]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Build one slice at a time.

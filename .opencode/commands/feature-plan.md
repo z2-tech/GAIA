@@ -1,7 +1,6 @@
 ---
 description: Define structured tasks from a feature request or spec. Creates actionable, dependency-ordered task list in docs/tasks/.
 argument-hint: "[feature description or spec path]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 From the feature request or spec, produce a structured task list following GAIA conventions:

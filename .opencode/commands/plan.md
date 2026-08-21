@@ -1,11 +1,11 @@
 ---
 description: Break the spec into small, atomic, dependency-ordered tasks. One slice at a time.
 argument-hint: "[spec path or URL]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Plan how to build.
 
+0. Model check: run `opencode models`. If the current session model is absent from the list, or a clearly stronger planning model (higher context / reasoning tier) is available from the user's connected providers, say so in one line and suggest switching before planning. Proceed either way — the suggestion is advisory, never blocking.
 1. Load skills:
    - `to-tickets` — vertical slices (tracer bullets), each with blocking edges, sized to a single context window.
    - `wayfinder` — if the work is too big for one session, chart a decision map first.

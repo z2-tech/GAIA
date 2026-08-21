@@ -1,7 +1,6 @@
 ---
 description: Review the diff before merge along two axes — standards and spec — and improve code health.
 argument-hint: "[fixed point: commit/branch/tag, default merge-base]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Review before merge.

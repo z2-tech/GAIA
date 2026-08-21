@@ -1,7 +1,6 @@
 ---
 description: Validate that implementation matches spec. Checks tests, schema coverage, cross-stack contracts.
 argument-hint: "[task slug]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Validate implementation against spec:

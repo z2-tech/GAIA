@@ -1,7 +1,6 @@
 ---
 description: Ship to production — the GAIA release gate: CodeGraph re-sync, full QA, changelog, PR/handoff. Faster is safer (small, frequent).
 argument-hint: "[scope or PR title]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Ship.

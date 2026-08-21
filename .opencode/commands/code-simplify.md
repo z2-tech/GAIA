@@ -1,7 +1,6 @@
 ---
 description: Simplify the code — clarity over cleverness. Surface deep-module opportunities and reduce complexity.
 argument-hint: "[area or module]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Simplify.

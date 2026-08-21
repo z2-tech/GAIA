@@ -1,7 +1,6 @@
 ---
 description: Implement GAIA tasks from docs/tasks using the correct API or Next.js owner and contract-first workflow.
 argument-hint: "[task slug or spec path]"
-model: opencode-go/deepseek-v4-pro
 ---
 
 Implement the feature task following GAIA workflow:
