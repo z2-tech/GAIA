@@ -96,11 +96,12 @@ Plan -> build is orchestrated by the model the user picks for the session. Nothi
 | Layer | Model | Rule |
 |---|---|---|
 | Session / plan / orchestrators (`senior-backend`, `senior-nextjs`) | user's pick | No `model:` in frontmatter — subagents inherit the invoking agent's model; commands follow the session model |
-| Worker sub-agents (Django/web layer agents) | `opencode/big-pickle` | Explicit free model in frontmatter |
-| Fallback | `.opencode/plugins/free-dispatch.js` | At startup, any agent or default whose model is absent from `opencode models` is re-pointed to the best free model still listed |
+| Worker sub-agents | pinned free model (currently `opencode/big-pickle`) | Explicit `model:` in frontmatter; the pinned value is the last-known-good free model, not a permanent choice |
+| Self-heal at `/build` | largest-context free Zen model | Step 2 of `/build` checks every worker pin against `opencode models`; retired pins are rewritten to the free Zen model (zero cost) with the biggest context window before any dispatch |
 
-Zen's free tier rotates without notice; the plugin keeps dispatch alive when a free model is retired.
-Update the ranked list in the plugin when the catalog changes.
+Why not a plugin: opencode merges markdown agents after plugin `config` hooks, so
+plugins cannot re-point them (verified on 1.18.21). The build-time heal keeps the
+frontmatter as single source of truth and leaves a reviewable diff when it fires.
 
 ## Principles
 
