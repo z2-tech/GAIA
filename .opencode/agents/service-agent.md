@@ -1,7 +1,7 @@
 ---
 description: Django service layer, business logic, atomic transactions, LCA/RothC calculations. Use when editing services.py or discussing business logic.
 mode: subagent
-model: opencode/big-pickle
+model: opencode/muse-spark-1.2-contributor-free
 permission:
   edit: allow
   bash: allow

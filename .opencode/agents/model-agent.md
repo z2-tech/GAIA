@@ -1,7 +1,7 @@
 ---
 description: Django model design, schema, fields, soft-delete. Use when editing models.py or discussing database schema.
 mode: subagent
-model: opencode/big-pickle
+model: opencode/muse-spark-1.2-contributor-free
 permission:
   edit: allow
   bash: allow

@@ -1,7 +1,7 @@
 ---
 description: Django migrations, SeparateDatabaseAndState, seed data. Use when editing migrations.
 mode: subagent
-model: opencode/big-pickle
+model: opencode/muse-spark-1.2-contributor-free
 permission:
   edit: allow
   bash: allow
