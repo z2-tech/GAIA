@@ -1,7 +1,6 @@
 ---
 description: Django selectors, read-only queries, computed derivatives. Use when editing selectors.py or discussing query patterns.
 mode: subagent
-model: opencode/muse-spark-1.2-contributor-free
 permission:
   edit: allow
   bash: allow

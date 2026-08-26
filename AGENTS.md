@@ -89,47 +89,54 @@ Repository knowledge?
 .agents/skills/                   Project skills
 ```
 
-## Model Dispatch — Free Dispatcher (dinâmico, obrigatório em build)
+## Model Dispatch — Free Dispatcher (sem hardcode, usuário escolhe)
 
-Plan → build é orquestrado pelo **model que o usuário escolhe na sessão** (opencode → escolho model, planejo). Nada hardcoda model. No `build`, o primary DEVE buscar base de agents + ranking free antes de qualquer `task`.
+> **Nenhum `.opencode/agents/*.md` tem `model:` hardcodado — todos herdam o model que o usuário escolheu livremente no seletor do opencode ao iniciar a sessão (ex: `openai/gpt-5.5`, `opencode/muse-spark-1.2-contributor-free`, `opencode/nemotron-3-ultra-free`). O primary (model escolhido) cuida do plan, discovery dos agents e do dispatch; subagentes herdam esse mesmo model.**
+>
+> **Quando o usuário pedir “com subagentes” ou a task tiver 3+ domínios independentes, o primary DEVE executar este protocolo antes de qualquer `task` call.**
+
+### 1. Descoberta — identificar agents disponíveis (dinâmico)
 
 ```bash
-# 1. Descoberta — identificar agents disponíveis
-cat .opencode/agents/*.md | grep -E "^name:|^description:|^model:"
+cat .opencode/agents/*.md | grep -E "^name:|^description:"
+ls .opencode/agents/   # 17 agents
 # ou dinâmico:
-.opencode/bin/free-dispatcher.sh        # lista agents + ranking free + audit
+.opencode/bin/free-dispatcher.sh        # lista agents + ranking free
 .opencode/bin/free-dispatcher.sh --json # machine-readable
-
-# 2. Ranking free dinâmico — maior ctx, custo zero
-opencode models opencode --verbose  # filtra cost.input==0, ordena por context
 ```
 
 | Layer | Model | Rule |
 |---|---|---|
-| Session / plan / orchestrators (`senior-backend`, `senior-nextjs`) | **user's pick** | Sem `model:` no frontmatter — herda model da sessão |
-| Worker sub-agents | **pinned free dinâmico** (atualmente `opencode/muse-spark-1.2-contributor-free`) | `model:` explícito no frontmatter; valor é o free top do ranking acima (ctx máx, `cost.input==0`, `toolcall==true`). Não é escolha permanente |
-| Self-heal em `build` / `feature-implement` | **largest-context free Zen** | Step 2 do dispatcher: compara pins contra `opencode models`; pins defasados são reescritos para `BEST_FREE` via `.opencode/bin/free-dispatcher.sh --fix` antes de qualquer dispatch — deixa diff revisável |
+| Session / plan / orchestrators (`senior-backend`, `senior-nextjs`) + workers (`model-agent`, `service-agent` etc.) | **user's pick** | Sem `model:` no frontmatter — todos herdam o session model |
 
-**Ranking atual (gerado dinamicamente, `cost.input==0`):**
+> Por que não hardcodar: `task` não expõe `model` por chamada — agents sem `model:` herdam o session model (opencode mergeia agents após plugins, então plugin não re-aponta). A liberdade de escolha do usuário no início é a única fonte de verdade.
+
+### 2. Raciocínio → Divisão → Execução (protocolo build)
+
+1. **Raciocínio:** mapear cada domínio da task para 1 agent (evitar duplicar `model-agent` 3×; 1 call por domínio com prompt disjunto)
+2. **Divisão:** máx 4 subagentes paralelos por rodada; prompt `Research only, do not edit files. In <repo/path>, analyze <scoped topic>… Trace <symbols/files>. Return file:line, callers, plano mínimo. Do not duplicate <other scopes>.` (400–500 chars)
+3. **Execução:** `task` paralelos → consolidar → primary implementa; validar com `validate-structure` + tests focados
+
+### 3. Model livre (informativo, não hardcode)
+
+O usuário já escolheu o model na sessão — se quiser custo zero, basta ter escolhido um free na largada. O ranking abaixo é **informativo** para a escolha inicial.
+
+```bash
+opencode models opencode --verbose  # filtra cost.input==0
+# ou:
+.opencode/bin/free-dispatcher.sh --json | jq .free_ranking
+```
+
+Ranking free atual (`cost.input==0`, gerado dinamicamente):
 
 | # | model | ctx | out | attach | toolcall |
 |---|---|---|---|---|---|
-| 1 | `opencode/muse-spark-1.2-contributor-free` | 1.048.576 | 131.072 | yes | yes | **BEST — default** |
-| 2 | `opencode/nemotron-3-ultra-free` | 1.000.000 | 128.000 | no | yes | fallback |
+| 1 | `opencode/muse-spark-1.2-contributor-free` | 1.048.576 | 131.072 | yes | yes |
+| 2 | `opencode/nemotron-3-ultra-free` | 1.000.000 | 128.000 | no | yes |
 | 3 | `opencode/nemotron-3.5-lightning-free` | 262.144 | 262.144 | no | yes |
 | 4 | `opencode/mimo-v2.5-free` | 200.000 | 32.000 | yes | yes |
 | 5 | `opencode/big-pickle` | 200.000 | 32.000 | no | yes |
 | 6 | `opencode/hy3-free` | 190.000 | 64.000 | no | yes |
-
-> Nota: `task` não expõe `model` por chamada — o model vem do `model:` do arquivo do agent. Trocar free↔pago exige editar `.opencode/agents/<name>.md` (o `--fix` faz isso). Opencode mergeia agents após plugins, então plugin não re-aponta; o heal em build mantém frontmatter como source of truth.
-
-**Protocolo build (copiar):**
-
-1. **Descoberta:** `.opencode/bin/free-dispatcher.sh` → lista agents + `BEST_FREE`
-2. **Raciocínio:** mapear cada domínio da task para 1 agent (evitar duplicar `model-agent` 3×; 1 call por domínio com prompt disjunto)
-3. **Divisão:** máx 4 subagentes paralelos por rodada; prompt `Research only, do not edit files. In <repo/path>, analyze <scoped topic>… Trace <symbols/files>. Return file:line, callers, plano mínimo. Do not duplicate <other scopes>.` (400–500 chars)
-4. **Seleção:** usar `BEST_FREE` acima; fallback `nemotron-3-ultra-free` se `muse-spark` indisponível
-5. **Execução:** `task` paralelos → consolidar → primary implementa; validar com `validate-structure` + tests focados
 
 ## Principles
 

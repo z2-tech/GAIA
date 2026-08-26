@@ -1,7 +1,6 @@
 ---
 description: Django linting, pre-commit, ruff, Black, isort, flake8. Use for code style enforcement.
 mode: subagent
-model: opencode/muse-spark-1.2-contributor-free
 permission:
   edit: allow
   bash: allow
