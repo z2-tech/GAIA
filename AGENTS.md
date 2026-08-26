@@ -100,9 +100,6 @@ Repository knowledge?
 ```bash
 cat .opencode/agents/*.md | grep -E "^name:|^description:"
 ls .opencode/agents/   # 17 agents
-# ou dinâmico:
-.opencode/bin/free-dispatcher.sh        # lista agents + ranking free
-.opencode/bin/free-dispatcher.sh --json # machine-readable
 ```
 
 | Layer | Model | Rule |
@@ -123,8 +120,6 @@ O usuário já escolheu o model na sessão — se quiser custo zero, basta ter e
 
 ```bash
 opencode models opencode --verbose  # filtra cost.input==0
-# ou:
-.opencode/bin/free-dispatcher.sh --json | jq .free_ranking
 ```
 
 Ranking free atual (`cost.input==0`, gerado dinamicamente):
