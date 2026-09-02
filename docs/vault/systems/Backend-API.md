@@ -34,11 +34,19 @@ senior-backend (orchestrator)
 
 Pattern inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai_agents) granular agent decomposition.
 
+## Apps (2026-09)
+
+- `lca` — cálculos, `LcaSoilManagementFactor` (DB SSOT 11 práticas, seed `0039`), `annual_soil` + `net` (fossil+bio−removal, pode ser negativo), endpoint `GET /api/v1/lca/soil-management-practices/`.
+- `comparison` — orquestrador genérico `DISPATCH` (lca/carbono/regenerativo/biodiversidade/cfp) com `compare` + `benchmark` tenant-isolados, cap 20, threshold 5. `lca/comparison` shim rico para contrato LCA legado.
+- Cálculos puros em `lca/calculations/` (styleguide: sem DB); services injetam `LcaSelectors.get_soil_management_factor`.
+
 ## Links
 
 - Repo: `gaia-api/` (branch: develop)
 - OpenAPI schema → frontend codegen: `@hey-api/openapi-ts`
 - Agent architecture: `.agents/README.md`
+- Decisão: [[../decisions/2026-09-01-soil-management-net-and-comparison-dedup|2026-09-01 — manejo/remocao net e comparação dinâmica]]
+- Conceito: [[../concepts/Sustainability-Metrics#lca--manejo-atual-e-remocao-anual-2026-09|LCA manejo/benchmark]]
 
 ## Completeness & auto-status (2026-Q3)
 

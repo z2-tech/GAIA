@@ -117,6 +117,19 @@ GAIA's sustainability assessment framework currently tracks seven modules.
 - Saída biogênica de manejo (delta de `csolo` × 44/12 × área) é computada sobre toda a
   cadeia de pares, sem teto — alimenta FSOM na emissão direta.
 
+## LCA — manejo atual e remoção anual (2026-09)
+
+- **Campo `current_management_practice`** em `LcaProjectSoil` (FK virtual `SoilManagementPractice`, nullable). Dropdown na aba Solo; seed server-owned `LcaSoilManagementFactor` (DB SSOT, `lca/migrations/0039_add_soil_management_practice.py`). 11 práticas (ordenadas `sort_order`): `CONVENTIONAL (−0.81)`, `MINIMUM_TILLAGE (0.55)`, `COVER_CROP (1.17)`, `NO_TILL (1.39)`, `NO_TILL_ROTATION_COVER (2.09)`, `DEGRADED_PASTURE (−0.73)`, `WELL_MANAGED_PASTURE (1.72)`, `ICL (2.20)`, `ILPF (2.05)`, `AGROFORESTRY (2.64)`, `PERENNIAL_CONSORTIUM (1.94)` tCO2e/ha/ano. Tabela consolidada Paulo Rocha compilada via `Fatores de emissão Gaia.pptx` (CORAZZA 1999, TIECHER 2020, POEPLAU & DON 2015, BAYER 2006, OLIVEIRA 2022/2023, CARVALHO 2010, LORENZ & LAL 2014, DE STEFANO & JACOBSON 2018, SHANG 2024). Próxima atualização = `delta_tC/tCO2e` via migration data (não hardcode).
+- **Fórmula anual:** `delta = factor_tCO2e_ha_year × area_ha`; `removal = max(delta,0)`, `emission = max(−delta,0)` (tCO2e/ano). Normalizado `kgCO2e/kg produto = tCO2e×1000 / harvested_kg`. Puro em `lca/calculations/soil_management_annual.py`; service `_build_annual_soil_management` lê DB via `LcaSelectors.get_soil_management_factor` com fallback enum para testes sem seed.
+- **Net líquido:** `Líquido = Emissões − Remoções` (reunião). `total_agro` soma `soil_management_annual` a `total_agricultural` (bio/removal) e computa `net = fossil+bio−removal` por bloco (`total_agricultural`, `luc`, `total`). `total` (alocação) também expõe `net` por produto×critério. Pode ser **negativo** (sequestro líquido). PPT verde "Remoção" abate do total no dashboard. LUC olha 20a histórico (penalização); manejo anual bonifica presente.
+- **API:** `GET /api/v1/lca/soil-management-practices/` lista fatores (DB, ordenado). Serializers `LcaAnnualSoilSerializer`, `LcaTotalAgroTripleSerializer.net`.
+
+## LCA — comparação e benchmark (2026-09)
+
+- **Registry dinâmico por módulo/projeto/fazenda/talhão:** app `comparison` orquestra via `DISPATCH = {lca, carbono, regenerativo, biodiversidade, cfp}` cada com `get_by_ids`, `filter`, `calc_map`, `benchmark_rows` (+ opcional `build_item`). Adicionar nova calculadora = adicionar entrada + builder (N cenários via `assessment_ids` OU `filters {project_ids,farm_ids,plot_ids,crop_codes,harvest_year}`; cap 20). Tenant-isolated via `ProjectSelectors._user_accessible_project_qs` → `ProjectFarm`; cross-user → 403. Módulo-isolado (não mistura lca×carbono). Métrica default LCA `sequestro_anual_total` (per_ha/per_kg/absolute) ou `net_liquid`.
+- **Rotas:** genérica `POST /api/v1/comparison/comparison/` + `GET /api/v1/comparison/comparison/benchmark/` e shim LCA `POST /api/v1/lca/comparison/` + `GET /api/v1/lca/comparison/benchmark/` (thin wrapper, contrato rico flat vs genérico `details`). Benchmark anônimo `avg/median/p25/p75/min/max/count` exige `count≥5` senão `available:false` (LGPD, sem nomes). Futuro: média global anônima sem nomes já coberto pelo threshold.
+- **Filtros simplificados:** `assessment_ids` (explícito) xor `filters` (escopo); `project_ids/farm_ids/plot_ids` resolvem via subquery `ProjectFarm` (evita `FieldError` em `LcaProjectCulture.project_farm_id` int).
+
 ## EIQ — Environmental Impact Quotient
 
 Ferramenta de suporte à decisão desenvolvida pelo NY State Integrated Pest Management Program. Avalia o impacto ambiental de pesticidas considerando:
