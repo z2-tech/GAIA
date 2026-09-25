@@ -13,6 +13,13 @@
       "args": [
         "./.opencode/bin/postgres-mcp-readonly.sh"
       ]
+    },
+    "plane": {
+      "type": "stdio",
+      "command": "bash",
+      "args": [
+        "./.opencode/bin/plane-mcp.sh"
+      ]
     }
   }
 }
