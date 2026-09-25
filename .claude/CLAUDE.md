@@ -37,6 +37,7 @@ All agents in `.opencode/agents/`. Full routing: `AGENTS.md`.
 | `senior-nextjs` | Frontend orchestrator (routes to Next.js sub-agents) |
 | `cross-stack` | API↔Next.js contracts (OpenAPI) |
 | `software-architecture` | Architecture audit |
+| `penpot-designer` | Design system in Penpot: screens, components, tokens (skill `penpot-design`) |
 
 ## Critical Conventions
 
@@ -52,6 +53,7 @@ All agents in `.opencode/agents/`. Full routing: `AGENTS.md`.
 
 - Vault: `docs/vault/00-INDEX.md`
 - Frontend playbook: `docs/agents/web/README.md` (principles, architecture, standards)
+- Design system (Penpot, source of truth for visuals): `docs/agents/design/README.md`
 - References: `docs/references/README.md`
 - Skills: `.agents/skills/`
 - SDD commands: `/feature-plan`, `/feature-implement`, `/feature-validate`

@@ -3,9 +3,9 @@
 **`.opencode/agents/`** is the single source of truth. All harnesses point to it.
 
 ```
-.opencode/agents/              ← 17 agents (single source of truth)
+.opencode/agents/              ← 18 agents (single source of truth)
      ↑ load from
-.claude/agents/                ← 17 wrappers → .opencode/agents/
+.claude/agents/                ← 18 wrappers → .opencode/agents/
 .cursor/rules/                 ← 1 rule → .opencode/agents/
 .github/copilot-instructions.md ← project instructions
 ```
@@ -14,8 +14,8 @@
 
 | Harness | Mechanism | Location |
 |---------|-----------|----------|
-| OpenCode | Agents + commands + MCP | `.opencode/agents/*.md` (17 agents), `.opencode/commands/*.md` (5 commands) |
-| Claude Code | Custom agents + CLAUDE.md | `.claude/agents/*.md` (17 wrappers) → `.opencode/agents/` |
+| OpenCode | Agents + commands + MCP | `.opencode/agents/*.md` (18 agents), `.opencode/commands/*.md` (5 commands) |
+| Claude Code | Custom agents + CLAUDE.md | `.claude/agents/*.md` (18 wrappers) → `.opencode/agents/` |
 | Cursor | Project rules | `.cursor/rules/gaia-agents.mdc` |
 | GitHub Copilot | Instructions | `.github/copilot-instructions.md` |
 
@@ -40,6 +40,7 @@ senior-nextjs             ← Next.js frontend code owner
   └── i18n-key-validator
 cross-stack               ← API↔Next.js contracts (OpenAPI → SDK)
 software-architecture     ← architecture audit, code quality
+penpot-designer           ← design system in Penpot (skill penpot-design)
 ```
 
 ## Skills
@@ -49,6 +50,7 @@ software-architecture     ← architecture audit, code quality
 |-------|---------|
 | codegraph | Semantic code search over indexed graph |
 | ui-ux-pro-max | UI/UX design & implementation guide |
+| penpot-design | Operate the GAIA design system in Penpot (helpers + batch workflow) |
 | business-product-strategist | Product/UX heuristic evaluation |
 | xlsx | Spreadsheet reading (openpyxl) |
 

@@ -50,6 +50,11 @@ Cross-stack contract?
 Architecture review?
   └── .opencode/agents/software-architecture.md
 
+Design in Penpot (screens, components, tokens)?
+  ├── .opencode/agents/penpot-designer.md
+  ├── .agents/skills/penpot-design/ (procedure + helpers.js)
+  └── docs/agents/design/ (reference: tokens, components, screens)
+
 Repository knowledge?
   ├── docs/vault/00-INDEX.md
   ├── docs/references/README.md

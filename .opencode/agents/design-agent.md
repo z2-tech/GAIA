@@ -12,7 +12,9 @@ Owns the visual layer of `gaia-web/`: shadcn/ui (New York) + Tailwind v4 + CSS v
 Dispatched by `senior-nextjs`.
 
 **Canonical docs (read FIRST):** `docs/agents/web/design-system.md` +
-`docs/agents/web/principles.md`. Patterns are extracted from real code — **reuse
+`docs/agents/web/principles.md`. **Target visual:** the Penpot design system
+(`docs/agents/design/`) is the source of truth; when code and Penpot differ, move the
+code toward Penpot. Patterns are extracted from real code — **reuse
 before creating**. Every rule below has a component or class already in the codebase.
 
 ## Critical rules
