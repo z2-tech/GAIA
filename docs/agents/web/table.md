@@ -6,12 +6,12 @@ Módulo de tabela do projeto, sobre TanStack Table. Referência viva: `features/
 
 | Componente | Arquivo | Papel |
 |---|---|---|
-| `DataTableDefault` | `data-table.tsx` | Renderiza cabeçalho, linhas e os estados loading/erro/vazio |
+| `DataTable` | `data-table.tsx` | Renderiza cabeçalho, linhas e os estados loading/erro/vazio |
 | `DataTableToolbar` | `data-table-toolbar.tsx` | Busca, filtros da feature, seletor de colunas e ação principal |
 | `TableState` | `table-state.tsx` | Linha de estado: `empty`, `loading` (skeleton), `error` (+ retry) |
 | `DataTablePagination` | `data-table-pagination.tsx` | Total, linhas por página, página atual e navegação |
 | `ColumnsSelect` | `columns-select.tsx` | Menu "Colunas" com mostrar/esconder e "Redefinir" |
-| `HeaderSort` | `header-components/header-sort.tsx` | Cabeçalho ordenável |
+| `SortHeader` | `sort-header.tsx` | Cabeçalho ordenável |
 
 Não há barrel: importe o arquivo concreto (`@/components/table/data-table`). Não existem mais filtros genéricos (`filters/`), `DataTableFacetedFilter` nem helpers de célula (`ColumnBoolean`, `ColumnLink`, `ColumnPercentage`). Delta em célula usa `BadgeTrend`; filtro específico entra no slot `filters` da toolbar.
 
@@ -27,7 +27,7 @@ A feature faz quatro coisas:
 | Campo | Uso |
 |---|---|
 | `accessorKey` / `accessorFn` | Valor da célula |
-| `header` | `HeaderSort` quando ordenável |
+| `header` | `SortHeader` quando ordenável |
 | `cell` | Formatação com componentes do design system (`Badge`, `BadgeStatus`, `BadgeTrend`) |
 | `meta.label` | Nome no `ColumnsSelect`. Obrigatório em coluna escondível. |
 | `meta.columnStyle` / `headerStyle` / `cellStyle` | Largura e alinhamento. `columnStyle` vale para cabeçalho e célula. |
@@ -35,12 +35,12 @@ A feature faz quatro coisas:
 ```tsx
 {
   accessorKey: "name",
-  header: ({ column }) => <HeaderSort column={column} title={t("name")} />,
+  header: ({ column }) => <SortHeader column={column} title={t("name")} />,
   meta: { label: t("name") },
 }
 ```
 
-`HeaderSort`: props `column`, `title`, `align?: "left" | "center" | "right"`. Ciclo: sem ordenação → asc → desc → sem ordenação.
+`SortHeader`: props `column`, `title`, `align?: "left" | "center" | "right"`. Ciclo: sem ordenação → asc → desc → sem ordenação.
 
 ## Instância
 
@@ -66,7 +66,7 @@ Acrescente `getFilteredRowModel` e `columnFilters` só quando a feature filtra n
   search={{ value, onChange, placeholder: t("searchByName") }}
   action={<CreateItem />}
 />
-<DataTableDefault
+<DataTable
   columns={columns}
   data={rows}
   table={table}
@@ -79,15 +79,15 @@ Acrescente `getFilteredRowModel` e `columnFilters` só quando a feature filtra n
 
 | Componente | Props | Comportamento |
 |---|---|---|
-| `DataTableDefault` | `columns`, `data`, `table?`, `loading?`, `error?`, `onRetry?` | `loading` → 5 linhas skeleton; `error` → mensagem + "Tentar novamente"; sem linhas → "Nenhum resultado encontrado.". Linha h-11, hover `muted`. |
+| `DataTable` | `columns`, `data`, `table?`, `loading?`, `error?`, `onRetry?` | `loading` → 5 linhas skeleton; `error` → mensagem + "Tentar novamente"; sem linhas → "Nenhum resultado encontrado.". Linha h-11, hover `muted`. |
 | `DataTableToolbar` | `table`, `search?`, `filters?`, `action?` | Busca (`SearchInput` h-8, com debounce) e `filters` à esquerda; `ColumnsSelect` e `action` à direita. |
 | `DataTablePagination` | `table`, `serverPagination?` | Sem `serverPagination`, usa o estado do `table`. Tamanhos 10, 20, 25, 30, 40, 50, 100. |
-| `TableState` | `colSpan` + `state` | Para tabela montada à mão com `ui/table`. Dentro do `DataTableDefault` já é automático. |
+| `TableState` | `colSpan` + `state` | Para tabela montada à mão com `ui/table`. Dentro do `DataTable` já é automático. |
 
 ## Checklist
 
-- `meta.label` em coluna escondível e `HeaderSort` em coluna ordenável;
+- `meta.label` em coluna escondível e `SortHeader` em coluna ordenável;
 - colunas estáveis (`useMemo`);
 - `loading`, `error` e `onRetry` sempre ligados à query;
 - textos (busca, erro, colunas) do i18n;
-- wrappers `XTable` finos, delegando ao `DataTableDefault`.
+- wrappers `XTable` finos, delegando ao `DataTable`.

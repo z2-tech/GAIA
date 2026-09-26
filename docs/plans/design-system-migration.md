@@ -184,8 +184,8 @@ Feito em 2026-09-26, com o merge no `develop` (`7d0187c`): docs do front reescri
 
 ## Fora de escopo e pendências
 
-- **Nomes que ainda diferem do Penpot:** `Header` (Penpot: AppHeader). ErrorState e FacetedFilter existem no Penpot, mas não no código: o erro com "Tentar novamente" só existe dentro das tabelas (`TableState`), e o FacetedFilter foi apagado sem uso. Entram na Parte 2 quando uma tela precisar deles.
-- **gaia-api:** mandar o `StatusEnum` na listagem de projetos (G4).
+- **Nomes padronizados em 2026-09-26** (`c24cc0a`): o código segue o nome do Penpot. `Header` virou `AppHeader`, `FormBase` virou `FormField`, `DataTableDefault` virou `DataTable`, `HeaderSort` virou `SortHeader` e `form-text-area.tsx` virou `form-textarea.tsx`. ErrorState e FacetedFilter existem no Penpot, mas não no código: o erro com "Tentar novamente" só existe dentro das tabelas (`TableState`), e o FacetedFilter foi apagado sem uso. Entram na Parte 2 quando uma tela precisar deles.
+- **gaia-api:** mandar o `StatusEnum` na listagem de projetos (G4). Task criada no Plane em 2026-09-26: "[API] Listagem de projetos deve retornar o status como StatusEnum" (projeto Gaia, sequência 147, rótulo Backend).
 
 - **Parte 2 (telas):** layout, composição, estados e scroll de cada tela, por módulo, com plano próprio depois desta parte.
 - **Carbono remoção sem comparação:** a antiga foi removida, e a nova (lote 11 do Penpot) vira feature própria.

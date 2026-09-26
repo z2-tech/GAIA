@@ -18,8 +18,8 @@ never hand-roll a raw `<table>` or a parallel state/pagination system.
 
 1. **Feature only does 4 things**: prepare `rows`, define `ColumnDef<T>[]`, create
    the `useReactTable` instance, wire search/action/pagination. Rendering delegates
-   to `DataTableDefault`.
-2. **Columns**: `accessorKey`/`accessorFn`, `header` via `HeaderSort`, `cell` formatted
+   to `DataTable`.
+2. **Columns**: `accessorKey`/`accessorFn`, `header` via `SortHeader`, `cell` formatted
    with design-system components (`Badge`, `BadgeStatus`, `BadgeTrend`), `meta.label`
    for `ColumnsSelect` on every hideable column, widths via `meta.columnStyle`.
 3. **Controlled state** (`useState`): `sorting` (`SortingState`) and pagination wired
@@ -31,8 +31,8 @@ never hand-roll a raw `<table>` or a parallel state/pagination system.
 6. **Toolbar**: `DataTableToolbar` (`search`, `filters` slot, `action`). A feature
    filter is a feature component passed to `filters`; there is no generic filter kit.
 7. **States**: pass `loading`, `error` (i18n message) and `onRetry` to
-   `DataTableDefault`; it renders `TableState` (skeleton rows, error + retry, empty).
-8. **Render**: `DataTableToolbar` + `DataTableDefault` + `DataTablePagination`
+   `DataTable`; it renders `TableState` (skeleton rows, error + retry, empty).
+8. **Render**: `DataTableToolbar` + `DataTable` + `DataTablePagination`
    (`serverPagination` for API paging). Keep `XTable` wrappers thin.
 9. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
    can't carry — genuinely complex algorithm, deliberate deviation from the pattern
@@ -43,14 +43,14 @@ never hand-roll a raw `<table>` or a parallel state/pagination system.
 
 ## Shared module exports (`@/components/table`)
 
-`DataTableDefault`, `DataTableToolbar`, `TableState`, `DataTablePagination`,
-`ColumnsSelect`, `HeaderSort`. Removed (don't recreate): `filters/*`,
+`DataTable`, `DataTableToolbar`, `TableState`, `DataTablePagination`,
+`ColumnsSelect`, `SortHeader`. Removed (don't recreate): `filters/*`,
 `DataTableFacetedFilter`, `ColumnBoolean`, `ColumnNotApplicable`, `ColumnPercentage`
 (→ `BadgeTrend`), `ColumnLink`.
 
 ## New-table checklist
 
-- `meta.label` on hideable columns · `HeaderSort` on sortable · stable `columns` ·
+- `meta.label` on hideable columns · `SortHeader` on sortable · stable `columns` ·
   `loading`/`error`/`onRetry` wired to the query · i18n for every string · thin
   `XTable` wrappers.
 

@@ -23,7 +23,7 @@ abaixo ja tem componente ou classe no codebase.
 1. **Penpot manda** (`docs/agents/design/`). Componente que falta nasce no Penpot e
    entra em `src/components/<grupo>/` com o mesmo nome. Reusar antes de criar.
 2. **Shell**: `PageTemplate` (sidebar escura + `SidebarInset bg-muted rounded-l-xl`) →
-   `Header` (`title`, `linkTo`, `score`, `actions`) + `ContentTemplate` (`bg-muted p-6
+   `AppHeader` (`title`, `linkTo`, `score`, `actions`) + `ContentTemplate` (`bg-muted p-6
    gap-6`).
 3. **Tokens**: so classes semanticas. Status em texto = `*-subtle` +
    `*-subtle-foreground`. Grafico/mapa = `"var(--color-chart-N)"` com as constantes de
@@ -41,7 +41,7 @@ abaixo ja tem componente ou classe no codebase.
 8. **Dialog com form → sempre `FormDialog`** (nao fecha por clique fora; cancelar =
    `outline`; submit = `default` + `loading`). Campos via `Form*`.
 9. **Estados**: loading = `Skeleton` na forma do conteudo; erro = mensagem + "Tentar
-   novamente"; vazio = `EmptyState`. Tabela: `DataTableDefault` (`loading`, `error`,
+   novamente"; vazio = `EmptyState`. Tabela: `DataTable` (`loading`, `error`,
    `onRetry`).
 10. **`"use client"`** obrigatorio em qualquer arquivo de feature/service que usa hooks.
 

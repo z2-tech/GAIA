@@ -22,7 +22,7 @@ already in the codebase.
 1. **Penpot leads.** A missing component is designed in Penpot first, then lands in
    `src/components/<group>/` with the Penpot name. Reuse before creating.
 2. **Shell**: `PageTemplate` (dark sidebar + `SidebarInset bg-muted rounded-l-xl`) →
-   `Header` (`title`, `linkTo`, `score`, `actions`) + `ContentTemplate` (`bg-muted p-6
+   `AppHeader` (`title`, `linkTo`, `score`, `actions`) + `ContentTemplate` (`bg-muted p-6
    gap-6`). Don't re-add padding or background.
 3. **Tokens only**: semantic classes (`bg-card`, `bg-muted`, `text-muted-foreground`,
    `border`…). Status text = `*-subtle` + `*-subtle-foreground`; `success`/`warning`/
@@ -44,10 +44,10 @@ already in the codebase.
    title → `SectionHeader`; listing → `CardList` (`CardProject`/`CardFarm`); module →
    `ModuleShell` + `ModuleStepper`. Never restyle a status color inline.
 8. **Forms and dialogs**: fields via `Form*` components (FormField layout from
-   `FormBase`); a dialog with a form is always `FormDialog`.
+   `FormField`); a dialog with a form is always `FormDialog`.
 9. **States**: loading = `Skeleton` shaped like the content (spinner only in a button);
    error = message + outline "Tentar novamente"; empty = `EmptyState`. Tables get all
-   three from `DataTableDefault` (`loading`, `error`, `onRetry`) via `TableState`.
+   three from `DataTable` (`loading`, `error`, `onRetry`) via `TableState`.
 10. **`"use client"`** required in any feature/service file using hooks.
 11. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
     can't carry — genuinely complex algorithm, deliberate deviation from the pattern

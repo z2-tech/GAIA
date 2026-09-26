@@ -23,8 +23,8 @@ PageTemplate            SidebarProvider bg-sidebar
         └── conteúdo da feature
 ```
 
-- `PageTemplate` já está no layout `app/(private)/layout.tsx`. A página só monta `Header` + `ContentTemplate`.
-- `Header` (`@/components/layout/header`, "AppHeader" no Penpot):
+- `PageTemplate` já está no layout `app/(private)/layout.tsx`. A página só monta `AppHeader` + `ContentTemplate`.
+- `AppHeader` (`@/components/layout/app-header`):
 
 | Prop | Tipo | Efeito |
 |---|---|---|
@@ -109,13 +109,13 @@ Reuse essas constantes. Não crie outra cor de série.
 | `EmptyState` | `layout/empty-state` | Vazio: `IconChip lg` + h3 + descrição + `action` opcional. |
 | `ModuleStepper` / `ModuleStep` | `module/module-stepper` | Passos de módulo. `getModuleStepState(current, step, enabled)` → `active`/`completed`/`upcoming`/`locked`. |
 | `ModuleShell` | `module/module-shell` | Módulo com stepper: aside `nav` de 256, título, conteúdo rolável, `footer` de ações à direita. |
-| `FormInput`, `FormSelect`, `FormCombobox`, `FormDatePicker`, `FormTextarea`, `FormDropzone` | `form/form-*` | Todo campo de formulário. Montam o layout FormField via `FormBase` (`form/form`): label `text-label`, controle, ajuda ou erro `text-caption`, gap 8. `FormGrid` alinha campos em colunas. |
+| `FormInput`, `FormSelect`, `FormCombobox`, `FormDatePicker`, `FormTextarea`, `FormDropzone` | `form/form-*` | Todo campo de formulário. Montam o layout FormField via `FormField` (`form/form`): label `text-label`, controle, ajuda ou erro `text-caption`, gap 8. `FormGrid` alinha campos em colunas. |
 | `FormDialog` | `dialog/form-dialog` | Dialog com formulário: não fecha ao clicar fora, rodapé Cancelar/Voltar `outline` + submit `default` com `loading`. |
-| `DataTableDefault` | `table/data-table` | Tabela. Props `loading`, `error` + `onRetry`; renderiza `TableState` sozinha. |
+| `DataTable` | `table/data-table` | Tabela. Props `loading`, `error` + `onRetry`; renderiza `TableState` sozinha. |
 | `DataTableToolbar` | `table/data-table-toolbar` | Busca (`search`), `filters`, `ColumnsSelect` e `action` à direita. |
-| `TableState` | `table/table-state` | `empty` (mensagem), `loading` (linhas skeleton), `error` (mensagem + "Tentar novamente"). Uso direto só fora do `DataTableDefault`. |
+| `TableState` | `table/table-state` | `empty` (mensagem), `loading` (linhas skeleton), `error` (mensagem + "Tentar novamente"). Uso direto só fora do `DataTable`. |
 | `DataTablePagination` | `table/data-table-pagination` | "N itens", linhas por página, "Página X de Y" e 4 botões. `serverPagination` para paginação na API. |
-| `HeaderSort` | `table/header-components/header-sort` | Cabeçalho ordenável (none → asc → desc → none). |
+| `SortHeader` | `table/sort-header` | Cabeçalho ordenável (none → asc → desc → none). |
 
 Detalhe de tabela: [table.md](./table.md). Detalhe de formulário: [forms.md](./forms.md).
 
@@ -126,7 +126,7 @@ Regra completa em [states.md](../design/states.md). Todo dado de rede tem os tr�
 | Estado | Como |
 |---|---|
 | Loading | `Skeleton` na forma do conteúdo (`KpiCard loading`, `TableState loading`, `CardList` com thumb em skeleton). Spinner só em botão (`loading`). |
-| Erro | Mensagem + Button `outline` "Tentar novamente" (`common.table.retry`). Em tabela: `DataTableDefault error onRetry`. |
+| Erro | Mensagem + Button `outline` "Tentar novamente" (`common.table.retry`). Em tabela: `DataTable error onRetry`. |
 | Vazio | `EmptyState` com ícone, título e descrição do i18n. Em tabela: `TableState empty`. |
 
 ## Espaçamento
@@ -136,7 +136,7 @@ Regra completa em [states.md](../design/states.md). Todo dado de rede tem os tr�
 | Entre seções | `gap-6` (já no `ContentTemplate`) |
 | Dentro de card | `gap-6` (já no `Card`) |
 | Entre campos de formulário | `gap-4` (`FormGrid`, corpo do `FormDialog`) |
-| Label e controle | `gap-2` (já no `FormBase`) |
+| Label e controle | `gap-2` (já no `FormField`) |
 | Ações lado a lado | `gap-2` |
 
 ## Guardrails
