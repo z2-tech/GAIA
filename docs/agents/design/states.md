@@ -70,7 +70,7 @@ Regra básica de UX: **tudo o que depende de rede tem os seus estados desenhados
 
 ## Como entra no Penpot
 
-**Componentes** (páginas 02 e 03): cada um que exibe dados remotos tem as variantes de estado, ou uma composição de skeleton ao lado.
+**Componentes** (páginas Primitivas e Componentes): cada um que exibe dados remotos tem as variantes de estado, ou uma composição de skeleton ao lado.
 
 | Componente | Estados |
 |---|---|

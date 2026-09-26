@@ -20,40 +20,47 @@ O design só melhora o layout e troca os elementos pelos componentes do sistema.
 
 ## Fluxo de um lote
 
+Um lote é um módulo do produto (ex.: Regenerativo) e vira **um arquivo Penpot próprio**, com **uma página por fluxo**. Página pequena abre e edita rápido; o arquivo monolítico antigo travava o editor.
+
 1. **Levantar** no código as rotas do lote e, por tela, os textos exatos, campos, colunas, ações, dialogs e estados.
 2. **Apresentar ao usuário a lista de fluxos → frames (com a FlowTag de cada um) e esperar confirmação** antes de desenhar.
-3. **Criar a página** `NN Tela - <lote>`. O Penpot cria páginas no fim da lista, então crie na ordem.
-4. **Faltou peça?** Crie na 02 ou na 03 primeiro, e só depois use na tela.
-5. **Montar** os frames, exportar cada um e conferir visualmente. Cada tela ou dialog ganha os frames de estado: `— carregando`, `— erro` e `— vazio`, além de `— salvando` e `— erro ao salvar` nos dialogs com ação (veja [states.md](./states.md)).
-6. **Organizar em fluxos** conforme o [padrão de página de telas](#padrão-de-página-de-telas): Legenda, um board por fluxo e FlowTag em cada frame.
-7. **Rodar** `storage.repairIcons(root)` e depois `storage.audit(root)`, que tem de dar 0.
-8. **Registrar** o lote abaixo e atualizar o status no Guia (`00 Capa & Guia`).
+3. **Criar o arquivo** com `node .agents/skills/penpot-design/scripts/penpot-files.js new "GAIA · <Módulo>"`. Ele nasce no projeto GAIA, ligado ao Design System, com os tokens copiados e a página `00 Legenda`. Se o lote é continuação de um módulo que já existe (ex.: uma comparação), use o arquivo dele e prefixe as páginas (`Comparação · 01 …`).
+4. **Pedir ao usuário para abrir o arquivo e conectar o plugin** Penpot MCP nele. O plugin só enxerga o arquivo aberto.
+5. **Criar uma página por fluxo**, na ordem de navegação: `01 <fluxo>`, `02 <fluxo>`… O Penpot cria páginas no fim da lista, então crie na ordem.
+6. **Faltou peça?** Ela nasce no **Design System**, nunca no arquivo da tela: abra o Design System, crie na página `Primitivas ·` ou `Componentes ·` da seção, publique a biblioteca e aceite a atualização no arquivo do módulo. Só então use na tela.
+7. **Montar** os frames, exportar cada um e conferir visualmente. Cada tela ou dialog ganha os frames de estado: `— carregando`, `— erro` e `— vazio`, além de `— salvando` e `— erro ao salvar` nos dialogs com ação (veja [states.md](./states.md)).
+8. **Organizar** conforme o [padrão de página de telas](#padrão-de-página-de-telas): a Legenda na `00 Legenda` e, em cada página de fluxo, um board `Fluxo NN — <nome>` com FlowTag em cada frame.
+9. **Rodar** `storage.repairIcons(root)` e depois `storage.audit(root)` em cada página, que tem de dar 0.
+10. **Registrar** o lote abaixo e na tabela de arquivos do [README](./README.md#arquivo-penpot).
 
 ## Padrão de página de telas
 
-Vale para toda página `NN Tela - <lote>` (04 em diante). Referência pronta: `04 Tela - Auth`.
+Vale para todo arquivo `GAIA · <Módulo>`. Referência pronta: `GAIA · Auth`.
 
 ### Estrutura
 
 ```
-Legenda                        ← nome do lote, descrição e as 6 FlowTag com significado
-Fluxo 01 — <tela ou dialog>    ← board do fluxo
-  Header                       ← "Fluxo 01" · título · descrição
-  Telas                        ← linha: principal primeiro, estados à direita
-    Tela                       ← FlowTag + nome do frame, e embaixo o frame 1440×900
-    Tela ...
-Fluxo 02 — ...
+GAIA · <Módulo>                  ← arquivo, ligado ao Design System
+  00 Legenda                     ← página: board Legenda (nome do lote, descrição e as 6 FlowTag com significado)
+  01 <fluxo>                     ← página: um único board na raiz
+    Fluxo 01 — <tela ou dialog>
+      Header                     ← "Fluxo 01" · título · descrição
+      Telas                      ← linha: principal primeiro, estados à direita
+        Tela                     ← FlowTag + nome do frame, e embaixo o frame 1440×900
+  02 <fluxo>
+  …
 ```
 
 | Elemento | Especificação |
 |---|---|
-| Página | Uma por lote, `NN Tela - <lote>`. Só boards `Legenda` e `Fluxo NN — <nome>` na raiz; nenhum frame solto. |
-| Legenda | Board no topo (x 0, y 0): título do lote em `doc-display`, descrição em `doc-body` muted e a linha das 6 FlowTag, cada uma com o significado. |
-| Fluxo | Board `Fluxo NN — <nome>`: bg `background`, borda `border` 2, `radius.xl`, padding 80, gap 64. Numeração em dois dígitos, na ordem de navegação do produto. |
+| Arquivo | Um por módulo, `GAIA · <Módulo>`, no projeto GAIA. Ligado ao Design System, sem componentes nem tipografias locais. Tokens copiados do Design System (veja [README](./README.md#arquivo-penpot)). |
+| Página | `00 Legenda` e uma por fluxo, `NN <nome do fluxo>`. Na raiz, só o board `Legenda` ou o board `Fluxo NN — <nome>`, em x 0, y 0; nenhum frame solto. |
+| Segundo lote no mesmo arquivo | Prefixo nas páginas: `Comparação · 00 Legenda`, `Comparação · 01 …`. |
+| Legenda | Título do lote em `doc-display`, descrição em `doc-body` muted e a linha das 6 FlowTag, cada uma com o significado. |
+| Fluxo | Board `Fluxo NN — <nome>`: bg `background`, borda `border` 2, `radius.xl`, padding 80, gap 64. Numeração em dois dígitos, na ordem de navegação do produto, igual à da página. |
 | Header do fluxo | "Fluxo NN" em `doc-title` primary, título em `doc-display`, descrição de uma linha em `doc-body` muted (o que o usuário faz ali). |
 | Linha de telas | Row com gap 120. O estado padrão primeiro e os estados à direita, na ordem: carregando → erro → vazio → sucesso. Em dialogs com ação: dialog → salvando → erro ao salvar. |
 | Rótulo da tela | FlowTag + nome exato do frame em `doc-title`, gap 16, 24 acima do frame. |
-| Espaço entre fluxos | 240 na vertical, todos alinhados em x 0. |
 
 ### O que é um fluxo
 
@@ -81,19 +88,20 @@ As tipografias `doc-display` (64), `doc-title` (32) e `doc-body` (24) e o compon
 ### Como montar
 
 ```js
-// frames já criados na raiz da página, com os nomes finais
-storage.pageLegend('Auth', 'Login, recuperação e redefinição de senha. Um board por fluxo; ...');
+// página 00 Legenda
+storage.pageLegend('Auth', 'Login, recuperação e redefinição de senha. Uma página por fluxo; ...');
+
+// página 01 Login, com os frames já criados na raiz e com os nomes finais
 storage.flowSection(1, 'Login', 'Entrada na plataforma com email e senha.', [
   ['Login', 'principal'], ['Login — entrando', 'carregando'], ['Login — erro', 'erro'], ['Login — senha redefinida', 'sucesso'],
 ]);
-// ... um flowSection por fluxo
 storage.fitTexts(penpot.root);
-await storage.restack(); // sempre por último: as alturas só assentam depois do layout e do fitTexts
+await storage.restack(); // sempre por último: leva o board para 0,0 depois que o layout e o fitTexts assentam
 ```
 
-- **Monte os frames soltos primeiro** (x/y livres), confira cada um com `export_shape` e só então agrupe em fluxos. Depois de agrupados, o frame continua exportável pelo id.
-- **Editou um texto dentro de um fluxo?** Rode `restack()` de novo. Sem isso, os boards se sobrepõem.
-- **Página pesada** (mais de ~15 frames com mapa): chame `flowSection` em mais de um `execute_code` para não passar do timeout de 120 s.
+- **Monte os frames soltos primeiro** (x/y livres), confira cada um com `export_shape` e só então agrupe no fluxo. Depois de agrupado, o frame continua exportável pelo id.
+- **Editou um texto dentro do fluxo?** Rode `restack()` de novo.
+- **Fluxo pesado** (mais de ~15 frames com mapa): monte os frames em mais de um `execute_code` para não passar do timeout de 120 s.
 
 ## Esqueleto das telas logadas
 
@@ -101,9 +109,9 @@ Montado com `storage.screen(nome, {title, back, active})`:
 
 | Parte | Especificação |
 |---|---|
-| Frame | flex row, bg `sidebar`, padding 8 (topo, direita e base), clip |
+| Frame | flex row, bg `sidebar`, sem padding, clip |
 | Sidebar | instância `{state:'expanded', active}` com `active` = `projects`, `users` ou `settings`, e usuário no rodapé via override |
-| Inset | column, bg `muted`, `radius.xl`, clip |
+| Inset | column, bg `muted`, clip. Encosta no topo, na direita e na base; `radius.xl` só nos cantos da esquerda (junto da Sidebar) |
 | AppHeader | `back=yes` quando o código tem voltar. Título h1 = o título do Header no código. `Actions` e `BadgeScore` escondidos se a tela não tem. |
 | Content | column, padding 24, gap 24 |
 
@@ -118,7 +126,7 @@ Montado com `storage.screen(nome, {title, back, active})`:
 
 ## Lotes feitos
 
-As páginas 04 a 06 foram reorganizadas no padrão de fluxos em 2026-09-24.
+Os lotes 04 a 11 foram montados no arquivo monolítico antigo e migrados em 2026-09-25 para os arquivos por módulo (tabela no [README](./README.md#arquivo-penpot)). Os nomes `NN Tela - <lote>` abaixo são os lotes; no Penpot, cada fluxo é uma página do arquivo do módulo.
 
 ### 04 Tela - Auth
 
@@ -338,6 +346,45 @@ As páginas 04 a 06 foram reorganizadas no padrão de fluxos em 2026-09-24.
 - **Chaves i18n novas propostas** (`comparison.*`): `titleRemoval` "Comparar avaliações — Carbono Remoção", `moduleBadgeRemoval` "Módulo: Carbono Remoção", `assessmentsColumnRemoval` "Avaliações de remoção", `emptyDescriptionRemoval` "Adicione até {max} avaliações de remoção para comparar.", `cGainLine` "Ganho de C {value}", `scenarioOnlyHint` "Valores do Cenário do projeto de cada avaliação".
 - **Para o código:** `ComparisonModule` ganha `carbon-removal`, e o Resultado do cálculo ganha o botão "Comparar".
 
+### 12 Tela - Regenerativo
+
+13 frames em 2 fluxos, no arquivo `GAIA · Regenerativo`. Textos de `regenerative.*`. As perguntas e opções vêm do seed da API (`gaia-api/regenerative/fixtures/seed_indicators.sql`), não do `pt.json`.
+
+| Fluxo | Frames |
+|---|---|
+| Regenerativo (aba do talhão) | principal · carregando · erro · vazio · scroll |
+| Módulo regenerativo | sem manejo · preenchido (Agricultura + Pecuária) · scroll · erro de validação · salvando · erro ao salvar · carregando · erro ao carregar |
+
+- **Nomes de seção (decisão de 2026-09-25):** vale o nome da API em todas as telas: Comunidade, Produção Agrícola Regenerativa, Manejo da Paisagem, Impacto Ambiental e Manejo Pecuário Regenerativo. O i18n (`regenerative.sections.*`: "Gestão da paisagem", "Gestão regenerativa de gado"…) passa a seguir a API.
+- **Bandeira (decisão de 2026-09-25):** ponto + rótulo (TopicFlag: Bom/Atenção/Crítico/Não aplicável) na aba e na comparação. Na aba, o código mostra só o ponto.
+- **Aba:**
+  - O cabeçalho da página tem h2 "Módulo regenerativo", "Comparar" (outline sm) e "Editar módulo" ou "Preencher módulo" (default sm; no código é `primaryOutline`).
+  - O card "Score Regenerativo" traz "Pontuação Regenerativa" com o RadialProgress lg (tom pela faixa 65/40) e o TopicFlag da faixa. Ao lado ficam as 5 seções em ProgressRow, na ordem da API.
+  - O card "Tópicos" (340) tem a tabela "Tópico avaliado | Bandeira", agrupada por seção, com o TopicFlag.
+  - **Estados que o código não tem:** o erro (ErrorState section, `common.errors.loadFailed`) e o skeleton na forma dos dois cards (no código é o texto "Carregando dashboard..."). O vazio usa EmptyState com `list-checks` no lugar da Lottie.
+- **Módulo:**
+  - Usa o ModuleShell único: TopBar "Módulo regenerativo" + "Ver resultados" (outline sm). O rodapé tem "Voltar" (outline, que era link no código) e "Salvar".
+  - O aside lista as seções como navegação (ModuleStep `active` na seção visível, `upcoming` nas outras), na ordem do formulário: Características do sistema produtivo · Produção Agrícola · Manejo Pecuário · Manejo da Paisagem · Impacto Ambiental · Comunidade · Notas. Sem manejo escolhido, só Características e Notas aparecem.
+  - Características: 4 FormField select em 2 colunas. Cada indicador é um FormField select de largura total, com a pergunta no label (no código, o label é `sr-only`). Opção longa é cortada com "…" no trigger.
+  - O erro de validação fica no Manejo ("Preencha os campos de características do sistema produtivo."). O erro ao salvar aparece em Alert destructive ("Erro ao salvar o formulário regenerativo."), no lugar do toast. O erro ao carregar usa ErrorState page com o texto do código e "Voltar".
+- **Chaves i18n novas propostas:** `common.errors.loadFailed` (erro da aba).
+
+### 13 Tela - Regenerativo comparação
+
+15 frames em 2 fluxos, nas páginas `Comparação · …` do `GAIA · Regenerativo`. Os frames partiram dos do lote 11 (copiados entre arquivos) e trocaram o corpo pelas peças regenerativas da 25. Textos de `comparison.*`.
+
+| Fluxo | Frames |
+|---|---|
+| Comparar avaliações | 1 · 2 · 4 (limite + Tooltip) · só com diferença · vazio · carregando · sem resultado calculado · scroll |
+| Adicionar avaliação à comparação | nada escolhido · projeto, fazenda e talhão · 1 selecionada · vagas esgotadas · busca sem resultado · carregando · erro ao carregar |
+
+- **Página:** AppHeader "Comparar avaliações — Regenerativo" + "Adicionar", contador "N de 4 avaliações" e a faixa de ComparisonSlot. O slot mostra "<talhão> · <data>" e o caminho "Projeto › Fazenda › Talhão", sem período nem Select de produto. As seções, em ordem: ScoreOverview, TopicDistribution + SectionScores e TopicTable.
+- **Só com diferença:** o toggle ativo esconde os tópicos iguais à referência.
+- **Sem resultado calculado:** o slot fica em `error`, e a coluna da avaliação mostra "—" (BadgeTrend `empty`, marcador escondido).
+- **Modal:** o do lote 11, com Badge "Módulo: Regenerativo" e a coluna "Avaliações regenerativas". O PickerOption mostra "<data>" (+ " · Principal") e a linha "Pontuação N%". Atrás do scrim fica a página regenerativa.
+- **Diferenças para o código:** a faixa Bom/Atenção/Crítico usa os tokens `success`/`warning`/`destructive` a 30% (no código são `*-200`). "Referência" e "Ref." usam BadgeTrend `reference`. O cabeçalho da tabela não usa caixa alta.
+- **Bug de texto:** o vazio dizia "avaliações de emissão". Chave nova proposta: `comparison.emptyDescriptionRegenerative` = "Adicione até {max} avaliações regenerativas para comparar.".
+
 ### Próximo
 
-`12 Tela - Regenerativo` e `13 Tela - Regenerativo comparação`, com as listas de frames em `docs/plans/penpot-design-system.md`. Depois vêm os módulos da fazenda e as comparações.
+Nenhum lote pendente. Biodiversidade, Análise de contexto, Saúde do solo e Água ainda não existem no produto e entram quando tiverem especificação.

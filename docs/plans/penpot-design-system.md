@@ -1,6 +1,6 @@
 # Design System GAIA no Penpot
 
-**Status:** Em execução. Fases 1 a 3 concluídas; fase 4 (telas) em andamento, com Auth, Core, Projeto & Fazenda, Talhão, Carbono emissão, a comparação de emissão, Carbono remoção e a comparação de remoção prontos.
+**Status:** Em execução. Fases 1 a 3 concluídas; fase 4 (telas) em andamento, com Auth, Core, Projeto & Fazenda, Talhão, Carbono emissão, Carbono remoção e Regenerativo prontos, cada um com a sua comparação.
 **Atualizado:** 2026-09-25
 
 ## Contexto
@@ -50,23 +50,19 @@ O gaia-web usa shadcn/ui (estilo `new-york`) com Tailwind v4, mas nunca teve um 
 
 ## Estado atual no Penpot
 
-- **Arquivo:** "New File 1" (renomear para "GAIA Design System"), time "Default" (`220f6449-533e-815b-8008-b02074ad008f`).
+- **Arquivos:** time "Z2 Tech", projeto "GAIA". Biblioteca "Design System" (`220f6449-533e-815b-8008-b020a89edaa3`) e um arquivo `GAIA · <Módulo>` por módulo de telas. Estrutura atual em [README](../agents/design/README.md#arquivo-penpot).
 - **Fontes do time:**
   - Atyp Display, 8 variantes (400/500/600/700, normal e itálico), enviada via API (`create-font-variant`). O font id é `f2b32094-f257-46dc-9b78-45dd0c7d29bb`.
   - Geist Mono, que é Google Font.
-- **Páginas:** `00 Capa & Guia` (frames Capa e Guia), `01 Foundations`, `02 Primitives`, `03 GAIA Components` e `04 Tela - Auth`. Os próximos lotes seguem o padrão `NN Tela - <lote>`: `05 Tela - Core` (Meus Projetos, Gestão de Usuários, Perfil, Alterar senha, Idioma) e `06 Tela - Projeto & Fazenda & Talhão` (projeto com criação de fazenda, visualização da fazenda e criação de talhão). Os módulos da fazenda e do talhão e as comparações ficam para os lotes seguintes.
+- **Divisão (2026-09-25):** o arquivo único (Capa & Guia, Foundations, Primitives, GAIA Components e as páginas `NN Tela - <lote>`) chegou a 123 MB e travava o editor. Virou a biblioteca Design System, com uma página por seção, e cinco arquivos de módulo, com uma página por fluxo. O Guia foi removido: páginas, regras e status vivem nos docs do repositório.
 - **Tokens:** tema `mode/light` com os sets `core` (55 tokens) e `semantic` (49 tokens).
 - **Tipografias de biblioteca (grupo `GAIA`):** 11 estilos, listados na tabela abaixo.
 
 A referência de tokens, tipografia e componentes fica em `docs/agents/design/` ([tokens.md](../agents/design/tokens.md), [components.md](../agents/design/components.md)). Este plano guarda só status, decisões e histórico.
 
-## Capa & Guia
+## Capa
 
-A `00 Capa & Guia` tem dois frames:
-- **Capa:** foto do login com overlay, `logo/full`, o título "Design System" e os badges v1.0, shadcn/ui new-york v4 e Setembro 2026.
-- **Guia:** as páginas do arquivo, 6 regras de uso, o status das 5 fases (BadgeStatus) e a base técnica.
-
-Atualize o status no Guia ao fechar cada lote.
+A `01 Capa` do Design System tem foto do login com overlay, `logo/full`, o título "Design System" e os badges v1.0, shadcn/ui new-york v4 e Setembro 2026. O status das fases fica só neste plano.
 
 ## Fases
 
@@ -126,7 +122,7 @@ Cada fase termina num checkpoint de aprovação.
    - **DataTable:** o header `bg-primary` com texto branco e o body `bg-secondary` viram o padrão neutro do shadcn. SortHeader corrige o bug `justify-left/right`. "Colunas" e "Redefinir" vão para o i18n. Toolbar e FacetedFilter ficam genéricos no DataTable.
    - **Removidos (sem uso):** GaugeChart, Footer, OperationalStatus, FormCheckbox, FormNumberInput, ColumnBoolean, ColumnLink e os inputs de `filters/`. Se voltarem a ser necessários, são desenhados a partir das primitivas.
    - **Primitiva Table Row:** a primeira coluna passou a `fill`, para a linha esticar com a tabela.
-4. 🔄 **Telas:** 1440×900, montadas com instâncias, em lotes. Uma página por lote, com o nome `NN Tela - <lote>`. Toda página nova é criada no fim da lista, então os lotes devem ser criados na ordem.
+4. ✅ **Telas:** 1440×900, montadas com instâncias, em lotes. Desde 2026-09-25, cada módulo é um arquivo `GAIA · <Módulo>` com uma página por fluxo (padrão em [screens.md](../agents/design/screens.md#fluxo-de-um-lote)). Os lotes 04 a 11 abaixo foram feitos no arquivo único e migrados.
    - **Regra das telas:** o conteúdo é o do código hoje (textos do i18n, campos, ações e estados). O design só melhora o layout e troca os elementos pelos componentes do sistema. Nada de texto, campo ou estado inventado.
    - ✅ Auth (3 rotas, 5 frames): Login, Login — erro, Login — senha redefinida, Recuperar senha e Redefinir senha.
      - **Layout:** fundo escuro (`background-photo` usa o `background.png` em modo cobrir) com overlay `sidebar` a 80%. Marca à esquerda (`logo/full`, headline em display, apoio em body-lg). À direita, um card de 440 (rounded-xl, p 40, shadow.lg) com `logo/mark`, h1 e subtítulo centralizados. Idioma no canto superior direito, em TabsList (PT/EN).
@@ -149,7 +145,7 @@ Cada fase termina num checkpoint de aprovação.
        - A lista de projetos usa CardList project em 2 colunas.
        - A tabela de usuários é montada com SortHeader, Button Icon ghost e DataTablePagination.
        - Os dialogs seguem o padrão FormDialog. O "Voltar" em link vira outline, com o mesmo texto.
-     - **Divergências mantidas pelo design (do sistema aprovado):**
+     - **Divergências mantidas pelo design (aprovadas em 2026-09-25):**
        - O CardList não tem o rótulo "Nome do Projeto" nem a barra lateral.
        - O BadgeStatus mostra "Pendente", não "Pendências".
        - O header da tabela é neutro.
@@ -182,9 +178,12 @@ Cada fase termina num checkpoint de aprovação.
        - Séries das avaliações em `chart.1` a `chart.4`.
      - ✅ `10 Tela - Carbono remoção` (30 frames em 8 fluxos, detalhe em `screens.md`): aba Resultados, Renomear cálculo, Excluir cálculo, Preencher módulo (Parâmetros → BAU → Cenário), os dialogs da grade mensal (Aplicar em lote e Replicar valor), Editar preenchimento e Resultado do cálculo. Fechado em 2026-09-25: entrou o frame padrão do Cenário do projeto, o overflow de Parâmetros (erro de validação) foi corrigido e 326 strokes de ícone foram religados (auditoria 0).
      - ✅ `11 Tela - Carbono remoção comparação` (14 frames em 2 fluxos, detalhe em `screens.md`). Desenho novo, aprovado em 2026-09-25: o código não tem esse módulo. Compara só o Cenário do projeto. Entrou na 03 o CompareLineChart.
-     - `12 Tela - Regenerativo` (11 frames): a aba (Score + Tópicos) e o formulário regenerativo.
-     - `13 Tela - Regenerativo comparação`: lista de frames a definir.
-     - Depois: os módulos da fazenda e as comparações, em lotes a definir.
+     - ✅ `12 Tela - Regenerativo` (13 frames em 2 fluxos, no arquivo `GAIA · Regenerativo`, detalhe em `screens.md`): a aba (Score + Tópicos: principal, carregando, erro, vazio e scroll) e o formulário no ModuleShell, com o aside de seções (sem manejo, preenchido, scroll, erro de validação, salvando, erro ao salvar, carregando e erro ao carregar).
+       - **Decisões de 2026-09-25:** as seções usam o nome da API em todas as telas; a bandeira do tópico é ponto + rótulo (TopicFlag); o formulário usa o ModuleShell, com as seções no aside.
+       - **Adicionados ao sistema:** TopicFlag e ScoreScale (página 18).
+     - ✅ `13 Tela - Regenerativo comparação` (15 frames em 2 fluxos, nas páginas `Comparação · …`, detalhe em `screens.md`). A página tem 1 · 2 · 4 · só com diferença · vazio · carregando · sem resultado · scroll; o modal tem os 7 estados do lote 11. Os frames partiram do lote 11, copiados entre arquivos.
+       - **Adicionados ao sistema:** ScoreOverview, TopicDistribution, SectionScores e TopicTable (página 25).
+     - **Fora das telas:** Biodiversidade, Análise de contexto, Saúde do solo e Água. Ainda não existem no produto (no código são só placeholders); entram quando tiverem especificação.
    - **Decisões dos lotes do talhão:**
      - **Páginas longas** (resultados e módulos) ganham 2 frames:
        - `<Tela>`: 1440 × a altura do conteúdo, com a página inteira;
@@ -199,13 +198,15 @@ Cada fase termina num checkpoint de aprovação.
        - DeltaBadge vira BadgeTrend, e BadgePercentage vira BadgeScore;
        - as barras usam ProgressRow com `chart.*`;
        - ações de ícone ganham Tooltip.
-5. **Drift + handoff:** página `99 Drift` com cada inconsistência (`arquivo:linha` → token/componente). Ela vira o input do plano de migração do código:
-   - `globals.css`
-   - `typography.tsx`
-   - remoção de emerald/amber/hex
-   - consolidação dos duplicados
-   - as correções de primitivos listadas na fase 2
-   - atualização de `docs/agents/web/design-system.md` e `.opencode/agents/design-agent.md`
+5. **Drift + handoff:** página `99 Drift` com cada inconsistência (`arquivo:linha` → token/componente). Ela vira o input do plano de migração do código, que roda em duas etapas, nesta ordem:
+   1. **Design system no código:** refatorar a base do gaia-web antes de tocar nas telas.
+      - `globals.css`
+      - `typography.tsx`
+      - remoção de emerald/amber/hex
+      - as correções de primitivos listadas na fase 2
+      - consolidação dos duplicados nos componentes GAIA unificados da fase 3
+      - atualização de `docs/agents/web/design-system.md` e `.opencode/agents/design-agent.md`
+   2. **Telas:** com a base pronta, comparar tela por tela com o Penpot, por módulo (`GAIA · <Módulo>`, uma página por fluxo = uma task). Sobra só o que é da tela: layout, composição, estados e scroll. O `screens.md` já registra por lote o que mudou em relação ao código.
 
 ## Mecânica
 
@@ -216,21 +217,16 @@ Movida para [docs/agents/design/penpot.md](../agents/design/penpot.md). A opera�
 - Todo fill, stroke e texto no arquivo está ligado a token semantic ou tipografia de biblioteca. Uma auditoria via `execute_code` retorna 0 soltos.
 - Toda tela usa só instâncias de componente.
 - Os primitivos e os componentes GAIA unificados existem como componentes de biblioteca, com variantes.
-- A página de Drift lista todas as inconsistências da auditoria com o destino de cada uma.
+- A página de Drift lista as inconsistências de base (tokens, tipografia, primitivos, duplicados) com o destino de cada uma. O drift de cada tela fica para a etapa de telas.
 
 ## Fora de escopo e pendências
 
 - **Fora de escopo agora:** dark mode, protótipo interativo e qualquer mudança em gaia-web (fica para o plano de migração).
-- **Retomada (estado em 2026-09-25, fim do lote 11):**
+- **Retomada (estado em 2026-09-25, fim do lote 13):**
   - **Modo de trabalho:** só Penpot. O código é referência de conteúdo, sem mexer em código nem em i18n agora. Componentes de UX que faltam no código entram no design (o código é ajustado depois, no caminho contrário).
-  - **Próximo lote:** `12 Tela - Regenerativo`. Depois vem o 13 (comparação), que reusa a seção Comparação da 03 e o builder do modal. Monte a casca com `storage.plotScreen`, que está no `helpers.js`.
+  - **Próximo passo:** a fase 5. Todas as telas existentes estão desenhadas; os lotes 12 e 13 foram fechados em 2026-09-25, com auditoria 0 nas 6 páginas do `GAIA · Regenerativo`.
   - **Confirmar no editor:** o `fitTexts` corrigiu os textos transbordando nos lotes 04 a 06, mas o usuário ainda não confirmou no editor.
-  - **Decisões aguardando o usuário (lote Core):**
-    - CardList sem o rótulo "Nome do Projeto";
-    - BadgeStatus mostrando "Pendente" (no código aparece "Pendências" por bug de i18n);
-    - vazio de projetos com EmptyState (ícone + texto; no código é só o texto).
 - **Pendências:**
-  - Renomear o arquivo para "GAIA Design System".
   - Apagar o retângulo `background` de origem da foto, se ainda existir.
   - Revogar os tokens (MCP `userToken` e PAT), que foram expostos no chat, e registrar tokens novos.
   - Decidir se `green/yellow/red.200` voltam como degrau intermediário. Por ora ficaram de fora, sem uso semantic.

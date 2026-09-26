@@ -1,10 +1,10 @@
 # Componentes
 
-Inventário das páginas `02 Primitives` e `03 GAIA Components`. Variantes no formato `propriedade=valores`. Nem toda combinação existe: só as úteis. Cada seção na página do Penpot traz a própria descrição com as regras e o que saiu do código.
+Inventário das páginas `Primitivas ·` (08 a 17) e `Componentes ·` (18 a 25) do Design System, uma por seção. Variantes no formato `propriedade=valores`. Nem toda combinação existe: só as úteis. Cada seção na página do Penpot traz a própria descrição com as regras e o que saiu do código.
 
-Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes da 03 são buscados com `storage.V('<Nome>')`. Veja [penpot.md](./penpot.md).
+Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes das páginas `Componentes ·` são buscados com `storage.V('<Nome>')`. Veja [penpot.md](./penpot.md).
 
-## 02 Primitives (shadcn new-york v4)
+## Primitivas (shadcn new-york v4)
 
 ### Button
 
@@ -21,7 +21,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes da 03 são
 | **Input Group** (6) | `addon=icon/unit/icon-end` · `content=placeholder/filled` | `icon` = busca e data · `unit` = sufixo (ha, kg) · `icon-end` = olho da senha. Substitui o SearchInput. |
 | **Checkbox** (6) | `checked=false/true` · `state=default/focus/error/disabled` | 16 px, `radius.xs`. |
 | **Label** | — | `label` 14/500. |
-| **Field** (2) | `state=default/error` | Label + Input + ajuda. Nas telas, prefira o FormField (03). |
+| **Field** (2) | `state=default/error` | Label + Input + ajuda. Nas telas, prefira o FormField (Componentes). |
 | **Multi Select** (2) | `content=placeholder/filled` | Filled mostra Badges secondary e "+N". |
 | **Dropzone** (3) | `state=default/active/error` | Borda tracejada, `radius.lg`. |
 | **Input OTP** (4) | `state=empty/filled/focus/error` | 6 caixas de 40 em 2 grupos de 3. Para códigos de verificação. |
@@ -57,7 +57,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes da 03 são
 | **Sidebar Item** (5) | `mode=expanded/collapsed` · `state=default/hover/active` | h 32. Active = `sidebar-accent`, hover = `sidebar-hover`. |
 | **Sidebar** (4) | `state=expanded/collapsed` · `active=projects/users/settings` | Expandida 256, recolhida 48. `logo/full` no topo e usuário no rodapé (NavUser). Grupos: Geral (Meus Projetos) e Gestão (Gestão de Usuários, Configurações). |
 
-## 03 GAIA Components
+## Componentes GAIA
 
 ### Indicadores
 
@@ -70,6 +70,8 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes da 03 são
 | **RadialProgress** (9) | `size=sm/md/lg` · `tone=success/warning/destructive` | CircularProgress, CircleChart |
 | **ProgressRow** (7) | `tone=chart-1/chart-5/chart-2/success/warning/destructive/inverse` | Barras do StageCard e do Score Regenerativo. `inverse` é para uso sobre primary. |
 | **ChartLegend** (5) | `series=chart-1/chart-5/chart-2/baseline/scenario` | Legendas dos gráficos |
+| **TopicFlag** (4) | `flag=good/attention/critical/na` | Bandeira do tópico regenerativo: ponto `success`/`warning`/`destructive`/`muted-foreground` + "Bom"/"Atenção"/"Crítico"/"Não aplicável". Faixas: ≥ 65 bom, ≥ 40 atenção, < 40 crítico. Substitui o ponto sem rótulo da aba e o chip da comparação. |
+| **ScoreScale** (2) | `size=lg/sm` | Escala 0–100 nas faixas Crítico/Atenção/Bom (`destructive`/`warning`/`success` a 30%), com um marcador por avaliação (`m1`–`m4`, nas séries da comparação). `lg` (1080) traz os ticks. Mova os marcadores para o valor e esconda os que sobram. |
 | **ChartCard** | — | Referência de estilo de gráfico (grid tracejado em border, eixos em caption muted). Emissões por Fase usa o ChartCard vertical, na largura do conteúdo. |
 | **MiniBarChart** | — | Card compacto com 3 barras (chart-1/chart-5/chart-2). Perfil por fase (sem XLabels) e comparação de alocação (XLabels Massa/Energia/Econômico). |
 
@@ -113,7 +115,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes da 03 são
 
 ## Comparação
 
-Seção `Comparação` da 03. Séries das avaliações: `chart.1`, `chart.4`, `chart.3` e `chart.2`, nessa ordem. A 1ª é a referência por padrão. Nas telas, esconda as linhas, colunas e barras das avaliações que não estão na comparação.
+Página `25 Componentes · Comparação`. Séries das avaliações: `chart.1`, `chart.4`, `chart.3` e `chart.2`, nessa ordem. A 1ª é a referência por padrão. Nas telas, esconda as linhas, colunas e barras das avaliações que não estão na comparação.
 
 | Componente | Variantes | Regras |
 |---|---|---|
@@ -127,6 +129,10 @@ Seção `Comparação` da 03. Séries das avaliações: `chart.1`, `chart.4`, `c
 | **PickerItem** (2) | `state=default/active` | Item das colunas Projeto/Fazenda/Talhão: nome, meta e chevron. `active` = accent. |
 | **PickerOption** (5) | `state=available/selected/in-comparison/full/not-calculated` | Avaliação no modal: checkbox, nome, linha (período · líquido) e tag Disponível/Selecionada/Já na comparação/Sem vagas/Não calculada. |
 | **SelectionChip** | — | Item na bandeja do rodapé do modal: nome, local e remover. |
+| **ScoreOverview** | — | Regenerativo: pontuação geral por avaliação (`Col 1`–`Col 4`), com valor em display, TopicFlag da faixa, BadgeTrend em p.p. contra a referência, "Faltam N pts para Bom" ou "Na faixa Bom" e ScoreScale lg. |
+| **TopicDistribution** | — | Regenerativo: uma linha por avaliação (`Row 1`–`Row 4`), com barra empilhada crítico/atenção/bom, BadgeTrend em bons contra a referência e a legenda das contagens. |
+| **SectionScores** | — | Regenerativo: uma ScoreScale sm por seção, com valor na cor da faixa e delta em p.p. por avaliação (`Col N`, marcador `mN`, legenda `Item N`). |
+| **TopicTable** | — | Regenerativo: tópicos × avaliações, com linha de seção em `accent` e célula TopicFlag + seta (`arrow-up` success / `arrow-down` destructive) contra a referência. O toggle é "Todos os tópicos \| Só com diferença": no modo só com diferença, esconda as linhas `Topic · …` e o Separator antes delas; as `Topic* · …` diferem da referência. |
 
 - **BadgeTrend:** o tom segue melhor/pior e o ícone segue o sinal (`trending-down` para −, `trending-up` para +). Use `storage.fixTrends(root)` depois de trocar os textos.
 

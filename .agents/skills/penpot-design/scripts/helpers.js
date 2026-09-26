@@ -3,9 +3,13 @@
 // every helper in `storage` and returns a checklist. Idempotent: safe to re-run.
 // Docs: docs/agents/design/penpot.md
 
+// Tokens are copied into every file; components and typographies come from the Design System
+// library (local when the open file is the Design System itself).
 const lib = penpot.library.local;
+const ds = penpot.library.connected.find((l) => l.name === "Design System") || lib;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 storage.lib = lib;
+storage.ds = ds;
 storage.sleep = sleep;
 
 storage.tok = (name) => {
@@ -15,7 +19,7 @@ storage.tok = (name) => {
   }
   throw new Error("token " + name);
 };
-storage.typo = (name) => lib.typographies.find((t) => t.name === name);
+storage.typo = (name) => ds.typographies.find((t) => t.name === name);
 
 // applyToken toggles: re-applying the current token removes it. Always go through bind.
 storage.bind = (s, tokName, props) => {
@@ -43,8 +47,7 @@ storage.txt = (content, typoName = "body", colorTok = "foreground") => {
 
 // Lucide renders stroke 2 in a 24 viewBox, so a 16px icon draws 1.33.
 storage.icon = (name, size = 16, tok = "foreground") => {
-  const c = lib.components.find((c) => c.name === name);
-  const i = c.instance();
+  const i = storage.comp(name).instance();
   i.resize(size, size);
   const w = (2 * size) / 24;
   penpotUtils.analyzeDescendants(i, (r, s) => {
@@ -81,22 +84,23 @@ storage.add = (parent, ...kids) => {
   return parent;
 };
 
-storage.findVariant = (n, s) => {
-  s = s || penpotUtils.getPageByName("02 Primitives").root;
-  if (s.name === n && s.isVariantContainer && s.isVariantContainer()) return s;
-  for (const c of s.children || []) {
-    const r = storage.findVariant(n, c);
-    if (r) return r;
-  }
+// Component and variant-set names are unique across the Design System, so a name is enough.
+storage.V = (n) => {
+  const c = ds.components.find((c) => c.name === n && c.isVariant && c.isVariant());
+  if (!c) throw new Error("variant set " + n);
+  return c;
 };
-storage.V = (n) => storage.findVariant(n, penpotUtils.getPageByName("03 GAIA Components").root) || storage.findVariant(n);
 storage.inst = (container, props) => {
-  const v = typeof container === "string" ? storage.findVariant(container) || storage.V(container) : container;
+  const v = typeof container === "string" ? storage.V(container) : container;
   const c = v.variants.variantComponents().find((c) => Object.entries(props).every(([k, val]) => c.variantProps[k] === val));
   if (!c) throw new Error("variant " + JSON.stringify(props));
   return c.instance();
 };
-storage.comp = (n) => lib.components.find((c) => c.name === n && !(c.isVariant && c.isVariant()));
+storage.comp = (n) => {
+  const c = ds.components.find((c) => c.name === n && !(c.isVariant && c.isVariant()));
+  if (!c) throw new Error("component " + n);
+  return c;
+};
 storage.setText = (shape, str) => {
   const t = penpotUtils.findShape((s) => s.type === "text", shape);
   if (t) t.characters = str;
@@ -196,24 +200,25 @@ storage.desc = (sec, w = 880) => {
 
 // swapComponent keeps the previous icon's child geometry, so fitIcon re-derives it from the main.
 storage.fitIcon = (ic, name) => {
-  const M = lib.components.find((c) => c.name === name).mainInstance();
+  const M = storage.comp(name).instance();
   const k = ic.width / M.width;
   const flat = (r) => penpotUtils.analyzeDescendants(r, (root, s) => s).map((x) => x.result);
   const a = flat(ic), b = flat(M);
-  if (a.length !== b.length) return "mismatch";
+  if (a.length !== b.length) { M.remove(); return "mismatch"; }
   a.forEach((s, i) => {
     const m = b[i];
     s.resize(Math.max(m.width * k, 0.01), Math.max(m.height * k, 0.01));
     s.x = ic.x + (m.x - M.x) * k;
     s.y = ic.y + (m.y - M.y) * k;
   });
+  M.remove();
   return "ok";
 };
 storage.swapIn = async (inst, name, tok) => {
   const find = () => penpotUtils.findShape((s) => s.name.startsWith("icon /"), inst);
   let ic = find();
   const size = ic.width;
-  ic.swapComponent(lib.components.find((c) => c.name === name));
+  ic.swapComponent(storage.comp(name));
   await sleep(200);
   ic = find();
   if (Math.round(ic.width) !== Math.round(size)) ic.resize(size, size);
@@ -301,12 +306,24 @@ storage.audit = (root) =>
     }, root)
     .map((s) => `${s.parent?.parent?.name}>${s.parent?.name}>${s.name}:${(s.fills || []).map((f) => f.fillColor)}|${(s.strokes || []).map((f) => f.strokeColor)}`);
 
+storage.insetRadius = (inset) => {
+  inset.borderRadiusTopRight = 0;
+  inset.borderRadiusBottomRight = 0;
+  return storage.bind(inset, "radius.xl", ["borderRadiusTopLeft", "borderRadiusBottomLeft"]);
+};
+storage.flushInsets = (root) => {
+  const insets = penpotUtils.findShapes((s) => s.name === "Inset" && s.type === "board" && s.parent?.flex, root);
+  for (const i of insets) {
+    const fl = i.parent.flex;
+    fl.topPadding = fl.rightPadding = fl.bottomPadding = fl.leftPadding = 0;
+    storage.insetRadius(i);
+  }
+  return insets.length;
+};
 storage.user = { name: "Maria Silva", email: "maria@fazenda.com.br", initials: "MS" };
 storage.screen = (name, { title, back = false, active = "projects" }) => {
   const box = storage.box;
-  const f = box(name, "row", 0, 0, 8);
-  f.flex.rightPadding = 8;
-  f.flex.leftPadding = 0;
+  const f = box(name, "row", 0);
   f.flex.alignItems = "stretch";
   f.flex.horizontalSizing = "fix";
   f.flex.verticalSizing = "fix";
@@ -320,7 +337,7 @@ storage.screen = (name, { title, back = false, active = "projects" }) => {
   storage.texts(penpotUtils.findShape((s) => s.name === "Avatar", sb), [storage.user.initials]);
   const inset = box("Inset", "column", 0);
   inset.flex.alignItems = "stretch";
-  storage.radius(inset, "radius.xl");
+  storage.insetRadius(inset);
   storage.fill(inset, "muted");
   inset.clipContent = true;
   f.appendChild(inset);
@@ -464,7 +481,7 @@ storage.footer = (p, a, b) => {
 };
 // Absolute children of a resized MapPlaceholder instance ignore constraints; re-derive them from the main.
 storage.fitMap = (m) => {
-  const M = m.component().mainInstance();
+  const M = m.component().instance();
   const W = M.width, H = M.height, w = m.width, h = m.height;
   m.children.forEach((k, i) => {
     const mk = M.children[i];
@@ -474,6 +491,7 @@ storage.fitMap = (m) => {
     else if (k.name === "DrawToolbar") penpotUtils.setParentXY(k, rx, ry);
     else penpotUtils.setParentXY(k, rx + (w - W) / 2, ry + (h - H) / 2);
   });
+  M.remove();
 };
 // Flex frames ignore array order for overlap; zIndex keeps scrim and panel on top.
 storage.withDialog = (f, panel) => {
@@ -551,9 +569,11 @@ storage.restack = async () => {
 };
 
 return {
+  file: penpot.currentFile.name,
+  library: ds === lib ? "local (Design System)" : `${ds.name}: ${ds.components.length} components`,
   page: penpot.currentPage.name,
   pages: penpotUtils.getPages().map((p) => p.name),
   tokens: lib.tokens.sets.map((s) => `${s.name}:${s.tokens.length}`),
-  typographies: lib.typographies.length,
+  typographies: ds.typographies.length,
   helpers: Object.keys(storage).length,
 };
