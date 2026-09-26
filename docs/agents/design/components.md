@@ -46,7 +46,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes das págin
 |---|---|---|
 | **Menu Item** (6) | `variant=default/destructive/checked` · `state=default/hover/disabled` | rounded-sm, px 8 py 6. Hover = accent (destructive → destructive-subtle). |
 | **Dropdown Menu**, **Select Content**, **Command**, **Popover** | — | Superfície bg popover, border, rounded-md, `shadow.md`. |
-| **Dialog**, **Alert Dialog**, **Sheet** | — | Dialog: rounded-lg, p 24, gap 16, `shadow.lg`, title h2, footer à direita. Sheet: 384 de largura. **Excluir (padrão único):** Alert Dialog "Excluir <item>", descrição "Tem certeza que deseja excluir <o item> \"<nome>\"? Esta ação não pode ser desfeita." e Cancelar (outline) + Confirmar (destructive). |
+| **Dialog**, **Alert Dialog**, **Sheet** | — | Dialog: rounded-lg, `shadow.lg`, title h2, footer à direita. Desde 2026-09-26: Header 24/24/16 + Separator de ponta a ponta (linha entre o cabeçalho e o conteúdo), conteúdo 16/24 (única área com scroll), rodapé 16/24/24. Sheet: 384 de largura. **Excluir (padrão único):** Alert Dialog "Excluir <item>", descrição "Tem certeza que deseja excluir <o item> \"<nome>\"? Esta ação não pode ser desfeita." e Cancelar (outline) + Confirmar (destructive). |
 
 ### Data e Navigation
 
