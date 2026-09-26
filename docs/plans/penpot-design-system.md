@@ -1,6 +1,6 @@
 # Design System GAIA no Penpot
 
-**Status:** Em execução. Fases 1 a 3 concluídas; fase 4 (telas) em andamento, com Auth, Core, Projeto & Fazenda, Talhão, Carbono emissão, Carbono remoção e Regenerativo prontos, cada um com a sua comparação.
+**Status:** Em execução. Fases 1 a 4 concluídas (todas as telas existentes, cada módulo com a sua comparação). Fase 5: página `99 Drift` pronta; falta o handoff (migração do código).
 **Atualizado:** 2026-09-25
 
 ## Contexto
@@ -198,7 +198,7 @@ Cada fase termina num checkpoint de aprovação.
        - DeltaBadge vira BadgeTrend, e BadgePercentage vira BadgeScore;
        - as barras usam ProgressRow com `chart.*`;
        - ações de ícone ganham Tooltip.
-5. **Drift + handoff:** página `99 Drift` com cada inconsistência (`arquivo:linha` → token/componente). Ela vira o input do plano de migração do código, que roda em duas etapas, nesta ordem:
+5. 🔄 **Drift + handoff:** página `99 Drift` com cada inconsistência (`arquivo:linha` → token/componente). ✅ Feita em 2026-09-25 na biblioteca Design System: 79 itens de base em 6 seções (Tokens 11, Tipografia 9, Cores cruas 11, Primitivos 21, Componentes GAIA 22, Remover 5), 4 deles bugs. Espelho em [drift.md](../agents/design/drift.md). Ela vira o input do plano de migração do código, que roda em duas etapas, nesta ordem:
    1. **Design system no código:** refatorar a base do gaia-web antes de tocar nas telas.
       - `globals.css`
       - `typography.tsx`
@@ -224,8 +224,7 @@ Movida para [docs/agents/design/penpot.md](../agents/design/penpot.md). A opera�
 - **Fora de escopo agora:** dark mode, protótipo interativo e qualquer mudança em gaia-web (fica para o plano de migração).
 - **Retomada (estado em 2026-09-25, fim do lote 13):**
   - **Modo de trabalho:** só Penpot. O código é referência de conteúdo, sem mexer em código nem em i18n agora. Componentes de UX que faltam no código entram no design (o código é ajustado depois, no caminho contrário).
-  - **Próximo passo:** a fase 5. Todas as telas existentes estão desenhadas; os lotes 12 e 13 foram fechados em 2026-09-25, com auditoria 0 nas 6 páginas do `GAIA · Regenerativo`.
-  - **Confirmar no editor:** o `fitTexts` corrigiu os textos transbordando nos lotes 04 a 06, mas o usuário ainda não confirmou no editor.
+  - **Próximo passo:** o handoff da fase 5, etapa 1 (design system no código), a partir da `99 Drift`. Todas as telas existentes estão desenhadas.
 - **Pendências:**
   - Apagar o retângulo `background` de origem da foto, se ainda existir.
   - Revogar os tokens (MCP `userToken` e PAT), que foram expostos no chat, e registrar tokens novos.

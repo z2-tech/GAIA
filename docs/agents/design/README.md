@@ -39,6 +39,7 @@ Time "Z2 Tech", projeto "GAIA". Fontes do time: Atyp Display (8 variantes) e Gei
 | `06 Ícones` · `07 Logos` | 72 ícones Lucide (`icon/<nome>`) e logos (`logo/full`, `logo/mark`) |
 | `08`–`17 Primitivas · <seção>` | Primitivas shadcn com variantes e estados: Button, Form controls, Badge, Card, Tabs, Display, Menus, Overlays, Data, Navigation. Detalhes em [components.md](./components.md). |
 | `18`–`25 Componentes · <seção>` | Componentes do produto, montados com as primitivas: Indicadores, Cards, Layout, Formulários, DataTable, Charts, Documentação, Comparação |
+| `99 Drift` | Onde o gaia-web diverge do design: 79 itens de base (tokens, tipografia, cores cruas, primitivos, componentes GAIA, remover), cada um com `arquivo:linha` e destino. Espelho em [drift.md](./drift.md). |
 
 Seção nova vira página nova (`NN Primitivas · <seção>` ou `NN Componentes · <seção>`). As cores existem só como tokens: nenhuma cor de biblioteca.
 
