@@ -10,7 +10,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes das págin
 
 | Componente | Variantes | Regras |
 |---|---|---|
-| **Button** (32) | `variant=default/secondary/outline/destructive/link` · `size=sm/default/lg` · `state=default/hover/focus/disabled/loading` | `rounded-md`, alturas 32/36/40. Hover: primary/90, secondary/80, outline → accent. Focus = ring 3 px. Disabled = 50%. Loading = spinner + texto. Largura total: `layoutChild.horizontalSizing='fill'`. |
+| **Button** (32) | `variant=default/secondary/outline/destructive/link` · `size=sm/default/lg` · `state=default/hover/focus/disabled/loading` | `rounded-lg` (radius.lg, desde 2026-09-26), alturas 32/36/40. Hover: primary/90, secondary/80, outline → accent. Focus = ring 3 px. Disabled = 50%. Loading = spinner + texto. Largura total: `layoutChild.horizontalSizing='fill'`. |
 | **Button Icon** (24) | `variant=default/secondary/outline/ghost` · `size=sm/default/lg` · `state=default/hover/focus/disabled` | Único lugar do ghost. Troque o ícone com `swapIn`. |
 
 ### Form controls

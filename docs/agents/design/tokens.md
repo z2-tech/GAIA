@@ -45,8 +45,8 @@ Escala do shadcn v4 (`--radius` 10).
 |---|---|---|
 | `radius.xs` | 4 | Checkbox, topo das barras de gráfico |
 | `radius.sm` | 6 | Menu item |
-| `radius.md` | 8 | Button, input, select, badge, tooltip, menus, alert |
-| `radius.lg` | 10 | Dialog, TabsList, Dropzone, Alert |
+| `radius.md` | 8 | Input, select, badge, tooltip, menus |
+| `radius.lg` | 10 | Button e Button Icon (desde 2026-09-26), Dialog, TabsList, Dropzone, Alert |
 | `radius.xl` | 14 | Card, KpiCard, painel inset das telas |
 | `radius.full` | 9999 | Avatar, slider, dots |
 
