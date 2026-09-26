@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 1 (Drift)
 
-**Status:** Em execução. Etapa 1 (tokens) commitada em `794e6b5`, aguardando conferência visual e merge no `develop`.
+**Status:** Em execução. Etapas 1 (`794e6b5`) e 2 (`c3aff0b`) commitadas na `feat/design-system`, aguardando conferência visual e merge no `develop`.
 **Atualizado:** 2026-09-25
 **Branch:** `feat/design-system` no gaia-web, criada a partir do `develop` em `f94b9b0`
 
@@ -48,7 +48,7 @@ Cada etapa segue a mesma verificação (seção Verificação) e termina em comm
 
 **O que muda na tela:** o neutro passa a ser o cinza azulado da marca, os textos secundários deixam de ser azuis, e os gráficos que usam `chart-*` trocam laranja e teal pela paleta GAIA.
 
-### Etapa 2 — Tipografia (Y1–Y8)
+### Etapa 2 — Tipografia (Y1–Y8) · commitada
 
 **Arquivos:** `src/app/globals.css` (tokens `--text-*`) e `src/components/ui/typography.tsx`.
 
@@ -61,6 +61,7 @@ Cada etapa segue a mesma verificação (seção Verificação) e termina em comm
    - body, body-lg, label e caption com a altura de linha certa.
 3. Variantes novas `body-strong`, `caption-strong` e `mono` (Y7), com a tag certa em `TAG_BY_VARIANT`.
 4. Sai o tone `strong` (Y8, 1 uso), porque o default já é `foreground`.
+5. **Feito também:** o `cn` registra a escala no `tailwind-merge` (sem isso, `text-h1` seria descartado como cor ao lado de `text-muted-foreground`). As 20 chamadas que recriavam `body-strong` ou `caption-strong` com `font-semibold`/`font-medium` passaram a usar as variantes.
 
 **O que muda na tela:** os títulos crescem um degrau: 11 usos de h1, 19 de h2, 5 de h3 e 6 de display. O texto de corpo fica mais compacto (altura de linha 20, em vez de cerca de 23).
 
