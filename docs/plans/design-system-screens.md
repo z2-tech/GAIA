@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Core no `develop` (2026-09-26). Módulo 2 (Auth) implementado na `feat/screens-auth` (`6ec1af7`, `75e76bd`, sidebar `034fab6`), aguardando conferência visual e merge. Próximo: Projeto, Fazenda & Talhão.
+**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) em andamento na `feat/screens-project`: fluxos 01 Projeto (`4b1efca`) e 02 Nova fazenda (`c9675c3`) feitos.
 **Atualizado:** 2026-09-26
 
 ## Contexto
@@ -38,7 +38,7 @@ Para cada módulo: rotas do código ↔ páginas do Penpot ↔ onde está o drif
 
 Pendências herdadas da Parte 1 que entram aqui: o espaçamento do Card (`py-6 flex-col` do shadcn, P14), o FacetedFilter (se a tela de usuários usar) e os estados de carregamento e erro das listas.
 
-### 2. Auth (arquivo `GAIA · Auth`, lote 04) · implementado
+### 2. Auth (arquivo `GAIA · Auth`, lote 04) · no develop
 
 | Fluxo | Rota |
 |---|---|
@@ -47,7 +47,7 @@ Pendências herdadas da Parte 1 que entram aqui: o espaçamento do Card (`py-6 f
 
 Pendências herdadas: o título do login em `display` (sair o `font-bold`), o card de 440 e o seletor de idioma em TabsList.
 
-### 3. Projeto, Fazenda & Talhão (arquivo `GAIA · Projeto, Fazenda & Talhão`, lotes 06 e 07)
+### 3. Projeto, Fazenda & Talhão (arquivo `GAIA · Projeto, Fazenda & Talhão`, lotes 06 e 07) · em andamento
 
 | Fluxo | Rota |
 |---|---|
@@ -117,6 +117,10 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 - **Componentes novos no código:** ErrorState, Alert, Toggle e InputOTP (dependência `input-otp`, com o `FormOTP`), com os nomes do Penpot.
 - **Senha redefinida:** o redirect depois de redefinir vai para `/login?reset=success`, e o login mostra o Alert de sucesso. Isso substitui o toast.
 - **Sidebar (2026-09-26):** recolhida com 64 px e botões de 36 (ícone 16) e começa recolhida (cookie `sidebar_state` só abre quando é `true`). O botão de recolher virou item (ícone + nome) no fim, acima do separador. Feito no Penpot e no código.
+- **Busca de fazendas (2026-09-26):** o campo existia mas não filtrava. Agora filtra no cliente pelo nome, porque o endpoint do projeto não aceita filtro.
+- **Stepper (2026-09-26):** componente novo `components/layout/stepper.tsx`, no header do FormDialog (prop `header`). Foi usado no wizard da Nova fazenda.
+- **Nome do talhão:** virou Dialog padrão (título, input, Cancelar e Salvar talhão), no lugar do popover com botões redondos.
+- **Pendente no módulo 3:** a toolbar do mapa (DrawToolbar do MapPlaceholder) segue com os controles padrão do Leaflet-draw. Os campos de área também seguem com "(ha)" no rótulo, enquanto o design usa sufixo no input.
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)
