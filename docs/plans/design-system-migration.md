@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 1 (Drift)
 
-**Status:** Em execução. Etapas 1 a 3 no `develop` (`678cbe3`). Etapa 4 commitada na `feat/design-system` (4a `580061d`, 4b `6af229a`, 4c `a603f03`, 4d `683c3e1`, 4e `addb7a9`), aguardando conferência visual e merge.
+**Status:** Em execução. Etapas 1 a 3 no `develop` (`678cbe3`). Etapas 4 (`580061d`…`a603f03`) e 5 (`4617bd0`) commitadas na `feat/design-system`, aguardando conferência visual e merge. Falta a etapa 6 e o fechamento.
 **Atualizado:** 2026-09-25
 **Branch:** `feat/design-system` no gaia-web, criada a partir do `develop` em `f94b9b0`
 
@@ -126,7 +126,7 @@ A maior etapa, dividida em 5 commits, um por grupo, na ordem abaixo. Cada compon
   - o `uppercase` do cabeçalho de tópicos.
 - **Ficou para a Parte 2 (telas):** o DetailsCard em `farm-details` e o espaçamento dos cards.
 
-### Etapa 5 — Cores e tamanhos crus (C1–C11, Y9)
+### Etapa 5 — Cores e tamanhos crus (C1–C11, Y9) · commitada
 
 1. **Charts e mapas (C4–C8):** passam a ler o token do CSS com um helper `cssVar("--color-chart-1")`, em vez de ter hex copiado:
    - `lib.ts`, `scenario-colors.ts` e `slot-colors.ts`: Fóssil chart.1, Biogênico chart.5 e Remoção chart.2; BAU = `muted-foreground` e Cenário = chart.1; os slots da comparação usam chart.1/4/3/2;
@@ -135,6 +135,24 @@ A maior etapa, dividida em 5 commits, um por grupo, na ordem abaixo. Cada compon
 3. **Tamanhos crus (Y9):** `text-xs`, `text-sm` etc. viram `Typography` ou a classe da escala.
 4. **Saída do bloco `legacy`:** o `globals.css` fica só com a escala do Penpot. A paleta padrão do Tailwind é desligada (`--color-*: initial`, com `white`, `black` e `transparent` redefinidos), então uma cor crua deixa de gerar CSS.
 5. **Checagem nova, `scripts/check-design-tokens.mjs` (`bun lint:tokens`):** falha com classe de paleta crua, `text-[…]`/`bg-[#…]`, hex, `hsl(`, `oklch(` ou `rgb(` em `.ts`/`.tsx` fora de `src/client` e do `globals.css`.
+
+**Como ficou (decisões da implementação):**
+- **Checagem primeiro:** o `lint:tokens` foi escrito antes da varredura. Ele achou 290 ocorrências, que foram divididas em 3 agentes por pasta, e a checagem terminou com 0.
+- **Gráficos e Leaflet:** leem `var(--color-…)` direto, porque o SVG aceita. Só o canvas do upload de KML usa `getComputedStyle`. A comparação passou a ter uma única sequência de séries (chart-1, 4, 3, 2) para todos os módulos.
+- **`globals.css`:**
+  - saíram o `legacy` e os `--color-<core>` do `@theme`;
+  - a paleta e os tamanhos padrão do Tailwind foram desligados (`--color-*: initial`, `--text-*: initial`, com `white` e `black` redefinidos);
+  - os degraus core ficam só como variáveis do `:root` que o semantic referencia.
+- **O que muda na tela:**
+  - textos de 10 e 11 px viraram 12 px, porque a escala não tem menor;
+  - números `font-bold` em display ou h2 passaram a 600;
+  - o realce dos meses sem cobertura na grade mensal ficou mais claro (`warning-subtle` é yellow.50, no lugar de yellow-200);
+  - na linha Total da matriz de fases da comparação, o detalhe perdeu o negrito;
+  - o separador da sidebar passou a gray.400.
+- **Pendências para a Parte 2 (telas):**
+  - eixos, grade e tooltip do Recharts ainda usam o padrão da lib, e ficam para seguir o ChartCard do Penpot (grade tracejada em `border`, eixos em caption muted, tooltip em `popover`);
+  - rótulos `uppercase` em `picker-dialog`, `kpi-compare-cards` e `score-overview`;
+  - o `font-bold` do título do login.
 
 ### Etapa 6 — Remover (R1–R5)
 
