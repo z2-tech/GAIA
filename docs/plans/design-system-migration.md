@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 1 (Drift)
 
-**Status:** Em execução. Etapas 1 (`794e6b5`) e 2 (`c3aff0b`) commitadas na `feat/design-system`, aguardando conferência visual e merge no `develop`.
+**Status:** Em execução. Etapas 1 (`794e6b5`), 2 (`c3aff0b`) e 3 (`06f3727`) commitadas na `feat/design-system`, aguardando conferência visual e merge no `develop`.
 **Atualizado:** 2026-09-25
 **Branch:** `feat/design-system` no gaia-web, criada a partir do `develop` em `f94b9b0`
 
@@ -65,7 +65,7 @@ Cada etapa segue a mesma verificação (seção Verificação) e termina em comm
 
 **O que muda na tela:** os títulos crescem um degrau: 11 usos de h1, 19 de h2, 5 de h3 e 6 de display. O texto de corpo fica mais compacto (altura de linha 20, em vez de cerca de 23).
 
-### Etapa 3 — Primitivos (P1–P21)
+### Etapa 3 — Primitivos (P1–P21) · commitada
 
 **Arquivos:** `src/components/ui/*` e as chamadas afetadas.
 
@@ -85,6 +85,13 @@ Cada etapa segue a mesma verificação (seção Verificação) e termina em comm
 6. **SearchInput → Input Group (P17):** o `input-group.tsx` já existe. Os 4 usos migram e o `search-input.tsx` é apagado.
 7. **Sidebar (P18–P20):** o hover usa `sidebar-hover`. **Bug P19:** `hsl(var(--sidebar-*))` vira `var(--sidebar-*)`. O `bg-gray-900!` vira o token `sidebar`.
 8. **Table (P21):** header e body neutros (`background` e `border`), sem `bg-primary` nem `bg-secondary`.
+
+**Como ficou (decisões da implementação):**
+- **FormCombobox:** usa Button `outline` com largura total até virar FormField, na etapa 4.
+- **Card (P14):** ficou só `rounded-xl` + `shadow-sm`. O `py-6 flex-col` do shadcn quebraria o `p-6` sem `flex-col` de hoje em dezenas de telas, então o espaçamento vai para a Parte 2.
+- **SearchInput (P17):** não foi apagado, porque ele carrega o debounce. Virou o Input Group padrão, com largura `w-90` (360, igual ao Penpot).
+- **Table (P21):** o `text-white` do SortHeader e os `text-primary-foreground`/`bg-primary` dos cabeçalhos do Composto e da grade mensal saíram junto, senão ficariam branco no branco.
+- **Button:** novo `button.test.tsx` cobre o loading e o bug P9.
 
 ### Etapa 4 — Componentes GAIA (G1–G22)
 
@@ -116,7 +123,7 @@ Apagar GaugeChart, Footer, OperationalStatus, FormCheckbox, FormNumberInput, Col
 
 ### Fechamento
 
-- Atualizar os docs do front com os tokens, as variantes e os componentes novos: `docs/agents/web/design-system.md` (hoje descreve `bg-gray-100`, `rounded-2xl` e o header branco) e `.opencode/agents/design-agent.md`.
+- Atualizar os docs do front com os tokens, as variantes e os componentes novos: `docs/agents/web/design-system.md` (hoje descreve `bg-gray-100`, `rounded-2xl` e o header branco) e `.opencode/agents/design-agent.md` (as regras 4 e 9 ainda dizem Button com size `lg` padrão e `rounded-full`).
 - Marcar os itens feitos em `drift.md` e na página `99 Drift` do Penpot.
 - Status deste plano = Concluído, e fase 5 / etapa 1 fechada em `penpot-design-system.md`.
 - Reindexar o CodeGraph (`.opencode/bin/codegraph-global-sync.sh`).
