@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Módulo 1 (Core) implementado em 2026-09-26 na `feat/screens-core` (`958669b`…`476de58`), aguardando conferência e merge. Próximo: Auth.
+**Status:** Em execução. Core no `develop` (2026-09-26). Módulo 2 (Auth) implementado na `feat/screens-auth` (`6ec1af7`, `75e76bd`), aguardando conferência visual e merge. Próximo: Projeto, Fazenda & Talhão.
 **Atualizado:** 2026-09-26
 
 ## Contexto
@@ -38,7 +38,7 @@ Para cada módulo: rotas do código ↔ páginas do Penpot ↔ onde está o drif
 
 Pendências herdadas da Parte 1 que entram aqui: o espaçamento do Card (`py-6 flex-col` do shadcn, P14), o FacetedFilter (se a tela de usuários usar) e os estados de carregamento e erro das listas.
 
-### 2. Auth (arquivo `GAIA · Auth`, lote 04)
+### 2. Auth (arquivo `GAIA · Auth`, lote 04) · implementado
 
 | Fluxo | Rota |
 |---|---|
@@ -114,7 +114,8 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
   - Em dialog, e em formulário com estado de erro desenhado, o erro aparece só num Alert destructive no topo do corpo, sem toast. O toast fica para sucesso e para erro fora de dialog.
   - Validação aparece por campo.
 - **"Voltar" dos dialogs:** Button outline com o texto "Voltar", como nos frames do Core. Isso desfaz o "Cancelar" da Parte 1.
-- **Componentes novos no código:** ErrorState, Alert e Toggle, com os nomes do Penpot.
+- **Componentes novos no código:** ErrorState, Alert, Toggle e InputOTP (dependência `input-otp`, com o `FormOTP`), com os nomes do Penpot.
+- **Senha redefinida:** o redirect depois de redefinir vai para `/login?reset=success`, e o login mostra o Alert de sucesso. Isso substitui o toast.
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)

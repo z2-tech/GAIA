@@ -130,6 +130,8 @@ Os lotes 04 a 11 foram montados no arquivo monolítico antigo e migrados em 2026
 
 ### 04 Tela - Auth
 
+**Implementado no gaia-web em 2026-09-26** (branch `feat/screens-auth`).
+
 5 frames: Login, Login — erro, Login — senha redefinida, Recuperar senha e Redefinir senha.
 - **Erro de login:** "Erro ao fazer login, tente novamente" vira Alert destructive acima do botão.
 - **Mensagens do i18n:** `passwordResetSuccess` e `codeSent` aparecem em Alert.
