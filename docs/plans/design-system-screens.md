@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Core no `develop` (2026-09-26). Módulo 2 (Auth) implementado na `feat/screens-auth` (`6ec1af7`, `75e76bd`), aguardando conferência visual e merge. Próximo: Projeto, Fazenda & Talhão.
+**Status:** Em execução. Core no `develop` (2026-09-26). Módulo 2 (Auth) implementado na `feat/screens-auth` (`6ec1af7`, `75e76bd`, sidebar `034fab6`), aguardando conferência visual e merge. Próximo: Projeto, Fazenda & Talhão.
 **Atualizado:** 2026-09-26
 
 ## Contexto
@@ -116,6 +116,7 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 - **"Voltar" dos dialogs:** Button outline com o texto "Voltar", como nos frames do Core. Isso desfaz o "Cancelar" da Parte 1.
 - **Componentes novos no código:** ErrorState, Alert, Toggle e InputOTP (dependência `input-otp`, com o `FormOTP`), com os nomes do Penpot.
 - **Senha redefinida:** o redirect depois de redefinir vai para `/login?reset=success`, e o login mostra o Alert de sucesso. Isso substitui o toast.
+- **Sidebar (2026-09-26):** recolhida com 56 px e começa recolhida (cookie `sidebar_state` só abre quando é `true`). O botão de recolher virou item (ícone + nome) no fim, acima do separador. Feito no Penpot e no código.
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)

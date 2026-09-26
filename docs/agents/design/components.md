@@ -55,7 +55,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes das págin
 | **Table Row** (4) | `type=header/default/hover/selected` | A primeira coluna estica (`fill`). Hover e selected = muted. |
 | **Calendar Day** (5) / **Calendar** | `state=default/today/selected/outside/disabled` | Dia de 32. Selected = primary, today = accent. |
 | **Sidebar Item** (5) | `mode=expanded/collapsed` · `state=default/hover/active` | h 32. Active = `sidebar-accent`, hover = `sidebar-hover`. |
-| **Sidebar** (4) | `state=expanded/collapsed` · `active=projects/users/settings` | Expandida 256, recolhida 48. `logo/full` no topo e usuário no rodapé (NavUser). Grupos: Geral (Meus Projetos) e Gestão (Gestão de Usuários, Configurações). |
+| **Sidebar** (4) | `state=expanded/collapsed` · `active=projects/users/settings` | Expandida 256, recolhida 56 (só ícones, `logo/mark` no topo). Começa recolhida. `logo/full` no topo; no fim, o item "Recolher menu"/"Expandir menu" (ícone + nome) acima do separador e o usuário no rodapé (NavUser). Grupos: Geral (Meus Projetos) e Gestão (Gestão de Usuários, Configurações). |
 
 ## Componentes GAIA
 
