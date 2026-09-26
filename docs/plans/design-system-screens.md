@@ -120,7 +120,8 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 - **Busca de fazendas (2026-09-26):** o campo existia mas não filtrava. Agora filtra no cliente pelo nome, porque o endpoint do projeto não aceita filtro.
 - **Stepper (2026-09-26):** componente novo `components/layout/stepper.tsx`, no header do FormDialog (prop `header`). Foi usado no wizard da Nova fazenda.
 - **Nome do talhão:** virou Dialog padrão (título, input, Cancelar e Salvar talhão), no lugar do popover com botões redondos.
-- **Pendente no módulo 3:** a toolbar do mapa (DrawToolbar do MapPlaceholder) segue com os controles padrão do Leaflet-draw. Os campos de área também seguem com "(ha)" no rótulo, enquanto o design usa sufixo no input.
+- **DrawToolbar (2026-09-26):** `components/map/draw-toolbar.tsx` troca os controles do Geoman e o zoom do Leaflet por Buttons do sistema: polígono, editar e excluir à esquerda, zoom à direita. O mini menu do Geoman saiu. Esc cancela o desenho sem fechar o dialog, e o duplo clique finaliza.
+- **Pendente no módulo 3:** os campos de área seguem com "(ha)" no rótulo, enquanto o design usa sufixo no input.
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)
