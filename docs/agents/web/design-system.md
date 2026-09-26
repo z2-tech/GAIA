@@ -1,274 +1,153 @@
-# Design System — GaiaMetrics Web
+# Design System — gaia-web
 
-Padrões extraídos do código real. Seguir antes de criar qualquer componente visual.
+Guia prático de como o gaia-web aplica o design system. Descreve o código depois da migração (Parte 1, branch `feat/design-system`).
 
----
+## Princípio
 
-## Layout de Página
+O Penpot é a fonte da verdade visual: [docs/agents/design/](../design/README.md). Quando o código diverge do Penpot, o código muda. Componente novo nasce primeiro no Penpot e entra em `src/components/<grupo>/` com o mesmo nome.
+
+| Precisa de | Leia |
+|---|---|
+| Valores de token, tipografia, radius, sombra | [tokens.md](../design/tokens.md) |
+| Variantes e regras de cada componente | [components.md](../design/components.md) |
+| Loading, erro, vazio | [states.md](../design/states.md) |
+
+## Shell da página
 
 ```
-PageTemplate (sidebar + SidebarInset bg-gray-900)
-└── div.flex-1.flex.flex-col.overflow-hidden.rounded-2xl
-    ├── Header (bg-white h-16 px-6 border-b)
-    └── ContentTemplate (flex-1 p-6 bg-gray-100 flex flex-col gap-6 overflow-hidden)
-        └── [feature content]
+PageTemplate            SidebarProvider bg-sidebar
+├── AppSidebar          sidebar escura (NavMain + NavUser no rodapé)
+└── SidebarInset        bg-muted rounded-l-xl overflow-hidden
+    ├── Header          h-16 border-b bg-background px-6
+    └── ContentTemplate flex-1 flex-col gap-6 bg-muted p-6 overflow-hidden
+        └── conteúdo da feature
 ```
 
-**ContentTemplate** — sempre usar como wrapper do conteúdo da feature:
-```tsx
-<ContentTemplate>
-  {/* gap-6 entre seções já está incluso */}
-</ContentTemplate>
-```
+- `PageTemplate` já está no layout `app/(private)/layout.tsx`. A página só monta `Header` + `ContentTemplate`.
+- `Header` (`@/components/layout/header`, "AppHeader" no Penpot):
 
----
+| Prop | Tipo | Efeito |
+|---|---|---|
+| `title` | `string` | Título em `Typography variant="h1"`, truncado. Vazio mostra `-`. |
+| `linkTo` | `string` | Mostra o voltar: Button `ghost` `icon-sm` com `ChevronLeft`. |
+| `score` | `number \| null` | Mostra `BadgeScore` ao lado do título. `undefined` esconde. |
+| `actions` | `ReactNode` | Slot à direita (`ml-auto gap-2`). |
 
-## Cards
+- `ContentTemplate` já traz `gap-6` entre seções. Não repita padding nem fundo.
 
-### Card padrão (shadcn)
-Base: `bg-card text-card-foreground flex gap-6 rounded-2xl border p-6`
+## Tokens
 
-```tsx
-// Card simples com conteúdo
-<Card>...</Card>
-
-// Card vertical com título com ícone
-<Card className="flex-col gap-6">
-  <CardTitleIcon Icon={Leaf} title="Título" />
-  ...
-</Card>
-
-// Card compacto
-<Card className="p-4">...</Card>
-
-// Card de formulário em grid
-<Card className="grid grid-cols-1 gap-6 p-6 md:grid-cols-3">
-  <FormSelect ... />
-</Card>
-```
-
-### Card de lista (CardLista)
-Usado em listagens de projetos, fazendas — barra lateral colorida à esquerda.
-```tsx
-<CardLista
-  id={id}
-  name={name}
-  nameLabel="Label do nome"
-  link="/rota"
-  buttonText="Ver item"
-  progresso={50}
-  colunas={[
-    { title: "Campo", content: valor },
-  ]}
-/>
-```
-Internamente: `min-h-[160px] rounded-2xl p-0 flex gap-4 overflow-hidden` + barra `w-2 h-full bg-primary`
-
-### Card de conteúdo inline (sem componente)
-Para cards em dashboards/listagens sem usar `<Card>`:
-```tsx
-<div className="flex flex-col gap-6 rounded-2xl border bg-card p-6 shadow-sm lg:flex-row lg:items-start lg:gap-10">
-```
-> `shadow-sm` apenas em cards de listagem standalone. Cards internos usam `border` sem sombra.
-
-### Seção com título + Card (padrão mais comum)
-```tsx
-<div className="space-y-2">
-  <p className="text-base font-semibold">{título}</p>
-  <Card className="...">
-    ...
-  </Card>
-</div>
-```
-
----
-
-## Tipografia
+Só classes semânticas. `bun lint:tokens` recusa paleta crua (`bg-gray-100`, `text-blue-500`, `bg-white`), cor arbitrária (`bg-[#…]`), literal de cor em string e tamanho de fonte cru.
 
 | Uso | Classes |
 |---|---|
-| Título de página (H1 no Header) | `text-xl font-semibold text-nowrap text-gray-900` |
-| Título de card/seção | `text-base font-semibold text-foreground` |
-| Título de seção simples | `text-base font-semibold` |
-| Título de estado vazio | `text-2xl font-semibold text-center` |
-| Nome em CardLista | `font-semibold text-lg` |
-| Corpo padrão | `text-sm` |
-| Corpo com cor secundária | `text-sm text-muted-foreground` |
-| Label de campo (acima de input) | `text-sm font-medium` |
-| Sub-label / rótulo de coluna | `text-xs text-muted-foreground` ou `text-xs text-gray-400` |
-| Rótulo do nome no CardLista | `text-xs text-gray-500` |
-| Descrição de estado vazio | `text-base text-center` |
-| Texto de loading | `text-muted-foreground` |
+| Superfície | `bg-background`, `bg-card`, `bg-popover`, `bg-muted` (fundo do inset), `bg-accent` (hover, ativo) |
+| Texto | `text-foreground`, `text-muted-foreground`, `text-primary`, `text-destructive` |
+| Borda | `border` (= `border-border`), `border-input`, `ring-ring` |
+| Marca | `bg-primary text-primary-foreground` |
+| Status em texto ou fundo | `bg-{success,warning,info,destructive}-subtle text-{…}-subtle-foreground` |
+| Status em ponto, ícone, fill | `bg-success`, `bg-warning`, `bg-info`, `bg-destructive` (nunca `text-success` em texto: 2,8:1) |
+| Sidebar | `bg-sidebar`, `text-sidebar-foreground`, `sidebar-accent`, `sidebar-hover`, `sidebar-border` |
+| Série de gráfico (classe) | `bg-chart-N`, `stroke-chart-N` |
+| Série de gráfico (prop de Recharts, Leaflet, `style`) | string `"var(--color-chart-N)"` |
 
----
+Radius: `rounded-md` (button, input, badge), `rounded-lg` (dialog), `rounded-xl` (card, KpiCard, ModuleShell, inset). `rounded-full` só em avatar, ponto, barra e anel de progresso.
+
+### Séries
+
+| Série | Token | Onde está |
+|---|---|---|
+| Fóssil | `chart-1` | `features/carbon-emission/result/lib.ts` |
+| Biogênico | `chart-5` | idem |
+| Remoção | `chart-2` | idem |
+| BAU | `muted-foreground` | `features/carbon-removal/calculation/lib/scenario-colors.ts` |
+| Cenário / projeto | `chart-1` | idem |
+| Comparação, avaliações 1 a 4 | `chart-1`, `chart-4`, `chart-3`, `chart-2` | `features/comparison/shared/slot-colors.ts` |
+
+Reuse essas constantes. Não crie outra cor de série.
+
+## Tipografia
+
+`Typography` (`@/components/ui/typography`) com `variant` e `tone` (`default`, `muted`, `primary`, `destructive`). Cada variante escolhe a tag (`h1`–`h3`, `p`, `span`); `as` troca.
+
+| `variant` | Classe | px / lh / peso | Uso |
+|---|---|---|---|
+| `display` | `text-display` | 32/40/600 | Número de destaque (KPI, RadialProgress lg) |
+| `h1` | `text-h1` | 24/32/600 | Título da página (Header) |
+| `h2` | `text-h2` | 20/28/600 | Título de seção (SectionHeader), dialog |
+| `h3` | `text-h3` | 16/24/600 | Título de card, EmptyState |
+| `body-lg` | `text-body-lg` | 16/24/400 | Parágrafo de destaque |
+| `body` | `text-body` | 14/20/400 | Padrão da UI, tabela, formulário |
+| `label` | `text-label` | 14/20/500 | Label de campo, botão, cabeçalho de tabela |
+| `body-strong` | `text-body-strong` | 14/20/600 | Valor em destaque |
+| `caption` | `text-caption` | 12/16/400 | Ajuda, metadados, eixos, legenda |
+| `caption-strong` | `text-caption-strong` | 12/16/500 | Badge, grupo |
+| `mono` | `font-mono text-body tabular-nums` | 14/20/400 | Números tabulares, códigos |
+
+- Fora da `Typography`, use a classe `text-<variant>` direto (já carrega line-height e peso). Não some `font-semibold`.
+- Nunca `text-xs`/`text-sm`/`text-base`/`text-lg`/`text-xl`: a escala padrão do Tailwind foi zerada (`--text-*: initial`) e o `lint:tokens` recusa.
+- `cn` conhece a escala (`extendTailwindMerge`), então `text-body` + `text-muted-foreground` não se anulam.
+
+## Componentes
+
+| Componente | Caminho (`@/components/…`) | Quando usar |
+|---|---|---|
+| `Button` | `ui/button` | `variant`: `default` (primária, submit), `outline` (secundária com texto), `secondary`, `destructive` (irreversível), `link` (link inline), `ghost` (só ícone). `size`: `default` h-9 (padrão, não declare), `sm` h-8 (ação em card, toolbar), `lg` h-10 (CTA de largura total), `icon`/`icon-sm`/`icon-lg`. `loading` mostra spinner e desabilita. Botão com texto nunca é `ghost`. |
+| `Badge` | `ui/badge` | `default`, `secondary`, `outline`, `destructive`, `success`, `warning`, `info` (status em estilo subtle). Não passe cor por `className`. |
+| `BadgeStatus` | `badge/badge-status` | Status do projeto. `projectStatusKey(apiLabel)` mapeia o rótulo da API para `em-andamento`/`em-auditoria`/`concluido`/`pendente`/`outro`. |
+| `BadgeScore` | `badge/badge-score` | Percentual de preenchimento: `value` → faixa empty/<30/30–70/>70 com `RadialProgress sm`. |
+| `BadgeTrend` | `badge/badge-trend` | Delta contra referência. `trendTone(delta, lowerIsBetter)` dá a cor, `trendDirection(delta)` dá o ícone. Tons `reference` e `empty` mostram "Ref." e "—". |
+| `TopicFlag` | `badge/topic-flag` | Bandeira do tópico regenerativo com rótulo. `topicFlag(score)`: ≥65 bom, ≥40 atenção, <40 crítico, `null` não aplicável. |
+| `IconChip` | `icons/icon-chip` | Ícone Lucide em quadrado. `size` `sm`/`default`/`lg`, `tone` `default`/`inverse` (sobre primary)/`destructive`. |
+| `RadialProgress` | `charts/radial-progress` | Anel de progresso `sm` 16 / `md` 48 / `lg` 160. Tom automático por `scoreTone(value)`. |
+| `ProgressRow` | `charts/progress-row` | Rótulo + barra + valor. `tone` `chart-1/5/2`, `success`, `warning`, `destructive`, `inverse`. |
+| `ChartLegend` | `charts/chart-legend` | Ponto + rótulo de série: `chart-1`, `chart-5`, `chart-2`, `baseline`, `scenario`. |
+| `KpiCard` | `cards/kpi-card` | Métrica. `content` `simple`/`breakdown` (com `ProgressRow`)/`comparison` (BAU × Cenário), `emphasis` `default`/`primary`, `loading`, `onClick` vira botão. |
+| `SectionHeader` | `cards/section-header` | Título de seção (h2) com `IconChip` opcional e ações `onEdit`/`onDelete` (ícone ghost + Tooltip). |
+| `CardList` | `cards/card-list` | Item de listagem `kind` `project`/`farm`. Use os wrappers `CardProject` e `CardFarm`. |
+| `Card` | `ui/card` | Base: `rounded-xl border p-6 gap-6 shadow-sm`. Padding ou no `Card` ou no `CardContent`, nunca nos dois. |
+| `EmptyState` | `layout/empty-state` | Vazio: `IconChip lg` + h3 + descrição + `action` opcional. |
+| `ModuleStepper` / `ModuleStep` | `module/module-stepper` | Passos de módulo. `getModuleStepState(current, step, enabled)` → `active`/`completed`/`upcoming`/`locked`. |
+| `ModuleShell` | `module/module-shell` | Módulo com stepper: aside `nav` de 256, título, conteúdo rolável, `footer` de ações à direita. |
+| `FormInput`, `FormSelect`, `FormCombobox`, `FormDatePicker`, `FormTextarea`, `FormDropzone` | `form/form-*` | Todo campo de formulário. Montam o layout FormField via `FormBase` (`form/form`): label `text-label`, controle, ajuda ou erro `text-caption`, gap 8. `FormGrid` alinha campos em colunas. |
+| `FormDialog` | `dialog/form-dialog` | Dialog com formulário: não fecha ao clicar fora, rodapé Cancelar/Voltar `outline` + submit `default` com `loading`. |
+| `DataTableDefault` | `table/data-table` | Tabela. Props `loading`, `error` + `onRetry`; renderiza `TableState` sozinha. |
+| `DataTableToolbar` | `table/data-table-toolbar` | Busca (`search`), `filters`, `ColumnsSelect` e `action` à direita. |
+| `TableState` | `table/table-state` | `empty` (mensagem), `loading` (linhas skeleton), `error` (mensagem + "Tentar novamente"). Uso direto só fora do `DataTableDefault`. |
+| `DataTablePagination` | `table/data-table-pagination` | "N itens", linhas por página, "Página X de Y" e 4 botões. `serverPagination` para paginação na API. |
+| `HeaderSort` | `table/header-components/header-sort` | Cabeçalho ordenável (none → asc → desc → none). |
+
+Detalhe de tabela: [table.md](./table.md). Detalhe de formulário: [forms.md](./forms.md).
+
+## Estados
+
+Regra completa em [states.md](../design/states.md). Todo dado de rede tem os três.
+
+| Estado | Como |
+|---|---|
+| Loading | `Skeleton` na forma do conteúdo (`KpiCard loading`, `TableState loading`, `CardList` com thumb em skeleton). Spinner só em botão (`loading`). |
+| Erro | Mensagem + Button `outline` "Tentar novamente" (`common.table.retry`). Em tabela: `DataTableDefault error onRetry`. |
+| Vazio | `EmptyState` com ícone, título e descrição do i18n. Em tabela: `TableState empty`. |
 
 ## Espaçamento
 
 | Contexto | Classe |
 |---|---|
-| Entre seções no ContentTemplate | `gap-6` (já no ContentTemplate) |
-| Entre título e card de seção | `space-y-2` |
-| Entre itens dentro de card | `gap-6` |
-| Entre campos de formulário inline | `gap-6` |
-| Entre label e conteúdo em coluna | `gap-2` |
-| Agrupamento compacto | `space-y-3` |
+| Entre seções | `gap-6` (já no `ContentTemplate`) |
+| Dentro de card | `gap-6` (já no `Card`) |
+| Entre campos de formulário | `gap-4` (`FormGrid`, corpo do `FormDialog`) |
+| Label e controle | `gap-2` (já no `FormBase`) |
+| Ações lado a lado | `gap-2` |
 
----
+## Guardrails
 
-## Botões
-
-Tamanho padrão é `lg` (h-10, rounded-full, px-6). **Não especificar `size` a menos que seja diferente do padrão.**
-
-| Variante | Quando usar |
+| Comando | Garante |
 |---|---|
-| `default` (omitir) | Ação primária, submit de form |
-| `outline` | Ação secundária, filtros, anos não ativos |
-| `primaryOutline` | Ação secundária com cor primária |
-| `destructive` | Deletar, ação irreversível |
-| `link` | Cancelar, voltar em dialogs |
-| `ghost` | Ícones de navegação (back button no Header) |
-| `input` | Trigger de selects/comboboxes |
+| `bun lint:tokens` | Nenhuma cor crua nem tamanho de fonte cru em `src/` (fora de `src/client` e testes) |
+| `bun lint:boundaries` | Nenhuma feature importa outra feature |
+| `bun lint` · `bun run build` | Biome e build |
 
-```tsx
-// Ação primária
-<Button>Salvar</Button>
-
-// Ação secundária
-<Button variant="outline">Cancelar</Button>
-
-// Tamanho pequeno (ex: chips de ano)
-<Button size="sm" variant="outline">2023</Button>
-
-// Com loading
-<Button loading={isPending}>Salvar</Button>
-
-// Ícone
-<Button variant="ghost" size="icon"><ChevronLeft /></Button>
-```
-
----
-
-## Badges
-
-### BadgePorcentagem
-Exibe progresso com cor automática baseada no valor:
-```tsx
-<BadgePorcentagem valor={projeto.completion_percentage} />
-```
-Escala de cores: `0%` = cinza · `<30%` = vermelho · `≤70%` = amarelo · `>70%` = verde
-
-### BadgeProjetoStatus
-```tsx
-<BadgeProjetoStatus status={projeto.status} />
-```
-Cores por status: `under-audit` = amarelo · `completed` = verde · `in-progress` = azul · `pending` = vermelho
-
-### Badge customizado
-```tsx
-// Sempre usar variant="secondary" + override de cor
-<Badge variant="secondary" className="border w-fit px-4 text-green-500 border-green-500 bg-green-50">
-  Texto
-</Badge>
-```
-
----
-
-## Cores Semânticas
-
-| Significado | Texto | Border | Background |
-|---|---|---|---|
-| Sucesso / Concluído | `text-green-500` ou `text-green-600` | `border-green-500` | `bg-green-50` ou `bg-green-200` |
-| Atenção / Em auditoria | `text-yellow-500` ou `text-yellow-600` | `border-yellow-500` | `bg-yellow-50` ou `bg-yellow-200` |
-| Info / Em andamento | `text-blue-500` | `border-blue-500` | `bg-blue-50` |
-| Erro / Pendente | `text-red-500` ou `text-red-600` | `border-red-500` | `bg-red-50` ou `bg-red-200` |
-| Desabilitado / Neutro | `text-muted-foreground` | — | `bg-muted/70` |
-| Destructive (sistema) | `text-destructive` | — | — |
-
-> Preferir `text-*-500`/`bg-*-50` em badges com border. Usar `text-*-600`/`bg-*-200` em badges sólidos (BadgePorcentagem).
-
----
-
-## Dialogs
-
-Sempre usar `FormDialog` para dialogs com formulário:
-```tsx
-<FormDialog
-  title="Título do dialog"
-  buttonText="Abrir"
-  formId="meu-form"
-  onSubmit={handleSubmit}
-  submitText="Salvar"
-  loading={isPending}
->
-  {/* campos do form */}
-</FormDialog>
-```
-
-Regras:
-- Dialog não fecha ao clicar fora (`onInteractOutside` bloqueado)
-- Botão cancelar/voltar = `variant="link"`
-- Botão submit = `default`, com `loading` prop
-
----
-
-## Estados de Loading e Vazio
-
-### Loading de texto
-```tsx
-<div className="text-muted-foreground">{t("loading")}</div>
-```
-
-### Loading de imagem com skeleton
-```tsx
-<div className="relative w-[100px] h-full rounded-xl overflow-hidden">
-  {isLoading && <Skeleton className="absolute inset-0 rounded-xl" />}
-  <Image ... onLoad={() => setIsLoading(false)} />
-</div>
-```
-
-### Estado vazio
-```tsx
-<EmptyPage
-  animationLink="/animations/check-list.lottie"
-  title={t("empty-title")}
-  description={t("empty-description")}
-/>
-```
-
----
-
-## Ícones em Card Title
-
-```tsx
-// CardTitleIcon: ícone pequeno (size-2) em círculo (size-6) com cor blue-400
-<CardTitleIcon Icon={Leaf} title="Título do Card" />
-```
-
-Internamente usa `size-6 rounded-full bg-blue-0` + `Icon size-2 text-blue-400`.  
-Não criar variações — usar `CardTitleIcon` sempre que card precisar de ícone no título.
-
----
-
-## Border Radius
-
-| Elemento | Radius |
-|---|---|
-| Card / container principal | `rounded-2xl` |
-| Botão padrão (`lg`, `sm`) | `rounded-full` |
-| Botão `default` size | `rounded-md` |
-| Imagem em card | `rounded-xl` |
-| Área de anos/muted | `rounded-xl` |
-| Badge | `rounded-full` |
-| Avatar | `rounded-full` |
-| Chip de ano (inline) | `rounded-md` |
-
----
-
-## Padrões Proibidos
-
-- ❌ `shadow-lg` em cards internos (só `shadow-sm` em cards standalone de listagem)
-- ❌ Importar de `src/client/` diretamente em páginas ou features
-- ❌ Criar badge de status com cor hardcoded fora dos componentes `Badge*`
-- ❌ Usar `p-6` em Card e adicionar `p-6` no `CardContent` — um ou outro
-- ❌ `text-gray-*` para texto semântico — usar `text-muted-foreground`, `text-foreground`, `text-destructive`
-- ❌ Omitir `"use client"` em qualquer arquivo de feature/service que use hooks
+- Zero comentários por padrão: só um WHY que o código não carrega, 1–2 linhas, em inglês. Regra em [code-standards.md](./code-standards.md) §4.
+- `"use client"` em todo arquivo de feature ou service que usa hooks.
+- Não importe `src/client/` em páginas nem features; use `src/services/`.
+- Sombra: `shadow-sm` no Card, `shadow-xs` em controles. Nada de `shadow-lg` fora de dialog e sheet.

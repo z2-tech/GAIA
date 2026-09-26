@@ -198,7 +198,7 @@ Cada fase termina num checkpoint de aprovação.
        - DeltaBadge vira BadgeTrend, e BadgePercentage vira BadgeScore;
        - as barras usam ProgressRow com `chart.*`;
        - ações de ícone ganham Tooltip.
-5. 🔄 **Drift + handoff:** página `99 Drift` com cada inconsistência (`arquivo:linha` → token/componente). ✅ Feita em 2026-09-25 na biblioteca Design System: 79 itens de base em 6 seções (Tokens 11, Tipografia 9, Cores cruas 11, Primitivos 21, Componentes GAIA 22, Remover 5), 4 deles bugs. Espelho em [drift.md](../agents/design/drift.md). Ela vira o input do plano de migração do código, que roda em duas etapas, nesta ordem:
+5. 🔄 **Drift + handoff** (etapa 1, design system no código: ✅ implementada em 2026-09-26, plano [design-system-migration.md](./design-system-migration.md); falta a etapa 2, telas): página `99 Drift` com cada inconsistência (`arquivo:linha` → token/componente). ✅ Feita em 2026-09-25 na biblioteca Design System: 79 itens de base em 6 seções (Tokens 11, Tipografia 9, Cores cruas 11, Primitivos 21, Componentes GAIA 22, Remover 5), 4 deles bugs. Espelho em [drift.md](../agents/design/drift.md). Ela vira o input do plano de migração do código, que roda em duas etapas, nesta ordem:
    1. **Design system no código:** refatorar a base do gaia-web antes de tocar nas telas.
       - `globals.css`
       - `typography.tsx`
@@ -224,7 +224,7 @@ Movida para [docs/agents/design/penpot.md](../agents/design/penpot.md). A opera�
 - **Fora de escopo agora:** dark mode, protótipo interativo e qualquer mudança em gaia-web (fica para o plano de migração).
 - **Retomada (estado em 2026-09-25, fim do lote 13):**
   - **Modo de trabalho:** só Penpot. O código é referência de conteúdo, sem mexer em código nem em i18n agora. Componentes de UX que faltam no código entram no design (o código é ajustado depois, no caminho contrário).
-  - **Próximo passo:** o handoff da fase 5, etapa 1 (design system no código), a partir da `99 Drift`. Todas as telas existentes estão desenhadas.
+  - **Próximo passo:** a fase 5, etapa 2 (telas): comparar tela por tela com o Penpot, por módulo. A etapa 1 está implementada na `feat/design-system` do gaia-web.
 - **Pendências:**
   - Apagar o retângulo `background` de origem da foto, se ainda existir.
   - Revogar os tokens (MCP `userToken` e PAT), que foram expostos no chat, e registrar tokens novos.

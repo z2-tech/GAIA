@@ -20,35 +20,36 @@ abaixo ja tem componente ou classe no codebase.
 
 ## Regras GAIA-hard (design-agent)
 
-1. **Layout**: conteudo de feature em `ContentTemplate` (`gap-6` incluso). Shell =
-   `PageTemplate` → header (`bg-white h-16`) + `ContentTemplate`.
-2. **Cards**: base `rounded-2xl border p-6 bg-card`. Listagem standalone → `shadow-sm`;
-   card interno → `border` so, sem shadow. Nunca `p-6` em `Card` E `CardContent`.
-   Titulo com icone → sempre `CardTitleIcon`. Listagens → `CardLista`.
-3. **Tipografia**: H1 pagina `text-xl font-semibold text-gray-900`; titulo card/secao
-   `text-base font-semibold text-foreground`; corpo `text-sm`; secundario
-   `text-sm text-muted-foreground`. Sem `text-gray-*` para texto semantico — usar
-   `text-foreground`/`text-muted-foreground`/`text-destructive`.
-4. **Botoes**: size default = `lg` — **nao setar `size` salvo se diferente**.
-   `default`=primario/submit, `outline`=secundario, `destructive`=irreversivel,
-   `link`=cancelar/voltar em dialog, `ghost`=icone de nav. Loading via prop `loading`.
-5. **Badges**: status → `BadgeProjetoStatus`; progresso → `BadgePorcentagem` (cor auto).
-   Nunca hardcode cor de status-badge fora dos componentes `Badge*`.
-6. **Cores semanticas**: success=green, warning=yellow, info=blue, error=red;
-   `text-*-500`/`bg-*-50` para badge bordado, `text-*-600`/`bg-*-200` para solido.
-7. **Dialog com form → sempre `FormDialog`** (sem fechar por clique fora; cancel =
-   `variant="link"`; submit = `default` + `loading`).
-8. **Loading/empty**: texto loading `text-muted-foreground`; imagens → `Skeleton`;
-   estado vazio → `EmptyPage` (lottie + titulo + descricao).
-9. **Radius**: cards/containers `rounded-2xl`, botoes `rounded-full`, imagens
-   `rounded-xl`, badges/avatars `rounded-full`.
+1. **Penpot manda** (`docs/agents/design/`). Componente que falta nasce no Penpot e
+   entra em `src/components/<grupo>/` com o mesmo nome. Reusar antes de criar.
+2. **Shell**: `PageTemplate` (sidebar escura + `SidebarInset bg-muted rounded-l-xl`) →
+   `Header` (`title`, `linkTo`, `score`, `actions`) + `ContentTemplate` (`bg-muted p-6
+   gap-6`).
+3. **Tokens**: so classes semanticas. Status em texto = `*-subtle` +
+   `*-subtle-foreground`. Grafico/mapa = `"var(--color-chart-N)"` com as constantes de
+   serie existentes. Sem paleta crua, hex ou cor arbitraria (`bun lint:tokens`).
+4. **Tipografia**: `Typography variant=display…mono` ou a classe `text-<variant>`.
+   Nunca `text-xs/sm/base/lg/xl`.
+5. **Botoes**: size padrao = `default` (h-9), nao declarar. `sm` em card/toolbar, `lg`
+   so em CTA de largura total. `outline` = secundario com texto; `ghost` so icone,
+   nunca com texto. Loading via prop `loading`.
+6. **Radius**: `rounded-md` botao/input/badge, `rounded-lg` dialog, `rounded-xl` card.
+   `rounded-full` so em avatar, ponto e barra de progresso.
+7. **Componentes GAIA**: `BadgeStatus`, `BadgeScore`, `BadgeTrend`, `TopicFlag`,
+   `IconChip`, `RadialProgress`, `ProgressRow`, `ChartLegend`, `KpiCard`,
+   `SectionHeader`, `CardList`, `EmptyState`, `ModuleShell` + `ModuleStepper`.
+8. **Dialog com form → sempre `FormDialog`** (nao fecha por clique fora; cancelar =
+   `outline`; submit = `default` + `loading`). Campos via `Form*`.
+9. **Estados**: loading = `Skeleton` na forma do conteudo; erro = mensagem + "Tentar
+   novamente"; vazio = `EmptyState`. Tabela: `DataTableDefault` (`loading`, `error`,
+   `onRetry`).
 10. **`"use client"`** obrigatorio em qualquer arquivo de feature/service que usa hooks.
 
 ### Proibido (design-system.md)
 
-`shadow-lg` em card interno · importar `src/client/` em page/feature · cor de
-status-badge hardcoded · `p-6` duplo (Card + CardContent) · `text-gray-*` para texto
-semantico · faltar `"use client"`.
+Cor crua/hex/arbitraria · tamanho de fonte cru · botao `ghost` com texto ·
+`shadow-lg` fora de dialog/sheet · padding em `Card` E `CardContent` · importar
+`src/client/` em page/feature · faltar `"use client"`.
 
 ## Qualidade visual (universal — fallback)
 
@@ -70,7 +71,7 @@ Validar em 375px · 768px · 1024px · 1440px.
 ## Verificar
 
 ```bash
-cd gaia-web && bun lint && bun run build
+cd gaia-web && bun lint && bun lint:tokens && bun lint:boundaries && bun run build
 ```
 
 ## Entrega

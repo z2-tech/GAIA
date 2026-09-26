@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 1 (Drift)
 
-**Status:** Em execução. Etapas 1 a 3 no `develop` (`678cbe3`). Etapas 4 (`580061d`…`a603f03`) e 5 (`4617bd0`) commitadas na `feat/design-system`, aguardando conferência visual e merge. Falta a etapa 6 e o fechamento.
+**Status:** Concluído em 2026-09-26. Etapas 1 a 3 no `develop` em `678cbe3`, etapas 4 a 6 em `7d0187c`.
 **Atualizado:** 2026-09-25
 **Branch:** `feat/design-system` no gaia-web, criada a partir do `develop` em `f94b9b0`
 
@@ -154,11 +154,14 @@ A maior etapa, dividida em 5 commits, um por grupo, na ordem abaixo. Cada compon
   - rótulos `uppercase` em `picker-dialog`, `kpi-compare-cards` e `score-overview`;
   - o `font-bold` do título do login.
 
-### Etapa 6 — Remover (R1–R5)
+### Etapa 6 — Remover (R1–R5) · commitada (`b0b3cb4`)
 
 Apagar GaugeChart, Footer, OperationalStatus, FormCheckbox, FormNumberInput, ColumnBoolean, ColumnLink, ColumnPercentage, `table/filters/`, DataTableFacetedFilter e Collapsible. Antes, confirmo que continuam com 0 imports: `lint:boundaries` e `tsc` pegam qualquer sobra. É independente das outras etapas e pode ser adiantada, se você preferir.
 
 ### Fechamento
+
+Feito em 2026-09-26, com o merge no `develop` (`7d0187c`): docs do front reescritos, `drift.md` e a página `99 Drift` marcados como resolvidos (com as ressalvas P14, P17 e G4), e o CodeGraph reindexado. As chaves `common.table` dos filtros apagados saíram do i18n.
+
 
 - Atualizar os docs do front com os tokens, as variantes e os componentes novos: `docs/agents/web/design-system.md` (hoje descreve `bg-gray-100`, `rounded-2xl` e o header branco) e `.opencode/agents/design-agent.md` (as regras 4 e 9 ainda dizem Button com size `lg` padrão e `rounded-full`).
 - Marcar os itens feitos em `drift.md` e na página `99 Drift` do Penpot.
@@ -180,6 +183,9 @@ Apagar GaugeChart, Footer, OperationalStatus, FormCheckbox, FormNumberInput, Col
 - Build, typecheck, Vitest e boundaries estão verdes e o `develop` está atualizado a cada etapa.
 
 ## Fora de escopo e pendências
+
+- **Nomes que ainda diferem do Penpot:** `Header` (Penpot: AppHeader). ErrorState e FacetedFilter existem no Penpot, mas não no código: o erro com "Tentar novamente" só existe dentro das tabelas (`TableState`), e o FacetedFilter foi apagado sem uso. Entram na Parte 2 quando uma tela precisar deles.
+- **gaia-api:** mandar o `StatusEnum` na listagem de projetos (G4).
 
 - **Parte 2 (telas):** layout, composição, estados e scroll de cada tela, por módulo, com plano próprio depois desta parte.
 - **Carbono remoção sem comparação:** a antiga foi removida, e a nova (lote 11 do Penpot) vira feature própria.

@@ -5,7 +5,7 @@ Referência do que o design **define**. O arquivo Penpot é a fonte da verdade v
 - **Como operar o Penpot:** skill `penpot-design` (`.agents/skills/penpot-design/`).
 - **Quem executa:** agente `penpot-designer`.
 - **Histórico, status e decisões:** `docs/plans/penpot-design-system.md`.
-- **Como o código atual implementa:** `docs/agents/web/design-system.md`. Descreve o código de hoje e será reescrito na migração.
+- **Como o código implementa:** `docs/agents/web/design-system.md` (atualizado depois da migração, Parte 1).
 
 ## Princípios
 

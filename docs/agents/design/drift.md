@@ -2,6 +2,28 @@
 
 Onde o código do gaia-web diverge do design system. Espelha a página `99 Drift` da biblioteca Design System no Penpot, que é a fonte. Cada linha é um item do backlog da migração, etapa 1 (design system no código). O drift de cada tela fica para a etapa 2, por módulo. Caminhos relativos a `gaia-web/`. Levantamento de 2026-09-25.
 
+## Resolução
+
+**Status: resolvido em 2026-09-26**, na branch `feat/design-system` do gaia-web. Plano: [design-system-migration.md](../../plans/design-system-migration.md). A checagem `bun lint:tokens` impede que cor e tamanho crus voltem.
+
+| Itens | Commit |
+|---|---|
+| T1–T11 Tokens | `794e6b5` (o bloco `legacy` saiu em `4617bd0`) |
+| Y1–Y8 Tipografia | `c3aff0b` |
+| P1–P21 Primitivos | `06f3727` (P15 em `6af229a`) |
+| G1–G5, G17 Indicadores | `580061d` |
+| G6–G10 Cards | `6af229a` |
+| G11–G16 Layout | `a603f03` |
+| G18–G20 Formulários | `683c3e1` |
+| G21–G22 DataTable | `addb7a9` |
+| C1–C11 Cores cruas e Y9 | `4617bd0` |
+| R1–R5 Remover | `b0b3cb4` |
+
+**Resolvidos com ressalva:**
+- **P14 (Card):** só `rounded-xl` + `shadow-sm`. O espaçamento `py-6 flex-col` do shadcn fica para a Parte 2 (telas).
+- **P17 (SearchInput):** não foi apagado, porque carrega o debounce. Virou o Input Group padrão.
+- **G4 (BadgeStatus):** a API manda o status traduzido, e não o `StatusEnum`. Fica uma função de mapeamento até o gaia-api mandar o enum.
+
 **Tipos:** **Ajuste** (valor ou classe muda, a peça continua) · **Adicionar** (falta no código e existe no design) · **Substituir** (a peça do código vira outra do design) · **Remover** (sem uso ou fora do sistema) · **Bug** (comportamento errado achado no levantamento)
 
 ## Tokens

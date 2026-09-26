@@ -198,15 +198,13 @@ function MySectionCard() {
 | Component | Use for |
 |---|---|
 | `FormInput` | Text input, optional addons |
-| `FormNumberInput` | Brazilian locale numbers (`1.234,56`) |
 | `FormSelect` | Radix select dropdown |
 | `FormCombobox` | Searchable dropdown (cmdk) |
-| `FormCheckbox` | Boolean checkbox |
 | `FormDatePicker` | Date with DD/MM/YYYY mask + calendar popover |
 | `FormTextarea` | Multi-line text |
 | `FormDropzone` | File upload (single or multi), with existing-file preview |
 
-All accept `{ control, name, label }` as base props.
+All accept `{ control, name, label }` as base props. Each renders the Penpot FormField layout through `FormBase` (`form/form.tsx`): label `text-label`, control, help or error `text-caption`, gap 8. Wrap columns of fields in `FormGrid` so labels, controls and errors line up.
 
 ## Adding a new form
 

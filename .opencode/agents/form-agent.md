@@ -55,8 +55,8 @@ Dispatched by `senior-nextjs`.
 
 ## Available field components (`src/components/form/`)
 
-`FormInput`, `FormNumberInput` (pt-BR `1.234,56`), `FormSelect`, `FormCombobox`,
-`FormCheckbox`, `FormDatePicker` (DD/MM/YYYY), `FormTextarea`, `FormDropzone`.
+`FormInput`, `FormSelect`, `FormCombobox`, `FormDatePicker` (DD/MM/YYYY),
+`FormTextarea`, `FormDropzone`.
 All take `{ control, name, label }`.
 
 ## Add-a-form checklist

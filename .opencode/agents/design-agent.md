@@ -11,38 +11,43 @@ permission:
 Owns the visual layer of `gaia-web/`: shadcn/ui (New York) + Tailwind v4 + CSS vars.
 Dispatched by `senior-nextjs`.
 
-**Canonical docs (read FIRST):** `docs/agents/web/design-system.md` +
-`docs/agents/web/principles.md`. **Target visual:** the Penpot design system
-(`docs/agents/design/`) is the source of truth; when code and Penpot differ, move the
-code toward Penpot. Patterns are extracted from real code — **reuse
-before creating**. Every rule below has a component or class already in the codebase.
+**Canonical docs (read FIRST):** `docs/agents/web/design-system.md` (full component
+table, tokens, typography, states) + `docs/agents/web/principles.md`. **Target visual:**
+the Penpot design system (`docs/agents/design/`) is the source of truth; when code and
+Penpot differ, move the code toward Penpot. Every rule below has a component or class
+already in the codebase.
 
 ## Critical rules
 
-1. **Layout**: wrap feature content in `ContentTemplate` (`gap-6` between sections
-   already included). Page shell = `PageTemplate` → header (`bg-white h-16`) +
-   `ContentTemplate`.
-2. **Cards**: base `rounded-2xl border p-6 bg-card`. Standalone listing cards →
-   `shadow-sm`; internal cards → `border` only, no shadow. Never `p-6` on both `Card`
-   and `CardContent`. Card title icon → always `CardTitleIcon`, no variations.
-   Listings → `CardLista`.
-3. **Typography** (use the table): page H1 `text-xl font-semibold text-gray-900`;
-   card/section title `text-base font-semibold text-foreground`; body `text-sm`;
-   secondary `text-sm text-muted-foreground`. No hardcoded `text-gray-*` for semantic
-   text — use `text-foreground`/`text-muted-foreground`/`text-destructive`.
-4. **Buttons**: default size is `lg` — **don't set `size` unless different**.
-   `default`=primary/submit, `outline`=secondary, `destructive`=irreversible,
-   `link`=cancel/back in dialogs, `ghost`=nav icons. Loading via `loading` prop.
-5. **Badges**: status → `BadgeProjetoStatus`; progress → `BadgePorcentagem` (auto
-   color). Never hardcode a status-badge color outside the `Badge*` components.
-6. **Semantic colors** (table): success=green, warning=yellow, info=blue, error=red;
-   `text-*-500`/`bg-*-50` for bordered badges, `text-*-600`/`bg-*-200` for solid.
-7. **Dialogs with a form → always `FormDialog`** (no close on outside click; cancel =
-   `variant="link"`; submit = `default` + `loading`).
-8. **Loading/empty**: text loading `text-muted-foreground`; images → `Skeleton`;
-   empty state → `EmptyPage` (lottie + title + description).
-9. **Radius**: cards/containers `rounded-2xl`, buttons `rounded-full`, images
-   `rounded-xl`, badges/avatars `rounded-full`.
+1. **Penpot leads.** A missing component is designed in Penpot first, then lands in
+   `src/components/<group>/` with the Penpot name. Reuse before creating.
+2. **Shell**: `PageTemplate` (dark sidebar + `SidebarInset bg-muted rounded-l-xl`) →
+   `Header` (`title`, `linkTo`, `score`, `actions`) + `ContentTemplate` (`bg-muted p-6
+   gap-6`). Don't re-add padding or background.
+3. **Tokens only**: semantic classes (`bg-card`, `bg-muted`, `text-muted-foreground`,
+   `border`…). Status text = `*-subtle` + `*-subtle-foreground`; `success`/`warning`/
+   `info`/`destructive` solid only for dots, icons, fills. Charts/maps take
+   `"var(--color-chart-N)"` and reuse the existing series constants (Fóssil chart-1,
+   Biogênico chart-5, Remoção chart-2, BAU muted-foreground, Cenário chart-1;
+   comparison slots chart-1/4/3/2). No palette, hex or arbitrary colors.
+4. **Typography**: `Typography variant=display|h1|h2|h3|body-lg|body|label|body-strong|
+   caption|caption-strong|mono` + `tone`, or the matching `text-<variant>` class.
+   Never `text-xs/sm/base/lg/xl`, never extra `font-semibold` on a scale class.
+5. **Buttons**: default size is `default` (h-9) — omit it. `sm` in cards/toolbars,
+   `lg` only for full-width CTAs, `icon*` for icon buttons. `outline` = labeled
+   secondary; `ghost` = icon-only, never with text. `loading` prop for pending.
+6. **Radius**: `rounded-md` button/input/badge, `rounded-lg` dialog, `rounded-xl`
+   card/KpiCard/ModuleShell. `rounded-full` only for avatars, dots, progress bars.
+7. **GAIA components**: status → `BadgeStatus`; fill % → `BadgeScore`; delta →
+   `BadgeTrend`; regenerative flag → `TopicFlag`; icon tile → `IconChip`; progress →
+   `RadialProgress`/`ProgressRow`; legend → `ChartLegend`; metric → `KpiCard`; section
+   title → `SectionHeader`; listing → `CardList` (`CardProject`/`CardFarm`); module →
+   `ModuleShell` + `ModuleStepper`. Never restyle a status color inline.
+8. **Forms and dialogs**: fields via `Form*` components (FormField layout from
+   `FormBase`); a dialog with a form is always `FormDialog`.
+9. **States**: loading = `Skeleton` shaped like the content (spinner only in a button);
+   error = message + outline "Tentar novamente"; empty = `EmptyState`. Tables get all
+   three from `DataTableDefault` (`loading`, `error`, `onRetry`) via `TableState`.
 10. **`"use client"`** required in any feature/service file using hooks.
 11. **Zero comments by default.** Code says WHAT; a comment only buys a WHY the code
     can't carry — genuinely complex algorithm, deliberate deviation from the pattern
@@ -52,15 +57,15 @@ before creating**. Every rule below has a component or class already in the code
     structure. `src/components/ui/**` is vendored shadcn: leave its comments as they
     came. Full rule: `docs/agents/web/code-standards.md` §4.
 
-## Forbidden (from design-system.md)
+## Forbidden
 
-`shadow-lg` on internal cards · importing `src/client/` in pages/features ·
-hardcoded status-badge colors · double `p-6` (Card + CardContent) · `text-gray-*`
-for semantic text · missing `"use client"`.
+Raw palette/hex/arbitrary colors · raw font sizes · labeled `ghost` buttons ·
+`shadow-lg` outside dialog/sheet · padding on both `Card` and `CardContent` ·
+importing `src/client/` in pages/features · missing `"use client"`.
 
 ## Verify
 
-`cd gaia-web && bun lint && bun run build`
+`cd gaia-web && bun lint && bun lint:tokens && bun lint:boundaries && bun run build`
 
 ## External references
 
@@ -68,5 +73,4 @@ for semantic text · missing `"use client"`.
 - Tailwind CSS v4 — https://tailwindcss.com/docs
 - Radix Primitives (a11y base) — https://www.radix-ui.com/primitives/docs/overview/introduction
 
-Key files: `src/components/ui/`, `src/components/` (Card*, Badge*, EmptyPage,
-FormDialog, ContentTemplate, PageTemplate)
+Key files: `src/components/ui/`, `src/components/{badge,cards,charts,icons,layout,module,form,dialog,table}/`
