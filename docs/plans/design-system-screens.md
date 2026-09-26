@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Aprovado em 2026-09-26. Módulo 1 (Core) na branch `feat/screens-core`.
+**Status:** Em execução. Módulo 1 (Core) implementado em 2026-09-26 na `feat/screens-core` (`958669b`…`476de58`), aguardando conferência e merge. Próximo: Auth.
 **Atualizado:** 2026-09-26
 
 ## Contexto
@@ -28,7 +28,7 @@
 
 Para cada módulo: rotas do código ↔ páginas do Penpot ↔ onde está o drift da tela.
 
-### 1. Core (arquivo `GAIA · Core`, lote 05)
+### 1. Core (arquivo `GAIA · Core`, lote 05) · implementado
 
 | Fluxo no Penpot | Rota |
 |---|---|
@@ -104,6 +104,18 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 4. **Conferir:** screenshot de novo e comparar com o frame, estado por estado.
 5. **Verificar:** typecheck, `biome check src messages`, `lint:boundaries`, `lint:tokens`, Vitest e `next build`.
 6. **Commit** do fluxo. No fim do módulo: push, checkpoint com o usuário e merge no `develop`.
+
+## Decisões tomadas durante a execução
+
+- **CardList (2026-09-26):** o "Visualizar" virou Button link pequeno no topo à direita. A mudança foi feita primeiro no Penpot.
+- **Linhas de tabela:** o fundo é branco, igual ao cabeçalho. A tabela acompanha a altura das linhas, com a paginação logo abaixo.
+- **RadialProgress (2026-09-26):** o trilho usa a cor do tom a 20%, e não `muted`, para aparecer no BadgeScore. Feito no Penpot e no código.
+- **Erro de envio:**
+  - Em dialog, e em formulário com estado de erro desenhado, o erro aparece só num Alert destructive no topo do corpo, sem toast. O toast fica para sucesso e para erro fora de dialog.
+  - Validação aparece por campo.
+- **"Voltar" dos dialogs:** Button outline com o texto "Voltar", como nos frames do Core. Isso desfaz o "Cancelar" da Parte 1.
+- **Componentes novos no código:** ErrorState, Alert e Toggle, com os nomes do Penpot.
+- **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)
 

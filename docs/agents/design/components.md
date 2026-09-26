@@ -67,7 +67,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes das págin
 | **BadgeTrend** (5) | `tone=better/worse/neutral/reference/empty` | DeltaBadge, DeltaPill, ColumnPercentage. O tom segue melhor/pior e o ícone segue o sinal. |
 | **BadgeStatus** (5) | `status=em-andamento/em-auditoria/concluido/pendente/outro` | BadgeProjectStatus |
 | **BadgeScore** (4) | `band=empty/low/mid/high` (0 · <30 · 30–70 · >70) | BadgePercentage |
-| **RadialProgress** (9) | `size=sm/md/lg` · `tone=success/warning/destructive` | CircularProgress, CircleChart |
+| **RadialProgress** (9) | `size=sm/md/lg` · `tone=success/warning/destructive` | CircularProgress, CircleChart. Trilho na cor do tom a 20% (não `muted`), para aparecer sobre o fundo `*-subtle` do BadgeScore (mudança de 2026-09-26). |
 | **ProgressRow** (7) | `tone=chart-1/chart-5/chart-2/success/warning/destructive/inverse` | Barras do StageCard e do Score Regenerativo. `inverse` é para uso sobre primary. |
 | **ChartLegend** (5) | `series=chart-1/chart-5/chart-2/baseline/scenario` | Legendas dos gráficos |
 | **TopicFlag** (4) | `flag=good/attention/critical/na` | Bandeira do tópico regenerativo: ponto `success`/`warning`/`destructive`/`muted-foreground` + "Bom"/"Atenção"/"Crítico"/"Não aplicável". Faixas: ≥ 65 bom, ≥ 40 atenção, < 40 crítico. Substitui o ponto sem rótulo da aba e o chip da comparação. |
@@ -81,7 +81,7 @@ Para instanciar: `storage.inst('<Nome>', {prop: valor})`. Componentes das págin
 |---|---|---|
 | **SectionHeader** (3) | `action=none/edit/edit-delete` | TitleCard. `edit-delete` = lápis + lixeira (destructive) em Button Icon ghost; nas telas, cada ícone ganha Tooltip. |
 | **KpiCard** (5) | `content=simple/breakdown/comparison` · `emphasis=default/primary` | KpiCard, AllocationKpiCard, StageCard, MetricCard, ComparisonMetricCard. `primary` substitui accent, active e highlighted. |
-| **CardList** (2) | `kind=project/farm` | CardList, CardProject, CardFarm. Ação em Button outline sm. |
+| **CardList** (2) | `kind=project/farm` | CardList, CardProject, CardFarm. Ação "Visualizar" em Button link, pequeno, no topo à direita (mudança de 2026-09-26). |
 | **PlotCard** (3) | `state=default/highlighted/loading` | PlotCard da grade de talhões. `highlighted` = borda primary, em sincronia com o polígono em hover. |
 | **AssessmentCard** (3) | `progress=incomplete/complete` · `state=default/loading` | Card da avaliação ACV (aba Carbono emissão): nome, Badge da cultura e do ano, Área e Montante, ProgressRow "Progresso", "Continuar →" ou "Ver resultado →" e menu Ações. |
 | **AnnualSoilCard** (2) | `state=default/empty` | Manejo Anual do Solo: prática em Badge, dica e 6 métricas. `empty` = borda tracejada sem sombra. |

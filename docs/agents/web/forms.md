@@ -159,6 +159,8 @@ onError: (error) => {
 }
 ```
 
+In a dialog, or in a form whose Penpot frame has an error state, don't toast: render a destructive `Alert` at the top of the form body with `handleApiError(error, fallback)` (see [design-system.md](./design-system.md#erros-de-envio)).
+
 ## Form component pattern
 
 ```tsx

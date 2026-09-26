@@ -138,6 +138,8 @@ Os lotes 04 a 11 foram montados no arquivo monolítico antigo e migrados em 2026
 
 ### 05 Tela - Core
 
+**Implementado no gaia-web em 2026-09-26** (branch `feat/screens-core`).
+
 10 frames:
 
 | Linha | Frames |

@@ -151,3 +151,10 @@ Regra completa em [states.md](../design/states.md). Todo dado de rede tem os tr�
 - `"use client"` em todo arquivo de feature ou service que usa hooks.
 - Não importe `src/client/` em páginas nem features; use `src/services/`.
 - Sombra: `shadow-sm` no Card, `shadow-xs` em controles. Nada de `shadow-lg` fora de dialog e sheet.
+
+## Erros de envio
+
+- **Em dialog, e em formulário com estado de erro desenhado no Penpot:** o erro da API aparece num `Alert` `variant="destructive"` (com `CircleAlert`) no topo do corpo, com o texto de `handleApiError(error, <chave de fallback>)`. Nada de `toast.error`.
+- **Validação:** aparece por campo, via schema Zod, e não em toast.
+- **Toast:** fica para sucesso e para erro fora de dialog, quando não há onde mostrar inline.
+- **Lista com falha de carga:** usa `ErrorState` (IconChip destructive + mensagem + "Tentar novamente"). Dentro de tabela, usa `TableState`.
