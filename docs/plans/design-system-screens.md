@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) em andamento na `feat/screens-project`: fluxos 01 Projeto (`4b1efca`) e 02 Nova fazenda (`c9675c3`) feitos.
+**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) implementado na `feat/screens-project` (todos os fluxos), aguardando conferência visual e merge.
 **Atualizado:** 2026-09-26
 
 ## Contexto
@@ -47,7 +47,7 @@ Pendências herdadas da Parte 1 que entram aqui: o espaçamento do Card (`py-6 f
 
 Pendências herdadas: o título do login em `display` (sair o `font-bold`), o card de 440 e o seletor de idioma em TabsList.
 
-### 3. Projeto, Fazenda & Talhão (arquivo `GAIA · Projeto, Fazenda & Talhão`, lotes 06 e 07) · em andamento
+### 3. Projeto, Fazenda & Talhão (arquivo `GAIA · Projeto, Fazenda & Talhão`, lotes 06 e 07) · implementado
 
 | Fluxo | Rota |
 |---|---|
@@ -121,6 +121,10 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 - **Stepper (2026-09-26):** componente novo `components/layout/stepper.tsx`, no header do FormDialog (prop `header`). Foi usado no wizard da Nova fazenda.
 - **Nome do talhão:** virou Dialog padrão (título, input, Cancelar e Salvar talhão), no lugar do popover com botões redondos.
 - **DrawToolbar (2026-09-26):** `components/map/draw-toolbar.tsx` troca os controles do Geoman e o zoom do Leaflet por Buttons do sistema: polígono, editar e excluir à esquerda, zoom à direita. O mini menu do Geoman saiu. Esc cancela o desenho sem fechar o dialog, e o duplo clique finaliza.
+- **DetailsCard e PlotCard (2026-09-26):** `components/cards/details-card.tsx` com pares rótulo/valor empilhados, skeleton e editar/excluir opcionais. Usado nos detalhes da fazenda e do talhão. O hover do mapa destaca só a borda, e o card não fica mais preenchido de azul.
+- **Abas do talhão:** Tabs `line`, alinhadas à esquerda e coladas no header.
+- **Talhão e exclusão:** erros de criar, editar e excluir aparecem num Alert no dialog, sem toast.
+- **Editar talhão:** o design mostra a DrawToolbar com o lápis ativo. O código abre direto em edição, sem toolbar, e ficou assim.
 - **Pendente no módulo 3:** os campos de área seguem com "(ha)" no rótulo, enquanto o design usa sufixo no input.
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
