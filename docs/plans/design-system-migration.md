@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 1 (Drift)
 
-**Status:** Em execução. Etapas 1 (`794e6b5`), 2 (`c3aff0b`) e 3 (`06f3727`) commitadas na `feat/design-system`, aguardando conferência visual e merge no `develop`.
+**Status:** Em execução. Etapas 1 a 3 no `develop` (`678cbe3`). Etapa 4 commitada na `feat/design-system` (4a `580061d`, 4b `6af229a`, 4c `a603f03`, 4d `683c3e1`, 4e `addb7a9`), aguardando conferência visual e merge.
 **Atualizado:** 2026-09-25
 **Branch:** `feat/design-system` no gaia-web, criada a partir do `develop` em `f94b9b0`
 
@@ -93,7 +93,7 @@ Cada etapa segue a mesma verificação (seção Verificação) e termina em comm
 - **Table (P21):** o `text-white` do SortHeader e os `text-primary-foreground`/`bg-primary` dos cabeçalhos do Composto e da grade mensal saíram junto, senão ficariam branco no branco.
 - **Button:** novo `button.test.tsx` cobre o loading e o bug P9.
 
-### Etapa 4 — Componentes GAIA (G1–G22)
+### Etapa 4 — Componentes GAIA (G1–G22) · commitada
 
 A maior etapa, dividida em 5 commits, um por grupo, na ordem abaixo. Cada componente segue a variante do Penpot, documentada em [components.md](../agents/design/components.md). As features passam a usar o componente novo, e o antigo é apagado no mesmo commit.
 
@@ -106,6 +106,25 @@ A maior etapa, dividida em 5 commits, um por grupo, na ordem abaixo. Cada compon
 | 4e DataTable | G21, G22 | DataTable + DataTableToolbar genérica, textos "Colunas" e "Redefinir" no i18n, **bug G22:** SortHeader com `justify-start` e `justify-end` (`table/`) |
 
 **Atenção:** o 4a e o 4b mexem na comparação que acabou de entrar no `develop` (`delta.tsx`, `regenerative-bits`, os cards do resultado ACV e da remoção). As chaves novas de i18n entram em `pt.json` e `en.json`, e o `i18n-key-validator` confere.
+
+**Como ficou (decisões da implementação):**
+- **Specs:** as medidas saíram do Penpot (dump dos componentes das páginas 18 a 22) e os agentes seguiram esse dump.
+- **Status do projeto (G4):** a API manda o status já traduzido ("Em andamento", "In Progress") e não o `StatusEnum`, e "Em auditoria" e "Pendente" não existem no backend. O `badge-status.tsx` tem uma única função de mapeamento. **Pendência para o gaia-api:** mandar o `StatusEnum` na listagem de projetos.
+- **FormField (4d):** o `FormBase` de `form.tsx`, que já era montado com o Field do shadcn, virou o FormField, sem arquivo novo. O FormDialog fecha com "Cancelar" outline, e o wizard da Nova fazenda mantém "Voltar" outline, para voltar de passo.
+- **DataTable (4e):** o erro da lista de usuários aparece dentro da tabela, com "Tentar novamente".
+- **Cards (4b):** valores negativos deixam de ser verdes, os cards de alocação ganharam barras ProgressRow, e BAU e Cenário não são mais coloridos nos cards.
+- **Layout (4c):**
+  - Configurações foi para o grupo Gestão. O NavUser no rodapé ficou só com "Sair".
+  - O `useLogout` foi para `src/hooks`.
+  - A Lottie e a dependência `@lottiefiles/dotlottie-react` saíram.
+  - Um passo que ainda não pode ser escolhido aparece como `locked`.
+- **Ficou para a etapa 5 (cores cruas):**
+  - `BAU_COLOR`/`PROJECT_COLOR` na legenda e no gráfico da remoção (C5);
+  - hex das barras em `allocation-section`;
+  - o ícone amber do aviso em `agro-result-view`;
+  - o `ScaleTrack` de `regenerative-bits` (red, amber e green-200);
+  - o `uppercase` do cabeçalho de tópicos.
+- **Ficou para a Parte 2 (telas):** o DetailsCard em `farm-details` e o espaçamento dos cards.
 
 ### Etapa 5 — Cores e tamanhos crus (C1–C11, Y9)
 
