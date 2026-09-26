@@ -21,3 +21,4 @@ que o git log sozinho não carrega. Marque o `Status` como `Concluído` em vez d
 |-------|--------|---------|
 | [plots-module-scoping.md](./plots-module-scoping.md) | Aprovado | Talhões como unidade central dos módulos (estrutura) |
 | [penpot-design-system.md](./penpot-design-system.md) | Em execução | Design system GAIA no Penpot: tokens, primitivos shadcn, componentes unificados e telas |
+| [design-system-migration.md](./design-system-migration.md) | Em execução | Parte 1 da migração do gaia-web para o design system: os 79 itens do Drift, em 6 etapas |
