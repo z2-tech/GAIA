@@ -1,6 +1,6 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) implementado na `feat/screens-project`, aguardando conferência visual e merge. Módulo 4 (Carbono emissão) implementado na `feat/screens-carbon-emission` (2026-09-27, branch feita a partir da `feat/screens-project`), aguardando conferência visual e merge.
+**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) implementado na `feat/screens-project`, aguardando conferência visual e merge. Módulo 4 (Carbono emissão) implementado na `feat/screens-carbon-emission` (2026-09-27, branch feita a partir da `feat/screens-project`), aguardando conferência visual e merge. Módulos 5 (Carbono remoção) e 6 (Regenerativo) implementados em 2026-09-27 no working tree da `feat/screens-carbon-emission`, sem commit, junto com os ajustes ainda não commitados da emissão.
 **Atualizado:** 2026-09-27
 
 ## Contexto
@@ -72,7 +72,7 @@ Pendências herdadas:
 - o AssessmentCard da lista de avaliações;
 - o resultado ACV mostrando carregamento em texto, sem skeleton.
 
-### 5. Carbono remoção (arquivo `GAIA · Carbono remoção`, lote 10)
+### 5. Carbono remoção (arquivo `GAIA · Carbono remoção`, lote 10) · implementado
 
 | Fluxo | Rota |
 |---|---|
@@ -83,7 +83,7 @@ Pendências herdadas:
 
 As páginas `Comparação ·` do Penpot (lote 11) **ficam fora**. O código não tem esse módulo, então ele entra como feature própria, com contrato de API, e não como ajuste de tela.
 
-### 6. Regenerativo (arquivo `GAIA · Regenerativo`, lotes 12 e 13)
+### 6. Regenerativo (arquivo `GAIA · Regenerativo`, lotes 12 e 13) · implementado
 
 | Fluxo | Rota |
 |---|---|
@@ -132,6 +132,12 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 - **ChartCard (2026-09-27):** `components/charts/chart-card.tsx`, com `size="mini"` no lugar do MiniBarChart, e as props de eixo, grade, tooltip e barra (24 px) compartilhadas. O eixo Y usa número compacto.
 - **Comparação (2026-09-27):** `ComparisonShell` (AppHeader com voltar, contador em Badge e slots) serve Carbono emissão e Regenerativo. O AppHeader aceita `onBack`. O "Adicionar" cheio fica desabilitado com Tooltip. As colunas do modal têm skeleton e erro com "Tentar novamente".
 - **Pendente no módulo 4:** a visão por produto do Resultado ACV não foi conferida no navegador (o talhão de teste só tem avaliações sem produto). O "Ref." e o "Referência" seguem as chaves do i18n.
+- **Barra de módulo (2026-09-27, veio dos ajustes da emissão):** dentro de um módulo (`/module` e `/[id]/edit`), as abas do talhão dão lugar a uma barra com voltar (Tooltip "Voltar para o talhão") e o título do módulo, e o conteúdo usa padding de 8. O ModuleShell perdeu o TopBar ("Sair"/"Ver resultados"). Vale para emissão, remoção e regenerativo. **O Penpot ainda mostra o TopBar e as abas.**
+- **Módulo RothC (2026-09-27):** aside com "Etapas" e um grupo separado "Etapa atual" (chave nova `carbonRemoval.currentStepNavTitle`). Seções sem Card e sem número, com h3. Culturas anuais em RepeaterItem ("Cultura N") com "Adicionar cultura" abaixo da lista, como na emissão (o Penpot põe o botão acima). Composto com "Adicionar composto" em outline e vazio tracejado. Erro ao calcular/atualizar num Alert no topo, sem toast. ModuleSection, RepeaterItem e ModuleFormSkeleton foram para `components/module`, e o `number` do ModuleSection ficou opcional (sem número, sem ícone).
+- **Resultados da remoção:** cards em 2 colunas no padrão do AssessmentCard (nome com ↗, ID e Criado em, anos no rodapé com o mais recente em default). O "Comparar" do Resultado do cálculo não entrou, porque a comparação de remoção (lote 11) está fora.
+- **Regenerativo (2026-09-27):** a validação aparece só no campo (Manejo), como no frame. O erro ao salvar vai para um Alert. O aside é navegação com scroll-spy (`use-section-spy`). Os nomes de seção em pt seguem a API. O ModuleStep passou a quebrar em 2 linhas no lugar de cortar.
+- **ScoreScale (2026-09-27):** `components/charts/score-scale.tsx` (`lg` com ticks, `sm`) substitui ScaleTrack/ScaleMarker. Os cards da comparação regenerativa passaram para o padrão da emissão (`rounded-xl`, `p-6`, `shadow-sm`, h3), e o filtro de tópicos virou TabsList.
+- **Pendente nos módulos 5 e 6:** a aba Regenerativo preenchida não foi conferida no navegador, porque nenhum talhão de teste tem avaliação regenerativa. A comparação regenerativa também não foi conferida no navegador. O título da barra do RothC segue "Carbono remoção | Roth-C", enquanto a emissão virou só "Análise do Ciclo de Vida (ACV)".
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)

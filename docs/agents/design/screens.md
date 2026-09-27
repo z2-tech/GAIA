@@ -310,6 +310,8 @@ Implementado em 2026-09-27 (`feat/screens-carbon-emission`).
 
 ### 10 Tela - Carbono remoção
 
+Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
+
 30 frames em 8 fluxos. Textos de `carbonRemoval.*` no `pt.json`.
 
 | Fluxo | Frames |
@@ -356,6 +358,8 @@ Implementado em 2026-09-27 (`feat/screens-carbon-emission`).
 
 ### 12 Tela - Regenerativo
 
+Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
+
 13 frames em 2 fluxos, no arquivo `GAIA · Regenerativo`. Textos de `regenerative.*`. As perguntas e opções vêm do seed da API (`gaia-api/regenerative/fixtures/seed_indicators.sql`), não do `pt.json`.
 
 | Fluxo | Frames |
@@ -378,6 +382,8 @@ Implementado em 2026-09-27 (`feat/screens-carbon-emission`).
 - **Chaves i18n novas propostas:** `common.errors.loadFailed` (erro da aba).
 
 ### 13 Tela - Regenerativo comparação
+
+Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
 
 15 frames em 2 fluxos, nas páginas `Comparação · …` do `GAIA · Regenerativo`. Os frames partiram dos do lote 11 (copiados entre arquivos) e trocaram o corpo pelas peças regenerativas da 25. Textos de `comparison.*`.
 
