@@ -229,6 +229,8 @@ Os lotes 04 a 11 foram montados no arquivo monolítico antigo e migrados em 2026
 
 ### 08 Tela - Carbono emissão
 
+Implementado em 2026-09-27 (`feat/screens-carbon-emission`).
+
 31 frames em 6 fluxos:
 
 | Fluxo | Frames |
@@ -272,6 +274,8 @@ Os lotes 04 a 11 foram montados no arquivo monolítico antigo e migrados em 2026
   - excluindo/removendo com loading.
 
 ### 09 Tela - Carbono emissão comparação
+
+Implementado em 2026-09-27 (`feat/screens-carbon-emission`).
 
 20 frames em 2 fluxos. Fonte: o artifact "Gaia Metrics — Compare Calculations" e o código em `src/features/comparison`, com os textos de `comparison.*` e `carbonEmissions.*`.
 

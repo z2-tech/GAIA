@@ -1,7 +1,7 @@
 # Migração do design system para o gaia-web — Parte 2 (telas)
 
-**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) implementado na `feat/screens-project` (todos os fluxos), aguardando conferência visual e merge.
-**Atualizado:** 2026-09-26
+**Status:** Em execução. Core e Auth no `develop` (2026-09-26). Módulo 3 (Projeto, Fazenda & Talhão) implementado na `feat/screens-project`, aguardando conferência visual e merge. Módulo 4 (Carbono emissão) implementado na `feat/screens-carbon-emission` (2026-09-27, branch feita a partir da `feat/screens-project`), aguardando conferência visual e merge.
+**Atualizado:** 2026-09-27
 
 ## Contexto
 
@@ -57,7 +57,7 @@ Pendências herdadas: o título do login em `display` (sair o `font-bold`), o ca
 
 Componentes que devem entrar aqui: o Stepper (wizard da Nova fazenda), o DetailsCard (detalhes da fazenda e do talhão, hoje `farm-details` com card `highlighted` e `DataRow` feitos à mão), o PlotCard e o MapPlaceholder nos seus estados.
 
-### 4. Carbono emissão (arquivo `GAIA · Carbono emissão`, lotes 08 e 09)
+### 4. Carbono emissão (arquivo `GAIA · Carbono emissão`, lotes 08 e 09) · implementado
 
 | Fluxo | Rota |
 |---|---|
@@ -126,6 +126,12 @@ Pendências herdadas: o ScoreScale (substitui o `ScaleTrack`), o `uppercase` em 
 - **Talhão e exclusão:** erros de criar, editar e excluir aparecem num Alert no dialog, sem toast.
 - **Editar talhão:** o design mostra a DrawToolbar com o lápis ativo. O código abre direto em edição, sem toolbar, e ficou assim.
 - **Pendente no módulo 3:** os campos de área seguem com "(ha)" no rótulo, enquanto o design usa sufixo no input.
+- **AssessmentCard (2026-09-27):** `components/cards/assessment-card.tsx`, em grade de 2 colunas, com ProgressRow verde em 100% e skeleton. O valor do ProgressRow passou a usar a fonte mono, como no Penpot.
+- **Módulo ACV (2026-09-27):** o ModuleShell ganhou `heading` e `exit` (TopBar dentro do card) e `alert`. O título da etapa rola junto com o corpo. Seções sem Card, em 2 colunas (`ModuleSection`), `UnitField` com Select de 112, RepeaterItem com borda e "Adicionar" abaixo da lista. O erro de envio e o de validação vão para `root.submit` e aparecem num Alert no topo, sem toast. O Carbono remoção usa o mesmo ModuleShell sem `heading` e fica para o módulo 5.
+- **Evidência (2026-09-27):** Dropzone tracejado com ícone e FileItem (anexo atual ou arquivo novo, com X para remover). O Dropzone só é usado no módulo ACV.
+- **ChartCard (2026-09-27):** `components/charts/chart-card.tsx`, com `size="mini"` no lugar do MiniBarChart, e as props de eixo, grade, tooltip e barra (24 px) compartilhadas. O eixo Y usa número compacto.
+- **Comparação (2026-09-27):** `ComparisonShell` (AppHeader com voltar, contador em Badge e slots) serve Carbono emissão e Regenerativo. O AppHeader aceita `onBack`. O "Adicionar" cheio fica desabilitado com Tooltip. As colunas do modal têm skeleton e erro com "Tentar novamente".
+- **Pendente no módulo 4:** a visão por produto do Resultado ACV não foi conferida no navegador (o talhão de teste só tem avaliações sem produto). O "Ref." e o "Referência" seguem as chaves do i18n.
 - **Biblioteca nos arquivos de telas:** depois de mudar um componente no Design System, clicar em "Atualizar" no aviso de bibliotecas de cada arquivo `GAIA · <Módulo>`.
 
 ## Definição de pronto (por módulo)
