@@ -154,6 +154,55 @@ Veja [states.md](./states.md).
 |---|---|---|
 | **FlowTag** (6) | `kind=principal/carregando/erro/sucesso/vazio/dialog` | Marca o papel de cada frame no fluxo. Fora do produto. Tipografias `doc-display` (64), `doc-title` (32) e `doc-body` (24) só para anotação. |
 
+## Mobile (`DS - Mobile`)
+
+Arquivo separado, ligado ao Design System. Estilo mais redondo (referência: Delivery App UI Kit, Penpot Hub): pílulas, cards radius.3xl sobre folha muted com topo radius.4xl. Os helpers `storage.V`/`comp` procuram no Design System e no `DS - Mobile`. Frame 375×812, margem 16, alvo de toque mínimo 40. Regras completas na página `02 Fundamentos`.
+
+### Primitivas (`04 Primitivas`)
+
+| Componente | Variantes | Regras |
+|---|---|---|
+| **MButton** (11) | `variant=default/secondary/outline/destructive/link` · `size=lg/sm` · `state=default/loading/disabled` | Pílula. lg 48 (texto h3), sm 36 (label). Principal em largura total. `link` (sm) = texto primary sem fundo, para links do código ("Esqueci minha senha"). Nunca ghost com texto. |
+| **MField** (19) | `control=input/select/unit/unitselect/date/password/textarea` · `state=default/error` · `content=filled/placeholder` | Label + controle de 48 (textarea 112), radius.xl, texto body-lg (16, evita zoom do iOS). Ajuda escondida; ícone info escondido. |
+| **MSearch** (2) | `content=placeholder/filled` | Pílula de 48, limpar quando preenchida. |
+| **MCheck** (4) | `state=unchecked/checked/indeterminate/disabled` | Caixa de seleção com rótulo e alvo de 44. |
+| **MOtp** (3) | `state=empty/filled/error` | Label + 6 caixas elásticas de altura 56, radius.xl, dígito em h2. |
+| **MEmptyState** (3) | `kind=empty/error/success` | Ícone 64 em círculo background com borda e ícone no tom (primary/destructive/success), texto centralizado, h3, descrição e ação opcionais. Substitui EmptyState e ErrorState no mobile. error usa "Tentar novamente" (`common.retry`). |
+| **MAlert** (4) | `variant=info/success/destructive/warning` | Mensagem inline radius.2xl, ícone em círculo background, texto body em *-subtle-foreground. Substitui o Alert no mobile. |
+| **MChip** (2) | `state=default/selected` | Pílula de 36. selected = info-subtle + borda primary + check. |
+| **MTab** (2) | `state=active/inactive` | Aba de navegação em pílula de 36 numa linha que rola (fazenda, talhão). active = primary. |
+| **MSegment** (2) / **MSegmented** (2) | `state=active/inactive` · `items=2/3` | Controle segmentado em pílula (track muted). Troca de módulo e de visão. |
+
+### Componentes
+
+| Componente | Variantes | Regras |
+|---|---|---|
+| **StatusBar** (2) · **HomeIndicator** (2) | `tone=dark/light` | Moldura do iOS, fora do produto. |
+| **MIconButton** (2) | `on=primary/surface` | Círculo de 40. primary: state-layer branca a 16%; surface: background + borda. |
+| **AppBar** (3) | `kind=title/farm/home` | Topo em primary com StatusBar light, 20 px de respiro para a folha de conteúdo. farm: fazenda + SyncStatus + BadgeScore. home: Avatar + usuário + SyncStatus + sincronizar agora. |
+| **ActionBar** (4) | `actions=one/two` · `state=default/loading` | Rodapé flutuante: topo radius.4xl, shadow.lg, MButton lg + HomeIndicator. |
+| **FAB** (2) | `kind=icon/extended` | Círculo de 56 ou pílula com rótulo ("Nova fazenda"). Um por tela. |
+| **ListCard** (9) | `kind=project/farm/plot` · `state=default/pending/loading` | Card radius.3xl, ícone em círculo info-subtle, dados num bloco muted radius.2xl. Campos do código: project = Fazendas, Pendências, Status; farm = Responsável, Qtd. Pendências; plot = Área. |
+| **MAssessmentCard** (4) | `state=incomplete/complete/pending/loading` | Avaliação de módulo: nome + menu, Badges cultura/ano, Área e Montante, Progresso (chart.1; success em 100%), "Continuar" ou "Editar". |
+| **MCalcCard** (3) | `state=default/pending/loading` | Cálculo Roth-C: nome + menu, ID e "Criado em", "Editar". |
+| **MMonthRow** (5) · **MMonthHeader** | `mode=crop/biomass` · `state=default/nocrop/error` | Grade mensal: mês em cima, DPM/RPM (estica) + Cobertura (120) embaixo; biomass acrescenta kg/ha + Replicar; nocrop = warning-subtle. |
+| **MStepItem** (4) | `state=completed/active/upcoming/locked` | Etapa no BottomSheet steps. |
+| **MDropzone** | — | Envio de arquivo, borda tracejada input, radius.2xl. |
+| **MFileItem** (2) | `state=done/uploading` | Arquivo: ícone, nome, Badge do tipo, tamanho, remover; uploading com barra. |
+| **MPlotItem** (2) | `state=default/error` | Talhão do wizard: nome, área, Centralizar/Renomear/Excluir; error com borda e mensagem. |
+| **MobileStepper** | — | Card: "Etapa N de T" (primary), etapa em h2, barra de 8 (`Progress` = N/T) e MIconButton list-checks que abre as etapas num BottomSheet. |
+| **SyncStatus** (10) | `state=synced/pending/syncing/offline/error` · `on=surface/primary` | Pílula. surface em *-subtle; primary com state-layer branca. Textos novos, sem i18n no gaia-web. |
+| **ConnectionBanner** (3) | `state=offline/reconnected/error` | Aviso radius.2xl no topo da folha; error abre a fila de pendências. |
+| **SyncItem** (5) | `state=pending/syncing/error/synced/conflict` | Card da fila: seção, local, hora, Badge. error: mensagem + Revisar e Tentar novamente (MButton sm). |
+| **SheetOption** (2) · **SheetAction** (2) | `state=default/selected` · `tone=default/destructive` | Opção de lista (mínimo 52, cresce com texto longo) e linha de ação com ícone (Sincronização, Sair). |
+| **ConflictOption** (2) | `source=device/server` | Uma versão do dado em conflito: origem, quem editou e quando, campos que diferem. |
+| **BottomSheet** (9) | `kind=options/confirm/confirm-error/form/menu/steps/months/conflict/account` | Substitui Select Content, Dialog e Alert Dialog. Topo radius.4xl. confirm usa a copy do Alert Dialog do web; conflict mostra as duas ConflictOption e "Manter a do aparelho" / "Usar a do servidor"; account tem usuário, Sincronização e Sair. |
+| **Ícones** | `cloud-off`, `cloud-check`, `cloud-alert`, `smartphone`, `cloud` | Lucide que faltavam no Design System. |
+
+**FormSection (padrão, não componente):** card radius.3xl, padding 20, título h3 e MFields com gap 16. Uma seção do módulo por etapa do wizard.
+
+**Reuso do Design System:** Avatar, Badge, BadgeStatus, BadgeScore, RadialProgress, Checkbox, Input OTP, Dropzone, FileItem, Skeleton, EmptyState, ErrorState, MapPlaceholder, Separator, FlowTag.
+
 ## Removidos do código (sem uso)
 
 GaugeChart, Footer, OperationalStatus, FormCheckbox, FormNumberInput, ColumnBoolean, ColumnLink e os inputs de `filters/`. Se algum voltar a ser necessário, desenhe a partir das primitivas.

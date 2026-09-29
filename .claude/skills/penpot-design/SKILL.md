@@ -18,10 +18,13 @@ Procedimento para operar o arquivo Penpot do design system. **O que** o design d
 
 ## 0. Pré-voo (toda sessão)
 
-1. **MCP ativo:** chame `mcp__penpot__high_level_overview` uma vez por sessão.
-2. **Conexão:** rode `return penpotUtils.getPages().map(p=>p.name)`. Se falhar, peça ao usuário para abrir o plugin "Penpot MCP" no arquivo.
-3. **Helpers:** leia `.agents/skills/penpot-design/scripts/helpers.js` e passe o arquivo **inteiro** como `code` de um `execute_code`. O retorno lista páginas, tokens e o número de helpers (cerca de 50). Recarregue sempre que `storage.box` não existir: o `storage` se perde quando o plugin recarrega.
-4. **Aba:** peça ao usuário para manter a aba do Penpot visível e **não trocar de página** enquanto você trabalha.
+**Ordem de tentativa:** primeiro a API REST (`scripts/penpot-files.js`). Se ela não resolver, use o Claude in Chrome para abrir o arquivo e o plugin, e siga com a Plugin API. Só peça ajuda ao usuário depois das duas. Detalhe em `docs/agents/design/penpot.md` → Ordem de tentativa e → MCP local.
+
+1. **Chrome sem congelamento:** o Chrome congela timers e renderização de abas escondidas, e o plugin passa a levar minutos por chamada (uma espera de 1 s dentro do plugin demorando mais de 1 min é o sintoma). A flag de `chrome://flags` para isso não existe mais (Chrome 153). Peça ao usuário para fechar o Chrome (`Cmd+Q`) e reabrir pelo prompt com `! open -a "Google Chrome" --args --disable-background-timer-throttling --disable-renderer-backgrounding --disable-backgrounding-occluded-windows`. Vale até o Chrome ser fechado de novo. Sem isso, a janela do Penpot precisa ficar visível.
+2. **MCP:** o `penpot` do Claude Code é o MCP cloud do Penpot (`design.penpot.app/mcp/stream`): ele reconecta sozinho em todo arquivo aberto, sem plugin nem permissão. Com o Chrome do passo 1 ele não trava. O servidor local (`penpot-local`, `npx @penpot/mcp`) fica de plano B: exige abrir o plugin, permitir acesso à rede local e clicar em Connect a cada arquivo (detalhe em `penpot.md` → MCP local).
+3. **Trocar de arquivo:** navegue a aba pelo Claude in Chrome e espere uns 10 s. Se o arquivo mostrar "Existem atualizações nas bibliotecas compartilhadas", clique em **Atualizar**. Confira com `pp.js -e "return penpot.currentFile.name"`.
+4. **Rodar código:** `node .agents/skills/penpot-design/scripts/pp.js helpers.js mobile.js` (MCP cloud; `PP_LOCAL=1` usa o local) carrega os helpers direto do disco (cada arquivo vira um `execute_code`); `pp.js -e "<código>"` roda código solto; `pp.js <script.js>` roda um arquivo; `pp.js --export <id> out.png` exporta um frame para conferir com Read. Recarregue os helpers a cada reconexão: o `storage` é por conexão. Mantenha cada chamada abaixo de ~2 min (limite do MCP cloud): um fluxo por script. Frame longo (grade, muitos campos) montado peça a peça passa disso: monte o frame base uma vez e faça os estados com `frame.clone()` + ajustes (cerca de 1 s cada). Enquanto executa, o plugin não manda heartbeat ("suspended"); o `pp.js` repete a chamada, então espere o trabalho anterior terminar antes de mandar outro.
+5. **Arquivo certo:** `pp.js -e "return [penpot.currentFile.name, penpotUtils.getPages().map(p=>p.name)]"`. Peças e tokens são editados no **Design System** (web) ou no **DS - Mobile**; telas, no arquivo `GAIA · <Módulo>` ou `GAIA Mobile · <Módulo>`.
 
 ## 1. Regras que não se negociam
 

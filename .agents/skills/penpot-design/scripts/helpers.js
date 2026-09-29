@@ -7,9 +7,13 @@
 // library (local when the open file is the Design System itself).
 const lib = penpot.library.local;
 const ds = penpot.library.connected.find((l) => l.name === "Design System") || lib;
+// Mobile pieces live in the "DS - Mobile" library (local while editing it); web pieces stay in the Design System.
+const dsm = penpot.currentFile?.name === "DS - Mobile" ? lib : penpot.library.connected.find((l) => l.name === "DS - Mobile") || null;
+const libs = [...new Set([ds, dsm].filter(Boolean))];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 storage.lib = lib;
 storage.ds = ds;
+storage.dsm = dsm;
 storage.sleep = sleep;
 
 storage.tok = (name) => {
@@ -86,7 +90,7 @@ storage.add = (parent, ...kids) => {
 
 // Component and variant-set names are unique across the Design System, so a name is enough.
 storage.V = (n) => {
-  const c = ds.components.find((c) => c.name === n && c.isVariant && c.isVariant());
+  const c = libs.flatMap((l) => l.components).find((c) => c.name === n && c.isVariant && c.isVariant());
   if (!c) throw new Error("variant set " + n);
   return c;
 };
@@ -97,7 +101,7 @@ storage.inst = (container, props) => {
   return c.instance();
 };
 storage.comp = (n) => {
-  const c = ds.components.find((c) => c.name === n && !(c.isVariant && c.isVariant()));
+  const c = libs.flatMap((l) => l.components).find((c) => c.name === n && !(c.isVariant && c.isVariant()));
   if (!c) throw new Error("component " + n);
   return c;
 };
@@ -129,8 +133,10 @@ storage.fitTexts = (root) => {
       t.growType = "auto-width";
       n++;
     } else if (t.growType === "auto-height" && tb.height - t.height > 0.5) {
+      const fill = t.layoutChild?.horizontalSizing;
       t.resize(t.width, Math.ceil(tb.height));
       t.growType = "auto-height";
+      if (fill === "fill") t.layoutChild.horizontalSizing = "fill";
       n++;
     }
   }
@@ -566,6 +572,89 @@ storage.restack = async () => {
   const secs = penpot.root.children.filter((c) => c.name.startsWith("Fluxo")).sort((a, b) => a.name.localeCompare(b.name));
   let y = lg ? lg.height + 240 : 0;
   for (const s of secs) { s.x = 0; s.y = y; y += s.height + 240; }
+};
+
+// Mobile (GAIA Mobile · *): 375×812 frames built from DS - Mobile pieces.
+storage.go = async (name) => {
+  const pg = penpotUtils.getPages().find((p) => p.name === name);
+  penpot.openPage(pg.id);
+  await sleep(800);
+  if (penpot.currentPage.name !== name) throw new Error("page " + penpot.currentPage.name);
+};
+storage.fillAdd = (parent, ...kids) => {
+  for (const k of kids) { parent.appendChild(k); k.layoutChild.horizontalSizing = "fill"; }
+  return parent;
+};
+// Penpot rejects "" as characters: pass " " for an empty field.
+storage.mfield = (control, label, value, { state = "default", content = "filled", help = null } = {}) => {
+  const f = storage.inst("MField", { control, state, content });
+  const ts = penpotUtils.findShapes((s) => s.type === "text", f);
+  ts[0].characters = label;
+  if (value !== null) ts[1].characters = value;
+  if (help) ts[ts.length - 1].characters = help;
+  return f;
+};
+storage.mbtn = (variant, size, state, label) => storage.setText(storage.inst("MButton", { variant, size, state }), label);
+storage.malert = (variant, text) => storage.setText(storage.inst("MAlert", { variant }), text);
+storage.authScreen = (name, title, subtitle) => {
+  const S = storage;
+  const f = S.box(name, "column", 0);
+  f.flex.alignItems = "stretch";
+  f.flex.horizontalSizing = "fix";
+  f.flex.verticalSizing = "fix";
+  f.resize(375, 812);
+  S.fill(f, "primary");
+  f.clipContent = true;
+  f.appendChild(S.inst("StatusBar", { tone: "light" }));
+  const br = S.box("Brand", "row", 0, 20, 8);
+  br.flex.bottomPadding = 32;
+  br.flex.justifyContent = "space-between";
+  const logo = S.comp("full").instance();
+  const w = Math.round((logo.width * 28) / logo.height);
+  logo.resize(w, 28);
+  if (logo.children[0]) logo.children[0].resize(w, 28);
+  br.appendChild(logo);
+  const loc = S.box("Locale", "row", 2, 3, 3);
+  S.radius(loc, "radius.full");
+  S.fill(loc, "primary");
+  const pt = S.setText(S.inst("MSegment", { state: "active" }), "PT");
+  const en = S.setText(S.inst("MSegment", { state: "inactive" }), "EN");
+  S.fill(penpotUtils.findShape((s) => s.type === "text", en), "primary-foreground");
+  loc.appendChild(pt);
+  loc.appendChild(en);
+  br.appendChild(loc);
+  f.appendChild(br);
+  br.layoutChild.horizontalSizing = "fill";
+  const sh = S.box("Sheet", "column", 28, 24, 32);
+  sh.flex.alignItems = "stretch";
+  sh.flex.bottomPadding = 0;
+  S.fill(sh, "background");
+  S.bind(sh, "radius.4xl", ["borderRadiusTopLeft", "borderRadiusTopRight"]);
+  f.appendChild(sh);
+  sh.layoutChild.horizontalSizing = "fill";
+  sh.layoutChild.verticalSizing = "fill";
+  const hd = S.stack("Header", "column", 8);
+  for (const [t, ty, c] of [[title, "h1", "foreground"], [subtitle, "body-lg", "muted-foreground"]]) {
+    const x = S.txt(t, ty, c);
+    hd.appendChild(x);
+    x.growType = "auto-height";
+    x.layoutChild.horizontalSizing = "fill";
+  }
+  sh.appendChild(hd);
+  hd.layoutChild.horizontalSizing = "fill";
+  const form = S.box("Form", "column", 20);
+  form.flex.alignItems = "stretch";
+  sh.appendChild(form);
+  form.layoutChild.horizontalSizing = "fill";
+  const sp = S.box("spacer", "row");
+  sp.flex.verticalSizing = "fix";
+  sp.resize(1, 1);
+  sh.appendChild(sp);
+  sp.layoutChild.verticalSizing = "fill";
+  const hi = S.inst("HomeIndicator", { tone: "dark" });
+  sh.appendChild(hi);
+  hi.layoutChild.horizontalSizing = "fill";
+  return { f, form };
 };
 
 return {

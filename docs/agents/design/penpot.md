@@ -10,6 +10,19 @@ Toda tarefa no Penpot segue esta ordem, sem pular etapa:
 
 Se as duas primeiras falharem, diga ao usuário o que foi tentado e o erro, e só então peça ajuda.
 
+## MCP local (plano B)
+
+**Padrão: MCP cloud** (`penpot` no Claude Code, `pp.js` sem variável). Ele reconecta sozinho em cada arquivo. O "no heartbeat" que travava o cloud vinha do Chrome congelando a aba escondida; com o Chrome aberto pelos parâmetros do passo 5, ele não acontece. O local (`penpot-local`, `PP_LOCAL=1 node pp.js ...`) exige plugin + permissão de rede local + Connect a cada arquivo, e é só plano B.
+
+O MCP cloud prendia a sessão e parava de responder ("no heartbeat") quando a aba ficava em segundo plano. O servidor local é o oficial, no repositório `penpot/penpot`, pasta `mcp/` (o `penpot/penpot-mcp` foi arquivado).
+
+1. **Subir:** `npx -y -p @penpot/mcp@2.17.0 true` baixa o pacote; na pasta dele (`~/.npm/_npx/*/node_modules/@penpot/mcp`) rode `corepack pnpm@11.9.0 run bootstrap` (o pnpm 12 recusa a versão pinada, e os builds de `esbuild`/`sharp` precisam de `allowBuilds: true` no `pnpm-workspace.yaml`). Portas: plugin 4400, MCP 4401 (`/mcp`), WebSocket 4402. Use a versão mais próxima do Penpot em uso (o plugin avisa o descompasso).
+2. **Timeout:** o servidor corta tarefas em 30 s (`taskTimeoutSecs = 30` em `packages/server/dist/index.js`). Troque para 180 e reinicie com `pnpm run start` (o `bootstrap` recompila e desfaz a troca).
+3. **Plugin:** no arquivo, Plugins manager (`cmd+alt+p`) → instalar `http://localhost:4400/manifest.json` → Open → "Connect MCP server". O Chrome pede acesso à rede local: permita. O plugin abre por arquivo: ao trocar de arquivo, abra e conecte de novo. Desconecte o MCP cloud embutido (menu → MCP server → Disconnect).
+4. **Claude Code:** `claude mcp add -s local -t http penpot http://localhost:4401/mcp` (a conexão cloud fica como `penpot-cloud`). Só vale depois de `/mcp` → reconnect.
+5. **Chrome e reconexão:** abra o Chrome com `open -a "Google Chrome" --args --disable-background-timer-throttling --disable-renderer-backgrounding --disable-backgrounding-occluded-windows` (senão aba escondida congela os timers do plugin). Ao abrir cada arquivo: Menu → MCP server → Disconnect (o cloud embutido reconecta sozinho e disputa a conexão), `cmd+alt+p` → Open, aumente o painel, Connect MCP server.
+6. **Sem o cliente MCP:** `node scripts/pp.js helpers.js mobile.js` roda arquivos direto no servidor local (cada um vira um `execute_code`), `node scripts/pp.js -e "<código>"` roda código solto e `node scripts/pp.js --export <id> out.png` exporta (a página do frame tem de estar aberta: rode `storage.go(página)` antes). Assim o `helpers.js` vai do disco, sem colar.
+
 ## Pré-requisitos
 
 - **MCP:** o `penpot` fica no scope local do Claude Code (`claude mcp add --transport http --scope local penpot <url com userToken>`).
@@ -93,6 +106,9 @@ Se as duas primeiras falharem, diga ao usuário o que foi tentado e o erro, e s�
 - **O plugin não reordena páginas.** Uma página nova vai para o fim da lista.
 - **O Penpot normaliza `/` em nomes** (`section/Form` vira `section / Form`). Compare removendo espaços.
 
+- **O plugin não faz `fetch` para `localhost`** (a chamada trava até o timeout). Para carregar o `helpers.js`, cole o conteúdo no `execute_code`.
+- **Aba em segundo plano:** o Chrome suspende a aba quando a janela fica coberta ou minimizada ("no heartbeat"). Clicar pela extensão não traz a janela para a frente; a janela precisa ficar visível.
+
 ## Export e imagens
 
 - **`export_shape`:** passe o id literal, porque ele não resolve expressões. Em boards grandes dá timeout; exporte por seção ou frame.
@@ -106,7 +122,9 @@ Se as duas primeiras falharem, diga ao usuário o que foi tentado e o erro, e s�
 | Comando | O que faz |
 |---|---|
 | `node scripts/penpot-files.js new "GAIA · <Módulo>"` | Cria o arquivo do módulo no projeto GAIA, ligado ao Design System, com os tokens copiados e a página `00 Legenda` |
-| `node scripts/penpot-files.js sync-tokens` | Copia os tokens do Design System para todos os arquivos `GAIA · *` |
+| `node scripts/penpot-files.js new-lib "DS - Mobile"` | Cria uma biblioteca compartilhada ligada ao Design System, com os tokens copiados e a página `01 Capa` |
+| `node scripts/penpot-files.js new "GAIA Mobile · <Módulo>"` | Como `new`, e também liga o arquivo ao `DS - Mobile` |
+| `node scripts/penpot-files.js sync-tokens` | Copia os tokens do Design System para todos os arquivos `GAIA · *`, `GAIA Mobile · *` e `DS - Mobile` |
 | `node scripts/penpot-files.js list` | Lista os arquivos do projeto |
 
 - **`update-file` só aceita transit** (`Content-Type: application/transit+json`). Em JSON, os uuids chegam como texto e o servidor rejeita a mudança.

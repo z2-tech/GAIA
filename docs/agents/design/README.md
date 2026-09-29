@@ -61,6 +61,14 @@ Padrão obrigatório para toda tela nova, detalhado em [screens.md](./screens.md
 | GAIA · Carbono remoção | 10, 11 (`Comparação ·`) |
 | GAIA · Regenerativo | 12, 13 (`Comparação ·`) |
 
+### Mobile
+
+App de coleta em campo (preenchimento, não resultados), com preenchimento offline e envio depois. Mesmos tokens, tipografias e primitivas do web.
+
+- **`DS - Mobile`:** biblioteca compartilhada ligada ao Design System, com só as peças próprias do mobile. Criada com `node .agents/skills/penpot-design/scripts/penpot-files.js new-lib "DS - Mobile"`. Páginas: `01 Capa`, `02 Fundamentos` (regras + telas de exemplo), `03 Ícones`, `04 Primitivas` (MButton, MField…), `05`–`08 Componentes · <seção>`. Estilo mais redondo que o web (pílulas, radius 18/22/26). Inventário em [components.md](./components.md#mobile-ds---mobile).
+- **Telas:** um arquivo `GAIA Mobile · <Módulo>` por módulo, uma página por fluxo, ligado ao Design System e ao `DS - Mobile` (`penpot-files.js new "GAIA Mobile · <Módulo>"` liga os dois). Escopo: Auth, Projeto/Fazenda/Talhão, Carbono emissão, Carbono remoção, Regenerativo (Biodiversidade fora, 2026-09-29). Feitos: `GAIA Mobile · Auth` (3 fluxos, 14 frames), `GAIA Mobile · Core` (4, 25), `GAIA Mobile · Projeto, Fazenda & Talhão` (8, 40), `GAIA Mobile · Carbono emissão` (3, 25), `GAIA Mobile · Carbono remoção` (4, 28) e `GAIA Mobile · Regenerativo` (2, 21). Total: 153 frames.
+- **Conteúdo:** vem do gaia-web, como no web. O Figma "Gaia Metrics" (seções `MOBILE / APP`) é só referência de layout.
+
 ## Documentos
 
 | Arquivo | Conteúdo |

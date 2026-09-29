@@ -47,7 +47,10 @@ Escala do shadcn v4 (`--radius` 10).
 | `radius.sm` | 6 | Menu item |
 | `radius.md` | 8 | Input, select, badge, tooltip, menus |
 | `radius.lg` | 10 | Button e Button Icon (desde 2026-09-26), Dialog, TabsList, Dropzone, Alert |
-| `radius.xl` | 14 | Card, KpiCard, painel inset das telas |
+| `radius.xl` | 14 | Card, KpiCard, painel inset das telas · mobile: campo (MField) e SheetOption |
+| `radius.2xl` | 18 | Mobile: bloco interno de card, ConnectionBanner (desde 2026-09-29) |
+| `radius.3xl` | 22 | Mobile: cards (ListCard, FormSection, SyncItem, MobileStepper) |
+| `radius.4xl` | 26 | Mobile: folha de conteúdo, ActionBar e BottomSheet |
 | `radius.full` | 9999 | Avatar, slider, dots |
 
 ## Sombras (semantic)

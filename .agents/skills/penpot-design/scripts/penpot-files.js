@@ -1,6 +1,7 @@
 // Screen files in the GAIA Penpot project, via REST (token: PENPOT_TOKEN in the repo .env). Needs transit-js.
 //   node penpot-files.js new "GAIA · Regenerativo"   create a module file linked to the Design System, with its tokens
-//   node penpot-files.js sync-tokens                 copy the Design System tokens into every GAIA · * file
+//   node penpot-files.js new-lib "DS - Mobile"        create a shared library linked to the Design System, with its tokens
+//   node penpot-files.js sync-tokens                 copy the Design System tokens into every GAIA · * / GAIA Mobile · * / DS - Mobile file
 //   node penpot-files.js list                        list the project files
 const t = require("transit-js");
 const { execFileSync } = require("child_process");
@@ -40,23 +41,35 @@ const update = (fileId, changes) => {
 };
 const dsTokens = () => call("get-file", JSON.stringify({ id: DS }), { acceptTransit: true }).get(K("data")).get(K("tokens-lib"));
 const setTokens = (fileId, lib) => update(fileId, [t.map([K("type"), K("set-tokens-lib"), K("tokens-lib"), lib])]);
-const moduleFiles = () => json("get-project-files", { projectId: PROJECT }).filter((f) => f.name.startsWith("GAIA · "));
-
-const [cmd, name] = process.argv.slice(2);
-if (cmd === "new") {
-  if (!name || !name.startsWith("GAIA · ")) throw new Error('name must start with "GAIA · "');
-  if (moduleFiles().some((f) => f.name === name)) throw new Error("already exists: " + name);
+const projectFiles = () => json("get-project-files", { projectId: PROJECT });
+const moduleFiles = () => projectFiles().filter((f) => /^(GAIA · |GAIA Mobile · |DS - Mobile$)/.test(f.name));
+const create = (name, firstPage) => {
+  if (projectFiles().some((f) => f.name === name)) throw new Error("already exists: " + name);
   const f = json("create-file", { name, projectId: PROJECT, features: FEAT });
   json("link-file-to-library", { fileId: f.id, libraryId: DS });
   setTokens(f.id, dsTokens());
   const page = json("get-file", { id: f.id }).data.pages[0];
-  update(f.id, [t.map([K("type"), K("mod-page"), K("id"), t.uuid(page), K("name"), "00 Legenda"])]);
-  console.log(`created ${name} ${f.id}\nhttps://design.penpot.app/#/workspace?team-id=${f.teamId}&file-id=${f.id}`);
+  update(f.id, [t.map([K("type"), K("mod-page"), K("id"), t.uuid(page), K("name"), firstPage])]);
+  return f;
+};
+const url = (f) => `https://design.penpot.app/#/workspace?team-id=${f.teamId}&file-id=${f.id}`;
+
+const [cmd, name] = process.argv.slice(2);
+if (cmd === "new") {
+  if (!/^GAIA (Mobile )?· /.test(name || "")) throw new Error('name must start with "GAIA · " or "GAIA Mobile · "');
+  const f = create(name, "00 Legenda");
+  const mobileDs = name.startsWith("GAIA Mobile · ") && projectFiles().find((x) => x.name === "DS - Mobile");
+  if (mobileDs) json("link-file-to-library", { fileId: f.id, libraryId: mobileDs.id });
+  console.log(`created ${name} ${f.id}\n${url(f)}`);
+} else if (cmd === "new-lib") {
+  const f = create(name, "01 Capa");
+  json("set-file-shared", { id: f.id, isShared: true });
+  console.log(`created library ${name} ${f.id}\n${url(f)}`);
 } else if (cmd === "sync-tokens") {
   const lib = dsTokens();
   for (const f of moduleFiles()) { setTokens(f.id, lib); console.log("tokens synced:", f.name); }
 } else if (cmd === "list") {
   for (const f of json("get-project-files", { projectId: PROJECT })) console.log(f.id, f.name);
 } else {
-  console.log("usage: node penpot-files.js new <name> | sync-tokens | list");
+  console.log("usage: node penpot-files.js new <name> | new-lib <name> | sync-tokens | list");
 }

@@ -337,6 +337,8 @@ Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
 
 ### 11 Tela - Carbono remoção comparação
 
+Implementado em 2026-09-29 (working tree da `develop`, `src/features/comparison/carbon-removal`).
+
 14 frames em 2 fluxos. **Desenho novo:** o código não tem comparação de remoção (`ComparisonModule` só aceita `carbon-emission` e `regenerative`). Aprovado em 2026-09-25 como UX nova, no padrão do lote 09, comparando **só o Cenário do projeto** de cada avaliação.
 
 | Fluxo | Frames |
@@ -344,7 +346,7 @@ Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
 | Comparar avaliações | 1 avaliação · 2 · 4 (limite, "Adicionar" desabilitado + Tooltip) · vazio · carregando · sem resultado calculado · scroll |
 | Adicionar avaliação à comparação | nada escolhido · projeto, fazenda e talhão · 1 selecionada · vagas esgotadas · busca sem resultado · carregando · erro ao carregar |
 
-- **Entrada:** o "Comparar" do Resultado do cálculo (lote 10) abre a página com aquele cálculo. A lista de Resultados não tem "Comparar", então o frame "aberto a partir da lista" do 09 não existe aqui.
+- **Entrada:** o "Comparar" do Resultado do cálculo (lote 10) abre a página com aquele cálculo. O "Comparar" (outline) da lista de Resultados abre a página vazia com o modal no talhão atual (adicionado em 2026-09-29; falta o frame "aberto a partir da lista" no Penpot).
 - **Página:**
   - AppHeader com voltar, "Comparar avaliações — Carbono Remoção" e "Adicionar". Badge secondary com o contador e a nota "Valores do Cenário do projeto de cada avaliação".
   - ComparisonSlot sem o Select de produto: o caminho termina no período de modelagem.
@@ -398,6 +400,77 @@ Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
 - **Modal:** o do lote 11, com Badge "Módulo: Regenerativo" e a coluna "Avaliações regenerativas". O PickerOption mostra "<data>" (+ " · Principal") e a linha "Pontuação N%". Atrás do scrim fica a página regenerativa.
 - **Diferenças para o código:** a faixa Bom/Atenção/Crítico usa os tokens `success`/`warning`/`destructive` a 30% (no código são `*-200`). "Referência" e "Ref." usam BadgeTrend `reference`. O cabeçalho da tabela não usa caixa alta.
 - **Bug de texto:** o vazio dizia "avaliações de emissão". Chave nova proposta: `comparison.emptyDescriptionRegenerative` = "Adicione até {max} avaliações regenerativas para comparar.".
+
+### Mobile · Auth (`GAIA Mobile · Auth`, 2026-09-29)
+
+14 frames de 375×812 em 3 páginas, com `storage.authScreen`: topo primary com StatusBar, `logo/full` (28 de altura) e idioma PT/EN em MSegment; folha branca radius.4xl com h1, subtítulo body-lg, Form (gap 20) e HomeIndicator.
+- **Login** (6): principal, entrando, erro de validação ("E-mail inválido", "Senha é obrigatória"), erro, senha redefinida, sem conexão.
+- **Recuperar senha** (4): principal, enviando, erro de validação ("E-mail é obrigatório"), erro.
+- **Redefinir senha** (4): principal, redefinindo, erro de validação ("O código deve ter 6 dígitos", "As senhas não coincidem"), erro. Os dois frames de erro passam de 812 (856 e 886): a folha rola.
+- **Divergências do web:** sem a headline e a foto de fundo (o web já esconde em tela pequena); links viram MButton `link`; Alert vira MAlert; Input OTP vira MOtp.
+- **Chave i18n nova:** `login.noConnection` = "Sem conexão. Conecte-se à internet para entrar." (frame Login — sem conexão; Entrar fica disabled).
+- **Peças novas no DS - Mobile:** MButton `variant=link`, MOtp (3), MAlert (4), MField password `error/placeholder`, password `error/filled`, password `default/placeholder` e input `error/placeholder`.
+
+### Mobile · Core (`GAIA Mobile · Core`, 2026-09-29)
+
+25 frames em 4 páginas, com `storage.mscreen` (frame primary + AppBar + folha muted radius.4xl) e os helpers de `scripts/mobile.js`.
+- **01 Início** (7): principal, carregando (título "GaiaMetrics", como o código), erro, vazio, busca sem resultado, offline (ConnectionBanner + SyncStatus offline + item pendente), projeto criado (MAlert "Projeto criado com sucesso").
+- **02 Novo projeto** (10): wizard de 3 etapas com MobileStepper (Dados do projeto, Usuário Administrador, Módulos); lista de usuários em BottomSheet, carregando, sem conexão (MField offline), erros de validação, salvando e erro ao salvar. Botões "Próximo"/"Voltar"/"Salvar" (`farm.next`, `common.dialog.*`).
+- **03 Sincronização** (6): fila com resumo (SyncStatus, última sincronização, "Enviar agora"), enviando, falha, conflito (BottomSheet conflict), tudo sincronizado (MEmptyState success), offline.
+- **04 Menu da conta** (2): BottomSheet account e confirmação de saída com pendências.
+- **Decisões:** preenchimento e criação funcionam offline e entram na fila; lista remota usa o cache ou mostra "Disponível quando houver conexão"; conflito = escolha do usuário ("Manter a do aparelho" / "Usar a do servidor").
+- **Chaves i18n novas (sincronização):** "Sincronização", "Enviar agora", "Última sincronização: hoje às {hora}", "Aguardando envio ({n})", "{n} alterações para enviar", "Sincronizando…", "Offline · salvo no aparelho", "Falha ao sincronizar", "Sincronizado às {hora}", "Você está offline. As alterações ficam salvas no aparelho.", "Conexão restabelecida. Enviando {n} alterações…", "Não foi possível enviar {n} alterações.", "Tudo sincronizado", "Nenhuma alteração esperando envio.", "Conflito", "Resolver", "Resolver conflito", "Versão do aparelho", "Versão do servidor", "Manter a do aparelho", "Usar a do servidor", "Esta seção foi alterada no servidor depois da sua edição.", "Disponível quando houver conexão", "Sair mesmo assim", "Você tem {n} alterações não enviadas. Se sair agora, elas serão perdidas.".
+
+### Mobile · Projeto, Fazenda & Talhão (`GAIA Mobile · Projeto, Fazenda & Talhão`, 2026-09-29)
+
+40 frames em 8 páginas. Conteúdo do gaia-web `develop` (o wizard não tem mais Dados Técnicos nem Dados do Responsável, removidos em 27/09).
+- **01 Projeto** (5): Fazendas, "Buscar por fazenda...", ListCard farm ("Responsável", "Qtd. Pendências"), FAB "Nova fazenda"; carregando, erro, vazio ("Nenhuma fazenda encontrada" + "Nova fazenda"), offline.
+- **02 Nova fazenda** (12): wizard Dados Gerais (9 campos; Área Total vira label + sufixo `ha`, como no web) → Enviar arquivo (MDropzone, MFileItem, mapa, MPlotItem, "Talhões criados (3)", Nome do talhão em BottomSheet form, talhão com erro + "Corrija os talhões antes de salvar.", sem geometria com Latitude/Longitude, Substituir arquivo) → Imagem do perfil ("Criar fazenda", criando, erro).
+- **03 Fazenda** (6): mapa, "Detalhes da Fazenda" (5 campos do código), Talhões + "Novo talhão"; carregando, erro, sem talhões, sem mapa, offline.
+- **Sem abas na fazenda:** Biodiversidade saiu do escopo mobile (usuário, 2026-09-29), então a fazenda segue o código, sem menu de módulos.
+- **04 Editar fazenda** (3), **05 Novo talhão** (4, com legenda tracejada), **06 Talhão** (4, abas Dados gerais | Carbono emissão | Carbono remoção | Regenerativo), **07 Editar talhão** (3), **08 Excluir talhão** (3, BottomSheet confirm/confirm-error).
+- **Dialog → tela cheia** no mobile (Editar fazenda, Novo/Editar talhão), com ActionBar "Salvar"/"Salvar talhão" + "Cancelar".
+- **Bugs do código registrados pelo levantamento:** chaves kebab-case inexistentes nos erros de geometria do PlotItem (os textos certos estão no design); textos "Nenhum talhão desenhado", "Selecionar arquivo", "Refazer", "Salvar e continuar" existem no i18n mas não aparecem.
+- **Título da AppBar:** quebra linha (corrigido no main do DS em 2026-09-29).
+
+### Mobile · Carbono emissão (`GAIA Mobile · Carbono emissão`, 2026-09-29)
+
+25 frames em 3 páginas.
+- **01 Avaliações** (7): aba "Carbono emissão" do talhão, "Avaliações Carbono Emissão", MAssessmentCard (Continuar / Editar), FAB "Nova avaliação"; carregando, erro, vazio ("Nenhuma avaliação ACV" + "Crie sua primeira avaliação ACV para este talhão."), Ações (BottomSheet menu: Editar, Duplicar, Excluir avaliação), módulo completo ("Transporte salvo. Módulo ACV completo!"), offline.
+- **02 Excluir avaliação** (3): confirm, excluindo, erro ("Erro ao excluir avaliação").
+- **03 Módulo ACV** (15): "Análise do Ciclo de Vida (ACV)", MobileStepper de 5 etapas, seções em cards com os campos exatos do código; itens repetíveis em blocos com lixeira ("Fertilizante 1"); unidade selecionável com MField `unitselect`; evidência em MFileItem/MDropzone ("Nenhum arquivo selecionado"). Frames: Cultura e Produto (+ erro de validação, lista de culturas, salvando, erro ao salvar, carregando), Solo (+ cultura salva, limite de 20 anos), Insumos (+ sem conexão), Combustíveis, Transporte (+ finalizando), Etapas (BottomSheet steps).
+- **Sem resultado no app:** "Ver resultado" vira "Editar" (texto do menu); "Comparar" sai; ao concluir o Transporte, volta para a lista com a mensagem do código. "Salvar e ver resultado" não existe no mobile: com todas as etapas salvas, o botão é "Salvar alterações".
+- **Rodapé do wizard:** "Salvar e continuar" + "Salvar e finalizar" (etapa 5: "Salvar e finalizar" + "Voltar"); voltar etapa pelo painel Etapas.
+- **Peças novas no DS - Mobile:** MAssessmentCard (4), MStepItem (4), MField `unitselect` (2), BottomSheet `menu` e `steps`.
+
+### Mobile · Carbono remoção (`GAIA Mobile · Carbono remoção`, 2026-09-29)
+
+28 frames em 4 páginas.
+- **01 Cálculos** (7): aba "Carbono remoção", "Resultados carbono remoção", MCalcCard (ID, "Criado em", "Editar"), FAB "Preencher módulo"; carregando, erro, vazio ("Este módulo ainda não foi preenchido!" + descrição + "Preencher módulo"), Ações (menu: Editar, Renomear, Duplicar, Excluir), calculado ("Roth C calculado com sucesso"), offline.
+- **02 Renomear cálculo** (4): BottomSheet form ("Renomear cálculo", descrição, "Nome do cálculo", Salvar/Voltar); erro de validação ("Nome é obrigatório"), salvando, erro ("Erro ao atualizar o cálculo").
+- **03 Excluir cálculo** (3): "Excluir este cálculo?", excluindo, erro ("Erro ao excluir o cálculo").
+- **04 Módulo Roth-C** (14): "Carbono remoção \| Roth-C", 3 etapas. Parâmetros do projeto (+ erro de validação, carregando, "Cálculo incompleto"), BAU com produtividade + cultura anual (ciclos em blocos, grade mensal com "Mês sem cultura", composto), BAU com cultura perene (produtividade por ano), BAU com entrada de biomassa (linha kg/ha + Replicar), aplicar a vários meses e Replicar valor (BottomSheet months), BAU com erros, Cenário do projeto ("Não se aplica" marcado), finalizando, erro ao calcular ("Erro ao calcular Roth C"), Etapas.
+- **Grade mensal no mobile:** um bloco por ano, MMonthHeader + MMonthRow por mês (mês em cima, DPM/RPM e Cobertura embaixo). O sub-stepper "Etapa atual" do web não existe no mobile (o web também o esconde abaixo de lg).
+- **Sem resultado no app:** saem "Anos disponíveis" e "Visualizar"; depois de "Finalizar" o app volta para a lista com "Roth C calculado com sucesso".
+- **Bug do código registrado:** o Ano final da modelagem reutiliza a mensagem "Ano inicial deve estar entre 1900 e 2100.".
+- **Peças novas no DS - Mobile:** MCheck (4), MMonthRow (5), MMonthHeader, MCalcCard (3), BottomSheet `months`; menu ganhou "Renomear" (escondido) e form ganhou descrição e MAlert (escondidos).
+- **Performance:** frames longos montados peça a peça passam de 2 min no plugin; os estados foram feitos com `clone()` do frame base (1 s cada). `mobile.js` agora guarda cache das buscas de componente.
+
+### Mobile · Regenerativo (`GAIA Mobile · Regenerativo`, 2026-09-29)
+
+21 frames em 2 páginas.
+- **01 Regenerativo** (5): aba "Regenerativo" do talhão, "Módulo regenerativo"; vazio ("Este módulo ainda não foi preenchido!" + descrição + "Preencher módulo"), preenchido, carregando, erro, pendente de envio.
+- **02 Módulo regenerativo** (16): **wizard por seção no mobile** (no web é um formulário único com navegação por rolagem e um "Salvar"): Características do sistema produtivo (+ sem manejo, 2 etapas; + erro "Preencha os campos de características do sistema produtivo."), Produção Agrícola Regenerativa (11 perguntas; + lista de opções da Cobertura do Solo), Manejo Pecuário Regenerativo, Manejo da Paisagem, Impacto Ambiental, Comunidade, Notas; salvando, erro ao salvar ("Erro ao salvar o formulário regenerativo."), salvo ("Formulário regenerativo salvo com sucesso."), Etapas (7), carregando, erro de carga.
+- **Perguntas e opções:** da API (seed `gaia-api/regenerative/migrations/0002_seed_indicators.py`); todas são select com "Selecione...".
+- **Rodapé:** "Próximo" (`farm.next`) + "Voltar"; na última etapa "Salvar" + "Voltar".
+- **Sem resultado no app:** o Score Regenerativo e os Tópicos saem; "Comparar" sai. O preenchido mostra MEmptyState success com "Editar módulo" (texto do código).
+- **Chaves i18n novas (do Figma mobile):** "Este módulo já foi preenchido!" e "A visualização dos resultados está disponível apenas na versão web.".
+- **Abas do talhão:** a linha de MTab alinha à direita (Carbono remoção e Regenerativo) para a aba ativa aparecer.
+- **DS - Mobile:** SheetOption e o MField select crescem em altura com opções longas; o BottomSheet steps tem 7 itens (6 e 7 escondidos); o círculo do MEmptyState ganhou borda e ícone no tom (primary, destructive, success).
+
+### Resumo mobile (2026-09-29)
+
+6 arquivos, 153 frames: Auth (14), Core (25), Projeto, Fazenda & Talhão (40), Carbono emissão (25), Carbono remoção (28), Regenerativo (21). Todos aceitaram a última versão do DS - Mobile e passaram na auditoria (0). Biodiversidade ficou fora (decisão do usuário).
 
 ### Próximo
 
