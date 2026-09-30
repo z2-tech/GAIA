@@ -25,7 +25,10 @@ load on a fresh session).
 
 ## Inputs (from the user request)
 
-- `name` (required) — task title. If missing, ask for it.
+- `name` (required) — task title. If missing, ask for it. Prefix with the layer
+  only (`BE:` / `FE:` / `PROD:`); never a sequential number (`FE-42`, `BE-65`) —
+  the Plane identifier (`GAIAPROJEC-N`) is the card's number, and other cards are
+  referenced by it.
 - `description` — becomes `description_html` (wrap plain text in `<p>…</p>`).
 - `status` / state name (e.g. "Backlog", "Todo", "In Progress", "Done").
 - `assignee` / responsável — a person's name or email.

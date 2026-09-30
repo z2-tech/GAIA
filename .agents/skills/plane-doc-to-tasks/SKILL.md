@@ -51,7 +51,11 @@ serializer/migration/test; frontend → form/table/api-layer/design/i18n. Respec
 contract-first: an API contract task precedes the frontend task that consumes it
 (express with ordering, note the dependency in the description).
 
-Prefix titles `BE:` / `FE:` / `PROD:` so the split is visible.
+Prefix titles `BE:` / `FE:` / `PROD:` so the split is visible. Never add a
+sequential number (`FE-42`, `BE-65`): the Plane identifier (`GAIAPROJEC-N`) is
+the card's only number. Cross-references in descriptions use that identifier
+(e.g. "Bloqueado por: GAIAPROJEC-148"), filled in after the referenced card
+exists.
 
 ### 3. Confirm BEFORE creating (mandatory gate)
 Present the full proposed list as a table: `# · layer · title · priority ·
