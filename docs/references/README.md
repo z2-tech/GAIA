@@ -33,5 +33,7 @@ Para referências atualizadas, prefira o vault: `docs/vault/00-INDEX.md`.
 
 ### Contexto recente de produto
 
+- [29/09/2026 — estratégia Peterson, design system, comparação, mobile, export/QR code/auditor](meetings/29-09-26-estrategia-peterson-design-comparacao-mobile/29-09-26-reuniao-transcricao-e-pontos.md)
+  - [Escopo: cálculo final, export, PDF, QR code e auditor](meetings/29-09-26-estrategia-peterson-design-comparacao-mobile/29-09-26-escopo-export-qrcode-auditor.md)
 - [21/08/2026 — áudios sobre comparação, permissões e pousio](meetings/21-08-26-comparacao-permissoes-pousio/21-08-26-audios-whatsapp-transcricao-e-encaminhamentos.md)
 - [14/08/2026 — Carbono Emissão e próximas etapas](meetings/14-08-26-carbono-emissao-+-proximas-etapas/14-08-26-carbono-missao-resumo.md)

@@ -1,0 +1,211 @@
+# Questionário do cálculo oficial · Ruan Carlos Oliveira
+
+Exportado em 30/09/2026, 11:32:14 · 40 de 40 respondidas
+
+## J. A jornada do projeto
+
+**J1. Descrevam, passo a passo, um projeto real do começo ao fim: quem contrata, quem coleta, quem preenche, quem revisa, quem entrega e para quem.**
+
+> 1) A Peterson fecha o projeto.
+> 2) Peterson libera o acesso de credenciais aos modulos as pessoas que farão as coletas de dados.
+> 3) A pessoa indicada coleta os dados para input na plataforma.
+> 4) Consultor Peterson/Funcionário da empresa contratante preenche a plataforma de acordo com os modulos contratos.
+> 5) As informações são revisadas (algum processo automatizado pela plataforma com condicionantes) para permitir a finalização dos assessments para finalização do projeto.
+> 6) Resultados são gerados para as pessoas com credenciais.
+> 7) Essas informações podem ser verificados ou não por uma verificadora (Control Union)
+> 8) Somente após a verificação pela auditoria que poderiam ser gerados os QR code de verificação.
+
+**J2. O que está errado ou faltando no fluxo acima?**
+
+> Na parte 3 os dados podem ser preenchidos pelas pessoas da própria fazenda.
+> A parte de verificação pela Control pode ser opcional, pode ser que não tenham essa necessidade de uma verificação de 3a parte.
+
+**J3. Na prática, quem finaliza o projeto?**
+
+> O consultor que preencheu os cálculos
+>
+> Comentário: Mas precisamos criar gatilhos na plataforma para travar inputs de dados que sejam fora da realidade e que sejam valores errados. E após o preenchimento aparecer uma etapa de confirmação das informações para dupla checagem antes de fechar o envio.
+
+**J4. Quem usa a GAIA no dia a dia (consultor da Peterson, técnico de campo, produtor, cliente) e o que cada um faz nela?**
+
+> Consultor da Peterson e técnico de campo para o preenchimento da plataforma e das informações.
+> O produtor e cliente tem participação no acompanhamento dos resultados para entender como está os indicadores
+
+**J5. A verificação pela Control Union acontece antes ou depois de finalizar o projeto?**
+
+> Depois: finaliza, depois verifica
+
+**J6. Se o auditor encontrar um erro, quem corrige e como isso volta para ele?**
+
+> Se o auditor encontrar um erro é gerada uma não-conformidade que precisa ser corrigida em um prazo de dias (p.e. 30 dias) para ser resubmetida
+
+**J7. Depois de finalizado, o que é entregue ao cliente?**
+
+> PDF por e-mail; Acesso à plataforma; QR code no produto ou lote; Relatório formal; Planilha
+
+**J8. O cliente final (produtor, trader, comprador) acessa a GAIA ou só recebe o resultado?**
+
+> Depende do cliente
+
+**J9. Na safra seguinte, é um projeto novo ou o mesmo projeto continua?**
+
+> Projeto novo a cada safra
+>
+> Comentário: Mas podemos permitir que os clientes acessem os projetos anteriores e possam até duplicar os assessments anteriores para só alterar os inputs da safra. Com isso ele economiza um tempo tendo que colocar informações de identificação do projeto que não houveram alteração entre os anos.
+
+## 1. O conceito
+
+**1. O cálculo oficial representa o quê?**
+
+> O ponto de partida para medir melhorias
+
+**2. Uma simulação pode virar oficial?**
+
+> Sim, uma simulação pode virar oficial
+>
+> Comentário: Mas essa simulação precisa ser confrata depois com os dados reais para fazer a confirmação do valor. Ao fim o que fica depois é a informação com dados reais.
+
+**3. Que nome faz sentido para o cliente?**
+
+> Não sei
+>
+> Comentário: Não entendi esse ponto
+
+**4. Na reunião, o Paulo citou uma conversa anterior sobre "um ambiente para fazer verificação". O que foi combinado nela?**
+
+> Seria um acesso ao auditor para permitir abrir os dados dos resultados, dados primários e evidência dos mesmos para poder fazer a verificação dos dados.
+
+## 2. Unidade e período
+
+**5. Um projeto corresponde a uma safra (ou campanha) específica?**
+
+> Sim, um projeto é uma safra
+>
+> Comentário: Geralmente o projeto será pela safra, mas tb pode haver a necessidade da fazenda querer reportar os resultados do ciclo de produção, o que implicaria ter até 3 safras. Então podemos pensar em ter um resultado consolidado anual da fazenda que queria reportar alguma coisa.
+
+**6. Quantos oficiais por talhão?**
+
+> Um por talhão, módulo e safra
+
+**7. O que define o período?**
+
+> Safra agrícola
+
+**8. Com duas safras no mesmo ano no mesmo talhão (ex.: soja e milho safrinha), cada cultura tem seu oficial?**
+
+> Sim, cada cultura tem seu oficial
+
+**9. Na Remoção, o que vai para a declaração?**
+
+> A projeção
+>
+> Comentário: Na remoção com a modelagem vai sair os resultados  projetados para 5 anos, porém essas informações também serão confrontadas com os dados primários. Então vai ter o dado do estoque real na linha de base, depois a modelagem com 5 anos para mostrar a teorica evolução, e ao fim do 5o ano outra analise de estoque de C no solo para confirmar se o modelado se concretizou ou não
+
+**10. Quais módulos precisam de cálculo oficial?**
+
+> Emissão; Remoção; Regenerativo; Biodiversidade
+
+**11. Para a Control Union e para o comprador, o número declarado é de quê?**
+
+> Talhão; Fazenda; Projeto
+>
+> Comentário: Vai depender do que ele quer reportar. Pode ser pelo projeto, mas se quiser por em um relatório de sustentabilidade pega a informação da fazenda total
+
+## 3. Finalizar o projeto e travar
+
+**12. Quando o oficial deve travar?**
+
+> Livre durante o projeto, trava ao finalizar
+
+**13. Finalizar o projeto é uma ação de alguém, ou acontece sozinho quando tudo chega a 100%?**
+
+> Ação explícita de alguém
+
+**14. Na hora de finalizar, o que fazer com um talhão sem oficial?**
+
+> Bloquear a finalização
+
+**15. Quem a plataforma deve permitir que finalize o projeto?**
+
+> Admin do projeto; Gestor
+
+**16. Um projeto finalizado pode ser reaberto?**
+
+> Pode; PDF e QR antigos deixam de valer
+>
+> Comentário: Mas seria preciso pedir autorização a Gaia/Peterson para abrir
+
+**17. Depois de finalizado, o usuário ainda pode ver ou criar simulações naquele projeto?**
+
+> Só ver
+
+**18. O PDF e o QR code só saem depois de finalizar?**
+
+> Pode haver um PDF de rascunho antes
+>
+> Comentário: Mas deixar claro com marca d'agua ou algum verificador que não é oficial. Mas podemos pensar nos riscos que isso pode trazer. Se for gerar muita complexidade deixa só depois de finalizar
+
+**19. Se um fator de emissão for atualizado, os oficiais de projetos finalizados…**
+
+> São recalculados
+>
+> Comentário: Por que pode haver mudanã brusca na metodologia e não vai poder comparar uma linha base com metodologia e o ano corrente com a outra. A linha base precisa ser recalculada com os dados anteriores
+
+**20. A plataforma precisa ter o estado "verificado"?**
+
+> Não sei
+>
+> Comentário: Não entendi essa parte.
+
+## 4. Quem faz o quê
+
+**21. Durante o projeto, quem pode marcar ou trocar o oficial?**
+
+> Admin do projeto; Gestor
+
+**22. Trocar o oficial ou reabrir um projeto precisa de justificativa escrita?**
+
+> Só para reabrir o projeto
+
+**23. O auditor precisa ver o histórico de trocas do oficial (quem, quando, motivo)?**
+
+> Sim
+
+## 5. Onde o oficial aparece
+
+**24. Dashboards de fazenda e projeto devem somar só os oficiais?**
+
+> Sim
+
+**25. Na comparação, simulações aparecem…**
+
+> Só quando o usuário pedir
+
+**26. As médias de referência devem ignorar simulações?**
+
+> Sim
+
+## 6. Casos do dia a dia
+
+**27. Quando o talhão tem um único cálculo, ele vira oficial sozinho?**
+
+> Sim
+
+**28. Se alguém excluir o oficial, a plataforma deve…**
+
+> Pedir para escolher
+
+**29. Nos projetos que já existem, podemos marcar como oficial o cálculo mais recente de cada talhão e pedir revisão?**
+
+> Sim
+
+**30. Dados coletados no celular entram como…**
+
+> Rascunho até alguém revisar
+
+## Para fechar
+
+**F1. Algo que não perguntamos e deveríamos saber?**
+
+> O principal ponto de atenção é sobre a proteção dos dados. Como eles são protegidos e seguros pelas legislações nacionais e globais.
+> Outra coisa é ter um suporte operacional para tratar de erros e bugs ou duvidas. Geralmente as outras plataformas demoram bastante nessas devolutivas o que atrapalha muito no prazo que essas empresas tem anualmente para reportar essas informações

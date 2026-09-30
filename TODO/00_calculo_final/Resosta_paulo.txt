@@ -1,0 +1,161 @@
+Questionário do cálculo oficial · Paulo Rocha
+
+== J. A jornada do projeto ==
+J1. Descrevam, passo a passo, um projeto real do começo ao fim: quem contrata, quem coleta, quem preenche, quem revisa, quem entrega e para quem.
+→ Os passos estão corretos, apenas alguns esclarecimentos. Passo 2 e 3 - Acredito que seja o mesmo. Geralmente vamos a campo com o computador ou celular e fazemos essa coleta de dados. Geralmente quando a Peterson vende um projeto vendemos com essa coleta de dados também, ou seja, o tecnico da Peterson faz esse coleta. Eventualemente, o tecnico da empresa que comprou o projeto faz essa coleta, acontece menos, mas pode acontecer. Além disso, a coleta de dados não acontece apenas na linha de base, denominamos linha de base a primeira coleta, as demais coletas chamamos de monitoramento, e em ambas situações as simulações podem acontecer, pois é com base nas simulações que a recomendação do manejo da fazenda (manejo da fazenda é a forma de adubar mais ou menos, implementar uma prática ou não e etc) vai mudar, para ser mais eficiente. Ou seja, a coleta de dados da situação real acontece, naquele momento fazemos a foto do manejo atual, e em cima disso simulamos para saber como melhorar, mas o resultado final é o real, da foto de como esta naquele momento. O passo 4 foi explicado atrás, mas tem um detalhe aqui, se a empresa quer fazer um "claim" que é uma comunicação daquele informação ela fecha o projeto com o dado real, se a empresa quer apenas melhorar processo ela pode manter as simulações. Passo 5 a Peterson finaliza o projeto com a anuencia do cliente. A partir do passo 6 e 7 apenas empresas que querem fazer claim é que seguem, caso a empresa visa apenas melhorar processo ela para na etapa 5.
+
+J2. O que está errado ou faltando no fluxo acima?
+→ Nada o fluxo acima esta bem desenhando eu apenas expliquei ele um pouco melhor.
+
+J3. Na prática, quem finaliza o projeto?
+→ O gestor do projeto
+  Comentário: A Peterson, que seria "O gestor do projeto". Ou seja, depois que os dados são coletados, as simulações são feitas, a Peterson juntamente com o cliente toman a decisão que esta na hora de fazer a verificação ou não. A partir deste momento  o projeto é fechado.
+
+J4. Quem usa a GAIA no dia a dia (consultor da Peterson, técnico de campo, produtor, cliente) e o que cada um faz nela?
+→ Mair parte do tempo consultor da Peterson e alguns casos mais raros o técnico de campo ou produtor (que é mais informado e gosta de tecnologia) faz coletas e o cliente usa apenas para verificar os resultados dos dashboards.
+
+J5. A verificação pela Control Union acontece antes ou depois de finalizar o projeto?
+→ Depois: finaliza, depois verifica
+  Comentário: Quando Peterson e o Cliente toman a decisão de finalizar o projeto e seja de interrese a empresa fazer o "claim" o projeto deve ser fechado, pois não pode ter nenhuma alteração de dados depois disso e ai sim a Control faz a verificação.
+
+J6. Se o auditor encontrar um erro, quem corrige e como isso volta para ele?
+→ Se ele encontra o erro o projeto volta para a Peterson e para o cliente para fazer a correção, ai o projeto deve ser reaberto.
+
+J7. Depois de finalizado, o que é entregue ao cliente?
+→ PDF por e-mail; Acesso à plataforma; QR code no produto ou lote; Relatório formal; Planilha
+  Comentário: No projeto finalizado e verificado pela COntrol, o cliente não pode alterar nenhum dado, mas ele deve por um periodo ter acesso a plataforma para verificar os dasboards, conseguir baixar as planilhas com os dados, e ter acesso ao QR code. Para aqueles que não irão perguntar por verificação e pode continuar manipular os dados, e ter acesso a todas as funções, porém quando o contrato terminar a gente bloqueia o acesso.
+
+J8. O cliente final (produtor, trader, comprador) acessa a GAIA ou só recebe o resultado?
+→ (sem resposta)
+  Comentário: Depende de como fechamos o projeto. Exemplo, se a Trader contratou o projeto a gente (Peterson) fazendo tudo, quem tem acesso é a Peterson e a Trader. Denovo, geralmente a trader vai acessar apenas para ver a evolução de coleta de dados e resultados nos dashboards. Se eles contraram a plataforma com a opção deles fazerem as coletas eles podem ter acesso e eventualemente podem pedir para o produtor ou tecnico de campo da fazenda ou deles para fazer as coletas. Ou pode ser misto parte a Peterson faz e parte produtores deles fazem. O mais comun é sempre a Peterson fazer tudo.
+
+J9. Na safra seguinte, é um projeto novo ou o mesmo projeto continua?
+→ Depende
+  Comentário: Depende de quanto tempo contraram o projeto, então pode ser projeto apenas para criação de linha de base (onde eles podem simular cenarios ou não), ou pode ser projeto de criação de linha de base mais monitoramento, de multiplos anos.
+
+== 1. O conceito ==
+1. O cálculo oficial representa o quê?
+→ (sem resposta)
+  Comentário: A linha de base ou "base line" é o ponto de partida do projeto, ou seja, é a foto de onde começamos. Depois da linha de base, são implementados boas práticas, ou as melhorias, e partir da linha de base é feito as comparações. A partir da linha de base chamamos de monitoramento. Os dados de Linha de Base e Monitoramento são coletados a nivel de talhão ou fazenda, mas o "claim" final, e o relatorio final com QR, deve ser uma media ponderada dos talhões da fazenda. Ou seja, um único numero de pegada de carbono, score regenerativo, sequestro de carbono no solo, biodiversidade, água e etc é apresentado.
+
+2. Uma simulação pode virar oficial?
+→ (sem resposta)
+  Comentário: A simulação te mostra o caminho, se a empresa se compromente a fazer daquela maneira e quer comunicar aquele dado, a simulação pode ser verificada e se tornar oficial. Não é muito comun, mas pode acontecer.
+
+3. Que nome faz sentido para o cliente?
+→ (sem resposta)
+  Comentário: BAU é "Bussines as Usual" é o que é feito, seria similar a linha de base "Cenario de projeto" é a simulação com a adição de práticas. Mas esta nomeclaturas são especificamente para a simulação do solo.
+
+4. Na reunião, o Paulo citou uma conversa anterior sobre "um ambiente para fazer verificação". O que foi combinado nela?
+→ Não nescessariamente precisa ser um ambiente novo, se for mais fácil talvez ele pode usar o mesmo ambiente do gestor de projeto e de quem coleta os dado. A ideia é após a Peterson e a empresa concordarem que o projeto acabou e que esta na hora de pedir a verificação dos dados que o projeto seja bloqueado para a Peterson e para o cliente, e que o auditor tenha acesso as informações coletadas (como baixar planilhas de dados primarios) acesso ao pdf dos dasboards, bem como as evidências coletadas, mas também aos fatores de emissão dos calculos, acesso as equações, mas que ele não seja capaz de fazer nenhuma alteração apenas verifique tudo. Nesse sentido, ele teria duas opções, poder escrever recomendações em algum lugar pedindo a revisão ou explicação de alguma informação, neste caso a plataforma seria reaberta denovo para que a Peterson e a empresa fizesse a alteração de algumas coisas ou, em caso não tenha nenhuma alteração ele simplesmente aprova o projeto e os dados daquele projeto fica travado.
+
+== 2. Unidade e período ==
+5. Um projeto corresponde a uma safra (ou campanha) específica?
+→ Depende
+  Comentário: Depende de como eles contrataram pode ser uma safra ou varias
+
+6. Quantos oficiais por talhão?
+→ (sem resposta)
+  Comentário: Para verificação como disse acima deveria ser uma média ponderada por fazenda.
+
+7. O que define o período?
+→ Safra agrícola
+  Comentário: Projeto curto safra, projeto longo 12 meses
+
+8. Com duas safras no mesmo ano no mesmo talhão (ex.: soja e milho safrinha), cada cultura tem seu oficial?
+→ (sem resposta)
+  Comentário: Sim. Esse é uma pergunta dificil de responder para o solo.
+
+9. Na Remoção, o que vai para a declaração?
+→ A variação de estoque no período
+  Comentário: Variação comparando inicial e final. Qual foi o ganho em t CO2/ha
+
+10. Quais módulos precisam de cálculo oficial?
+→ (sem resposta)
+  Comentário: Todos, mas foco principal em carbono.
+
+11. Para a Control Union e para o comprador, o número declarado é de quê?
+→ (sem resposta)
+  Comentário: Fazenda e projeto.
+
+== 3. Finalizar o projeto e travar ==
+12. Quando o oficial deve travar?
+→ Trava ao enviar para verificação
+  Comentário: Travar ao enviar para a verificação. Mas pode ser reaberto caso o auditor peça correções.
+
+13. Finalizar o projeto é uma ação de alguém, ou acontece sozinho quando tudo chega a 100%?
+→ (sem resposta)
+  Comentário: Ação da Gaia, avaliando o contrato de utilização da plataforma para aquele projeto.
+
+14. Na hora de finalizar, o que fazer com um talhão sem oficial?
+→ Finalizar e deixar o talhão fora dos totais
+  Comentário: Não entendi.
+
+15. Quem a plataforma deve permitir que finalize o projeto?
+→ Admin do projeto
+  Comentário: O Admin do projeto finaliza, so a Gaia é que reabre.
+
+16. Um projeto finalizado pode ser reaberto?
+→ (sem resposta)
+  Comentário: Depois da verificação formal do auditor não. Os dados podem ser usados em uma continuidade do projeto, mas depois da verificação não pode ter alteração
+
+17. Depois de finalizado, o usuário ainda pode ver ou criar simulações naquele projeto?
+→ (sem resposta)
+  Comentário: Caso tenha continuidade, ou seja, o projeto é linha de base mais monitoramento, ele pode fazer simulações mas acredito que deveria ser aberto outro projeto com os mesmo dados.
+
+18. O PDF e o QR code só saem depois de finalizar?
+→ (sem resposta)
+  Comentário: Dar a opção de baixar o PDF sem QR do dashboard a qualquer momento. Mas o PDF com QR so apos a verificação.
+
+19. Se um fator de emissão for atualizado, os oficiais de projetos finalizados…
+→ (sem resposta)
+  Comentário: Boa pergunta, acho que ficam como estão. Preciso chegar se pode haver atualização apos verificação.
+
+20. A plataforma precisa ter o estado "verificado"?
+→ (sem resposta)
+  Comentário: Acho que sim.
+
+== 4. Quem faz o quê ==
+21. Durante o projeto, quem pode marcar ou trocar o oficial?
+→ Admin do projeto
+
+22. Trocar o oficial ou reabrir um projeto precisa de justificativa escrita?
+→ Sim, sempre
+
+23. O auditor precisa ver o histórico de trocas do oficial (quem, quando, motivo)?
+→ (sem resposta)
+  Comentário: Não.
+
+== 5. Onde o oficial aparece ==
+24. Dashboards de fazenda e projeto devem somar só os oficiais?
+→ (sem resposta)
+  Comentário: Não esta claro a pergunta. Mas pelo que entendi acho que sim.
+
+25. Na comparação, simulações aparecem…
+→ (sem resposta)
+  Comentário: Não entendi.
+
+26. As médias de referência devem ignorar simulações?
+→ (sem resposta)
+  Comentário: Não entendi.
+
+== 6. Casos do dia a dia ==
+27. Quando o talhão tem um único cálculo, ele vira oficial sozinho?
+→ (sem resposta)
+  Comentário: Sim, quando tem mais de um talhão deve ser feito a média ponderada dos talhões para ter o numero da fazenda.
+
+28. Se alguém excluir o oficial, a plataforma deve…
+→ (sem resposta)
+  Comentário: Não entendi.
+
+29. Nos projetos que já existem, podemos marcar como oficial o cálculo mais recente de cada talhão e pedir revisão?
+→ (sem resposta)
+  Comentário: Não ficou claro.
+
+30. Dados coletados no celular entram como…
+→ (sem resposta)
+  Comentário: entram como oficial.
+
+== Para fechar ==
+F1. Algo que não perguntamos e deveríamos saber?
+→ Não, so o fim que ficou confuso as perguntas.

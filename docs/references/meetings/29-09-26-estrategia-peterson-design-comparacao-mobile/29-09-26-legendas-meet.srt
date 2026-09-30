@@ -1,0 +1,5758 @@
+1
+00:00:00,000 --> 00:00:04,000
+(Paulo Rocha)
+E assim eu sentei e falei: "Cara, olha, tô
+
+2
+00:00:04,000 --> 00:00:08,000
+(Paulo Rocha)
+fazendo meu pósdoc, deixa eu te mostrar um negócio que eu tô fazendo lá".
+
+3
+00:00:08,000 --> 00:00:12,000
+(Paulo Rocha)
+Aí abriu a plataforma, aí pá, comecei a mexer e
+
+4
+00:00:12,000 --> 00:00:16,000
+(Paulo Rocha)
+pá, bota mapa aqui, mostra dashboard, isso foi só
+
+5
+00:00:16,000 --> 00:00:20,000
+(Paulo Rocha)
+crescendo o olho. Aí ele falou:
+-
+
+()
+Boa.
+
+6
+00:00:20,000 --> 00:00:24,000
+(Paulo Rocha)
+"p****, você tá fazendo outro com o Farm Tur?" Falei: "Não, melhor, né?"
+
+7
+00:00:24,000 --> 00:00:28,000
+(Paulo Rocha)
+Eh, o F tu tem como
+
+8
+00:00:28,000 --> 00:00:32,000
+(Paulo Rocha)
+eh plugar aqui. Ele falou: "Ah, mas que que é que você vai fazer com isso? Você vai
+
+9
+00:00:32,000 --> 00:00:36,000
+(Paulo Rocha)
+tornar isso disponível?" Falei: "Não, vou vender para
+
+10
+00:00:36,000 --> 00:00:40,000
+(Paulo Rocha)
+Pets". Falei,
+-
+
+()
+Hai você falando para ele na cara dele.
+
+11
+00:00:40,000 --> 00:00:44,000
+(Paulo Rocha)
+falei, falou: "Pô, não, mas não é assim, mãe. Não é assim." Falei:
+
+12
+00:00:44,000 --> 00:00:48,000
+(Paulo Rocha)
+"Não vai, a gente conversa". Eu falei: "Eu tô tentando fazer,
+
+13
+00:00:48,000 --> 00:00:52,000
+(Paulo Rocha)
+tem 4 anos, não consigo." Eu tenho sócio lá, né, cara? Se
+
+14
+00:00:52,000 --> 00:00:56,000
+(Paulo Rocha)
+fosse só eu, a gente podia até conversar, mas eu tenho vários sócios lá.
+
+15
+00:00:56,000 --> 00:01:00,000
+(Paulo Rocha)
+Então, aí levantou assim, pô, mas aí você vem, trabalha na empresa e
+
+16
+00:01:00,000 --> 00:01:04,000
+(Paulo Rocha)
+cria um negócio. E falei: "Uai, falei, mas não esquenta não que
+
+17
+00:01:04,000 --> 00:01:08,000
+(Paulo Rocha)
+na hora que eu que eu terminar eu te apresento
+
+18
+00:01:08,000 --> 00:01:12,000
+(Paulo Rocha)
+certinho. Ainda falta alguns detalhes, né?" Aí, beleza,
+
+19
+00:01:12,000 --> 00:01:16,000
+(Paulo Rocha)
+saímos da sala e não falou mais nada. Agora é a
+
+20
+00:01:16,000 --> 00:01:20,000
+(Paulo Rocha)
+gente fazer esses pequenos ajustes que tem aí paraa gente poder
+
+21
+00:01:20,000 --> 00:01:24,000
+(Paulo Rocha)
+mostrar aqui no Brasil, né, que eu vou sentar com com
+
+22
+00:01:24,000 --> 00:01:28,000
+(Paulo Rocha)
+o nosso diretor aqui no Brasil, vou
+
+23
+00:01:28,000 --> 00:01:32,000
+(Paulo Rocha)
+mostrar para ele falar: "Cara, a gente tá procurando
+
+24
+00:01:32,000 --> 00:01:36,000
+(Paulo Rocha)
+eh um MRV
+-
+
+()
+Que que
+
+25
+00:01:36,000 --> 00:01:40,000
+(Paulo Rocha)
+e a gente já viu vários, né? Não
+-
+
+()
+é mesmo? Desculpa.
+
+26
+00:01:40,000 --> 00:01:44,000
+(Paulo Rocha)
+fechou por nenhum. No meu pósd aqui eu fiz um. É isso
+
+27
+00:01:44,000 --> 00:01:48,000
+(Paulo Rocha)
+daqui. Vamos testar aí nos projetos. Se a gente colocar para dentro,
+
+28
+00:01:48,000 --> 00:01:52,000
+(Paulo Rocha)
+se a gente fizer um projeto, aí acabou, cara. Aí a gente
+
+29
+00:01:52,000 --> 00:01:56,000
+(Paulo Rocha)
+consegue, a minha, a minha preocupação maior é
+
+30
+00:01:56,000 --> 00:02:00,000
+(Paulo Rocha)
+um, é um diretor novo que tem aí, que é um cara
+
+31
+00:02:00,000 --> 00:02:04,000
+(Paulo Rocha)
+meio meio complicado, que é o Pedro, Pedro
+
+32
+00:02:04,000 --> 00:02:08,000
+(Ruan Carlos Oliveira)
+Угу.
+-
+
+(Paulo Rocha)
+Malta, o o An conce que eu acho que é quem
+
+33
+00:02:08,000 --> 00:02:12,000
+(Paulo Rocha)
+pode empinar a carroça assim de falar, p****, o cara trabalha na
+
+34
+00:02:12,000 --> 00:02:16,000
+(Ruan Carlos Oliveira)
+Угу.
+-
+
+(Paulo Rocha)
+empresa, cria uma plataforma para poder competir e tudo, mas
+
+35
+00:02:16,000 --> 00:02:20,000
+(Paulo Rocha)
+aí tipo o máximo que vai acontecer é dar ruim para mim, né? é os
+-
+
+()
+Entendi.
+
+36
+00:02:20,000 --> 00:02:24,000
+(Paulo Rocha)
+cara, os caras quererem me mandar embora, o que para eles também eu não acho que vai
+
+37
+00:02:24,000 --> 00:02:28,000
+(Paulo Rocha)
+ser eh vai ser o melhor caminho, porque se eles me manda
+
+38
+00:02:28,000 --> 00:02:32,000
+(Paulo Rocha)
+embora, eu tenho a plataforma, eu tenho conhecimento, eu vou pro mercado prestar
+
+39
+00:02:32,000 --> 00:02:36,000
+(Paulo Rocha)
+serviço que eles estão prestando. Eh, eu não quero fazer isso hoje
+
+40
+00:02:36,000 --> 00:02:40,000
+(Paulo Rocha)
+porque eu ganho relativamente bem e eu tô numa fase que eu não tô
+
+41
+00:02:40,000 --> 00:02:44,000
+(Paulo Rocha)
+podendo arriscar muito, entendeu? Que eu tenho pensão para poder
+
+42
+00:02:44,000 --> 00:02:48,000
+(Paulo Rocha)
+pagar, pago uns 200 aluguel, pago 300.000 coisas.
+
+43
+00:02:48,000 --> 00:02:52,000
+(Paulo Rocha)
+Mas se isso acontecer, o que vai acontecer, meu amigo?
+
+44
+00:02:52,000 --> 00:02:56,000
+(Paulo Rocha)
+Eh, eu vou pro mercado e vou oferecer serviço de
+
+45
+00:02:56,000 --> 00:03:00,000
+(Paulo Rocha)
+consultoria, de implementação e de VI. É simples assim,
+
+46
+00:03:00,000 --> 00:03:04,000
+(Paulo Rocha)
+entendeu? Então
+-
+
+()
+Entendi. Vou é assim
+
+47
+00:03:04,000 --> 00:03:08,000
+()
+também nos piores dos casos é se você sair de todo e ficar
+
+48
+00:03:08,000 --> 00:03:12,000
+()
+full Gaia, eh, o dinheiro que a gente tem para Gaia vira um
+
+49
+00:03:12,000 --> 00:03:16,000
+(Paulo Rocha)
+não,
+-
+
+()
+salário suficiente para você. Você vai estar trabalhando nisso, né, para vender
+
+50
+00:03:16,000 --> 00:03:20,000
+(Ruan Carlos Oliveira)
+Ah.
+-
+
+(Paulo Rocha)
+não, não dá, não
+-
+
+()
+ela. Deixa de ser
+
+51
+00:03:20,000 --> 00:03:24,000
+(Paulo Rocha)
+dá, não
+-
+
+()
+verdade. Paga um mês do cara. Aí é
+
+52
+00:03:24,000 --> 00:03:28,000
+(Paulo Rocha)
+dá assim. Eu eu
+-
+
+()
+f***, cara. ganha meio milhão. É f***. F
+
+53
+00:03:28,000 --> 00:03:32,000
+(Paulo Rocha)
+agradeço, cara, a sua,
+
+54
+00:03:32,000 --> 00:03:36,000
+(Paulo Rocha)
+né, a sua eh ombridade. Mas
+-
+
+()
+desumilde. Boa
+
+55
+00:03:36,000 --> 00:03:40,000
+(Paulo Rocha)
+é assim, não, se se isso acontecer, cara,
+
+56
+00:03:40,000 --> 00:03:44,000
+(Paulo Rocha)
+o que eu vou ter que fazer é ir atrás de projeto mesmo, entendeu? Aí
+
+57
+00:03:44,000 --> 00:03:48,000
+(Paulo Rocha)
+é projeto fechado de de consultoria com
+-
+
+()
+vontade.
+
+58
+00:03:48,000 --> 00:03:52,000
+(Paulo Rocha)
+a Gaia dentro, né? que aí o o tipo de serviço que a gente faz,
+
+59
+00:03:52,000 --> 00:03:56,000
+(Paulo Rocha)
+cara, em quase todos os projetos, a H encaixa. Se a gente for colocando
+
+60
+00:03:56,000 --> 00:04:00,000
+(Paulo Rocha)
+os módulos todos lá, na hora que a gente terminar, em todos os serviços
+
+61
+00:04:00,000 --> 00:04:04,000
+(Paulo Rocha)
+encaixa, entendeu?
+-
+
+()
+Entendi. Entendi. É, aí
+
+62
+00:04:04,000 --> 00:04:08,000
+()
+no caso daria então para você pôr a Gaia como uma cobrança adicional e o dinheiro da Gaia
+
+63
+00:04:08,000 --> 00:04:12,000
+(Paulo Rocha)
+Eh, é tipo, fechou o projeto, tem a parte
+-
+
+()
+ir pra Gaia, né?
+
+64
+00:04:12,000 --> 00:04:16,000
+(Paulo Rocha)
+de sei lá, de benchmark, de uma série de coisas, de
+
+65
+00:04:16,000 --> 00:04:20,000
+(Paulo Rocha)
+coleta de dados, de não sei o quê, que é o que eu que é o que eu vou fazer. E tem a
+
+66
+00:04:20,000 --> 00:04:24,000
+(Paulo Rocha)
+parte de processamento de dado de MRAV, que é o serviço da
+-
+
+()
+Aham.
+
+67
+00:04:24,000 --> 00:04:28,000
+(Paulo Rocha)
+Gaia, né? Assim, eu tô falando de um de uma situação
+
+68
+00:04:28,000 --> 00:04:32,000
+(Paulo Rocha)
+extrema, não acho que isso vai acontecer, tá? Eh,
+-
+
+()
+G não
+
+69
+00:04:32,000 --> 00:04:36,000
+(Paulo Rocha)
+eu eu quero acreditar que os caras no fim eles vão falar: "Não, beleza,
+
+70
+00:04:36,000 --> 00:04:40,000
+(Ruan Carlos Oliveira)
+Угуm.
+-
+
+(Paulo Rocha)
+vamos ver como como que a gente usa esse negócio, né? Se eles falar
+
+71
+00:04:40,000 --> 00:04:44,000
+(Paulo Rocha)
+também: "Ah, não, a gente não quer usar". Aí a gente vai caçar um cliente pra gente poder vender,
+
+72
+00:04:44,000 --> 00:04:48,000
+(Paulo Rocha)
+né? Eh, que é uma outra é uma outra oportunidade também que a gente
+-
+
+()
+beleza.
+
+73
+00:04:48,000 --> 00:04:52,000
+(Paulo Rocha)
+tem, a gente bater na porta de algumas empresas aí e falar: "Meu, tenho a plataforma
+
+74
+00:04:52,000 --> 00:04:56,000
+(Paulo Rocha)
+aqui, plataforma é essa e é tanto você
+
+75
+00:04:56,000 --> 00:05:00,000
+(Paulo Rocha)
+quer, entendeu?" Mas assim, a semente ela foi
+
+76
+00:05:00,000 --> 00:05:04,000
+(Paulo Rocha)
+plantada, né? Os caras, o o pica lá
+
+77
+00:05:04,000 --> 00:05:08,000
+(Paulo Rocha)
+sabe, então ninguém vai chegar para ele, vai para ele, que era
+
+78
+00:05:08,000 --> 00:05:12,000
+(Paulo Rocha)
+o meu o meu medo. Eu já fui logo no pica e agora nós vamos
+
+79
+00:05:12,000 --> 00:05:16,000
+(Paulo Rocha)
+atacar aqui embaixo,
+-
+
+()
+Entendi. Entendi, entendi,
+
+80
+00:05:16,000 --> 00:05:20,000
+(Paulo Rocha)
+entendeu? É, não,
+-
+
+()
+entendi. Ah, então seu plano era esse mesmo para ter falado com ele é só para não dar problema
+
+81
+00:05:20,000 --> 00:05:24,000
+(Paulo Rocha)
+assim, ele poderia ele poderia morder a isca,
+-
+
+()
+depois que para
+
+82
+00:05:24,000 --> 00:05:28,000
+(Paulo Rocha)
+né, e já querer puxar para dentro. Não foi o caso que
+
+83
+00:05:28,000 --> 00:05:32,000
+(Paulo Rocha)
+ele tá com 1 milhão de coisas para ele poder fazer, né? Quando era quando ele
+
+84
+00:05:32,000 --> 00:05:36,000
+(Paulo Rocha)
+era quando ele era eh
+
+85
+00:05:36,000 --> 00:05:40,000
+(Paulo Rocha)
+eh só diretor Américas, ele ainda tinha tempo para ele poder
+-
+
+()
+ele não tão pica grosso.
+
+86
+00:05:40,000 --> 00:05:44,000
+(Paulo Rocha)
+olhar paraa inovação, para essas coisas. Hoje ele não tem tempo. Hoje a
+
+87
+00:05:44,000 --> 00:05:48,000
+(Paulo Rocha)
+visão dele é extremamente estratégica, né? a gente sentou lá pra gente poder
+
+88
+00:05:48,000 --> 00:05:52,000
+(Paulo Rocha)
+fazer reunião. Nós ficamos 2 horas reunida e e com
+
+89
+00:05:52,000 --> 00:05:56,000
+(Paulo Rocha)
+a visão estratégica do que vai acontecer pro paraa área que eu
+
+90
+00:05:56,000 --> 00:06:00,000
+(Paulo Rocha)
+tô implantando agora no Brasil, na região Américas,
+
+91
+00:06:00,000 --> 00:06:04,000
+(Paulo Rocha)
+como que eu vou atuar de forma global para dar suporte pros outros
+
+92
+00:06:04,000 --> 00:06:08,000
+(Paulo Rocha)
+projetos? A gente ia almoçar domingo, cara.
+
+93
+00:06:08,000 --> 00:06:12,000
+(Paulo Rocha)
+Eh, a gente tinha marcado um um almoço domingo, só que as próximas
+
+94
+00:06:12,000 --> 00:06:16,000
+(Paulo Rocha)
+três semanas ele vai estar fora de casa. Essa semana ele tá na África do
+
+95
+00:06:16,000 --> 00:06:20,000
+(Paulo Rocha)
+Sul, semana que vem ele tá na Ásia, na outra semana ele vai estar em outro lugar que eu não sei onde é.
+
+96
+00:06:20,000 --> 00:06:24,000
+(Paulo Rocha)
+E a esposa dele meio que meio que empinou a
+-
+
+()
+c******,
+
+97
+00:06:24,000 --> 00:06:28,000
+(Paulo Rocha)
+carroça, entendeu? Aí ele mandou mensagem: "Pô Paulo, vamos vamos
+
+98
+00:06:28,000 --> 00:06:32,000
+(Paulo Rocha)
+desmarcar, vamos deixar pra gente conversar amanhã, porque eu vou ficar três semanas". Eu fale falei: "Não,
+-
+
+()
+chave.
+
+99
+00:06:32,000 --> 00:06:36,000
+(Paulo Rocha)
+Betão, tranquilo." Mas assim,
+
+100
+00:06:36,000 --> 00:06:40,000
+(Paulo Rocha)
+eh, parte do plano tá OK, que ele já tá sabendo, tô
+
+101
+00:06:40,000 --> 00:06:44,000
+(Paulo Rocha)
+fazendo, mostrei para ele a plataforma, o olho dele
+
+102
+00:06:44,000 --> 00:06:48,000
+(Paulo Rocha)
+cresceu, beleza? Agora a gente ataca aqui no Brasil, que é onde tem maior volume de
+
+103
+00:06:48,000 --> 00:06:52,000
+(Paulo Rocha)
+projeto também, e eventualmente vai dar certo aqui, Deus
+
+104
+00:06:52,000 --> 00:06:56,000
+(Paulo Rocha)
+abençoa, a gente vai jogando pro aí paraas outras regiões,
+
+105
+00:06:56,000 --> 00:07:00,000
+(Ruan Carlos Oliveira)
+É, mas eu acho que a gente
+-
+
+()
+Ah, só bo então.
+
+106
+00:07:00,000 --> 00:07:04,000
+(Ruan Carlos Oliveira)
+a gente alinha direitinho a abordagem, Paulo falando, né, que no objetivo que é não é
+
+107
+00:07:04,000 --> 00:07:08,000
+(Ruan Carlos Oliveira)
+competir, não é vender para ninguém, é a gente agregar valor em cima dos projetos, a gente fala: "Cara, a ideia
+-
+
+(Paulo Rocha)
+entendeu?
+
+108
+00:07:08,000 --> 00:07:12,000
+(Ruan Carlos Oliveira)
+é vender mais pr Peterson, é a Pet ganhar mais em cima disso."
+
+109
+00:07:12,000 --> 00:07:16,000
+(Ruan Carlos Oliveira)
+Então se
+-
+
+(Paulo Rocha)
+É agora, agora é o papo
+
+110
+00:07:16,000 --> 00:07:20,000
+(Ruan Carlos Oliveira)
+os é por é e aí eu acho que pro Danilo, cara, o Danilo que é grande. O
+-
+
+(Paulo Rocha)
+com o Danilo,
+
+111
+00:07:20,000 --> 00:07:24,000
+(Ruan Carlos Oliveira)
+Danilo quer quer dinheiro na conta, então
+-
+
+(Paulo Rocha)
+entendeu? Falar, Dana, a gente não tem a
+
+112
+00:07:24,000 --> 00:07:28,000
+(Paulo Rocha)
+solução. Eu eu tô trazendo a solução, que é um negócio que eu tô
+
+113
+00:07:28,000 --> 00:07:32,000
+(Paulo Rocha)
+fazendo lá do meu pósdoc, né? Eu quero colocar dentro, quero ganhar
+
+114
+00:07:32,000 --> 00:07:36,000
+(Paulo Rocha)
+um pouco de de dinheiro também. E depois vocês compra o negócio, a gente pra gente
+
+115
+00:07:36,000 --> 00:07:40,000
+(Paulo Rocha)
+poder usar, a gente pode fazer um contrato aí com com é
+
+116
+00:07:40,000 --> 00:07:44,000
+(Paulo Rocha)
+que fala? Eh, opção de compra, sei lá, a gente
+
+117
+00:07:44,000 --> 00:07:48,000
+(Paulo Rocha)
+estrutura, né, certinho de como vai
+
+118
+00:07:48,000 --> 00:07:52,000
+(Paulo Rocha)
+ser e bota para dentro, entendeu? Eu eu acho
+
+119
+00:07:52,000 --> 00:07:56,000
+(Ruan Carlos Oliveira)
+Não.
+-
+
+(Paulo Rocha)
+que eu acho que o dano, não sei, ah, também tentar adivinhar a cabeça do
+
+120
+00:07:56,000 --> 00:08:00,000
+(Paulo Rocha)
+outro, mas assim, demanda tem, a gente não tem a solução, a
+
+121
+00:08:00,000 --> 00:08:04,000
+(Paulo Rocha)
+gente a gente tá perdendo projeto por conta disso, porque
+
+122
+00:08:04,000 --> 00:08:08,000
+(Ruan Carlos Oliveira)
+M.
+-
+
+(Paulo Rocha)
+a gente mandou uma proposta para Mars agora, uma proposta de 300.000 €
+
+123
+00:08:08,000 --> 00:08:12,000
+(Paulo Rocha)
+era o projeto completo, né? Projeto para para
+-
+
+()
+p*** que pariu.
+
+124
+00:08:12,000 --> 00:08:16,000
+(Paulo Rocha)
+2 anos. E os caras queriam
+
+125
+00:08:16,000 --> 00:08:20,000
+(Paulo Rocha)
+um MRV, né? Ou seja, tinha toda a parte de consultoria
+
+126
+00:08:20,000 --> 00:08:24,000
+(Paulo Rocha)
+agronômica, de coleta de dados, mas tinha o
+
+127
+00:08:24,000 --> 00:08:28,000
+(Paulo Rocha)
+MRV também, né, para processar os dados. E a gente
+
+128
+00:08:28,000 --> 00:08:32,000
+(Paulo Rocha)
+não tinha, a gente colocou um valor lá, a
+
+129
+00:08:32,000 --> 00:08:36,000
+(Paulo Rocha)
+proposta não foi porque o cara falou: "Ah, a gente deu opção para outra
+
+130
+00:08:36,000 --> 00:08:40,000
+(Paulo Rocha)
+empresa, ele não falou com a empresa que é porque já trabalha com arroz, já
+
+131
+00:08:40,000 --> 00:08:44,000
+(Paulo Rocha)
+tem as as ferramentas adequadas e as ferramentas adequadas é isso,
+
+132
+00:08:44,000 --> 00:08:48,000
+(Paulo Rocha)
+entendeu?
+-
+
+()
+Não é isso,
+
+133
+00:08:48,000 --> 00:08:52,000
+()
+então só boa, uma das nossas fases foi.
+
+134
+00:08:52,000 --> 00:08:56,000
+(Paulo Rocha)
+Enfim, uma foi. É, agora é agora sentar com
+-
+
+()
+Então vamos
+
+135
+00:08:56,000 --> 00:09:00,000
+(Paulo Rocha)
+Dan aqui pr gente poder mostrar para ele, entendeu?
+-
+
+()
+embora. Tá. M.
+
+136
+00:09:00,000 --> 00:09:04,000
+()
+Beleza, beleza. Vamos embora então. Tá, então, aproveitando a
+
+137
+00:09:04,000 --> 00:09:08,000
+()
+deixa, vamos mostrar a plataforma como que tá ficando para vocês, coisas
+
+138
+00:09:08,000 --> 00:09:12,000
+()
+novas, design que a gente fez. Eh, a gente abriu, tá tudo em
+
+139
+00:09:12,000 --> 00:09:16,000
+()
+dev. Se vocês quiserem acessar, fiquem à vontade para acessar aí.
+
+140
+00:09:16,000 --> 00:09:20,000
+()
+Eh, só deixa eu ver se eu subi tudo o que tem no final aqui rapidinho.
+
+141
+00:09:20,000 --> 00:09:24,000
+(Paulo Rocha)
+Mhm.
+-
+
+()
+Mas que que foi feito? Eh, eu tinha pedido lá pro Gabriel
+
+142
+00:09:24,000 --> 00:09:28,000
+()
+fazer eh a questão da comparação, porque não tava
+
+143
+00:09:28,000 --> 00:09:32,000
+()
+gostando como que tava o fluxo, tava difícil, não tava legal a visualização. Ele fez, deu uma
+
+144
+00:09:32,000 --> 00:09:36,000
+()
+mudada, só que aí começou tava demorando demais. Aí e ele já tinha feito
+
+145
+00:09:36,000 --> 00:09:40,000
+()
+um exemplo que que a gente fez aqui na na Z2, a gente
+
+146
+00:09:40,000 --> 00:09:44,000
+()
+pegou tudo que ele tinha feito desenvolvimento tava no Figma, que é a plataforma lá
+
+147
+00:09:44,000 --> 00:09:48,000
+()
+do design. A gente passa para uma nova que chama
+
+148
+00:09:48,000 --> 00:09:52,000
+(Paulo Rocha)
+Угу.
+-
+
+()
+Pont e ela é mais fácil da gente usar inteligência
+
+149
+00:09:52,000 --> 00:09:56,000
+()
+artificial nela e ela inteiramente grátis. Aí que que eu fiz?
+
+150
+00:09:56,000 --> 00:10:00,000
+()
+Passei tudo que a gente tinha do código para lá como
+
+151
+00:10:00,000 --> 00:10:04,000
+()
+design e do Figma para lá também. Então agora a gente tem um design system que é tipo
+
+152
+00:10:04,000 --> 00:10:08,000
+()
+todos os componentes, toda a tipografia, todas as cores. Então
+
+153
+00:10:08,000 --> 00:10:12,000
+()
+agora vai ficar muito fácil da gente testar fluxo. Então a gente vai fazer biodiversidade
+
+154
+00:10:12,000 --> 00:10:16,000
+()
+agora. Eh, a gente vai primeiro passar para design, deixa
+
+155
+00:10:16,000 --> 00:10:20,000
+()
+lá bonitinho. A gente vai conferir campo por campo lá no design, porque lá
+
+156
+00:10:20,000 --> 00:10:24,000
+()
+é bem mais fácil de fazer qualquer tipo de alteração. Dando OK,
+
+157
+00:10:24,000 --> 00:10:28,000
+()
+a gente passa para desenvolvimento, o negócio praticamente pronto.
+
+158
+00:10:28,000 --> 00:10:32,000
+()
+Eh, aí aproveitando essa toda essa passada, eu dei uma mudadinha
+
+159
+00:10:32,000 --> 00:10:36,000
+()
+assim, eh, deixei as coisas mais padronizadas, que é o que tá na plataforma.
+
+160
+00:10:36,000 --> 00:10:40,000
+()
+Eh, só deixa eu subir tudo aqui. Mas a plataforma agora tá
+
+161
+00:10:40,000 --> 00:10:44,000
+(Paulo Rocha)
+Oh.
+-
+
+()
+bem filé. Eh, comparação tá tudo
+
+162
+00:10:44,000 --> 00:10:48,000
+()
+lá. Vou mostrar aqui só para vocês onde
+
+163
+00:10:52,000 --> 00:10:56,000
+()
+tudo. Pera
+
+164
+00:11:00,000 --> 00:11:04,000
+()
+aí. Bom, eh, no
+
+165
+00:11:04,000 --> 00:11:08,000
+()
+caso, a gente ainda tá precisando de dar aquela
+
+166
+00:11:08,000 --> 00:11:12,000
+()
+testada com mais afinco na plataforma.
+
+167
+00:11:12,000 --> 00:11:16,000
+()
+eh vê que tá certo os cálculos, todas essas
+
+168
+00:11:16,000 --> 00:11:20,000
+()
+coisas, mas tá tudo lá. A gente já tá para passar
+
+169
+00:11:20,000 --> 00:11:24,000
+(Paulo Rocha)
+sobre isso, eu, Juan, a gente tava
+-
+
+()
+paraa próxima
+
+170
+00:11:24,000 --> 00:11:28,000
+(Paulo Rocha)
+até tava até conversando, a gente pagar uma diária
+
+171
+00:11:28,000 --> 00:11:32,000
+(Paulo Rocha)
+pra parte de carbono do solo pro João e uma diária pra
+-
+
+()
+fase. Quem que
+
+172
+00:11:32,000 --> 00:11:36,000
+(Paulo Rocha)
+parte de emissão pro pra DID. São pessoas que são
+
+173
+00:11:36,000 --> 00:11:40,000
+(Paulo Rocha)
+especialistas na área, entendeu? que aí eles vão testar lá várias
+-
+
+()
+é?
+
+174
+00:11:40,000 --> 00:11:44,000
+(Paulo Rocha)
+vezes
+-
+
+()
+É, é isso. Tem dinheiro para isso. É que
+
+175
+00:11:44,000 --> 00:11:48,000
+()
+eles já apresentaram isso pra gente ou ou a gente nem sabe quem que
+
+176
+00:11:48,000 --> 00:11:52,000
+(Paulo Rocha)
+e não, vocês vocês não
+-
+
+()
+é a gente
+
+177
+00:11:52,000 --> 00:11:56,000
+(Paulo Rocha)
+conhecem
+-
+
+()
+Z2. Ah, beleza. Mas você falar que é bom. É isso, ó. Então,
+
+178
+00:11:56,000 --> 00:12:00,000
+(Paulo Rocha)
+não. Show. M.
+-
+
+()
+a plataforma tá aqui, eh, segue o mesmo
+
+179
+00:12:00,000 --> 00:12:04,000
+()
+fluxo, tem lá os gestão de usuários, tem as configurações
+
+180
+00:12:04,000 --> 00:12:08,000
+()
+das pessoas. Eh, ficou um pouquinho agora mais quadradinho. O menu
+
+181
+00:12:08,000 --> 00:12:12,000
+()
+agora tá sempre recolhido para dar mais atenção, mas
+
+182
+00:12:12,000 --> 00:12:16,000
+()
+no mais fica tudo. Talhão, a gente melhorou um pouco também como que
+
+183
+00:12:16,000 --> 00:12:20,000
+()
+é. Eh, mas de novo temos todas as informações
+
+184
+00:12:20,000 --> 00:12:24,000
+(Paulo Rocha)
+Угу.
+-
+
+()
+aqui. Isso aqui tudo você já tinha ouvido. A gente tem que melhorar a tela de o que que vai ter no
+
+185
+00:12:24,000 --> 00:12:28,000
+()
+talhão, mas hoje a gente não tem informação. Carbonem
+
+186
+00:12:28,000 --> 00:12:32,000
+()
+emissão, que que a gente tem agora? O gráfico continua a mesma coisa. Esse
+
+187
+00:12:32,000 --> 00:12:36,000
+()
+aqui vocês já tinham tudo visto. Agora a gente só tem comparação. Comparação,
+
+188
+00:12:36,000 --> 00:12:40,000
+()
+como que funciona? Eu tenho aqui todas as minhas informações, posso
+
+189
+00:12:40,000 --> 00:12:44,000
+()
+selecionar essa tela, a gente vai dar só uma melhoradinha para ficar fácil pro
+
+190
+00:12:44,000 --> 00:12:48,000
+()
+usuário, mas aqui eu consigo ver todos os projetos que eu tenho, que eu tenho
+
+191
+00:12:48,000 --> 00:12:52,000
+(Paulo Rocha)
+Угу.
+-
+
+()
+acessos. Então aqui eu sou um usuário total, eu tenho acesso a tudo, mas por exemplo,
+
+192
+00:12:52,000 --> 00:12:56,000
+()
+fing só com os projetos dele, ele vai poder só ver os projetos
+
+193
+00:12:56,000 --> 00:13:00,000
+()
+dele, selecionar a fazenda que ele quiser. Deixa eu achar
+
+194
+00:13:00,000 --> 00:13:04,000
+()
+uma que tá válida. Pera aí que eu testo tanto que eu fico meio
+
+195
+00:13:04,000 --> 00:13:08,000
+()
+louco. Hum.
+
+196
+00:13:08,000 --> 00:13:12,000
+()
+Isso daqui a gente vai melhorar. O Rosa vai fazer uma API que só retorna as coisas
+
+197
+00:13:12,000 --> 00:13:16,000
+()
+que são possíveis para não ter que ficar caçando igual eu tô fazendo agora.
+
+198
+00:13:16,000 --> 00:13:20,000
+()
+Mas aqui eu consigo selecionar de um a quatro. Eu fiz de um a quatro
+
+199
+00:13:20,000 --> 00:13:24,000
+()
+por por causa de questão de visualização, que eu acho que começa a ficar muito
+
+200
+00:13:24,000 --> 00:13:28,000
+()
+dado. Mas aí vocês podem falar, a API já aceita até
+
+201
+00:13:28,000 --> 00:13:32,000
+()
+20, mas eu acho que comparar 20 projetos de uma vez é um
+
+202
+00:13:32,000 --> 00:13:36,000
+(Paulo Rocha)
+M.
+-
+
+()
+absurdo, mas fica a cargo de vocês e de quem for testar. Mas eu tô aqui,
+
+203
+00:13:36,000 --> 00:13:40,000
+(Ruan Carlos Oliveira)
+Угу.
+-
+
+()
+ó. Todas as informações estão aqui. Consigo comparar tudo bonitinho.
+
+204
+00:13:40,000 --> 00:13:44,000
+()
+Vejo por linha, vejo total. Então, a gente deu essa
+
+205
+00:13:44,000 --> 00:13:48,000
+()
+melhoradinha aqui. Falta usar para ver se isso realmente tá fazendo sentido,
+
+206
+00:13:48,000 --> 00:13:52,000
+()
+sabe? Eh, foi tudo a partir do design,
+
+207
+00:13:52,000 --> 00:13:56,000
+(Paulo Rocha)
+Угу.
+-
+
+()
+mas a plataforma tá completa. Essa comparação funciona para
+
+208
+00:13:56,000 --> 00:14:00,000
+()
+tudo. Então, eu posso vir em remoção também, comparar remoção, posso
+
+209
+00:14:00,000 --> 00:14:04,000
+()
+visualizar ela total de novo. Isso daqui vocês todos já viram.
+
+210
+00:14:04,000 --> 00:14:08,000
+()
+Eh, posso comparar? Cadê o botão de comparar
+
+211
+00:14:08,000 --> 00:14:12,000
+()
+aqui? É esse daqui. Eu acho que não subiu. Deixa eu ver se tá
+
+212
+00:14:12,000 --> 00:14:16,000
+()
+subindo. É,
+
+213
+00:14:16,000 --> 00:14:20,000
+()
+regenerativa. A mesma coisa. Regenerativo ainda, deu uma pequena
+
+214
+00:14:20,000 --> 00:14:24,000
+(Paulo Rocha)
+Угу. Bem melhor, bem melhor,
+-
+
+()
+mudada, mas eu ainda vou dar uma melhoradinha.
+
+215
+00:14:24,000 --> 00:14:28,000
+(Paulo Rocha)
+sim.
+-
+
+()
+É. E ficou legal a comparação regenerativa. Aí só tem que ver realmente, ah,
+
+216
+00:14:28,000 --> 00:14:32,000
+(Ruan Carlos Oliveira)
+M.
+-
+
+()
+faz sentido esses dados, não faz sentido esses dados. Aí é um pouco mais com
+
+217
+00:14:32,000 --> 00:14:36,000
+(Paulo Rocha)
+Tá assim, eh, bacana demais. Eu, eu
+
+218
+00:14:36,000 --> 00:14:40,000
+(Paulo Rocha)
+só acho que a gente poderia colocar mais, entendeu? Mais fazendas, porque
+
+219
+00:14:40,000 --> 00:14:44,000
+(Paulo Rocha)
+geralmente quatro para um projeto. A gente trabalha com projetos
+
+220
+00:14:44,000 --> 00:14:48,000
+(Paulo Rocha)
+com 10 fazendas,
+-
+
+()
+vocês. Não, quatro é a comparação. O
+
+221
+00:14:48,000 --> 00:14:52,000
+(Paulo Rocha)
+fazendas.
+-
+
+()
+cara pode ter quantas fazendas ele quiser. Eu comparar, eu só posso comprar
+
+222
+00:14:52,000 --> 00:14:56,000
+()
+quatro. Aí você acha que tem que comparar, poder comprar mais de quatro? Tipo,
+
+223
+00:14:56,000 --> 00:15:00,000
+(Paulo Rocha)
+Eu acho que sim, galera. Talvez eh talvez em
+-
+
+()
+aqui eu tô oito.
+
+224
+00:15:00,000 --> 00:15:04,000
+(Paulo Rocha)
+vez de ter aqueles dados, os números, colocar comparação só de gráfico,
+
+225
+00:15:04,000 --> 00:15:08,000
+(Paulo Rocha)
+entendeu? Sei que que você acha
+-
+
+()
+Entendi. É isso aí.
+
+226
+00:15:08,000 --> 00:15:12,000
+(Ruan Carlos Oliveira)
+É isso tá
+-
+
+(Paulo Rocha)
+do Não, esse aqui ficou ficou top, hein,
+-
+
+()
+Vai, é, isso aí vai
+
+227
+00:15:12,000 --> 00:15:16,000
+()
+ser tudo usoabilidade, assim, aí a gente vai ter que começar a pensar um pouco e ver. O que eu
+
+228
+00:15:16,000 --> 00:15:20,000
+(Paulo Rocha)
+viu?
+-
+
+()
+pensei também é sempre ter o consolidado, né, da fazenda, tipo juntar todas as
+
+229
+00:15:20,000 --> 00:15:24,000
+(Ruan Carlos Oliveira)
+bom.
+-
+
+()
+informações e trazer cálculo total. Mas é isso,
+
+230
+00:15:24,000 --> 00:15:28,000
+()
+é tem que tem que usar. Infelizmente dashboard é só usando que
+
+231
+00:15:28,000 --> 00:15:32,000
+()
+a gente consegue pensar nas coisas. Mas tá assim. Então
+
+232
+00:15:32,000 --> 00:15:36,000
+()
+esse padrão é o novo padrão da plataforma, tá fácil fazer essas coisas. Isso
+
+233
+00:15:36,000 --> 00:15:40,000
+()
+daqui. Então agora a gente consegue correr muito mais com
+
+234
+00:15:40,000 --> 00:15:44,000
+()
+a com as telas, não correr assim, mas desenvolver meio
+
+235
+00:15:44,000 --> 00:15:48,000
+(Paulo Rocha)
+Aha. Não ficou top. Show de
+-
+
+()
+industrial isso daqui. E tá
+
+236
+00:15:48,000 --> 00:15:52,000
+(Paulo Rocha)
+linha.
+-
+
+()
+beleza? Então é isso. Então é isso que temos. Tudo
+
+237
+00:15:52,000 --> 00:15:56,000
+(Ruan Carlos Oliveira)
+Tá
+-
+
+(Paulo Rocha)
+Beleza.
+-
+
+()
+bem, aprovado. Se podemos seguir desse formato, tá
+
+238
+00:15:56,000 --> 00:16:00,000
+(Ruan Carlos Oliveira)
+bom. Tá
+-
+
+()
+legal o design? Não, fechou. Então, então,
+
+239
+00:16:00,000 --> 00:16:04,000
+()
+mais um ponto. Foi. Comparação. Foi.
+
+240
+00:16:04,000 --> 00:16:08,000
+(Ruan Carlos Oliveira)
+bom.
+-
+
+(Paulo Rocha)
+Sim.
+-
+
+()
+Ah, outra coisa que a gente tá
+
+241
+00:16:08,000 --> 00:16:12,000
+()
+fazendo, essa daqui tá desenvolvendo um pouco mais
+
+242
+00:16:12,000 --> 00:16:16,000
+()
+devagar, mas é a questão do mobile, que é o pro
+
+243
+00:16:16,000 --> 00:16:20,000
+()
+celular, que a gente vai focar inteiramente em dados no celular.
+
+244
+00:16:20,000 --> 00:16:24,000
+()
+Eh, por enquanto a gente não quer pegar muita questão
+
+245
+00:16:24,000 --> 00:16:28,000
+()
+de de
+
+246
+00:16:28,000 --> 00:16:32,000
+()
+gráficos C mobile carbono, por exemplo. Deixa eu mostrar aqui para
+
+247
+00:16:32,000 --> 00:16:36,000
+()
+vocês. Mas o cara
+
+248
+00:16:36,000 --> 00:16:40,000
+()
+já tem o aplicativo e aí a gente tá pensando em correr com isso porque, né, é sempre
+
+249
+00:16:40,000 --> 00:16:44,000
+()
+interessante. Aí isso daqui é o que eu tô falando que é o design. Isso daqui eu pedi pro Cloud
+
+250
+00:16:44,000 --> 00:16:48,000
+()
+fazer. Eu falei: "Ó, a gente tem essas telas no web, quero passar para um celular.
+
+251
+00:16:48,000 --> 00:16:52,000
+()
+Eu dou um toquezinho aqui ali no design para ficar um pouquinho
+
+252
+00:16:52,000 --> 00:16:56,000
+()
+mais bonitinho, por assim dizer. Mas é isso que a gente vai ter.
+
+253
+00:16:56,000 --> 00:17:00,000
+(Paulo Rocha)
+Угуm.
+-
+
+()
+Eh, aí a gente vai já seguir com o celular também, tá?
+
+254
+00:17:00,000 --> 00:17:04,000
+()
+Já vamos começar a andar com mobile. Só tem um ponto no
+
+255
+00:17:04,000 --> 00:17:08,000
+()
+mobile. Eh, a gente só consegue testar o
+
+256
+00:17:08,000 --> 00:17:12,000
+()
+mobile se for Android é fácil. eu consigo te mandar o APK,
+
+257
+00:17:12,000 --> 00:17:16,000
+()
+que é o arquivo do aplicativo, e você baixa no seu celular
+
+258
+00:17:16,000 --> 00:17:20,000
+()
+e usa. Se você tiver iPhone, aí a gente tem que ter uma conta na
+
+259
+00:17:20,000 --> 00:17:24,000
+()
+Apple e começa a gastar dinheiro, essas coisas. Então, aí a gente
+
+260
+00:17:24,000 --> 00:17:28,000
+(Paulo Rocha)
+Tá. Não acho que não. Acho que
+-
+
+()
+tem que ver a nossa prioridade quando chegar esse momento de vocês quiserem
+
+261
+00:17:28,000 --> 00:17:32,000
+(Paulo Rocha)
+hoje hoje tem tem outras prioridades, né? A gente vai evoluir para
+
+262
+00:17:32,000 --> 00:17:36,000
+(Ruan Carlos Oliveira)
+E
+-
+
+(Paulo Rocha)
+ir. Muito legal que você estão fazendo, mas não é a nossa
+
+263
+00:17:36,000 --> 00:17:40,000
+(Paulo Rocha)
+prioridade número um agora, né? Até porque os os celulares da empresa
+-
+
+()
+testar o
+
+264
+00:17:40,000 --> 00:17:44,000
+(Ruan Carlos Oliveira)
+É tudo tudo Android,
+-
+
+(Paulo Rocha)
+também na PS de us é tudo é tudo Android. Então
+-
+
+()
+mobile.
+
+265
+00:17:44,000 --> 00:17:48,000
+(Ruan Carlos Oliveira)
+né? Pois
+-
+
+()
+Então, podemos seguir só no APK. Vocês têm Android
+
+266
+00:17:48,000 --> 00:17:52,000
+(Ruan Carlos Oliveira)
+isso. Temos o celular da empresa. A gente consegue usar no celular da empresa.
+-
+
+(Paulo Rocha)
+tranquilo.
+-
+
+()
+para testar?
+
+267
+00:17:52,000 --> 00:17:56,000
+(Paulo Rocha)
+É.
+-
+
+()
+Beleza. APK é fácil baixar, não precisa fazer nada, nada demais. É
+
+268
+00:17:56,000 --> 00:18:00,000
+()
+só, a gente vai mandar tipo o arquivo para vocês no grupo do WhatsApp mesmo, vocês
+
+269
+00:18:00,000 --> 00:18:04,000
+()
+conseguem baixar e usar. Mas o
+
+270
+00:18:04,000 --> 00:18:08,000
+(Paulo Rocha)
+Beleza. É,
+-
+
+()
+celular é um ativo interessante até agora.
+
+271
+00:18:08,000 --> 00:18:12,000
+(Paulo Rocha)
+principalmente principalmente paraa coleta de dados, né?
+-
+
+()
+Faz sentido?
+
+272
+00:18:12,000 --> 00:18:16,000
+(Paulo Rocha)
+A questão de gráfico, essas coisas. Ah, é
+
+273
+00:18:16,000 --> 00:18:20,000
+(Ruan Carlos Oliveira)
+coleta coleta
+-
+
+(Paulo Rocha)
+um plus, né? Mas é mais pensando em coleta de dados do
+-
+
+()
+Sim,
+
+274
+00:18:20,000 --> 00:18:24,000
+(Paulo Rocha)
+que outra coisa, entendeu?
+-
+
+()
+sim, isso, isso. E a gente vai fazendo, pensando, eh,
+
+275
+00:18:24,000 --> 00:18:28,000
+()
+o foco principal é o ser offline, é você tá lá no campo,
+
+276
+00:18:28,000 --> 00:18:32,000
+(Ruan Carlos Oliveira)
+Так.
+-
+
+(Paulo Rocha)
+É a primeira coisa que ele vai
+-
+
+()
+preencher tudo, só quando você tiver
+
+277
+00:18:32,000 --> 00:18:36,000
+(Paulo Rocha)
+perguntar é o cara lá da da Pitec vai falar consegue fazer coleta de dados
+
+278
+00:18:36,000 --> 00:18:40,000
+(Paulo Rocha)
+se não tiver acesso à
+-
+
+()
+internet, offline. Tudo isso vai tá, você consegue acessar lá.
+
+279
+00:18:40,000 --> 00:18:44,000
+()
+Aí você vai clicar quando tiver internet, sincronizar, aí manda pro web.
+
+280
+00:18:44,000 --> 00:18:48,000
+(Paulo Rocha)
+internet?
+-
+
+()
+Tô fazendo até tela de comparação. Se o cara mexeu no
+
+281
+00:18:48,000 --> 00:18:52,000
+()
+web e no celular ao mesmo duas pessoas diferentes,
+
+282
+00:18:52,000 --> 00:18:56,000
+()
+consegue definir qual o dado é o a fonte da verdade,
+
+283
+00:18:56,000 --> 00:19:00,000
+()
+sabe? Mas beleza, então então podemos
+
+284
+00:19:00,000 --> 00:19:04,000
+(Paulo Rocha)
+bala
+-
+
+()
+perseguir. Aval fechou. Então, então mobile também
+
+285
+00:19:04,000 --> 00:19:08,000
+()
+foi. Agora é próximos passos. Ah,
+
+286
+00:19:08,000 --> 00:19:12,000
+()
+não. Mais uma coisa antes de próximos passos, que esse é o que mais demora. Sobre o
+
+287
+00:19:12,000 --> 00:19:16,000
+()
+design. O, a gente fez aqui com um amigo nosso, deixa eu até
+
+288
+00:19:16,000 --> 00:19:20,000
+()
+mostrar para vocês.
+
+289
+00:19:20,000 --> 00:19:24,000
+()
+Eh, deixa eu ver se tem
+
+290
+00:19:28,000 --> 00:19:32,000
+()
+aqui. Pera aí que com um amigo nosso que é design, a
+
+291
+00:19:32,000 --> 00:19:36,000
+()
+gente fez um, a gente tá fazendo a logo da Z2 da nossa
+
+292
+00:19:36,000 --> 00:19:40,000
+()
+empresa, né, no caso. É, ele é muito bom, ficou muito legal
+
+293
+00:19:40,000 --> 00:19:44,000
+()
+e a gente tá pensando em pegar
+
+294
+00:19:44,000 --> 00:19:48,000
+(Paulo Rocha)
+Угу.
+-
+
+()
+com ele usar o dinheiro que a gente vai ter. Primeiro ele ele tem um CNPJ,
+
+295
+00:19:48,000 --> 00:19:52,000
+(Ruan Carlos Oliveira)
+Opa, isso é
+-
+
+()
+então a gente vai conseguir a terceira opção que a gente precisava lá
+
+296
+00:19:52,000 --> 00:19:56,000
+(Ruan Carlos Oliveira)
+bom.
+-
+
+()
+para conseguir os 5.000 de design. E a
+
+297
+00:19:56,000 --> 00:20:00,000
+(Ruan Carlos Oliveira)
+Aham.
+-
+
+()
+gente queria saber se é interessante para vocês a gente pensar um pouco
+
+298
+00:20:00,000 --> 00:20:04,000
+()
+num redesign da plataforma ou como tá hoje, vocês estão gostando, tá
+
+299
+00:20:04,000 --> 00:20:08,000
+()
+satisfeito, não precisa gastar dinheiro com isso por agora. Ele faz
+
+300
+00:20:08,000 --> 00:20:12,000
+()
+tanto, ixe, onde será que eu tô com acesso por ele? Pera aí, deixa eu caçar
+
+301
+00:20:12,000 --> 00:20:16,000
+()
+aqui rapidinho. Ele faz tanto
+
+302
+00:20:16,000 --> 00:20:20,000
+()
+postagem, land, essas coisas, que hoje a gente só tem a plataforma, né, que é o cara
+
+303
+00:20:20,000 --> 00:20:24,000
+()
+que já tem a, a gente vai mandar a Gaia para ele para ele usar,
+
+304
+00:20:24,000 --> 00:20:28,000
+()
+mas leing page pra pessoa entrar, entender que que é a logo
+
+305
+00:20:28,000 --> 00:20:32,000
+()
+em si, as cores, umas animações, essas coisas. Vocês
+
+306
+00:20:32,000 --> 00:20:36,000
+()
+acham que é interessante nós termos isso como caia?
+
+307
+00:20:36,000 --> 00:20:40,000
+()
+ou não? Por enquanto hoje só plataforma, boca a boca, o jeito
+
+308
+00:20:40,000 --> 00:20:44,000
+()
+que tá. Vamos embora. E um dia quando a gente precisar melhor
+
+309
+00:20:44,000 --> 00:20:48,000
+()
+do melhor de alguma coisa de design, a gente usa esse
+
+310
+00:20:48,000 --> 00:20:52,000
+(Paulo Rocha)
+Hoje é o seguinte, né? Hoje o nosso, a gente não pode focar só
+
+311
+00:20:52,000 --> 00:20:56,000
+(Paulo Rocha)
+nisso, né? Mas hoje o nosso primeira prioridade é conseguir jogar para dentro da Pets,
+
+312
+00:20:56,000 --> 00:21:00,000
+(Paulo Rocha)
+né? Eu acho que se a gente conseguir jogar para lá, aí Aí não
+-
+
+()
+valor.
+
+313
+00:21:00,000 --> 00:21:04,000
+(Paulo Rocha)
+tem tanta necessidade, né? Agora se não conseguir, a gente vai
+
+314
+00:21:04,000 --> 00:21:08,000
+(Paulo Rocha)
+precisar, entendeu? Que a gente vai ter que vender de outra maneira,
+
+315
+00:21:08,000 --> 00:21:12,000
+(Paulo Rocha)
+entendeu? Eh, ah, eu não sei, Juan
+-
+
+()
+Isso. Entendi. Então, hoje
+
+316
+00:21:12,000 --> 00:21:16,000
+(Ruan Carlos Oliveira)
+Pois é, mas o que eu tô pensando é, será que esse essa essa essa galera aí que
+
+317
+00:21:16,000 --> 00:21:20,000
+(Ruan Carlos Oliveira)
+que tá com vocês, eles eles conseguem construir alguma coisa pra plataforma? Sim, não tô
+
+318
+00:21:20,000 --> 00:21:24,000
+(Ruan Carlos Oliveira)
+falando assim para um site, um page, essas coisas, mas pra plataforma, por exemplo,
+-
+
+(Paulo Rocha)
+assim.
+
+319
+00:21:24,000 --> 00:21:28,000
+(Ruan Carlos Oliveira)
+baseada naquilo no serviço que o Gabriel também fez. Será que vocês acham que com
+
+320
+00:21:28,000 --> 00:21:32,000
+(Ruan Carlos Oliveira)
+ele também daria pra gente poder usar esse recurso para melhorar logo de cara assim a
+
+321
+00:21:32,000 --> 00:21:36,000
+(Ruan Carlos Oliveira)
+plataforma, deixar a plataforma ali mais bonita, trazer algum
+
+322
+00:21:36,000 --> 00:21:40,000
+(Ruan Carlos Oliveira)
+toque assim de design, né, experiência de usuário melhor, se
+-
+
+()
+podemos
+
+323
+00:21:40,000 --> 00:21:44,000
+(Ruan Carlos Oliveira)
+essa se essa pessoa consegue agregar mais do que o Gabriel nesse sentido? Se
+
+324
+00:21:44,000 --> 00:21:48,000
+(Ruan Carlos Oliveira)
+vocês acham que sim, o dinheiro que a gente tem é para usar, eu entendo mais no
+
+325
+00:21:48,000 --> 00:21:52,000
+(Ruan Carlos Oliveira)
+foco assim da plataforma, né, que eu acho que seria para esse primeiro momento. Então, se vocês falar,
+
+326
+00:21:52,000 --> 00:21:56,000
+(Ruan Carlos Oliveira)
+olha, dá pra gente usar isso e se ainda sobrar um recurso, né, ao fim de
+
+327
+00:21:56,000 --> 00:22:00,000
+(Ruan Carlos Oliveira)
+tudo isso aí, se depois a gente pensar que vale a pena investir nessa no site, né, dessas
+
+328
+00:22:00,000 --> 00:22:04,000
+(Ruan Carlos Oliveira)
+outras coisas, a gente pode
+-
+
+()
+Não, fechou não. Então
+
+329
+00:22:04,000 --> 00:22:08,000
+()
+esse cara, ele chama Beto, ele é mais focado nessa parte. Esse aqui é o que ele fez. Então ele
+
+330
+00:22:08,000 --> 00:22:12,000
+(Ruan Carlos Oliveira)
+usar.
+-
+
+()
+faz logo, ele faz postagem, faz umas animaçãozinha para
+
+331
+00:22:12,000 --> 00:22:16,000
+(Ruan Carlos Oliveira)
+Uhum.
+-
+
+()
+usar na Lang page em si, sabe? Ele não é tão
+
+332
+00:22:16,000 --> 00:22:20,000
+()
+plataforma. Se for de plataforma continua
+
+333
+00:22:20,000 --> 00:22:24,000
+(Ruan Carlos Oliveira)
+Так,
+-
+
+()
+eh faz mais sentido manter o Gabriel. Hoje eu acho que a gente não precisa nem mais muito
+
+334
+00:22:24,000 --> 00:22:28,000
+()
+do Gabriel porque a gente não vai fugir muito do padrão que a gente tem hoje,
+
+335
+00:22:28,000 --> 00:22:32,000
+()
+que é os formulários e gráficos, assim, tem
+
+336
+00:22:32,000 --> 00:22:36,000
+(Ruan Carlos Oliveira)
+да.
+-
+
+()
+muito mais o que inventar na plataforma. Se a gente vê que a usabilidade tá
+
+337
+00:22:36,000 --> 00:22:40,000
+()
+ruim, igual vocês falaram de contratar aquelas duas pessoas para elas
+
+338
+00:22:40,000 --> 00:22:44,000
+()
+testarem, é interessante porque a gente vê de um terceiro como que tá sendo o
+
+339
+00:22:44,000 --> 00:22:48,000
+()
+preenchimento, se tá legal, se tá achando ruim, que aí sim, se
+
+340
+00:22:48,000 --> 00:22:52,000
+()
+falar não tá ruim, aí a gente vê de novo. A gente tem penso num
+
+341
+00:22:52,000 --> 00:22:56,000
+(Ruan Carlos Oliveira)
+S.
+-
+
+()
+redesign só de fluxos, não de logo, cores essas
+
+342
+00:22:56,000 --> 00:23:00,000
+()
+coisas. Mas esse cara que eu tava falando era realmente de
+
+343
+00:23:00,000 --> 00:23:04,000
+()
+logo, postagem, tal, assim. Mas como então como vocês
+
+344
+00:23:04,000 --> 00:23:08,000
+(Ruan Carlos Oliveira)
+Entendi.
+-
+
+()
+falaram, vamos esperar ainda ver que que vai dar com a
+
+345
+00:23:08,000 --> 00:23:12,000
+(Paulo Rocha)
+É, é, eu acho que para esse momento acho que a gente pode esperar,
+
+346
+00:23:12,000 --> 00:23:16,000
+(Ruan Carlos Oliveira)
+Ah, pois é, porque por exemplo assim, esse recurso, galera, que a gente tem, a gente tem que usar
+-
+
+(Paulo Rocha)
+entendeu?
+-
+
+()
+pessoa, tá
+
+347
+00:23:16,000 --> 00:23:20,000
+(Ruan Carlos Oliveira)
+ele até até março, vamos falar fevereiro, né? Ou seja, a
+
+348
+00:23:20,000 --> 00:23:24,000
+(Ruan Carlos Oliveira)
+gente tem até fevereiro para tomar uma decisão, né, assim, para não perder essa grana, porque se
+
+349
+00:23:24,000 --> 00:23:28,000
+(Ruan Carlos Oliveira)
+a gente não usar, ela vai voltar. Então a gente tem que usar seja com
+-
+
+(Paulo Rocha)
+É não, meu carro não vai voltar não.
+
+350
+00:23:28,000 --> 00:23:32,000
+()
+bom? Não é? Nós gasta no cara para ele fazer
+
+351
+00:23:32,000 --> 00:23:36,000
+(Ruan Carlos Oliveira)
+G, a gente não tem muita opção, não.
+-
+
+()
+qualquer coisa. Aí cada um
+
+352
+00:23:36,000 --> 00:23:40,000
+(Ruan Carlos Oliveira)
+Eh
+-
+
+()
+faz uma logo para nós mesmo e b. Mas não. Então beleza.
+
+353
+00:23:40,000 --> 00:23:44,000
+()
+Então vamos esperar, vamos ver que que vai virar com a
+
+354
+00:23:44,000 --> 00:23:48,000
+()
+Peterson. Aí se não der certo lá e a gaia virar realmente uma
+
+355
+00:23:48,000 --> 00:23:52,000
+()
+empresa eh sozinha, no caso independente,
+
+356
+00:23:52,000 --> 00:23:56,000
+()
+aí a gente segue com isso. Até janeiro a gente tem essa resposta,
+
+357
+00:23:56,000 --> 00:24:00,000
+(Ruan Carlos Oliveira)
+Ah. É, tem
+-
+
+(Paulo Rocha)
+Até quanto?
+-
+
+()
+né, Paulo e Juan? até janeiro, igual
+
+358
+00:24:00,000 --> 00:24:04,000
+(Ruan Carlos Oliveira)
+que tem tem que ter, cara. Tem que ter até pra gente poder conseguir
+-
+
+(Paulo Rocha)
+Tem, pô. Tô precisando ganhar
+
+359
+00:24:04,000 --> 00:24:08,000
+(Paulo Rocha)
+dinheiro, cara. Eu pago pensão, pago vários aluguéis, eu pago.
+-
+
+()
+falou isso.
+
+360
+00:24:08,000 --> 00:24:12,000
+(Paulo Rocha)
+p****, Nossa
+-
+
+()
+Fala aí. É, então vamos embora. Eu vou começar a prestar você. E
+
+361
+00:24:12,000 --> 00:24:16,000
+(Ruan Carlos Oliveira)
+avançar.
+-
+
+(Paulo Rocha)
+Senhora.
+-
+
+()
+agora? Eu tô desempregado também, filho. Ih, tô louco. Tô louco para vender esse negócio
+
+362
+00:24:16,000 --> 00:24:20,000
+(Ruan Carlos Oliveira)
+Ih, mas isso mesmo. Mas vai dar bom, vai dar bom, vai dar
+-
+
+(Paulo Rocha)
+É, não, nós vamos, se nós, se nós
+-
+
+()
+aqui. Foi foto.
+
+363
+00:24:20,000 --> 00:24:24,000
+(Ruan Carlos Oliveira)
+bom.
+-
+
+(Paulo Rocha)
+juntar nós dois para tomar cerveja, nós vamos tomar cerveja e chorar até
+-
+
+()
+Foi.
+
+364
+00:24:24,000 --> 00:24:28,000
+(Paulo Rocha)
+amanhã.
+-
+
+()
+Bora pagado. Ah,
+
+365
+00:24:28,000 --> 00:24:32,000
+(Paulo Rocha)
+É, mas
+-
+
+()
+vai ter um pôker lá no Felipe quinta-feira. Quer ir? Não sei nem se tá em
+
+366
+00:24:32,000 --> 00:24:36,000
+(Paulo Rocha)
+o pouco eu não jogo não, mas beber eu bebo bastante, graças a
+-
+
+()
+Bland.
+
+367
+00:24:36,000 --> 00:24:40,000
+(Paulo Rocha)
+Deus, né? Ruim,
+-
+
+()
+para perder o pouco dinheiro que sobrou pra
+
+368
+00:24:40,000 --> 00:24:44,000
+(Paulo Rocha)
+hein? Vocês não v meu em
+-
+
+()
+gente. Não, mas beleza,
+
+369
+00:24:44,000 --> 00:24:48,000
+(Paulo Rocha)
+jogo, em cerveja?
+
+370
+00:24:48,000 --> 00:24:52,000
+(Paulo Rocha)
+Sim.
+-
+
+()
+então não fechou não. Então beleza. Então design definido aqui.
+
+371
+00:24:52,000 --> 00:24:56,000
+()
+Vamos esperar. Temos dinheiro. Aí a gente vai conseguir o dinheiro. Vou falar para ele. Ele
+
+372
+00:24:56,000 --> 00:25:00,000
+()
+vai fazer o documento lá. a gente vai ter o dinheiro e aí quando precisar a gente
+
+373
+00:25:00,000 --> 00:25:04,000
+(Ruan Carlos Oliveira)
+Tá beleza. Beleza. Mas aí a
+-
+
+()
+decide exatamente o que que a gente
+
+374
+00:25:04,000 --> 00:25:08,000
+(Ruan Carlos Oliveira)
+gente a gente seg a gente seleciona o Gabriel ou seleciona
+-
+
+()
+usa, não? Aí
+
+375
+00:25:08,000 --> 00:25:12,000
+(Ruan Carlos Oliveira)
+ele? Ah, tá. Não, beleza.
+-
+
+()
+quando chegar no momento a gente seleciona quem for, depende do
+
+376
+00:25:12,000 --> 00:25:16,000
+(Ruan Carlos Oliveira)
+Beleza. Não, o dinheiro cai Não,
+-
+
+()
+Porque porque o dinheiro cai pra gente, né? Ou a gente já tem que gastar em
+
+377
+00:25:16,000 --> 00:25:20,000
+(Ruan Carlos Oliveira)
+o dinheiro cai para eles. Vai nem não vai nem passar para Z2. O dinheiro tá na conta, né?
+-
+
+()
+alguém.
+
+378
+00:25:20,000 --> 00:25:24,000
+(Ruan Carlos Oliveira)
+no caso da conta da empresa que eu tenho. E aí tem que ir pro
+
+379
+00:25:24,000 --> 00:25:28,000
+()
+Aham, entendi. Mas igual assim, ele vai passar para você aquele documento
+
+380
+00:25:28,000 --> 00:25:32,000
+(Ruan Carlos Oliveira)
+fornecedor. É a cotação. Isso vai passar a
+-
+
+()
+com a Mas aí a gente a gente já tem
+
+381
+00:25:32,000 --> 00:25:36,000
+()
+que pagar o o contrato tipo isso.
+
+382
+00:25:36,000 --> 00:25:40,000
+(Ruan Carlos Oliveira)
+cotação. Não, não é assim, como se a gente não for fazer agora, a gente não precisa da cotação
+
+383
+00:25:40,000 --> 00:25:44,000
+(Ruan Carlos Oliveira)
+agora, né? Porque a ideia é que a gente pega a cotação, tudo tudo OK, já pague, porque se a gente pegar uma
+
+384
+00:25:44,000 --> 00:25:48,000
+(Ruan Carlos Oliveira)
+cotação agora e a gente só for pagar em janeiro, aí os caras vão falar: "p****, você pegou uma cotação
+
+385
+00:25:48,000 --> 00:25:52,000
+(Ruan Carlos Oliveira)
+aí de setembro e pagou só em janeiro? O preço não mudou
+
+386
+00:25:52,000 --> 00:25:56,000
+(Ruan Carlos Oliveira)
+não". Então assim, pode abrir margem pr os caras fazer algum alguns questionamentos. Então, deixa para mais
+
+387
+00:25:56,000 --> 00:26:00,000
+(Ruan Carlos Oliveira)
+perto. Então, deixa ele aí. Deixa ele, é, deixa ele aí
+-
+
+()
+Entendi. Tu não pega nada com
+
+388
+00:26:00,000 --> 00:26:04,000
+(Ruan Carlos Oliveira)
+na já no esquema para quando for precisar ele já saber como é e
+
+389
+00:26:04,000 --> 00:26:08,000
+(Ruan Carlos Oliveira)
+só emitir.
+-
+
+()
+ele. Ah, beleza. Ô,
+
+390
+00:26:08,000 --> 00:26:12,000
+()
+Felipe, você ia falar alguma coisa? Ah, pode
+
+391
+00:26:12,000 --> 00:26:16,000
+(Ruan Carlos Oliveira)
+M.
+-
+
+()
+Não. Ah, só uma coisa, só um adendo. E sobre esse nota cotação
+-
+
+()
+crer. É
+
+392
+00:26:16,000 --> 00:26:20,000
+(Paulo Rocha)
+M.
+-
+
+()
+aí, a gente precisa do Beto e do Gabriel também, tá? O Gabriel arrumou
+
+393
+00:26:20,000 --> 00:26:24,000
+()
+dois CNPJ lá, mas ele também tá alinhado com isso há um tempo já, então
+-
+
+()
+que
+
+394
+00:26:24,000 --> 00:26:28,000
+()
+tudo certo. Sim.
+-
+
+()
+quando chegar o momento, Pronto, fechado.
+
+395
+00:26:28,000 --> 00:26:32,000
+()
+Então, não. Beleza, então. Então,
+
+396
+00:26:32,000 --> 00:26:36,000
+()
+vamos pausar por isso por agora. Fechou. Agora
+
+397
+00:26:36,000 --> 00:26:40,000
+()
+então é próximos passos da plataforma e do adversidade,
+
+398
+00:26:40,000 --> 00:26:44,000
+(Paulo Rocha)
+Tá. Não, eu acho que antes eh tem a
+
+399
+00:26:44,000 --> 00:26:48,000
+(Paulo Rocha)
+função de conseguir baixar os dados. Acho que isso isso é super
+
+400
+00:26:48,000 --> 00:26:52,000
+(Paulo Rocha)
+importante.
+-
+
+()
+né? Pera aí, deixa começar a anotar aqui rapidinho.
+
+401
+00:26:52,000 --> 00:26:56,000
+()
+Próximo espaçoso.
+
+402
+00:26:56,000 --> 00:27:00,000
+(Paulo Rocha)
+เอ
+-
+
+()
+Plataforma. Plataforma. Vai. M.
+
+403
+00:27:00,000 --> 00:27:04,000
+(Paulo Rocha)
+conseguir baixar os dados em formato ou Excel
+
+404
+00:27:04,000 --> 00:27:08,000
+(Paulo Rocha)
+ou PDF, de
+-
+
+()
+Tá, mas é
+
+405
+00:27:08,000 --> 00:27:12,000
+()
+tipo que dados exatamente é o
+
+406
+00:27:12,000 --> 00:27:16,000
+(Paulo Rocha)
+preferência, não são duas coisas. A
+-
+
+()
+gráfico.
+
+407
+00:27:16,000 --> 00:27:20,000
+(Paulo Rocha)
+primeira coisa é baixar os dados bruto, porque a gente vai entrar com o consumo de
+
+408
+00:27:20,000 --> 00:27:24,000
+(Paulo Rocha)
+fertilizante, consumo de não sei o quê, pererê parará. Vamos falar que
+-
+
+()
+Ah.
+
+409
+00:27:24,000 --> 00:27:28,000
+(Paulo Rocha)
+dentro de um projeto a gente tem 20 fazendas. Então, a gente teria que ter esses
+
+410
+00:27:28,000 --> 00:27:32,000
+(Paulo Rocha)
+dados, né, que a gente entrou
+
+411
+00:27:32,000 --> 00:27:36,000
+(Paulo Rocha)
+aqui, fertilizante,
+
+412
+00:27:36,000 --> 00:27:40,000
+(Paulo Rocha)
+eh, sei lá, calcário, pererê, parará, poruru poruru. E aqui as
+
+413
+00:27:40,000 --> 00:27:44,000
+(Paulo Rocha)
+fazendas e os números,
+-
+
+()
+Entendi, entendi,
+
+414
+00:27:44,000 --> 00:27:48,000
+(Paulo Rocha)
+entendeu? Isso é importante ter e
+-
+
+()
+entendi. Bel.
+
+415
+00:27:48,000 --> 00:27:52,000
+(Paulo Rocha)
+conseguir fazer baixar em aí precisa
+
+416
+00:27:52,000 --> 00:27:56,000
+(Paulo Rocha)
+ser só em PDF o dash, entendeu? o
+
+417
+00:27:56,000 --> 00:28:00,000
+(Paulo Rocha)
+dashboard de
+
+418
+00:28:00,000 --> 00:28:04,000
+(Paulo Rocha)
+preferência, eu não sei como é que é isso, colocar um Qcode ali
+
+419
+00:28:04,000 --> 00:28:08,000
+(Paulo Rocha)
+no fim ali, de forma que depois aí o cara escaneia esse
+
+420
+00:28:08,000 --> 00:28:12,000
+(Paulo Rocha)
+negócio e joga para direto lá para pra plataforma, entendeu?
+
+421
+00:28:20,000 --> 00:28:24,000
+(Paulo Rocha)
+Aí eu acho que fazer essas duas
+
+422
+00:28:24,000 --> 00:28:28,000
+(Paulo Rocha)
+coisas aí depois a gente entra em em biodiversidade que é o próximo
+
+423
+00:28:28,000 --> 00:28:32,000
+(Paulo Rocha)
+módulo, entendeu?
+
+424
+00:28:32,000 --> 00:28:36,000
+(Paulo Rocha)
+Tá louco aqui rodando em volta do ralo.
+
+425
+00:28:44,000 --> 00:28:48,000
+(Paulo Rocha)
+Ah.
+
+426
+00:29:16,000 --> 00:29:20,000
+(Ruan Carlos Oliveira)
+M.
+
+427
+00:29:20,000 --> 00:29:24,000
+(Paulo Rocha)
+Sai,
+
+428
+00:29:28,000 --> 00:29:32,000
+(Paulo Rocha)
+G. Minha
+
+429
+00:29:32,000 --> 00:29:36,000
+(Ruan Carlos Oliveira)
+Certo. Nem a gente nem
+-
+
+(Paulo Rocha)
+internet caiu. Henrique
+
+430
+00:29:36,000 --> 00:29:40,000
+(Ruan Carlos Oliveira)
+percebeu. Não pagou a conta da internet,
+-
+
+(Paulo Rocha)
+falou esperando aqui. Não pagou
+
+431
+00:29:40,000 --> 00:29:44,000
+(Ruan Carlos Oliveira)
+ó. Ficou.
+-
+
+(Paulo Rocha)
+a conta. Ó o tamanho que tá a
+
+432
+00:29:44,000 --> 00:29:48,000
+(Ruan Carlos Oliveira)
+É. Tá com quantos anos, Paulo? Já? Ah, não,
+-
+
+(Paulo Rocha)
+criança. Um ano e e 3
+
+433
+00:29:48,000 --> 00:29:52,000
+(Ruan Carlos Oliveira)
+ainda tá tá novinho.
+
+434
+00:29:52,000 --> 00:29:56,000
+(Ruan Carlos Oliveira)
+É.
+-
+
+(Paulo Rocha)
+meses. A pretinha pedindo
+
+435
+00:29:56,000 --> 00:30:00,000
+(Ruan Carlos Oliveira)
+Ah, é um chituzzinho, é Paulo.
+-
+
+(Paulo Rocha)
+também. É
+
+436
+00:30:00,000 --> 00:30:04,000
+(Ruan Carlos Oliveira)
+Ah, mas aí ela tem alguma coisa aí com
+-
+
+(Paulo Rocha)
+viraata na verdade,
+
+437
+00:30:04,000 --> 00:30:08,000
+(Ruan Carlos Oliveira)
+shitso aí, viu?
+-
+
+(Paulo Rocha)
+né? Não é o pessoal fala que é chipro. É chips com
+
+438
+00:30:08,000 --> 00:30:12,000
+(Ruan Carlos Oliveira)
+Ah, ah, não, mas mas ele
+-
+
+(Paulo Rocha)
+poodle. É vira lata. É vira lata.
+
+439
+00:30:12,000 --> 00:30:16,000
+(Ruan Carlos Oliveira)
+tem mas tem um tracinho de cheit aí, tá?
+-
+
+(Paulo Rocha)
+Tem, tem, tem, tem cara de
+
+440
+00:30:16,000 --> 00:30:20,000
+(Paulo Rocha)
+de
+-
+
+()
+Ô, minha internet caiu aqui, eu entrei
+
+441
+00:30:20,000 --> 00:30:24,000
+(Ruan Carlos Oliveira)
+É, calma aí.
+-
+
+()
+pelo celular. Vocês conseguem ver se tá gravando ainda a
+
+442
+00:30:24,000 --> 00:30:28,000
+(Ruan Carlos Oliveira)
+Tá aqui em cima. Tá. E tá, tá, tá. Pelo
+
+443
+00:30:28,000 --> 00:30:32,000
+(Ruan Carlos Oliveira)
+menos acho que tá
+-
+
+()
+É, eu acho que continua a gravação, só salva depois que todo
+
+444
+00:30:32,000 --> 00:30:36,000
+(Ruan Carlos Oliveira)
+aqui.
+-
+
+(Paulo Rocha)
+X. Assim, se não pagar, né,
+-
+
+()
+reunião? Então, o f*** é
+-
+
+()
+mundo sai,
+
+445
+00:30:36,000 --> 00:30:40,000
+(Ruan Carlos Oliveira)
+Uhum.
+-
+
+(Paulo Rocha)
+no internet.
+-
+
+()
+que o o f*** é que o
+
+446
+00:30:40,000 --> 00:30:44,000
+()
+admin não tá mais online, né? Eu não sei se vai pagar. Não vai pagar,
+-
+
+()
+sabe? Não, acho que
+
+447
+00:30:44,000 --> 00:30:48,000
+()
+ó. Gravar. Ah, fica esperto aí,
+
+448
+00:30:48,000 --> 00:30:52,000
+(Ruan Carlos Oliveira)
+É.
+-
+
+()
+então. Tá, vamos continuar
+-
+
+()
+continua.
+
+449
+00:30:52,000 --> 00:30:56,000
+()
+lá. Eh, perdão, viu?
+
+450
+00:30:56,000 --> 00:31:00,000
+(Ruan Carlos Oliveira)
+É
+-
+
+(Paulo Rocha)
+É, vamos
+-
+
+()
+Eh, que tava falando é do salvar os
+
+451
+00:31:00,000 --> 00:31:04,000
+(Ruan Carlos Oliveira)
+para
+-
+
+(Paulo Rocha)
+dados brutos, né, por
+
+452
+00:31:04,000 --> 00:31:08,000
+(Paulo Rocha)
+projeto, por módulo ali em formato
+-
+
+()
+dados.
+
+453
+00:31:08,000 --> 00:31:12,000
+(Ruan Carlos Oliveira)
+exportar.
+-
+
+(Paulo Rocha)
+Excel e abaixar o dash ali em formato
+
+454
+00:31:12,000 --> 00:31:16,000
+(Paulo Rocha)
+PDF, entendeu? Aí se conseguir colocar um um
+
+455
+00:31:16,000 --> 00:31:20,000
+(Paulo Rocha)
+Qcode ali e tal de coisa para fazer uma verificação, não sei como fazer isso,
+
+456
+00:31:20,000 --> 00:31:24,000
+(Paulo Rocha)
+mas seria o na hora que você baixa
+-
+
+()
+Como assim? Quer
+
+457
+00:31:24,000 --> 00:31:28,000
+(Paulo Rocha)
+ali o arquivo PDF, se o cara escaneia,
+
+458
+00:31:28,000 --> 00:31:32,000
+(Paulo Rocha)
+vai pro site da Gaia lá e ele consegue ver que de
+-
+
+()
+cod?
+
+459
+00:31:32,000 --> 00:31:36,000
+(Paulo Rocha)
+fato aquele resultado que tá ali foi gerado dentro
+
+460
+00:31:36,000 --> 00:31:40,000
+(Ruan Carlos Oliveira)
+faz uma validação, né?
+-
+
+(Paulo Rocha)
+da eh da
+-
+
+()
+Tá,
+
+461
+00:31:40,000 --> 00:31:44,000
+(Paulo Rocha)
+plataforma.
+-
+
+()
+mas no caso seria uma validação, tipo eu entro
+
+462
+00:31:44,000 --> 00:31:48,000
+()
+naquela mesma comparação ou tipo um porque o cara teria que ter
+
+463
+00:31:48,000 --> 00:31:52,000
+()
+acesso, sabe? Não é qualquer um que pode entrar com QR code. Tem que pensar qual que é o
+
+464
+00:31:52,000 --> 00:31:56,000
+(Paulo Rocha)
+Entendi. Deixa eu pensar.
+-
+
+()
+segurança disso.
+
+465
+00:31:56,000 --> 00:32:00,000
+(Paulo Rocha)
+Eu eu não sei como como que essas outras empresas fazem,
+
+466
+00:32:00,000 --> 00:32:04,000
+(Ruan Carlos Oliveira)
+M.
+-
+
+(Paulo Rocha)
+né? que a ideia do aí do QR code é o
+-
+
+()
+Ah.
+
+467
+00:32:04,000 --> 00:32:08,000
+(Paulo Rocha)
+seguinte, eh, a empresa ela pode imprimir esse QR code, ela tá
+
+468
+00:32:08,000 --> 00:32:12,000
+(Paulo Rocha)
+vendendo, sei lá, um lote de algodão, por exemplo, e ela prega isso dentro
+
+469
+00:32:12,000 --> 00:32:16,000
+(Paulo Rocha)
+do pacote de algodão. O cara escaneia ali, ele vai ter
+
+470
+00:32:16,000 --> 00:32:20,000
+(Paulo Rocha)
+informação daquele daquele lote, ele vai ter
+
+471
+00:32:20,000 --> 00:32:24,000
+(Paulo Rocha)
+a rastrabilidade daquele lote ali, entendeu? ele vai conseguir saber qual que é a pegada de
+
+472
+00:32:24,000 --> 00:32:28,000
+(Paulo Rocha)
+carbono, qual que foi o score de score
+
+473
+00:32:28,000 --> 00:32:32,000
+(Paulo Rocha)
+regenerativo. Eh, mas aí eu acho que ele teria que ter uma senha,
+
+474
+00:32:32,000 --> 00:32:36,000
+(Paulo Rocha)
+né? Talvez
+-
+
+()
+Não é isso, é
+
+475
+00:32:36,000 --> 00:32:40,000
+()
+de se pensar, mas dá para desenvolver. Aí aqui a gente pode fazer é igual você
+
+476
+00:32:40,000 --> 00:32:44,000
+()
+falou agora, tem uma senha, mas aí tem que pensar qual que seria a senha,
+
+477
+00:32:44,000 --> 00:32:48,000
+()
+porque tá no Qcode de um PDF, como que eu vou mandar a senha para essa pessoa?
+
+478
+00:32:48,000 --> 00:32:52,000
+()
+Ou pode ser algo público, qualquer um que tiver acesso a essa URL
+
+479
+00:32:52,000 --> 00:32:56,000
+()
+isso. Mas aí qualquer pessoa teria acesso a esse resultado. Não sei quão
+
+480
+00:32:56,000 --> 00:33:00,000
+(Paulo Rocha)
+é Assim,
+-
+
+()
+isso pode ser desse jeito, mas dá para fazer. Se é algo querer. vida, a gente
+
+481
+00:33:00,000 --> 00:33:04,000
+(Paulo Rocha)
+não, eu penso assim, se o cara
+
+482
+00:33:04,000 --> 00:33:08,000
+(Paulo Rocha)
+prega isso em um pacote de algodão, ele quer que esse negócio seja público,
+-
+
+()
+desenvolve.
+
+483
+00:33:08,000 --> 00:33:12,000
+(Paulo Rocha)
+entendeu? Senão ele não vai imprimir e não vai pregar. Ele pode ter
+
+484
+00:33:12,000 --> 00:33:16,000
+(Paulo Rocha)
+só aquele resultado com com o Qcode sem
+
+485
+00:33:16,000 --> 00:33:20,000
+(Paulo Rocha)
+pregar, né? Mas se ele quer pregar isso
+-
+
+()
+Entendi.
+
+486
+00:33:20,000 --> 00:33:24,000
+(Paulo Rocha)
+lá, eu acho que esse dado pode ser público. Acho que não tem
+-
+
+()
+Entendi.
+
+487
+00:33:24,000 --> 00:33:28,000
+(Paulo Rocha)
+problema.
+-
+
+()
+Entendi. Mas quão, tipo, quão vaido
+
+488
+00:33:28,000 --> 00:33:32,000
+()
+é você num algodão vê um
+
+489
+00:33:32,000 --> 00:33:36,000
+()
+Qcode, abre abre o Gaia, você nem sabe o que que é o Gaia. E aí isso
+
+490
+00:33:36,000 --> 00:33:40,000
+()
+é é
+
+491
+00:33:40,000 --> 00:33:44,000
+(Paulo Rocha)
+Cara, hoje assim a turma tá buscando o que a gente chama
+
+492
+00:33:44,000 --> 00:33:48,000
+(Paulo Rocha)
+de rastraabilidade, né, de aí de informação. Essa é uma
+-
+
+()
+OK.
+
+493
+00:33:48,000 --> 00:33:52,000
+(Paulo Rocha)
+maneira de você conseguir tornar público um
+-
+
+()
+Aham.
+
+494
+00:33:52,000 --> 00:33:56,000
+(Paulo Rocha)
+dado de pegada de carbono, por exemplo,
+
+495
+00:33:56,000 --> 00:34:00,000
+(Paulo Rocha)
+entendeu? Eu não se a minha dúvida é,
+-
+
+()
+Entendi. Não.
+
+496
+00:34:00,000 --> 00:34:04,000
+(Paulo Rocha)
+Juan, a gente coloca isso, por exemplo, o cara
+
+497
+00:34:04,000 --> 00:34:08,000
+(Paulo Rocha)
+escaneia SRCode para ser livre, isso ou não? Eu não sei como que as outras
+
+498
+00:34:08,000 --> 00:34:12,000
+(Paulo Rocha)
+plataformas estão fazendo. Eu sei que elas colocam esse esse eh QR
+
+499
+00:34:12,000 --> 00:34:16,000
+(Ruan Carlos Oliveira)
+É,
+-
+
+(Paulo Rocha)
+code lá, entendeu? Na hora que o cara baixa a
+
+500
+00:34:16,000 --> 00:34:20,000
+(Paulo Rocha)
+o dashboard, ele vem com
+-
+
+()
+Beleza.
+
+501
+00:34:20,000 --> 00:34:24,000
+(Paulo Rocha)
+SK. Não sei se code. Se qualquer um escanear se ele vai ter acesso ao
+
+502
+00:34:24,000 --> 00:34:28,000
+(Ruan Carlos Oliveira)
+mas sim, sim. É porque a gente tem que pensar como é que a gente vai conseguir, como é que de
+-
+
+(Paulo Rocha)
+W,
+
+503
+00:34:28,000 --> 00:34:32,000
+(Ruan Carlos Oliveira)
+fato isso vai ser operacionalizado, porque vamos lá, né? O que é que acontece hoje com essas essas outras grandes
+
+504
+00:34:32,000 --> 00:34:36,000
+(Ruan Carlos Oliveira)
+marcas aí falando o que a gente tá fazendo agora lá com com a Nestle, eles tm um Qcode lá, mas
+-
+
+(Paulo Rocha)
+entendeu?
+
+505
+00:34:36,000 --> 00:34:40,000
+(Ruan Carlos Oliveira)
+os caras eles imprimem a embalagem milhares por milhares, né? Então eles não puxa ali um lote
+
+506
+00:34:40,000 --> 00:34:44,000
+(Ruan Carlos Oliveira)
+por lote, né? Então o cara vai pegar ali, ele vai pegar uma média geral da emissão que tem
+
+507
+00:34:44,000 --> 00:34:48,000
+(Ruan Carlos Oliveira)
+ali e uma potencial rastrabilidade ali mais focada, mas aí entra aquela
+
+508
+00:34:48,000 --> 00:34:52,000
+(Ruan Carlos Oliveira)
+palada de balanço de massa e tudo. Então assim, eu não sei o quanto que isso
+
+509
+00:34:52,000 --> 00:34:56,000
+(Ruan Carlos Oliveira)
+ficaria complexo, Paulo, para um cara desse que pega ali. Aí eu tenho ali o meu resultado do
+
+510
+00:34:56,000 --> 00:35:00,000
+(Ruan Carlos Oliveira)
+meu projeto, algodão, vamos falar assim, eu tenho uma blusa, mas ali o cara só vai
+
+511
+00:35:00,000 --> 00:35:04,000
+(Ruan Carlos Oliveira)
+conseguir reportar ali todo o volume que ele utilizou daquela fazenda, daquele projeto para
+
+512
+00:35:04,000 --> 00:35:08,000
+(Ruan Carlos Oliveira)
+falar que aquilo ali é aquele algodão com aquela pegada de carbono. Se o cara misturar aquele
+-
+
+(Paulo Rocha)
+Não,
+
+513
+00:35:08,000 --> 00:35:12,000
+(Ruan Carlos Oliveira)
+algodão com outro, aí, pronto, babou
+-
+
+(Paulo Rocha)
+mas não, então eu não tô
+
+514
+00:35:12,000 --> 00:35:16,000
+(Paulo Rocha)
+preocupado a nível de cadeia, né? Eu tô preocupado, por exemplo,
+
+515
+00:35:16,000 --> 00:35:20,000
+(Paulo Rocha)
+para essa fazenda aqui, esse algodão que tá saindo, tá
+
+516
+00:35:20,000 --> 00:35:24,000
+(Ruan Carlos Oliveira)
+tudo. Ah, tá. Então é a mais a nível de fazenda,
+-
+
+(Paulo Rocha)
+tudo aqui, ó. Pá, pá, pá, pá. O que vai acontecer daqui para
+
+517
+00:35:24,000 --> 00:35:28,000
+(Ruan Carlos Oliveira)
+né? Não, tá, entendi. É. Aham. Tá,
+-
+
+(Paulo Rocha)
+fora é é tô falando de fazenda, não tô falando cadeia,
+
+518
+00:35:28,000 --> 00:35:32,000
+(Ruan Carlos Oliveira)
+tá, entendi. Entendi. Tá. Então, acho que
+-
+
+(Paulo Rocha)
+entendeu? O cara vai ter
+
+519
+00:35:32,000 --> 00:35:36,000
+(Ruan Carlos Oliveira)
+tá
+-
+
+(Paulo Rocha)
+a rastrabilidade daquele algodão que tá saindo dali ou daquele café que tá saindo
+
+520
+00:35:36,000 --> 00:35:40,000
+(Ruan Carlos Oliveira)
+Aham. Sim. Sim, sim, sim. Entendi, entendi. Não
+-
+
+(Paulo Rocha)
+dali, entendeu? O que acontece depois
+
+521
+00:35:40,000 --> 00:35:44,000
+(Ruan Carlos Oliveira)
+é, não entendi, entendi. Faz sentido, faz sentido, faz sentido. Aí, mas a nível de
+-
+
+(Paulo Rocha)
+aí,
+
+522
+00:35:44,000 --> 00:35:48,000
+(Ruan Carlos Oliveira)
+facenda, cara, eu acho que isso pode ficar até dentro da plata dentro do do Gaia
+
+523
+00:35:48,000 --> 00:35:52,000
+(Ruan Carlos Oliveira)
+mesmo. Não sei se você já viram, por exemplo, quando a gente vai tirar aqueles documentos ali que tem dentro da universidade, que eu acho que o
+-
+
+(Paulo Rocha)
+entendeu?
+
+524
+00:35:52,000 --> 00:35:56,000
+(Ruan Carlos Oliveira)
+principal ponto ali pra gente ter esse QR code é pra gente validar que aquele dado ali venho de um
+
+525
+00:35:56,000 --> 00:36:00,000
+(Ruan Carlos Oliveira)
+dado, venho de um site real, que ele não foi manipulado. No. que não foi
+-
+
+(Paulo Rocha)
+Não foi inventável.
+
+526
+00:36:00,000 --> 00:36:04,000
+(Ruan Carlos Oliveira)
+manipulado por o IA, porque hoje já faço. Cara, eu fazia isso antigamente com pente, que eu
+-
+
+(Paulo Rocha)
+Isso, isso.
+
+527
+00:36:04,000 --> 00:36:08,000
+(Ruan Carlos Oliveira)
+mudava o nome lá das coisas da faculdade lá, botava lá o nome, uma declaração
+
+528
+00:36:08,000 --> 00:36:12,000
+(Ruan Carlos Oliveira)
+de matrícula para todo mundo da minha família, vai pro cinema de graça. Agora não tem
+
+529
+00:36:12,000 --> 00:36:16,000
+(Ruan Carlos Oliveira)
+a paradinha ali do QR code que eu vou lá, tenho que escanear, ele confirma lá no site da
+-
+
+(Paulo Rocha)
+M.
+
+530
+00:36:16,000 --> 00:36:20,000
+(Ruan Carlos Oliveira)
+própria universidade. Então, mais o foco, mais a ideia seja isso,
+
+531
+00:36:20,000 --> 00:36:24,000
+(Ruan Carlos Oliveira)
+mostrar que aquele dado ali ele não foi manipulado de alguma forma e que ele caia
+
+532
+00:36:24,000 --> 00:36:28,000
+(Ruan Carlos Oliveira)
+lá no nosso site da G e fala que aquele dado é um dado real e tal, alguma coisa assim do
+
+533
+00:36:28,000 --> 00:36:32,000
+(Ruan Carlos Oliveira)
+tipo. Como fazer e a mel e como a gente,
+
+534
+00:36:32,000 --> 00:36:36,000
+(Ruan Carlos Oliveira)
+né, transformar tudo isso assim numa página para poder mostrar essa
+
+535
+00:36:36,000 --> 00:36:40,000
+(Ruan Carlos Oliveira)
+validação, não tenho ideia, mas eu acho que deve ter alguma coisa no mercado aí que a
+-
+
+()
+É a
+
+536
+00:36:40,000 --> 00:36:44,000
+(Ruan Carlos Oliveira)
+gente possa olhar para poder beber da
+-
+
+()
+da Isso é a da página. Aí
+
+537
+00:36:44,000 --> 00:36:48,000
+(Ruan Carlos Oliveira)
+fonte.
+-
+
+()
+essa é a gente, essa parte a gente se preocupa. É, a gente teria que ter só um
+
+538
+00:36:48,000 --> 00:36:52,000
+(Ruan Carlos Oliveira)
+Tem que dar
+-
+
+(Paulo Rocha)
+Mas assim, ponhamos
+-
+
+()
+exemplo. vocês conseguiram então pegar um exemplo
+
+539
+00:36:52,000 --> 00:36:56,000
+(Paulo Rocha)
+que a gente tem 10 projetos diferentes. Como que
+
+540
+00:36:56,000 --> 00:37:00,000
+(Paulo Rocha)
+isso iria funcionar? 10 projetos, 10 QR
+
+541
+00:37:00,000 --> 00:37:04,000
+(Paulo Rocha)
+codes, né, para cada projeto. É, para cada projeto
+
+542
+00:37:04,000 --> 00:37:08,000
+(Paulo Rocha)
+teria que ser criado uma página, porque na hora que o cara escaneia vai
+
+543
+00:37:08,000 --> 00:37:12,000
+(Paulo Rocha)
+ou você consegue e automatizar de
+
+544
+00:37:12,000 --> 00:37:16,000
+(Paulo Rocha)
+forma que gera aquele
+-
+
+()
+disso. Não, seria, seria
+
+545
+00:37:16,000 --> 00:37:20,000
+()
+automatizado, tipo, seria gaia p
+
+546
+00:37:20,000 --> 00:37:24,000
+()
+prova é barra aí um ID do projeto, um
+
+547
+00:37:24,000 --> 00:37:28,000
+(Paulo Rocha)
+Nossa!
+-
+
+()
+ID lógico que vai ser criptografado pro cara não ter acesso a essas coisas, mas
+
+548
+00:37:28,000 --> 00:37:32,000
+()
+é quando o cara acessar essa página, a gente pega do nosso banco de dado e mostra todas as informações
+
+549
+00:37:32,000 --> 00:37:36,000
+()
+necessárias. O que a gente precisa saber, essa parte é fácil fazer, isso aí a gente
+
+550
+00:37:36,000 --> 00:37:40,000
+()
+faz. O que a gente precisa saber é como isso ser algo real, sabe? o que
+
+551
+00:37:40,000 --> 00:37:44,000
+()
+que a gente tem que mostrar, essas coisas aí. Vocês têm que trazer isso pra
+
+552
+00:37:44,000 --> 00:37:48,000
+(Paulo Rocha)
+É o é talvez é o
+-
+
+()
+gente. Que que a gente tem que mostrar nessa
+
+553
+00:37:48,000 --> 00:37:52,000
+(Paulo Rocha)
+dashboard simplificado, né?
+-
+
+()
+página? Eh, o dashboard teria
+
+554
+00:37:52,000 --> 00:37:56,000
+(Ruan Carlos Oliveira)
+Acho
+-
+
+()
+que mostrar as informações que tem do projeto, tipo todos os
+
+555
+00:37:56,000 --> 00:38:00,000
+(Ruan Carlos Oliveira)
+que só bem bem simplificado mesmo ali. Só o grosso mesmo,
+-
+
+(Paulo Rocha)
+Não, acho que
+
+556
+00:38:00,000 --> 00:38:04,000
+(Paulo Rocha)
+fazenda, eh, aquele mapinha ali da
+-
+
+()
+dados.
+
+557
+00:38:04,000 --> 00:38:08,000
+(Paulo Rocha)
+fazenda e o dashboard simplificado. É meu
+
+558
+00:38:08,000 --> 00:38:12,000
+(Ruan Carlos Oliveira)
+viu?
+-
+
+(Paulo Rocha)
+carbono, o dado principal de carbono, né? Isso
+-
+
+()
+Tá. Isso
+
+559
+00:38:12,000 --> 00:38:16,000
+()
+é do projeto é realmente acumulado de todas as
+
+560
+00:38:16,000 --> 00:38:20,000
+(Ruan Carlos Oliveira)
+Так.
+-
+
+(Paulo Rocha)
+daí é, acho que
+-
+
+()
+fazendas, de todos os talhões, de todos os cálculos. Como que
+
+561
+00:38:20,000 --> 00:38:24,000
+(Paulo Rocha)
+seria seria teria que ser uma média, né,
+-
+
+()
+é?
+
+562
+00:38:24,000 --> 00:38:28,000
+(Paulo Rocha)
+de uma média da fazenda
+-
+
+()
+É porque é tá pensando
+
+563
+00:38:28,000 --> 00:38:32,000
+(Ruan Carlos Oliveira)
+Sì.
+-
+
+()
+assim, o negócio é uma coisa que a gente fez os cálculos é pro cara
+
+564
+00:38:32,000 --> 00:38:36,000
+()
+poder conseguir brincar, né? Pro cara fazer
+
+565
+00:38:36,000 --> 00:38:40,000
+()
+projeções. A gente tem que pensar então agora ter o valor que o cara quer usar, o que
+
+566
+00:38:40,000 --> 00:38:44,000
+()
+é realmente o que ele fez. Acho que é interessante ter isso, né? Tipo,
+
+567
+00:38:44,000 --> 00:38:48,000
+()
+qual cálculo de carbono emissão daquele talhão,
+
+568
+00:38:48,000 --> 00:38:52,000
+()
+daquela fazenda, daquele projeto, o cara tá usando? Isso faz sentido?
+
+569
+00:38:52,000 --> 00:38:56,000
+(Paulo Rocha)
+Paz. sentido.
+-
+
+()
+Então a gente tem que pensar nisso também.
+
+570
+00:38:56,000 --> 00:39:00,000
+()
+adicionar, tipo, o cara selecionar lá um cal e falar: "Esse é o
+
+571
+00:39:00,000 --> 00:39:04,000
+()
+que esse é o real". Algo
+
+572
+00:39:04,000 --> 00:39:08,000
+()
+assim. Eh, temos um outro projeto que os caras
+
+573
+00:39:08,000 --> 00:39:12,000
+()
+eh no projeto que a gente tá fazendo aqui, os caras conseguem fazer exatamente
+
+574
+00:39:12,000 --> 00:39:16,000
+()
+isso, é brincar, é fazer qual que é o nome, ô Felipe, qual que é o
+
+575
+00:39:16,000 --> 00:39:20,000
+()
+nome? Eh, pode colocar a informação que quiser, só para ver como que fica as
+
+576
+00:39:20,000 --> 00:39:24,000
+(Leonardo Paiva)
+Simulação.
+-
+
+()
+coisas. Eh, simulação. O
+
+577
+00:39:24,000 --> 00:39:28,000
+()
+nosso, a gente não tem isso. O cara faz o cálculo e aí vai virar um dos
+
+578
+00:39:28,000 --> 00:39:32,000
+()
+cálculos. A gente não seta como uma simulação. Então, faz sentido a gente ter na
+
+579
+00:39:32,000 --> 00:39:36,000
+()
+plataforma o cálculo que é o real. Então, no talhão A da
+
+580
+00:39:36,000 --> 00:39:40,000
+()
+fazenda A do projeto A, esse
+
+581
+00:39:40,000 --> 00:39:44,000
+()
+cálculo A é o real. O B CD foi um teste meu que eu quis fazer uma
+
+582
+00:39:44,000 --> 00:39:48,000
+(Paulo Rocha)
+É porque assim,
+-
+
+()
+simulação. Isso faz sentido existir?
+
+583
+00:39:48,000 --> 00:39:52,000
+(Paulo Rocha)
+eh, geralmente quando o cara
+
+584
+00:39:52,000 --> 00:39:56,000
+(Paulo Rocha)
+faz essas, por exemplo, Exemplo, eu tô indo vender um
+
+585
+00:39:56,000 --> 00:40:00,000
+(Paulo Rocha)
+milho para eh sei
+
+586
+00:40:00,000 --> 00:40:04,000
+(Paulo Rocha)
+lá, Santa Catarina para ir vender um milho proos Estados
+
+587
+00:40:04,000 --> 00:40:08,000
+(Paulo Rocha)
+Unidos. Quando eu começo o projeto, eu crio a minha linha de
+
+588
+00:40:08,000 --> 00:40:12,000
+(Paulo Rocha)
+base, né? Em cima da minha linha de base, eu posso fazer
+
+589
+00:40:12,000 --> 00:40:16,000
+(Paulo Rocha)
+essas eh simulações, né? ah, qual
+-
+
+()
+Então,
+
+590
+00:40:16,000 --> 00:40:20,000
+(Paulo Rocha)
+prática que eu vou implementar que vai me dar mais carbono ou que vai reduzir a minha a
+
+591
+00:40:20,000 --> 00:40:24,000
+(Paulo Rocha)
+minha emissão. Mas quando eu fecho o meu
+
+592
+00:40:24,000 --> 00:40:28,000
+(Paulo Rocha)
+projeto, que eu vou vender esse milho, eu não mando com essas
+
+593
+00:40:28,000 --> 00:40:32,000
+(Paulo Rocha)
+simulações, entendeu? Eu vou mandar pra linha de base. Qual que
+
+594
+00:40:32,000 --> 00:40:36,000
+(Paulo Rocha)
+é a minha pegada de carbono naquele momento e qual que é o estoque de
+
+595
+00:40:36,000 --> 00:40:40,000
+(Paulo Rocha)
+carbono que eu tenho naquela área para aquele momento,
+-
+
+()
+Entendi. Tá.
+
+596
+00:40:40,000 --> 00:40:44,000
+(Paulo Rocha)
+entendeu? Eu posso até mandar para ele daquele momento e mais
+-
+
+()
+Então, então
+
+597
+00:40:44,000 --> 00:40:48,000
+(Paulo Rocha)
+5 anos. para estoque de carbono, pro cara ter uma uma
+
+598
+00:40:48,000 --> 00:40:52,000
+(Paulo Rocha)
+ideia do que que é, mas eu não entrego
+
+599
+00:40:52,000 --> 00:40:56,000
+(Paulo Rocha)
+eh eh simulações irreais quando eu vou fazer a venda, entendeu?
+
+600
+00:40:56,000 --> 00:41:00,000
+(Paulo Rocha)
+Eu quero o dado preciso paraa foto daquele
+-
+
+()
+beleza.
+
+601
+00:41:00,000 --> 00:41:04,000
+()
+Entendi. Não. Beleza. Então, não. Então isso é uma nova coisa na plataforma. Então a gente
+
+602
+00:41:04,000 --> 00:41:08,000
+()
+vai, além de agora de ter o os dados, vai ser
+
+603
+00:41:08,000 --> 00:41:12,000
+()
+definições de o que é realmente o cálculo final e o que que foi simulação, que
+
+604
+00:41:12,000 --> 00:41:16,000
+(Paulo Rocha)
+momento. Porque
+-
+
+()
+é o cara pode fazer quando quiser, mas quando ele fechar, ele
+
+605
+00:41:16,000 --> 00:41:20,000
+(Paulo Rocha)
+ele, porque isso aí entra
+-
+
+()
+seleciona só as as que ele quer realmente para vender.
+
+606
+00:41:20,000 --> 00:41:24,000
+(Paulo Rocha)
+naquele papo que a gente teve lá atrás, que eu não sei se vocês lembram que a gente tinha que colocar
+
+607
+00:41:24,000 --> 00:41:28,000
+(Paulo Rocha)
+um ambiente para fazer verificação. Quando
+
+608
+00:41:28,000 --> 00:41:32,000
+(Paulo Rocha)
+é feito a verificação dos dados, ela é
+
+609
+00:41:32,000 --> 00:41:36,000
+(Paulo Rocha)
+feita com o dado real, com a foto
+
+610
+00:41:36,000 --> 00:41:40,000
+(Paulo Rocha)
+daquele momento, entendeu? De novo, se eu
+
+611
+00:41:40,000 --> 00:41:44,000
+(Paulo Rocha)
+se eu tô aqui, se eu sou um produtor de milho, se eu sou uma
+
+612
+00:41:44,000 --> 00:41:48,000
+(Paulo Rocha)
+Nestlê, Nestlê não, LDC, que é uma trailer, eu quero vender esse
+
+613
+00:41:48,000 --> 00:41:52,000
+(Paulo Rocha)
+milho para uma Nestlê, que tá lá nos Estados Unidos, por exemplo, e a Nestlê
+
+614
+00:41:52,000 --> 00:41:56,000
+(Paulo Rocha)
+fala: "Eu quero saber qual que é a sua pegada de carbono
+
+615
+00:41:56,000 --> 00:42:00,000
+(Paulo Rocha)
+dentro aí da fazenda na hora que eu termino Yeah. No cálculo que
+
+616
+00:42:00,000 --> 00:42:04,000
+(Paulo Rocha)
+eu fechei, olha, meu grupo de fazenda são esses aqui.
+
+617
+00:42:04,000 --> 00:42:08,000
+(Paulo Rocha)
+Então, eu tenho a pegada de carbono para cada
+
+618
+00:42:08,000 --> 00:42:12,000
+(Paulo Rocha)
+fazenda. Eu vou chamar uma terceira parte, que é a empresa irmã da
+
+619
+00:42:12,000 --> 00:42:16,000
+(Paulo Rocha)
+Peterson, que é a Controle Uno. Ela vai verificar
+
+620
+00:42:16,000 --> 00:42:20,000
+(Paulo Rocha)
+isso eh dentro da plataforma para ver se os cálculos tão
+
+621
+00:42:20,000 --> 00:42:24,000
+(Paulo Rocha)
+OK. E ela vai falar: "Não, tá OK,
+
+622
+00:42:24,000 --> 00:42:28,000
+(Paulo Rocha)
+está eh verificado o dado real. Eu gero
+
+623
+00:42:28,000 --> 00:42:32,000
+(Paulo Rocha)
+dashboard, eu gero QR code, eu prego isso no milho e mando isso para fora,
+-
+
+()
+Eu
+
+624
+00:42:36,000 --> 00:42:40,000
+(Paulo Rocha)
+entendeu? Faz sentido,
+-
+
+()
+Entendi. Não, fechou. Fechou. Fechou. Então a
+
+625
+00:42:40,000 --> 00:42:44,000
+(Ruan Carlos Oliveira)
+Eu também acho que
+-
+
+()
+gente não fechou. A gente
+
+626
+00:42:44,000 --> 00:42:48,000
+(Paulo Rocha)
+Ran.
+-
+
+()
+segue segue então com essa segunda filture
+
+627
+00:42:48,000 --> 00:42:52,000
+(Ruan Carlos Oliveira)
+faz.
+-
+
+()
+aí que é per aí só deixa eu pôr a
+
+628
+00:42:52,000 --> 00:42:56,000
+()
+aqui para pensar. Calma aí, Rind.
+
+629
+00:42:56,000 --> 00:43:00,000
+(Ruan Carlos Oliveira)
+Ih, caiu de
+-
+
+(Paulo Rocha)
+Eu
+-
+
+(Z2 Tech)
+Aí, tá me
+
+630
+00:43:00,000 --> 00:43:04,000
+(Ruan Carlos Oliveira)
+novo. Tá, tá bravo,
+-
+
+(Paulo Rocha)
+vou char. Tá complicado, não
+
+631
+00:43:04,000 --> 00:43:08,000
+(Ruan Carlos Oliveira)
+viu, hein, Paulo. Mas pensando nisso, cara, será que a
+
+632
+00:43:08,000 --> 00:43:12,000
+(Ruan Carlos Oliveira)
+gente a gente a gente mantém na mesma
+-
+
+(Paulo Rocha)
+tá?
+
+633
+00:43:12,000 --> 00:43:16,000
+(Ruan Carlos Oliveira)
+página e tudo? a gente cria uma, sei lá, um domínio só para essa parte de auditor, para
+
+634
+00:43:16,000 --> 00:43:20,000
+(Ruan Carlos Oliveira)
+eles poderem acessar, a gente libera uma, né, o módulo de auditor ou
+
+635
+00:43:20,000 --> 00:43:24,000
+(Ruan Carlos Oliveira)
+perfil de auditor para um auditor, né, creneciado conseguir acessar e tal, que eu fico
+
+636
+00:43:24,000 --> 00:43:28,000
+(Ruan Carlos Oliveira)
+pensando, cara, como é que a gente operacionaliza isso
+
+637
+00:43:28,000 --> 00:43:32,000
+(Ruan Carlos Oliveira)
+para não permitir, por exemplo, que qualquer um queira lá ficar colocando, né, tentar se
+-
+
+(Z2 Tech)
+escutando? Ja.
+
+638
+00:43:32,000 --> 00:43:36,000
+(Ruan Carlos Oliveira)
+cadastrar como auditor, claro que a gente vai ter os filtros para barrar, mas eu não sei se
+
+639
+00:43:36,000 --> 00:43:40,000
+(Ruan Carlos Oliveira)
+isso visualmente a pessoa conseguir saber se que tem um auditor consegue ficar ali
+
+640
+00:43:40,000 --> 00:43:44,000
+(Ruan Carlos Oliveira)
+acessando. É a melhor maneira. Não
+-
+
+(Paulo Rocha)
+Não. Então,
+
+641
+00:43:44,000 --> 00:43:48,000
+(Paulo Rocha)
+eh, acho que em relação ao
+
+642
+00:43:48,000 --> 00:43:52,000
+(Ruan Carlos Oliveira)
+sei.
+-
+
+(Paulo Rocha)
+ao Qode é na hora que fecha lá e tudo, é
+
+643
+00:43:52,000 --> 00:43:56,000
+(Paulo Rocha)
+projeto e por fazenda, isso aí, beleza, né? Agora esse outro
+
+644
+00:43:56,000 --> 00:44:00,000
+(Paulo Rocha)
+ambiente pro pro auditor ele ter
+
+645
+00:44:00,000 --> 00:44:04,000
+(Ruan Carlos Oliveira)
+Sim.
+-
+
+(Paulo Rocha)
+acesso vai ter que ser por projeto também, entendeu?
+
+646
+00:44:04,000 --> 00:44:08,000
+(Ruan Carlos Oliveira)
+Uhum.
+-
+
+(Paulo Rocha)
+Por exemplo, a gente fechez, tem tem aqueles ambientes, o ambiente
+
+647
+00:44:08,000 --> 00:44:12,000
+(Paulo Rocha)
+do técnico, o nosso ambiente, tem que criar
+
+648
+00:44:12,000 --> 00:44:16,000
+(Ruan Carlos Oliveira)
+Угуm.
+-
+
+(Paulo Rocha)
+um ambiente, não é um ambiente, mas só pro cara conseguir acessar aquelas informações para
+
+649
+00:44:16,000 --> 00:44:20,000
+(Ruan Carlos Oliveira)
+Sei.
+-
+
+(Paulo Rocha)
+ele poder eh ver os dados, entendeu?
+
+650
+00:44:20,000 --> 00:44:24,000
+(Paulo Rocha)
+Ou eu não sei se a gente faz isso fora, né, aí da plataforma, porque
+
+651
+00:44:24,000 --> 00:44:28,000
+(Paulo Rocha)
+como se vai conseguir baixar os dados, por
+
+652
+00:44:28,000 --> 00:44:32,000
+(Paulo Rocha)
+exemplo, eu não
+-
+
+(Z2 Tech)
+É assim, eh, não
+
+653
+00:44:32,000 --> 00:44:36,000
+(Z2 Tech)
+pensa, vamos, vamos pensar em ambiente, não, é pensando em permissões dos
+
+654
+00:44:36,000 --> 00:44:40,000
+(Paulo Rocha)
+sei. É, é isso
+-
+
+(Z2 Tech)
+usuários, mas a ideia teria era realmente do
+
+655
+00:44:40,000 --> 00:44:44,000
+(Paulo Rocha)
+aí.
+-
+
+(Z2 Tech)
+que você falou antes do Qode é ter um uma
+
+656
+00:44:44,000 --> 00:44:48,000
+(Z2 Tech)
+urlia, igual a gente tem hoje, o dev.
+
+657
+00:44:48,000 --> 00:44:52,000
+(Z2 Tech)
+Gaia, tudo, só que essa página é pública, então qualquer um pode
+
+658
+00:44:52,000 --> 00:44:56,000
+(Paulo Rocha)
+Ага.
+-
+
+(Z2 Tech)
+acessar. Eh, você tem que ter o link certo, mas qualquer um pode acessar e a gente mostra os dados
+
+659
+00:44:56,000 --> 00:45:00,000
+(Z2 Tech)
+corretos. Como é na internet, é difícil a gente se bloquear. que é
+
+660
+00:45:00,000 --> 00:45:04,000
+(Z2 Tech)
+tipo eh download da página, porque você pode fazer isso por fora, não necessariamente no
+
+661
+00:45:04,000 --> 00:45:08,000
+(Z2 Tech)
+naador, mas é qualquer pessoa tem acesso à aquilo, aquele dashboard
+
+662
+00:45:08,000 --> 00:45:12,000
+(Z2 Tech)
+simplificado que vocês falaram. Isso é totalmente possível. Esta questão do
+
+663
+00:45:12,000 --> 00:45:16,000
+(Z2 Tech)
+auditor de permitir falar: "OK, esse projeto tá OK, isso também
+
+664
+00:45:16,000 --> 00:45:20,000
+(Paulo Rocha)
+C não, porque assim,
+-
+
+(Z2 Tech)
+é uma coisa nova, a gente tem que desenvolver". Eh, e
+
+665
+00:45:20,000 --> 00:45:24,000
+(Ruan Carlos Oliveira)
+Угу.
+-
+
+(Paulo Rocha)
+ó, talvez
+-
+
+(Z2 Tech)
+aí quem seria esse
+
+666
+00:45:24,000 --> 00:45:28,000
+(Paulo Rocha)
+Eu eh tô pensando
+-
+
+(Z2 Tech)
+auditor?
+
+667
+00:45:28,000 --> 00:45:32,000
+(Paulo Rocha)
+aqui, talvez o que daria daria
+
+668
+00:45:32,000 --> 00:45:36,000
+(Paulo Rocha)
+para fazer
+
+669
+00:45:36,000 --> 00:45:40,000
+(Paulo Rocha)
+eh na hora que o cara acessar esse esse QRcode,
+
+670
+00:45:40,000 --> 00:45:44,000
+(Paulo Rocha)
+ele vai eh pede, por exemplo, eu tô aqui com a folha
+
+671
+00:45:44,000 --> 00:45:48,000
+(Paulo Rocha)
+com dashboard aqui na mão com os dados de cálculo de carbono e
+
+672
+00:45:48,000 --> 00:45:52,000
+(Paulo Rocha)
+tem o
+
+673
+00:45:52,000 --> 00:45:56,000
+(Paulo Rocha)
+o Qcode. Eu escaneio, pá, vai jogar pra
+
+674
+00:45:56,000 --> 00:46:00,000
+(Paulo Rocha)
+Gaia. Só que para eu poder ter acesso a isso dentro da Gaia,
+
+675
+00:46:00,000 --> 00:46:04,000
+(Paulo Rocha)
+dentro da Gaia entre aspas, talvez o que daria pra gente poder fazer é criar
+
+676
+00:46:04,000 --> 00:46:08,000
+(Paulo Rocha)
+uma senha e um usuário simples, entendeu? Só pro cara
+
+677
+00:46:08,000 --> 00:46:12,000
+(Paulo Rocha)
+logar e ter acesso só ao dash para ele não mexer em
+
+678
+00:46:12,000 --> 00:46:16,000
+(Z2 Tech)
+Isso, isso. Mas se diz, se ele tem acesso ao
+
+679
+00:46:16,000 --> 00:46:20,000
+(Paulo Rocha)
+nada.
+-
+
+(Z2 Tech)
+G, tipo, o cara acessou o QR code, ele ainda assim tem que fazer um login. Aí esse login
+
+680
+00:46:20,000 --> 00:46:24,000
+(Z2 Tech)
+vai ser aberto, qualquer pessoa pode fazer criar um usuário e aí
+
+681
+00:46:24,000 --> 00:46:28,000
+(Z2 Tech)
+ele consegue acessar esse
+
+682
+00:46:28,000 --> 00:46:32,000
+(Ruan Carlos Oliveira)
+que já gera muita complexidade aí se precisar abrir o usuário e tudo só pro cara bater
+
+683
+00:46:32,000 --> 00:46:36,000
+(Ruan Carlos Oliveira)
+um olho nas informação assim o público externo. Agora auditor não, né? Para
+-
+
+(Paulo Rocha)
+Não, não.
+-
+
+(Z2 Tech)
+Qcode. É,
+
+684
+00:46:36,000 --> 00:46:40,000
+(Ruan Carlos Oliveira)
+auditor fazer auditar os
+-
+
+(Z2 Tech)
+é, então
+
+685
+00:46:40,000 --> 00:46:44,000
+(Z2 Tech)
+um projeto que a gente teve, que tinha relação com o auditor
+
+686
+00:46:44,000 --> 00:46:48,000
+(Ruan Carlos Oliveira)
+dados.
+-
+
+(Paulo Rocha)
+Да.
+-
+
+(Z2 Tech)
+também, que era de certificação, eh a gente
+
+687
+00:46:48,000 --> 00:46:52,000
+(Z2 Tech)
+tinha o usuário tipo auditor, que era um usuário
+
+688
+00:46:52,000 --> 00:46:56,000
+(Z2 Tech)
+que é meio que a gente queria ele dentro da plataforma, porque ele era
+
+689
+00:46:56,000 --> 00:47:00,000
+(Z2 Tech)
+um usuário que agregava valor. Então esse esse
+
+690
+00:47:00,000 --> 00:47:04,000
+(Z2 Tech)
+auditor tava na plataforma, quem fez o projeto conseguia
+
+691
+00:47:04,000 --> 00:47:08,000
+(Z2 Tech)
+convidar o auditor, aí realmente era um convite, havia e-mail pro cara criar o
+
+692
+00:47:08,000 --> 00:47:12,000
+(Ruan Carlos Oliveira)
+Acho que funciona.
+-
+
+(Paulo Rocha)
+Pronto.
+-
+
+(Z2 Tech)
+usuário dele eh com CPF e tudo. E aí ele e
+
+693
+00:47:12,000 --> 00:47:16,000
+(Z2 Tech)
+aí ele tem acesso ao seu projeto, o acesso que você quer
+
+694
+00:47:16,000 --> 00:47:20,000
+(Z2 Tech)
+dar a ele ao seu projeto e ele pode ver tudo lá. E ele é audit faz auditoria do
+
+695
+00:47:20,000 --> 00:47:24,000
+(Paulo Rocha)
+resolveu. É isso aí, resolveu. Assim, eu trouxe também
+-
+
+(Z2 Tech)
+seu projeto pelo próprio Gaio,
+
+696
+00:47:24,000 --> 00:47:28,000
+(Paulo Rocha)
+três coisas aqui, né? Deixa eu, deixa eu dar um passo para trás, porque a
+-
+
+(Z2 Tech)
+entendeu?
+
+697
+00:47:28,000 --> 00:47:32,000
+(Paulo Rocha)
+gente começou a discutir um monte de coisa. Então, a primeira coisa é baixar os
+-
+
+(Z2 Tech)
+É.
+
+698
+00:47:32,000 --> 00:47:36,000
+(Paulo Rocha)
+dados em Excel, beleza? baixar os
+
+699
+00:47:36,000 --> 00:47:40,000
+(Paulo Rocha)
+dados, o dash em
+-
+
+(Z2 Tech)
+Sim, o
+
+700
+00:47:40,000 --> 00:47:44,000
+(Paulo Rocha)
+PDF. Beleza? Esse aí é
+-
+
+(Z2 Tech)
+PDF. Aham. O Excel é os dados
+
+701
+00:47:44,000 --> 00:47:48,000
+(Paulo Rocha)
+isso. Eu
+-
+
+(Z2 Tech)
+brutos para eu quiser, eu quero olhar quais
+
+702
+00:47:48,000 --> 00:47:52,000
+(Paulo Rocha)
+quero ter no meu computador, eu baixo. Eu quero ter no meu
+-
+
+(Z2 Tech)
+eh defensivos eu coloquei.
+
+703
+00:47:52,000 --> 00:47:56,000
+(Paulo Rocha)
+computador, eu baixo. Beleza? Então, isso aí é o primeiro passo. O
+-
+
+(Z2 Tech)
+Isso.
+
+704
+00:47:56,000 --> 00:48:00,000
+(Paulo Rocha)
+segundo passo é junto com esse PDF, eu quero criar
+
+705
+00:48:00,000 --> 00:48:04,000
+(Paulo Rocha)
+um Qcode para
+-
+
+(Z2 Tech)
+Beleza.
+
+706
+00:48:04,000 --> 00:48:08,000
+(Ruan Carlos Oliveira)
+de visibilidade,
+-
+
+(Paulo Rocha)
+quem só para dar um pouco mais de, sei lá, de
+
+707
+00:48:08,000 --> 00:48:12,000
+(Paulo Rocha)
+segurança para aquele dado. Aí o como a pessoa que
+
+708
+00:48:12,000 --> 00:48:16,000
+(Paulo Rocha)
+tá fora da da Gaia, ela vai acessar, é o que vocês
+
+709
+00:48:16,000 --> 00:48:20,000
+(Ruan Carlos Oliveira)
+Да.
+-
+
+(Paulo Rocha)
+precisam ver depois, né? Porque assim, no fim, o cara
+-
+
+(Z2 Tech)
+Isso é só que
+
+710
+00:48:20,000 --> 00:48:24,000
+(Paulo Rocha)
+ele só precisa ter e a eh aquele aquele
+
+711
+00:48:24,000 --> 00:48:28,000
+(Paulo Rocha)
+QR code, ele precisa est ligado a um domínio Gaia
+
+712
+00:48:28,000 --> 00:48:32,000
+(Paulo Rocha)
+pro cara falar: "Não, esse dado que eu tô aqui saiu de dentro
+
+713
+00:48:32,000 --> 00:48:36,000
+(Paulo Rocha)
+dessa
+-
+
+(Z2 Tech)
+Sì. Exato. Aí nessa parte, isso a gente faz
+
+714
+00:48:36,000 --> 00:48:40,000
+(Z2 Tech)
+fácil. O que a gente precisa saber dessa parte de vocês é o
+
+715
+00:48:40,000 --> 00:48:44,000
+(Paulo Rocha)
+plataforma,
+-
+
+(Z2 Tech)
+que que a gente tem que mostrar. Só, só isso. Mas essa parte conseguir acessar o
+
+716
+00:48:44,000 --> 00:48:48,000
+(Paulo Rocha)
+tá?
+-
+
+(Z2 Tech)
+Gaia sem usuário, sem nada, é tranquilo. A gente só precisa da parte de
+
+717
+00:48:48,000 --> 00:48:52,000
+(Z2 Tech)
+vocês é o que que vai trazer a confiança pro usuário para ele falar, ó, aqui tem,
+
+718
+00:48:52,000 --> 00:48:56,000
+(Z2 Tech)
+sei lá, tem dois carbon. OK, gostei disso aí. Confio
+
+719
+00:48:56,000 --> 00:49:00,000
+(Paulo Rocha)
+É, eu acho
+-
+
+(Z2 Tech)
+nesse Qcode
+
+720
+00:49:00,000 --> 00:49:04,000
+(Paulo Rocha)
+que aí o que a gente precisa eh definir é se vai
+-
+
+(Z2 Tech)
+agora.
+
+721
+00:49:04,000 --> 00:49:08,000
+(Paulo Rocha)
+trazer um resumo ali do projeto, um dado de
+
+722
+00:49:08,000 --> 00:49:12,000
+(Paulo Rocha)
+carbono, um dado de se o cara, sei lá, se o cara
+
+723
+00:49:12,000 --> 00:49:16,000
+(Paulo Rocha)
+contratou todos os módulos um resumo de todos os módulos, se o O cara
+
+724
+00:49:16,000 --> 00:49:20,000
+(Paulo Rocha)
+contratou dois módulos, um resumo só dos dois módulos, o que que é que vai
+
+725
+00:49:20,000 --> 00:49:24,000
+(Paulo Rocha)
+vir, entendeu? Geralmente isso é feito só para
+-
+
+(Z2 Tech)
+Eh,
+
+726
+00:49:24,000 --> 00:49:28,000
+(Ruan Carlos Oliveira)
+Eh
+-
+
+(Paulo Rocha)
+carbono. Geralmente isso é feito só para carbono,
+
+727
+00:49:28,000 --> 00:49:32,000
+(Paulo Rocha)
+tá? Mas isso é o que o mercado oferece, né? Não sei se a gente
+
+728
+00:49:32,000 --> 00:49:36,000
+(Paulo Rocha)
+consegue oferecer alguma coisa mais, mas esse é o ponto que a gente precisa discutir, que não tá
+
+729
+00:49:36,000 --> 00:49:40,000
+(Paulo Rocha)
+claro. O terceiro ponto é o
+
+730
+00:49:40,000 --> 00:49:44,000
+(Paulo Rocha)
+auditor. A gente então define aqui que o auditor vai ter
+
+731
+00:49:44,000 --> 00:49:48,000
+(Paulo Rocha)
+acesso ao projeto e pronto, a gente cadastra ele lá no final
+
+732
+00:49:48,000 --> 00:49:52,000
+(Paulo Rocha)
+como um usuário. Ele vai entrar, ele vai ver
+
+733
+00:49:52,000 --> 00:49:56,000
+(Paulo Rocha)
+os dados, ele consegue baixar o arquivo de Excel, ele consegue
+
+734
+00:49:56,000 --> 00:50:00,000
+(Paulo Rocha)
+baixar também eh PDF, parará. É
+
+735
+00:50:00,000 --> 00:50:04,000
+(Paulo Rocha)
+isso. É
+-
+
+(Z2 Tech)
+Fechou. Perfeito. Então são
+
+736
+00:50:04,000 --> 00:50:08,000
+(Ruan Carlos Oliveira)
+Eu acho que sim. Eu acho. É porque assim, eu fico pensando, cara,
+
+737
+00:50:08,000 --> 00:50:12,000
+(Ruan Carlos Oliveira)
+PDF, eu acho que pro auditor ele não não vai ser vídeo
+-
+
+(Paulo Rocha)
+isso.
+
+738
+00:50:12,000 --> 00:50:16,000
+(Ruan Carlos Oliveira)
+para muita Ah, vai ver tudo,
+-
+
+(Paulo Rocha)
+Não, ele a única coisa que ele vai ter acesso à cores, entendeu?
+
+739
+00:50:16,000 --> 00:50:20,000
+(Ruan Carlos Oliveira)
+né?
+-
+
+(Paulo Rocha)
+Ele vai ter
+-
+
+(Z2 Tech)
+três. É. Aí só definir aqui então o que que é o acesso ao auditor?
+
+740
+00:50:20,000 --> 00:50:24,000
+(Z2 Tech)
+eh, do dos cálculos de do projeto, ou seja, ele vai ter
+
+741
+00:50:24,000 --> 00:50:28,000
+(Z2 Tech)
+acesso ao projeto, a todas as fazendas, a todos os talhões e os
+
+742
+00:50:28,000 --> 00:50:32,000
+(Z2 Tech)
+cálculos de cada módulo daquele que o usuário definiu como
+
+743
+00:50:32,000 --> 00:50:36,000
+(Z2 Tech)
+o cálculo final, o cálculo real e não é
+
+744
+00:50:36,000 --> 00:50:40,000
+(Ruan Carlos Oliveira)
+Sim.
+-
+
+(Paulo Rocha)
+acesso.
+-
+
+(Z2 Tech)
+teste, é isso.
+
+745
+00:50:40,000 --> 00:50:44,000
+(Ruan Carlos Oliveira)
+Sim.
+-
+
+(Paulo Rocha)
+Isso.
+-
+
+(Z2 Tech)
+Certo? E a e aí é quais dados? É o resultado
+
+746
+00:50:44,000 --> 00:50:48,000
+(Z2 Tech)
+final, dashboard final ou é tudo? É tudo que ele selecionou. Ele
+
+747
+00:50:48,000 --> 00:50:52,000
+(Z2 Tech)
+selecionou tais defensivas, ele selecionou tais produtos, ele
+
+748
+00:50:52,000 --> 00:50:56,000
+(Ruan Carlos Oliveira)
+Tem que
+-
+
+(Paulo Rocha)
+Eh, isso.
+-
+
+(Z2 Tech)
+selecionou tais culturas, tudo ele precisa ter acesso, que ele é um auditor,
+
+749
+00:50:56,000 --> 00:51:00,000
+(Ruan Carlos Oliveira)
+ter, tem que ter, principalmente nos dados primários, principalmente M. os dados
+-
+
+(Paulo Rocha)
+S.
+-
+
+(Z2 Tech)
+né? Todas. a todas as
+
+750
+00:51:00,000 --> 00:51:04,000
+(Paulo Rocha)
+Isso. A única coisa que talvez a gente vai ter que colocar como
+-
+
+(Z2 Tech)
+evidências, tudo.
+
+751
+00:51:04,000 --> 00:51:08,000
+(Paulo Rocha)
+extra para quando for esse cara que é auditor, ele
+
+752
+00:51:08,000 --> 00:51:12,000
+(Ruan Carlos Oliveira)
+primários.
+-
+
+(Paulo Rocha)
+for acessar, ele vai ter que ter, ele vai ter acesso às evidências
+
+753
+00:51:12,000 --> 00:51:16,000
+(Paulo Rocha)
+também, a planilha e talvez vai ter que vir
+
+754
+00:51:16,000 --> 00:51:20,000
+(Paulo Rocha)
+alguma coisa de quais fatores de emissão foram usados, entendeu?
+
+755
+00:51:20,000 --> 00:51:24,000
+(Paulo Rocha)
+Eu não sei como a gente não tem os cálculos lá que, ah, tem um fator de
+
+756
+00:51:24,000 --> 00:51:28,000
+(Paulo Rocha)
+emissão para uma coisa, para os para fertilizante X
+
+757
+00:51:28,000 --> 00:51:32,000
+(Paulo Rocha)
+e Y. É,
+-
+
+(Z2 Tech)
+Aha. St. Aí tem que mostrar então também os
+
+758
+00:51:32,000 --> 00:51:36,000
+(Paulo Rocha)
+então, exatamente isso aí geralmente eles conferem, né, quais
+
+759
+00:51:36,000 --> 00:51:40,000
+(Paulo Rocha)
+são quais foram os fatores de emissão que foram utilizados, esse tipo de coisa,
+
+760
+00:51:40,000 --> 00:51:44,000
+(Z2 Tech)
+cálculos, tá? Não, isso é faz sentido. Ele basicamente vai ver o formulário que o
+
+761
+00:51:44,000 --> 00:51:48,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+cara preencheu, só que não ser o formulário dele preencher. É o tipo as
+
+762
+00:51:48,000 --> 00:51:52,000
+(Ruan Carlos Oliveira)
+Ja.
+-
+
+(Z2 Tech)
+respostas que o cara deu e os cálculos que a gente faz no backend, os cálculos que
+
+763
+00:51:52,000 --> 00:51:56,000
+(Paulo Rocha)
+Isso, isso é isso
+-
+
+(Z2 Tech)
+vocês passaram pelas planilhas. Beleza? Eh, uma
+
+764
+00:51:56,000 --> 00:52:00,000
+(Z2 Tech)
+coisa, eh, a gente vai pensar em alguma forma de cobrança para
+
+765
+00:52:00,000 --> 00:52:04,000
+(Z2 Tech)
+esse auditor ou ele vai ser um a mais que a gente vai vender paraas pessoas? Então,
+
+766
+00:52:04,000 --> 00:52:08,000
+(Z2 Tech)
+você vai usar o Gaia, você vai conseguir passar o um acesso pro auditor que
+
+767
+00:52:08,000 --> 00:52:12,000
+(Z2 Tech)
+você quiser e esse auditor vai olhar tudo pelo GA e vai facilitar sua
+
+768
+00:52:12,000 --> 00:52:16,000
+(Ruan Carlos Oliveira)
+Угу.
+-
+
+(Paulo Rocha)
+aí. Geralmente é assim, ó. os caras contrata a nossa a nossa
+
+769
+00:52:16,000 --> 00:52:20,000
+(Paulo Rocha)
+plataforma e a gente fala: "Olha, lá no fim tem a opção de
+-
+
+(Z2 Tech)
+vida.
+
+770
+00:52:20,000 --> 00:52:24,000
+(Paulo Rocha)
+você pedir uma verificação desse dado pela pela
+
+771
+00:52:24,000 --> 00:52:28,000
+(Paulo Rocha)
+control. O que a gente vai ter que depois, né, se tiver
+
+772
+00:52:28,000 --> 00:52:32,000
+(Paulo Rocha)
+essa demanda, falar: "Olha, control, a gente tem a plataforma, tem um
+
+773
+00:52:32,000 --> 00:52:36,000
+(Paulo Rocha)
+ambiente específico para auditor, a empresa tal
+
+774
+00:52:36,000 --> 00:52:40,000
+(Paulo Rocha)
+pediu a auditoria, o cara vai falar: "Eu vou te cobrar, sei
+
+775
+00:52:40,000 --> 00:52:44,000
+(Paulo Rocha)
+lá, tanto para poder fazer a a verificação." A gente passa esse
+
+776
+00:52:44,000 --> 00:52:48,000
+(Ruan Carlos Oliveira)
+É, mas eu acho
+-
+
+(Paulo Rocha)
+valor pro nosso cliente e coloca uma margem nossa em cima,
+
+777
+00:52:48,000 --> 00:52:52,000
+(Ruan Carlos Oliveira)
+que é isso aí. Eu acho que que acontece até com Verra mesmo, Paulo, porque a gente tem aqueles
+-
+
+(Paulo Rocha)
+entendeu?
+
+778
+00:52:52,000 --> 00:52:56,000
+(Ruan Carlos Oliveira)
+verification body certified, ou seja, né, só aquelas empresas que são autorizadas a fazer
+
+779
+00:52:56,000 --> 00:53:00,000
+(Ruan Carlos Oliveira)
+a auditoria. Então eu acho que no futuro também a gente faça isso, né? Então a gente tem
+
+780
+00:53:00,000 --> 00:53:04,000
+(Ruan Carlos Oliveira)
+a control, mas sei lá, se a gente for pro mercado e tudo, né,
+
+781
+00:53:04,000 --> 00:53:08,000
+(Ruan Carlos Oliveira)
+independente da Peterson, então a gente coloca essa relação dessas outras essas outras auditorias
+
+782
+00:53:08,000 --> 00:53:12,000
+(Ruan Carlos Oliveira)
+para poder fazer o processo. Então e aí e os caras paga, né? Eu entendo que para
+-
+
+(Paulo Rocha)
+Uhum. Tá melhor certo. É, tá
+
+783
+00:53:12,000 --> 00:53:16,000
+(Ruan Carlos Oliveira)
+poder você tá ali como um certificado certified body, os caras
+-
+
+(Paulo Rocha)
+sim.
+
+784
+00:53:16,000 --> 00:53:20,000
+(Ruan Carlos Oliveira)
+paga. Eu não entendo que isso seja de graça não para poder estar ali na relação. Então quem
+
+785
+00:53:20,000 --> 00:53:24,000
+(Ruan Carlos Oliveira)
+sabe que se depois a gente pense também nisso, como é que
+-
+
+(Z2 Tech)
+É, o
+
+786
+00:53:24,000 --> 00:53:28,000
+(Z2 Tech)
+da outra plataforma que a gente tinha, os auditores eles ganhavam acesso à
+
+787
+00:53:28,000 --> 00:53:32,000
+(Ruan Carlos Oliveira)
+funciona.
+-
+
+(Z2 Tech)
+plataforma porque isso facilitava muito a vida deles. Então eles queriam ter
+
+788
+00:53:32,000 --> 00:53:36,000
+(Z2 Tech)
+e tendo o auditor lá que facilita a vida dele também diminuir o custo pro
+
+789
+00:53:36,000 --> 00:53:40,000
+(Ruan Carlos Oliveira)
+Sim.
+-
+
+(Z2 Tech)
+produtor, porque o auditor não vai ter que caçar 1000 documentos em 1000 lugares ficar sei lá quanto
+
+790
+00:53:40,000 --> 00:53:44,000
+(Z2 Tech)
+tempo fazendo a editoria, vai est tudo na plataforma, isso ajuda muito. Então
+
+791
+00:53:44,000 --> 00:53:48,000
+(Ruan Carlos Oliveira)
+Uhum.
+-
+
+(Z2 Tech)
+é um é um pit de venda muito bom também.
+
+792
+00:53:48,000 --> 00:53:52,000
+(Z2 Tech)
+Então, beleza. Eh, definimos três e
+
+793
+00:53:52,000 --> 00:53:56,000
+(Ruan Carlos Oliveira)
+Sim.
+-
+
+(Z2 Tech)
+futures aí. Isso tudo faz sentido ser antes de novos
+
+794
+00:53:56,000 --> 00:54:00,000
+(Paulo Rocha)
+Eu acho que faz aí. Yeah. a gente fecha bem
+-
+
+(Z2 Tech)
+cálculos, novos calculadores.
+
+795
+00:54:00,000 --> 00:54:04,000
+(Paulo Rocha)
+essa parte. É claro que eu tô doido para colocar esse módulo
+
+796
+00:54:04,000 --> 00:54:08,000
+(Paulo Rocha)
+de a de biodiversidade, porque é um negócio que é diferente,
+
+797
+00:54:08,000 --> 00:54:12,000
+(Paulo Rocha)
+vai ter aqueles negócios lá de abelhinha, aquelas coisas lá, entendeu?
+
+798
+00:54:12,000 --> 00:54:16,000
+(Paulo Rocha)
+Mas eu acho que nesse momento a gente focar nisso para poder fechar
+
+799
+00:54:16,000 --> 00:54:20,000
+(Paulo Rocha)
+esse essa estrutura aí,
+-
+
+(Z2 Tech)
+Não,
+
+800
+00:54:20,000 --> 00:54:24,000
+(Paulo Rocha)
+entendeu? De tudo, de cálculo de carbono, de
+-
+
+(Z2 Tech)
+beleza. Isso aí já tem bastante coisa para
+
+801
+00:54:24,000 --> 00:54:28,000
+(Paulo Rocha)
+verificação, de Qcode, de baixar o dado,
+-
+
+(Z2 Tech)
+desenvolver.
+
+802
+00:54:28,000 --> 00:54:32,000
+(Paulo Rocha)
+de entendeu?
+-
+
+(Z2 Tech)
+Tá. Não, fechou. Fechou
+
+803
+00:54:32,000 --> 00:54:36,000
+(Paulo Rocha)
+Mas eu assim de novo, eu eu tô super ansioso pro
+-
+
+(Z2 Tech)
+não. Beleza. Beleza. Então,
+
+804
+00:54:36,000 --> 00:54:40,000
+(Paulo Rocha)
+módulo aí de biodiversidade também, que eu acho que vai ser um um chama diferente, mas
+
+805
+00:54:40,000 --> 00:54:44,000
+(Paulo Rocha)
+vamos focar naquilo que é mais importante
+-
+
+(Z2 Tech)
+vou tá. É, não. Se isso traz
+
+806
+00:54:44,000 --> 00:54:48,000
+(Z2 Tech)
+mais valor, o outro espera. Vai acontecer. Não tem. O importante é só a
+
+807
+00:54:48,000 --> 00:54:52,000
+(Paulo Rocha)
+agora. Isso
+-
+
+(Z2 Tech)
+ordem, tem que ser as mais importantes. Então, vamos seguir
+
+808
+00:54:52,000 --> 00:54:56,000
+(Z2 Tech)
+assim. Então, fechou. três, três coisas aí já é bastante desenvolvimento pra gente. Vai dar um tempo
+
+809
+00:54:56,000 --> 00:55:00,000
+(Paulo Rocha)
+aí é trampa, hein?
+-
+
+(Z2 Tech)
+bom aí, vai ser um, vai ser um mês de desenvolvimento
+
+810
+00:55:00,000 --> 00:55:04,000
+(Z2 Tech)
+aí. O que que vamos fazer, então? Eh, vou pegar aqui a
+
+811
+00:55:04,000 --> 00:55:08,000
+(Z2 Tech)
+gravação agora. Eh, vou tentar só
+
+812
+00:55:08,000 --> 00:55:12,000
+(Z2 Tech)
+com base que a gente fala dar uma desenhada em alguma coisa, mas vai
+
+813
+00:55:12,000 --> 00:55:16,000
+(Z2 Tech)
+ter demanda para vocês, principalmente a parte do o que
+
+814
+00:55:16,000 --> 00:55:20,000
+(Z2 Tech)
+mostrar no Qcode, porque a gente tem zero noção. A gente vai, pelo contexto que
+
+815
+00:55:20,000 --> 00:55:24,000
+(Z2 Tech)
+a gente tem aqui, a IA que a gente treinou, ela vai trazer alguns
+
+816
+00:55:24,000 --> 00:55:28,000
+(Paulo Rocha)
+Так. aqui
+-
+
+(Z2 Tech)
+insightes, mas de vocês que estão no meio é sempre mais
+
+817
+00:55:28,000 --> 00:55:32,000
+(Paulo Rocha)
+falar e pesquisa o que que a
+-
+
+(Z2 Tech)
+importante.
+
+818
+00:55:32,000 --> 00:55:36,000
+(Paulo Rocha)
+plataforma Puma tá fazendo, o que que a CR tá fazendo, o que a
+
+819
+00:55:36,000 --> 00:55:40,000
+(Paulo Rocha)
+Regrow tá fazendo, que todos eles têm
+-
+
+(Z2 Tech)
+É. Ô, você passa.
+
+820
+00:55:40,000 --> 00:55:44,000
+(Paulo Rocha)
+eh QR code, tá? Vê lá o que que eles estão
+-
+
+(Z2 Tech)
+Boa. Não, passar o nome
+
+821
+00:55:44,000 --> 00:55:48,000
+(Z2 Tech)
+é muito importante. Isso daí. Aí, já é um nohal f*****. Já ajudou 1000%.
+
+822
+00:55:48,000 --> 00:55:52,000
+(Paulo Rocha)
+fazendo. Tem outras também, se quiser eu posso falar outras aqui. Mais e
+-
+
+(Z2 Tech)
+Não, é só esses três nomes que você passou.
+
+823
+00:55:52,000 --> 00:55:56,000
+(Paulo Rocha)
+Farm também é uma outra plataforma que tá aí.
+-
+
+(Z2 Tech)
+É, tá anotando aqui,
+
+824
+00:55:56,000 --> 00:56:00,000
+(Z2 Tech)
+mas elas é meio ruim de acertar nome. Você puder passar esse script.
+
+825
+00:56:00,000 --> 00:56:04,000
+(Paulo Rocha)
+Pode
+-
+
+(Z2 Tech)
+Tô vendo minhas anotação aqui. O me farm virou maionese,
+
+826
+00:56:04,000 --> 00:56:08,000
+(Z2 Tech)
+então tudo bem.
+
+827
+00:56:08,000 --> 00:56:12,000
+(Z2 Tech)
+Eh, então beleza. Então, a gente segue nisso. Eh,
+
+828
+00:56:12,000 --> 00:56:16,000
+(Z2 Tech)
+uma outra demanda de vocês que aí seria bom ser mais urgente é trazer
+
+829
+00:56:16,000 --> 00:56:20,000
+(Z2 Tech)
+essas duas pessoas para testar a plataforma, porque senão a gente só tá fazendo, fazendo,
+
+830
+00:56:20,000 --> 00:56:24,000
+(Z2 Tech)
+fazendo. Aí quando vê já errou um negócio lá atrás e aí já fodeu tudo.
+
+831
+00:56:24,000 --> 00:56:28,000
+(Paulo Rocha)
+ser. Não, já vou. A gente
+-
+
+(Z2 Tech)
+Então, vocês conseguirem correr com esses esses dois usuários
+
+832
+00:56:28,000 --> 00:56:32,000
+(Paulo Rocha)
+queria, a gente queria validar a primeira aqui, por isso que, que tava
+-
+
+(Z2 Tech)
+aí. Boa, boa.
+
+833
+00:56:32,000 --> 00:56:36,000
+(Paulo Rocha)
+demorando.
+-
+
+(Z2 Tech)
+Ah, isso aí já entra no dinheiro do Gaia, né? A gente já usa o dinheiro para
+
+834
+00:56:36,000 --> 00:56:40,000
+(Ruan Carlos Oliveira)
+Isso mesmo.
+-
+
+(Paulo Rocha)
+É, mas eu vou eu vou conversar com eles essa semana e a gente já coloca eles
+-
+
+(Z2 Tech)
+isso.
+
+835
+00:56:40,000 --> 00:56:44,000
+(Paulo Rocha)
+para trazer dados reais já e fazer os
+-
+
+(Z2 Tech)
+Fechou?
+
+836
+00:56:44,000 --> 00:56:48,000
+(Z2 Tech)
+Não. Bom demais. Bom demais. Não. Beleza. Então, por mim
+
+837
+00:56:48,000 --> 00:56:52,000
+(Z2 Tech)
+aqui a gente já segue, já senta e
+
+838
+00:56:52,000 --> 00:56:56,000
+(Paulo Rocha)
+teste. Show de
+-
+
+(Z2 Tech)
+vamos desenvolver, né? Próximas
+
+839
+00:56:56,000 --> 00:57:00,000
+(Ruan Carlos Oliveira)
+Fechou, moçada. E
+-
+
+(Z2 Tech)
+fases. Fechado. Alguém quer falar mais alguma
+
+840
+00:57:00,000 --> 00:57:04,000
+(Ruan Carlos Oliveira)
+aí, eu acho que a gente poderia ver qualquer coisa. Hoje a gente tá na terça, né? Não sei se
+-
+
+(Paulo Rocha)
+bola.
+-
+
+(Z2 Tech)
+coisa?
+
+841
+00:57:04,000 --> 00:57:08,000
+(Ruan Carlos Oliveira)
+pra próxima semana ou pro final de semana já outra reunião pra gente manter o o fluxo
+
+842
+00:57:08,000 --> 00:57:12,000
+(Z2 Tech)
+Vamos, vamos demais. Eh, esse
+
+843
+00:57:12,000 --> 00:57:16,000
+(Paulo Rocha)
+Ah, fica se qualquer coisa
+-
+
+(Z2 Tech)
+horário para vocês ficam legal toda
+
+844
+00:57:16,000 --> 00:57:20,000
+(Ruan Carlos Oliveira)
+aumind. M.
+-
+
+(Paulo Rocha)
+também a gente ajusta, entendeu? A gente deixa esse horário aqui e
+-
+
+(Z2 Tech)
+semana?
+
+845
+00:57:20,000 --> 00:57:24,000
+(Paulo Rocha)
+se precisar de alguma alteração a gente ajusta ali.
+-
+
+(Z2 Tech)
+Sim, fechou, Felipe.
+
+846
+00:57:24,000 --> 00:57:28,000
+(felipe gonçalves)
+Ah, já fala exatamente sobre isso. Eh, a gente deve pegar
+-
+
+(Z2 Tech)
+Fala aí.
+
+847
+00:57:28,000 --> 00:57:32,000
+(felipe gonçalves)
+hoje, amanhã, talvez, para fazer, planejar o que tem ser
+
+848
+00:57:32,000 --> 00:57:36,000
+(felipe gonçalves)
+desenvolvido, né? Importante a gente falar toda semana para vocês também
+
+849
+00:57:36,000 --> 00:57:40,000
+(felipe gonçalves)
+verem o que tá evoluindo, sabe? Para conseguirem acompanhar de perto
+
+850
+00:57:40,000 --> 00:57:44,000
+(felipe gonçalves)
+também. Acho vocês têm conta lá no planning que a gente estava usando, não tem? Bom
+
+851
+00:57:44,000 --> 00:57:48,000
+(felipe gonçalves)
+também vocês verem que tá sendo desenvolvido lá e
+
+852
+00:57:48,000 --> 00:57:52,000
+(Paulo Rocha)
+M. Conta onde? Ah, tá. Muito bem.
+-
+
+(felipe gonçalves)
+tal no
+-
+
+(Z2 Tech)
+tem
+
+853
+00:57:52,000 --> 00:57:56,000
+(Paulo Rocha)
+Aham.
+-
+
+(felipe gonçalves)
+plane
+-
+
+(Z2 Tech)
+no é aquela que tem as tarefas de cada um.
+
+854
+00:57:56,000 --> 00:58:00,000
+(felipe gonçalves)
+é bom dar uma passada rápida ali para vocês terem noção
+-
+
+(Z2 Tech)
+Aí a gente
+
+855
+00:58:00,000 --> 00:58:04,000
+(felipe gonçalves)
+que tá sendo desenvolvido
+-
+
+(Z2 Tech)
+vai, é, principalmente a de vocês, a de vai ser tarefa
+
+856
+00:58:04,000 --> 00:58:08,000
+(Paulo Rocha)
+Beleza.
+-
+
+(felipe gonçalves)
+também.
+-
+
+(Z2 Tech)
+para vocês também
+
+857
+00:58:08,000 --> 00:58:12,000
+(Z2 Tech)
+lá. Mas show, então, então vai ficar marcado então semana que vem, terça-feira,
+
+858
+00:58:12,000 --> 00:58:16,000
+(Z2 Tech)
+4 horas essa reunião. Eh, mas aí qualquer chegando
+
+859
+00:58:16,000 --> 00:58:20,000
+(Paulo Rocha)
+Show.
+-
+
+(Z2 Tech)
+nos dias a gente vai conversando, sem problema. Fechou? Mais
+
+860
+00:58:20,000 --> 00:58:24,000
+(Paulo Rocha)
+Estamos juntos.
+-
+
+(Z2 Tech)
+alguém quer falar algo? Se
+
+861
+00:58:24,000 --> 00:58:28,000
+(Leonardo Paiva)
+Valeu,
+-
+
+(Paulo Rocha)
+Valeu,
+-
+
+(Z2 Tech)
+não. Então é isso. Falo para vocês. Então galera, vamos resto de
+
+862
+00:58:28,000 --> 00:58:32,000
+(Ruan Carlos Oliveira)
+Valeu, moçada. É, mais
+-
+
+(Leonardo Paiva)
+pessoal.
+-
+
+(Paulo Rocha)
+galera. Ja.
+-
+
+(Z2 Tech)
+terça-feira aí.
+
