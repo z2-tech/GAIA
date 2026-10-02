@@ -1,0 +1,127 @@
+Questionário do export Excel · Ruan Carlos Oliveira
+
+== A. Para que serve ==
+A1. Para que vocês vão usar a planilha?
+→ Entregar ao cliente; Entregar ao auditor
+
+A2. Quem vai receber o arquivo?
+→ Equipe interna; Cliente (produtor, trader, marca); Auditor
+
+A3. Como é a planilha que vocês usam hoje quando o projeto tem muitas fazendas?
+→ Para cada fazenda é uma planilha
+
+A4. Qual planilha é a referência mais próxima do que vocês querem?
+→ LCA Annual Crops Tool
+  Comentário: E também do Cool Farm Tool
+
+A5. As abas propostas acima fazem sentido?
+→ Sim, com ajustes
+
+== B. O que vai na planilha ==
+B1. Quais módulos entram na primeira versão?
+→ Emissão; Remoção; Regenerativo; Biodiversidade
+  Comentário: Vai depender dos modulos contratos. Podemos deixar o cliente decidir, mas emissão e remoção é certeza
+
+B2. Só os dados digitados, ou também os resultados?
+→ Dados + resultado por categoria (como a aba Total_Agro)
+
+B3. Os fatores de emissão entram?
+→ Só no arquivo do auditor
+
+B4. Quais dados da fazenda devem aparecer?
+→ Nome da fazenda; Nome do produtor; Área total; Área agrícola; Textura do solo; Clima; Cultura e safra; Montante colhido
+
+B5. A localização da fazenda entra?
+→ Só município e UF
+
+B6. Notas fiscais e outros arquivos de evidência anexados: o que aparece?
+→ Só o nome do arquivo
+
+B7. Simulações entram?
+→ Só o cálculo oficial
+
+== C. Como a planilha se organiza ==
+C1. O que é cada coluna?
+→ Um talhão
+
+C2. Quando uma fazenda tem mais de uma cultura ou safra no período, o que fazer?
+→ Uma aba por safra
+
+C3. Os valores saem por hectare ou total da fazenda?
+→ Total da área
+
+C4. Unidades: como o usuário digitou ou padronizadas?
+→ Padronizada por aba
+
+C5. Uma aba por categoria (como o LCA tool) ou tudo numa aba só?
+→ Uma aba por categoria
+
+C6. Querem também a aba "Dados em lista" (uma linha por valor, para filtrar e recalcular)?
+→ Sim
+
+C7. Manter as cores do LCA tool (dado do produtor, dado fixado, resultado)?
+→ Sim
+
+== D. Quem pode exportar e o quê ==
+D1. De onde se exporta?
+→ Do projeto inteiro
+
+D2. Precisa filtrar antes de exportar?
+→ Por safra; Por fazendas escolhidas; Por módulo
+
+D3. Quem pode exportar?
+→ Admin do projeto; Gestor; Auditor
+
+D4. Precisa de uma versão sem identificação (fazendas como "Fazenda 1, 2, 3")?
+→ Sim
+
+D5. Se um cálculo estiver desatualizado (dados mudaram depois do último cálculo), o que fazer?
+→ Bloquear até recalcular
+
+D6. Se um talhão não tiver cálculo oficial, o que fazer?
+→ Não permitir exportar
+
+== E. Formato do arquivo ==
+E1. Formato do arquivo?
+→ Só Excel (.xlsx)
+
+E2. Idioma?
+→ Português e inglês (escolher na hora)
+
+E3. No futuro, querem editar a planilha e subir de volta na GAIA?
+→ Não
+
+== M. Remoção, Regenerativo e Biodiversidade ==
+M1. Remoção: incluir o clima mensal usado pelo modelo (temperatura e chuva)?
+→ Não
+
+M2. Remoção: incluir os resultados mês a mês?
+→ Sim, em aba opcional
+
+M3. Remoção: qual estoque de carbono mostrar?
+→ Os dois
+
+M4. Remoção: incluir data, laboratório e método da análise de solo (SOC inicial)?
+→ Sim, passar a guardar
+
+M5. Regenerativo: o que mostrar em cada indicador?
+→ Os dois
+
+M6. Regenerativo: cada coluna é uma fazenda (avaliação primária) ou um talhão?
+→ Talhão
+
+M7. Biodiversidade: cada coluna é um talhão ou a fazenda?
+→ Talhão
+
+M8. Regenerativo e Biodiversidade: incluir quem respondeu e quando?
+→ Sim
+
+== F. Pontos que achamos e fechamento ==
+F1. No LCA Annual Crops Tool, a célula Total_Agro!D18 (semente, biogênico) puxa o CO₂ biogênico do combustível, que aparece duas vezes no total. É erro da planilha?
+→ Sim, é erro
+
+F2. A plataforma usa GWP do AR6; a ferramenta GHG Protocol Agrícola usa AR4. Isso deve aparecer explicado na planilha?
+→ Sim
+
+F3. Algo que não perguntamos e deveríamos saber?
+→ (sem resposta)

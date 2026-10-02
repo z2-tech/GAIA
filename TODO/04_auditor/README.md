@@ -5,7 +5,11 @@ o dono do projeto convida o auditor por e-mail; ele vê só aquele projeto, some
 leitura, com cálculos oficiais, dados primários e fatores de emissão, e baixa
 Excel e PDF.
 
-Estado: **discovery**. Nada criado no Plane.
+Estado: **discovery**. Nada criado no Plane. Questionário respondido pelo Paulo
+em 01/10 (o Ruan não respondeu este; as falas dele sobre auditor vêm do
+questionário do cálculo final). Análise em [07-analise-respostas.md](07-analise-respostas.md);
+definição em [08-versao-final-1.md](08-versao-final-1.md). Pendências vão para a
+reunião de 06/10.
 
 ## Arquivos
 
@@ -16,8 +20,10 @@ Estado: **discovery**. Nada criado no Plane.
 | [03-analise-produto.md](03-analise-produto.md) | Fluxo do convite, painel de verificação, rastro do cálculo, apontamentos |
 | [04-questionario-produto.md](04-questionario-produto.md) | Perguntas para Paulo e Ruan |
 | [questionario.html](questionario.html) | Mesmas perguntas em página interativa (link abaixo) |
-| [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis em v1, v1.5 e v2, e correções a fazer antes |
+| [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks por fase (correções, acesso, painel e rastro, verificação, evidências), com regras e pendências |
 | [06-por-modulo.md](06-por-modulo.md) | O que o auditor vê e o que falta em cada módulo |
+| [07-analise-respostas.md](07-analise-respostas.md) | O que mudou, o que vira regra, pontos em aberto e pauta de 06/10 |
+| [08-versao-final-1.md](08-versao-final-1.md) | **Versão final 1:** o que é a feature, jornada, regras de negócio (RN-n), estados, permissões e pendências (P-n) |
 
 ## Em uma página
 
@@ -47,6 +53,9 @@ Estado: **discovery**. Nada criado no Plane.
   jeitos, denominadores do Regenerativo e da Biodiversidade.
 
 ## Hipóteses de trabalho
+
+Resultado depois das respostas: H1 e H4 derrubadas, H3 substituída, H2 e H5
+confirmadas ([07](07-analise-respostas.md#hipóteses)).
 
 - **H1 · v1 = convite + leitura + download.** Apontamentos e registro de
   verificação na v2.

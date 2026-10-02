@@ -1,0 +1,159 @@
+Questionário do export Excel · Paulo Rocha
+
+== A. Para que serve ==
+A1. Para que vocês vão usar a planilha?
+→ Guardar uma cópia
+  Comentário: Guardar uma cópia e ter rastreabilidade dos dados.
+
+A2. Quem vai receber o arquivo?
+→ (sem resposta)
+  Comentário: O cliente.
+
+A3. Como é a planilha que vocês usam hoje quando o projeto tem muitas fazendas?
+→ Geralmente Coluna as variaveis, Urea kg/ha, Super Simples kg/ha, Consumo de diesel L/ha, Produtividade kg/ha e etc. Na linha acima as fazendas.
+
+A4. Qual planilha é a referência mais próxima do que vocês querem?
+→ Uma planilha própria
+
+A5. As abas propostas acima fazem sentido?
+→ (sem resposta)
+  Comentário: Quais?
+
+== B. O que vai na planilha ==
+B1. Quais módulos entram na primeira versão?
+→ (sem resposta)
+  Comentário: Possibilidade de baixar todos os dados
+
+B2. Só os dados digitados, ou também os resultados?
+→ (sem resposta)
+  Comentário: So dados digitados
+
+B3. Os fatores de emissão entram?
+→ (sem resposta)
+  Comentário: Não. De alguma maneira, apenas o auditor, mas apenas ele deveria ter acesso aos fatores de emissão.
+
+B4. Quais dados da fazenda devem aparecer?
+→ (sem resposta)
+  Comentário: Destes ai sai Nome do produtor (por LGPD).
+
+B5. A localização da fazenda entra?
+→ Coordenadas
+
+B6. Notas fiscais e outros arquivos de evidência anexados: o que aparece?
+→ (sem resposta)
+  Comentário: Esses arquivos deveriam ser passiveis de serem baixados também, mas em formato PDF e separado do excel.
+
+B7. Simulações entram?
+→ (sem resposta)
+  Comentário: Boa pergunta não tenho resposta, tenho que alinhar com o Ruan.
+
+== C. Como a planilha se organiza ==
+C1. O que é cada coluna?
+→ (sem resposta)
+  Comentário: Se o dado foi coletado por talhão, será talhão, se o dado foi coletado por fazenda, por fazenda.
+
+C2. Quando uma fazenda tem mais de uma cultura ou safra no período, o que fazer?
+→ Uma coluna por cultura/safra dentro da fazenda
+
+C3. Os valores saem por hectare ou total da fazenda?
+→ (sem resposta)
+  Comentário: Se o dado foi coletado por talhão deve ser baixado por talhão, se foi coletado por fazenda deve ser baixado por fazenda.
+
+C4. Unidades: como o usuário digitou ou padronizadas?
+→ (sem resposta)
+  Comentário: Padronizadas, se for insumos sempre por ha.
+
+C5. Uma aba por categoria (como o LCA tool) ou tudo numa aba só?
+→ (sem resposta)
+  Comentário: COmo assim? Deveria ser uma Aba para emissão, uma aba, para remoção, uma aba para biodiversidade e etc.
+
+C6. Querem também a aba "Dados em lista" (uma linha por valor, para filtrar e recalcular)?
+→ (sem resposta)
+  Comentário: Não entendi
+
+C7. Manter as cores do LCA tool (dado do produtor, dado fixado, resultado)?
+→ (sem resposta)
+  Comentário: Não entendi
+
+== D. Quem pode exportar e o quê ==
+D1. De onde se exporta?
+→ (sem resposta)
+  Comentário: Boa Pergunta, o importante deve é ter acesso aos dados.
+
+D2. Precisa filtrar antes de exportar?
+→ (sem resposta)
+  Comentário: Filtrar é a melhor opção.
+
+D3. Quem pode exportar?
+→ Admin do projeto; Gestor; Auditor; Cliente
+  Comentário: Todos.
+
+D4. Precisa de uma versão sem identificação (fazendas como "Fazenda 1, 2, 3")?
+→ (sem resposta)
+  Comentário: Talvez eu não colocaria o nome do produtor por LGPD.
+
+D5. Se um cálculo estiver desatualizado (dados mudaram depois do último cálculo), o que fazer?
+→ (sem resposta)
+  Comentário: Não iremos exportar calculos em planilhas apenas os dados coletados e digitados, os calculos serão exportados em PDF.
+
+D6. Se um talhão não tiver cálculo oficial, o que fazer?
+→ (sem resposta)
+  Comentário: Não iremos exportar calculos em planilhas apenas os dados coletados e digitados, os calculos serão exportados em PDF.
+
+== E. Formato do arquivo ==
+E1. Formato do arquivo?
+→ (sem resposta)
+  Comentário: Eu não entendo. Por min só Excel, para o que usa o CSV.
+
+E2. Idioma?
+→ Português e inglês (escolher na hora)
+  Comentário: Os dois
+
+E3. No futuro, querem editar a planilha e subir de volta na GAIA?
+→ (sem resposta)
+  Comentário: Bom acho que não precisa. A não ser que isso seja usado como forma de coleta de dados no futuro.
+
+== M. Remoção, Regenerativo e Biodiversidade ==
+M1. Remoção: incluir o clima mensal usado pelo modelo (temperatura e chuva)?
+→ (sem resposta)
+  Comentário: Não entendi.
+
+M2. Remoção: incluir os resultados mês a mês?
+→ (sem resposta)
+  Comentário: Se for digitado o dado precisa ser mês a mês, caso não for digitado, pode ser só resumo.
+
+M3. Remoção: qual estoque de carbono mostrar?
+→ (sem resposta)
+  Comentário: Inicial e final.
+
+M4. Remoção: incluir data, laboratório e método da análise de solo (SOC inicial)?
+→ (sem resposta)
+  Comentário: Sim
+
+M5. Regenerativo: o que mostrar em cada indicador?
+→ (sem resposta)
+  Comentário: A opção selecionada.
+
+M6. Regenerativo: cada coluna é uma fazenda (avaliação primária) ou um talhão?
+→ (sem resposta)
+  Comentário: Fazenda, o modulo regenerativo é preenchido por fazenda.
+
+M7. Biodiversidade: cada coluna é um talhão ou a fazenda?
+→ Os dois
+  Comentário: Biodiversidade será preenchido por talhão e por fazenda, então os dois.
+
+M8. Regenerativo e Biodiversidade: incluir quem respondeu e quando?
+→ (sem resposta)
+  Comentário: Sim
+
+== F. Pontos que achamos e fechamento ==
+F1. No LCA Annual Crops Tool, a célula Total_Agro!D18 (semente, biogênico) puxa o CO₂ biogênico do combustível, que aparece duas vezes no total. É erro da planilha?
+→ (sem resposta)
+  Comentário: Não ficou claro, preciso checar.
+
+F2. A plataforma usa GWP do AR6; a ferramenta GHG Protocol Agrícola usa AR4. Isso deve aparecer explicado na planilha?
+→ (sem resposta)
+  Comentário: Não
+
+F3. Algo que não perguntamos e deveríamos saber?
+→ Acho que não.

@@ -1,0 +1,90 @@
+Questionário do QR code · Paulo Rocha
+
+== P. Para quem e para quê ==
+1. Quem vai escanear o QR?
+→ Comprador ou trader; Consumidor final; Cliente do Peterson
+  Comentário: Para o café pode ser que o cliente final.
+
+2. O QR vai ser colado no produto ou no lote?
+→ Ainda não sabemos
+  Comentário: Existem cadeias muito complexas, que a fazenda esta muito longe do produto final.
+
+3. De que nível é o QR?
+→ Projeto
+  Comentário: A nivel de fazenda fica complexo demais. Sera muito bom, mas fica muito complexo.
+
+4. A estrutura proposta acima faz sentido?
+→ Sim, com ajustes
+  Comentário: na etapa 2 eu eliminaria a nivel de fazenda.
+
+5. Precisam baixar o QR sozinho (PNG ou SVG) para imprimir em etiqueta?
+→ (sem resposta)
+  Comentário: O foco é baixar no PDF com os dados, mas da essa opção seria legal pois permite que o QR seja impresso e colocado no saco de cafe por exemplo.
+
+== C. O que aparece ==
+6. Quais módulos aparecem na página?
+→ Só os contratados no projeto
+  Comentário: Hoje todos fazem apenas para CO2 mas podemos mostrar mais
+
+7. Na Emissão, qual é o número principal?
+→ kgCO₂e por kg do produto
+
+8. Como mostrar o mapa da fazenda?
+→ O emissor escolhe na hora de gerar
+
+9. O que pode aparecer publicamente?
+→ Empresa que emitiu
+  Comentário: Aqui precisamos discutir. Por conta de LGPD.
+
+10. A página deixa enviar o PDF para conferir se é idêntico ao emitido?
+→ (sem resposta)
+  Comentário: como assim?
+
+11. O PDF completo fica disponível para baixar na página?
+→ O emissor escolhe
+
+== S. Status e confiança ==
+12. A página mostra se o resultado foi verificado?
+→ Sim
+  Comentário: Mostrar quando é um ou outro
+
+13. O emissor pode revogar um QR?
+→ Sim
+
+14. Quando revogado, a página mostra…
+→ Só "revogado" e a data
+
+15. O documento vence?
+→ Não vence, mostra o período (safra) que cobre
+
+== A. Aparência ==
+16. Idioma da página?
+→ Português e inglês (visitante troca)
+
+17. Marca na página?
+→ GAIA + empresa que emitiu
+  Comentário: Além da logo da verificadora
+
+18. O emissor quer ver quantas vezes o QR foi escaneado?
+→ Depois
+
+== M. Remoção, Regenerativo e Biodiversidade ==
+M1. A Remoção aparece na página pública?
+→ Sim, com aviso "estimativa de modelo, não é crédito de carbono"
+
+M2. Regenerativo: como aparece?
+→ Faixa (Bom, Atenção, Crítico) e % da área em Bom
+  Comentário: Mostrar também o score do projeto
+
+M3. Biodiversidade entra na página agora?
+→ Sim
+
+M4. Os avisos curtos por módulo podem ir como estão?
+→ Com ajustes (comentário)
+
+== R. Referências e algo mais ==
+R1. Quais plataformas com QR vocês querem como referência?
+→ Plataforma Puma, My Easy Farm, UCropIt, Sateligence e etc.
+
+19. Algo mais?
+→ Não

@@ -1,56 +1,88 @@
 # 05 · Rascunho de tasks
 
-Não criadas no Plane. "Depende de" aponta perguntas do
-[questionário](04-questionario-produto.md).
+Ainda não criadas no Plane. Títulos no padrão `BE:` / `FE:` / `PROD:`.
+Regras (RN-n) e pendências (P-n) em [08-versao-final-1.md](08-versao-final-1.md).
+Revisado em 02/10/2026 com a resposta do Paulo.
 
-## v1: convite, leitura, download
+A coluna "Pendência" indica a decisão de 06/10 que ainda pode mudar a task. Sem
+pendência, a task pode começar.
 
-| Título | O quê | Depende de |
-|---|---|---|
-| PROD: Regras do auditor | Quem convida, duração, vários clientes, trava durante auditoria, simulações, dados pessoais | 1–9 |
-| PROD: Telas no Penpot | Aba Acesso, diálogo de convite, aceite, faixa de modo auditoria, painel de verificação, rastro do cálculo | 3 |
-| BE: Membro de projeto | Model `ProjectMember` (projeto, usuário, papel no projeto, convidado por, acesso até, revogado em) | 4, 5 |
-| BE: Acesso por membro | Incluir membros ativos em `_user_accessible_project_qs`, `user_has_project_farm_access`, `_user_accessible_farm_qs`; teste de isolamento por módulo (LCA, RothC, Regenerativo, Biodiversidade, comparação, uploads) | 6 |
-| BE: Somente leitura por projeto | Checagem "é auditor deste projeto" nas escritas, no lugar de `user_has_role_name`; fecha Biodiversidade (criar, cancelar) e upload | — |
-| BE: Convite | Token de 128 bits com hash, uso único, 7 dias, preso ao e-mail; e-mail via Resend; aceite cria conta ou anexa à existente; reenviar, cancelar, revogar | 4, 5 |
-| BE: Só oficiais para o auditor | Filtrar simulações nas listagens quando o usuário é auditor do projeto | 8 |
-| BE: Permissão do usuário no projeto | Campo ou endpoint que diz à web o papel do usuário naquele projeto | — |
-| FE: Aba Acesso | Lista de membros e convites, status, último acesso, convidar, reenviar, revogar | layout |
-| FE: Aceite do convite | Rota pública do link: criar conta ou entrar, depois cai no projeto | layout |
-| FE: Modo auditoria | Faixa fixa, menu reduzido, botões de escrita pela permissão do projeto (substitui `useCanWriteAssessments`) | layout |
-| FE: Painel de verificação | Matriz fazenda × módulo com o oficial; Excel e PDF no topo | layout, 00, 01, 02 |
+As tasks de verificação que estavam na fase 4 do
+[cálculo final](../00_calculo_final/05-rascunho-tasks.md) (vínculo auditor ×
+projeto, enviar, aprovar, pedir correção) moram aqui, nas fases 1 e 3. O cálculo
+final mantém os estados do projeto, a finalização, a foto e a reabertura (fase 3
+de lá).
 
-## v1.5: rastro do cálculo
+## Fase 0: correções antes de abrir para auditor
 
-| Título | O quê | Depende de |
-|---|---|---|
-| BE: Fator e fonte em todo cálculo | Guardar fator, unidade e fonte usados em todas as fontes da LCA, não só fertilizante, defensivo, semente e energia; `source` em todos os catálogos | 10 |
-| BE: Versão do catálogo de fatores | Versão por catálogo; cálculo guarda a versão | 10 |
-| FE: Rastro do cálculo | Tabela insumo → quantidade → fator → fonte → emissão; entradas do RothC; respostas do Regenerativo e da Biodiversidade | 10 |
-| BE: Log de acesso do auditor | O que abriu e o que baixou; visível ao dono | 9, 12 |
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| BE: Unidade de combustível ignorada | `lca/calculations/fuel.py:88-98` | 5.4 | — |
+| BE: Gravar janela de modelagem do RothC | `rothc/serializers.py:277-280` | 5.4 | — |
+| BE: Delta BAU × projeto único | `comparison/selectors.py:136` vs `rothc/services.py:1807` | 5.4 | — |
+| BE: Pecuária no denominador do Regenerativo | `regenerative/selectors.py:126-135` | 5.4 | — |
+| BE: Denominador da Biodiversidade | `biodiversity/services.py:35-48` vs `:170-216` | 5.4 | — |
 
-## v2: apontamentos e verificação
+Os furos de escrita do auditor (Biodiversidade e upload) fecham na task "BE:
+Somente leitura por projeto", fase 1.
 
-| Título | O quê | Depende de |
-|---|---|---|
-| BE/FE: Apontamentos | Por item (talhão × módulo ou linha do rastro); tipo (correção, esclarecimento, próxima verificação); status aberto → respondido → fechado | 2, 13 |
-| BE/FE: Enviar para verificação | Trava o projeto; status "Em auditoria" na API (a web já tem o badge) | 7 |
-| BE/FE: Registro de verificação | Campos da pergunta 14 e PDF da declaração; atualiza selo do PDF (02) e da página do QR (03); encerra o acesso do auditor | 14, 15 |
-| BE: Histórico de alterações | Quem mudou o quê e quando | 12 |
-| BE/FE: Evidências | Anexos por dado primário | 11 |
+## Fase 1: acesso por projeto
 
-## Dependências
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| PROD: Design do acesso do auditor no Penpot | Aba Acesso (membros, convites pendentes, revogar, reenviar), diálogo de convite (e-mail, verificadora), tela de aceite, faixa "Verificação · somente leitura" | RN-01–09 | P-1, P-2 |
+| BE: Membro de projeto | Model `ProjectMember` (projeto, usuário, papel no projeto, verificadora, convidado por, aceito em, revogado em, encerrado em). Substitui o "vínculo auditor × projeto" da fase 4 do cálculo final | RN-05–07 | P-3 |
+| BE: Acesso por membro | Membros ativos em `_user_accessible_project_qs`, `user_has_project_farm_access`, `_user_accessible_farm_qs`; teste de isolamento entre clientes por módulo (LCA, RothC, Regenerativo, Biodiversidade, comparação, uploads) | RN-05 | — |
+| BE: Somente leitura por projeto | Checagem "é auditor deste projeto" nas escritas, no lugar de `user_has_role_name`; fecha Biodiversidade (criar, cancelar) e upload; exceção para apontamento, transições e declaração | RN-06, RN-10 | — |
+| BE: Convite do auditor | Token com hash, uso único, 7 dias, preso ao e-mail; e-mail via Resend; aceite cria conta ou anexa à existente; reenviar, cancelar, revogar; só `is_staff` ou papel global `admin`; só projeto finalizado ou em verificação | RN-02–04, RN-07 | P-1, P-2 |
+| BE: Auditor vê só oficiais e às cegas | Filtrar simulações para o auditor do projeto; esconder nome, CPF/CNPJ e contato do produtor nos serializers | RN-11, RN-13 | P-4 |
+| BE: Permissão do usuário no projeto | Campo ou endpoint com o papel do usuário naquele projeto, para a web | RN-06 | — |
+| FE: Aba Acesso do projeto | Lista de membros e convites, status, convidar, reenviar, revogar; visível só para GAIA/Peterson | RN-02, RN-07 | design, P-1 |
+| FE: Aceite do convite | Rota pública do link: criar conta ou entrar, depois cai no projeto | RN-03 | design |
+| FE: Modo auditor | Faixa fixa, menu reduzido, botões de escrita pela permissão do projeto (substitui `useCanWriteAssessments`) | RN-06, RN-10 | design |
 
-- **00 cálculo oficial:** o auditor olha o oficial.
-- **01 export:** Excel com fatores.
-- **02 PDF / 03 QR:** selo "Verificado por … em dd/mm".
+## Fase 2: painel e rastro
 
-## Antes de abrir para auditor (correções já conhecidas)
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| PROD: Design do painel e do rastro no Penpot | Matriz fazenda × módulo com o oficial; rastro por módulo; Excel e PDF no topo | RN-14, RN-15, 5.4 | — |
+| BE: Fonte em todos os catálogos de fator | `source` nos catálogos que não têm (fertilizante); fator, unidade e fonte gravados em todas as fontes da Emissão, não só em quatro | RN-14 | — |
+| BE: Rastro do cálculo | Endpoint por módulo lendo da foto: linhas da Emissão com fator e fonte; entradas do RothC (com dados da análise de solo); respostas do Regenerativo e da Biodiversidade | RN-12, RN-14, 5.4 | — |
+| FE: Painel de verificação | Matriz fazenda × módulo, contagem de apontamentos por célula, Excel do auditor e PDF no topo | RN-15 | design |
+| FE: Rastro do cálculo | Tabela insumo → quantidade → fator → fonte → emissão; entradas do RothC; respostas do Regenerativo e da Biodiversidade | 5.4 | design |
 
-| Título | Onde |
+Excel do auditor com aba de fatores: feature 01. PDF: feature 02. A guarda de
+laboratório, método e data da análise de solo vem da feature 01 (M4).
+
+## Fase 3: verificação
+
+Depende da fase 3 do cálculo final (estados, finalizar, foto).
+
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| PROD: Design da verificação no Penpot | Enviar para verificação, apontamentos (lista, tipo, status, responder), devolver com prazo, marcar verificado com declaração, registro exibido no projeto | RN-19–31 | P-5, P-6, P-9 |
+| BE: Enviar para verificação | Finalizado → Em verificação; admin do projeto, gestor ou GAIA; quem e quando | CF-RN-31 | P-9 |
+| BE: Apontamentos | Model (projeto, alvo, tipo, status, texto, respostas, quem e quando); auditor cria, fecha e reabre; técnico, gestor, admin e GAIA respondem; persistem entre rodadas | RN-19–22 | — |
+| BE: Devolver para correção | Em verificação → Em andamento; exige apontamento de correção aberto; prazo informativo; foto anterior invalidada; reenvio ao mesmo auditor | RN-23–26 | P-6 |
+| BE: Marcar verificado | Bloqueio por correção ou esclarecimento sem fechar; registro (data, verificadora, auditor, escopo, período, declaração em PDF, logo opcional); encerra o acesso dos auditores; expõe o registro para PDF e QR | RN-27–31, RN-07 | P-3, P-5 |
+| FE: Ações de verificação | Botão enviar (admin, gestor, GAIA); devolver e marcar verificado (auditor); aviso de correção pendente com prazo | RN-23–28 | design |
+| FE: Apontamentos | Lista por projeto com filtro por status, criar a partir de célula ou linha do rastro, responder, fechar | RN-19–22 | design |
+| FE: Registro de verificado | Diálogo do auditor com os campos e upload da declaração; card no projeto verificado | RN-29 | design |
+| FE: Estado "Em verificação" | Trocar o badge "Em auditoria" da web pelo nome escolhido | — | P-9 |
+
+## Fase 4: evidências
+
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| PROD: Evidência por dado | Onde anexa em cada módulo, formatos, tamanho, como o auditor vê | RN-17, RN-18 | P-4, P-8 |
+| BE: Anexo de evidência por dado | Model de anexo ligado ao item (insumo, análise de solo, indicador, resposta) nos quatro módulos, via URL pré-assinada do S3 que já existe; migrar o `evidence_file` de texto da Emissão | RN-18 | P-8 |
+| FE: Anexar e ver evidência | Upload no formulário de cada módulo; lista no rastro para o auditor | RN-18 | design |
+
+## Depois desta feature
+
+| Título | O quê |
 |---|---|
-| BE: Unidade de combustível ignorada | `lca/calculations/fuel.py:88-98` |
-| BE: Gravar janela de modelagem do RothC | `rothc/serializers.py:277-280` |
-| BE: Delta BAU × projeto único | `comparison/selectors.py:136` vs `rothc/services.py:1807` |
-| BE: Pecuária no denominador do Regenerativo | `regenerative/selectors.py:126-135` |
-| BE: Denominador da Biodiversidade | `biodiversity/services.py:35-48` vs `:170-216` |
+| BE/FE: Histórico de alterações para o auditor | Se a P-7 mudar. A trilha do oficial já é gravada no cálculo final |
+| BE/FE: Log de acesso do auditor | O que abriu e o que baixou, visível à GAIA |
+| BE/FE: Contratar verificação pela plataforma | Pedido à verificadora dentro da GAIA |
+| BE/FE: Lista de verificadores | Verificadoras credenciadas que pagam para aparecer |

@@ -4,7 +4,10 @@ Feature 1 do [escopo de 29/09/2026](../../docs/references/meetings/29-09-26-estr
 Depende da [feature 0](../00_calculo_final/README.md): o export mostra o cálculo
 oficial de cada talhão, não as simulações.
 
-Estado: **discovery**. Nada criado no Plane.
+Estado: **discovery**. Nada criado no Plane. Questionário respondido por Paulo e
+Ruan em 01/10; análise em [07-analise-respostas.md](07-analise-respostas.md);
+definição em [08-versao-final-1.md](08-versao-final-1.md). Divergências vão para a
+reunião de 06/10.
 
 ## Arquivos
 
@@ -15,8 +18,10 @@ Estado: **discovery**. Nada criado no Plane.
 | [03-analise-produto.md](03-analise-produto.md) | Análise de produto e proposta de planilha (abas, layout, o que pode e o que não pode) |
 | [04-questionario-produto.md](04-questionario-produto.md) | Questionário para Paulo e Ruan (versão texto) |
 | [questionario.html](questionario.html) | Mesmo questionário como página interativa. Link no fim deste arquivo |
-| [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis |
+| [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis, por fase, com regras e pendências |
 | [06-por-modulo.md](06-por-modulo.md) | Abas de Remoção, Regenerativo e Biodiversidade |
+| [07-analise-respostas.md](07-analise-respostas.md) | Consensos, divergências, perguntas a refazer, requisitos novos e pauta de 06/10 |
+| [08-versao-final-1.md](08-versao-final-1.md) | **Versão final 1:** o que é a feature, jornada, regras de negócio (RN-n), conteúdo por módulo, permissões e pendências (P-n) |
 
 ## Em uma página
 

@@ -3,7 +3,10 @@
 Feature 2 do [escopo de 29/09/2026](../../docs/references/meetings/29-09-26-estrategia-peterson-design-comparacao-mobile/29-09-26-escopo-export-qrcode-auditor.md):
 dashboard **por projeto e por módulo** em PDF, com o QR code (feature 03) no fim.
 
-Estado: **discovery**. Nada criado no Plane.
+Estado: **discovery**. Nada criado no Plane. Questionário respondido pelo Paulo em
+01/10 (o Ruan ainda não); análise em [07-analise-respostas.md](07-analise-respostas.md);
+definição em [08-versao-final-1.md](08-versao-final-1.md). Pendências vão para a
+reunião de 06/10.
 
 ## Arquivos
 
@@ -16,6 +19,8 @@ Estado: **discovery**. Nada criado no Plane.
 | [questionario.html](questionario.html) | Mesmas perguntas em página interativa (link abaixo) |
 | [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis |
 | [06-por-modulo.md](06-por-modulo.md) | Páginas de Remoção, Regenerativo e Biodiversidade, com os avisos de cada um |
+| [07-analise-respostas.md](07-analise-respostas.md) | O que vira regra, pontos em aberto, perguntas para refazer com exemplo e pauta de 06/10 |
+| [08-versao-final-1.md](08-versao-final-1.md) | **Versão final 1:** PDF de 2 páginas, versões rascunho/autodeclarado/verificado, regras (RN-n), estrutura, permissões e pendências (P-n) |
 
 ## Em uma página
 
@@ -46,6 +51,11 @@ Estado: **discovery**. Nada criado no Plane.
   os gráficos, gera PDF/A, e o Django guarda arquivo, hash e snapshot no S3.
 
 ## Hipóteses de trabalho
+
+Resultado após as respostas do Paulo ([08](08-versao-final-1.md)): H1 cai (só o
+PDF do projeto completo, 2 páginas); H2 fica, com estados válido e substituído;
+H3 fica, com três versões: rascunho, autodeclarado e verificado (QR só no
+verificado).
 
 - **H1 · Dois formatos:** PDF do projeto (resumo + um capítulo por módulo) e PDF de
   um módulo do projeto. PDF de talhão só se o produto pedir.

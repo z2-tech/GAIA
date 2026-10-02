@@ -4,8 +4,10 @@ Feature 0 do [escopo de 29/09/2026](../../docs/references/meetings/29-09-26-estr
 É a base do export, do PDF, do QR code e do auditor: os quatro mostram o cálculo
 real, não as simulações.
 
-Estado: **discovery**. Não há task criada no Plane. O questionário precisa voltar
-respondido antes do design e do dev.
+Estado: **discovery**. Não há task criada no Plane. Questionário respondido por
+Paulo e Ruan em 30/09; análise em [06-analise-respostas.md](06-analise-respostas.md); definição em
+[07-versao-final-1.md](07-versao-final-1.md).
+Divergências vão para a reunião de 06/10.
 
 ## Arquivos
 
@@ -17,6 +19,8 @@ respondido antes do design e do dev.
 | [04-questionario-produto.md](04-questionario-produto.md) | Questionário para Paulo e Ruan responderem (versão texto) |
 | [questionario.html](questionario.html) | Mesmo questionário como página interativa, publicada em https://claude.ai/artifact/WsKJzRgjMiHHUwa6bvtDpB. Respostas ficam salvas por pessoa na coleção `respostas` |
 | [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis, com o que depende de cada resposta |
+| [06-analise-respostas.md](06-analise-respostas.md) | Consensos, divergências, requisitos novos e pauta de 06/10 |
+| [07-versao-final-1.md](07-versao-final-1.md) | **Versão final 1:** o que é a feature, jornada, regras de negócio (RN-n), estados, permissões e pendências (P-n) |
 
 ## Em uma página
 

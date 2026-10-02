@@ -1,34 +1,60 @@
 # 05 · Rascunho de tasks
 
-Não criadas no Plane. "Depende de" aponta perguntas do
-[questionário](04-questionario-produto.md).
+Ainda **não criadas no Plane**. Títulos no padrão `BE:` / `FE:` / `PROD:`.
+Regras (RN-n) e pendências (P-n) em [08-versao-final-1.md](08-versao-final-1.md).
+Revisado em 02/10/2026 com a resposta do Paulo.
 
-| Título | O quê | Depende de |
-|---|---|---|
-| PROD: Regras da página pública | Leitores, nível (projeto/fazenda), o que publicar, status, revogação, validade | 1–15 |
-| PROD: Textos da página | Veredito, estados, avisos curtos por módulo, "O que é a GAIA", PT e EN; revisão do Paulo | 16, M1–M4 |
-| PROD: Layout no Penpot | Mobile e desktop; estados válido, substituído, revogado, não encontrado; entrada manual; etiqueta do QR | 4, 5, 17 |
-| BE: Token e status no documento emitido | Token base32 de 80 bits, único; status; motivo e data de revogação; `replaced_by`; o que foi liberado para publicar. **Estende o model da feature 02** | 8, 9, 11, 13–15 |
-| BE: Documento por fazenda | Na emissão do projeto, um documento filho por fazenda, com snapshot e token próprios | 3 |
-| BE: Endpoint público de verificação | `AllowAny`, sem autenticação, throttle anônimo; devolve snapshot filtrado pelo que foi liberado, status e hash; 404 igual para inexistente e inválido | 9, 12, 14 |
-| BE: Imagem do mapa no snapshot | Guardar a imagem na emissão e servir por caminho que não expira | 8 |
-| BE: Revogar documento | Ação com motivo; só quem pode emitir | 13, 14 |
-| BE: Contador de leituras | Incrementa por acesso ao endpoint público; exposto na aba Documentos | 18 |
-| FE: Rota pública `/v/[token]` | Layout próprio, render no servidor, `noindex`, exceção no `proxy.ts` sem redirecionar logado; estados; PT/EN | layout |
-| FE: Entrada manual `/v` | Campo do código, normaliza hífens e caixa | — |
-| FE: Conferir PDF | Hash SHA-256 no navegador, compara com o do documento | 10 |
-| FE: QR no PDF e na aba Documentos | Lib `qrcode`; QR no fim do PDF; baixar PNG/SVG com o código embaixo; copiar link; revogar; leituras | 5 |
+A coluna "Pendência" indica a decisão de 06/10 que ainda pode mudar a task. Sem
+pendência, a task pode começar.
+
+## Fase 1: página e código
+
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| PROD: Textos da página | Veredito, estados, avisos curtos por módulo, "O que é a GAIA", "média de N fazendas", PT e EN | RN-05–09, RN-15, RN-16 | P-4, P-5 |
+| PROD: Layout da página no Penpot | Mobile e desktop; estados ativo, revogado, não encontrado; entrada manual; cards dos quatro módulos; três logos | RN-05–14 | P-1, P-7 |
+| BE: Código e status na foto verificada | Código base32 de 80 bits, único, na foto verificada do projeto; status ativo/revogado; cada PDF gerado como filho com hash. Estende o `BE: Documento emitido` da feature 02 | RN-01–04 | P-1, P-2 |
+| BE: Endpoint público de verificação | `AllowAny`, sem autenticação, throttle anônimo; devolve a foto filtrada pelo que foi liberado, status e hashes; mesma resposta para inexistente e mal formado | RN-07–10, RN-20 | P-3 |
+| FE: Rota pública `/v/[token]` | Layout próprio, render no servidor, `noindex`, exceção no `proxy.ts` sem redirecionar logado; veredito; estados; PT/EN | RN-05, RN-06, RN-14, RN-21 | design |
+| FE: Cards de módulo na página | Emissão (kg CO₂e/kg por cultura), Remoção (variação medida, projeção informativa), Regenerativo (score, faixa, % em Bom), Biodiversidade (% da área por classe); só contratados | RN-07, RN-08, RN-15, RN-16 | design, P-8 |
+| FE: Entrada manual `/v` | Campo do código; normaliza hífen e caixa | RN-22 | — |
+| FE: QR no PDF | Lib `qrcode`; QR no fim do PDF oficial com o código embaixo | RN-01, RN-03 | P-1 |
+
+## Fase 2: controle do emissor
+
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| PROD: Design da emissão e da aba Documentos | Escolha do que fica público com padrão mínimo; mapa; logos; baixar QR; revogar com motivo | RN-10–13, RN-17 | P-3, P-7 |
+| BE: O que publicar, emissor e logos | Campos liberados (nomes, município/UF, mapa, PDF) na foto; nome e logo da empresa emissora e da verificadora | RN-10, RN-12, RN-13 | P-3, P-7 |
+| BE: Imagem do mapa na foto | Gerar a imagem na emissão (sem mapa, municípios ou contornos) e servir por caminho que não expira | RN-11 | P-3 |
+| BE: Revogar QR | Ação com motivo obrigatório (não publicado); gestor, admin do projeto e staff | RN-17–19 | P-9 |
+| FE: QR na aba Documentos | Baixar PNG/SVG com o código embaixo; copiar link; ver página; revogar | RN-17 | design |
+| FE: Escolhas de publicação na emissão | Formulário com padrão mínimo preenchido | RN-10–12 | design, P-3 |
+
+## Fase 3: integridade
+
+| Título | O quê | Regras | Pendência |
+|---|---|---|---|
+| FE: Conferir PDF | SHA-256 no navegador (Web Crypto), compara com os hashes da foto; resultado "idêntico" ou "diferente" | jornada 5 | P-6 |
+
+## Depois desta feature
+
+| Título | O quê |
+|---|---|
+| BE/FE: Contador de leituras | Incrementa por acesso; exposto na aba Documentos (Paulo 18) |
+| PROD: Pesquisa de referências | Puma, My Easy Farm, UCropIt, Sateligence (Paulo R1) |
 
 ## Dependências
 
-- **02 PDF:** model do documento emitido e aba Documentos. A 03 estende os dois.
-- **00 cálculo oficial:** só o oficial entra no snapshot.
-- **05 consolidado:** números do projeto.
-- **04 auditor:** selo "Verificado por …".
+- **02 PDF:** model do documento emitido e aba Documentos. A 03 muda o model
+  (código na foto, PDF como filho).
+- **00 cálculo oficial:** foto imutável (CF-RN-25), estado verificado (CF-RN-33),
+  agregação por projeto (CF-RN-13).
+- **04 auditor:** verificadora e data do selo.
 
-## Por módulo (ver 06-por-modulo.md)
+## Saiu
 
-| Título | O quê | Depende de |
-|---|---|---|
-| FE: Cards de módulo na página | Emissão, Remoção, Regenerativo (Biodiversidade depois), número principal e aviso; só módulos contratados | M1–M4 |
-| PROD: Avisos curtos por módulo | Versões de uma linha dos avisos da referência, para consumidor | M4 |
+| Título | Por quê |
+|---|---|
+| BE: Documento por fazenda | QR só de projeto (Paulo 3, 4) |
+| Estado "substituído" | Código por foto verificada (RN-03); verificado não muda |

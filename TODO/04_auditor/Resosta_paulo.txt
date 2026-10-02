@@ -1,0 +1,83 @@
+Questionário do auditor · Paulo Rocha
+
+== F. Quem é e o que faz ==
+1. Quem vai ser auditor na prática?
+→ Control Union
+  Comentário: Neste momento a verificação será apenas dos calculos e da metodologia, então não precisa ser credenciado Verra. Embora iremos dar preferencia para a Control, a ideia é que qualquer outra auditoria possa fazer esse trabalho.
+
+2. O que o auditor faz na plataforma?
+→ Consulta, apontamentos e marca "verificado"
+  Comentário: Consulta, faz a apontamentos, devolve o projeto para ser aberto e arrumando pendencias caso tenha discrepancias e erros, ou marca como verificado quando o projeto esta certo.
+
+3. A proposta acima faz sentido?
+→ Sim, com ajustes
+  Comentário: O auditor deve na etapa 6 fazer apontamentos e devolver o projeto para ser reaberto (se nescessario) para arrumar pendencias caso tenha discrepancias e erros. Ou caso esteja tudo certo marcar aquele projeto como verificado quando o projeto esta certo.
+
+4. Quem pode convidar um auditor?
+→ Só a equipe GAIA/Peterson
+  Comentário: Acho que só a equipe Gaia Peterson
+
+5. O acesso do auditor dura até quando?
+→ Até a verificação ser registrada
+  Comentário: Até o fim da verificação
+
+6. O mesmo auditor pode ser convidado para projetos de clientes diferentes?
+→ (sem resposta)
+  Comentário: sim
+
+7. Enquanto a auditoria acontece, o projeto pode ser editado?
+→ Não, fica travado ("Em auditoria")
+
+== V. O que o auditor vê ==
+8. O auditor vê as simulações?
+→ Só os cálculos oficiais
+
+9. O auditor precisa ver dados pessoais do produtor?
+→ (sem resposta)
+  Comentário: Acho que não, deve ser "as cegas"
+
+10. Dos fatores de emissão, o que o auditor precisa ver?
+→ Valor e fonte bastam
+
+11. Evidências (nota fiscal, laudo de solo, fotos) ficam na plataforma?
+→ Sim, anexadas a cada dado
+  Comentário: Se possivel seria o melhor dos mundos
+
+12. O auditor precisa ver quem alterou cada dado e quando?
+→ Não
+
+== A. Apontamentos e verificação ==
+13. Como o auditor registra um problema?
+→ Apontamento com tipo e status (aberto, respondido, fechado)
+  Comentário: Assim seria o melhor dos mundos.
+
+14. O que o registro de "verificado" precisa ter?
+→ Data; Verificadora e nome do auditor; Escopo (fazendas e módulos); Período; PDF da declaração assinada
+
+15. Quais resultados o auditor pode dar?
+→ (sem resposta)
+  Comentário: Acho que só verificado.
+
+== N. Negócio (depois da primeira versão) ==
+16. Pedir verificação à Control Union dentro da plataforma: quando?
+→ (sem resposta)
+  Comentário: Quando a Peterson e o Cliente julgarem que é o momento
+
+17. A GAIA cobra pelo acesso do auditor?
+→ (sem resposta)
+  Comentário: Embutido no custo do projeto
+
+18. Lista de verificadores credenciados, que pagam para aparecer?
+→ Depois
+  Comentário: Mas podemos chegar nesse nivel
+
+== M. Módulos e algo mais ==
+M1. Quais módulos a verificação vai cobrir?
+→ Emissão; Remoção; Regenerativo; Biodiversidade
+  Comentário: Todos
+
+M2. Regenerativo e Biodiversidade são autodeclarados. O auditor…
+→ Confere as respostas com evidência
+
+19. Algo mais?
+→ Não

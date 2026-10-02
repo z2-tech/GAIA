@@ -1,0 +1,76 @@
+Questionário do PDF · Paulo Rocha
+
+== D. O documento ==
+1. Quais PDFs vocês precisam?
+→ Projeto completo
+  Comentário: Por conta de LGPD não sei se deveriamos ter o passo 6. O 7 a gente só deveria colocar a referencia das metodologias.
+
+2. Para quem o PDF vai?
+→ Cliente; Comprador
+  Comentário: Cliente entrega ao comprador. Control Union apenas verifica e atesta.
+
+3. A estrutura proposta acima faz sentido?
+→ Sim, com ajustes
+  Comentário: Sim com ajustes.
+
+4. Tamanho?
+→ Resumo de 1–2 páginas
+
+5. Todo PDF traz o selo "Autodeclarado, não verificado por terceira parte" até a verificação?
+→ (sem resposta)
+  Comentário: Você diz, ter duas versões? Uma verificada pela Control Union e uma outra quando não quiserem pagar com este selo de autodeclaração?
+
+6. A remoção aparece em seção própria, com o aviso "estimativa de modelo, não é crédito de carbono"?
+→ (sem resposta)
+  Comentário: Acho que não precisa. Quem esta na area deveria saber que não é credito de carbono.
+
+7. Na Emissão, qual alocação o PDF mostra?
+→ Só a principal
+
+8. O que o PDF pode mostrar?
+→ Mapa das fazendas; Produtividade (t/ha); Município e UF
+  Comentário: Marquei aqui, mas temos que discutir
+
+9. Idioma?
+→ Escolher na hora
+
+10. Marca?
+→ GAIA + Peterson
+
+== M. Remoção, Regenerativo e Biodiversidade ==
+M1. Remoção: qual é o número principal?
+→ Remoção total da área (tCO₂e/ano)
+  Comentário: os tres
+
+M2. Remoção: o aviso padrão pode ir como está?
+→ (sem resposta)
+  Comentário: Pode ser, mas caso eles fizerem a verificação?
+
+M3. Regenerativo: listar pontos fortes e pontos de atenção por indicador?
+→ Sim
+
+M4. Regenerativo: usar "X% da área na faixa Bom do índice GAIA v1" em vez de chamar a fazenda de "regenerativa"?
+→ Sim
+
+M5. Regenerativo e Biodiversidade: incluir recomendações do que melhorar?
+→ Depois
+
+M6. Biodiversidade entra no PDF agora?
+→ Sim
+
+== R. Regras de emissão ==
+11. PDF só com o projeto finalizado?
+→ Finalizado oficial + rascunho antes
+
+12. Se gerar de novo depois de mudar algo, o PDF antigo…
+→ (sem resposta)
+  Comentário: Não entendi.
+
+13. Quem pode gerar o PDF oficial?
+→ Gestor
+
+14. Assinatura digital (e-CNPJ ICP-Brasil)?
+→ Não precisa
+
+15. Algo mais?
+→ (sem resposta)

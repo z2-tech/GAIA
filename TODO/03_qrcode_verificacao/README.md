@@ -4,8 +4,10 @@ Feature 3 do [escopo de 29/09/2026](../../docs/references/meetings/29-09-26-estr
 o QR do PDF abre uma página pública no domínio da GAIA que prova que o resultado
 saiu da plataforma e não foi alterado.
 
-Estado: **discovery**. Nada criado no Plane. O conteúdo da página é pendência do
-Paulo e do Ruan desde 29/09; o questionário serve para fechar isso.
+Estado: **discovery**. Nada criado no Plane. Questionário respondido pelo Paulo
+(o Ruan não respondeu); análise em [07-analise-respostas.md](07-analise-respostas.md);
+definição em [08-versao-final-1.md](08-versao-final-1.md). Divergências vão para a
+reunião de 06/10.
 
 ## Arquivos
 
@@ -18,6 +20,8 @@ Paulo e do Ruan desde 29/09; o questionário serve para fechar isso.
 | [questionario.html](questionario.html) | Mesmas perguntas em página interativa (link abaixo) |
 | [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis |
 | [06-por-modulo.md](06-por-modulo.md) | Número principal e aviso curto de cada módulo na página |
+| [07-analise-respostas.md](07-analise-respostas.md) | O que mudou, consensos, divergências, pergunta 10 reformulada e pauta de 06/10 |
+| [08-versao-final-1.md](08-versao-final-1.md) | **Versão final 1:** jornada, regras (RN-n), conteúdo por módulo, estados do QR, permissões e pendências (P-n) |
 
 ## Em uma página
 
@@ -47,9 +51,10 @@ Paulo e do Ruan desde 29/09; o questionário serve para fechar isso.
 ## Hipóteses de trabalho
 
 - **H1 · Um token por documento emitido** (80 bits, 16 caracteres base32), o mesmo
-  no QR e para digitar em `/v`. Nada de `gaia/prova/<id do projeto>`.
-- **H2 · Documento de fazenda junto com o do projeto:** ao emitir o projeto, cada
-  fazenda ganha um QR próprio. O lote leva o da fazenda de onde saiu (pergunta 3).
+  no QR e para digitar em `/v`. Nada de `gaia/prova/<id do projeto>`. Revista na
+  versão final 1: um código por foto verificada do projeto (P-2).
+- **H2 · Documento de fazenda junto com o do projeto:** descartada. O Paulo quer
+  QR só de projeto (pergunta 3).
 - **H3 · Mapa padrão = município e UF.** Contorno só se o emissor liberar
   (pergunta 8).
 - **H4 · QR colado não muda; a página muda.** Substituído aponta para a versão nova;
