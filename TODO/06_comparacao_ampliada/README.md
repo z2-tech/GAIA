@@ -4,7 +4,9 @@ Feature nova, pedida em 30/09/2026. Hoje a tela de comparação aceita 1 a 4 ite
 a API já aceita 20. Objetivo: comparar até 20 (talhões, fazendas, projetos) sem
 perder leitura.
 
-Estado: **discovery**. Nada criado no Plane.
+Estado: **discovery**. Nada criado no Plane. Ajustes da
+[reunião de 02/10](../../docs/references/meetings/02-10-26-fechamento-recorte-media-ponderada/02-10-26-reuniao-transcricao-e-pontos.md)
+em [../ajustes-02-10.md](../ajustes-02-10.md).
 
 Questionário: junto com o consolidado, seção P de
 [../05_consolidado/04-questionario-produto.md](../05_consolidado/04-questionario-produto.md)

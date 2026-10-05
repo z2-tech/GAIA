@@ -5,8 +5,10 @@ dashboard **por projeto e por módulo** em PDF, com o QR code (feature 03) no fi
 
 Estado: **discovery**. Nada criado no Plane. Questionário respondido pelo Paulo em
 01/10 (o Ruan ainda não); análise em [07-analise-respostas.md](07-analise-respostas.md);
-definição em [08-versao-final-1.md](08-versao-final-1.md). Pendências vão para a
-reunião de 06/10.
+definição em [08-versao-final-1.md](08-versao-final-1.md). A [reunião de 02/10](../../docs/references/meetings/02-10-26-fechamento-recorte-media-ponderada/02-10-26-reuniao-transcricao-e-pontos.md)
+mudou a base (fechamento por recorte em vez de projeto finalizado): o que muda
+nesta feature, regra por regra, está em [../ajustes-02-10.md](../ajustes-02-10.md).
+Ordem combinada: fechamento primeiro, esta feature depois.
 
 ## Arquivos
 

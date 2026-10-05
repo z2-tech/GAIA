@@ -4,10 +4,28 @@ Feature 0 do [escopo de 29/09/2026](../../docs/references/meetings/29-09-26-estr
 É a base do export, do PDF, do QR code e do auditor: os quatro mostram o cálculo
 real, não as simulações.
 
-Estado: **discovery**. Não há task criada no Plane. Questionário respondido por
-Paulo e Ruan em 30/09; análise em [06-analise-respostas.md](06-analise-respostas.md); definição em
-[07-versao-final-1.md](07-versao-final-1.md).
-Divergências vão para a reunião de 06/10.
+Estado: **design**. Não há task criada no Plane. Questionário respondido por
+Paulo e Ruan em 30/09 ([06](06-analise-respostas.md), [07 v1](07-versao-final-1.md)).
+A [reunião de 02/10](../../docs/references/meetings/02-10-26-fechamento-recorte-media-ponderada/02-10-26-reuniao-transcricao-e-pontos.md)
+trocou o modelo: definição atual em **[08-versao-final-2.md](08-versao-final-2.md)**.
+Próximo passo: design no Penpot e apresentação a Paulo e Ruan, sem novo
+questionário.
+
+## Depois de 02/10
+
+- Não existe selo de oficial por talhão. O real é escolhido na **tela de
+  seleção** (a da comparação), na hora de fechar: projeto → fazendas → talhões
+  → cálculo.
+- O que fecha é um **recorte**: projeto × cultura × ano safra (ex.: milho
+  2025). O projeto não tem ano e continua depois do fechamento.
+- Emissão ganha mês e ano de início e de fim; esse período recorta a Remoção.
+  Regenerativo ganha ano safra.
+- Número do projeto = média ponderada por **área**, talhão → fazenda → projeto.
+- Fechar trava, com ou sem auditoria. Auditor devolve: corrige-se o mesmo
+  cálculo. Verificado não reabre.
+- Fator novo não mexe no travado; mostra alerta.
+
+As seções "Em uma página" e "Hipóteses" abaixo são o retrato de 30/09.
 
 ## Arquivos
 
@@ -20,7 +38,8 @@ Divergências vão para a reunião de 06/10.
 | [questionario.html](questionario.html) | Mesmo questionário como página interativa, publicada em https://claude.ai/artifact/WsKJzRgjMiHHUwa6bvtDpB. Respostas ficam salvas por pessoa na coleção `respostas` |
 | [05-rascunho-tasks.md](05-rascunho-tasks.md) | Tasks prováveis, com o que depende de cada resposta |
 | [06-analise-respostas.md](06-analise-respostas.md) | Consensos, divergências, requisitos novos e pauta de 06/10 |
-| [07-versao-final-1.md](07-versao-final-1.md) | **Versão final 1:** o que é a feature, jornada, regras de negócio (RN-n), estados, permissões e pendências (P-n) |
+| [07-versao-final-1.md](07-versao-final-1.md) | Versão final 1 (30/09), substituída pela 2 |
+| [08-versao-final-2.md](08-versao-final-2.md) | **Versão final 2 (02/10):** fechamento por recorte, regras (RN-n), estados, permissões, o que mudou da v1 e pendências (P-n) |
 
 ## Em uma página
 
