@@ -60,6 +60,7 @@ Padrão obrigatório para toda tela nova, detalhado em [screens.md](./screens.md
 | GAIA · Carbono emissão | 08, 09 (`Comparação ·`) |
 | GAIA · Carbono remoção | 10, 11 (`Comparação ·`) |
 | GAIA · Regenerativo | 12, 13 (`Comparação ·`) |
+| GAIA · Fechamento | 14 (validação, ainda sem código) |
 
 ### Mobile
 

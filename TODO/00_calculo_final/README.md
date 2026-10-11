@@ -8,8 +8,9 @@ Estado: **design**. Não há task criada no Plane. Questionário respondido por
 Paulo e Ruan em 30/09 ([06](06-analise-respostas.md), [07 v1](07-versao-final-1.md)).
 A [reunião de 02/10](../../docs/references/meetings/02-10-26-fechamento-recorte-media-ponderada/02-10-26-reuniao-transcricao-e-pontos.md)
 trocou o modelo: definição atual em **[08-versao-final-2.md](08-versao-final-2.md)**.
-Próximo passo: design no Penpot e apresentação a Paulo e Ruan, sem novo
-questionário.
+Design feito em 05/10 no Penpot (`GAIA · Fechamento`, caminho feliz em 4 fluxos; decisões em
+`docs/agents/design/screens.md` → lote 14). Próximo passo: apresentação a Paulo
+e Ruan, sem novo questionário.
 
 ## Depois de 02/10
 

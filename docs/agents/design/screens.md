@@ -401,6 +401,31 @@ Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
 - **Diferenças para o código:** a faixa Bom/Atenção/Crítico usa os tokens `success`/`warning`/`destructive` a 30% (no código são `*-200`). "Referência" e "Ref." usam BadgeTrend `reference`. O cabeçalho da tabela não usa caixa alta.
 - **Bug de texto:** o vazio dizia "avaliações de emissão". Chave nova proposta: `comparison.emptyDescriptionRegenerative` = "Adicione até {max} avaliações regenerativas para comparar.".
 
+### 14 Tela - Fechamento (validação, 2026-10-05)
+
+Só o caminho feliz, para o time de produto validar o fluxo: 17 frames em 8 fluxos no arquivo `GAIA · Fechamento`, sem estados de erro, carregando ou vazio nem desvios (já fechado, devolvido, reabrir), cortados a pedido do usuário. **Desenho novo, sem código:** os textos são propostos e servem para validar o [cálculo final v2](../../../TODO/00_calculo_final/08-versao-final-2.md). Os builders ficam em `.agents/skills/penpot-design/scripts/fechamento.js` (carregar depois do `helpers.js`).
+
+| Fluxo | Frames |
+|---|---|
+| 01 Cálculos do talhão | Emissão com fixados no topo (ícone pin) · menu "Fixar no topo" · avaliação travada (resultado com alerta de fator antigo) |
+| 02 Fechamentos do projeto | lista (estado + fazendas e talhões, sem números de carbono) · fechamento criado |
+| 03 Novo fechamento | Recorte · Cálculos · fixados aplicados ("Usar fixados") · Revisão |
+| 04 Fechamento | fechado · Enviar para auditoria · em verificação · verificado |
+| 05 Período de cultivo | Módulo ACV, etapa Cultura e Produto: "Ano da Colheita" vira Início e Fim do cultivo (mês e ano) |
+| 06–08 Modelos de fechamento | Uma página por alternativa, para o time de produto decidir o que é fechar: **A** cultura + ano safra (período de cada avaliação recorta a Remoção) · **B** janela de tempo (todas as culturas, mesma janela para a Remoção) · **C** escolha livre (qualquer avaliação, com aviso) |
+
+- **Decisões do grill e da revisão de 06/10:**
+  - Cálculo **fixado** (pin), sem o rótulo "Principal". Ele fica no topo da lista e entra no fechamento só pelo clique em "Usar fixados"; D1 e RN-11 continuam valendo. Escopo: Emissão por talhão × cultura × ano safra; Remoção por talhão; Regenerativo por talhão × ano.
+  - O fechamento é por recorte, aberto na aba **Fechamentos** do projeto (abas Fazendas | Fechamentos), como wizard próprio. Isso reinterpreta a RN-09.
+  - O card da lista de fechamentos mostra título, estado, data e quantas fazendas e talhões entram. Os números de carbono ficam só no detalhe e na revisão.
+  - O cálculo travado continua na lista do talhão, com cadeado.
+  - O período de cultivo da Emissão (mês e ano de início e de fim) define o ano safra (o ano do fim) e os meses da Remoção que entram no fechamento (RN-03, RN-20).
+  - O Regenerativo é por talhão (correção de 06/10): na matriz, uma avaliação por talhão; no detalhe, a fazenda mostra a média. Um talhão sem cálculo compatível fica desabilitado.
+  - **Em aberto (time de produto):** o que define o tempo do fechamento, ou seja, qual dos modelos A, B ou C (páginas 06–08). As páginas 02–04 seguem o modelo A.
+- **Peças compostas na tela, candidatas ao DS depois da validação:** card de fechamento, matriz de seleção, card de opção (radio), card de avaliação com pin e cadeado, menu com mais itens.
+- **Peça nova no Design System:** ícone `pin` (Lucide), na página de ícones.
+- **Limite conhecido:** falta o estado indeterminado no Checkbox (fazenda com parte dos talhões).
+
 ### Mobile · Auth (`GAIA Mobile · Auth`, 2026-09-29)
 
 14 frames de 375×812 em 3 páginas, com `storage.authScreen`: topo primary com StatusBar, `logo/full` (28 de altura) e idioma PT/EN em MSegment; folha branca radius.4xl com h1, subtítulo body-lg, Form (gap 20) e HomeIndicator.
