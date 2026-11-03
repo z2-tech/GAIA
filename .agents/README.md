@@ -15,7 +15,7 @@ GAIA follows the ia-lab standard: workflow skills in `.claude/skills/` write the
 
 | Harness | Mechanism | Location |
 |---------|-----------|----------|
-| OpenCode | Skills + agents + MCP | loads `.claude/skills/` and `.agents/skills/`; `.opencode/agents/*.md`, `.opencode/commands/vault-search.md` |
+| OpenCode | Skills + agents + MCP | loads `.claude/skills/` and `.agents/skills/`; `.opencode/agents/*.md` |
 | Claude Code | Skills + agents + CLAUDE.md | `.claude/skills/`, `.claude/agents/` |
 | Cursor | Project rules | `.cursor/rules/gaia-agents.mdc` |
 | GitHub Copilot | Instructions | `.github/copilot-instructions.md` |
@@ -56,4 +56,3 @@ shadcn      (gaia-web/.agents/skills/)  ← shadcn/ui components and registries
 
 | Command | Purpose |
 |---------|---------|
-| `/vault-search` | Search knowledge vault (removed after `/sync route docs/vault`) |

@@ -32,7 +32,7 @@ _These are recommendations to keep your build orderly, not requirements. Skip an
 
 ## Existing
 
-These were built before this workflow. An `in-progress` row lists what is still missing and the open task files in `docs/tasks/` that track it, so `/develop` can pick it up.
+These were built before this workflow. An `in-progress` row lists what is still missing as sub tasks, so `/develop` can pick it up; the rules live in each feature folder and in `docs/product/rules.md`.
 
 ### 1. Auth & password reset · existing
 Register, login, logout, token refresh, change password, and password reset by email.
@@ -40,7 +40,7 @@ Code in `gaia-api/authx/authn/`, `gaia-web/src/app/(auth)/`, `gaia-web/src/featu
 
 ### 2. Users & permissions · in-progress
 Users can be listed and created. Web has no edit, delete, or role assignment, and the view permission rules are still open.
-Open tasks: `api/active/be-15-permissao-visualizacao.md`
+- [ ] Fix global `admin` visibility to follow RP-4: two `admin` accounts see each other's projects and farms; today `gaia-api/authx/authz/permissions.py:9` grants global scope only to staff or superuser (Plane card from task BE-15)
 Code in `gaia-api/user/`, `gaia-api/authx/`, `gaia-web/src/features/users/`
 
 ### 3. Profile & language · existing
@@ -48,43 +48,52 @@ Profile, password change, and language switch.
 Code in `gaia-api/profiles/`, `gaia-web/src/features/profile/`
 
 ### 4. Projects & completion status · in-progress
-List, detail, and create work end to end. Web has no project edit or delete, and the project does not yet become `completed` at 100% module completion.
-Open tasks: `api/active/be-10-status-projeto-concluido.md`, `api/active/be-11-validar-conclusao-modulos.md`
+List, detail, and create work end to end, and the project becomes `completed` at 100% (RP-5, `ProjectService.auto_complete_project`). Web has no project edit or delete.
+- [ ] Unit tests for the Regenerativo and Remoção module completers in `gaia-api/farms/services.py`
 Code in `gaia-api/projects/`, `gaia-web/src/features/project/`, `gaia-web/src/features/projects/`
 
 ### 5. Farms & plots · in-progress
-Farm and plot CRUD with KML boundary upload and plot completeness. Still missing: modules filled per plot, farm delete in web, and shapefile upload.
-Open tasks: `api/active/be-06-modulos-por-talhao.md`
+Farm and plot CRUD with KML or shapefile boundary upload. Remoção, Regenerativo, and Biodiversidade link to a plot; Emissão keeps only a loose `plot_id`. Still missing:
+- [ ] Completeness weighted by plot area (RP-6)
+- [ ] Emissão linked to a plot like the other modules
+- [ ] Farm delete in web
 Code in `gaia-api/farms/`, `gaia-api/uploads/`, `gaia-web/src/features/farm/`
 
 ### 6. Emissão (LCA) · in-progress
-Step by step form, calculation, clone, and delete are live. The open work covers revalidation against the EIQ spreadsheet, units and evidence per input, the shared crop catalog with RothC, and automatic climate by município. `be-01` (edit, delete, clone routes) looks already built; confirm it and close it.
-Open tasks: `api/active/be-01`, `be-07`, `be-09`, `be-27`, `be-28`, `be-30` to `be-38`, `be-40`
+Step by step form, calculation, and cancel are live, with units and evidence per input, the shared crop catalog with Remoção, platform owned product factors, and climate by município (rules in `docs/features/emissao-lca/`). Still missing:
+- [ ] Settle the method and factor sources (`emissao-lca` P-3): `/discovery emissao-lca`
+- [ ] Edit and clone of a calculation, once there is a UX for them
+- [ ] Cancel in web
 Code in `gaia-api/lca/`, `gaia-web/src/features/carbon-emission/`
 
 ### 7. Remoção (RothC) · in-progress
-Create, period, inputs, update, clone, and cancel are live under `/api/v2/rothc/`. The open work covers crop cycles and the crop catalog, compost and fertilizers in the calculation, the modelling window and period cut, land use change, and biomass formatting. `be-02` looks already built; confirm it and close it.
-Open tasks: `api/active/be-02`, `be-08`, `be-13`, `be-14`, `be-19` to `be-26`, `be-29`; `web/active/fe-29-rothc-dropdown-culturas-tipo-unidade.md`
+Create, period, inputs, update, clone, and cancel are live under `/api/v2/rothc/`, with crop cycles, the typed crop catalog, organic carbon in the calculation, and the window and period cut (rules in `docs/features/remocao-rothc/`). Still missing:
+- [ ] Check GAIA's RothC against the official Fortran golden vectors (70 years, `docs/references/domain/rothc/`); known differences: no spin up, IOM recomputed, Penman Monteith evapotranspiration, simplified soil moisture deficit, a stray `0.02 × fym` term
+- [ ] Settle what fertilizer means for the calculation (`remocao-rothc` P-2): `/discovery remocao-rothc`
 Code in `gaia-api/rothc/`, `gaia-api/openmeteo/`, `gaia-web/src/features/carbon-removal/`
 
 ### 8. Regenerativo · in-progress
-Create, update, and dashboard work. The API has delete, clone, and set primary, but web does not call them yet, and multiple fillings per farm are still open.
-Open tasks: `api/active/be-03-regenerativo-lista.md`, `api/active/be-04-regenerativo-rotas.md`
+Create, update, and dashboard work, with several fillings per farm and one primary (rules in `docs/features/regenerativo/`). Still missing:
+- [ ] Web calls delete, clone, and set primary, and lists every filling with the primary highlighted
 Code in `gaia-api/regenerative/`, `gaia-web/src/features/regenerative/`
 
 ### 9. Biodiversidade (BAT) · in-progress
 The API is complete (questions, assessments, cancel, dashboard). The web BAT form does not save (it only shows a success toast), there is no `services/biodiversity/`, and the farm menu has no entry for it.
-Open tasks: `api/active/be-05-modulo-biodiversidade.md`
+- [ ] Web `src/services/biodiversity/` and the BAT form saving for real
+- [ ] Web lists assessments with score and class, and can cancel one
+- [ ] Farm menu entry for Biodiversidade
 Code in `gaia-api/biodiversity/`, `gaia-web/src/features/biodiversity/`
 
 ### 10. CFP (Cool Farm Tool) · in-progress
 Assessments exist in the API only, and web has no screen.
-Open tasks: `shared/shared-03-cfp-integracao.md`
+- [ ] Study the Cool Farm Tool API (auth, endpoints, format)
+- [ ] Send assessments in the background and fill `output_payload` from the answer
 Code in `gaia-api/cfp/`
 
 ### 11. Comparação · in-progress
 Comparison and benchmark across Emissão, Remoção, and Regenerativo for 1 to 4 items. The open work covers soil management with annual factor, net emissions minus removals, multi scenario comparison, and the comparison design. The comparison endpoints are also duplicated under `lca/urls.py`.
-Open tasks: `api/active/be-12-comparacao.md`, `api/active/be-63-remocao-carbono-manejo-comparacao.md`, `web/active/fe-08-comparacao.md`, `web/active/fe-41-pos-deploy-comparacao-manejo-net.md`, `shared/shared-04-design-comparacao.md`
+- [ ] Confirm the web wiring of soil practice, net, and comparison (looks built): `/check verify comparacao`
+- [ ] Screens: from each module's result charts, pick farm, plot, and calculation, several series per chart, the empty, no access, and older data with no plot states: `/design comparacao`
 Code in `gaia-api/comparison/`, `gaia-web/src/features/comparison/`
 
 ## Slice 1: Fechamento
@@ -95,7 +104,7 @@ This is the core thread every later slice reads. From the comparison selection s
 - [ ] Rules settled: `/discovery fechamento` (imports `TODO/00_calculo_final/`; the happy path screens were drawn on 05/10 in `GAIA · Fechamento`)
 - [ ] Screens done: `/design fechamento`
 - [ ] Design it (spec): `/architect fechamento`
-Folder `docs/features/fechamento/` · repos gaia-api, gaia-web (draft tasks `api/active/be-18-fechamento-backend-mvp.md`, `web/active/fe-28-fechamento-frontend-mvp.md`)
+Folder `docs/features/fechamento/` · repos gaia-api, gaia-web
 
 ## Slice 2: Export Excel
 
@@ -148,10 +157,11 @@ Folder `docs/features/comparacao-ampliada/` · repos gaia-web, gaia-api
 ## Deferred
 These are outside the current build pass. They are kept here so the plan stays honest.
 - **Mobile app**: data entry with offline sync, same design system (`GAIA Mobile · <Módulo>` files) · needs a decision
-- **Project overview screen**: `shared/shared-01-visao-geral-projeto.md`. Today the home page redirects to `/projects`.
-- **AI for comparison**: `shared/shared-02-ia-comparacao.md` · needs a decision
-- **Shapefile upload** for farm boundaries (only KML exists today)
-- **Visual polish**: empty states and skeletons, `web/active/fe-03-melhorias-visuais.md`
+- **Project overview screen**: completeness per farm and per module, with quick links to pending modules. Today the home page redirects to `/projects`.
+- **AI for comparison**: a written analysis of patterns, outliers, and advice on the comparison screen · needs a decision
+- **Visual polish**: empty states, skeletons, short transitions, tooltips on technical fields, module status badges
+- **EIQ and STIR modules**: pesticide impact (EIQ) and tillage intensity (STIR), from `EIQ_Final.xlsx` and `STIR_calculadora_metric_v4.xlsx` (see `docs/domain/terms.md`) · needs a decision
+- **External data ingestion**: no central pipeline yet; reference tables would load as idempotent seed migrations, outside APIs as cached background jobs, and a fallback only from an approved, traceable rule, never a synthetic zero · needs a decision
 
 ## Legend
 
@@ -174,4 +184,4 @@ These are outside the current build pass. They are kept here so the plan stays h
 - **Atomic build tasks live in the spec's `## Build plan`, not here**. The scope carries only the milestone rollup.
 - **Status** `planned` → `in-progress` → `done`, plus `existing` (built before the workflow) and `dropped` (descoped, kept for history).
 - **Workflow tier tag** beside a heading (`· GA`) raises that feature's rigor above the Beta default: `GA` adds a fresh model `/check review`, then `/document`.
-- **Pointer line**: the feature folder from the start, the spec added by `/architect`, then `repos <code repo>, <code repo>` for the code repos it touches. `Open tasks` paths are relative to `docs/tasks/` until `/sync route` moves them.
+- **Pointer line**: the feature folder from the start, the spec added by `/architect`, then `repos <code repo>, <code repo>` for the code repos it touches.

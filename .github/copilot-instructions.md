@@ -8,7 +8,7 @@ Workflow skills in `.claude/skills/` (`/start` proposes the next one); Django an
 
 ## Knowledge
 
-- Vault: `docs/vault/00-INDEX.md`
+- Domain, product, sources: `docs/domain/`, `docs/product/`, `docs/sources/`
 - References: `docs/references/README.md`
 - Skills: `.claude/skills/` (workflow) and `.agents/skills/` (plane-*, penpot-design, xlsx, business-product-strategist, resolving-merge-conflicts, wizard)
 

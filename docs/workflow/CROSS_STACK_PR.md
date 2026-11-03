@@ -6,7 +6,7 @@ critérios de aceite.
 
 ## Planning
 
-- [ ] Criar tasks BE/FE ligadas em `TODO/gaia.md` e specs em `docs/tasks/`.
+- [ ] Criar tasks BE/FE ligadas em `TODO/gaia.md` e a spec em `docs/features/<slug>/specs/`.
 - [ ] Confirmar branches em `docs/workflow/BRANCHING.md`.
 - [ ] Definir método, endpoint, autenticação, request, response, nulls, erros e exemplos.
 - [ ] Resolver decisões de domínio antes de implementar fórmulas ou agregações.

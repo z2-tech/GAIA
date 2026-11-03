@@ -6,7 +6,7 @@ GAIA is the first project to adopt the ia-lab standard: one folder layout, the d
 - **Decisions behind it:** ia-lab commit `15ee5a3`, file `improvements/existing-project-setup.md` (read it with `git -C ~/Dev/ia-lab show 15ee5a3:improvements/existing-project-setup.md`).
 - **Pilot checks:** `~/Dev/ia-lab/testing/existing-project.md` and `testing/repo-of-repos.md`.
 - **Branch:** `feature/ia-lab` in all three repos (GAIA, gaia-api, gaia-web). Nothing is committed yet.
-- **Last update:** 2026-10-20.
+- **Last update:** 2026-11-03.
 
 ## Progress
 
@@ -15,8 +15,8 @@ GAIA is the first project to adopt the ia-lab standard: one folder layout, the d
 | 1. Shape | One project repo (GAIA) with the code repos cloned inside and listed in `.gitignore` | Done |
 | 2. Skills | Install the standard skills, remove the old ones with a counterpart, move stack knowledge into its code repo, adapt the kept ones | Done |
 | 3. `/audit` | `AGENTS.md` per repo, a CodeGraph index per code repo, Ponytail plugin declared | Done |
-| 4. `/scope` | Enroll the features that already exist in `docs/scope.md` | Not started |
-| 5. `/sync route` | Move the vault and other docs folders into the standard layout | Not started |
+| 4. `/scope` | Enroll the features that already exist in `docs/scope.md` | Done |
+| 5. `/sync route` | Move the vault and other docs folders into the standard layout | In progress: `docs/vault/` done 2026-11-03 |
 
 ## What changed, per repo
 
@@ -98,7 +98,8 @@ Each item was asked on its own. "Counterpart" is the standard skill that does th
 - [ ] `docs/agents/issue-tracker.md` still maps triage roles to states that do not exist in Plane (`Todo`, `Cancelled`); fix or drop it during `/sync route docs/agents`.
 - [ ] `penpot-design` has two different copies (`.claude/skills/penpot-design` is a real folder; `.agents/skills/penpot-design` has the scripts). Keep one after `/penpot setup`.
 - [ ] `/scope` with no argument: enroll what exists, built features marked `done` with their code path, and record the build approach.
-- [ ] `/sync route` for each folder outside the layout: `docs/vault/` (then delete it and `vault-search`), `docs/tasks/`, `docs/plans/`, `docs/references/`, `docs/workflow/`, `docs/agents/`, `TODO/`, and the root `CONTEXT.md`.
+- [x] `/sync route docs/vault` (2026-11-03): routed to `docs/domain/`, `docs/product/`, `docs/sources/` and the new feature folders `emissao-lca`, `remocao-rothc`, `comparacao`; vault and `vault-search` deleted.
+- [ ] `/sync route` for each folder still outside the layout (`docs/tasks/` done 2026-11-03): `docs/plans/`, `docs/references/`, `docs/workflow/`, `docs/agents/`, `TODO/`, and the root `CONTEXT.md`.
 - [ ] Move `sustainability-specialist` into `docs/domain/` during the route, then delete the agent.
 - [ ] Add the `## Git` block to root `AGENTS.md` (branch prefix, `base: develop` for gaia-api and gaia-web, `main` for GAIA).
 - [ ] `.opencode/bin/validate-structure.py` flags the identical `LICENSE` files of the standard skills and `.claude/CLAUDE.md` = `.opencode/CLAUDE.md`; allow or fix those.

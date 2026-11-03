@@ -23,12 +23,5 @@
       "command": ["bash", ".opencode/bin/plane-mcp.sh"],
       "enabled": true
     }
-  },
-  "command": {
-    "vault-search": {
-      "description": "Search GAIA knowledge vault by term",
-      "model": "opencode-go/deepseek-v4-flash",
-      "template": "{file:.opencode/commands/vault-search.md}"
-    }
   }
 }

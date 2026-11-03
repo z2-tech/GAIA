@@ -25,5 +25,5 @@ Domain authority for sustainability metrics (LCA, RothC, regenerative agricultur
 3. RothC uses monthly climate data from Open-Meteo. Fallback to climatological means.
 4. Domain language: CO2e, GWP, sequestro de carbono, manejo regenerativo, análise de ciclo de vida.
 
-Vault: `docs/vault/concepts/Sustainability-Metrics.md`
+Domain: `docs/domain/rules.md`, `docs/domain/terms.md`; sources: `docs/sources/README.md`
 References: `docs/references/domain/` — BAT, EIQ, STIR spreadsheets

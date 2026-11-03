@@ -27,6 +27,6 @@ Categories map to Plane labels: `bug`, `enhancement`.
 
 ## Local cards
 
-Besides Plane, `docs/tasks/**/*.md` cards (Problema, Solução, Checklist, Refs) are
-the source of truth for scope and acceptance criteria, and `TODO/gaia.md` tracks
-status. When both exist, the `docs/tasks/` card wins over the truncated Plane copy.
+Plane is the tracker. Scope lives in `docs/scope.md` and acceptance criteria in each
+feature's `docs/features/<slug>/` (business rules, spec). The older `docs/tasks/` cards
+were routed there on 2026-11-03; git keeps them.

@@ -21,15 +21,15 @@ Docs language: English
 
 | Repository | Technology | Responsibility |
 |---|---|---|
-| `GAIA` | Orchestration only | Tasks, workflow, cross-stack handoff, agents, vault |
+| `GAIA` | Orchestration only | Tasks, workflow, cross-stack handoff, agents, domain and product docs |
 | `gaia-api` | Django DRF + PostgreSQL | Backend, sustainability metrics engine, OpenAPI contract |
 | `gaia-web` | Next.js + React + TypeScript | Frontend, generated SDK, shadcn/ui, TanStack Query |
 
 ## Authority
 
 - `.claude/skills/` (the ia-lab standard workflow skills) owns how work moves from meeting to shipped code; each code repo's stack skill owns its layer rules.
-- `docs/vault/` owns GAIA domain knowledge and system decisions.
-- `docs/tasks/` owns scope and acceptance criteria.
+- `docs/domain/` owns the area's rules (`RD-n`) and terms, `docs/product/` the rules every feature obeys (`RP-n`), `docs/sources/` the reference files; technical decisions live in each feature's `specs/`.
+- `docs/scope.md` owns scope and what is still missing; each feature's business rules and spec own its acceptance criteria.
 - OpenAPI and the generated TypeScript SDK own the executable cross-stack contract.
 - Code and tests in each child repository own implemented behavior.
 
@@ -69,7 +69,7 @@ Design in Penpot (screens, components, tokens)?
   └── docs/agents/design/ (reference: tokens, components, screens)
 
 Repository knowledge?
-  ├── docs/vault/00-INDEX.md
+  ├── docs/domain/, docs/product/, docs/sources/
   └── docs/references/README.md
 ```
 
@@ -100,8 +100,8 @@ Agents carry no `model:`; they inherit the session model. When the user asks for
 2. **Contract-first**: OpenAPI before SDK generation and Web implementation.
 3. **Language**: PT for UX/domain, EN for code.
 4. **Secrets**: local env files only; never commit credentials.
-5. **CodeGraph-first for source code**: use graph tools for symbols and call flow; use `/vault-search`, Read or Grep for Markdown.
-6. **Vault maintained**: update only when a new relationship, decision or domain rule is discovered.
+5. **CodeGraph-first for source code**: use graph tools for symbols and call flow; use Read or Grep for Markdown.
+6. **Domain and product docs maintained**: update `docs/domain/` or `docs/product/` only when a new domain or product rule is discovered (`/discovery`, or `/sync route "<fact>"`).
 7. **No commits without explicit authorization**.
 8. **Branching**: follow `docs/workflow/BRANCHING.md`; application work starts from `develop`.
 9. **No rebase on shared branches**: never rebase `develop`, `homolog`, `main` or another published branch.
@@ -125,7 +125,7 @@ Agents carry no `model:`; they inherit the session model. When the user asks for
 |---|---|
 | CodeGraph API | Per-repo index at `<GAIA_ROOT>/gaia-api` |
 | CodeGraph Web | Per-repo index at `<GAIA_ROOT>/gaia-web` |
-| Vault search | `/vault-search <term>` or text search under `docs/vault/` |
+| Knowledge search | Grep under `docs/domain/`, `docs/product/`, `docs/features/` |
 | DB read-only MCP | `.opencode/bin/postgres-mcp-readonly.sh` |
 | Structural validation | `python3 .opencode/bin/validate-structure.py` |
 

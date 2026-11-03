@@ -30,7 +30,7 @@ code GAIA.code-workspace
 ## Workflow
 
 1. Registrar trabalho acionável em [`TODO/gaia.md`](TODO/gaia.md).
-2. Criar spec em `docs/tasks/api/active/`, `docs/tasks/web/active/` ou `docs/tasks/shared/`.
+2. Registrar regras e spec em `docs/features/<slug>/` e o que falta em [`docs/scope.md`](docs/scope.md).
 3. Definir OpenAPI antes da implementação Web.
 4. Implementar no child correto, a partir de `develop`.
 5. Executar testes, schema, lint/build e o checklist cross-stack.
@@ -85,8 +85,8 @@ GAIA/
 | Routing de agents | [`AGENTS.md`](AGENTS.md) |
 | Trabalho ativo | [`TODO/gaia.md`](TODO/gaia.md) |
 | Contrato executável | OpenAPI da API + SDK em `gaia-web/src/client/` |
-| Regras de domínio | [`docs/vault/00-INDEX.md`](docs/vault/00-INDEX.md) |
-| Specs | [`docs/tasks/`](docs/tasks/) |
+| Regras de domínio | [`docs/domain/`](docs/domain/README.md) · [`docs/product/`](docs/product/README.md) |
+| Specs | `docs/features/<slug>/specs/` · escopo em [`docs/scope.md`](docs/scope.md) |
 | Branches | [`docs/workflow/BRANCHING.md`](docs/workflow/BRANCHING.md) |
 | Checklist cross-stack | [`docs/workflow/CROSS_STACK_PR.md`](docs/workflow/CROSS_STACK_PR.md) |
 
