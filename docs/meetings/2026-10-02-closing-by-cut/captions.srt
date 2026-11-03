@@ -1,0 +1,7381 @@
+1
+00:00:00,000 --> 00:00:04,000
+(Z2 Tech)
+fez toda a tradução dela e a eh mandou, virou todo
+
+2
+00:00:04,000 --> 00:00:08,000
+(Z2 Tech)
+o texto e aí eu pedi para ela gerar eh
+
+3
+00:00:08,000 --> 00:00:12,000
+(Z2 Tech)
+coisas que a gente tem que fazer. Aí ficou não
+
+4
+00:00:12,000 --> 00:00:16,000
+(Z2 Tech)
+necessariamente nessa ordem, só o primeiro que é mais importante, que é definição daqueles
+
+5
+00:00:16,000 --> 00:00:20,000
+(Z2 Tech)
+cálculos finais. Então o que que realmente a gente vai usar que realmente é só pro
+
+6
+00:00:20,000 --> 00:00:24,000
+(Z2 Tech)
+usuário testar aí o Sport Excel, QR Code e
+
+7
+00:00:24,000 --> 00:00:28,000
+(Z2 Tech)
+auditore entra depois disso e PDF também dashboard. Só que
+
+8
+00:00:28,000 --> 00:00:32,000
+(Z2 Tech)
+aí eu fui fazendo as questões que eu até mandei os questionários lá para
+
+9
+00:00:32,000 --> 00:00:36,000
+(Z2 Tech)
+vocês, só que me surgiu algumas dúvidas e eu tô achando que eu ainda não
+
+10
+00:00:36,000 --> 00:00:40,000
+(Z2 Tech)
+entendi realmente como o produto deve funcionar. Então
+
+11
+00:00:40,000 --> 00:00:44,000
+(Paulo Rocha)
+Tá, deixa eu te
+-
+
+(Z2 Tech)
+hoje é mais para isso aí. Assim vou falar
+
+12
+00:00:44,000 --> 00:00:48,000
+(Paulo Rocha)
+falar. Não, pode terminar que depois eu
+-
+
+(Z2 Tech)
+aqui. Pode falar.
+
+13
+00:00:48,000 --> 00:00:52,000
+(Paulo Rocha)
+vou vou te vou te dar aqui o que pode ser uma ideia. Sai,
+
+14
+00:00:52,000 --> 00:00:56,000
+(Paulo Rocha)
+Gia.
+-
+
+(Z2 Tech)
+É, então a ideia era eu eu falar mais ou menos o que que eu entendi aqui e vocês ir
+
+15
+00:00:56,000 --> 00:01:00,000
+(Z2 Tech)
+me corrigindo ou se vocês quiser já falar a vocês
+
+16
+00:01:00,000 --> 00:01:04,000
+(Paulo Rocha)
+O que que eu
+-
+
+(Z2 Tech)
+direto o que que vocês acham que é e que vocês acham que é não, né? E que
+
+17
+00:01:04,000 --> 00:01:08,000
+(Paulo Rocha)
+pensei? Como você fez aquela parte lá onde
+
+18
+00:01:08,000 --> 00:01:12,000
+(Paulo Rocha)
+a gente consegue filtrar as fazendas,
+
+19
+00:01:12,000 --> 00:01:16,000
+(Paulo Rocha)
+os talhões, esse tipo de coisa? Talvez a gente
+
+20
+00:01:16,000 --> 00:01:20,000
+(Paulo Rocha)
+a gente possa aproveitar aquilo dali para poder utilizar
+
+21
+00:01:20,000 --> 00:01:24,000
+(Paulo Rocha)
+como dado original, entendeu? Ou
+
+22
+00:01:24,000 --> 00:01:28,000
+(Paulo Rocha)
+seja, se eu quero fechar um
+
+23
+00:01:28,000 --> 00:01:32,000
+(Paulo Rocha)
+projeto, né, eh, para eu poder gerar aquele
+
+24
+00:01:32,000 --> 00:01:36,000
+(Paulo Rocha)
+certificado, para eu poder pedir uma eh verificação para
+-
+
+(Z2 Tech)
+é
+
+25
+00:01:36,000 --> 00:01:40,000
+(Paulo Rocha)
+eu poder ter o meu Qcode lá, por que que a gente não
+
+26
+00:01:40,000 --> 00:01:44,000
+(Paulo Rocha)
+usa aquilo dali para ser o dado que vai ser
+
+27
+00:01:44,000 --> 00:01:48,000
+(Paulo Rocha)
+lançado como oficial,
+-
+
+(Z2 Tech)
+Mas aquilo
+
+28
+00:01:48,000 --> 00:01:52,000
+(Paulo Rocha)
+entendeu? A comparação é porque se no
+-
+
+(Z2 Tech)
+que a comparação você fala
+
+29
+00:01:52,000 --> 00:01:56,000
+(Paulo Rocha)
+fim eh esse certificado ele
+
+30
+00:01:56,000 --> 00:02:00,000
+(Paulo Rocha)
+tem que sair a nível de fazenda, ou seja, ele
+
+31
+00:02:00,000 --> 00:02:04,000
+(Paulo Rocha)
+vai ser uma média, na
+-
+
+(Z2 Tech)
+fazenda de
+
+32
+00:02:04,000 --> 00:02:08,000
+(Paulo Rocha)
+verdade de, desculpa, de de projeto. Ele tem que sair a
+
+33
+00:02:08,000 --> 00:02:12,000
+(Paulo Rocha)
+nível de projeto, ou seja, ele vai ser uma média
+
+34
+00:02:12,000 --> 00:02:16,000
+(Paulo Rocha)
+ponderada das fazendas,
+-
+
+(Z2 Tech)
+projeto,
+
+35
+00:02:16,000 --> 00:02:20,000
+(Paulo Rocha)
+entendeu? para eu poder calcular a minha a minha emissão, o meu fator
+-
+
+(Z2 Tech)
+tá?
+
+36
+00:02:20,000 --> 00:02:24,000
+(Paulo Rocha)
+de de emissão, o meu fator de
+
+37
+00:02:24,000 --> 00:02:28,000
+(Paulo Rocha)
+sequestro, biodiversidade, tudo, entendeu? Então,
+
+38
+00:02:28,000 --> 00:02:32,000
+(Paulo Rocha)
+acho que talvez aquele seja seja um caminho
+
+39
+00:02:32,000 --> 00:02:36,000
+(Z2 Tech)
+Entendi. Tá, só vou voltar um pouquinho antes que é uma parte que eu
+
+40
+00:02:36,000 --> 00:02:40,000
+(Z2 Tech)
+tô confuso aí. Ah, trouxe negócio sobre safras. Aí, que que eu queria
+
+41
+00:02:40,000 --> 00:02:44,000
+(Z2 Tech)
+entender? O que que vamos fingir que a gente vai fazer um negócio real
+
+42
+00:02:44,000 --> 00:02:48,000
+(Z2 Tech)
+aqui. O a contratou, sei lá, você Paulo, você com lâmpaz
+
+43
+00:02:48,000 --> 00:02:52,000
+(Z2 Tech)
+projeto na minha na minha nas minhas fazendas. Então a gente ia
+
+44
+00:02:52,000 --> 00:02:56,000
+(Z2 Tech)
+cadastrar o projeto Henrique. Deixa eu fazer aqui o
+
+45
+00:02:56,000 --> 00:03:00,000
+(Paulo Rocha)
+Ага.
+-
+
+(Z2 Tech)
+projeto Henrique. Aí beleza.
+
+46
+00:03:00,000 --> 00:03:04,000
+(Z2 Tech)
+O eu aqui e eu vou ter carbono LCA regenerativo.
+
+47
+00:03:04,000 --> 00:03:08,000
+(Z2 Tech)
+Beleza? Então projeto Henrique tá existindo aqui. Aí vocês iriam
+
+48
+00:03:08,000 --> 00:03:12,000
+(Paulo Rocha)
+Uhum. Isso.
+-
+
+(Z2 Tech)
+cadastrar minhas fazendas. Então esses cadast fazendo
+
+49
+00:03:12,000 --> 00:03:16,000
+(Z2 Tech)
+Henrique um área total
+-
+
+(Ruan Carlos Oliveira)
+Угуm.
+
+50
+00:03:16,000 --> 00:03:20,000
+(Z2 Tech)
+não precisa que vou pôr só de
+
+51
+00:03:20,000 --> 00:03:24,000
+(Z2 Tech)
+82,
+
+52
+00:03:24,000 --> 00:03:28,000
+(Z2 Tech)
+ó. Ô c******. 408
+
+53
+00:03:28,000 --> 00:03:32,000
+(Z2 Tech)
+102. Beleza, deixa eu
+
+54
+00:03:32,000 --> 00:03:36,000
+(Z2 Tech)
+pegar pelo seu
+
+55
+00:03:36,000 --> 00:03:40,000
+(Z2 Tech)
+documentinho.
+
+56
+00:03:44,000 --> 00:03:48,000
+(Z2 Tech)
+Deve fodeu. Cadê
+
+57
+00:03:48,000 --> 00:03:52,000
+(Z2 Tech)
+me ô
+
+58
+00:03:52,000 --> 00:03:56,000
+(Z2 Tech)
+c******.
+
+59
+00:03:56,000 --> 00:04:00,000
+(Z2 Tech)
+Tá, vai ser 100 km.
+-
+
+(Ruan Carlos Oliveira)
+É, joga em qualquer canto.
+
+60
+00:04:00,000 --> 00:04:04,000
+(Paulo Rocha)
+É só pega e zera,
+
+61
+00:04:04,000 --> 00:04:08,000
+(Paulo Rocha)
+né?
+-
+
+(Z2 Tech)
+Gos bem no meio da natureza
+
+62
+00:04:08,000 --> 00:04:12,000
+(Paulo Rocha)
+É.
+-
+
+(Z2 Tech)
+aqui.
+
+63
+00:04:12,000 --> 00:04:16,000
+(Z2 Tech)
+Beleza. Bem bonitinho meu
+
+64
+00:04:16,000 --> 00:04:20,000
+(Z2 Tech)
+talhão. Talhão
+
+65
+00:04:20,000 --> 00:04:24,000
+(Z2 Tech)
+talão. Beleza. Criar
+
+66
+00:04:24,000 --> 00:04:28,000
+(Z2 Tech)
+fazenda no meio do nada. Pá.
+
+67
+00:04:28,000 --> 00:04:32,000
+(Z2 Tech)
+Beleza? Então, fiz a
+
+68
+00:04:32,000 --> 00:04:36,000
+(Z2 Tech)
+fazenda do Henrique 1. É, beleza. Tem
+
+69
+00:04:36,000 --> 00:04:40,000
+(Z2 Tech)
+a fazenda e tem os talhões. Aí dentro de um talhão, eu que que eu preciso
+
+70
+00:04:40,000 --> 00:04:44,000
+(Z2 Tech)
+entender como que funciona o carbono emissão? Quantas avaliações eu vou ter?
+
+71
+00:04:44,000 --> 00:04:48,000
+(Z2 Tech)
+Vai ser por safra. Que que é safra? Vai ser tipo no
+
+72
+00:04:48,000 --> 00:04:52,000
+(Z2 Tech)
+talhão obrigatoriamente vai ser só cevada ou eu
+
+73
+00:04:52,000 --> 00:04:56,000
+(Z2 Tech)
+vou poder usar no final cevada e várias várias coisas porque tem ano,
+
+74
+00:04:56,000 --> 00:05:00,000
+(Paulo Rocha)
+Então,
+-
+
+(Z2 Tech)
+montante colhido, tem tudo isso. Por isso que eu não tô pegando a
+
+75
+00:05:00,000 --> 00:05:04,000
+(Z2 Tech)
+visão, é um cálculo por módulo por talhão ou
+
+76
+00:05:04,000 --> 00:05:08,000
+(Z2 Tech)
+posso ter vários cálculos no mesmo módulo que vão ser útil que a gente vai
+
+77
+00:05:08,000 --> 00:05:12,000
+(Paulo Rocha)
+Dentro de um ano
+-
+
+(Z2 Tech)
+usar.
+
+78
+00:05:12,000 --> 00:05:16,000
+(Paulo Rocha)
+safra, você pode ter até três
+
+79
+00:05:16,000 --> 00:05:20,000
+(Paulo Rocha)
+culturas, entendeu? Então você pode fazer, por
+
+80
+00:05:20,000 --> 00:05:24,000
+(Paulo Rocha)
+exemplo, Aham. Vai
+-
+
+(Z2 Tech)
+Vamos fazer uma real
+
+81
+00:05:24,000 --> 00:05:28,000
+(Paulo Rocha)
+lá, bota
+-
+
+(Z2 Tech)
+aqui. Qual que você quer
+
+82
+00:05:28,000 --> 00:05:32,000
+(Z2 Tech)
+escolher?
+
+83
+00:05:32,000 --> 00:05:36,000
+(Paulo Rocha)
+milho. Bota
+
+84
+00:05:36,000 --> 00:05:40,000
+(Paulo Rocha)
+2025. 2
+-
+
+(Z2 Tech)
+Ana área de cultiva talhão montante
+
+85
+00:05:40,000 --> 00:05:44,000
+(Paulo Rocha)
+toneladas. Não sei se tá por quilo. Tá tonelada. É, tá por tonelada. 12.
+-
+
+(Z2 Tech)
+colhido.
+
+86
+00:05:44,000 --> 00:05:48,000
+(Paulo Rocha)
+Vamos. 12. 1 do
+-
+
+(Z2 Tech)
+Panelada 12 tonelados
+
+87
+00:05:48,000 --> 00:05:52,000
+(Paulo Rocha)
+É.
+-
+
+(Z2 Tech)
+resíduos.
+-
+
+(Ruan Carlos Oliveira)
+Mas aqui a unid a unidade aqui que a gente deixou com sol o a produção
+
+88
+00:05:52,000 --> 00:05:56,000
+(Paulo Rocha)
+Tem um T aqui.
+-
+
+(Z2 Tech)
+É, tem tonelada
+-
+
+(Ruan Carlos Oliveira)
+total, né? É que tá tá aí só o t é total é o
+
+89
+00:05:56,000 --> 00:06:00,000
+(Z2 Tech)
+aqui. Deixa eu dar um é o
+-
+
+(Ruan Carlos Oliveira)
+total da área toda, né? A gente não tá pela área, né? Ah, tá aqui o Ah,
+
+90
+00:06:00,000 --> 00:06:04,000
+(Z2 Tech)
+total do da área
+-
+
+(Ruan Carlos Oliveira)
+não, aqui é res.
+
+91
+00:06:04,000 --> 00:06:08,000
+(Paulo Rocha)
+Tá. Coloca aí 10
+-
+
+(Z2 Tech)
+ativada. Resivo, tonelada hectar que
+
+92
+00:06:08,000 --> 00:06:12,000
+(Paulo Rocha)
+toneladas.
+-
+
+(Z2 Tech)
+tá OK. Certo. Tipo de
+-
+
+(Ruan Carlos Oliveira)
+Tá.
+
+93
+00:06:12,000 --> 00:06:16,000
+(Paulo Rocha)
+Distribuído no
+-
+
+(Z2 Tech)
+manejo, beleza? sem
+
+94
+00:06:16,000 --> 00:06:20,000
+(Paulo Rocha)
+canto. Coloca, né?
+-
+
+(Ruan Carlos Oliveira)
+Uhum.
+
+95
+00:06:20,000 --> 00:06:24,000
+(Paulo Rocha)
+produto que produto? Não, não, sem produto. Sem produtos. Vamos
+
+96
+00:06:24,000 --> 00:06:28,000
+(Z2 Tech)
+produto. Eita!
+-
+
+(Ruan Carlos Oliveira)
+E
+
+97
+00:06:28,000 --> 00:06:32,000
+(Z2 Tech)
+Não é só porque eu adicionei.
+-
+
+(Ruan Carlos Oliveira)
+precisar
+
+98
+00:06:36,000 --> 00:06:40,000
+(Paulo Rocha)
+só. Coloca
+-
+
+(Ruan Carlos Oliveira)
+sim.
+
+99
+00:06:40,000 --> 00:06:44,000
+(Paulo Rocha)
+argila, coloca
+
+100
+00:06:44,000 --> 00:06:48,000
+(Paulo Rocha)
+úmido. Danagem.
+-
+
+(Z2 Tech)
+Beleza.
+
+101
+00:06:48,000 --> 00:06:52,000
+(Paulo Rocha)
+Bom. Aham. Coloca plantil
+-
+
+(Z2 Tech)
+Bom, prática de manejo do
+
+102
+00:06:52,000 --> 00:06:56,000
+(Paulo Rocha)
+direto. É, coloca plantil
+-
+
+(Z2 Tech)
+solo atualmente, qualquer desculpa.
+
+103
+00:06:56,000 --> 00:07:00,000
+(Paulo Rocha)
+direto mais rotação ou mais planta de
+-
+
+(Z2 Tech)
+Tá. e
+
+104
+00:07:00,000 --> 00:07:04,000
+(Paulo Rocha)
+cobertura. Pera
+-
+
+(Z2 Tech)
+mudanças do solo. Esse é do
+
+105
+00:07:04,000 --> 00:07:08,000
+(Paulo Rocha)
+aí. Não
+
+106
+00:07:12,000 --> 00:07:16,000
+(Paulo Rocha)
+vai. Qual que é a diferença de um pro outro? Deixa só ver. Prática de maneiras do
+-
+
+(Z2 Tech)
+passe. Uma é prática de
+
+107
+00:07:16,000 --> 00:07:20,000
+(Paulo Rocha)
+solo. Nossas de solar.
+-
+
+(Z2 Tech)
+banejo, é adotada atualmente e outras é mudanças
+
+108
+00:07:20,000 --> 00:07:24,000
+(Paulo Rocha)
+Coloca que não
+-
+
+(Z2 Tech)
+do solo. Os últimos 20
+
+109
+00:07:24,000 --> 00:07:28,000
+(Paulo Rocha)
+teve.
+-
+
+(Z2 Tech)
+anos não teve.
+
+110
+00:07:28,000 --> 00:07:32,000
+(Paulo Rocha)
+É, coloca
+
+111
+00:07:32,000 --> 00:07:36,000
+(Paulo Rocha)
+3 toneladas, 3.000 kg,
+-
+
+(Z2 Tech)
+Beleza. Não
+
+112
+00:07:36,000 --> 00:07:40,000
+(Paulo Rocha)
+né? É 3 toneladas. Aham.
+-
+
+(Z2 Tech)
+tá tudo lado
+
+113
+00:07:40,000 --> 00:07:44,000
+(Paulo Rocha)
+zero. Na verdade é o contrário. Coloca 3 toneladas aí, o outro
+-
+
+(Z2 Tech)
+também.
+
+114
+00:07:48,000 --> 00:07:52,000
+(Paulo Rocha)
+zero. Coloca 500 kg ou
+
+115
+00:07:52,000 --> 00:07:56,000
+(Paulo Rocha)
+0.5 ton.
+-
+
+(Z2 Tech)
+Isso quer adicionar fertilizante da
+
+116
+00:07:56,000 --> 00:08:00,000
+(Paulo Rocha)
+Eh, vamos colocar fertilizante 300 kg de
+
+117
+00:08:00,000 --> 00:08:04,000
+(Z2 Tech)
+feente
+
+118
+00:08:04,000 --> 00:08:08,000
+(Paulo Rocha)
+urea.
+-
+
+(Z2 Tech)
+aqui no caso acho que tá errado, né? Era para ser uma
+-
+
+(Ruan Carlos Oliveira)
+Era só uma mesmo.
+
+119
+00:08:08,000 --> 00:08:12,000
+(Z2 Tech)
+só, tá?
+-
+
+(Ruan Carlos Oliveira)
+E esse outro aí tá com esse 046. Eu acho que esse valor
+
+120
+00:08:12,000 --> 00:08:16,000
+(Ruan Carlos Oliveira)
+seguindo aí da porcentagem de N assim, acho que pode excluir esse 0,46 e
+
+121
+00:08:16,000 --> 00:08:20,000
+(Ruan Carlos Oliveira)
+os demais. Ele tá
+
+122
+00:08:20,000 --> 00:08:24,000
+(Z2 Tech)
+Já
+
+123
+00:08:24,000 --> 00:08:28,000
+(Ruan Carlos Oliveira)
+assim.
+
+124
+00:08:28,000 --> 00:08:32,000
+(Paulo Rocha)
+Ja. Eh,
+-
+
+(Z2 Tech)
+salvadoia. Beleza.
+
+125
+00:08:32,000 --> 00:08:36,000
+(Paulo Rocha)
+400 kg.
+-
+
+(Z2 Tech)
+Quantidade, data de
+
+126
+00:08:36,000 --> 00:08:40,000
+(Paulo Rocha)
+Coloca em
+
+127
+00:08:40,000 --> 00:08:44,000
+(Paulo Rocha)
+outubro de
+
+128
+00:08:44,000 --> 00:08:48,000
+(Z2 Tech)
+aplicação. Tem que pôr um dia.
+
+129
+00:08:48,000 --> 00:08:52,000
+(Paulo Rocha)
+2025. Ah, dia
+-
+
+(Z2 Tech)
+Não faz.
+
+130
+00:08:52,000 --> 00:08:56,000
+(Paulo Rocha)
+23.
+-
+
+(Z2 Tech)
+Faz. Deixa eu botar uma evidência qualquer
+
+131
+00:08:56,000 --> 00:09:00,000
+(Z2 Tech)
+aqui. Não, aí não, né? Meu contrato é f*** de
+
+132
+00:09:00,000 --> 00:09:04,000
+(Z2 Tech)
+trabalho. Vou com minha
+
+133
+00:09:04,000 --> 00:09:08,000
+(Paulo Rocha)
+Nossa Senhora, meu Deus do céu.
+-
+
+(Z2 Tech)
+foto
+
+134
+00:09:08,000 --> 00:09:12,000
+(Paulo Rocha)
+Defensivo. Bota aí
+
+135
+00:09:12,000 --> 00:09:16,000
+(Paulo Rocha)
+glifosato. Coloca 2
+
+136
+00:09:16,000 --> 00:09:20,000
+(Paulo Rocha)
+L eh 1 kg por
+-
+
+(Z2 Tech)
+defensiva. 2 L
+
+137
+00:09:20,000 --> 00:09:24,000
+(Paulo Rocha)
+hectáreo. Aham. Ah, eu não tenho a mínima
+-
+
+(Z2 Tech)
+para haar.
+
+138
+00:09:24,000 --> 00:09:28,000
+(Paulo Rocha)
+noção. Sei lá, bota
+
+139
+00:09:28,000 --> 00:09:32,000
+(Paulo Rocha)
+20%. É, tá bom. Pode
+-
+
+(Z2 Tech)
+10, 20%.
+-
+
+(Ruan Carlos Oliveira)
+H
+
+140
+00:09:32,000 --> 00:09:36,000
+(Z2 Tech)
+Vai ter minha foto e tudo preso do meu pai
+
+141
+00:09:36,000 --> 00:09:40,000
+(Paulo Rocha)
+tá 50 kg por
+-
+
+(Z2 Tech)
+aqui. Semente quer colocar
+
+142
+00:09:40,000 --> 00:09:44,000
+(Paulo Rocha)
+hectare de
+-
+
+(Z2 Tech)
+semente é aqui.
+
+143
+00:09:44,000 --> 00:09:48,000
+(Paulo Rocha)
+milho.
+-
+
+(Z2 Tech)
+Faz sentido ser a própria cultura ou
+
+144
+00:09:48,000 --> 00:09:52,000
+(Paulo Rocha)
+Aham.
+-
+
+(Z2 Tech)
+não. Tá em semente. Então eu posso puxar já a
+
+145
+00:09:52,000 --> 00:09:56,000
+(Z2 Tech)
+cultura que eu coloquei e não faz sentido eu ter mais de
+-
+
+(Ruan Carlos Oliveira)
+M.
+
+146
+00:09:56,000 --> 00:10:00,000
+(Z2 Tech)
+uma ou faz? Porque cultura eu só posso selecionar
+
+147
+00:10:00,000 --> 00:10:04,000
+(Paulo Rocha)
+É, então é aí que tá. Se o cálculo tá sendo feito por
+-
+
+(Z2 Tech)
+uma.
+
+148
+00:10:04,000 --> 00:10:08,000
+(Paulo Rocha)
+cultura, não,
+-
+
+(Z2 Tech)
+Tá. Então tem que
+
+149
+00:10:08,000 --> 00:10:12,000
+(Z2 Tech)
+verificar isso. Deixa eu rapidinho. Verificar
+
+150
+00:10:12,000 --> 00:10:16,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+seu
+
+151
+00:10:20,000 --> 00:10:24,000
+(Z2 Tech)
+cálculo
+
+152
+00:10:24,000 --> 00:10:28,000
+(Z2 Tech)
+por é obrigatoriamente eu tenho que pôr a semente, né? Quanto você
+
+153
+00:10:28,000 --> 00:10:32,000
+(Paulo Rocha)
+40 50 kg. É, pode deixar
+-
+
+(Z2 Tech)
+falou? 500.
+
+154
+00:10:32,000 --> 00:10:36,000
+(Z2 Tech)
+Mais uma evidênciazinha de
+
+155
+00:10:36,000 --> 00:10:40,000
+(Paulo Rocha)
+50.
+
+156
+00:10:40,000 --> 00:10:44,000
+(Z2 Tech)
+novo. Esse demora um pouquinho mais que faz os o
+
+157
+00:10:44,000 --> 00:10:48,000
+(Paulo Rocha)
+Ah, bota,
+-
+
+(Z2 Tech)
+arquiva.
+
+158
+00:10:48,000 --> 00:10:52,000
+(Paulo Rocha)
+sei lá, 50 L por hectar. Não tem a mínima ideia de quanto gasta de combustível, você
+
+159
+00:10:52,000 --> 00:10:56,000
+(Paulo Rocha)
+sabe.
+-
+
+(Z2 Tech)
+Combustível. Qual o combustível que tem 1 milhão
+
+160
+00:10:56,000 --> 00:11:00,000
+(Paulo Rocha)
+Eh, mas combustível aí diesel aí, né?
+-
+
+(Z2 Tech)
+aqui?
+-
+
+(Ruan Carlos Oliveira)
+Bota diesel, bota diesel
+
+161
+00:11:00,000 --> 00:11:04,000
+(Z2 Tech)
+Biodiesel ou só
+-
+
+(Ruan Carlos Oliveira)
+mesmo. Cadê? Tem. Bota só o
+
+162
+00:11:04,000 --> 00:11:08,000
+(Paulo Rocha)
+É, olha o
+-
+
+(Z2 Tech)
+diesel? Comercial ou
+-
+
+(Ruan Carlos Oliveira)
+diesel mesmo.
+
+163
+00:11:08,000 --> 00:11:12,000
+(Paulo Rocha)
+diesel.
+-
+
+(Z2 Tech)
+puro? Quantos que você
+-
+
+(Ruan Carlos Oliveira)
+Comercial.
+
+164
+00:11:12,000 --> 00:11:16,000
+(Paulo Rocha)
+Bora por hectare
+-
+
+(Ruan Carlos Oliveira)
+Bota 1000 L aí. Não. Ah, não. Tá falando por
+
+165
+00:11:16,000 --> 00:11:20,000
+(Z2 Tech)
+falou? Não,
+-
+
+(Ruan Carlos Oliveira)
+hectárea não é muito não. Mas um trator, vamos lá. Por hectar deve gastar uns quatro.
+
+166
+00:11:20,000 --> 00:11:24,000
+(Paulo Rocha)
+é Ah, é
+-
+
+(Z2 Tech)
+aqui acho que é total. Aqui é total, mas deixa
+
+167
+00:11:24,000 --> 00:11:28,000
+(Paulo Rocha)
+total. É, se for
+-
+
+(Z2 Tech)
+eu só anotar aqui também. Então, combustível
+-
+
+(Ruan Carlos Oliveira)
+Paulo, consumo
+
+168
+00:11:28,000 --> 00:11:32,000
+(Paulo Rocha)
+total, não, eu acho
+-
+
+(Z2 Tech)
+sem consumo
+
+169
+00:11:32,000 --> 00:11:36,000
+(Paulo Rocha)
+que isso deveria ser tudo por por hectárea,
+-
+
+(Z2 Tech)
+total para
+-
+
+(Ruan Carlos Oliveira)
+total. Por é que tá,
+
+170
+00:11:36,000 --> 00:11:40,000
+(Ruan Carlos Oliveira)
+né? É, facilita que eu acho que eles têm essa informação por isso,
+
+171
+00:11:40,000 --> 00:11:44,000
+(Z2 Tech)
+cá. Tá no
+
+172
+00:11:44,000 --> 00:11:48,000
+(Paulo Rocha)
+né?
+-
+
+(Z2 Tech)
+pronto. Verificar.
+-
+
+(Ruan Carlos Oliveira)
+né?
+
+173
+00:11:48,000 --> 00:11:52,000
+(Z2 Tech)
+Beleza? Então, 1000 por hectare é 1000 L
+
+174
+00:11:52,000 --> 00:11:56,000
+(Paulo Rocha)
+Nossa Senhora.
+-
+
+(Z2 Tech)
+por hectá é muito
+-
+
+(Ruan Carlos Oliveira)
+É, não é muito
+
+175
+00:11:56,000 --> 00:12:00,000
+(Paulo Rocha)
+Vai ser aí uns 20, 40 L no
+
+176
+00:12:00,000 --> 00:12:04,000
+(Z2 Tech)
+Energia elétrica vai
+
+177
+00:12:04,000 --> 00:12:08,000
+(Paulo Rocha)
+máximo. Ah, bota aí só para poder calcular. Agora o problema é que nós estamos
+
+178
+00:12:08,000 --> 00:12:12,000
+(Paulo Rocha)
+colocando os números até mais ou menos real assim. Eu não sei qual é a área que você colocou lá,
+-
+
+(Ruan Carlos Oliveira)
+Uhum. Dá
+
+179
+00:12:12,000 --> 00:12:16,000
+(Paulo Rocha)
+entendeu,
+-
+
+(Z2 Tech)
+ter. É assim que pouco a gente olha só. Vamos acabar. Fala
+-
+
+(Ruan Carlos Oliveira)
+cinco e pouco, se eu não me
+
+180
+00:12:16,000 --> 00:12:20,000
+(Paulo Rocha)
+né? Coloca, sei lá, 200
+-
+
+(Z2 Tech)
+um energia
+
+181
+00:12:20,000 --> 00:12:24,000
+(Paulo Rocha)
+MW. É nada, né? Mas tudo bem.
+-
+
+(Ruan Carlos Oliveira)
+engano. Mas aqui também é por é que tá, né? A gente tem que depois
+
+182
+00:12:24,000 --> 00:12:28,000
+(Ruan Carlos Oliveira)
+mudar isso ali, né? Porque aqui dá dá para entender que seja total também ou a gente vai deixar total
+
+183
+00:12:28,000 --> 00:12:32,000
+(Paulo Rocha)
+Energia
+-
+
+(Ruan Carlos Oliveira)
+energia. Acho que a energia vai total, né, Paulo? Que ele pega pela
+
+184
+00:12:32,000 --> 00:12:36,000
+(Paulo Rocha)
+total. É energia
+-
+
+(Ruan Carlos Oliveira)
+propriedade. Então a gente tem que deixar isso aí mais deixar
+
+185
+00:12:36,000 --> 00:12:40,000
+(Z2 Tech)
+consumindo. Aham. Tô notando, pode deixar eh
+
+186
+00:12:40,000 --> 00:12:44,000
+(Z2 Tech)
+salvar a alteração. Beleza. Eh,
+
+187
+00:12:44,000 --> 00:12:48,000
+(Paulo Rocha)
+total.
+-
+
+(Z2 Tech)
+tá 5.3 ha 5.8
+-
+
+(Ruan Carlos Oliveira)
+clara.
+
+188
+00:12:48,000 --> 00:12:52,000
+(Paulo Rocha)
+Tá bom. Bota 20
+-
+
+(Z2 Tech)
+ha
+
+189
+00:12:52,000 --> 00:12:56,000
+(Paulo Rocha)
+km.
+-
+
+(Z2 Tech)
+transporte. Isso aqui
+
+190
+00:12:56,000 --> 00:13:00,000
+(Paulo Rocha)
+Pronto. Não, isso aí, isso aí ele pega e e
+-
+
+(Z2 Tech)
+também é o quê? É total ou faz
+
+191
+00:13:00,000 --> 00:13:04,000
+(Paulo Rocha)
+faz um cálculo lá, entendeu?
+-
+
+(Z2 Tech)
+sentido? Entendi. Aqui não precisa pôr nenhuma descrição,
+
+192
+00:13:04,000 --> 00:13:08,000
+(Z2 Tech)
+não. Fechou. Beleza?
+
+193
+00:13:08,000 --> 00:13:12,000
+(Z2 Tech)
+Então temos aqui a minha pergunta é quando eu for finalizar esse
+
+194
+00:13:12,000 --> 00:13:16,000
+(Z2 Tech)
+projeto na fazenda do Henrique 1, no talha um, vai ser
+
+195
+00:13:16,000 --> 00:13:20,000
+(Z2 Tech)
+só esse carbono emissão ou eu posso criar o carbono emissão de
+
+196
+00:13:20,000 --> 00:13:24,000
+(Paulo Rocha)
+Não. Não é porque é o
+-
+
+(Z2 Tech)
+2026 para outra cultura que também tem que
+
+197
+00:13:24,000 --> 00:13:28,000
+(Paulo Rocha)
+seguinte, que que vai acontecer quando o cabo for
+
+198
+00:13:28,000 --> 00:13:32,000
+(Paulo Rocha)
+emitir o certificado dele, ele vai
+-
+
+(Z2 Tech)
+entrar?
+
+199
+00:13:32,000 --> 00:13:36,000
+(Paulo Rocha)
+emitir para aquela cultura em específico. O
+
+200
+00:13:36,000 --> 00:13:40,000
+(Paulo Rocha)
+que a gente vai ter que fazer eh no carbono
+
+201
+00:13:40,000 --> 00:13:44,000
+(Paulo Rocha)
+remoção, a gente vai ter que
+
+202
+00:13:44,000 --> 00:13:48,000
+(Paulo Rocha)
+utilizar alguma regra para poder
+
+203
+00:13:48,000 --> 00:13:52,000
+(Paulo Rocha)
+distribuir esse carbono entre as culturas, entendeu?
+
+204
+00:13:52,000 --> 00:13:56,000
+(Paulo Rocha)
+E assim, ó, o cara, o o
+-
+
+(Z2 Tech)
+Entendi. Entendi.
+
+205
+00:13:56,000 --> 00:14:00,000
+(Paulo Rocha)
+eh café, café, por exemplo, não vai ter esse problema porque é uma é uma cultura perene, né?
+
+206
+00:14:00,000 --> 00:14:04,000
+(Paulo Rocha)
+Então, sempre vai tá lá. Mas, por exemplo, se o cara ele vai vender
+
+207
+00:14:04,000 --> 00:14:08,000
+(Paulo Rocha)
+soja, geralmente ele faz soja, milho ou
+
+208
+00:14:08,000 --> 00:14:12,000
+(Paulo Rocha)
+soja e algodão ou soja, milho e pecuária,
+
+209
+00:14:12,000 --> 00:14:16,000
+(Paulo Rocha)
+entendeu? O que a gente vai ter que fazer é usar um critério paraa
+
+210
+00:14:16,000 --> 00:14:20,000
+(Paulo Rocha)
+gente eh alocar
+
+211
+00:14:20,000 --> 00:14:24,000
+(Paulo Rocha)
+esse carbono. Paraa emissão não tem problema, porque a
+
+212
+00:14:24,000 --> 00:14:28,000
+(Paulo Rocha)
+emissão, a LCA, ela é feita por
+
+213
+00:14:28,000 --> 00:14:32,000
+(Paulo Rocha)
+cultura, entendeu? Então eu faço o cálculo, eu
+-
+
+(Z2 Tech)
+Tá,
+
+214
+00:14:32,000 --> 00:14:36,000
+(Paulo Rocha)
+quero uma verificação pro meu milho, eu quero uma verificação
+
+215
+00:14:36,000 --> 00:14:40,000
+(Paulo Rocha)
+paraa minha soja, entendeu? Você vai pedir isso separado. Agora o
+
+216
+00:14:40,000 --> 00:14:44,000
+(Paulo Rocha)
+carbono rebolção, a gente vai ter que usar um critério de alocação.
+
+217
+00:14:44,000 --> 00:14:48,000
+(Z2 Tech)
+tá. Tá, tá, tá. Então, peguei a visão. Então, pro
+
+218
+00:14:48,000 --> 00:14:52,000
+(Z2 Tech)
+talhão um igual assim, ó. Vamos voltar a pensar que a gente tá é
+
+219
+00:14:52,000 --> 00:14:56,000
+(Z2 Tech)
+um caso real aqui. Você tá vendo a minha fazenda. Eu pedi o que para
+
+220
+00:14:56,000 --> 00:15:00,000
+(Z2 Tech)
+vocês? Eu eu falei que eu quero que vocês verifiquem o meu milho, o
+
+221
+00:15:00,000 --> 00:15:04,000
+(Paulo Rocha)
+Isso,
+-
+
+(Z2 Tech)
+carbono emissão do meu milho. É isso? De 2025. É isso que eu
+
+222
+00:15:04,000 --> 00:15:08,000
+(Paulo Rocha)
+isso, isso.
+-
+
+(Z2 Tech)
+peço. A normalmente eu vou pedir igual você falou dos três,
+
+223
+00:15:08,000 --> 00:15:12,000
+(Z2 Tech)
+milho, eh, depois pasta e depois tanã. Ou
+
+224
+00:15:12,000 --> 00:15:16,000
+(Paulo Rocha)
+Ele vai ter que pedir a missão
+
+225
+00:15:16,000 --> 00:15:20,000
+(Paulo Rocha)
+de um certificado para fazer
+-
+
+(Z2 Tech)
+não. Pera aí que seu microfone
+
+226
+00:15:20,000 --> 00:15:24,000
+(Z2 Tech)
+tá ruim. Tá caiu aí para você também.
+-
+
+(Ruan Carlos Oliveira)
+Aqui
+
+227
+00:15:24,000 --> 00:15:28,000
+(Paulo Rocha)
+um minha internet tá ruim desde ontem.
+-
+
+(Z2 Tech)
+R.
+-
+
+(Ruan Carlos Oliveira)
+ficou repetir
+
+228
+00:15:28,000 --> 00:15:32,000
+(Paulo Rocha)
+Eh, o que eu falei assim, o cara vai ter que pedir
+
+229
+00:15:32,000 --> 00:15:36,000
+(Paulo Rocha)
+uma verificação paraa cultura para aquele
+
+230
+00:15:36,000 --> 00:15:40,000
+(Paulo Rocha)
+ano,
+-
+
+(Z2 Tech)
+Entendi. Então eu quero, por favor, Paulo e Juan
+
+231
+00:15:40,000 --> 00:15:44,000
+(Z2 Tech)
+faça verificação para meu milho de 2025. Tem que ser do ano atual ou não?
+
+232
+00:15:44,000 --> 00:15:48,000
+(Paulo Rocha)
+entendeu? Não, não. O cara pode entrar contando, se ele
+-
+
+(Z2 Tech)
+Pode ser, tem que ser do ano atual, pode ser de qualquer ano,
+
+233
+00:15:48,000 --> 00:15:52,000
+(Paulo Rocha)
+se ele tiver evidência provando as coisas, ele pode fazer um cálculo
+-
+
+(Z2 Tech)
+né?
+
+234
+00:15:52,000 --> 00:15:56,000
+(Paulo Rocha)
+para 2022, por exemplo, entendeu? Não tem
+-
+
+(Z2 Tech)
+Tá, entendi. E
+
+235
+00:15:56,000 --> 00:16:00,000
+(Paulo Rocha)
+problema.
+-
+
+(Z2 Tech)
+normalmente eu peço uma ou eu peço várias assim? Eu peço já, eu quero vocês fazerem
+
+236
+00:16:00,000 --> 00:16:04,000
+(Z2 Tech)
+verificação de 23, 24, 25 para
+
+237
+00:16:04,000 --> 00:16:08,000
+(Paulo Rocha)
+Isso, isso pode acontecer, cara. Mas geralmente é do ano atual, porque
+
+238
+00:16:08,000 --> 00:16:12,000
+(Paulo Rocha)
+o que que acontece? O milho ele não fica, nossa, velho, essa
+-
+
+(Z2 Tech)
+mim.
+
+239
+00:16:12,000 --> 00:16:16,000
+(Paulo Rocha)
+babo aqui. O milho ele não fica muito tempo eh
+
+240
+00:16:16,000 --> 00:16:20,000
+(Paulo Rocha)
+armazenado, entendeu? Geralmente é assim, ó. O cara acha
+
+241
+00:16:20,000 --> 00:16:24,000
+(Paulo Rocha)
+um comprador na Europa, a safra, ele tá com silo
+
+242
+00:16:24,000 --> 00:16:28,000
+(Paulo Rocha)
+lá e em 26, início de de 26, ele tá com silo
+
+243
+00:16:28,000 --> 00:16:32,000
+(Paulo Rocha)
+cheio do final do ano passado, né, que ele colheu. Ou
+
+244
+00:16:32,000 --> 00:16:36,000
+(Paulo Rocha)
+então ele tá em julho, tá com silo cheio desde
+
+245
+00:16:36,000 --> 00:16:40,000
+(Paulo Rocha)
+desde safra, ele achou um comprador na Europa ou na Índia ou o que
+
+246
+00:16:40,000 --> 00:16:44,000
+(Paulo Rocha)
+for e os caras fala: "Meu, te compro, mas eu quero que você verifique o carbon". né? Ele
+-
+
+(Z2 Tech)
+Так.
+
+247
+00:16:44,000 --> 00:16:48,000
+(Paulo Rocha)
+vai simplesmente jogar os dados aí dentro da da
+-
+
+(Z2 Tech)
+pedir
+
+248
+00:16:48,000 --> 00:16:52,000
+(Paulo Rocha)
+plataforma e mandar bala,
+-
+
+(Z2 Tech)
+isso. Entendi. Então,
+
+249
+00:16:52,000 --> 00:16:56,000
+(Z2 Tech)
+beleza. Aí isso é pro eu pedir do milho. Aí você fez o emissão.
+
+250
+00:16:56,000 --> 00:17:00,000
+(Z2 Tech)
+Aí o carbono remoção, você falou que é diferente. Qual que é a ideia do
+
+251
+00:17:00,000 --> 00:17:04,000
+(Paulo Rocha)
+entendeu? Aí é que a gente vai ter que quebrar a cabeça, que a gente vai ter que alocar,
+-
+
+(Z2 Tech)
+carbono remoção?
+
+252
+00:17:04,000 --> 00:17:08,000
+(Paulo Rocha)
+né?
+-
+
+(Z2 Tech)
+Ela é um carbono remoção para tipo
+
+253
+00:17:08,000 --> 00:17:12,000
+(Z2 Tech)
+todos os talhões da fazenda ou é só realmente pro mesmo
+
+254
+00:17:12,000 --> 00:17:16,000
+(Paulo Rocha)
+Eh, não, o cara pode calcular por por talhão ou pode calcular
+
+255
+00:17:16,000 --> 00:17:20,000
+(Paulo Rocha)
+por fazenda. Geralmente isso é feito por fazenda, né? Mas ele ele pode
+-
+
+(Ruan Carlos Oliveira)
+fazendo
+
+256
+00:17:20,000 --> 00:17:24,000
+(Paulo Rocha)
+fazer. Aí a gente vai ter que eh na hora de fazer os filtros lá, fazer a
+
+257
+00:17:24,000 --> 00:17:28,000
+(Paulo Rocha)
+média ponderada por fazenda e depois a média ponderada
+
+258
+00:17:28,000 --> 00:17:32,000
+(Paulo Rocha)
+pro por projeto e alocar, entendeu?
+-
+
+(Z2 Tech)
+talhão?
+
+259
+00:17:32,000 --> 00:17:36,000
+(Paulo Rocha)
+Aí
+-
+
+(Z2 Tech)
+Tá. Tá. É porque hoje a gente só tem o carbono remoção portalhão. Faz
+
+260
+00:17:36,000 --> 00:17:40,000
+(Z2 Tech)
+sentido então a gente passar um carbono remoção para a
+
+261
+00:17:40,000 --> 00:17:44,000
+(Paulo Rocha)
+eu não então não é portalhão, né? O cara pode
+
+262
+00:17:44,000 --> 00:17:48,000
+(Paulo Rocha)
+calcular ou portalhão ou por fazenda,
+-
+
+(Z2 Tech)
+fazenda.
+
+263
+00:17:48,000 --> 00:17:52,000
+(Paulo Rocha)
+entendeu? O cara ele pode, ele pode simplesmente entrar e falar:
+-
+
+(Z2 Tech)
+Entendi. Então
+
+264
+00:17:52,000 --> 00:17:56,000
+(Paulo Rocha)
+"Meu, eu vou calcular para minha fazenda. Eu tenho 100 ha de
+-
+
+(Z2 Tech)
+o ou remoção
+
+265
+00:17:56,000 --> 00:18:00,000
+(Paulo Rocha)
+fazenda". É. Não, os dois. Nos dois hoje ele ele pode fazer isso, tanto
+
+266
+00:18:00,000 --> 00:18:04,000
+(Paulo Rocha)
+remoção quanto emissão, ele pode calcular ou por ou por
+
+267
+00:18:04,000 --> 00:18:08,000
+(Paulo Rocha)
+fazenda ou por talhão. Você registra sua fazenda
+-
+
+(Z2 Tech)
+Так.
+
+268
+00:18:08,000 --> 00:18:12,000
+(Paulo Rocha)
+e você pula para pra próxima etapa. Eu posso
+
+269
+00:18:12,000 --> 00:18:16,000
+(Paulo Rocha)
+colocar cinco talhões ou eu posso fazer um cálculo só para poder representar toda
+
+270
+00:18:16,000 --> 00:18:20,000
+(Paulo Rocha)
+a minha fazenda,
+-
+
+(Z2 Tech)
+É, mas ainda assim vai ser vai ser um
+-
+
+(Ruan Carlos Oliveira)
+É,
+
+271
+00:18:20,000 --> 00:18:24,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+talhãozão.
+-
+
+(Ruan Carlos Oliveira)
+mas é, mas aí eu acho que a gente só tem que
+
+272
+00:18:24,000 --> 00:18:28,000
+(Ruan Carlos Oliveira)
+reajustar os nomes aqui, Mar, porque, por exemplo, aí tu classificou como tal, mas, por exemplo, a gente
+
+273
+00:18:28,000 --> 00:18:32,000
+(Z2 Tech)
+M.
+-
+
+(Ruan Carlos Oliveira)
+mete a gente primeiro Primeiro seria a camada fazer a propriedade, desenhar a propriedade.
+
+274
+00:18:32,000 --> 00:18:36,000
+(Ruan Carlos Oliveira)
+Aí eu não sei se a gente adiciona uma uma condicional. Paulo perguntando, você quer fazer
+
+275
+00:18:36,000 --> 00:18:40,000
+(Ruan Carlos Oliveira)
+por talhão ou não? Se o cara quero. Aí ele dentro da propriedade, acho que
+
+276
+00:18:40,000 --> 00:18:44,000
+(Ruan Carlos Oliveira)
+aparece só propriedade, ele separa o que é os talhão dentro da propriedade já
+
+277
+00:18:44,000 --> 00:18:48,000
+(Z2 Tech)
+Então,
+-
+
+(Ruan Carlos Oliveira)
+desenhada. Se ele não quer fazer isso, ele segue só com
+
+278
+00:18:48,000 --> 00:18:52,000
+(Paulo Rocha)
+Mas não, eu acho que eu acho que o fluxo aqui Ele, ele
+-
+
+(Ruan Carlos Oliveira)
+propriedade,
+
+279
+00:18:52,000 --> 00:18:56,000
+(Paulo Rocha)
+tá OK. Volta aí, volta mais um
+-
+
+(Z2 Tech)
+M.
+-
+
+(Ruan Carlos Oliveira)
+né?
+
+280
+00:18:56,000 --> 00:19:00,000
+(Paulo Rocha)
+aí. Aí,
+-
+
+(Ruan Carlos Oliveira)
+Não, beleza. Tá com fazenda, mas na hora quando ele desenha,
+
+281
+00:19:00,000 --> 00:19:04,000
+(Ruan Carlos Oliveira)
+quando ele desenha, ele já classifica como talhão. Aquele desenho. Ele não,
+
+282
+00:19:04,000 --> 00:19:08,000
+(Z2 Tech)
+É, tipo, essa fazenda, ela tem um talhão. Aí, no caso,
+-
+
+(Ruan Carlos Oliveira)
+ele não classifica como
+
+283
+00:19:08,000 --> 00:19:12,000
+(Z2 Tech)
+se eu fosse quiser fazer para fazenda inteira, eu poderia considerar
+
+284
+00:19:12,000 --> 00:19:16,000
+(Paulo Rocha)
+ó. Como fazenda
+-
+
+(Z2 Tech)
+esse talhão. Tipo, eu editava ele aqui
+-
+
+(Ruan Carlos Oliveira)
+fazenda.
+
+285
+00:19:16,000 --> 00:19:20,000
+(Paulo Rocha)
+inteira.
+-
+
+(Z2 Tech)
+e pegava, tipo, tudo aqui, mas aí fica um pouco ruim a
+
+286
+00:19:20,000 --> 00:19:24,000
+(Z2 Tech)
+nomenclatura, só que tá vai trazer uma confusão. Aí eu faria tipo
+
+287
+00:19:24,000 --> 00:19:28,000
+(Z2 Tech)
+isso, ignoraria tipo qualquer tipo de tentativa de
+
+288
+00:19:28,000 --> 00:19:32,000
+(Z2 Tech)
+separar meus talhões e pronto, aí virou uma fazenda
+-
+
+(Ruan Carlos Oliveira)
+É, essa aí será
+
+289
+00:19:32,000 --> 00:19:36,000
+(Ruan Carlos Oliveira)
+a fazenda. Só que aí no caso lá é porque foi o nome que tá atribuído com talhão,
+
+290
+00:19:36,000 --> 00:19:40,000
+(Z2 Tech)
+inteira. É, então esse que é o
+-
+
+(Ruan Carlos Oliveira)
+né? Mas ali aquele aquele aquele aquele talhão ali em negrito ali,
+
+291
+00:19:40,000 --> 00:19:44,000
+(Z2 Tech)
+problema.
+-
+
+(Ruan Carlos Oliveira)
+marca, ele é automático? É ou o que tá em cima ali, ó.
+
+292
+00:19:44,000 --> 00:19:48,000
+(Ruan Carlos Oliveira)
+Aqui em cima esse nome em negrita aqui, italião, em cima dessa aqui de baixo
+
+293
+00:19:48,000 --> 00:19:52,000
+(Z2 Tech)
+Talhões. Isso aqui é, isso aqui é automático. Não, isso aqui
+-
+
+(Ruan Carlos Oliveira)
+aqui, ó. Isso aí. Ele, Isso aí foi o que tu escreveu. Ah, porque tu escreveu que
+
+294
+00:19:52,000 --> 00:19:56,000
+(Z2 Tech)
+são automáticos. É porque a gente nunca fez a fazenda
+-
+
+(Ruan Carlos Oliveira)
+era o nome.
+
+295
+00:19:56,000 --> 00:20:00,000
+(Paulo Rocha)
+Então,
+-
+
+(Z2 Tech)
+pra gente é o consolidar talhões. É basicamente isso. Mas deixar a
+-
+
+(Ruan Carlos Oliveira)
+Tá. É isso
+
+296
+00:20:00,000 --> 00:20:04,000
+(Paulo Rocha)
+mas é isso. Mas assim, o a
+
+297
+00:20:04,000 --> 00:20:08,000
+(Paulo Rocha)
+pessoa ela ela de novo, né, a gente colocou portalhão
+
+298
+00:20:08,000 --> 00:20:12,000
+(Paulo Rocha)
+porque ela pode, de repente ela tem quatro maneiros lá na lá na
+
+299
+00:20:12,000 --> 00:20:16,000
+(Paulo Rocha)
+fazenda e ela quer fazer os quatro manejos separados, mas pode acontecer
+
+300
+00:20:16,000 --> 00:20:20,000
+(Paulo Rocha)
+de o cara ter a fazenda e ela ser toda homogênea,
+
+301
+00:20:20,000 --> 00:20:24,000
+(Paulo Rocha)
+entendeu? Aí ele faz, ele cadastra a fazenda do mesmo
+-
+
+(Ruan Carlos Oliveira)
+mesmo. Aí o cara não queria fazer, né?
+
+302
+00:20:24,000 --> 00:20:28,000
+(Paulo Rocha)
+jeito. Na hora que ele for fazer por talhão, a fazenda é um talhão
+
+303
+00:20:28,000 --> 00:20:32,000
+(Paulo Rocha)
+só, entendeu?
+-
+
+(Z2 Tech)
+fase. Entendi. É, então hoje funciona do jeito que tava,
+-
+
+(Ruan Carlos Oliveira)
+fazendo.
+
+304
+00:20:32,000 --> 00:20:36,000
+(Z2 Tech)
+porque a gente tinha uma fazenda dentro fazendo um talhão e tudo vai est dentro desse
+
+305
+00:20:36,000 --> 00:20:40,000
+(Z2 Tech)
+talhão. Só que isso é uma parte a mais pro cara clicar. É basicamente
+-
+
+(Ruan Carlos Oliveira)
+Aham.
+
+306
+00:20:40,000 --> 00:20:44,000
+(Z2 Tech)
+isso. Acho que por enquanto tá de boa. Se a gente ver se isso dá
+
+307
+00:20:44,000 --> 00:20:48,000
+(Z2 Tech)
+problema, a gente faz igual o Ga falou que é interessante. Você vai
+-
+
+(Ruan Carlos Oliveira)
+Sim.
+
+308
+00:20:48,000 --> 00:20:52,000
+(Z2 Tech)
+cadastrar. Ah, a gente vê na real, se o cara cadastrar um talhão só gigante, a gente considera ele
+
+309
+00:20:52,000 --> 00:20:56,000
+(Z2 Tech)
+como fazenda. Um gigante não, se tiver um só talhão, ela é a
+
+310
+00:20:56,000 --> 00:21:00,000
+(Paulo Rocha)
+Beleza.
+-
+
+(Z2 Tech)
+fazenda. Pode ser.
+-
+
+(Ruan Carlos Oliveira)
+fazendo. Uhum.
+
+311
+00:21:00,000 --> 00:21:04,000
+(Z2 Tech)
+Aí, caso o cara queira dividir, a gente adiciona. Mas beleza,
+
+312
+00:21:04,000 --> 00:21:08,000
+(Z2 Tech)
+então, mas aí se o cara tem três
+
+313
+00:21:08,000 --> 00:21:12,000
+(Z2 Tech)
+talhões igual eu tenho aqui, aí eu posso conseguir
+
+314
+00:21:12,000 --> 00:21:16,000
+(Z2 Tech)
+adicionar o o se eu tenho três talhões, o
+
+315
+00:21:16,000 --> 00:21:20,000
+(Z2 Tech)
+carbono o emissão, eu tenho que fazer um por talhão, porque eu tenho três talhões. Então
+
+316
+00:21:20,000 --> 00:21:24,000
+(Paulo Rocha)
+Aha.
+-
+
+(Z2 Tech)
+eu vou ter que adicionar um por cada
+
+317
+00:21:24,000 --> 00:21:28,000
+(Z2 Tech)
+talhão. E o cara? E o remoção. O remoção também. O
+-
+
+(Ruan Carlos Oliveira)
+Sim.
+
+318
+00:21:28,000 --> 00:21:32,000
+(Paulo Rocha)
+Uhum. Mes coisa. Mesma coisa. Ele pode fazer
+-
+
+(Z2 Tech)
+remoção eu posso fazer um poros três
+
+319
+00:21:32,000 --> 00:21:36,000
+(Paulo Rocha)
+um por talhão ou pode fazer considerar a fazenda inteira como como um
+
+320
+00:21:36,000 --> 00:21:40,000
+(Paulo Rocha)
+talhão só. Eu acho que é do jeito que tá hoje,
+-
+
+(Z2 Tech)
+talhões. Entendi. É que assim, minha ideia
+
+321
+00:21:40,000 --> 00:21:44,000
+(Z2 Tech)
+é assim, ó. O cara tem. Deixa, deixa eu editar novamente aqui.
+
+322
+00:21:44,000 --> 00:21:48,000
+(Paulo Rocha)
+entendeu? Eu acho que assim, eh, da
+-
+
+(Ruan Carlos Oliveira)
+Ага.
+
+323
+00:21:48,000 --> 00:21:52,000
+(Paulo Rocha)
+forma que tá estruturado, tá ótimo. O que a gente vai ter que trabalhar
+
+324
+00:21:52,000 --> 00:21:56,000
+(Paulo Rocha)
+é só o filtro disso, né? Porque de novo, a
+
+325
+00:21:56,000 --> 00:22:00,000
+(Paulo Rocha)
+verificação ela vai ser feita a nível de fazenda,
+
+326
+00:22:00,000 --> 00:22:04,000
+(Paulo Rocha)
+fazenda, desculpa, de projeto. Então, se o cara
+
+327
+00:22:04,000 --> 00:22:08,000
+(Paulo Rocha)
+tem 10 fazendas em um projeto, o que que
+-
+
+(Z2 Tech)
+Ja.
+
+328
+00:22:08,000 --> 00:22:12,000
+(Paulo Rocha)
+vai acontecer? Eh, primeiro tem que ser feito
+
+329
+00:22:12,000 --> 00:22:16,000
+(Paulo Rocha)
+o cálculo de média ponderada, se tiver talhões dentro de
+
+330
+00:22:16,000 --> 00:22:20,000
+(Paulo Rocha)
+fazendas para eu ter o valor por fazenda e depois
+
+331
+00:22:20,000 --> 00:22:24,000
+(Paulo Rocha)
+vai ter que ser feito uma segunda média ponderada para poder calcular pro
+
+332
+00:22:24,000 --> 00:22:28,000
+(Paulo Rocha)
+projeto,
+-
+
+(Z2 Tech)
+Sim, sim,
+
+333
+00:22:28,000 --> 00:22:32,000
+(Paulo Rocha)
+entendeu? É porque às vezes às vezes eu vou ter uma fazenda de
+-
+
+(Z2 Tech)
+sim. que som tudo
+
+334
+00:22:32,000 --> 00:22:36,000
+(Paulo Rocha)
+100 haar que ela vai ter uma pegada de 100
+
+335
+00:22:36,000 --> 00:22:40,000
+(Paulo Rocha)
+eh kg ou 0.1 um tom por tom de
+
+336
+00:22:40,000 --> 00:22:44,000
+(Paulo Rocha)
+milho. E às vezes eu vou ter uma fazenda de
+
+337
+00:22:44,000 --> 00:22:48,000
+(Paulo Rocha)
+1000 haar que eu vou ter 200
+
+338
+00:22:48,000 --> 00:22:52,000
+(Paulo Rocha)
+kg ou 0.2 ton por tonelada de milho. Então preciso fazer a média
+
+339
+00:22:52,000 --> 00:22:56,000
+(Paulo Rocha)
+ponderada para poder ajustar esse valor e para eu ter o meu fator de
+
+340
+00:22:56,000 --> 00:23:00,000
+(Paulo Rocha)
+emissão final, entendeu? Isso e é
+-
+
+(Z2 Tech)
+e Aham,
+
+341
+00:23:00,000 --> 00:23:04,000
+(Paulo Rocha)
+é isso daí que eu vou gerar aquele certificado. É com base
+
+342
+00:23:04,000 --> 00:23:08,000
+(Paulo Rocha)
+nisso, entendeu?
+-
+
+(Z2 Tech)
+entendi. Entendi. É do total. Uma coisa. A média ponderada é com base o
+
+343
+00:23:08,000 --> 00:23:12,000
+(Z2 Tech)
+quê? Da o tamanho da fazenda.
+
+344
+00:23:12,000 --> 00:23:16,000
+(Paulo Rocha)
+Isso. Eu tenho uma lista de fazendas, sei lá, tem uma lista de
+-
+
+(Z2 Tech)
+Entendi. Beleza. O peso é o tamanho
+
+345
+00:23:16,000 --> 00:23:20,000
+(Paulo Rocha)
+fazenda. Aí em função desse tamanho, eu faço
+
+346
+00:23:20,000 --> 00:23:24,000
+(Paulo Rocha)
+a média ponderada dos meus fatores de emissão para eu ter um para eu ter um valor
+
+347
+00:23:24,000 --> 00:23:28,000
+(Paulo Rocha)
+final, entendeu? Se você quiser, eu posso até montar um um arquivinho de
+-
+
+(Z2 Tech)
+dela.
+
+348
+00:23:28,000 --> 00:23:32,000
+(Paulo Rocha)
+Excel e te mandar para você poder entender melhor o que que eu tô
+-
+
+(Z2 Tech)
+Entendi. Por favor, por
+
+349
+00:23:32,000 --> 00:23:36,000
+(Z2 Tech)
+favor, por favor. Na verdade a I que vai entender bastante, tá? Só mais uma dúvida,
+
+350
+00:23:36,000 --> 00:23:40,000
+(Z2 Tech)
+então, mudando um pouco de assunto. Os caras te contratou para ver a
+
+351
+00:23:40,000 --> 00:23:44,000
+(Paulo Rocha)
+falando.
+-
+
+(Z2 Tech)
+fazenda deles no 2025.
+
+352
+00:23:44,000 --> 00:23:48,000
+(Z2 Tech)
+Eh, no caso, faz sentido na criação
+
+353
+00:23:48,000 --> 00:23:52,000
+(Paulo Rocha)
+Aha.
+-
+
+(Z2 Tech)
+do projeto eu pôr o ano, então, porque eu não preciso pôr ano e mais nada, que tudo vai
+
+354
+00:23:52,000 --> 00:23:56,000
+(Z2 Tech)
+ser relacionado a 2025. Isso faz sentido?
+
+355
+00:23:56,000 --> 00:24:00,000
+(Z2 Tech)
+Porque não faz sentido você vir aqui em nova avaliação, colocar
+
+356
+00:24:00,000 --> 00:24:04,000
+(Z2 Tech)
+Feijão 2024,
+
+357
+00:24:04,000 --> 00:24:08,000
+(Z2 Tech)
+porque o projeto é sobre o 2025
+
+358
+00:24:08,000 --> 00:24:12,000
+(Z2 Tech)
+daquele daquelas fazendas ou
+
+359
+00:24:12,000 --> 00:24:16,000
+(Z2 Tech)
+não? Vixe, pera aí. Nossa, o
+-
+
+(Ruan Carlos Oliveira)
+Uhum. É,
+
+360
+00:24:16,000 --> 00:24:20,000
+(Z2 Tech)
+microfone microfone bugou tudo aí. Nossa
+-
+
+(Ruan Carlos Oliveira)
+eu é. Pois
+
+361
+00:24:20,000 --> 00:24:24,000
+(Z2 Tech)
+senhora. É, acho que é o mic do
+
+362
+00:24:24,000 --> 00:24:28,000
+(Z2 Tech)
+seu PC mesmo.
+-
+
+(Ruan Carlos Oliveira)
+é. Mas o que
+
+363
+00:24:28,000 --> 00:24:32,000
+(Ruan Carlos Oliveira)
+é que acontece? Mas que às vezes a gente pode fazer isso para anos anteriores também. Às vezes o cara
+
+364
+00:24:32,000 --> 00:24:36,000
+(Paulo Rocha)
+aqui. É isso aí.
+-
+
+(Ruan Carlos Oliveira)
+quer, o cara precisa fazer essa verificação, tem todos os dados e aí a gente pode fazer
+
+365
+00:24:36,000 --> 00:24:40,000
+(Paulo Rocha)
+Eh, por isso que eu não acho que na hora de fazer registro lá
+-
+
+(Ruan Carlos Oliveira)
+retroativo de outros anos.
+
+366
+00:24:40,000 --> 00:24:44,000
+(Paulo Rocha)
+do projeto, acho que não, acho que não deveria colocar o ano. Era só
+
+367
+00:24:44,000 --> 00:24:48,000
+(Paulo Rocha)
+registro do projeto, depois registro da fazenda e dentro da
+
+368
+00:24:48,000 --> 00:24:52,000
+(Paulo Rocha)
+fazenda que você começa a colocar o ano,
+-
+
+(Z2 Tech)
+Ah, mexer.
+-
+
+(Ruan Carlos Oliveira)
+É.
+
+369
+00:24:52,000 --> 00:24:56,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+Mas aí então aí tem que entrar aquela ideia que quando vocês forar,
+
+370
+00:24:56,000 --> 00:25:00,000
+(Paulo Rocha)
+Ele pede pro
+-
+
+(Z2 Tech)
+você fez aqui do feijão
+
+371
+00:25:00,000 --> 00:25:04,000
+(Paulo Rocha)
+ano. Eu quero, eu quero fechar esse projeto aqui pro
+-
+
+(Ruan Carlos Oliveira)
+Угу.
+
+372
+00:25:04,000 --> 00:25:08,000
+(Paulo Rocha)
+ano 24, por exemplo, ou pro ano 25. E vai ser o dado
+-
+
+(Z2 Tech)
+2024 aí eu já
+
+373
+00:25:08,000 --> 00:25:12,000
+(Paulo Rocha)
+que pode
+-
+
+(Z2 Tech)
+pego. Entendi que
+
+374
+00:25:12,000 --> 00:25:16,000
+(Paulo Rocha)
+falar.
+-
+
+(Z2 Tech)
+aí já pego. Quando eu finalizar, eu vou pegar o milho 25. Vou pegar o remoção. Remoção.
+
+375
+00:25:16,000 --> 00:25:20,000
+(Paulo Rocha)
+É,
+-
+
+(Z2 Tech)
+Acho que eu não ponho data, né? Eu vou pegar o
+
+376
+00:25:20,000 --> 00:25:24,000
+(Paulo Rocha)
+não coloca. É modelagem. É.
+-
+
+(Z2 Tech)
+remoção. Ah, é, tem início da, tá? Vamos fazer
+
+377
+00:25:24,000 --> 00:25:28,000
+(Z2 Tech)
+a modelagem. Como que seria a modelagem dessa remoção para o
+
+378
+00:25:28,000 --> 00:25:32,000
+(Z2 Tech)
+milho 25? Eu tô fazendo o projeto 2025. Eu fiz o feijão
+
+379
+00:25:32,000 --> 00:25:36,000
+(Paulo Rocha)
+Uhum. É,
+-
+
+(Z2 Tech)
+2024 aqui só porque eu queria fazer, mas e eu vou fazer o
+
+380
+00:25:36,000 --> 00:25:40,000
+(Paulo Rocha)
+é porque aí, ó, aí você coloca tudo. Você coloca o projeto foi
+-
+
+(Z2 Tech)
+remoção para esse
+
+381
+00:25:40,000 --> 00:25:44,000
+(Paulo Rocha)
+24 e 25, né? Aí você coloca
+
+382
+00:25:44,000 --> 00:25:48,000
+(Paulo Rocha)
+o manejo de 24 do feijão e o manejo de 25 do
+
+383
+00:25:48,000 --> 00:25:52,000
+(Paulo Rocha)
+milho, a adubação de 24 do feijão e a adubação
+
+384
+00:25:52,000 --> 00:25:56,000
+(Paulo Rocha)
+de 25 do milho. Você coloca tudo,
+-
+
+(Z2 Tech)
+projeto. Entendi. Só que aí no
+
+385
+00:25:56,000 --> 00:26:00,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+cálculo, quando eu tô fazendo 25, eu só vou pegar o que é ano
+
+386
+00:26:00,000 --> 00:26:04,000
+(Paulo Rocha)
+Aí é eh aí é você fazer
+-
+
+(Z2 Tech)
+2025. ou
+
+387
+00:26:04,000 --> 00:26:08,000
+(Paulo Rocha)
+aquele recorte por trás para
+
+388
+00:26:08,000 --> 00:26:12,000
+(Paulo Rocha)
+que o a nossa plataforma ela consiga
+
+389
+00:26:12,000 --> 00:26:16,000
+(Paulo Rocha)
+pegar só o dado méro de de ganho dentro da cultura ali do
+
+390
+00:26:16,000 --> 00:26:20,000
+(Paulo Rocha)
+feijão, entendeu? É ou do milho ou
+-
+
+(Z2 Tech)
+não. Do do
+
+391
+00:26:20,000 --> 00:26:24,000
+(Paulo Rocha)
+do feijão, depende do que o cara quer,
+-
+
+(Z2 Tech)
+milho, tá?
+
+392
+00:26:24,000 --> 00:26:28,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+Então, só para confirmar, o cara tá aqui e ele pediu
+
+393
+00:26:28,000 --> 00:26:32,000
+(Z2 Tech)
+para vocês fazerem o 2025 deles. Aí vocês fizeram o
+
+394
+00:26:32,000 --> 00:26:36,000
+(Z2 Tech)
+carbono emissão do feijão porque vocês quiseram por algum motivo ou talvez tentar vender,
+
+395
+00:26:36,000 --> 00:26:40,000
+(Z2 Tech)
+sei lá o quê. E estão fazendo o efeito do milho 2025.
+
+396
+00:26:40,000 --> 00:26:44,000
+(Paulo Rocha)
+Угу.
+-
+
+(Z2 Tech)
+No carbono remoção, vocês vão colocar ou tanto só do
+
+397
+00:26:44,000 --> 00:26:48,000
+(Paulo Rocha)
+Ага.
+-
+
+(Z2 Tech)
+milho ou tanto do feijão e do milho. E beleza. Só que
+
+398
+00:26:48,000 --> 00:26:52,000
+(Z2 Tech)
+quando a gente finalizar esse projeto e eu selecionar que eu quero o
+
+399
+00:26:52,000 --> 00:26:56,000
+(Z2 Tech)
+recorte 2025, eu só vou no remoção
+
+400
+00:26:56,000 --> 00:27:00,000
+(Paulo Rocha)
+E
+-
+
+(Z2 Tech)
+pegar as coisas relacionadas a 2025. M.
+
+401
+00:27:00,000 --> 00:27:04,000
+(Paulo Rocha)
+Isso. Se o cara quiser só 2025, só o recorte relacionado
+
+402
+00:27:04,000 --> 00:27:08,000
+(Paulo Rocha)
+a 2025.
+-
+
+(Z2 Tech)
+pro remoção,
+
+403
+00:27:08,000 --> 00:27:12,000
+(Paulo Rocha)
+Isso aí é só o
+-
+
+(Z2 Tech)
+pro
+
+404
+00:27:12,000 --> 00:27:16,000
+(Paulo Rocha)
+cálculo de média ponderada, né, pro
+
+405
+00:27:16,000 --> 00:27:20,000
+(Z2 Tech)
+regenerativo. Então, o regenerativo a gente só não coloca não coloca
+
+406
+00:27:20,000 --> 00:27:24,000
+(Z2 Tech)
+nenhum tipo de data, então teria que ter por ano aqui. É que isso é que
+
+407
+00:27:24,000 --> 00:27:28,000
+(Paulo Rocha)
+ano. Aham.
+-
+
+(Z2 Tech)
+eu tô pensando é o seguinte, as coisas elas não estão muito ligadas
+
+408
+00:27:28,000 --> 00:27:32,000
+(Z2 Tech)
+hoje. Carbono emoção eu faço quantas eu quiser. Carbonem emissão eu faço
+
+409
+00:27:32,000 --> 00:27:36,000
+(Z2 Tech)
+quantas eu quiser. Regenerativo no caso eu só faço um. A gente não tá ligando as
+
+410
+00:27:36,000 --> 00:27:40,000
+(Z2 Tech)
+informações e eu não acho que ligar elas só no final vai dar certo. Principalmente agora
+
+411
+00:27:40,000 --> 00:27:44,000
+(Z2 Tech)
+que o regenerativo, se a gente pensar só existe um. Tipo, no final
+
+412
+00:27:44,000 --> 00:27:48,000
+(Z2 Tech)
+eu vou finalizar esse projeto. Eu vou selecionar milho 2025, eu
+
+413
+00:27:48,000 --> 00:27:52,000
+(Z2 Tech)
+seleciono emoção 2000 eh a parte só de 2025 de
+
+414
+00:27:52,000 --> 00:27:56,000
+(Z2 Tech)
+remoção e seleciono o regenerativo que é o único que tem.
+
+415
+00:27:56,000 --> 00:28:00,000
+(Paulo Rocha)
+อือฮึ
+-
+
+(Z2 Tech)
+Infelizmente, eu acho, talvez faria mais sentido a gente realmente fechar o escopo do projeto. Então, vocês
+
+416
+00:28:00,000 --> 00:28:04,000
+(Z2 Tech)
+venderam 2025, a gente coloca isso na criação do projeto e
+
+417
+00:28:04,000 --> 00:28:08,000
+(Z2 Tech)
+aí tudo é aquele escopo. Então, tudo que foi feito lá pode ter
+
+418
+00:28:08,000 --> 00:28:12,000
+(Z2 Tech)
+os de teste, mas tudo que foi feito naquele escopo lá é
+
+419
+00:28:12,000 --> 00:28:16,000
+(Z2 Tech)
+do projeto que vocês estão fazendo. É tudo real,
+
+420
+00:28:16,000 --> 00:28:20,000
+(Z2 Tech)
+sabe? Não sei se isso é a melhor forma ou se tá aberto assim e a gente selecionar. É mais
+
+421
+00:28:20,000 --> 00:28:24,000
+(Paulo Rocha)
+É porque,
+-
+
+(Z2 Tech)
+interessante para vocês e para quem for usar aí. É.
+
+422
+00:28:24,000 --> 00:28:28,000
+(Paulo Rocha)
+ó, o cálculo de de agricultura
+
+423
+00:28:28,000 --> 00:28:32,000
+(Paulo Rocha)
+regenerativa, ele olha pra fazenda inteira, independente do
+
+424
+00:28:32,000 --> 00:28:36,000
+(Paulo Rocha)
+talhão, para aquele recorte daquele ano,
+
+425
+00:28:36,000 --> 00:28:40,000
+(Paulo Rocha)
+entendeu? O cálculo do milho, do emissão, por exemplo, se não
+
+426
+00:28:40,000 --> 00:28:44,000
+(Paulo Rocha)
+for planta perene, se for uma planta anual igual milho e feijão, você vai olhar pra cultura,
+
+427
+00:28:44,000 --> 00:28:48,000
+(Paulo Rocha)
+você faz o corte pra cultura. Eh, o
+-
+
+(Z2 Tech)
+Ага.
+
+428
+00:28:48,000 --> 00:28:52,000
+(Paulo Rocha)
+cálculo de remoção de carbono, eh,
+
+429
+00:28:52,000 --> 00:28:56,000
+(Paulo Rocha)
+você olha para um período, entendeu? Porque você modela
+
+430
+00:28:56,000 --> 00:29:00,000
+(Paulo Rocha)
+ou para trás, ou retroativo, ou pra frente, que é o que
+
+431
+00:29:00,000 --> 00:29:04,000
+(Paulo Rocha)
+é geralmente feito,
+
+432
+00:29:04,000 --> 00:29:08,000
+(Paulo Rocha)
+entendeu? Então, se a gente fecha por
+
+433
+00:29:08,000 --> 00:29:12,000
+(Paulo Rocha)
+ano, eh, fica um pouco
+-
+
+(Z2 Tech)
+Mhm.
+
+434
+00:29:12,000 --> 00:29:16,000
+(Paulo Rocha)
+complicado, né? É, eu acho que
+-
+
+(Z2 Tech)
+Fazado.
+
+435
+00:29:16,000 --> 00:29:20,000
+(Paulo Rocha)
+assim, de novo, a gente mantém do jeito que tá e só na hora
+
+436
+00:29:20,000 --> 00:29:24,000
+(Paulo Rocha)
+lá de fazer o filtro é que a gente coloca período que a gente
+
+437
+00:29:24,000 --> 00:29:28,000
+(Paulo Rocha)
+quer. Então, se eu quero falar da cultura do feijão, né,
+
+438
+00:29:28,000 --> 00:29:32,000
+(Paulo Rocha)
+ele coloca o ano que ele quer e dentro do projeto ele, o
+
+439
+00:29:32,000 --> 00:29:36,000
+(Paulo Rocha)
+a própria plataforma faz esse esse recorte. Eu acho que não precisa
+
+440
+00:29:36,000 --> 00:29:40,000
+(Paulo Rocha)
+mudar nada em termos de estrutura. A única coisa é colocar o o
+
+441
+00:29:40,000 --> 00:29:44,000
+(Paulo Rocha)
+ano também pro cálculo de score de de agricultura
+
+442
+00:29:44,000 --> 00:29:48,000
+(Paulo Rocha)
+regenerativa e pronto,
+-
+
+(Z2 Tech)
+Aham. Fechou. Tá. O o regenerativo eu
+
+443
+00:29:48,000 --> 00:29:52,000
+(Z2 Tech)
+posso, vamos fazer que o cara pode criar quanto quiser para conseguir
+
+444
+00:29:52,000 --> 00:29:56,000
+(Paulo Rocha)
+entendeu? Pode ser só isso.
+-
+
+(Z2 Tech)
+seguir e ter o ano tem aqui e aí aqui
+-
+
+(Ruan Carlos Oliveira)
+Sì.
+
+445
+00:29:56,000 --> 00:30:00,000
+(Paulo Rocha)
+Aham. Ja. Não, aí é
+-
+
+(Z2 Tech)
+é ano fechado também ou é período igual remoção? У. Só eu posso
+
+446
+00:30:00,000 --> 00:30:04,000
+(Paulo Rocha)
+ano, aí é ano fechado, é ano safra,
+-
+
+(Z2 Tech)
+selecionar ano 2025, tá?
+
+447
+00:30:04,000 --> 00:30:08,000
+(Paulo Rocha)
+né? A gente coloca o cálculo de de ano safra.
+-
+
+(Z2 Tech)
+Beleza. Ano só é
+
+448
+00:30:08,000 --> 00:30:12,000
+(Paulo Rocha)
+É, faz sentido,
+-
+
+(Z2 Tech)
+não. Beleza, então
+
+449
+00:30:12,000 --> 00:30:16,000
+(Z2 Tech)
+tá. Fechou. Então
+
+450
+00:30:16,000 --> 00:30:20,000
+(Paulo Rocha)
+Ronc? Aí, aí de novo, de novo. Projeto
+-
+
+(Z2 Tech)
+tá. Eu acho que isso matou bastante das
+
+451
+00:30:20,000 --> 00:30:24,000
+(Paulo Rocha)
+a gente fecha naqueles filtros lá, entendeu?
+-
+
+(Z2 Tech)
+dúvidas.
+-
+
+(Ruan Carlos Oliveira)
+Concord.
+
+452
+00:30:24,000 --> 00:30:28,000
+(Paulo Rocha)
+Na hora aqui a gente não mexe em nada. O o que
+-
+
+(Z2 Tech)
+Aham.
+-
+
+(Ruan Carlos Oliveira)
+Uh.
+
+453
+00:30:28,000 --> 00:30:32,000
+(Paulo Rocha)
+o que vai ter que fazer é é ir naqueles filtros depois e e
+
+454
+00:30:32,000 --> 00:30:36,000
+(Paulo Rocha)
+tipo antes do cara pedir para poder fazer uma verificação,
+
+455
+00:30:36,000 --> 00:30:40,000
+(Paulo Rocha)
+o que que ele vai ter que fazer? Talvez ele vai ter que eh
+
+456
+00:30:40,000 --> 00:30:44,000
+(Paulo Rocha)
+eliminar algumas algumas modelagens que ele fez ou então
+
+457
+00:30:44,000 --> 00:30:48,000
+(Paulo Rocha)
+nesse filtro aqui ele seleciona o que é o dado real,
+
+458
+00:30:48,000 --> 00:30:52,000
+(Paulo Rocha)
+entendeu? Pode ser. Pode
+-
+
+(Z2 Tech)
+É, é, na teoria seria assim, é, seria quase essa
+
+459
+00:30:52,000 --> 00:30:56,000
+(Paulo Rocha)
+falar.
+-
+
+(Z2 Tech)
+tela, seria finalizar projeto Henrique.
+-
+
+(Ruan Carlos Oliveira)
+Угуm.
+
+460
+00:30:56,000 --> 00:31:00,000
+(Paulo Rocha)
+Isso. Exatamente
+-
+
+(Z2 Tech)
+aqui eh, selecione os cálculos de
+
+461
+00:31:00,000 --> 00:31:04,000
+(Paulo Rocha)
+isso aí. Isso
+-
+
+(Z2 Tech)
+de carbono emissão. Aí você vem aqui e seleciona o milho 2025.
+
+462
+00:31:04,000 --> 00:31:08,000
+(Paulo Rocha)
+pode ter, talvez ali vai ter, sei lá,
+-
+
+(Z2 Tech)
+Agora selecione
+-
+
+(Ruan Carlos Oliveira)
+Mhm.
+
+463
+00:31:08,000 --> 00:31:12,000
+(Paulo Rocha)
+eh, Milho 2025, eh, modelo um, que é
+
+464
+00:31:12,000 --> 00:31:16,000
+(Paulo Rocha)
+o cara testou alguma coisa, Milio 2025, modelo dois,
+-
+
+(Z2 Tech)
+os
+
+465
+00:31:16,000 --> 00:31:20,000
+(Paulo Rocha)
+ele testou outra coisa. Aí ele fala: "Meu 1000
+-
+
+(Z2 Tech)
+Aham.
+
+466
+00:31:20,000 --> 00:31:24,000
+(Paulo Rocha)
+2025 e real eh, fazenda um é
+
+467
+00:31:24,000 --> 00:31:28,000
+(Paulo Rocha)
+esse R$ 1 2005, fazenda 2", entendeu? Aí
+
+468
+00:31:28,000 --> 00:31:32,000
+(Paulo Rocha)
+ele seleciona o que que vai dar para para ele poder fechar o projeto
+
+469
+00:31:32,000 --> 00:31:36,000
+(Z2 Tech)
+Fechou. Fechou. Perfeito. Então, então estamos certo. Tava
+
+470
+00:31:36,000 --> 00:31:40,000
+(Z2 Tech)
+seguindo a lógica certa. Não, beleza. Isso matou muitas
+
+471
+00:31:40,000 --> 00:31:44,000
+(Z2 Tech)
+coisas. Agora o que ficou é só
+
+472
+00:31:44,000 --> 00:31:48,000
+(Z2 Tech)
+umas umas disparidades que deu na resposta entre vocês dois e
+
+473
+00:31:48,000 --> 00:31:52,000
+(Paulo Rocha)
+dele. Coisa boa. Sempre é
+-
+
+(Z2 Tech)
+aí só pra gente matar que que é
+
+474
+00:31:52,000 --> 00:31:56,000
+(Paulo Rocha)
+bom.
+-
+
+(Z2 Tech)
+o quem tava certo, quem tava errado ou os dois estão
+
+475
+00:31:56,000 --> 00:32:00,000
+(Paulo Rocha)
+Aham.
+-
+
+(Z2 Tech)
+brisando. Eh, aqui
+
+476
+00:32:00,000 --> 00:32:04,000
+(Z2 Tech)
+eh, como que é? O cara finalizou o projeto.
+
+477
+00:32:04,000 --> 00:32:08,000
+(Z2 Tech)
+Então Juan e Paulo, vocês falaram: "Não, acabou, fiz tudo pro Henrique, bora
+
+478
+00:32:08,000 --> 00:32:12,000
+(Z2 Tech)
+finalizar e aí isso vai virar o real dele. Tem todas as evidências, o cara não pode
+
+479
+00:32:12,000 --> 00:32:16,000
+(Z2 Tech)
+mudar mais p**** nenhuma". Eh, eu
+
+480
+00:32:16,000 --> 00:32:20,000
+(Z2 Tech)
+travo quando eu finalizar o projeto ou enviar para verificação? E
+
+481
+00:32:20,000 --> 00:32:24,000
+(Z2 Tech)
+verificação é quando o editor tá o editor, o auditor
+
+482
+00:32:24,000 --> 00:32:28,000
+(Paulo Rocha)
+O Eu
+-
+
+(Z2 Tech)
+vai começar a ver. Então é ou quando o Paulo e o Juan
+
+483
+00:32:28,000 --> 00:32:32,000
+(Z2 Tech)
+falou: "Acabou esse projeto, táal fechou". ou deixa quando enviou pro
+
+484
+00:32:32,000 --> 00:32:36,000
+(Paulo Rocha)
+a mesma coisa.
+-
+
+(Z2 Tech)
+auditor faz. É quase a mesma coisa, não muda
+
+485
+00:32:36,000 --> 00:32:40,000
+(Paulo Rocha)
+É porque tipo, suponhamos que eu sou Peterson e o
+-
+
+(Z2 Tech)
+muito.
+
+486
+00:32:40,000 --> 00:32:44,000
+(Paulo Rocha)
+Juan é LDC, né? A gente mexeu em tudo que tinha de mexer. A
+-
+
+(Z2 Tech)
+É
+
+487
+00:32:44,000 --> 00:32:48,000
+(Paulo Rocha)
+gente falou: "Cara, tá na hora da gente mandar esse projeto para
+
+488
+00:32:48,000 --> 00:32:52,000
+(Paulo Rocha)
+poder fazer o processo de
+-
+
+(Z2 Tech)
+Aham.
+
+489
+00:32:52,000 --> 00:32:56,000
+(Paulo Rocha)
+verificação. a gente trava o projeto, automaticamente travou, ele já
+
+490
+00:32:56,000 --> 00:33:00,000
+(Paulo Rocha)
+vai pro pro lá para audit Aí
+-
+
+(Z2 Tech)
+Всё.
+-
+
+(Ruan Carlos Oliveira)
+То
+
+491
+00:33:00,000 --> 00:33:04,000
+(Paulo Rocha)
+ninguém pode vencer, só o auditor. O auditor viu
+-
+
+(Ruan Carlos Oliveira)
+Uhum.
+
+492
+00:33:04,000 --> 00:33:08,000
+(Paulo Rocha)
+e viu pendência, ele considera, fala: "Ó, tem pendência aqui,
+
+493
+00:33:08,000 --> 00:33:12,000
+(Paulo Rocha)
+aqui, aqui". Ele manda pra gente de volta. O projeto destrava ou
+
+494
+00:33:12,000 --> 00:33:16,000
+(Paulo Rocha)
+esse auditor fala: "Meu, tá tudo certo, emite o
+
+495
+00:33:16,000 --> 00:33:20,000
+(Paulo Rocha)
+o certificado. Aquele projeto ali ele tá travado,
+
+496
+00:33:20,000 --> 00:33:24,000
+(Paulo Rocha)
+entendeu? Aqueles talhões, aquele negócio que foi mandado para ele, ele tá travado. Não tem como
+
+497
+00:33:24,000 --> 00:33:28,000
+(Paulo Rocha)
+voltar atrás.
+
+498
+00:33:28,000 --> 00:33:32,000
+(Z2 Tech)
+Tá, tinha um negócio eh auditor que o projeto ele finalizava sozinho
+-
+
+(Ruan Carlos Oliveira)
+Audito.
+
+499
+00:33:32,000 --> 00:33:36,000
+(Z2 Tech)
+quando você completava tudo 100%, mas se a gente vai tirar, já que pode ter vários
+
+500
+00:33:36,000 --> 00:33:40,000
+(Z2 Tech)
+cálculos, vai ter realmente botão finalizar projeto, que aí você vai fazer essa seleção de
+
+501
+00:33:40,000 --> 00:33:44,000
+(Z2 Tech)
+todos os cálculos que tiver. Ah, milho, milho tal real, milho tal real, aí
+
+502
+00:33:44,000 --> 00:33:48,000
+(Z2 Tech)
+bateu, aí travou. Beleza? Então,
+-
+
+(Ruan Carlos Oliveira)
+Agora eu tô pensando
+
+503
+00:33:48,000 --> 00:33:52,000
+(Z2 Tech)
+eh, e
+-
+
+(Ruan Carlos Oliveira)
+assim, calma aí, Marca. Só um ponto, Paulo. Agora se vier uma situação, porque é o que a gente faz, por
+
+504
+00:33:52,000 --> 00:33:56,000
+(Ruan Carlos Oliveira)
+exemplo, ali que não vai para uma auditoria, né? pegada que a gente faz para pé
+
+505
+00:33:56,000 --> 00:34:00,000
+(Ruan Carlos Oliveira)
+psico, uma estrlê da vida, não necessariamente a gente
+
+506
+00:34:00,000 --> 00:34:04,000
+(Ruan Carlos Oliveira)
+precisa, precisa finalizar e precisa travar aquilo ali pode ficar finalizado, mas sempre
+
+507
+00:34:04,000 --> 00:34:08,000
+(Ruan Carlos Oliveira)
+auditoria e eu abrir, editar, fazer depois o que
+
+508
+00:34:08,000 --> 00:34:12,000
+(Paulo Rocha)
+Aham. É isso
+-
+
+(Ruan Carlos Oliveira)
+quiser.
+
+509
+00:34:12,000 --> 00:34:16,000
+(Z2 Tech)
+falar qual que é desculpa.
+-
+
+(Ruan Carlos Oliveira)
+Então, ainda tem essa possibilidade que
+
+510
+00:34:16,000 --> 00:34:20,000
+(Paulo Rocha)
+daí.
+-
+
+(Ruan Carlos Oliveira)
+é sem precisar ir paraa auditoria. Às vezes o cara só quer fazer ali a pegada, fazer todos
+
+511
+00:34:20,000 --> 00:34:24,000
+(Ruan Carlos Oliveira)
+os cálculos e tudo e pronto, reportar esses claim sem passar por
+
+512
+00:34:24,000 --> 00:34:28,000
+(Z2 Tech)
+Hã, entendi. Aí, sabe?
+-
+
+(Ruan Carlos Oliveira)
+auditoria, que isso que a gente acaba fazendo em outros projetos,
+
+513
+00:34:28,000 --> 00:34:32,000
+(Z2 Tech)
+Entendi. É, aí a gente tem que ver.
+-
+
+(Ruan Carlos Oliveira)
+né? Então, teoricamente
+
+514
+00:34:32,000 --> 00:34:36,000
+(Z2 Tech)
+É porque é
+-
+
+(Ruan Carlos Oliveira)
+ele é que hoje hoje no que a gente faz com a Peps a gente consegue
+
+515
+00:34:36,000 --> 00:34:40,000
+(Ruan Carlos Oliveira)
+abrir, a gente faz tudo. Se eu quiser lá entrar no que já foi feito e mudar tudo, eu
+
+516
+00:34:40,000 --> 00:34:44,000
+(Paulo Rocha)
+Aí, aí acho que é só questão de de contrato, entendeu? Se o cara
+-
+
+(Z2 Tech)
+que é
+-
+
+(Ruan Carlos Oliveira)
+posso.
+
+517
+00:34:44,000 --> 00:34:48,000
+(Paulo Rocha)
+fala: "Meu, eu vou te pagar um fio anual para poder ter acesso à
+-
+
+(Ruan Carlos Oliveira)
+É.
+
+518
+00:34:48,000 --> 00:34:52,000
+(Paulo Rocha)
+plataforma, eu vou subir todos os meus dados aí,
+-
+
+(Z2 Tech)
+Так.
+
+519
+00:34:52,000 --> 00:34:56,000
+(Paulo Rocha)
+né? Eu vou fazer as minhas as minhas
+
+520
+00:34:56,000 --> 00:35:00,000
+(Paulo Rocha)
+modelagens, tipo, acho que é mais é isso,
+
+521
+00:35:00,000 --> 00:35:04,000
+(Paulo Rocha)
+né? Porque tem eh tem
+
+522
+00:35:04,000 --> 00:35:08,000
+(Paulo Rocha)
+projeto que tem começo, meio e fim, tem projeto que eh
+
+523
+00:35:08,000 --> 00:35:12,000
+(Paulo Rocha)
+é só linha de base, tem projeto que são eh
+-
+
+(Ruan Carlos Oliveira)
+Угуm.
+
+524
+00:35:12,000 --> 00:35:16,000
+(Paulo Rocha)
+múltiplos anos e cada ano eu quero verificar aquele dado,
+
+525
+00:35:16,000 --> 00:35:20,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+É o
+-
+
+(Ruan Carlos Oliveira)
+Beleza.
+
+526
+00:35:20,000 --> 00:35:24,000
+(Z2 Tech)
+que a gente pode fazer. Auditoria é uma coisa, é um
+-
+
+(Ruan Carlos Oliveira)
+Isso mesmo.
+
+527
+00:35:24,000 --> 00:35:28,000
+(Z2 Tech)
+pacote também da nossa plataforma. Aí vocês podem vender, ah, vocês vão
+
+528
+00:35:28,000 --> 00:35:32,000
+(Z2 Tech)
+querer que tem auditoria, vocês podem fazer a própria auditoria do seu do projeto de
+
+529
+00:35:32,000 --> 00:35:36,000
+(Z2 Tech)
+vocês na própria plataforma, vai lá para um auditor
+
+530
+00:35:36,000 --> 00:35:40,000
+(Z2 Tech)
+e, mano, isso agrega valor ou não. Você só quer que a gente faça o projeto e você
+
+531
+00:35:40,000 --> 00:35:44,000
+(Z2 Tech)
+tem esse dado, fica a cargo tipo da
+
+532
+00:35:44,000 --> 00:35:48,000
+(Z2 Tech)
+do vender, sabe?
+
+533
+00:35:48,000 --> 00:35:52,000
+(Z2 Tech)
+Boa. Podemos seguir. Acho que
+
+534
+00:35:52,000 --> 00:35:56,000
+(Z2 Tech)
+va. Não sei se o Paulo
+-
+
+(Ruan Carlos Oliveira)
+Bora.
+
+535
+00:35:56,000 --> 00:36:00,000
+(Paulo Rocha)
+Não, tô aqui. Ok.
+-
+
+(Z2 Tech)
+vazou. 62
+-
+
+(Ruan Carlos Oliveira)
+Vamos ver isso. Que que foi que
+
+536
+00:36:00,000 --> 00:36:04,000
+(Z2 Tech)
+Beleza. Ó, uma dúvida. Esse clan aqui, vocês sabem quem que é? É uma palavra de
+
+537
+00:36:04,000 --> 00:36:08,000
+(Z2 Tech)
+vocês na remoção. O
+
+538
+00:36:08,000 --> 00:36:12,000
+(Paulo Rocha)
+é uma reclamação, né?
+-
+
+(Z2 Tech)
+clan aqui
+-
+
+(Ruan Carlos Oliveira)
+aconteceu? O clan agora para mim.
+
+539
+00:36:12,000 --> 00:36:16,000
+(Paulo Rocha)
+Tipo, eh, por exemplo, para eu poder,
+-
+
+(Z2 Tech)
+Ah,
+
+540
+00:36:16,000 --> 00:36:20,000
+(Paulo Rocha)
+geralmente esses caras eles não são bonzin, né?
+-
+
+(Z2 Tech)
+tá.
+-
+
+(Ruan Carlos Oliveira)
+É.
+
+541
+00:36:20,000 --> 00:36:24,000
+(Paulo Rocha)
+eles fazem esse não, o as empresas eles
+-
+
+(Z2 Tech)
+os auditor você
+
+542
+00:36:24,000 --> 00:36:28,000
+(Paulo Rocha)
+fazem esse acompanhamento para eles poder colocar isso num
+
+543
+00:36:28,000 --> 00:36:32,000
+(Paulo Rocha)
+relatório de sustentabilidade, para eles poder comunicar para quem tá comprando o produto
+
+544
+00:36:32,000 --> 00:36:36,000
+(Paulo Rocha)
+deles. Então o claim nessa eh reclamação que
+
+545
+00:36:36,000 --> 00:36:40,000
+(Paulo Rocha)
+ele faz, ou seja, calculei, eu tô com dado aqui na mão, eu vou
+
+546
+00:36:40,000 --> 00:36:44,000
+(Paulo Rocha)
+pro mercado e vou eh comunicar isso, entendeu? Aí chama de
+
+547
+00:36:44,000 --> 00:36:48,000
+(Paulo Rocha)
+claim. M.
+-
+
+(Z2 Tech)
+fala. Então ver se essa pergunta faz sentido para
+
+548
+00:36:48,000 --> 00:36:52,000
+(Z2 Tech)
+vocês, que não faz muito para mim, não. Na remoção, o clen é a
+
+549
+00:36:52,000 --> 00:36:56,000
+(Z2 Tech)
+variação medida ou a projeção de 5 anos? Paulo falou variação e
+
+550
+00:36:56,000 --> 00:37:00,000
+(Z2 Tech)
+Juan falou projeção.
+-
+
+(Ruan Carlos Oliveira)
+Calma aí. Na remoção, ó, deixa
+
+551
+00:37:00,000 --> 00:37:04,000
+(Z2 Tech)
+Faz se não entender também pode ser para nós
+-
+
+(Ruan Carlos Oliveira)
+eu entender aqui. Na
+
+552
+00:37:04,000 --> 00:37:08,000
+(Z2 Tech)
+só pula e descobre
+-
+
+(Ruan Carlos Oliveira)
+remoção, eu sei, mas aqui nesse caso aqui da remoção, Paulo, a gente
+
+553
+00:37:08,000 --> 00:37:12,000
+(Z2 Tech)
+depois.
+-
+
+(Ruan Carlos Oliveira)
+tá falando só da, a gente tá falando aqui da projeção e do da modelagem de carbono, tá falando da
+
+554
+00:37:12,000 --> 00:37:16,000
+(Ruan Carlos Oliveira)
+remoção em si? Porque no meu entendimento, quando eu li, eu pensei que fosse da
+
+555
+00:37:16,000 --> 00:37:20,000
+(Ruan Carlos Oliveira)
+modelagem do carbão do Rod
+
+556
+00:37:20,000 --> 00:37:24,000
+(Paulo Rocha)
+O que que acontece? Eh, se eu
+
+557
+00:37:24,000 --> 00:37:28,000
+(Paulo Rocha)
+tô falando de, por exemplo, um projeto de
+
+558
+00:37:28,000 --> 00:37:32,000
+(Paulo Rocha)
+offsetting, um Verra, por exemplo, eh, eu já
+-
+
+(Ruan Carlos Oliveira)
+C.
+
+559
+00:37:32,000 --> 00:37:36,000
+(Paulo Rocha)
+faço claim em cima da modelagem,
+-
+
+(Ruan Carlos Oliveira)
+Sim,
+
+560
+00:37:36,000 --> 00:37:40,000
+(Paulo Rocha)
+porque, eh, eu faço a linha de base, eu entendo quanto tem de
+
+561
+00:37:40,000 --> 00:37:44,000
+(Paulo Rocha)
+carbono, em cima da linha de base, com base nas práticas que eu vou
+-
+
+(Ruan Carlos Oliveira)
+sim. Aham.
+
+562
+00:37:44,000 --> 00:37:48,000
+(Paulo Rocha)
+implementar, eu eu vou lá em modelo em cima, isso em cima
+-
+
+(Ruan Carlos Oliveira)
+Modelo 5 anos. Aí modelo 5
+
+563
+00:37:48,000 --> 00:37:52,000
+(Paulo Rocha)
+disso, eu calculo os meus VCUs, né?
+-
+
+(Ruan Carlos Oliveira)
+anos. E sim, beleza.
+
+564
+00:37:52,000 --> 00:37:56,000
+(Paulo Rocha)
+Aí, ou seja, no ano zero eu tenho a quantidade de VCU, fazendo claim
+
+565
+00:37:56,000 --> 00:38:00,000
+(Paulo Rocha)
+já para 5 anos. Quando chega no 5º ano,
+-
+
+(Ruan Carlos Oliveira)
+Se sim, faz de
+
+566
+00:38:00,000 --> 00:38:04,000
+(Paulo Rocha)
+eu vou eu faço de novo para poder ver se se eu tava certo ou não,
+-
+
+(Ruan Carlos Oliveira)
+novo para para verificar. Chegou. É isso
+
+567
+00:38:04,000 --> 00:38:08,000
+(Paulo Rocha)
+mas eu já faço o claim no ali no ano zero,
+-
+
+(Ruan Carlos Oliveira)
+mesmo.
+
+568
+00:38:08,000 --> 00:38:12,000
+(Ruan Carlos Oliveira)
+Entendi. Entendi. É, é, é a minha própria, meu próprio entendimento. Eu não sei se foi eu que coloquei
+
+569
+00:38:12,000 --> 00:38:16,000
+(Paulo Rocha)
+né?
+-
+
+(Ruan Carlos Oliveira)
+da maneira errada. Eu botei, ó, projeção e confirmado no quinto
+
+570
+00:38:16,000 --> 00:38:20,000
+(Ruan Carlos Oliveira)
+ano, que seria isso, né? Faz a faz a a linha de base, projeta no modelo e
+
+571
+00:38:20,000 --> 00:38:24,000
+(Paulo Rocha)
+Isso.
+-
+
+(Ruan Carlos Oliveira)
+no quinto ano mede de novo para confirmar que aquilo que foi projetado é o
+
+572
+00:38:24,000 --> 00:38:28,000
+(Paulo Rocha)
+Se eu falo de um projeto de inseting, essa regra não é clara. O que a gente tem
+-
+
+(Ruan Carlos Oliveira)
+real.
+
+573
+00:38:28,000 --> 00:38:32,000
+(Paulo Rocha)
+feito é você faz pro ano, mediu, você faz para aquele ano
+-
+
+(Ruan Carlos Oliveira)
+Hum,
+
+574
+00:38:32,000 --> 00:38:36,000
+(Paulo Rocha)
+ali. Então acaba que eu modelo, mas eu modelo
+-
+
+(Ruan Carlos Oliveira)
+entendi. Méde
+
+575
+00:38:36,000 --> 00:38:40,000
+(Paulo Rocha)
+para cada ano, entendeu? Então
+-
+
+(Ruan Carlos Oliveira)
+todo ano. É, entendi. Entendi.
+
+576
+00:38:40,000 --> 00:38:44,000
+(Paulo Rocha)
+depende, depende
+-
+
+(Ruan Carlos Oliveira)
+Mas, mas eh é aí é f***. Se a gente bota um set offset, aí vai
+
+577
+00:38:44,000 --> 00:38:48,000
+(Paulo Rocha)
+muito, entendeu? Aí que aí é que tá
+-
+
+(Ruan Carlos Oliveira)
+complicar demais,
+
+578
+00:38:48,000 --> 00:38:52,000
+(Paulo Rocha)
+o por exemplo, se eu vou vender o meu milho desse
+-
+
+(Ruan Carlos Oliveira)
+hein?
+
+579
+00:38:52,000 --> 00:38:56,000
+(Paulo Rocha)
+ano, eu não vou fazer o claim de uma coisa que vai
+-
+
+(Ruan Carlos Oliveira)
+M.
+
+580
+00:38:56,000 --> 00:39:00,000
+(Paulo Rocha)
+ser eh que vai ser modelada para 5 anos. Eu vou fazer. fazer o meu cálculo
+
+581
+00:39:00,000 --> 00:39:04,000
+(Paulo Rocha)
+de pegada pro ano de 25 e vou fazer o meu
+
+582
+00:39:04,000 --> 00:39:08,000
+(Paulo Rocha)
+cálculo aí de modelagem pro ano de 25,
+
+583
+00:39:08,000 --> 00:39:12,000
+(Paulo Rocha)
+entendeu? Para pro pro sequestro, para aquela safra para aquele
+
+584
+00:39:12,000 --> 00:39:16,000
+(Paulo Rocha)
+ano. Então, por isso que eu coloquei que é pro ano e
+-
+
+(Ruan Carlos Oliveira)
+Certo. Uhum. É,
+
+585
+00:39:16,000 --> 00:39:20,000
+(Paulo Rocha)
+não pro período, embora eu modelo pro meu período para entender minha
+-
+
+(Ruan Carlos Oliveira)
+é, é.
+
+586
+00:39:20,000 --> 00:39:24,000
+(Paulo Rocha)
+curva de carbono,
+-
+
+(Z2 Tech)
+Entendi. Então isso é basicamente o que você tinha falado lá
+-
+
+(Ruan Carlos Oliveira)
+Entendi, entendi.
+
+587
+00:39:24,000 --> 00:39:28,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+atrás. O, eu modelo a remoção gigante, mas no
+
+588
+00:39:28,000 --> 00:39:32,000
+(Paulo Rocha)
+Eu faço recorte pro ano.
+-
+
+(Z2 Tech)
+final eu só pego o ano do ano. É, esse
+
+589
+00:39:32,000 --> 00:39:36,000
+(Z2 Tech)
+recorte do ano é em relação ao carbono emissão
+
+590
+00:39:36,000 --> 00:39:40,000
+(Z2 Tech)
+sempre. Ele que define o recorte do
+
+591
+00:39:40,000 --> 00:39:44,000
+(Paulo Rocha)
+É.
+-
+
+(Z2 Tech)
+ano. Porque é assim, eu selecionei milho 25, o
+
+592
+00:39:44,000 --> 00:39:48,000
+(Paulo Rocha)
+Eh.
+-
+
+(Z2 Tech)
+ano milho 25 eu pus aqui 2025. Então,
+
+593
+00:39:48,000 --> 00:39:52,000
+(Paulo Rocha)
+Aham.
+-
+
+(Z2 Tech)
+necessariamente eu pego 2025 ou eu pego o período que
+
+594
+00:39:52,000 --> 00:39:56,000
+(Z2 Tech)
+realmente foi do milho, que não faz sentido. Aqui faz mais sentido ser ano safra, né?
+
+595
+00:39:56,000 --> 00:40:00,000
+(Z2 Tech)
+Aqui teria que ser início e
+
+596
+00:40:00,000 --> 00:40:04,000
+(Z2 Tech)
+fim. Deu para entender? É que assim, você faz o
+
+597
+00:40:04,000 --> 00:40:08,000
+(Z2 Tech)
+carbono emissão. Esse carbono
+
+598
+00:40:08,000 --> 00:40:12,000
+(Z2 Tech)
+emissão do milho 25 não necessariamente significa janeiro de 2025
+
+599
+00:40:12,000 --> 00:40:16,000
+(Paulo Rocha)
+Não, não.
+-
+
+(Z2 Tech)
+até dezembro de 2025, né?
+-
+
+(Ruan Carlos Oliveira)
+Não.
+
+600
+00:40:16,000 --> 00:40:20,000
+(Paulo Rocha)
+Eh, na verdade esse o milho, o milho aí ele
+-
+
+(Ruan Carlos Oliveira)
+Sim.
+
+601
+00:40:20,000 --> 00:40:24,000
+(Paulo Rocha)
+ele pode ele pode até eh representar o ano, né? Mas
+
+602
+00:40:24,000 --> 00:40:28,000
+(Paulo Rocha)
+a safra foi tipo, colhi em dezembro, plantei o milho em
+
+603
+00:40:28,000 --> 00:40:32,000
+(Paulo Rocha)
+janeiro e fui colher ele de novo em abril, entendeu? É para aquele recorte
+-
+
+(Z2 Tech)
+Entendi. É
+
+604
+00:40:32,000 --> 00:40:36,000
+(Z2 Tech)
+que então é que eu tô pensando qual que é o recor, como que a gente vai
+
+605
+00:40:36,000 --> 00:40:40,000
+(Z2 Tech)
+pegar exatamente o recorte que a gente quer do carbono
+
+606
+00:40:40,000 --> 00:40:44,000
+(Z2 Tech)
+remoção. Você fez o remoção pro feijão, milho e você pôs um de
+
+607
+00:40:44,000 --> 00:40:48,000
+(Paulo Rocha)
+ali.
+-
+
+(Z2 Tech)
+2026 também. Só que quando eu finalizar esse projeto, eu vou pegar só o
+
+608
+00:40:48,000 --> 00:40:52,000
+(Z2 Tech)
+milho. Eu preciso saber exatamente qual que é essa data que eu faço recorte, entendeu?
+
+609
+00:40:52,000 --> 00:40:56,000
+(Paulo Rocha)
+Aham.
+-
+
+(Z2 Tech)
+Aí a minha ideia, você tem duas opções. Ou no carbono emissão a
+
+610
+00:40:56,000 --> 00:41:00,000
+(Z2 Tech)
+gente define exatamente o que que é do milho. Então de vez de ser só
+
+611
+00:41:00,000 --> 00:41:04,000
+(Z2 Tech)
+2025 aqui vai ser Ô c******. De vez de ser
+
+612
+00:41:04,000 --> 00:41:08,000
+(Z2 Tech)
+só 2025 aqui vai ser
+
+613
+00:41:08,000 --> 00:41:12,000
+(Z2 Tech)
+mês, mês de início e ano de início. Então seria, sei lá,
+
+614
+00:41:12,000 --> 00:41:16,000
+(Z2 Tech)
+janeiro de 2025 e mês final de ano
+-
+
+(Ruan Carlos Oliveira)
+M.
+
+615
+00:41:16,000 --> 00:41:20,000
+(Paulo Rocha)
+Pode ser aí. Pode ser que
+-
+
+(Z2 Tech)
+final, a eh agosto de 2025. Aí esse
+
+616
+00:41:20,000 --> 00:41:24,000
+(Z2 Tech)
+valor então de janeiro a agosto eu pego também do
+
+617
+00:41:24,000 --> 00:41:28,000
+(Paulo Rocha)
+aí pode ser
+-
+
+(Z2 Tech)
+carbono remoção, que foi de 3 anos, por
+
+618
+00:41:28,000 --> 00:41:32,000
+(Paulo Rocha)
+porque quando você coloca a data de plantil e data de ou
+
+619
+00:41:32,000 --> 00:41:36,000
+(Paulo Rocha)
+de plantil e mês de de colheta, você consegue
+
+620
+00:41:36,000 --> 00:41:40,000
+(Paulo Rocha)
+fazer um um recorte mais certo, né, que é o que é feito
+
+621
+00:41:40,000 --> 00:41:44,000
+(Paulo Rocha)
+para pra remoção,
+-
+
+(Z2 Tech)
+exemplo.
+-
+
+(Ruan Carlos Oliveira)
+Uhum. É, a gente tinha colocado isso em
+
+622
+00:41:44,000 --> 00:41:48,000
+(Paulo Rocha)
+entendeu? Tá? Só para remoção.
+-
+
+(Z2 Tech)
+Tá o o remoção tá
+-
+
+(Ruan Carlos Oliveira)
+algum, não? já comentado sobre isso.
+
+623
+00:41:48,000 --> 00:41:52,000
+(Paulo Rocha)
+Remoção. Tá sempre.
+-
+
+(Z2 Tech)
+assim, tá aqui, ó, início de modelagem,
+-
+
+(Ruan Carlos Oliveira)
+Ah, remoção, né? Ah, tá. É, beleza. Beleza.
+
+624
+00:41:52,000 --> 00:41:56,000
+(Z2 Tech)
+enfim. Então eu vou acionar a mesma lógica pro carbono
+
+625
+00:41:56,000 --> 00:42:00,000
+(Paulo Rocha)
+É. Aham. Acho que vai facilitar pro, pro recorte,
+-
+
+(Z2 Tech)
+emissão.
+-
+
+(Ruan Carlos Oliveira)
+Isso. Uhum. M.
+
+626
+00:42:00,000 --> 00:42:04,000
+(Z2 Tech)
+Eh, sim, sim. Senão ficaria, a gente teria que pensar numa lógica
+
+627
+00:42:04,000 --> 00:42:08,000
+(Z2 Tech)
+complexa. Aqui eu já defini o recorte. Eh, só deixa eu adicionar o
+
+628
+00:42:08,000 --> 00:42:12,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+nome. Eh, ano da colheita.
+-
+
+(Ruan Carlos Oliveira)
+Ah.
+
+629
+00:42:12,000 --> 00:42:16,000
+(Z2 Tech)
+Pera aí. carbon
+
+630
+00:42:16,000 --> 00:42:20,000
+(Z2 Tech)
+emissão
+
+631
+00:42:20,000 --> 00:42:24,000
+(Z2 Tech)
+emissão
+
+632
+00:42:24,000 --> 00:42:28,000
+(Z2 Tech)
+e tá beleza, beleza, beleza. Matamos uma coisa boa aqui. Aí no final, então
+
+633
+00:42:28,000 --> 00:42:32,000
+(Z2 Tech)
+aqui esse da remoção P2 já tem respondido que é o pegar o
+
+634
+00:42:32,000 --> 00:42:36,000
+(Z2 Tech)
+recorte do emissão.
+
+635
+00:42:36,000 --> 00:42:40,000
+(Z2 Tech)
+Recorde tá em
+
+636
+00:42:40,000 --> 00:42:44,000
+(Z2 Tech)
+beleza.
+
+637
+00:42:44,000 --> 00:42:48,000
+(Z2 Tech)
+Eh, fator de emissão atualizado,
+
+638
+00:42:48,000 --> 00:42:52,000
+(Z2 Tech)
+o verificado fica ou é recalculado?
+
+639
+00:42:52,000 --> 00:42:56,000
+(Z2 Tech)
+Ah, esse daqui eu acho que era sobre a relação de vocês finalizarem o
+
+640
+00:42:56,000 --> 00:43:00,000
+(Z2 Tech)
+projeto e aí poder
+
+641
+00:43:00,000 --> 00:43:04,000
+(Paulo Rocha)
+Угу.
+-
+
+(Z2 Tech)
+atualizar ou não depois a edição. Mas eu acho que isso daqui
+-
+
+(Ruan Carlos Oliveira)
+Ah, tá,
+
+642
+00:43:04,000 --> 00:43:08,000
+(Z2 Tech)
+não, a gente já respondeu um pouco. Quando eu finalizei o projeto, trava
+-
+
+(Ruan Carlos Oliveira)
+tá.
+
+643
+00:43:08,000 --> 00:43:12,000
+(Z2 Tech)
+tudo. Aí se o cara voltar o projeto abre. Eu atualizo tudo que eu preciso
+-
+
+(Ruan Carlos Oliveira)
+É, trava. É isso
+
+644
+00:43:12,000 --> 00:43:16,000
+(Paulo Rocha)
+Então, eu fiquei, eu fiquei na dúvida porque é o
+-
+
+(Z2 Tech)
+atualizar e
+-
+
+(Ruan Carlos Oliveira)
+mesmo. Isso
+
+645
+00:43:16,000 --> 00:43:20,000
+(Paulo Rocha)
+seguinte, né? Suponhamos que seja um projeto de 5
+-
+
+(Z2 Tech)
+vai.
+
+646
+00:43:20,000 --> 00:43:24,000
+(Paulo Rocha)
+anos. Eh, se o cara travou, eu para
+
+647
+00:43:24,000 --> 00:43:28,000
+(Paulo Rocha)
+mim ele deveria ficar, né? Porque se eu vendi o milho com aquele fator de
+
+648
+00:43:28,000 --> 00:43:32,000
+(Paulo Rocha)
+emissão, depois se muda não fica
+-
+
+(Ruan Carlos Oliveira)
+mesmo. Não pode mandar depois mesmo não.
+
+649
+00:43:32,000 --> 00:43:36,000
+(Paulo Rocha)
+não fica legal. Mas ao mesmo tempo é um projeto de 5 anos.
+
+650
+00:43:36,000 --> 00:43:40,000
+(Paulo Rocha)
+Então dentro de um projeto de 5 anos você tem a
+-
+
+(Z2 Tech)
+Че?
+
+651
+00:43:40,000 --> 00:43:44,000
+(Paulo Rocha)
+opção de você corrigir rota, né?
+
+652
+00:43:44,000 --> 00:43:48,000
+(Paulo Rocha)
+Eh, considerando que você vendeu o milho já ou a soja
+
+653
+00:43:48,000 --> 00:43:52,000
+(Paulo Rocha)
+já, fica chato se você muda, né? Mas mas
+
+654
+00:43:52,000 --> 00:43:56,000
+(Paulo Rocha)
+ao mesmo tempo você tá tocando o projeto e aí como é
+
+655
+00:43:56,000 --> 00:44:00,000
+(Paulo Rocha)
+que
+-
+
+(Z2 Tech)
+Entendi. A gente a gente pode travar coisas que já
+
+656
+00:44:00,000 --> 00:44:04,000
+(Z2 Tech)
+foram, tipo, você não pode mexer, você fez um projeto de 5
+
+657
+00:44:04,000 --> 00:44:08,000
+(Z2 Tech)
+anos, já estamos no terceiro ano, aí você não pode mexer o um e o
+
+658
+00:44:08,000 --> 00:44:12,000
+(Paulo Rocha)
+fica? É, talvez pro pros novos você
+-
+
+(Z2 Tech)
+dois. Faz sentido
+
+659
+00:44:12,000 --> 00:44:16,000
+(Paulo Rocha)
+corrige o seu fator de emissão, mas o que foi travado foi
+
+660
+00:44:16,000 --> 00:44:20,000
+(Paulo Rocha)
+travado porque senão não é não é justo também, né? Eu vendi o milho.
+-
+
+(Z2 Tech)
+isso?
+
+661
+00:44:20,000 --> 00:44:24,000
+(Paulo Rocha)
+Suponhamos que que sei lá,
+
+662
+00:44:24,000 --> 00:44:28,000
+(Paulo Rocha)
+eh, é f***. Eu vou mexer no negócio que eu já vendi,
+
+663
+00:44:28,000 --> 00:44:32,000
+(Z2 Tech)
+Tá, o que a gente tá falando, eu
+-
+
+(Ruan Carlos Oliveira)
+Угу.
+
+664
+00:44:32,000 --> 00:44:36,000
+(Z2 Tech)
+já vendi. É, seria esse milho de 2025, você fez, foi
+
+665
+00:44:36,000 --> 00:44:40,000
+(Paulo Rocha)
+entendeu? Travei,
+-
+
+(Z2 Tech)
+aprovado, aí travou. Só que o projeto é para 5
+
+666
+00:44:40,000 --> 00:44:44,000
+(Paulo Rocha)
+vendi. Eh, aí no aí vem o fator de emissão
+-
+
+(Z2 Tech)
+anos. A gente uso de
+
+667
+00:44:44,000 --> 00:44:48,000
+(Paulo Rocha)
+novo, mais atualizado. E o milho que eu vendi pro cliente lá, como é que fica?
+-
+
+(Z2 Tech)
+2026.
+
+668
+00:44:48,000 --> 00:44:52,000
+(Paulo Rocha)
+Eu mando uma outra carta para ele atualizando, entendeu?
+-
+
+(Z2 Tech)
+Ah, se diz
+-
+
+(Ruan Carlos Oliveira)
+Yeah.
+
+669
+00:44:52,000 --> 00:44:56,000
+(Paulo Rocha)
+Fala, ó, na aqui, ó.
+-
+
+(Z2 Tech)
+assim, e ah, você atualizou, no caso,
+-
+
+(Ruan Carlos Oliveira)
+Não dá. É isso não dá.
+
+670
+00:44:56,000 --> 00:45:00,000
+(Paulo Rocha)
+Entendeu isso? M.
+-
+
+(Z2 Tech)
+atualizou os cálculos, essas coisas, a forma de a mudou a
+
+671
+00:45:00,000 --> 00:45:04,000
+(Paulo Rocha)
+Não mudou o
+
+672
+00:45:04,000 --> 00:45:08,000
+(Paulo Rocha)
+o fator de emissão da ureia, por exemplo, que era para cada tonelada
+
+673
+00:45:08,000 --> 00:45:12,000
+(Paulo Rocha)
+eu multiplicava por 01 e agora eu multiplico por
+
+674
+00:45:12,000 --> 00:45:16,000
+(Paulo Rocha)
+08 ou 0,08,
+-
+
+(Z2 Tech)
+calculadora. Hum. Ah, entendi. Ah, não. Então acho que não. Eu acho
+
+675
+00:45:16,000 --> 00:45:20,000
+(Z2 Tech)
+assim, salva no que foi feito no no cálculo. Travou,
+
+676
+00:45:20,000 --> 00:45:24,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+travou. Aí a gente meio que dá, tira um print daquela
+
+677
+00:45:24,000 --> 00:45:28,000
+(Z2 Tech)
+tela. Ah, entendi o que você quis fazer. A gente pode
+
+678
+00:45:28,000 --> 00:45:32,000
+(Z2 Tech)
+pôr Hum, entendi. Agora que eu entendi. O que
+
+679
+00:45:32,000 --> 00:45:36,000
+(Z2 Tech)
+talvez pode acontecer, eh, a gente deixa
+
+680
+00:45:36,000 --> 00:45:40,000
+(Z2 Tech)
+travado, né? Tipo, tirou uma foto, enfim. O que a gente faz é, se o cara entrar,
+
+681
+00:45:40,000 --> 00:45:44,000
+(Z2 Tech)
+a gente mostra um alerta.
+
+682
+00:45:44,000 --> 00:45:48,000
+(Z2 Tech)
+Esse cálculo foi feito com valor de emissão passado, alguma coisa
+
+683
+00:45:48,000 --> 00:45:52,000
+(Paulo Rocha)
+Pode ser.
+-
+
+(Z2 Tech)
+assim, mas mas mantém o o que
+
+684
+00:45:52,000 --> 00:45:56,000
+(Paulo Rocha)
+Pode
+-
+
+(Z2 Tech)
+existe, não atualiza. Nossa, mas isso aí vai ser difícil pro
+
+685
+00:45:56,000 --> 00:46:00,000
+(Paulo Rocha)
+ser. Não, mas assim,
+
+686
+00:46:00,000 --> 00:46:04,000
+(Paulo Rocha)
+hoje hoje esse problema a gente não vai ter. A gente vai
+
+687
+00:46:04,000 --> 00:46:08,000
+(Paulo Rocha)
+ter na hora que começar a usar a plataforma e que a gente
+-
+
+(Z2 Tech)
+backend.
+
+688
+00:46:08,000 --> 00:46:12,000
+(Paulo Rocha)
+começar eh atualizar, né?
+
+689
+00:46:12,000 --> 00:46:16,000
+(Paulo Rocha)
+Porque a atualização eh ela é
+
+690
+00:46:16,000 --> 00:46:20,000
+(Paulo Rocha)
+necessária, até porque a plataforma ela vai evoluindo,
+
+691
+00:46:20,000 --> 00:46:24,000
+(Paulo Rocha)
+entendeu? Só que ao mesmo tempo você já tem as contas que já
+-
+
+(Z2 Tech)
+Sim, sim. O que a gente pode
+
+692
+00:46:24,000 --> 00:46:28,000
+(Paulo Rocha)
+foram feitas,
+-
+
+(Z2 Tech)
+faz
+
+693
+00:46:28,000 --> 00:46:32,000
+(Z2 Tech)
+é, então
+
+694
+00:46:32,000 --> 00:46:36,000
+(Paulo Rocha)
+né?
+-
+
+(Z2 Tech)
+não é, eu tô pensando agora até em casos mais
+
+695
+00:46:36,000 --> 00:46:40,000
+(Z2 Tech)
+antes. Por exemplo, você tá usando, você usou ontem e fez o meu milho
+
+696
+00:46:40,000 --> 00:46:44,000
+(Z2 Tech)
+aqui e aí ontem à noite a gente
+
+697
+00:46:44,000 --> 00:46:48,000
+(Z2 Tech)
+atualizou. E aí aí você acorda hoje, vai abrir, você vai ver o antigo, você já vai querer
+
+698
+00:46:48,000 --> 00:46:52,000
+(Paulo Rocha)
+Não, eu acho que o que travou
+-
+
+(Z2 Tech)
+ver o novo, você quer um alerta.
+
+699
+00:46:52,000 --> 00:46:56,000
+(Paulo Rocha)
+travou. Se não fori erro de cálculo, né?
+-
+
+(Z2 Tech)
+Tá. O
+
+700
+00:46:56,000 --> 00:47:00,000
+(Paulo Rocha)
+Se não foi erro de cálculo, não, não é para mudar
+-
+
+(Ruan Carlos Oliveira)
+Não, não é para mudar mesmo.
+
+701
+00:47:00,000 --> 00:47:04,000
+(Z2 Tech)
+que? Tá. E o travar é finalizei o projeto.
+
+702
+00:47:04,000 --> 00:47:08,000
+(Paulo Rocha)
+não. Finalizei o projeto, auditou o projeto,
+-
+
+(Z2 Tech)
+Travar é já foi auditado. Travar
+
+703
+00:47:08,000 --> 00:47:12,000
+(Paulo Rocha)
+o auditor eh deu o OK lá que tá OK
+-
+
+(Ruan Carlos Oliveira)
+Ко?
+
+704
+00:47:12,000 --> 00:47:16,000
+(Paulo Rocha)
+ali, já era,
+-
+
+(Z2 Tech)
+é tá
+
+705
+00:47:16,000 --> 00:47:20,000
+(Z2 Tech)
+travado. Eu vou pôr só projeto finalizado porque tem o caso de não existir
+
+706
+00:47:20,000 --> 00:47:24,000
+(Paulo Rocha)
+entendeu? Aham.
+-
+
+(Z2 Tech)
+auditor. Exato. Aí uma coisa que a gente vai fazer, vocês
+
+707
+00:47:24,000 --> 00:47:28,000
+(Z2 Tech)
+acham que já na criação do projeto a gente já sabe se o cara vai querer ir para
+
+708
+00:47:28,000 --> 00:47:32,000
+(Z2 Tech)
+auditoria ou não? ou vai ser tipo quando finalizar o projeto
+
+709
+00:47:32,000 --> 00:47:36,000
+(Paulo Rocha)
+Pode ser
+-
+
+(Z2 Tech)
+vai colocar lá vai ser auditado ou
+
+710
+00:47:36,000 --> 00:47:40,000
+(Paulo Rocha)
+que o cara no início do projeto ele já saiba o que queira, né? Mas pode ser
+
+711
+00:47:40,000 --> 00:47:44,000
+(Paulo Rocha)
+que tem pessoas que no meio do projeto ele fala: "Cara, os dados estão
+
+712
+00:47:44,000 --> 00:47:48,000
+(Paulo Rocha)
+bons, vou querer verificar". Então acho que não
+-
+
+(Z2 Tech)
+não. pode ter no
+
+713
+00:47:48,000 --> 00:47:52,000
+(Paulo Rocha)
+precisa colocar. É, pode ser no final.
+-
+
+(Z2 Tech)
+final. É, é só pra gente, é porque é bom,
+
+714
+00:47:52,000 --> 00:47:56,000
+(Z2 Tech)
+a gente tem que colocar quando você finalizar pra gente passar o
+
+715
+00:47:56,000 --> 00:48:00,000
+(Z2 Tech)
+estado ou esperando a editoria ou finalizado. Yeah. Pronto, acabou,
+
+716
+00:48:00,000 --> 00:48:04,000
+(Z2 Tech)
+entendeu? Só pra gente ter essa noção, mas a gente faz isso quando finalizar, mas a gente pensa mais
+
+717
+00:48:04,000 --> 00:48:08,000
+(Z2 Tech)
+nisso quando for pra auditoria. Deixa eu anar
+
+718
+00:48:08,000 --> 00:48:12,000
+(Paulo Rocha)
+Угуm.
+-
+
+(Z2 Tech)
+aqui.
+
+719
+00:48:16,000 --> 00:48:20,000
+(Z2 Tech)
+Eh,
+
+720
+00:48:20,000 --> 00:48:24,000
+(Z2 Tech)
+fechou. Tá beleza. Eh, vamos lá que tem para c******. Vocês estão de
+
+721
+00:48:24,000 --> 00:48:28,000
+(Paulo Rocha)
+Dá, dá para ir
+-
+
+(Z2 Tech)
+boa aí com o tempo?
+-
+
+(Ruan Carlos Oliveira)
+Para mim dá. Deixa eu ver
+
+722
+00:48:28,000 --> 00:48:32,000
+(Paulo Rocha)
+falando. Olhei aqui agora
+
+723
+00:48:32,000 --> 00:48:36,000
+(Paulo Rocha)
+também.
+-
+
+(Z2 Tech)
+Tá aí agora sobre control union vocês. Ah, os cara nem
+
+724
+00:48:36,000 --> 00:48:40,000
+(Z2 Tech)
+respondeu. Eh, quem libera o controle union num
+
+725
+00:48:40,000 --> 00:48:44,000
+(Paulo Rocha)
+É porque a gente não
+-
+
+(Z2 Tech)
+projeto e o acesso acaba ao aprovar. Control Union é
+
+726
+00:48:44,000 --> 00:48:48,000
+(Paulo Rocha)
+vendeu. É, é assim, a gente tá usando control, mas
+-
+
+(Z2 Tech)
+editoria. É
+-
+
+(Ruan Carlos Oliveira)
+aqui.
+
+727
+00:48:48,000 --> 00:48:52,000
+(Paulo Rocha)
+não necessariamente vai ser eles, né? A gente vai dar preferência, mas pode ser
+-
+
+(Z2 Tech)
+editoria. Pode ser qual que
+-
+
+(Ruan Carlos Oliveira)
+É, pode ser qualquer um.
+
+728
+00:48:52,000 --> 00:48:56,000
+(Paulo Rocha)
+qualquer empresa de de auditoria,
+-
+
+(Z2 Tech)
+é. Tá. Isso daqui é para
+-
+
+(Ruan Carlos Oliveira)
+É. Uhum.
+
+729
+00:48:56,000 --> 00:49:00,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+vai ser mais quando a gente chegar na fil de auditor, mas
+
+730
+00:49:00,000 --> 00:49:04,000
+(Z2 Tech)
+é como que vai funcionar toda essa lógica da gente pôr um auditor na
+
+731
+00:49:04,000 --> 00:49:08,000
+(Paulo Rocha)
+É, acho que acho que é a mesma lógica. A gente manda login e senha pro
+-
+
+(Z2 Tech)
+plataforma. Não, mas a
+
+732
+00:49:08,000 --> 00:49:12,000
+(Paulo Rocha)
+cara, cadastra o e-mail, manda login e senha para ele, ele entra num
+
+733
+00:49:12,000 --> 00:49:16,000
+(Paulo Rocha)
+ambiente onde ele eh onde ele não vai alterar o dado, mas ele vai ter acesso
+-
+
+(Z2 Tech)
+gente de
+
+734
+00:49:16,000 --> 00:49:20,000
+(Paulo Rocha)
+à planilha, ele vai ter acesso aos PDF, eh a
+-
+
+(Z2 Tech)
+auditor pode
+
+735
+00:49:20,000 --> 00:49:24,000
+(Paulo Rocha)
+evidência, ele consegue baixar, eh coloca comentário,
+-
+
+(Z2 Tech)
+colocar
+
+736
+00:49:24,000 --> 00:49:28,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+comentário. Entendi. Não, beleza. Eh, mas isso daí a gente pensa mais bonitinho quando
+
+737
+00:49:28,000 --> 00:49:32,000
+(Z2 Tech)
+a gente entrar em auditor. Eh, o plano é fazer essa aqui primeiro, porque ela
+
+738
+00:49:32,000 --> 00:49:36,000
+(Z2 Tech)
+vai mexer bastante coisa. A gente faz tudo isso até vocês clicarem em
+
+739
+00:49:36,000 --> 00:49:40,000
+(Z2 Tech)
+finalizar ou enviar pra auditoria. Aí nesse momento, a gente pensa no
+
+740
+00:49:40,000 --> 00:49:44,000
+(Z2 Tech)
+PDF, no QRcode, no auditor. Mas vamos fazer isso porque esse aqui tá bem
+
+741
+00:49:44,000 --> 00:49:48,000
+(Z2 Tech)
+bem mais complexo do que eu achei que
+
+742
+00:49:48,000 --> 00:49:52,000
+(Paulo Rocha)
+S.
+-
+
+(Z2 Tech)
+era. Aham. Eu achei que ia ser só selecionar aqui. Deu uma uma mudadinha, tipo
+
+743
+00:49:52,000 --> 00:49:56,000
+(Z2 Tech)
+esse recorte do ano, o
+
+744
+00:49:56,000 --> 00:50:00,000
+(Z2 Tech)
+carbono remoção ser mais de um mais para um. Poder ser
+
+745
+00:50:00,000 --> 00:50:04,000
+(Z2 Tech)
+por fazenda ou por talhão também é um pega.
+
+746
+00:50:04,000 --> 00:50:08,000
+(Paulo Rocha)
+Não, mas no fim não, não, no fim vai ser sempre por
+-
+
+(Z2 Tech)
+Uma dúvida só. Todo
+
+747
+00:50:08,000 --> 00:50:12,000
+(Paulo Rocha)
+fazenda. Não, sempre por fazenda. Primeiro
+
+748
+00:50:12,000 --> 00:50:16,000
+(Paulo Rocha)
+filtra. Não, tipo, aqui eu acho que não muda nada, cara. A estrutura
+-
+
+(Z2 Tech)
+portalhão. Não,
+
+749
+00:50:16,000 --> 00:50:20,000
+(Paulo Rocha)
+aqui não muda nada.
+-
+
+(Z2 Tech)
+não, eu o não, o o carbono remoção é
+
+750
+00:50:20,000 --> 00:50:24,000
+(Paulo Rocha)
+ou por fazenda também. Eu acho que de
+-
+
+(Z2 Tech)
+portalhão. Ô por f se
+
+751
+00:50:24,000 --> 00:50:28,000
+(Paulo Rocha)
+novo, a estrutura ela ela ela não muda de
+-
+
+(Z2 Tech)
+eu
+
+752
+00:50:28,000 --> 00:50:32,000
+(Paulo Rocha)
+novo. O cara tem que ter opção dele colocar
+
+753
+00:50:32,000 --> 00:50:36,000
+(Paulo Rocha)
+ele fazer um cálculo ou ele fazer 10 cálculos dentro daquela
+
+754
+00:50:36,000 --> 00:50:40,000
+(Paulo Rocha)
+fazenda. É simples assim. Então a estrutura aqui não muda,
+-
+
+(Z2 Tech)
+ô é não, isso vai f****. Vai
+
+755
+00:50:40,000 --> 00:50:44,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+f****. Aham. Aham. Não. Beleza.
+
+756
+00:50:44,000 --> 00:50:48,000
+(Paulo Rocha)
+A a o o único trabalho
+-
+
+(Z2 Tech)
+Beleza. Eh, vamos
+
+757
+00:50:48,000 --> 00:50:52,000
+(Paulo Rocha)
+que você vai ter é de colocar aquelas regrinhas de
+-
+
+(Z2 Tech)
+ver.
+-
+
+(Ruan Carlos Oliveira)
+M.
+
+758
+00:50:52,000 --> 00:50:56,000
+(Paulo Rocha)
+fazer cálculo eh na hora lá de fechar o
+
+759
+00:50:56,000 --> 00:51:00,000
+(Paulo Rocha)
+projeto, de fazer as médias ponderadas, entendeu? M.
+-
+
+(Z2 Tech)
+Aha. Ó, é, aqui já é
+
+760
+00:51:00,000 --> 00:51:04,000
+(Z2 Tech)
+a próxima pergunta. Qual que é o peso da média? Que que que que vale como
+
+761
+00:51:04,000 --> 00:51:08,000
+(Paulo Rocha)
+área que tá
+-
+
+(Z2 Tech)
+peso da média ponderada? É o a área em
+
+762
+00:51:08,000 --> 00:51:12,000
+(Z2 Tech)
+hectar. Fechou? Tá? Isso aqui é um pouco
+
+763
+00:51:12,000 --> 00:51:16,000
+(Z2 Tech)
+mais sobre auditoria, mas eh a gente vai
+
+764
+00:51:16,000 --> 00:51:20,000
+(Z2 Tech)
+pensar em prazo, por exemplo, vocês finalizaram quanto tempo o
+
+765
+00:51:20,000 --> 00:51:24,000
+(Z2 Tech)
+auditor tem para mandar uma resposta e quanto tempo tem para
+
+766
+00:51:24,000 --> 00:51:28,000
+(Z2 Tech)
+vocês responderem essas respostas e quantas vezes
+
+767
+00:51:28,000 --> 00:51:32,000
+(Z2 Tech)
+isso vai e volta. Tem que ter toda essa essa
+
+768
+00:51:32,000 --> 00:51:36,000
+(Paulo Rocha)
+Да. Pera aí. Agora você falou a área
+-
+
+(Z2 Tech)
+regra.
+
+769
+00:51:36,000 --> 00:51:40,000
+(Paulo Rocha)
+iníctar. Eu tô pensando se é a área que
+
+770
+00:51:40,000 --> 00:51:44,000
+(Paulo Rocha)
+tá ou
+-
+
+(Z2 Tech)
+Hora de
+
+771
+00:51:44,000 --> 00:51:48,000
+(Paulo Rocha)
+se é por por
+
+772
+00:51:48,000 --> 00:51:52,000
+(Paulo Rocha)
+tonelada. Pro solo é área em
+
+773
+00:51:52,000 --> 00:51:56,000
+(Paulo Rocha)
+hectar. Agora paraas
+
+774
+00:51:56,000 --> 00:52:00,000
+(Paulo Rocha)
+emissões, porque
+-
+
+(Z2 Tech)
+produzir
+
+775
+00:52:00,000 --> 00:52:04,000
+(Paulo Rocha)
+senão o que que que vai acontecer? Eu vou
+
+776
+00:52:04,000 --> 00:52:08,000
+(Paulo Rocha)
+penalizar quem tem área menor, mas tem a alta
+
+777
+00:52:08,000 --> 00:52:12,000
+(Paulo Rocha)
+produtividade e eu vou dar mais
+
+778
+00:52:12,000 --> 00:52:16,000
+(Paulo Rocha)
+peso. p****, é f***, né? Tem umas
+
+779
+00:52:16,000 --> 00:52:20,000
+(Paulo Rocha)
+perguntas técnica que é uma miséria. Tá entendendo, R? Que que eu
+
+780
+00:52:20,000 --> 00:52:24,000
+(Paulo Rocha)
+tô falando? Às vezes o cara tem uma área menor, mas ele tem uma
+
+781
+00:52:24,000 --> 00:52:28,000
+(Paulo Rocha)
+produtividade estourando lá em cima, entendeu?
+-
+
+(Z2 Tech)
+Sim, é o cara se fode ptitinho.
+
+782
+00:52:28,000 --> 00:52:32,000
+(Paulo Rocha)
+É porque é pequeno. Aí o cara que é
+-
+
+(Z2 Tech)
+Não, mas isso é isso é em
+
+783
+00:52:32,000 --> 00:52:36,000
+(Z2 Tech)
+relação às próprias fazendas dele, né? Tipo, o cara tem três
+
+784
+00:52:36,000 --> 00:52:40,000
+(Z2 Tech)
+fazendas, a a fazenda menor com mais produtividade vai valer menos,
+-
+
+(Ruan Carlos Oliveira)
+Угуm.
+
+785
+00:52:40,000 --> 00:52:44,000
+(Z2 Tech)
+mas faz sentir pro mesma pessoa isso altera
+
+786
+00:52:44,000 --> 00:52:48,000
+(Paulo Rocha)
+grandão. É, não é porque é assim, a empresa ela não tem fazenda,
+-
+
+(Z2 Tech)
+muito ou
+
+787
+00:52:48,000 --> 00:52:52,000
+(Paulo Rocha)
+né? Ela tem o projeto. Então dentro do projeto
+-
+
+(Z2 Tech)
+não?
+
+788
+00:52:52,000 --> 00:52:56,000
+(Paulo Rocha)
+dela tem várias fazendas. Mas eu, mas eu acho
+-
+
+(Z2 Tech)
+Aham, entendi. Aí isso
+
+789
+00:52:56,000 --> 00:53:00,000
+(Paulo Rocha)
+que pensando em termos lógicos assim, eu acho que talvez é média ponderada pela
+-
+
+(Z2 Tech)
+acontece.
+
+790
+00:53:00,000 --> 00:53:04,000
+(Paulo Rocha)
+área mesmo e f***-se,
+
+791
+00:53:04,000 --> 00:53:08,000
+(Paulo Rocha)
+entendeu? Ah, o pequeno ele vai ter a
+
+792
+00:53:08,000 --> 00:53:12,000
+(Paulo Rocha)
+produtividade dele lá e e é isso. Tá
+-
+
+(Z2 Tech)
+Petit prend
+
+793
+00:53:12,000 --> 00:53:16,000
+(Paulo Rocha)
+entendendo, Ran? pequeno.
+-
+
+(Z2 Tech)
+éta, mas ele tem uma fazenda do pican.
+-
+
+(Ruan Carlos Oliveira)
+Eh
+
+794
+00:53:16,000 --> 00:53:20,000
+(Paulo Rocha)
+Exatamente. É, deixa deixa o cálculo
+-
+
+(Z2 Tech)
+Não, não vai mudar nada não. Não. Beleza.
+
+795
+00:53:20,000 --> 00:53:24,000
+(Paulo Rocha)
+de de média ponderada sempre pro por área mesmo.
+
+796
+00:53:24,000 --> 00:53:28,000
+(Paulo Rocha)
+E é
+-
+
+(Ruan Carlos Oliveira)
+Ja.
+
+797
+00:53:28,000 --> 00:53:32,000
+(Z2 Tech)
+Então, tá aqui as
+
+798
+00:53:32,000 --> 00:53:36,000
+(Z2 Tech)
+set sobre finalizar o projeto. Vai ser o admin projeto que vai fazer
+
+799
+00:53:36,000 --> 00:53:40,000
+(Z2 Tech)
+isso ou vai ser sempre nosso? Faz sentido ser o admin, né? É o cara que tá cuidando. O
+
+800
+00:53:40,000 --> 00:53:44,000
+(Z2 Tech)
+Gia não vai ter mais nada a ver com a plataforma.
+
+801
+00:53:44,000 --> 00:53:48,000
+(Paulo Rocha)
+isso. É, a gente colocou
+-
+
+(Z2 Tech)
+ideas
+
+802
+00:53:48,000 --> 00:53:52,000
+(Paulo Rocha)
+admir gestor. Como é que é? Acho que a de gestor é
+
+803
+00:53:52,000 --> 00:53:56,000
+(Paulo Rocha)
+porque, tipo, geralmente o que acontece é
+-
+
+(Ruan Carlos Oliveira)
+Угу.
+
+804
+00:53:56,000 --> 00:54:00,000
+(Paulo Rocha)
+isso. Eu sou Peterson Ran RDC. a gente fala: "Meu, tá na hora da
+
+805
+00:54:00,000 --> 00:54:04,000
+(Paulo Rocha)
+gente fechar o projeto ou a gente manda paraa
+
+806
+00:54:04,000 --> 00:54:08,000
+(Paulo Rocha)
+verificação ou a gente termina o projeto porque vai ter o contrato
+
+807
+00:54:08,000 --> 00:54:12,000
+(Paulo Rocha)
+também. Então, quem fecha,
+-
+
+(Z2 Tech)
+Aham. É o próprio dono do
+
+808
+00:54:12,000 --> 00:54:16,000
+(Paulo Rocha)
+se se eu e Juan, se a gente não fechar, eh,
+
+809
+00:54:16,000 --> 00:54:20,000
+(Paulo Rocha)
+a G ela vai fechar porque o contrato acabou, entendeu? Então
+-
+
+(Z2 Tech)
+projeto.
+
+810
+00:54:20,000 --> 00:54:24,000
+(Z2 Tech)
+É, vai automático. É, mas a ideia é o Gaio não mexer em nada assim, se
+
+811
+00:54:24,000 --> 00:54:28,000
+(Paulo Rocha)
+é, não, não faz o que ele
+-
+
+(Z2 Tech)
+o cara é dono projeto dele, ele faz as coisas dele. Se ele quiser, ele manda pro auditor, se
+
+812
+00:54:28,000 --> 00:54:32,000
+(Paulo Rocha)
+quiser. Isso. E a gente
+-
+
+(Z2 Tech)
+ele quiser, finaliza. Se quiser nem finaliza. Vida que
+
+813
+00:54:32,000 --> 00:54:36,000
+(Paulo Rocha)
+fecha na hora que acabar o contrato.
+-
+
+(Z2 Tech)
+segue. Dado
+
+814
+00:54:36,000 --> 00:54:40,000
+(Z2 Tech)
+do celular entra como oficial. Como rasão, tá? Isso daqui
+
+815
+00:54:40,000 --> 00:54:44,000
+(Z2 Tech)
+é, acho que vocês entenderam para vocês falaram,
+
+816
+00:54:44,000 --> 00:54:48,000
+(Z2 Tech)
+mas eu preenchi pelo celular, isso vai valer, né? É como se tivesse
+
+817
+00:54:48,000 --> 00:54:52,000
+(Z2 Tech)
+preenchido no
+-
+
+(Ruan Carlos Oliveira)
+Não é sim, isso mesmo. Mas aí no celular
+
+818
+00:54:52,000 --> 00:54:56,000
+(Z2 Tech)
+web. É, o celular,
+-
+
+(Ruan Carlos Oliveira)
+a gente não tinha comentado que ele só ficar offline, não. Ele ia ficar
+
+819
+00:54:56,000 --> 00:55:00,000
+(Z2 Tech)
+ele é offline quando tá lá no campo. Aí eu posso mandar pro ar, mas existe isso realmente.
+
+820
+00:55:00,000 --> 00:55:04,000
+(Paulo Rocha)
+อ
+-
+
+(Z2 Tech)
+Só que a gente já corrigiu, corrigiu não, vai fazer essa lógica que é o cara faz o
+-
+
+(Ruan Carlos Oliveira)
+tipo,
+
+821
+00:55:04,000 --> 00:55:08,000
+(Z2 Tech)
+deparo. Eu vou tentar, eu tô lá no campo, mexo no celular, preenche várias
+
+822
+00:55:08,000 --> 00:55:12,000
+(Z2 Tech)
+coisas. Eu tô mexendo do milho lá. Quando eu chego com internet, eu tento dar
+
+823
+00:55:12,000 --> 00:55:16,000
+(Z2 Tech)
+OK, aí aparece lá Paulo mexeu nisso, nisso, nisso. Aí eu vou
+
+824
+00:55:16,000 --> 00:55:20,000
+(Z2 Tech)
+comparar e falar: "Não, o meu que tá certo que eu tava lá no campo. Paulo que se fode." Aí eu
+-
+
+(Ruan Carlos Oliveira)
+tá.
+
+825
+00:55:20,000 --> 00:55:24,000
+(Paulo Rocha)
+É assim, o
+-
+
+(Z2 Tech)
+dou, eu dou OK e
+-
+
+(Ruan Carlos Oliveira)
+Mhm.
+
+826
+00:55:24,000 --> 00:55:28,000
+(Paulo Rocha)
+dado ele é oficial. a gente que o o o celular
+-
+
+(Ruan Carlos Oliveira)
+Sim, sim, eu
+
+827
+00:55:28,000 --> 00:55:32,000
+(Paulo Rocha)
+o o celular pode até ter função de dashboard, essas coisas, mas a
+-
+
+(Z2 Tech)
+vai. Não, não, não vai ter
+
+828
+00:55:32,000 --> 00:55:36,000
+(Paulo Rocha)
+ideia é a ideia é só coleta. Então o dado ele é
+-
+
+(Z2 Tech)
+não. É só coleta, é só
+-
+
+(Ruan Carlos Oliveira)
+concordo. É do
+
+829
+00:55:36,000 --> 00:55:40,000
+(Paulo Rocha)
+ele é ele é OK. Agora o processamento ele é depois, né? É no
+-
+
+(Z2 Tech)
+coleta.
+-
+
+(Ruan Carlos Oliveira)
+coleta. É, eu concordo. Você
+
+830
+00:55:40,000 --> 00:55:44,000
+(Z2 Tech)
+Sim,
+-
+
+(Ruan Carlos Oliveira)
+também é, eu acabei botando como rascunha porque como ele não ia subir direto, ele ficar
+
+831
+00:55:44,000 --> 00:55:48,000
+(Paulo Rocha)
+computador. Entendi.
+-
+
+(Z2 Tech)
+sim.
+-
+
+(Ruan Carlos Oliveira)
+ali salvo, ele precisa confirmar que ia enviar, né? Então, por isso que eu falei que
+
+832
+00:55:48,000 --> 00:55:52,000
+(Paulo Rocha)
+Aham.
+-
+
+(Ruan Carlos Oliveira)
+tipo ficar salvo em rascunho, numa caixa de saída e ele precisa ser enviado
+
+833
+00:55:52,000 --> 00:55:56,000
+(Paulo Rocha)
+Ótimo. A lógica é que
+-
+
+(Ruan Carlos Oliveira)
+oficialmente para entrar no cálculo, na
+
+834
+00:55:56,000 --> 00:56:00,000
+(Paulo Rocha)
+seja um rascunho, mas o dado que você tá coletando, você coletou, já
+-
+
+(Ruan Carlos Oliveira)
+plataforma.
+
+835
+00:56:00,000 --> 00:56:04,000
+(Paulo Rocha)
+era, entendeu? Acho que é só
+-
+
+(Z2 Tech)
+Sim. Sim, sim. Tá
+-
+
+(Ruan Carlos Oliveira)
+É isso mesmo. É isso mesmo. É,
+
+836
+00:56:04,000 --> 00:56:08,000
+(Paulo Rocha)
+eh é só eh entendimento de
+-
+
+(Z2 Tech)
+certinho.
+-
+
+(Ruan Carlos Oliveira)
+é, também foi o
+
+837
+00:56:08,000 --> 00:56:12,000
+(Paulo Rocha)
+nomenclatura. É isso
+-
+
+(Z2 Tech)
+Nomenclatura não, de boa. Tá, esse daqui
+-
+
+(Ruan Carlos Oliveira)
+entendimento.
+
+838
+00:56:12,000 --> 00:56:16,000
+(Paulo Rocha)
+aí.
+-
+
+(Z2 Tech)
+é o do é um pouco mais sobre a auditoria. Eh, eu finalizei,
+-
+
+(Ruan Carlos Oliveira)
+É. Uhum.
+
+839
+00:56:16,000 --> 00:56:20,000
+(Z2 Tech)
+selecionei 2000 2025 do carbono em, mandei pra
+
+840
+00:56:20,000 --> 00:56:24,000
+(Z2 Tech)
+auditoria. O auditor falou: "Mano, tá uma bosta, tá nada a ver". Aí eu pego lá e
+
+841
+00:56:24,000 --> 00:56:28,000
+(Z2 Tech)
+mando milho 2025 V2. Posso fazer isso ou o
+
+842
+00:56:28,000 --> 00:56:32,000
+(Paulo Rocha)
+Não, ele ele mexer no
+-
+
+(Z2 Tech)
+certo é rumar no milho 25?
+
+843
+00:56:32,000 --> 00:56:36,000
+(Paulo Rocha)
+que no que o é no que já tá.
+-
+
+(Z2 Tech)
+que eu tinha enviado. Uma vez que eu
+-
+
+(Ruan Carlos Oliveira)
+Já tá.
+
+844
+00:56:36,000 --> 00:56:40,000
+(Paulo Rocha)
+Aham.
+-
+
+(Z2 Tech)
+enviei, aqueles são os que eu vou sempre enviar. Não
+
+845
+00:56:40,000 --> 00:56:44,000
+(Z2 Tech)
+posso. Beleza. Esse é o
+-
+
+(Ruan Carlos Oliveira)
+Ah, hein, Paulo.
+
+846
+00:56:44,000 --> 00:56:48,000
+(Ruan Carlos Oliveira)
+Mas nesse ponto aí, cara, como é que a gente precisa pensar para deixar esse processo otimizado? Que
+
+847
+00:56:48,000 --> 00:56:52,000
+(Ruan Carlos Oliveira)
+eu lembro da do Regenagre, né, que é é um saco isso aí, porque demora que só p**** às vezes
+
+848
+00:56:52,000 --> 00:56:56,000
+(Ruan Carlos Oliveira)
+para pro cara poder abrir e fazer essas coisas, né? Então pensar nesse fluxo
+
+849
+00:56:56,000 --> 00:57:00,000
+(Z2 Tech)
+P10. Não vai ser. Vai ser prático, vai ser
+-
+
+(Ruan Carlos Oliveira)
+prático para também não ficar muito demorado.
+
+850
+00:57:00,000 --> 00:57:04,000
+(Z2 Tech)
+você entrar lá, você vai ver seus projetos que estão em auditoria e aí se tiver
+
+851
+00:57:04,000 --> 00:57:08,000
+(Z2 Tech)
+algum adendo, o projeto vai tá em vermelho, você vai clicar lá, já vai direto pro campo que tá
+-
+
+(Ruan Carlos Oliveira)
+А
+
+852
+00:57:08,000 --> 00:57:12,000
+(Z2 Tech)
+errado com o comentário do auditor lá escrito lá embaixo.
+
+853
+00:57:12,000 --> 00:57:16,000
+(Z2 Tech)
+Esse essa nota fiscal que você mandou aqui é o mercado que você fez, não é do milho
+
+854
+00:57:16,000 --> 00:57:20,000
+(Z2 Tech)
+não. Aí o cara vai lá e põe a certa. Beleza?
+
+855
+00:57:20,000 --> 00:57:24,000
+(Z2 Tech)
+Aí essa é uma ideia é bem para vocês, é bem de marketing para
+
+856
+00:57:24,000 --> 00:57:28,000
+(Z2 Tech)
+c****** assim, ó, o auditor acessa fácil, vocês não vai gastar muito dinheiro com
+
+857
+00:57:28,000 --> 00:57:32,000
+(Z2 Tech)
+auditor que ele não vai precisar nessa fazenda 10 vezes, ele vai ver tudo pela
+
+858
+00:57:32,000 --> 00:57:36,000
+(Z2 Tech)
+plataforma. Isso é importante.
+
+859
+00:57:36,000 --> 00:57:40,000
+(Z2 Tech)
+Eh, perguntas dashboard de
+-
+
+(Ruan Carlos Oliveira)
+та
+
+860
+00:57:40,000 --> 00:57:44,000
+(Paulo Rocha)
+Tá.
+-
+
+(Z2 Tech)
+comparação. Não entendeu, respondeu. Aí é f***. E
+
+861
+00:57:44,000 --> 00:57:48,000
+(Paulo Rocha)
+Que que é pergunta?
+-
+
+(Z2 Tech)
+respondeu. É, então eu tenho que ver. Pera aí.
+-
+
+(Ruan Carlos Oliveira)
+Deixa eu ver isso aqui.
+
+862
+00:57:48,000 --> 00:57:52,000
+(Z2 Tech)
+Tem que achar perguntas. 24 a
+
+863
+00:57:52,000 --> 00:57:56,000
+(Paulo Rocha)
+Deix.
+-
+
+(Z2 Tech)
+30. Tem que abrir o dashboard. Deixa eu
+
+864
+00:57:56,000 --> 00:58:00,000
+(Z2 Tech)
+abrir aquele esquema, né? E a ball, mas às vezes ela dá uma
+
+865
+00:58:04,000 --> 00:58:08,000
+(Paulo Rocha)
+Não é porque eu coloquei em algumas respostas que não tinha
+
+866
+00:58:08,000 --> 00:58:12,000
+(Paulo Rocha)
+entendido o que que era, entendeu? que
+-
+
+(Z2 Tech)
+brisadinha. Aham. É
+
+867
+00:58:12,000 --> 00:58:16,000
+(Z2 Tech)
+24. É onde o oficial aparece.
+
+868
+00:58:16,000 --> 00:58:20,000
+(Z2 Tech)
+Eh, ah, beleza. A gente tá nesse projeto
+
+869
+00:58:20,000 --> 00:58:24,000
+(Z2 Tech)
+aqui. Eh, e eu já mandei para verificação
+
+870
+00:58:24,000 --> 00:58:28,000
+(Z2 Tech)
+o todos os que eu que eu quero. OK. Então, 25 aqui
+
+871
+00:58:28,000 --> 00:58:32,000
+(Z2 Tech)
+do Talhã 1,25 da fazenda total. Tanã.
+
+872
+00:58:32,000 --> 00:58:36,000
+(Z2 Tech)
+Eh, aí a gente vai querer ter
+
+873
+00:58:36,000 --> 00:58:40,000
+(Paulo Rocha)
+tava
+-
+
+(Z2 Tech)
+esse, tipo esse dashboard assim, esse se eu entrar
+
+874
+00:58:40,000 --> 00:58:44,000
+(Z2 Tech)
+em Henrique aqui vai ter uma nova aba e dashboard
+
+875
+00:58:44,000 --> 00:58:48,000
+(Z2 Tech)
+do projeto finalizado. Seria isso. Vamos ter
+
+876
+00:58:48,000 --> 00:58:52,000
+(Paulo Rocha)
+Não
+-
+
+(Z2 Tech)
+isso. Vocês a gente hoje, por
+
+877
+00:58:52,000 --> 00:58:56,000
+(Z2 Tech)
+exemplo, hoje a gente tem o dashboard do carbono e
+
+878
+00:58:56,000 --> 00:59:00,000
+(Paulo Rocha)
+entendi. Uhum.
+-
+
+(Z2 Tech)
+emissão do milho, porque eu finalizei o
+
+879
+00:59:00,000 --> 00:59:04,000
+(Paulo Rocha)
+Uhum.
+-
+
+(Z2 Tech)
+milho. Agora eu finalizei um projeto, então eu tenho que somar esse do milho, tenho que somar o
+
+880
+00:59:04,000 --> 00:59:08,000
+(Z2 Tech)
+do outro talhão, tem que somar do outra fazenda, do outro talhão que vai fazer a
+
+881
+00:59:08,000 --> 00:59:12,000
+(Z2 Tech)
+média ponderada, que é o que a gente vai enviar pros caras, que é o resultado
+
+882
+00:59:12,000 --> 00:59:16,000
+(Z2 Tech)
+final. A gente tem que mostrar isso, certo? para nós também aqui na
+
+883
+00:59:16,000 --> 00:59:20,000
+(Ruan Carlos Oliveira)
+Não
+
+884
+00:59:20,000 --> 00:59:24,000
+(Paulo Rocha)
+Sim, eu acho, eu é, não, eu entendi. Eu acho que assim, o
+-
+
+(Z2 Tech)
+plataforma.
+-
+
+(Ruan Carlos Oliveira)
+tô entendendo.
+
+885
+00:59:24,000 --> 00:59:28,000
+(Paulo Rocha)
+projeto em si, se ele for múltiplos anos, ele continua,
+
+886
+00:59:28,000 --> 00:59:32,000
+(Paulo Rocha)
+né? Até porque eu uso aquele dado do ano que passou para eu poder colocar
+-
+
+(Ruan Carlos Oliveira)
+F.
+
+887
+00:59:32,000 --> 00:59:36,000
+(Paulo Rocha)
+num gráfico, esse tipo de coisa, entendeu? Eh, eu acho que aquele
+-
+
+(Z2 Tech)
+Não.
+
+888
+00:59:36,000 --> 00:59:40,000
+(Paulo Rocha)
+que fechou fica ali, pum, travado ali dentro ali. O cara consegue ver só
+
+889
+00:59:40,000 --> 00:59:44,000
+(Paulo Rocha)
+o dele, talvez, alguma coisa assim. Mas o projeto continua. Ele pode ter
+-
+
+(Z2 Tech)
+Tá. Uhum.
+
+890
+00:59:44,000 --> 00:59:48,000
+(Paulo Rocha)
+os talhões lá do ano 24, do ano, pode ter
+
+891
+00:59:48,000 --> 00:59:52,000
+(Paulo Rocha)
+tudo,
+-
+
+(Z2 Tech)
+Não. Beleza. Tá. Então a gente faz uma aqui. Quando eu entro
+
+892
+00:59:52,000 --> 00:59:56,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+num projeto, hoje eu só tenho fazendas. A gente vai ter dashboards também
+
+893
+00:59:56,000 --> 01:00:00,000
+(Z2 Tech)
+que vai ser o consolidar. Vai ser tipo, eu finalizei
+
+894
+01:00:00,000 --> 01:00:04,000
+(Z2 Tech)
+2025, aí vai tá 2025 que vai ser os que eu já mandei pra
+
+895
+01:00:04,000 --> 01:00:08,000
+(Z2 Tech)
+auditoria e já foi aprovado. 202 eu já fiz isso. De
+
+896
+01:00:08,000 --> 01:00:12,000
+(Z2 Tech)
+2024 eu já fiz. Mas beleza, só mais questão de
+
+897
+01:00:12,000 --> 01:00:16,000
+(Z2 Tech)
+visualização.
+
+898
+01:00:16,000 --> 01:00:20,000
+(Z2 Tech)
+Eh, eu tenho estalão Henrique aqui. Outra
+
+899
+01:00:20,000 --> 01:00:24,000
+(Paulo Rocha)
+Угу.
+-
+
+(Z2 Tech)
+pergunta, ele só tem o
+
+900
+01:00:24,000 --> 01:00:28,000
+(Z2 Tech)
+milho 2025, finge que o feijão não existia. Se eu finalizar o
+
+901
+01:00:28,000 --> 01:00:32,000
+(Z2 Tech)
+projeto, eu automaticamente seleciono ele ou a gente vai querer
+
+902
+01:00:32,000 --> 01:00:36,000
+(Z2 Tech)
+obrigar o cara a selecionar um por um para ele ter certeza o que ele tá
+
+903
+01:00:36,000 --> 01:00:40,000
+(Paulo Rocha)
+Uhum. Não
+-
+
+(Z2 Tech)
+fazendo?
+-
+
+(Ruan Carlos Oliveira)
+Vem
+
+904
+01:00:40,000 --> 01:00:44,000
+(Z2 Tech)
+Ó, finalizei o vou finalizar o
+
+905
+01:00:44,000 --> 01:00:48,000
+(Z2 Tech)
+projeto do Vou finalizar o projeto assim. Vou mandar o escopo 2025 do Henrique paraa
+
+906
+01:00:48,000 --> 01:00:52,000
+(Paulo Rocha)
+entendi. Aham.
+-
+
+(Z2 Tech)
+auditoria. Aí eu clico aqui, finalizar esse
+
+907
+01:00:52,000 --> 01:00:56,000
+(Z2 Tech)
+projeto ano 2025. Eu vou fazer
+
+908
+01:00:56,000 --> 01:01:00,000
+(Paulo Rocha)
+Aham. Não, de novo, olha, eu acho que a gente não deve
+-
+
+(Z2 Tech)
+eu entrar
+
+909
+01:01:00,000 --> 01:01:04,000
+(Paulo Rocha)
+finalizar o projeto em fazenda,
+
+910
+01:01:04,000 --> 01:01:08,000
+(Paulo Rocha)
+em essas coisas. Eu acho que a gente deve usar aquela tela onde
+
+911
+01:01:08,000 --> 01:01:12,000
+(Paulo Rocha)
+ele seleciona as coisas para ele poder pegar os cálculos que estão ali,
+-
+
+(Ruan Carlos Oliveira)
+No.
+
+912
+01:01:12,000 --> 01:01:16,000
+(Paulo Rocha)
+entendeu? Eu acho que de novo nessas é sempre aqui,
+-
+
+(Z2 Tech)
+naquele essa
+
+913
+01:01:16,000 --> 01:01:20,000
+(Paulo Rocha)
+sempre que vou finalizar é aqui, entendeu?
+-
+
+(Z2 Tech)
+aqui. Entendi. Então, o plano é fazer
+
+914
+01:01:20,000 --> 01:01:24,000
+(Z2 Tech)
+uma, é tipo, eu quero mandar um projeto pra
+
+915
+01:01:24,000 --> 01:01:28,000
+(Paulo Rocha)
+É, ou eu aqui é ou
+-
+
+(Z2 Tech)
+auditoria, aí vou clicar e vou abrir isso daqui. A pergunta
+
+916
+01:01:28,000 --> 01:01:32,000
+(Paulo Rocha)
+eu mando paraa auditoria,
+-
+
+(Z2 Tech)
+é: ou eu
+
+917
+01:01:32,000 --> 01:01:36,000
+(Paulo Rocha)
+né, ou eu comparo. É isso
+-
+
+(Z2 Tech)
+comparo? Entendi.
+
+918
+01:01:36,000 --> 01:01:40,000
+(Paulo Rocha)
+aí. Aí ou eu não sei se seria auditoria, né?
+-
+
+(Z2 Tech)
+Aí minha pergunta
+
+919
+01:01:40,000 --> 01:01:44,000
+(Paulo Rocha)
+Talvez eh fecha o projeto com auditoria ou só fecha o projeto
+
+920
+01:01:44,000 --> 01:01:48,000
+(Paulo Rocha)
+ou eu comparo, entendeu?
+-
+
+(Z2 Tech)
+é essa? Aham. A ideia é assim, ó. Eu
+
+921
+01:01:48,000 --> 01:01:52,000
+(Z2 Tech)
+tô finalizando, não finalizando, eu vou mandar pra editoria o Scope
+
+922
+01:01:52,000 --> 01:01:56,000
+(Z2 Tech)
+2026 do projeto TGGG. No projeto
+
+923
+01:01:56,000 --> 01:02:00,000
+(Z2 Tech)
+TDG, na fazenda ASDA, eu no talhão Eduardo, eu
+
+924
+01:02:00,000 --> 01:02:04,000
+(Z2 Tech)
+tenho só esse esse
+
+925
+01:02:04,000 --> 01:02:08,000
+(Z2 Tech)
+cálculo, ele já vai automático para essa finalização de projeto ou eu vou
+
+926
+01:02:08,000 --> 01:02:12,000
+(Z2 Tech)
+obrigar o cara vir aqui clicar para ele ter certeza do que ele fez? Essa aqui
+
+927
+01:02:12,000 --> 01:02:16,000
+(Z2 Tech)
+são os poucos decisões, são meio de Uy, vai ser meio na USA.
+
+928
+01:02:16,000 --> 01:02:20,000
+(Z2 Tech)
+Aí só por isso que eu tô falando, mas só para vocês entenderem. Mas vamos fazer
+
+929
+01:02:20,000 --> 01:02:24,000
+(Paulo Rocha)
+Aham. Não é
+-
+
+(Z2 Tech)
+ser obrigado ao cara clicar para ele ter ele confirmou o que
+
+930
+01:02:24,000 --> 01:02:28,000
+(Paulo Rocha)
+isso, isso aí sim, porque o que que pode acontecer, né?
+-
+
+(Z2 Tech)
+ele
+
+931
+01:02:28,000 --> 01:02:32,000
+(Paulo Rocha)
+Projeto aqui vai ser um só, né? Ou o cara pode ter dois, mas geralmente vai ser um projeto só.
+
+932
+01:02:32,000 --> 01:02:36,000
+(Paulo Rocha)
+Projeto Henrique. Dentro do projeto Henrique vai ter
+
+933
+01:02:36,000 --> 01:02:40,000
+(Paulo Rocha)
+as fazendas, né? Eh, aí ele
+-
+
+(Z2 Tech)
+selecionou.
+
+934
+01:02:40,000 --> 01:02:44,000
+(Paulo Rocha)
+seleciona as fazendas que ele quer. Dentro dessas fazendas vão ter os talhões. Aí ele
+-
+
+(Z2 Tech)
+Mhm.
+
+935
+01:02:44,000 --> 01:02:48,000
+(Paulo Rocha)
+também seleciona quais são os talhões que ele quer, entendeu? que aí dentro desses
+
+936
+01:02:48,000 --> 01:02:52,000
+(Paulo Rocha)
+talhões pode ser um talhão, que
+-
+
+(Z2 Tech)
+Aham. Tem os
+
+937
+01:02:52,000 --> 01:02:56,000
+(Paulo Rocha)
+é a fazenda inteira, eh pode
+
+938
+01:02:56,000 --> 01:03:00,000
+(Paulo Rocha)
+ser eh vários talhões, que é um talhão que é a fazenda inteira mais os
+-
+
+(Z2 Tech)
+cálculos.
+
+939
+01:03:00,000 --> 01:03:04,000
+(Paulo Rocha)
+flashes, ou pode ter eh vários
+
+940
+01:03:04,000 --> 01:03:08,000
+(Paulo Rocha)
+talhões, sendo cinco talhões oficiais, mas tem cada um
+
+941
+01:03:08,000 --> 01:03:12,000
+(Paulo Rocha)
+tem cinco testes ali. ele vai selecionar só aquele que ele que é realmente
+
+942
+01:03:12,000 --> 01:03:16,000
+(Paulo Rocha)
+que que verifica, entendeu? Aí
+-
+
+(Z2 Tech)
+Vai.
+
+943
+01:03:16,000 --> 01:03:20,000
+(Paulo Rocha)
+por trás disso é que tá o negócio, por trás disso é que entra os
+
+944
+01:03:20,000 --> 01:03:24,000
+(Paulo Rocha)
+cálculos de média ponderada, que no fim eu vou verificar,
+-
+
+(Z2 Tech)
+Aham.
+
+945
+01:03:24,000 --> 01:03:28,000
+(Paulo Rocha)
+eu volto para essa telinha que eu vou verificar só o projeto do
+
+946
+01:03:28,000 --> 01:03:32,000
+(Paulo Rocha)
+do Enlig, entendeu? Que é a área total daquele projeto
+
+947
+01:03:32,000 --> 01:03:36,000
+(Paulo Rocha)
+ali, entendeu? Para aquela cultura
+-
+
+(Z2 Tech)
+Aham. Aham. Não,
+
+948
+01:03:36,000 --> 01:03:40,000
+(Paulo Rocha)
+específica.
+-
+
+(Z2 Tech)
+fechou. Fechou. Fechou. Fechou. Vai ser como uma
+
+949
+01:03:40,000 --> 01:03:44,000
+(Z2 Tech)
+comparação. Aí nesse caso, por isso você falou que tem que ser mais de quatro, né? Porque se o cara
+
+950
+01:03:44,000 --> 01:03:48,000
+(Z2 Tech)
+tiver três fazendas com quatro salhões cada, eu vou precisar
+
+951
+01:03:48,000 --> 01:03:52,000
+(Paulo Rocha)
+Isso. Se ele tiver 10 fazendas, eu ten que selecionar
+-
+
+(Z2 Tech)
+selecionar 12.
+
+952
+01:03:52,000 --> 01:03:56,000
+(Paulo Rocha)
+10 fazendas,
+-
+
+(Z2 Tech)
+10 fazendas e cada um dos talhões da fazenda com cada
+
+953
+01:03:56,000 --> 01:04:00,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+um dos cálculos. Se não for uma um talhão só, não. Beleza.
+
+954
+01:04:00,000 --> 01:04:04,000
+(Paulo Rocha)
+Não. Aí, ó, deixa eu pensar aqui. Aí, nesse
+-
+
+(Z2 Tech)
+Então, acho que aqui tá.
+
+955
+01:04:04,000 --> 01:04:08,000
+(Paulo Rocha)
+nesse caso, talvez o que o que dê para fazer
+
+956
+01:04:08,000 --> 01:04:12,000
+(Paulo Rocha)
+é
+
+957
+01:04:12,000 --> 01:04:16,000
+(Paulo Rocha)
+eh deixa eu
+
+958
+01:04:16,000 --> 01:04:20,000
+(Paulo Rocha)
+pensar que uma coisa é eu comparar entre
+
+959
+01:04:20,000 --> 01:04:24,000
+(Paulo Rocha)
+fazendas por comparação. Uma coisa é eu comparar dentro da
+
+960
+01:04:24,000 --> 01:04:28,000
+(Paulo Rocha)
+fazenda dos talhões, só por só por compração. E
+
+961
+01:04:28,000 --> 01:04:32,000
+(Paulo Rocha)
+outra coisa é o dado que eu vou pedir para poder fazer a
+
+962
+01:04:32,000 --> 01:04:36,000
+(Paulo Rocha)
+minha verificação, entendeu? Aí vai ser um
+
+963
+01:04:36,000 --> 01:04:40,000
+(Paulo Rocha)
+número único só, entendeu? Não vai ter vários gráficos.
+
+964
+01:04:40,000 --> 01:04:44,000
+(Paulo Rocha)
+É o valor de pegada de carbono, o valor de sequestro de
+
+965
+01:04:44,000 --> 01:04:48,000
+(Paulo Rocha)
+carbono para aquele ano, entendeu? vai ser, eu
+
+966
+01:04:48,000 --> 01:04:52,000
+(Paulo Rocha)
+acho que esse esse dash aí ele vai ser mais simples do
+
+967
+01:04:52,000 --> 01:04:56,000
+(Paulo Rocha)
+que o dash do comparação de fazendas,
+
+968
+01:04:56,000 --> 01:05:00,000
+(Paulo Rocha)
+entendeu? Que é um dash pro
+-
+
+(Z2 Tech)
+Aham. É, vai ser esse dash
+
+969
+01:05:00,000 --> 01:05:04,000
+(Paulo Rocha)
+projeto.
+-
+
+(Z2 Tech)
+aqui, só que com os dados
+
+970
+01:05:04,000 --> 01:05:08,000
+(Paulo Rocha)
+Isso. Isso aí vai ter a CV, vai
+
+971
+01:05:08,000 --> 01:05:12,000
+(Paulo Rocha)
+ter, talvez vai ser até até mais simples do que isso, né? Vou trazer
+
+972
+01:05:12,000 --> 01:05:16,000
+(Paulo Rocha)
+os dados que realmente importam, né? é a pegada de
+-
+
+(Z2 Tech)
+ponderados.
+
+973
+01:05:16,000 --> 01:05:20,000
+(Paulo Rocha)
+carbono e a emissão pro hectárea. Aí quando eu vou pro
+
+974
+01:05:20,000 --> 01:05:24,000
+(Paulo Rocha)
+remoção, é a remoção dentro daquele período para
+
+975
+01:05:24,000 --> 01:05:28,000
+(Paulo Rocha)
+aquela cultura, né, em tonelada de carbono e
+-
+
+(Z2 Tech)
+Ja. Mhm.
+
+976
+01:05:28,000 --> 01:05:32,000
+(Paulo Rocha)
+CO2. Quando eu vou para eh agricultura regenerativa, qual foi o meu
+
+977
+01:05:32,000 --> 01:05:36,000
+(Paulo Rocha)
+scoring dentro daquele ano,
+-
+
+(Z2 Tech)
+daquele ano. Uhum. Uhum.
+
+978
+01:05:36,000 --> 01:05:40,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+Uhum. Fechou. Fechou. Não. Beleza.
+-
+
+(Ruan Carlos Oliveira)
+e
+
+979
+01:05:40,000 --> 01:05:44,000
+(Z2 Tech)
+Então. Não, eu acho que isso matou para c******. Matou muita coisa. Muita coisa.
+
+980
+01:05:44,000 --> 01:05:48,000
+(Z2 Tech)
+Eh, o que que a gente precisa de vocês?
+
+981
+01:05:48,000 --> 01:05:52,000
+(Z2 Tech)
+Então, ainda eh, deixa eu ver se eu
+
+982
+01:05:52,000 --> 01:05:56,000
+(Z2 Tech)
+até criei os trem
+
+983
+01:05:56,000 --> 01:06:00,000
+(Z2 Tech)
+aqui. Pera aí
+-
+
+(Ruan Carlos Oliveira)
+Mira
+
+984
+01:06:00,000 --> 01:06:04,000
+(Paulo Rocha)
+Ja.
+-
+
+(Z2 Tech)
+rapidinho. E
+
+985
+01:06:04,000 --> 01:06:08,000
+(Z2 Tech)
+a, ó, a gente precisa desses
+
+986
+01:06:08,000 --> 01:06:12,000
+(Z2 Tech)
+dessas informações. O que que é um dashboard interessante? Qual que é o
+
+987
+01:06:12,000 --> 01:06:16,000
+(Z2 Tech)
+dado que vocês querem mostrar no PDF? Que que vocês querem mostrar no QR code? Isso
+
+988
+01:06:16,000 --> 01:06:20,000
+(Z2 Tech)
+aí a gente tá precisando. Vão pensando aí, ainda temos um
+
+989
+01:06:20,000 --> 01:06:24,000
+(Z2 Tech)
+tempinho, mas vocês falar que é interessante, vocês vão mandando. Vocês
+-
+
+(Ruan Carlos Oliveira)
+Beleza.
+
+990
+01:06:24,000 --> 01:06:28,000
+(Z2 Tech)
+conseguir montar um modelo, pode ser um modelo bem simples desenhar à
+
+991
+01:06:28,000 --> 01:06:32,000
+(Z2 Tech)
+mão, pode ser um modelo mais bonitinho que a gente segue mais fiel. Fica à
+
+992
+01:06:32,000 --> 01:06:36,000
+(Z2 Tech)
+vontade de vocês, mas a gente precisa ter informação de quem conhece mesmo,
+
+993
+01:06:36,000 --> 01:06:40,000
+(Z2 Tech)
+o que que a gente mostra.
+
+994
+01:06:40,000 --> 01:06:44,000
+(Z2 Tech)
+O, ah, e uma dúvida, é mais uma, o Excel que a gente vai fazer
+
+995
+01:06:44,000 --> 01:06:48,000
+(Z2 Tech)
+exportar, a gente vai seguir exatamente o que vocês mandaram ou
+
+996
+01:06:48,000 --> 01:06:52,000
+(Z2 Tech)
+aquilo lá é de vocês, eh, conhecimento seu e você quer mandar
+
+997
+01:06:52,000 --> 01:06:56,000
+(Paulo Rocha)
+B o que a
+-
+
+(Z2 Tech)
+um um Excel diferente, mais simples? Como que vocês
+
+998
+01:06:56,000 --> 01:07:00,000
+(Paulo Rocha)
+gente o que a gente tinha falado era variáveis na
+
+999
+01:07:00,000 --> 01:07:04,000
+(Paulo Rocha)
+coluna, fazendas, não. é variáveis nas
+-
+
+(Z2 Tech)
+querem?
+
+1000
+01:07:04,000 --> 01:07:08,000
+(Paulo Rocha)
+linhas, né, e fazendas nas
+-
+
+(Ruan Carlos Oliveira)
+Sim, das colunas, né? É.
+
+1001
+01:07:08,000 --> 01:07:12,000
+(Paulo Rocha)
+colunas. Só o dado bruto.
+-
+
+(Z2 Tech)
+Não
+-
+
+(Ruan Carlos Oliveira)
+E sem o cálculo, sem nada, assim, só o resultado. Limpo, dado bruto, limpo
+
+1002
+01:07:12,000 --> 01:07:16,000
+(Paulo Rocha)
+Isso.
+-
+
+(Z2 Tech)
+entendi. Nem n nem no de
+-
+
+(Ruan Carlos Oliveira)
+e seco, sem a, sem o cálculo por de trás, nem nada, é só o
+
+1003
+01:07:16,000 --> 01:07:20,000
+(Paulo Rocha)
+Eh, não, ureia super
+-
+
+(Z2 Tech)
+vocês.
+-
+
+(Ruan Carlos Oliveira)
+resultado. É claro.
+
+1004
+01:07:20,000 --> 01:07:24,000
+(Paulo Rocha)
+simples. Eh, sei lá,
+-
+
+(Ruan Carlos Oliveira)
+É.
+
+1005
+01:07:24,000 --> 01:07:28,000
+(Paulo Rocha)
+combustível. Aí aqui por fazenda, tantos litros, tanto pá,
+
+1006
+01:07:28,000 --> 01:07:32,000
+(Paulo Rocha)
+entendeu? Tantos quilo, tantos. Só
+-
+
+(Z2 Tech)
+Beleza. Entendi. Mas auditoria o cara
+
+1007
+01:07:32,000 --> 01:07:36,000
+(Paulo Rocha)
+isso aí paraa
+-
+
+(Z2 Tech)
+não tem que ver o
+
+1008
+01:07:36,000 --> 01:07:40,000
+(Paulo Rocha)
+auditoria, o cara ele vai ter, talvez, a gente pode fornecer isso até de uma
+
+1009
+01:07:40,000 --> 01:07:44,000
+(Paulo Rocha)
+forma separada e um Excel que vai ele vai tá só
+-
+
+(Ruan Carlos Oliveira)
+Auditou.
+
+1010
+01:07:44,000 --> 01:07:48,000
+(Paulo Rocha)
+anexado lá. Quais são eh os
+
+1011
+01:07:48,000 --> 01:07:52,000
+(Paulo Rocha)
+fatores de emissão, qual é a fonte daquele fator
+
+1012
+01:07:52,000 --> 01:07:56,000
+(Paulo Rocha)
+de emissão e é
+-
+
+(Ruan Carlos Oliveira)
+É, e é isso mesmo. O que ele precisa saber é isso.
+
+1013
+01:07:56,000 --> 01:08:00,000
+(Paulo Rocha)
+isso, entendeu? É.
+-
+
+(Z2 Tech)
+cálculo. Tá fechou. Tá fechou. Quando
+-
+
+(Ruan Carlos Oliveira)
+Fonte de o fator e a origem, né, do dado, né? Qual é
+
+1014
+01:08:00,000 --> 01:08:04,000
+(Paulo Rocha)
+Aí é tipo, ele vai pode falar,
+-
+
+(Z2 Tech)
+você não, beleza.
+-
+
+(Ruan Carlos Oliveira)
+a Qual é a fonte
+
+1015
+01:08:04,000 --> 01:08:08,000
+(Paulo Rocha)
+desculpa.
+-
+
+(Z2 Tech)
+Quando não é falar quando a gente tiver a gente checa bonitinho que aí
+
+1016
+01:08:08,000 --> 01:08:12,000
+(Paulo Rocha)
+É. E é e
+-
+
+(Z2 Tech)
+vocês vocês dão um aval falando beleza, isso tá liberado, isso não tá,
+
+1017
+01:08:12,000 --> 01:08:16,000
+(Paulo Rocha)
+ele pode ter ele pode ter acesso a esse dado primário também, que é
+-
+
+(Z2 Tech)
+mas só pra gente
+
+1018
+01:08:16,000 --> 01:08:20,000
+(Paulo Rocha)
+baixar a planilha para saber por fazenda o quanto, parará,
+-
+
+(Z2 Tech)
+fazer.
+-
+
+(Ruan Carlos Oliveira)
+M.
+
+1019
+01:08:20,000 --> 01:08:24,000
+(Paulo Rocha)
+pororô e os e os PDFs. Tranquilo?
+-
+
+(Z2 Tech)
+Aham.
+
+1020
+01:08:24,000 --> 01:08:28,000
+(Paulo Rocha)
+E a gente vai, né, fornecer que vai ser uma
+
+1021
+01:08:28,000 --> 01:08:32,000
+(Paulo Rocha)
+planilha padrão para todo mundo, que é
+
+1022
+01:08:32,000 --> 01:08:36,000
+(Paulo Rocha)
+isso, ponte, fator de emissão, é,
+-
+
+(Z2 Tech)
+Aham. Da onde que vem? Não.
+
+1023
+01:08:36,000 --> 01:08:40,000
+(Z2 Tech)
+Beleza, mano. Beleza. Acho que aqui já resolveu o público para
+
+1024
+01:08:40,000 --> 01:08:44,000
+(Z2 Tech)
+c******. Aí eu vamos que que eu vou fazer?
+
+1025
+01:08:44,000 --> 01:08:48,000
+(Paulo Rocha)
+entendeu?
+-
+
+(Z2 Tech)
+Vou de novo juntar essa reunião, ler que que eu
+
+1026
+01:08:48,000 --> 01:08:52,000
+(Z2 Tech)
+a falou. Eh, não vou confirmar com vocês, eu já vou tentar
+
+1027
+01:08:52,000 --> 01:08:56,000
+(Z2 Tech)
+fazer o design. E aí a gente bate pelo design. Aí nesse design eu vou
+
+1028
+01:08:56,000 --> 01:09:00,000
+(Z2 Tech)
+eu vou precisar que vocês olham realmente tipo os dados, os cambos, as coisas que
+
+1029
+01:09:00,000 --> 01:09:04,000
+(Z2 Tech)
+estão escritas, que é para ver se a lógica tá, mas a gente passa
+
+1030
+01:09:04,000 --> 01:09:08,000
+(Z2 Tech)
+junto, eu mostro como se fosse uma apresentação e aí a gente mata. Se tiver
+
+1031
+01:09:08,000 --> 01:09:12,000
+(Paulo Rocha)
+Beleza.
+-
+
+(Z2 Tech)
+OK, a gente desenvolve. Pode
+
+1032
+01:09:12,000 --> 01:09:16,000
+(Z2 Tech)
+ser, tendo o design assim, a gente confirmado, o desenvolvimento vai ser muito
+
+1033
+01:09:16,000 --> 01:09:20,000
+(Z2 Tech)
+muito muito mais rápido. Por isso que eu tô, a gente tá fazendo mais passo a passo
+
+1034
+01:09:20,000 --> 01:09:24,000
+(Z2 Tech)
+assim, mas fechou então. Fechou então muito
+
+1035
+01:09:24,000 --> 01:09:28,000
+(Paulo Rocha)
+Show. É, nós tamamos junto. Valeu. Tchau.
+-
+
+(Z2 Tech)
+obrigado vocês.
+-
+
+(Ruan Carlos Oliveira)
+Beleza. Valeu, moçada. Tchau.
+
+1036
+01:09:28,000 --> 01:09:32,000
+(Paulo Rocha)
+Tchau. Aqui registra o João lá. Tá. Eu tentei conversar com
+-
+
+(Z2 Tech)
+Boa sexta aí. Ah,
+
+1037
+01:09:32,000 --> 01:09:36,000
+(Paulo Rocha)
+a ontem eu não consegui.
+-
+
+(Z2 Tech)
+é.
+-
+
+(Ruan Carlos Oliveira)
+Tchau. Ela tá bem ocupada, viu? Eu também tô
+
+1038
+01:09:36,000 --> 01:09:40,000
+(Paulo Rocha)
+É, tá difícil. Falei, ele falou,
+-
+
+(Ruan Carlos Oliveira)
+falando de um projeto. Mas o João, aí tu tu falou do Cascai com ele já ou não?
+
+1039
+01:09:40,000 --> 01:09:44,000
+(Paulo Rocha)
+ficou feliz. É só manda lá e
+-
+
+(Ruan Carlos Oliveira)
+Ah! Ah! Ah!
+
+1040
+01:09:44,000 --> 01:09:48,000
+(Paulo Rocha)
+bota o menino, bota o menino que ele vai que ele vai trabalhar. Aí
+-
+
+(Z2 Tech)
+que ele quer
+-
+
+(Ruan Carlos Oliveira)
+Boa! Aham. Vai com sangue no olho,
+
+1041
+01:09:48,000 --> 01:09:52,000
+(Paulo Rocha)
+eu eh agora tô tô tentando puxar daí de cantinho.
+-
+
+(Ruan Carlos Oliveira)
+hein? Vai com sangue no olho,
+
+1042
+01:09:52,000 --> 01:09:56,000
+(Paulo Rocha)
+O João já já topou. Ele já ia fazendo de graça, pagando. Agora ele tá mais empolgado
+-
+
+(Ruan Carlos Oliveira)
+hein? Beleza.
+
+1043
+01:09:56,000 --> 01:10:00,000
+(Paulo Rocha)
+a mim.
+-
+
+(Ruan Carlos Oliveira)
+Boa, boa, boa, boa. Fechou. A gente combina aí então
+
+1044
+01:10:00,000 --> 01:10:04,000
+(Paulo Rocha)
+Alo. Ciao.
+-
+
+(Z2 Tech)
+trabalhar. Falo para
+-
+
+(Ruan Carlos Oliveira)
+depois. Valeu, Ciao.
+
+1045
+01:10:04,000 --> 01:10:08,000
+(Z2 Tech)
+vocês,
+
