@@ -1,11 +1,14 @@
 {
   "mcpServers": {
-    "codegraph": {
+    "codegraph-gaia-api": {
       "type": "stdio",
-      "command": "bash",
-      "args": [
-        "./.opencode/bin/codegraph-mcp.sh"
-      ]
+      "command": "codegraph",
+      "args": ["serve", "--mcp", "--path", "gaia-api"]
+    },
+    "codegraph-gaia-web": {
+      "type": "stdio",
+      "command": "codegraph",
+      "args": ["serve", "--mcp", "--path", "gaia-web"]
     },
     "postgres-readonly": {
       "type": "stdio",

@@ -4,7 +4,7 @@ Fontes: [Resosta_paulo.txt](Resosta_paulo.txt) e [resosta_ruan.txt](resosta_ruan
 Ruan marcou opção em todas as perguntas. Paulo respondeu quase tudo em
 comentário e disse que não entendeu C6, C7, M1 e o CSV do E1. Regras do cálculo
 oficial citadas como CF-RN-n e CF-P-n, de
-[../00_calculo_final/07-versao-final-1.md](../00_calculo_final/07-versao-final-1.md).
+[fechamento business rules v1](../../docs/features/fechamento/business-rules/v1.md).
 
 ## O que mudou no nosso entendimento
 

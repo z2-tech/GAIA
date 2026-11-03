@@ -33,15 +33,15 @@ para cá. Ao codar no `gaia-web`, carregue o doc relevante **antes** de escrever
 
 ## Agent
 
-Entry point de código frontend: `.opencode/agents/senior-nextjs.md` (orchestrator).
-Despacha para sub-agents por área, cada um lê o doc canônico correspondente:
+Entry point de código frontend: skill `gaia-nextjs` (`gaia-web/.agents/skills/gaia-nextjs/`).
+Cada referência da skill lê o doc canônico correspondente:
 
-| Sub-agent | Doc fonte |
+| Referência | Doc fonte |
 |-----------|-----------|
-| `form-agent` | `forms.md` · `form-template.md` |
-| `table-agent` | `table.md` |
-| `api-layer-agent` | `api-layer.md` |
-| `design-agent` | `design-system.md` · `principles.md` |
+| `form` | `forms.md` · `form-template.md` |
+| `table` | `table.md` |
+| `api-layer` | `api-layer.md` |
+| `design` | `design-system.md` · `principles.md` |
 | `i18n-key-validator` | `localization.md` |
 
 ## Roadmap de padronização (gates)
@@ -51,4 +51,4 @@ Despacha para sub-agents por área, cada um lê o doc canônico correspondente:
 | 2 — Princípios + Fundação | 🟢 aprovado | `principles.md` + `architecture.md` (+ error model em `api-layer.md`) |
 | 3 — Libs & tooling | 🟢 aprovado | [`libs-tooling.md`](libs-tooling.md) — Biome, Vitest, husky, commitlint, `.claude/hooks` |
 | 4 — Padrões de código | 🟢 aprovado | [`code-standards.md`](code-standards.md) — TS, React, erro, comentários, commits, mapa enforcement |
-| 8 — IA-first | 🟢 parcial | agents (`i18n-key-validator`) + skills (`new-feature`) movidos p/ GAIA; hooks no gaia-web |
+| 8 — IA-first | 🟢 parcial | skill `gaia-nextjs` (inclui `i18n-key-validator`, `new-feature`, `webperf`) + `shadcn` no gaia-web; hooks no GAIA `.claude/settings.json` |

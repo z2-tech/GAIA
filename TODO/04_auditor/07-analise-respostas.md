@@ -3,10 +3,10 @@
 Fonte: [Resosta_paulo.txt](Resosta_paulo.txt). Só o Paulo respondeu este
 questionário. Segunda fonte: o que Paulo e Ruan já disseram sobre auditor no
 questionário do cálculo final (J5, J6, J7, 4, 16, 20, 23 e F1), analisado em
-[../00_calculo_final/06-analise-respostas.md](../00_calculo_final/06-analise-respostas.md).
+[fechamento analysis round 1](../../docs/features/fechamento/rounds/1/analysis.md).
 
 Regras do cálculo final citadas como CF-RN-n e CF-P-n
-([07 do cálculo final](../00_calculo_final/07-versao-final-1.md)).
+([07 do cálculo final](../../docs/features/fechamento/business-rules/v1.md)).
 
 ## O que mudou no nosso entendimento
 

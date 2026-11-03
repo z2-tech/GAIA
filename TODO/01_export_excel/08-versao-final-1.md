@@ -2,7 +2,7 @@
 
 Data: 02/10/2026. Base: reunião de 29/09, respostas do Paulo Rocha e do Ruan
 Carlos Oliveira ao questionário ([análise](07-analise-respostas.md)), o
-[cálculo oficial v1](../00_calculo_final/07-versao-final-1.md) (regras CF-RN-n)
+[cálculo oficial v1](../../docs/features/fechamento/business-rules/v1.md) (regras CF-RN-n)
 e o código atual da `gaia-api`.
 
 Regras marcadas com **(P-n)** são provisórias: seguem a proposta da Z2 até a

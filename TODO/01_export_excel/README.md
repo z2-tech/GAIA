@@ -1,7 +1,7 @@
 # 01 · Export Excel dos dados brutos
 
 Feature 1 do [escopo de 29/09/2026](../../docs/references/meetings/29-09-26-estrategia-peterson-design-comparacao-mobile/29-09-26-escopo-export-qrcode-auditor.md).
-Depende da [feature 0](../00_calculo_final/README.md): o export mostra o cálculo
+Depende da [feature 0](../../docs/features/fechamento/README.md): o export mostra o cálculo
 oficial de cada talhão, não as simulações.
 
 Estado: **discovery**. Nada criado no Plane. Questionário respondido por Paulo e

@@ -11,3 +11,6 @@ gaia-web/
 # Scraped artifacts and OS junk — never commit
 *.html
 *:Zone.Identifier
+
+# Local code index, per machine
+.codegraph/

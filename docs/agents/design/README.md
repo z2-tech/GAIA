@@ -3,7 +3,7 @@
 Referência do que o design **define**. O arquivo Penpot é a fonte da verdade visual do gaia-web: o código será refatorado para seguir o design. Não o contrário.
 
 - **Como operar o Penpot:** skill `penpot-design` (`.agents/skills/penpot-design/`).
-- **Quem executa:** agente `penpot-designer`.
+- **Quem executa:** `/design` com o adaptador `/penpot`, mais a skill `penpot-design` (scripts do GAIA).
 - **Histórico, status e decisões:** `docs/plans/penpot-design-system.md`.
 - **Como o código implementa:** `docs/agents/web/design-system.md` (atualizado depois da migração, Parte 1).
 

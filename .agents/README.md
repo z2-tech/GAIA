@@ -1,12 +1,13 @@
-# GAIA — Harness-Agnostic Agent Architecture
+# GAIA — Harness-Agnostic Agent Layer
 
-**`.opencode/agents/`** is the single source of truth. All harnesses point to it.
+GAIA follows the ia-lab standard: workflow skills in `.claude/skills/` write their results to `docs/`, and `/start` proposes the next one. Routing lives in the root `AGENTS.md`.
 
 ```
-.opencode/agents/              ← 18 agents (single source of truth)
-     ↑ load from
-.claude/agents/                ← 18 wrappers → .opencode/agents/
-.cursor/rules/                 ← 1 rule → .opencode/agents/
+.claude/skills/                ← workflow skills + links to .agents/skills/
+.agents/skills/                ← project tools (single copy)
+.opencode/agents/              ← sustainability-specialist (until /sync route)
+.claude/agents/                ← its wrapper, plus scout and researcher
+.cursor/rules/                 ← 1 rule → AGENTS.md
 .github/copilot-instructions.md ← project instructions
 ```
 
@@ -14,67 +15,45 @@
 
 | Harness | Mechanism | Location |
 |---------|-----------|----------|
-| OpenCode | Agents + commands + MCP | `.opencode/agents/*.md` (18 agents), `.opencode/commands/*.md` (5 commands) |
-| Claude Code | Custom agents + CLAUDE.md | `.claude/agents/*.md` (18 wrappers) → `.opencode/agents/` |
+| OpenCode | Skills + agents + MCP | loads `.claude/skills/` and `.agents/skills/`; `.opencode/agents/*.md`, `.opencode/commands/vault-search.md` |
+| Claude Code | Skills + agents + CLAUDE.md | `.claude/skills/`, `.claude/agents/` |
 | Cursor | Project rules | `.cursor/rules/gaia-agents.mdc` |
 | GitHub Copilot | Instructions | `.github/copilot-instructions.md` |
 
-## Agent Hierarchy
+## Workflow skills (`.claude/skills/`)
+
+`start` · `transcribe` · `discovery` · `design` · `penpot` · `scope` · `audit` · `architect` · `develop` · `check` · `test` · `document` · `sync` · `debug`. Sources live in the ia-lab repo; edit there, then copy.
+
+## Stack skills (per code repo)
 
 ```
-senior-backend (orchestrator — delegates to sub-agents in parallel)
-  ├── model-agent        ← schema, soft-delete
-  ├── service-agent      ← business logic, LCA/RothC
-  ├── selector-agent     ← read-only queries
-  ├── serializer-agent   ← schema_fields, validation, OpenAPI
-  ├── migration-agent    ← safe migrations, seeds
-  ├── test-agent         ← tests per app
-  └── lint-agent         ← code style, pre-commit
-
-sustainability-specialist  ← domain authority (LCA, RothC, regenerative)
-senior-nextjs             ← Next.js frontend code owner
-  ├── form-agent
-  ├── table-agent
-  ├── api-layer-agent
-  ├── design-agent
-  └── i18n-key-validator
-cross-stack               ← API↔Next.js contracts (OpenAPI → SDK)
-software-architecture     ← architecture audit, code quality
-penpot-designer           ← design system in Penpot (skill penpot-design)
+gaia-django (gaia-api/.agents/skills/)  ← model · service · selector · serializer · migration · test · lint
+gaia-nextjs (gaia-web/.agents/skills/)  ← form · table · api-layer · design · i18n-key-validator · new-feature · webperf
+shadcn      (gaia-web/.agents/skills/)  ← shadcn/ui components and registries
 ```
 
-## Skills
+## Project tools (`.agents/skills/`)
 
-**Project-level** (`.agents/skills/`):
 | Skill | Purpose |
 |-------|---------|
-| codegraph | Semantic code search over indexed graph |
-| ui-ux-pro-max | UI/UX design & implementation guide |
-| penpot-design | Operate the GAIA design system in Penpot (helpers + batch workflow) |
+| plane-task, plane-doc, plane-doc-to-tasks | Create cards and pages in Plane |
+| plane-develop-task, plane-fix-task | Plane card → `/architect` / `/develop`, or `/debug` |
+| penpot-design | GAIA Penpot procedure and scripts (helpers, files, closing screens) |
 | business-product-strategist | Product/UX heuristic evaluation |
 | xlsx | Spreadsheet reading (openpyxl) |
-
-**User-level** (`~/.agents/skills/`): caveman, council, find-skills
-**Global Claude-compatible** (`~/.claude/skills/`): pdf
-**Packages** (`~/.cache/opencode/packages/`): ponytail suite
+| resolving-merge-conflicts | Guide an ongoing merge or rebase conflict |
+| wizard | Interactive bash wizard for steps only a person can do |
 
 ## MCP Servers
 
 | Server | Tool | Status |
 |--------|------|--------|
-| codegraph | `codegraph_*` (context, search, trace, etc.) | Live shadow via `./.opencode/bin/codegraph-mcp.sh` |
+| codegraph-gaia-api, codegraph-gaia-web | `codegraph_*` (context, search, trace, etc.) | One index per child repo, kept current by the file watcher |
 | postgres | `postgres_query` | Read-only DB via `./.opencode/bin/postgres-mcp-readonly.sh` |
+| plane | `mcp__plane__*` | Via `./.opencode/bin/plane-mcp.sh` |
 
 ## Commands (`.opencode/commands/`)
 
 | Command | Purpose |
 |---------|---------|
-| `/feature-plan` | Generate task spec from domain requirements |
-| `/feature-implement` | Execute task spec via agent dispatch |
-| `/feature-validate` | Run tests + schema + lint gates |
-| `/codegraph-sync` | Refresh child/shadow indexes and publish the root snapshot |
-| `/vault-search` | Search knowledge vault |
-
-After changing source in `gaia-api/` or `gaia-web/`, agents run
-`./.opencode/bin/codegraph-global-sync.sh` before their final response. The
-developer is not responsible for reindexing.
+| `/vault-search` | Search knowledge vault (removed after `/sync route docs/vault`) |

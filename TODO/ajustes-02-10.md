@@ -1,7 +1,7 @@
 # Ajustes de 02/10/2026 nas features 01 a 06
 
 Base: [reunião de 02/10](../docs/references/meetings/02-10-26-fechamento-recorte-media-ponderada/02-10-26-reuniao-transcricao-e-pontos.md)
-(decisões D1–D18) e o [cálculo final v2](00_calculo_final/08-versao-final-2.md)
+(decisões D1–D18) e o [cálculo final v2](../docs/features/fechamento/business-rules/v2.md)
 (regras CF-RN-n).
 
 A mudança que puxa todas as outras: **não existe mais "projeto finalizado" nem

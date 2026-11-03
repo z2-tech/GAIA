@@ -9,7 +9,7 @@ três com dúvida (5, 12 e M2) e marcou a 8 dizendo "temos que discutir".
 
 Comparação feita contra a proposta da Z2 ([03](03-analise-produto.md),
 [06](06-por-modulo.md)) e contra a versão final 1 do cálculo oficial
-([CF](../00_calculo_final/07-versao-final-1.md)).
+([CF](../../docs/features/fechamento/business-rules/v1.md)).
 
 ## O que mudou no nosso entendimento
 

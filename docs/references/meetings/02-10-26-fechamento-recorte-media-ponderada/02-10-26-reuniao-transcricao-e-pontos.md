@@ -261,7 +261,7 @@ Observações sobre o formulário da Emissão enquanto a Z2 preenchia o caso rea
 
 | # | Pergunta | Situação |
 |---|---|---|
-| P1 | Fechamento sem auditoria pode ser reaberto pelo dono para editar? Ruan quer; Paulo diz que depende do contrato | Proposta na [versão final 2](../../../../TODO/00_calculo_final/08-versao-final-2.md), P-1; validar no design |
+| P1 | Fechamento sem auditoria pode ser reaberto pelo dono para editar? Ruan quer; Paulo diz que depende do contrato | Proposta na [versão final 2](../../../features/fechamento/business-rules/v2.md), P-1; validar no design |
 | P2 | Critério de alocação da Remoção entre culturas da rotação (soja, milho, algodão, pecuária) | Paulo e especialista (João) |
 | P3 | Prazos da auditoria: tempo do auditor, tempo da correção, número de rodadas | Na feature 04 |
 | P4 | Conteúdo do PDF, da página do QR e do dashboard | Paulo e Ruan mandam modelo |
@@ -284,9 +284,9 @@ Observações sobre o formulário da Emissão enquanto a Z2 preenchia o caso rea
 
 Atualizados em `TODO/` no mesmo dia:
 
-- [`00_calculo_final/08-versao-final-2.md`](../../../../TODO/00_calculo_final/08-versao-final-2.md):
+- [`fechamento/business-rules/v2.md`](../../../features/fechamento/business-rules/v2.md):
   reescrita com o modelo de fechamento por recorte. Substitui a versão final 1.
-- [`00_calculo_final/05-rascunho-tasks.md`](../../../../TODO/00_calculo_final/05-rascunho-tasks.md):
+- [`fechamento/architect-notes.md`](../../../features/fechamento/architect-notes.md):
   tasks refeitas.
 - [`TODO/ajustes-02-10.md`](../../../../TODO/ajustes-02-10.md): o que muda nas
   features 01 a 06, regra por regra.

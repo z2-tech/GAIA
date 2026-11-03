@@ -3,7 +3,7 @@
 Fonte: [Resosta_paulo.txt](Resosta_paulo.txt). Só o Paulo respondeu. O Ruan não
 mandou o questionário do QR; o que depende dele está marcado com "falta Ruan".
 Regras do cálculo final citadas como CF-RN-n e CF-P-n
-([07 do cálculo final](../00_calculo_final/07-versao-final-1.md)).
+([07 do cálculo final](../../docs/features/fechamento/business-rules/v1.md)).
 
 ## O que mudou no nosso entendimento
 

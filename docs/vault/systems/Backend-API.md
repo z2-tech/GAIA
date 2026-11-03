@@ -19,17 +19,17 @@ REST API for sustainability metrics: LCA, RothC carbon modeling, regenerative ag
 
 ## Agent Hierarchy
 
-`senior-backend` orchestrates 7 layer-specific sub-agents following [HackSoftware Django Styleguide](https://github.com/HackSoftware/Django-Styleguide) layers:
+The `gaia-django` skill (`gaia-api/.agents/skills/gaia-django/`) holds one reference per [HackSoftware Django Styleguide](https://github.com/HackSoftware/Django-Styleguide) layer:
 
 ```
-senior-backend (orchestrator)
-  ├── model-agent       ← schema, soft-delete
-  ├── service-agent     ← LCA/RothC calculations
-  ├── selector-agent    ← read-only queries
-  ├── serializer-agent  ← schema_fields, validation
-  ├── migration-agent   ← safe migrations, seeds
-  ├── test-agent        ← tests per app
-  └── lint-agent        ← pre-commit, ruff
+gaia-django
+  ├── model       ← schema, soft-delete
+  ├── service     ← LCA/RothC calculations
+  ├── selector    ← read-only queries
+  ├── serializer  ← schema_fields, validation
+  ├── migration   ← safe migrations, seeds
+  ├── test        ← tests per app
+  └── lint        ← pre-commit, ruff
 ```
 
 Pattern inspired by [rails_ai_agents](https://github.com/ThibautBaissac/rails_ai_agents) granular agent decomposition.
@@ -58,7 +58,7 @@ Ambiente: container PostgreSQL de teste `gaia_postgres_test` na porta **5433** v
 
 ```bash
 # Full suite clean (verificação final de entrega — destrutivo: down -v + prune + up --build)
-# Padrão oficial documentado em .opencode/agents/test-agent.md
+# Padrão oficial documentado em gaia-api/.agents/skills/gaia-django/references/test.md
 source venv/bin/activate && sleep 1 && docker compose -f docker-compose.db.yml down -v && sleep 2 && docker system prune -a -f && sleep 2 && docker compose -f docker-compose.db.yml up --build -d && sleep 2 && python test_runner.py
 
 # Modo iteração (dev) — preserva DB entre rodadas

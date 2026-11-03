@@ -7,7 +7,7 @@ Estado: **discovery**. Nada criado no Plane. Ajustes da
 [reunião de 02/10](../../docs/references/meetings/02-10-26-fechamento-recorte-media-ponderada/02-10-26-reuniao-transcricao-e-pontos.md)
 em [../ajustes-02-10.md](../ajustes-02-10.md).
 
-Depende de: [00 cálculo oficial](../00_calculo_final/README.md) (qual cálculo
+Depende de: [00 cálculo oficial](../../docs/features/fechamento/README.md) (qual cálculo
 entra na soma). Alimenta: PDF do dashboard (02), página do QR (03), export (01,
 aba Resumo).
 

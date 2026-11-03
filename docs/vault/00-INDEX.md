@@ -27,7 +27,7 @@ Orchestration: [[Orchestrator-GAIA]]
 
 ## Agent Architecture
 
-17 agents: `senior-backend` → 7 backend sub-agents; `senior-nextjs` → 5 frontend sub-agents; sustainability-specialist, cross-stack e software-architecture.
+4 agents (sustainability-specialist, cross-stack, software-architecture, penpot-designer) + skills de stack `gaia-django` (gaia-api) e `gaia-nextjs` (gaia-web).
 Harness-agnostic: `.opencode/agents/` → `.claude/` → `.cursor/` → `.github/`
 SDD: `/feature-plan`, `/feature-implement`, `/feature-validate`
 Hooks: `.claude/settings.json`

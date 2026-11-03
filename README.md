@@ -19,14 +19,13 @@ cd GAIA
 git clone <gaia-api-remote> gaia-api
 git clone <gaia-web-remote> gaia-web
 
-# Inicializa children, shadow cross-repo e snapshot versionado
-./.opencode/bin/codegraph-global-sync.sh
+# Índice CodeGraph por child (uma vez por máquina)
+codegraph init -i gaia-api && codegraph init -i gaia-web
 
 code GAIA.code-workspace
 ```
 
-Os children também podem ficar como siblings; o script de shadow resolve ambos
-os layouts. `GAIA.code-workspace` usa o layout nested mostrado acima.
+`GAIA.code-workspace` usa o layout nested mostrado acima.
 
 ## Workflow
 
@@ -37,36 +36,20 @@ os layouts. `GAIA.code-workspace` usa o layout nested mostrado acima.
 5. Executar testes, schema, lint/build e o checklist cross-stack.
 6. Atualizar changelog e mover itens encerrados para `TODO/archive.md`.
 
-Comandos SDD:
-
-```text
-/feature-plan
-/feature-implement
-/feature-validate
-/codegraph-sync
-/vault-search
-```
+Skills do fluxo (padrão ia-lab, em `.claude/skills/`): `/start` mostra onde cada feature está e propõe o próximo passo
+(`/discovery` → `/design` → `/architect` → `/develop` → `/check` → `/test` → `/document` → `/sync`; bug vai para `/debug`).
 
 ## Agents
 
-`.opencode/agents/` é a única fonte de comportamento dos 17 agents.
-
-| Necessidade | Agent |
+| Necessidade | Agent ou skill |
 |-------------|-------|
-| Domínio LCA, RothC e regenerativo | `sustainability-specialist` |
-| Backend Django | `senior-backend` |
-| Models | `model-agent` |
-| Services | `service-agent` |
-| Selectors | `selector-agent` |
-| Serializers e OpenAPI | `serializer-agent` |
-| Migrations e seeds | `migration-agent` |
-| Testes | `test-agent` |
-| Lint | `lint-agent` |
-| Frontend Next.js | `senior-nextjs` |
-| Contrato API e Web | `cross-stack` |
-| Auditoria arquitetural | `software-architecture` |
+| Domínio LCA, RothC e regenerativo | `sustainability-specialist` (vai para `docs/domain/` no `/sync route`) |
+| Backend Django (models, services, selectors, serializers, migrations, testes, lint) | skill `gaia-django` em `gaia-api/.agents/skills/` |
+| Frontend Next.js (forms, tabelas, services, design, i18n) | skill `gaia-nextjs` em `gaia-web/.agents/skills/` |
+| Contrato API e Web | seção de API da spec (`/architect`) |
+| Revisão de código | `/check review` |
 
-Wrappers de Claude, Cursor e Copilot apontam para essa mesma fonte.
+Routing completo em [`AGENTS.md`](AGENTS.md).
 
 ## Estrutura
 
@@ -79,16 +62,16 @@ GAIA/
 │   ├── gaia.md                 fila ativa
 │   └── archive.md              tarefas encerradas
 ├── .opencode/
-│   ├── agents/                 17 agents canônicos
-│   ├── commands/               comandos SDD, vault e CodeGraph
-│   └── bin/                    validator, sync e MCP read-only
-├── .agents/skills/             skills mantidas pelo projeto
-├── .claude/agents/             wrappers
+│   ├── agents/                 sustainability-specialist
+│   ├── commands/               vault-search
+│   └── bin/                    validator e MCP (postgres read-only, plane)
+├── .claude/skills/             skills do fluxo (padrão ia-lab)
+├── .agents/skills/             ferramentas do projeto (plane, penpot, xlsx…)
+├── .claude/agents/             wrapper, scout e researcher
 ├── .cursor/rules/
-├── .codegraph/                 snapshot cross-repo versionado
 ├── docs/
 │   ├── tasks/                  specs por stack
-│   ├── workflow/               branching, cross-stack e CodeGraph
+│   ├── workflow/               branching e cross-stack
 │   ├── vault/                  domínio, decisões e relações
 │   └── references/             planilhas e referências técnicas
 ├── gaia-api/                   repo Git independente e ignorado
@@ -131,15 +114,10 @@ bun run build
 
 CodeGraph indexa estrutura de código, não o conteúdo semântico do Markdown.
 
-- `.codegraph/codegraph.db` é o snapshot versionado conjunto de API + Web.
-- Use os índices per-repo para implementação profunda.
-- O MCP usa `/tmp/opencode/shadow-codegraph-gaia` como grafo vivo cross-repo.
+- Um índice por child (`gaia-api/.codegraph/`, `gaia-web/.codegraph/`), local e fora do git.
+- Um MCP server por child (`codegraph-gaia-api`, `codegraph-gaia-web`); o file watcher mantém o índice atualizado.
 - Use `/vault-search`, Read ou Grep para vault, tasks e workflow.
-- Agents executam `.opencode/bin/codegraph-global-sync.sh` após mudar código;
-  o developer não precisa manter os índices manualmente.
-- Nunca rode `codegraph sync .` no root; o script publica o snapshot correto.
-
-Procedimento: [`docs/workflow/CODE_GRAPH_SYNC.md`](docs/workflow/CODE_GRAPH_SYNC.md).
+- Nunca rode `codegraph init` no root; ele não enxerga os children.
 
 ## Regras Essenciais
 

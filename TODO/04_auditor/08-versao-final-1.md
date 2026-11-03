@@ -8,7 +8,7 @@ da `gaia-api`.
 Regras marcadas com (P-n) são provisórias: seguem a proposta da Z2 até a decisão
 da pendência n, listada no fim. As demais estão fechadas. Regras do cálculo final
 aparecem como CF-RN-n e CF-P-n
-([07 do cálculo final](../00_calculo_final/07-versao-final-1.md)).
+([07 do cálculo final](../../docs/features/fechamento/business-rules/v1.md)).
 
 ## 1. O que é a feature
 

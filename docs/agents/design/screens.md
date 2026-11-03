@@ -403,7 +403,7 @@ Implementado em 2026-09-27 (working tree da `feat/screens-carbon-emission`).
 
 ### 14 Tela - Fechamento (validação, 2026-10-05)
 
-Só o caminho feliz, para o time de produto validar o fluxo: 17 frames em 8 fluxos no arquivo `GAIA · Fechamento`, sem estados de erro, carregando ou vazio nem desvios (já fechado, devolvido, reabrir), cortados a pedido do usuário. **Desenho novo, sem código:** os textos são propostos e servem para validar o [cálculo final v2](../../../TODO/00_calculo_final/08-versao-final-2.md). Os builders ficam em `.agents/skills/penpot-design/scripts/fechamento.js` (carregar depois do `helpers.js`).
+Só o caminho feliz, para o time de produto validar o fluxo: 17 frames em 8 fluxos no arquivo `GAIA · Fechamento`, sem estados de erro, carregando ou vazio nem desvios (já fechado, devolvido, reabrir), cortados a pedido do usuário. **Desenho novo, sem código:** os textos são propostos e servem para validar o [cálculo final v2](../../features/fechamento/business-rules/v2.md). Os builders ficam em `.agents/skills/penpot-design/scripts/fechamento.js` (carregar depois do `helpers.js`).
 
 | Fluxo | Frames |
 |---|---|

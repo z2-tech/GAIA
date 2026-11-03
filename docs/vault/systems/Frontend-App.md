@@ -25,7 +25,7 @@ app/ → features/ → services/ → client/ (generated)
 
 ## Agent
 
-`senior-nextjs` — `.opencode/agents/senior-nextjs.md`
+Skill `gaia-nextjs` — `gaia-web/.agents/skills/gaia-nextjs/`
 
 ## Links
 

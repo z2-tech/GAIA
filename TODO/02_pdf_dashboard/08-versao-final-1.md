@@ -2,7 +2,7 @@
 
 Data: 02/10/2026. Base: reunião de 29/09, respostas do Paulo Rocha ao questionário
 ([análise](07-analise-respostas.md)), a versão final 1 do cálculo oficial
-([CF](../00_calculo_final/07-versao-final-1.md)) e o código atual.
+([CF](../../docs/features/fechamento/business-rules/v1.md)) e o código atual.
 
 O Ruan ainda não respondeu. Regras marcadas com **(P-n)** são provisórias: seguem
 a resposta do Paulo ou a proposta da Z2 até a decisão da pendência n, listada no

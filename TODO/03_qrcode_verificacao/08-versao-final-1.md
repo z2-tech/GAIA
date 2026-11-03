@@ -2,7 +2,7 @@
 
 Data: 02/10/2026. Base: reunião de 29/09, resposta do Paulo Rocha ao questionário
 ([análise](07-analise-respostas.md)), a [versão final 1 do cálculo
-oficial](../00_calculo_final/07-versao-final-1.md) (regras citadas como CF-RN-n e
+oficial](../../docs/features/fechamento/business-rules/v1.md) (regras citadas como CF-RN-n e
 CF-P-n) e o código atual. O Ruan não respondeu este questionário.
 
 Regras marcadas com **(P-n)** são provisórias: seguem a proposta da Z2 até a

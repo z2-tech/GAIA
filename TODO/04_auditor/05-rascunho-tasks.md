@@ -8,7 +8,7 @@ A coluna "Pendência" indica a decisão de 06/10 que ainda pode mudar a task. Se
 pendência, a task pode começar.
 
 As tasks de verificação que estavam na fase 4 do
-[cálculo final](../00_calculo_final/05-rascunho-tasks.md) (vínculo auditor ×
+[cálculo final](../../docs/features/fechamento/architect-notes.md) (vínculo auditor ×
 projeto, enviar, aprovar, pedir correção) moram aqui, nas fases 1 e 3. O cálculo
 final mantém os estados do projeto, a finalização, a foto e a reabertura (fase 3
 de lá).

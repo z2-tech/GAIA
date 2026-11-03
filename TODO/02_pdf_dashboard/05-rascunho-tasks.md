@@ -3,7 +3,7 @@
 Ainda **não criadas no Plane**. Títulos no padrão `BE:` / `FE:` / `PROD:`.
 Regras (RN-n) e pendências (P-n) em [08-versao-final-1.md](08-versao-final-1.md).
 Regras do cálculo oficial (CF-RN-n) em
-[../00_calculo_final/07-versao-final-1.md](../00_calculo_final/07-versao-final-1.md).
+[fechamento business rules v1](../../docs/features/fechamento/business-rules/v1.md).
 Revisado em 02/10/2026 com as respostas do Paulo. Falta o Ruan.
 
 A coluna "Pendência" indica a decisão de 06/10 que ainda pode mudar a task. Sem
