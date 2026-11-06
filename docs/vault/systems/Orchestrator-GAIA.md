@@ -22,7 +22,7 @@ Centralizes 17 AI agents, SDD commands, lifecycle hooks, cross-stack handoff and
 - **Harness-agnostic**: `.opencode/agents/` → `.claude/` + `.cursor/` + `.github/`
 - **SDD pipeline**: `/feature-plan`, `/feature-implement`, `/feature-validate`
 - **Lifecycle hooks**: SessionStart, PreToolUse, PostToolUse, TaskCompleted
-- **CodeGraph**: `.codegraph/codegraph.db` versioned from the live cross-repo shadow; per-repo indexes remain authoritative for deep implementation
+- **CodeGraph**: `.codegraph/codegraph.db` generated locally from the live cross-repo shadow (not versioned); per-repo indexes remain authoritative for deep implementation
 
 ## Links
 

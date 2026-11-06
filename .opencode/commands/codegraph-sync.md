@@ -1,5 +1,5 @@
 ---
-description: Refresh every GAIA CodeGraph index and publish the versioned cross-repo snapshot.
+description: Refresh every GAIA CodeGraph index and publish the local cross-repo snapshot.
 ---
 
 Execute `./.opencode/bin/codegraph-global-sync.sh` from any directory. It resolves the GAIA root, refreshes both child indexes, updates the live cross-repo shadow, and publishes `.codegraph/codegraph.db`.

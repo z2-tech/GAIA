@@ -16,7 +16,7 @@ GAIA (pai) ──┬── gaia-api/   ──► índice local (275 arquivos .py
                                 │
                    publish ─────┘
                                 │
-             .codegraph/codegraph.db  (607 arquivos, versionado no Git)
+             .codegraph/codegraph.db  (gerado localmente, fora do Git)
 ```
 
 1. Cada child tem seu próprio `.codegraph/` local — índices autoritativos para

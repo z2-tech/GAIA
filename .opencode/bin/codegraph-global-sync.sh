@@ -120,7 +120,7 @@ publish_snapshot() {
   rm -f "$ROOT_DB-wal" "$ROOT_DB-shm"
   mv "$ROOT_DB_TMP" "$ROOT_DB"
   ROOT_DB_TMP=""
-  echo "Published versioned snapshot: $ROOT_DB"
+  echo "Published local snapshot: $ROOT_DB"
 }
 
 case "$MODE" in
@@ -136,7 +136,7 @@ discover_repos
 
 if [ "$MODE" = "--status" ]; then
   status=0
-  show_status "GAIA versioned cross-repo snapshot" "$ORCHESTRATOR_ROOT" || status=1
+  show_status "GAIA cross-repo snapshot" "$ORCHESTRATOR_ROOT" || status=1
   show_status "GAIA live cross-repo shadow" "$SHADOW_WORKSPACE" || status=1
   for repo in "${CHILD_REPOS[@]}"; do
     show_status "$(basename "$repo") local index" "$repo" || status=1

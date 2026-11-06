@@ -162,7 +162,7 @@ Cursor and Copilot follow `.cursor/rules/` and `.github/copilot-instructions.md`
 |---|---|
 | CodeGraph API | Per-repo index at `<GAIA_ROOT>/gaia-api` |
 | CodeGraph Web | Per-repo index at `<GAIA_ROOT>/gaia-web` |
-| CodeGraph root snapshot | Versioned cross-repo graph at `<GAIA_ROOT>/.codegraph/codegraph.db` |
+| CodeGraph root snapshot | Generated locally by `.opencode/bin/codegraph-global-sync.sh` at `<GAIA_ROOT>/.codegraph/codegraph.db` (not versioned) |
 | CodeGraph live shadow | Cross-repo working graph at `/tmp/opencode/shadow-codegraph-gaia` |
 | CodeGraph MCP | Harness-agnostic launcher at `.opencode/bin/codegraph-mcp.sh` |
 | Vault search | `/vault-search <term>` or text search under `docs/vault/` |
