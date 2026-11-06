@@ -1,6 +1,6 @@
 ---
 name: new-feature
-description: Scaffold a new farm-level feature module end-to-end in gaia-web following the GaiaMetrics pattern. Trigger when the user says "new feature", "create feature", "scaffold feature", "add feature module", or names a new domain to implement (e.g. "add biodiversidade module"). 5-step checklist: i18n → menu tab → service layer → feature folder → thin pages.
+description: "Scaffold a new farm-level feature module end-to-end in gaia-web following the GaiaMetrics pattern. Trigger when the user says \"new feature\", \"create feature\", \"scaffold feature\", \"add feature module\", or names a new domain to implement (e.g. \"add biodiversidade module\"). 5-step checklist: i18n → menu tab → service layer → feature folder → thin pages."
 ---
 
 # new-feature skill — gaia-web

@@ -1,0 +1,1 @@
+../../.opencode/commands/code-simplify.md

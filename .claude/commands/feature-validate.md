@@ -1,0 +1,1 @@
+../../.opencode/commands/feature-validate.md

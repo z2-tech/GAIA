@@ -3,23 +3,17 @@
     "codegraph": {
       "type": "stdio",
       "command": "bash",
-      "args": [
-        "./.opencode/bin/codegraph-mcp.sh"
-      ]
+      "args": [".opencode/bin/codegraph-mcp.sh"]
     },
-    "postgres-readonly": {
+    "postgres": {
       "type": "stdio",
       "command": "bash",
-      "args": [
-        "./.opencode/bin/postgres-mcp-readonly.sh"
-      ]
+      "args": [".opencode/bin/postgres-mcp-readonly.sh"]
     },
     "plane": {
       "type": "stdio",
       "command": "bash",
-      "args": [
-        "./.opencode/bin/plane-mcp.sh"
-      ]
+      "args": [".opencode/bin/plane-mcp.sh"]
     }
   }
 }

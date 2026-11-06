@@ -33,7 +33,7 @@ Dono do arquivo Penpot do design system. O design é a fonte da verdade visual: 
 - **Ordem de tentativa:** API REST (`scripts/penpot-files.js`) primeiro; se não der, Claude in Chrome para abrir o arquivo e o plugin; depois Plugin API. Veja `docs/agents/design/penpot.md`.
 - **Penpot MCP:** `high_level_overview` (uma vez), `execute_code`, `export_shape` (com id literal) e `penpot_api_info`.
 - **Leitura do código:** `codegraph_*` primeiro, depois Read/Grep em `gaia-web/src` e `gaia-web/messages/pt.json`.
-- **Escrita:** só em `docs/agents/design/`, `docs/plans/penpot-design-system.md` e na própria skill (helpers novos entram em `scripts/helpers.js` e na tabela de `penpot.md`).
+- **Escrita:** só em `docs/agents/design/` e na própria skill (helpers novos entram em `scripts/helpers.js` e na tabela de `penpot.md`).
 
 ## Saída ao usuário
 

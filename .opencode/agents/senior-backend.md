@@ -40,7 +40,7 @@ When given a task, first identify ALL layers touched:
 
 ### Phase 3: Dispatch in parallel
 
-When layers are independent, call sub-agents concurrently using multiple `task` tool calls in ONE message. Example:
+When layers are independent, delegate to the sub-agents concurrently, in ONE message. Example:
 
 ```
 Task: "Add carbon stock endpoint to metrics module"

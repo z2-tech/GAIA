@@ -2,7 +2,10 @@ gaia-api/
 gaia-web/
 *.docx
 
-# Local credentials
+# Local credentials and editor state
+.claude/settings.local.json
+*.swp
+*.swo
 .env
 .env.*
 !.env.example

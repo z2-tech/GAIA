@@ -64,7 +64,7 @@ Repository knowledge?
 ## Agent Tree
 
 ```
-.opencode/agents/                 17 canonical agents
+.opencode/agents/                 18 canonical agents
 ├── shared/
 │   ├── sustainability-specialist.md
 │   ├── cross-stack.md
@@ -84,59 +84,37 @@ Repository knowledge?
     ├── table-agent.md
     ├── api-layer-agent.md
     ├── design-agent.md
-    └── i18n-key-validator.md
+    ├── i18n-key-validator.md
+    └── penpot-designer.md       (Penpot design system)
 
 (files live flat in .opencode/agents/; grouping above is logical, by domain)
 
-.claude/agents/                   17 wrappers to .opencode/agents/
+.claude/agents/                   18 generated wrappers to .opencode/agents/
 .cursor/rules/gaia-agents.mdc     Cursor project routing
 .github/copilot-instructions.md   Copilot project routing
-.agents/skills/                   Project skills
+.agents/skills/                   Project skills (single source)
+.claude/skills/                   Symlinks to ../../.agents/skills/<id>
 ```
 
-## Model Dispatch — Free Dispatcher (sem hardcode, usuário escolhe)
+## Model Dispatch — Free Dispatcher (sem hardcode)
 
-> **Nenhum `.opencode/agents/*.md` tem `model:` hardcodado — todos herdam o model que o usuário escolheu livremente no seletor do opencode ao iniciar a sessão (ex: `openai/gpt-5.5`, `opencode/muse-spark-1.2-contributor-free`, `opencode/nemotron-3-ultra-free`). O primary (model escolhido) cuida do plan, discovery dos agents e do dispatch; subagentes herdam esse mesmo model.**
->
-> **Quando o usuário pedir “com subagentes” ou a task tiver 3+ domínios independentes, o primary DEVE executar este protocolo antes de qualquer `task` call.**
+Nenhum `.opencode/agents/*.md` fixa `model:` — os subagentes herdam o modelo
+escolhido na sessão, em qualquer provider (Go, OpenAI, Claude). Os wrappers de
+`.claude/agents/` também não fixam modelo.
 
-### 1. Descoberta — identificar agents disponíveis (dinâmico)
+Quando a task tiver 3+ domínios independentes:
 
-```bash
-cat .opencode/agents/*.md | grep -E "^name:|^description:"
-ls .opencode/agents/   # 17 agents
-```
+1. **Descoberta:** use a lista de subagentes (nome e descrição) que o harness já
+   entrega à ferramenta de delegação; abra `.opencode/agents/<id>.md` só quando
+   precisar do detalhe.
+2. **Divisão:** mapeie cada domínio para 1 agent, máx 4 subagentes paralelos por
+   rodada, prompts disjuntos com escopo explícito.
+3. **Execução:** delegue em paralelo → consolide → o primary implementa o glue e
+   valida com `validate-structure.py` + testes focados.
 
-| Layer | Model | Rule |
-|---|---|---|
-| Session / plan / orchestrators (`senior-backend`, `senior-nextjs`) + workers (`model-agent`, `service-agent` etc.) | **user's pick** | Sem `model:` no frontmatter — todos herdam o session model |
-
-> Por que não hardcodar: `task` não expõe `model` por chamada — agents sem `model:` herdam o session model (opencode mergeia agents após plugins, então plugin não re-aponta). A liberdade de escolha do usuário no início é a única fonte de verdade.
-
-### 2. Raciocínio → Divisão → Execução (protocolo build)
-
-1. **Raciocínio:** mapear cada domínio da task para 1 agent (evitar duplicar `model-agent` 3×; 1 call por domínio com prompt disjunto)
-2. **Divisão:** máx 4 subagentes paralelos por rodada; prompt `Research only, do not edit files. In <repo/path>, analyze <scoped topic>… Trace <symbols/files>. Return file:line, callers, plano mínimo. Do not duplicate <other scopes>.` (400–500 chars)
-3. **Execução:** `task` paralelos → consolidar → primary implementa; validar com `validate-structure` + tests focados
-
-### 3. Model livre (informativo, não hardcode)
-
-O usuário já escolheu o model na sessão — se quiser custo zero, basta ter escolhido um free na largada. O ranking abaixo é **informativo** para a escolha inicial.
-
-```bash
-opencode models opencode --verbose  # filtra cost.input==0
-```
-
-Ranking free atual (`cost.input==0`, gerado dinamicamente):
-
-| # | model | ctx | out | attach | toolcall |
-|---|---|---|---|---|---|
-| 1 | `opencode/muse-spark-1.2-contributor-free` | 1.048.576 | 131.072 | yes | yes |
-| 2 | `opencode/nemotron-3-ultra-free` | 1.000.000 | 128.000 | no | yes |
-| 3 | `opencode/nemotron-3.5-lightning-free` | 262.144 | 262.144 | no | yes |
-| 4 | `opencode/mimo-v2.5-free` | 200.000 | 32.000 | yes | yes |
-| 5 | `opencode/big-pickle` | 200.000 | 32.000 | no | yes |
-| 6 | `opencode/hy3-free` | 190.000 | 64.000 | no | yes |
+Um subagente pode delegar mais um nível (ex.: `senior-backend` → agentes de
+camada): no OpenCode, `experimental.subagent_depth: 2`; no Claude Code o
+aninhamento já é permitido.
 
 ## Principles
 
@@ -146,12 +124,27 @@ Ranking free atual (`cost.input==0`, gerado dinamicamente):
 4. **Secrets**: local env files only; never commit credentials.
 5. **CodeGraph-first for source code**: use graph tools for symbols and call flow; use `/vault-search`, Read or Grep for Markdown.
 6. **Vault maintained**: update only when a new relationship, decision or domain rule is discovered.
-7. **No commits without explicit authorization**.
+7. **No commits without explicit authorization** — the harness asks before `git commit`, `push`, `merge`, `rebase` and `reset --hard` (`permissions` in `opencode.json`; `.claude/settings.json` in Claude Code).
 8. **Branching**: follow `docs/workflow/BRANCHING.md`; application work starts from `develop`.
 9. **No rebase on shared branches**: never rebase `develop`, `homolog`, `main` or another published branch.
 10. **No cross-product business logic**: external repos may inspire structure, never GAIA formulas or contracts.
 11. **Self-documenting code**: zero comments by default — names and types carry the meaning. A comment only earns its place for a WHY the code cannot carry (complex algorithm, deliberate deviation, hidden invariant), max 1–2 lines, in EN. Tickets and agent names stay out of production comments and symbols. Web detail: `docs/agents/web/code-standards.md` §4.
 12. **Agent-owned reindex**: after changing source in `gaia-api/` or `gaia-web/`, the agent must run `.opencode/bin/codegraph-global-sync.sh` before its final response. Never delegate this step to the developer; skip it for Markdown-only changes.
+
+## Harnesses
+
+OpenCode is the primary harness: `AGENTS.md` and `.opencode/agents/` are canonical.
+Claude Code reads the same `AGENTS.md` (2.1.277+) and uses generated adapters; never
+edit them by hand:
+
+- `.claude/agents/<id>.md` — wrapper pointing to `.opencode/agents/<id>.md`
+- `.claude/skills/<id>` — symlink to `../../.agents/skills/<id>`
+- `.claude/commands/<name>.md` — symlink to `../../.opencode/commands/<name>.md`
+- `.mcp.json` — same servers and launcher scripts as `opencode.json`
+- `.claude/settings.json` — git approvals and hooks
+
+Regenerate and check with `python3 .opencode/bin/sync-harness-adapters.py [--check]`.
+Cursor and Copilot follow `.cursor/rules/` and `.github/copilot-instructions.md`.
 
 ## Key Conventions
 
@@ -173,6 +166,8 @@ Ranking free atual (`cost.input==0`, gerado dinamicamente):
 | CodeGraph live shadow | Cross-repo working graph at `/tmp/opencode/shadow-codegraph-gaia` |
 | CodeGraph MCP | Harness-agnostic launcher at `.opencode/bin/codegraph-mcp.sh` |
 | Vault search | `/vault-search <term>` or text search under `docs/vault/` |
+| Plane MCP | `.opencode/bin/plane-mcp.sh` — workspace `gaia`, tracker canônico |
+| Harness adapters | `python3 .opencode/bin/sync-harness-adapters.py` regenera/checa `.claude/` e `.mcp.json` |
 | DB read-only MCP | `.opencode/bin/postgres-mcp-readonly.sh` |
 | Structural validation | `python3 .opencode/bin/validate-structure.py` |
 

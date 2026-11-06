@@ -1,4 +1,19 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "ask": [
+      "Bash(git commit *)",
+      "Bash(git -C * commit *)",
+      "Bash(git push *)",
+      "Bash(git -C * push *)",
+      "Bash(git merge *)",
+      "Bash(git -C * merge *)",
+      "Bash(git rebase *)",
+      "Bash(git -C * rebase *)",
+      "Bash(git reset --hard*)",
+      "Bash(git -C * reset --hard*)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {

@@ -56,8 +56,9 @@ Variações:
 
 ### Para o agent (automático)
 
-Os agents recebem a instrução em `AGENTS.md` (princípio 12), `CLAUDE.md`,
-`.cursor/rules/gaia-agents.mdc` e `.github/copilot-instructions.md`.
+Os agents recebem a instrução em `AGENTS.md` (princípio 12) — lido nativamente
+pelo OpenCode e pelo Claude Code —, `.cursor/rules/gaia-agents.mdc` e
+`.github/copilot-instructions.md`.
 No Claude Code, o hook `SessionEnd` em `.claude/settings.json` executa o sync
 automaticamente ao encerrar a sessão. O dev não precisa lembrar.
 

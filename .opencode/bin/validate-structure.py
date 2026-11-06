@@ -30,6 +30,7 @@ TEXT_SUFFIXES = {
 }
 OPERATIONAL_PREFIXES = (
     ".agents/",
+    ".claude/",
     ".opencode/",
     "TODO/",
     "docs/workflow/",
@@ -43,7 +44,7 @@ PROMPT_PREFIXES = (
 )
 ROOT_OPERATIONAL_FILES = {
     ".agents/README.md",
-    ".claude/CLAUDE.md",
+    ".claude/settings.json",
     "AGENTS.md",
     "README.md",
     "docs/vault/00-INDEX.md",
@@ -149,7 +150,7 @@ def file_hash(path: Path) -> str:
 def check_duplicates(files: list[Path], issues: dict[str, list[str]]) -> None:
     by_hash: dict[str, list[str]] = defaultdict(list)
     for path in files:
-        if path.is_file():
+        if path.is_file() and not path.is_symlink():
             by_hash[file_hash(path)].append(relative(path))
     for paths in sorted(by_hash.values(), key=lambda values: values[0]):
         if len(paths) > 1:
@@ -189,11 +190,28 @@ def markdown_target(raw: str) -> str | None:
     return value
 
 
+def is_gitignored(path: Path) -> bool:
+    result = subprocess.run(
+        ["git", "check-ignore", "-q", str(path)],
+        cwd=ROOT,
+        capture_output=True,
+    )
+    return result.returncode == 0
+
+
 def check_markdown_links(files: list[Path], issues: dict[str, list[str]]) -> None:
     for path in files:
         if not path.is_file() or path.suffix.lower() != ".md" or not is_operational(path):
             continue
+        in_fence = False
         for line_number, line in enumerate(read_text(path).splitlines(), start=1):
+            if line.lstrip().startswith("```"):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
+            # Links inside inline code are examples, not repository references.
+            line = re.sub(r"`+[^`]*`+", "", line)
             for match in MARKDOWN_LINK_RE.finditer(line):
                 target = markdown_target(match.group(1))
                 if target is None:
@@ -203,10 +221,11 @@ def check_markdown_links(files: list[Path], issues: dict[str, list[str]]) -> Non
                     if Path(target).is_absolute()
                     else (path.parent / target).resolve()
                 )
-                if not resolved.exists():
-                    issues["links"].append(
-                        f"{relative(path)}:{line_number}: missing '{target}'"
-                    )
+                if resolved.exists() or is_gitignored(resolved):
+                    continue
+                issues["links"].append(
+                    f"{relative(path)}:{line_number}: missing '{target}'"
+                )
 
 
 def check_agent_paths(issues: dict[str, list[str]]) -> None:
@@ -233,6 +252,19 @@ def check_sensitive_names(files: list[Path], issues: dict[str, list[str]]) -> No
         )
         if env_file or path.suffix.lower() in sensitive_suffixes or name == "id_rsa":
             issues["sensitive-files"].append(relative(path))
+
+
+def check_adapters(issues: dict[str, list[str]]) -> None:
+    script = ROOT / ".opencode/bin/sync-harness-adapters.py"
+    result = subprocess.run(
+        [sys.executable, str(script), "--check"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    for line in result.stdout.splitlines():
+        if line.startswith("DRIFT"):
+            issues["harness-adapters"].append(line)
 
 
 def check_prompts(files: list[Path], issues: dict[str, list[str]]) -> None:
@@ -263,6 +295,7 @@ def main() -> int:
     check_agent_paths(issues)
     check_sensitive_names(files, issues)
     check_prompts(files, issues)
+    check_adapters(issues)
 
     if issues:
         print("GAIA structural validation: FAILED")

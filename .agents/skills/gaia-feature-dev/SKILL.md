@@ -4,11 +4,11 @@ description: >-
   GAIA feature/fix workflow, thin orchestrator. Use when the user points at a
   docs/tasks/**/*.md card (e.g. FE-11) or describes a feature/fix. Chains the
   GAIA lifecycle — spec → plan → approval → build → test → review → ship — by
-  delegating each phase to its owning command/skill, and routes implementation
-  through the senior-nextjs / senior-backend orchestrators. Always syncs the
-  shared CodeGraph of BOTH gaia-api and gaia-web before and after, even for
-  frontend-only tasks. Triggers: "feature-dev", "implement this task card",
-  "trabalhar nessa task", "/gaia-feature-dev".
+  delegating each phase to its owning command file/skill, and routes
+  implementation through the senior-nextjs / senior-backend orchestrators.
+  Always syncs the shared CodeGraph of BOTH gaia-api and gaia-web before and
+  after, even for frontend-only tasks. Triggers: "feature-dev", "implement this
+  task card", "trabalhar nessa task", "/gaia-feature-dev".
 ---
 
 # GAIA Feature Development (thin orchestrator)
@@ -26,21 +26,25 @@ to its owning command/skill and keep only the GAIA-specific glue.
 
 ## Flow
 
+Each phase is defined once in `.opencode/commands/<phase>.md` (the same text is
+available to Claude Code through `.claude/commands/`). Read the phase file and
+follow it; load the skills it names.
+
 1. **CodeGraph pre-sync**: `.opencode/bin/codegraph-global-sync.sh` + `--status`.
-   Warn + continue (grep/Read fallback) if it fails; record it in TodoWrite.
+   Warn + continue (grep/Read fallback) if it fails; record it in the todo list.
 2. **Discovery**: read the card / restate the request. Summarize in one paragraph and confirm.
-3. **Spec** — delegate to the `spec` command (activate `to-spec` + `grilling`):
+3. **Spec** — follow `.opencode/commands/spec.md` (activate `to-spec` + `grilling`):
    resolve edge cases, 404/null semantics, i18n pt+en, error/empty/loading states.
-4. **Plan** — delegate to the `plan` command (activate `to-tickets` + `tdd` seams):
+4. **Plan** — follow `.opencode/commands/plan.md` (activate `to-tickets` + `tdd` seams):
    vertical slices, dependency-ordered; map `layer → agent → why` per `AGENTS.md`.
 5. **Approval gate**: present the plan; WAIT for explicit approval.
-6. **Build** — delegate to the `build` command (activate `implement` + `tdd`),
+6. **Build** — follow `.opencode/commands/build.md` (activate `implement` + `tdd`),
    routed through the chosen orchestrator(s) and their layer sub-agents.
-7. **Test** — delegate to the `test` command; run the task's gate commands.
-8. **Review** — delegate to the `review` command (activate `code-review` +
+7. **Test** — follow `.opencode/commands/test.md`; run the task's gate commands.
+8. **Review** — follow `.opencode/commands/review.md` (activate `code-review` +
    `i18n-key-validator`) before handoff.
 9. **CodeGraph post-sync**: `.opencode/bin/codegraph-global-sync.sh` + `--status`.
 10. **Summary**: what shipped, agents used, files per repo, verification output,
     checklist status, next steps. Do NOT commit unless the user authorizes it.
 
-Use TodoWrite to track phases 1–10.
+Track phases 1–10 in the todo list when the harness provides one.

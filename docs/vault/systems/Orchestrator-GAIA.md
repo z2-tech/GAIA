@@ -28,5 +28,5 @@ Centralizes 17 AI agents, SDD commands, lifecycle hooks, cross-stack handoff and
 
 - Agent architecture: `.agents/README.md`
 - Agent routing: `AGENTS.md`
-- Harness config: `.claude/CLAUDE.md`, `.claude/settings.json`
+- Harness config: `opencode.json`, `.mcp.json`, `.claude/settings.json` e os adaptadores gerados em `.claude/`
 - Vault index: [[00-INDEX]]
