@@ -1,9 +1,6 @@
 ---
 description: Next.js UI/UX sub-agent for gaia-web. Owns visual/design-system implementation — layout, cards, typography, spacing, buttons, badges, dialogs, loading/empty states with shadcn/ui + Tailwind v4. Use when building or restyling UI.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Design Agent (UI/UX) — GAIA (gaia-web)

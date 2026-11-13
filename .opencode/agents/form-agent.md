@@ -1,9 +1,6 @@
 ---
 description: Next.js form sub-agent for gaia-web. Owns react-hook-form + Zod + next-intl form implementation. Use when creating or editing forms, schemas, form hooks, or field components.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Form Agent — GAIA (gaia-web)

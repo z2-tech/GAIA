@@ -1,9 +1,6 @@
 ---
 description: Architectural review and code-quality scoring (SOLID, DDD, security, resilience, testing). Use when auditing a repo or detecting architectural decay.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Software Architecture Agent — GAIA

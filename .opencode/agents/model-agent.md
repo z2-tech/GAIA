@@ -1,9 +1,6 @@
 ---
 description: Django model design, schema, fields, soft-delete. Use when editing models.py or discussing database schema.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Django Model Agent

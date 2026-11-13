@@ -1,9 +1,6 @@
 ---
 description: Next.js table sub-agent for gaia-web. Owns TanStack Table implementation via the shared @/components/table module — columns, toolbar, sorting, states, pagination. Use when building or editing data tables.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Table Agent — GAIA (gaia-web)

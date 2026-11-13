@@ -1,9 +1,6 @@
 ---
 description: Django migrations, SeparateDatabaseAndState, seed data. Use when editing migrations.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Django Migration Agent

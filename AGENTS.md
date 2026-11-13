@@ -109,8 +109,17 @@ Quando a task tiver 3+ domínios independentes:
    precisar do detalhe.
 2. **Divisão:** mapeie cada domínio para 1 agent, máx 4 subagentes paralelos por
    rodada, prompts disjuntos com escopo explícito.
-3. **Execução:** delegue em paralelo → consolide → o primary implementa o glue e
-   valida com `validate-structure.py` + testes focados.
+3. **Execução:** delegue em paralelo → aguarde os relatórios → consolide → o primary
+   implementa o glue e valida com `validate-structure.py` + testes focados.
+
+Subagentes rodam em background (OpenCode 2.3+): a ferramenta `subagent` retorna
+imediatamente e o pai recebe um relatório cada vez que um filho fica ocioso. Lance
+todos os subagentes independentes em uma única mensagem. Nunca faça polling, sleep
+nem reverifique um filho; continue com trabalho que não se sobreponha ou encerre o
+turno — o relatório chega sozinho. Lance uma camada dependente só depois que o
+relatório do pré-requisito chegar (ex.: contrato da API antes do client). Integre e
+verifique só depois de todos os relatórios; para dar trabalho adicional a um filho,
+reutilize o seu `sessionID`.
 
 Um subagente pode delegar mais um nível (ex.: `senior-backend` → agentes de
 camada): no OpenCode, `experimental.subagent_depth: 2`; no Claude Code o

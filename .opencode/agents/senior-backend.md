@@ -1,9 +1,6 @@
 ---
 description: Django DRF backend orchestrator for gaia-api. Analyzes tasks, identifies affected Django layers, and dispatches implementation to sub-agents (model, service, selector, serializer, migration, test, lint) in parallel. You are the conductor — sub-agents are your instruments.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Senior Django Backend Developer — GAIA
@@ -36,19 +33,24 @@ When given a task, first identify ALL layers touched:
 
 - **Independent** (can run in parallel): model + serializer, service + selector (read paths)
 - **Sequential** (must wait): model → migration, service → serializer, implementation → test
-- **Merge step**: After sub-agents return, YOU aggregate results, wire things together (e.g., plug new selector into new service, register new serializer in view), and run the final test suite.
+- **Merge step**: Once EVERY sub-agent report has arrived, YOU aggregate results, wire things together (e.g., plug new selector into new service, register new serializer in view), and run the final test suite.
 
 ### Phase 3: Dispatch in parallel
 
-When layers are independent, delegate to the sub-agents concurrently, in ONE message. Example:
+Sub-agents run in the background (OpenCode 2.3+): the `subagent` tool returns
+immediately and you receive a report each time a child goes idle. Launch all independent
+sub-agents in ONE message. Never poll, sleep or re-check a child; continue with
+non-overlapping work or end the turn — the report arrives on its own. Launch a dependent
+layer only after its prerequisite's report has arrived. To give a child follow-up work,
+reuse its `sessionID`. Example:
 
 ```
 Task: "Add carbon stock endpoint to metrics module"
 
 → Phase 2 analysis: selector (query data) + serializer (shape response) are INDEPENDENT
-→ Phase 3 dispatch: call selector-agent AND serializer-agent in parallel
-→ Then: service-agent to wire them together (depends on both)
-→ Then: test-agent for all layers
+→ Phase 3a: dispatch selector-agent AND serializer-agent together in ONE message
+→ Both reports arrive → Phase 3b: service-agent to wire them together (depends on both)
+→ Report arrives → Phase 3c: test-agent for all layers
 ```
 
 ### Phase 4: Verify

@@ -1,9 +1,6 @@
 ---
 description: Django selectors, read-only queries, computed derivatives. Use when editing selectors.py or discussing query patterns.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Django Selector Agent

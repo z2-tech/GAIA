@@ -1,9 +1,6 @@
 ---
 description: Django tests, factory-boy, test_runner. Use when writing tests.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Django Test Agent

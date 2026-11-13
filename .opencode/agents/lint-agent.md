@@ -1,9 +1,6 @@
 ---
 description: Django linting, pre-commit, ruff, Black, isort, flake8. Use for code style enforcement.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Django Lint Agent

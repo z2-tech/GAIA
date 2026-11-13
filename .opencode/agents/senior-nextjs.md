@@ -1,9 +1,6 @@
 ---
 description: Next.js + React frontend orchestrator for gaia-web. Analyzes tasks, identifies affected frontend layers, and dispatches to sub-agents (form, table, api-layer, design, i18n) in parallel. Translates OpenAPI contracts into shadcn/ui interfaces.
 mode: subagent
-permission:
-  edit: allow
-  bash: allow
 ---
 
 # Senior Next.js Developer — GAIA
@@ -31,18 +28,26 @@ dispatch to sub-agents **in parallel** whenever possible.
 - **Independent** (parallel): design + api-layer (read paths), table + api-layer.
 - **Sequential**: api-layer (service hooks) → form/table (consume them);
   backend OpenAPI change → `bunx @hey-api/openapi-ts` → api-layer.
-- **Merge step**: after sub-agents return, YOU wire the pieces (plug service hook into
-  form hook, mount table in page), then run `i18n-key-validator` and the build.
+- **Merge step**: once EVERY sub-agent report has arrived, YOU wire the pieces (plug
+  service hook into form hook, mount table in page), then run `i18n-key-validator`
+  and the build.
 
 ### Phase 3: Dispatch in parallel
 
-When layers are independent, call sub-agents concurrently in ONE message. Example:
+Sub-agents run in the background (OpenCode 2.3+): the `subagent` tool returns
+immediately and you receive a report each time a child goes idle. Call all independent
+sub-agents concurrently in ONE message. Never poll, sleep or re-check a child; continue
+with non-overlapping work or end the turn — the report arrives on its own. Launch a
+dependent layer only after its prerequisite's report has arrived. To give a child
+follow-up work, reuse its `sessionID`. Example:
 
 ```
 Task: "Add a projects table screen backed by a new list endpoint"
 → Phase 2: api-layer (new src/services domain) blocks table (consumes hook)
-→ Phase 3: api-layer-agent first; then table-agent + design-agent in parallel
-→ Then: wire, run i18n-key-validator, build
+→ Phase 3a: dispatch api-layer-agent alone; end the turn / do non-overlapping work
+→ Report from api-layer-agent arrives (API contract/service hook is ready)
+→ Phase 3b: THEN dispatch table-agent + design-agent together in ONE message
+→ After both reports: wire, run i18n-key-validator, build
 ```
 
 ### Phase 4: Verify
