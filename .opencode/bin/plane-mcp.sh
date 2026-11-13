@@ -1,34 +1,26 @@
 #!/usr/bin/env bash
 # =============================================================================
-# Plane MCP — project management MCP server
+# Plane MCP — project management MCP server (pinned)
 # =============================================================================
-# Launches the Plane MCP server. Secrets come from the machine-local .env file;
-# non-secret settings (workspace slug, host URL) come from opencode.json.
+# Reads ONLY PLANE_API_KEY / PLANE_WORKSPACE_SLUG / PLANE_API_HOST_URL from
+# <repo root>/.env.mcp.local (falling back to the process environment, e.g. the
+# env block in opencode.json). Nothing else from that file reaches the process.
 #
 # Usage:
 #   ./.opencode/bin/plane-mcp.sh
 # =============================================================================
-set -eo pipefail
+set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ORCHESTRATOR_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/mcp-common.sh"
 
-# Load machine-local MCP credentials (same pattern as postgres-mcp-readonly.sh).
-# .env.mcp.local wins; .env is the fallback so a single credentials file works.
-for ENV_FILE in "${ORCHESTRATOR_ROOT}/.env.mcp.local" "${ORCHESTRATOR_ROOT}/.env"; do
-  if [ -f "$ENV_FILE" ]; then
-    set -a
-    source "$ENV_FILE"
-    set +a
-  fi
-done
-
-export PLANE_WORKSPACE_SLUG="${PLANE_WORKSPACE_SLUG:-gaia}"
-export PLANE_API_HOST_URL="${PLANE_API_HOST_URL:-https://api.plane.so}"
-
-if [ -z "${PLANE_API_KEY:-}" ]; then
-  echo "Error: PLANE_API_KEY must be set in .env.mcp.local or .env" >&2
+PLANE_API_KEY="$(env_first PLANE_API_KEY || true)"
+if [[ -z "${PLANE_API_KEY}" ]]; then
+  echo "Error: PLANE_API_KEY must be set in ${MCP_ENV_FILE} (put it in .env.mcp.local, see .env.mcp.local.example)." >&2
   exit 1
 fi
+export PLANE_API_KEY
+export PLANE_WORKSPACE_SLUG="$(env_first PLANE_WORKSPACE_SLUG || printf 'gaia')"
+export PLANE_API_HOST_URL="$(env_first PLANE_API_HOST_URL || printf 'https://api.plane.so')"
 
-exec npx -y @makeplane/plane-mcp-server
+exec npx -y @makeplane/plane-mcp-server@0.1.5
