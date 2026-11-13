@@ -12,6 +12,16 @@
       "Bash(git -C * rebase *)",
       "Bash(git reset --hard*)",
       "Bash(git -C * reset --hard*)"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f *)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f *)",
+      "Bash(git -C * push --force*)",
+      "Bash(git -C * push -f *)",
+      "Bash(git -C * push * --force*)",
+      "Bash(git -C * push * -f *)"
     ]
   },
   "hooks": {
